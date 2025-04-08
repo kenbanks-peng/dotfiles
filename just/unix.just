@@ -6,7 +6,7 @@ default:
 ############  UNIX UTIL  ############
 
 # working directory
-@cwd *args:
+@d *args:
   pwd {{args}}
 
 # new copy
