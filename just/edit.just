@@ -12,17 +12,17 @@ default:
 e:
   cursor .
 
-# new vscode
-code *args:
+# vscode
+c *args:
   #!/usr/bin/env zsh
   if [ -n "{{args}}" ]; then
-    print "{{BrightMagenta}}cursor {{args}}"
+    print "{{BrightMagenta}}code {{args}}"
     print
-    cursor {{args}}
+    code {{args}}
   else
-    print "{{BrightMagenta}}cursor ."
+    print "{{BrightMagenta}}code ."
     print
-    cursor .
+    code .
   fi
 
 # git tui
