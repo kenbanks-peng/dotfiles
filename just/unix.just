@@ -5,6 +5,10 @@ default:
 
 ############  UNIX UTIL  ############
 
+# working directory
+cwd *args:
+  pwd {{args}}
+
 # new copy
 cp *args:
   ditto {{args}}
