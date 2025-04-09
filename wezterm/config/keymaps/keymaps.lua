@@ -43,9 +43,27 @@ local function close_pane_or_tab(window, pane)
    end
 end
 
+local command = '/Users/ken/Software/DevBox/scripts/bin/dir'
+
+local function directory_paste(window, pane)
+   local success, stdout, stderr = wezterm.run_child_process({ command .. ' -p' })
+   if success then
+      pane:send_text(stdout)
+   else
+      wezterm.log_error('dir command failed: ' .. stderr)
+   end
+end
+
+local function directory_copy(window, pane)
+   wezterm.run_child_process({ command .. ' -c' })
+end
 
 -- stylua: ignore
 local keys = {
+   -- DIRECTORY COPY/PASTE
+   map("c", mod.META, wezterm.action_callback(directory_copy)),
+   map("v", mod.META, wezterm.action_callback(directory_paste)),
+
    -- QUICK SELECT MODE
    map('f', mod.SUPER_REV, action.QuickSelect), -- ??
 
