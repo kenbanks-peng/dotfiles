@@ -48,7 +48,7 @@ local command = '/Users/ken/Software/DevBox/scripts/bin/dir'
 local function directory_paste(window, pane)
    local success, stdout, stderr = wezterm.run_child_process({ command, '-g' })
    if success then
-      pane:send_text(stdout)
+      pane:send_text(stdout:gsub('\n$', ''))
    else
       wezterm.log_error('dir command failed: ' .. stderr)
    end
