@@ -46,7 +46,7 @@ end
 local command = '/Users/ken/Software/DevBox/scripts/bin/dir'
 
 local function directory_paste(window, pane)
-   local success, stdout, stderr = wezterm.run_child_process({ command .. ' -p' })
+   local success, stdout, stderr = wezterm.run_child_process({ command, '-g' })
    if success then
       pane:send_text(stdout)
    else
@@ -55,7 +55,11 @@ local function directory_paste(window, pane)
 end
 
 local function directory_copy(window, pane)
-   wezterm.run_child_process({ command .. ' -c' })
+   local cwd = pane:get_current_working_dir()
+   if cwd then
+      cwd = tostring(cwd)
+      wezterm.run_child_process({ command, '-p', cwd })
+   end
 end
 
 -- stylua: ignore
