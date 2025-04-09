@@ -187,7 +187,7 @@ alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
 alt-a = 'exec-and-forget open /Applications/BoltAI.app'             # AI
 alt-b = 'exec-and-forget open /Applications/Arc.app'                # Browser
-alt-c = 'exec-and-forget open /Applications/Cursor.app'             # Code
+alt-e = 'exec-and-forget open /Applications/Cursor.app'             # Editor
 alt-m = 'exec-and-forget open /Applications/Microsoft\ Outlook.app' # Mail
 alt-n = 'exec-and-forget open /Applications/Obsidian.app'           # Notes
 alt-t = 'exec-and-forget open /Applications/WezTerm.app'            # Terminal
