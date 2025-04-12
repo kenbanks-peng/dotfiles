@@ -8,3 +8,22 @@ font-size = 18
 adjust-cell-width = 0%
 adjust-cell-height = 0%
 
+# block, bar, underline, block_hollow
+cursor-style = bar
+cursor-style-blink = false
+cursor-click-to-move = true
+
+background-opacity = 1.0
+
+window-padding-x = 25
+window-padding-y = 25
+
+quit-after-last-window-closed = true
+
+# native, transparent, tabs, hidden
+macos-titlebar-style = transparent
+
+macos-window-shadow = false
+macos-icon = glass
+
+title = " "
