@@ -150,8 +150,8 @@ alt-9 = 'workspace 9'
 alt-0 = 'workspace 10'
 
 # prev/next occupied workspace
-alt-left = 'exec-and-forget aerospace list-workspaces --monitor focused --empty no | aerospace workspace prev --wrap-around'
-alt-right = 'exec-and-forget aerospace list-workspaces --monitor focused --empty no | aerospace workspace next --wrap-around'
+alt-left = 'exec-and-forget aerospace focus up --boundaries-action fail || aerospace focus left --boundaries-action fail || aerospace list-workspaces --monitor focused --empty no | aerospace workspace prev'
+alt-right = 'exec-and-forget aerospace focus down --boundaries-action fail || aerospace focus right --boundaries-action fail || aerospace list-workspaces --monitor focused --empty no | aerospace workspace next'
 
 # cycle apps in current workspace
 alt-up = 'exec-and-forget aerospace focus up --boundaries-action wrap-around-the-workspace'
