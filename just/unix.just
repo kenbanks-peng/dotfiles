@@ -133,3 +133,7 @@ w:
 # new find
 find *args:
   fd -uuu {{args}}
+
+# new tail
+tail *args:
+  tspin "{{args}}"
