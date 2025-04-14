@@ -150,16 +150,16 @@ alt-9 = 'workspace 9'
 alt-0 = 'workspace 10'
 
 # prev/next occupied workspace
-alt-left = 'exec-and-forget aerospace focus up --boundaries-action fail || aerospace focus left --boundaries-action fail || aerospace list-workspaces --monitor focused --empty no | aerospace workspace prev'
-alt-right = 'exec-and-forget aerospace focus down --boundaries-action fail || aerospace focus right --boundaries-action fail || aerospace list-workspaces --monitor focused --empty no | aerospace workspace next'
+alt-left = 'exec-and-forget aerospace focus up --boundaries-action fail || aerospace focus left --boundaries-action fail || ~/bin/space -dir="prev" -empty="no"'
+alt-right = 'exec-and-forget aerospace focus down --boundaries-action fail || aerospace focus right --boundaries-action fail || ~/bin/space -dir="next" -empty="no"'
 
 # cycle apps in current workspace
 alt-up = 'exec-and-forget aerospace focus up --boundaries-action wrap-around-the-workspace'
 alt-down = 'exec-and-forget aerospace focus down --boundaries-action wrap-around-the-workspace'
 
 # prev/next empty workspace
-cmd-left = 'exec-and-forget aerospace list-workspaces --monitor focused --empty | aerospace workspace prev --wrap-around'
-cmd-right = 'exec-and-forget aerospace list-workspaces --monitor focused --empty | aerospace workspace next --wrap-around'
+cmd-left = 'exec-and-forget ~/bin/space -dir="prev" -empty="yes"'
+cmd-right = 'exec-and-forget ~/bin/space -dir="next" -empty="yes"'
 
 alt-shift-left = 'move-node-to-workspace prev --focus-follows-window'
 alt-shift-right = 'move-node-to-workspace next --focus-follows-window'
