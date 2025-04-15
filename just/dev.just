@@ -67,8 +67,5 @@ gdelta *args:
 @hb *args:
   hub {{args}}
 
-@gits *args:
-  grr {{args}}
-
-@services *args:
+*@srv *args:
   lunchy {{args}}
