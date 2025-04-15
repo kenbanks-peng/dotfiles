@@ -149,17 +149,21 @@ alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
 alt-0 = 'workspace 10'
 
-# prev/next occupied workspace
-alt-left = 'exec-and-forget aerospace focus up --boundaries-action fail || aerospace focus left --boundaries-action fail || ~/bin/space -dir="prev" -empty="no"'
-alt-right = 'exec-and-forget aerospace focus down --boundaries-action fail || aerospace focus right --boundaries-action fail || ~/bin/space -dir="next" -empty="no"'
-
 # cycle apps in current workspace
 alt-up = 'exec-and-forget aerospace focus up --boundaries-action wrap-around-the-workspace'
 alt-down = 'exec-and-forget aerospace focus down --boundaries-action wrap-around-the-workspace'
 
+# prev/next adjacent workspace
+alt-left = 'exec-and-forget ~/bin/space -dir="prev"'
+alt-right = 'exec-and-forget ~/bin/space -dir="next"'
+
+# prev/next occupied workspace
+ctrl-left = 'exec-and-forget aerospace focus up --boundaries-action fail || aerospace focus left --boundaries-action fail || ~/bin/space -dir="prev" -mode="occupied"'
+ctrl-right = 'exec-and-forget aerospace focus down --boundaries-action fail || aerospace focus right --boundaries-action fail || ~/bin/space -dir="next" -mode="occupied"'
+
 # prev/next empty workspace
-cmd-left = 'exec-and-forget ~/bin/space -dir="prev" -empty="yes"'
-cmd-right = 'exec-and-forget ~/bin/space -dir="next" -empty="yes"'
+cmd-left = 'exec-and-forget ~/bin/space -dir="prev" -mode="empty"'
+cmd-right = 'exec-and-forget ~/bin/space -dir="next" -mode="empty"'
 
 alt-shift-left = 'move-node-to-workspace prev --focus-follows-window'
 alt-shift-right = 'move-node-to-workspace next --focus-follows-window'

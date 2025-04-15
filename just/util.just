@@ -93,3 +93,6 @@ font *args:
 show *args:
   imgcat {{args}}
 
+# table
+@tbl *args:
+  column -t {{args}}
