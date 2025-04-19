@@ -52,9 +52,9 @@ sed3 *args:
 ls *args:
   #!/usr/bin/env zsh
   if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
-    lsd --blocks name --blocks git {{args}}
+    lsd --almost-all --blocks name --blocks git {{args}}
   else
-    lsd --blocks name {{args}}
+    lsd --almost-all --blocks name {{args}}
   fi
 
 # list minimal 
@@ -66,18 +66,18 @@ ls *args:
 lt *args:
   #!/usr/bin/env zsh
   if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
-    lsd --tree --no-symlink --depth 2 -al --blocks name --blocks git {{args}}
+    lsd --almost-all --tree --no-symlink --depth 2 -al --blocks name --blocks git {{args}}
   else
-    lsd --tree --no-symlink --depth 2 -al --blocks name {{args}}
+    lsd --almost-all --tree --no-symlink --depth 2 -al --blocks name {{args}}
   fi
 
 # list long
 ll *args:
   #!/usr/bin/env zsh
   if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
-    lsd --no-symlink --blocks name --blocks git --blocks permission --blocks user --blocks size --blocks date {{args}}
+    lsd --almost-all --no-symlink --blocks name --blocks git --blocks permission --blocks user --blocks size --blocks date {{args}}
   else
-    lsd --no-symlink --blocks name --blocks permission --blocks user --blocks size --blocks date {{args}}
+    lsd --almost-all --no-symlink --blocks name --blocks permission --blocks user --blocks size --blocks date {{args}}
   fi
 
 # new cat
