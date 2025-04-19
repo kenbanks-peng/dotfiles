@@ -13,13 +13,13 @@ get_cache(){
 }
 
 set_wallpaper_solid(){
-  wallpaper set-solid-color "#1e1e2e"
+  SOLID_WALLPAPER="$CONFIG_DIR/wallpapers/wallpaper_solid.jpg"
+  wallpaper set "$SOLID_WALLPAPER"
   set_cache "solid"
 }
 
 set_wallpaper_nasa(){
   local force=$1
- 
  
   # Check if today's wallpaper already exists
   TODAY=$(date +"%Y-%m-%d")
