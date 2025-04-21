@@ -154,12 +154,12 @@ alt-up = 'exec-and-forget aerospace focus up --boundaries-action wrap-around-the
 alt-down = 'exec-and-forget aerospace focus down --boundaries-action wrap-around-the-workspace'
 
 # prev/next adjacent workspace
-alt-left = 'exec-and-forget ~/bin/space -dir="prev"'
-alt-right = 'exec-and-forget ~/bin/space -dir="next"'
+ctrl-left = 'exec-and-forget ~/bin/space -dir="prev"'
+ctrl-right = 'exec-and-forget ~/bin/space -dir="next"'
 
 # prev/next occupied workspace
-ctrl-left = 'exec-and-forget aerospace focus up --boundaries-action fail || aerospace focus left --boundaries-action fail || ~/bin/space -dir="prev" -mode="occupied"'
-ctrl-right = 'exec-and-forget aerospace focus down --boundaries-action fail || aerospace focus right --boundaries-action fail || ~/bin/space -dir="next" -mode="occupied"'
+alt-left = 'exec-and-forget aerospace focus up --boundaries-action fail || aerospace focus left --boundaries-action fail || ~/bin/space -dir="prev" -mode="occupied"'
+alt-right = 'exec-and-forget aerospace focus down --boundaries-action fail || aerospace focus right --boundaries-action fail || ~/bin/space -dir="next" -mode="occupied"'
 
 # prev/next empty workspace
 cmd-left = 'exec-and-forget ~/bin/space -dir="prev" -mode="empty"'
