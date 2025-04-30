@@ -96,3 +96,11 @@ show *args:
 # table
 @tbl *args:
   column -t {{args}}
+
+# watch a directory/file for changes
+w *args:
+  watch {{args}}
+
+# watch a directory/file for changes
+@w2 *args:
+  entr {{args}}

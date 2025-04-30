@@ -113,10 +113,6 @@ path:
       }
   }'
 
-# watch a directory/file for changes
-w:
-  watch
-
 # remove .DS_store
 @clean:
   print "recursively remove .DS_store"
