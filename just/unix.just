@@ -90,11 +90,7 @@ process *args:
 
 # top tui
 top:
-  htop
-
-# top tui
-top2:
-  btm
+  btop
 
 # bandwidth util
 bw:
