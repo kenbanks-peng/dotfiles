@@ -98,9 +98,9 @@ show *args:
   column -t {{args}}
 
 # watch a directory/file for changes
-w *args:
+w2 *args:
   watch {{args}}
 
 # watch a directory/file for changes
-@w2 *args:
+@w3 *args:
   entr {{args}}
