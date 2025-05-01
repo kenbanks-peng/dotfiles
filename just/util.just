@@ -104,3 +104,7 @@ watch *args:
 # cheatsheet
 cs *args:
   cheat {{args}}
+
+# scan
+scan *args:
+  rustscan {{args}}

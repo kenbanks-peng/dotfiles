@@ -219,7 +219,7 @@ final_space = true
     trailing_diamond = ''
     foreground = "p:on_red"
     background = "p:red"
-    template = "{{if .Segments.Status.Error }}{{ .Segments.Status.Code }}{{ end }}"
+    template = "{{if .Segments.Status.Error }}{{ .Segments.Status.String }}{{ end }}"
 
 
 ######### NEW_LINE - SHELL LEVEL PROMPT #########

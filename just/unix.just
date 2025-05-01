@@ -133,3 +133,7 @@ find *args:
 # new tail
 tail *args:
   tspin "{{args}}"
+
+# new cut
+chz *args:
+  choose {{args}}
