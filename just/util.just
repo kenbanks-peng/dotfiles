@@ -100,3 +100,7 @@ show *args:
 # watch a directory/file for changes
 watch *args:
   watchexec {{args}}
+
+# cheatsheet
+cs *args:
+  cheat {{args}}

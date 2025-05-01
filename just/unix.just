@@ -92,6 +92,10 @@ process *args:
 top:
   btop
 
+# top tui
+top2:
+  glances
+
 # bandwidth util
 bw:
   bandwich
