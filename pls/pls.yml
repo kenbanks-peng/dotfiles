@@ -1,0 +1,193 @@
+icons:
+  # default
+  pls: ""
+  missing: ""
+  file: ""
+  dir: ""
+  symlink: "󰌹"
+  fifo: "󰟥"
+  socket: "󰟨"
+  char_device: ""
+  block_device: "󰋊"
+  audio: "󰓃"
+  book: ""
+  broom: "󰃢"
+  config: ""
+  container: ""
+  env: ""
+  image: "󰋩"
+  json: ""
+  law: ""
+  lock: ""
+  markdown: ""
+  package: ""
+  runner: "󰜎"
+  shell: ""
+  source: ""
+  test: "󰙨"
+  text: ""
+  video: "󰕧"
+  apple: ""
+  git: "󰊢"
+  github: ""
+  rust: ""
+
+  # custom
+  pdf: ""
+  image: ""
+  audio: ""
+  video: ""
+  text: ""
+  table: "󰓫"
+  word: "󱎒"
+  excel: "󱎏"
+  powerpoint: "󱎐"
+  google: ""
+  apple: ""
+  tool: ""
+  go: ""
+  python: "󰌠"
+  shell: "󱆃"
+  config: "󰒓"
+  history: "󰋚"
+  log: ""
+  
+specs:
+  # defaults
+  - pattern: \.sh$
+    icons:
+      - shell
+  - pattern: \.rs$
+    icons:
+      - rust
+    style: "rgb(247,76,0)"
+  - pattern: \.(txt|rtf)$
+    icons:
+      - text
+  - pattern: \.ini$
+    icons:
+      - config
+  - pattern: \.(json|toml|yml|yaml)$
+    icons:
+      - json
+  - pattern: \.(jpg|jpeg|png|svg|webp|gif|ico)$
+    icons:
+      - image
+  - pattern: \.(mov|mp4|mkv|webm|avi|flv)$
+    icons:
+      - video
+  - pattern: \.(mp3|flac|ogg|wav)$
+    icons:
+      - audio
+  - pattern: ^\.env\b
+    icons:  
+      - env
+  - pattern: ^README\b
+    icons:
+      - book
+    importance: 2
+  - pattern: ^LICENSE\b
+    icons:
+      - law
+  - pattern: docker-compose.*\.yml$
+    icons:
+      - container
+  - pattern: Dockerfile
+    icons:
+      - container
+  - pattern: ^\.DS_Store$
+    icons:
+      - apple
+    importance: -2
+  - pattern: ^\.pls\.yml$
+    icons:
+      - pls
+    importance: 0
+  - pattern: ^\.git$
+    icons:
+      - git
+    importance: -2
+  - pattern: ^\.gitignore$
+    icons:
+      - git
+    importance: -2
+  - pattern: ^\.github$
+    icons:
+      - github
+  - pattern: ^src$
+    icons:
+      - source
+    importance: 1
+  - pattern: ^Cargo\.toml$
+    icons:
+      - package
+  - pattern: ^Cargo\.lock$
+    icons:
+      - lock
+    importance: -1
+    collapse: 
+      name: Cargo.toml
+  - pattern: ^rustfmt\.toml$
+    icons:
+      - broom
+  # custom
+  - pattern: \.pdf$
+    icons:
+      - pdf
+  - pattern: \.(txt|rtf)$
+    icons:
+      - text
+  - pattern: \.(csv|tsv)$
+    icons:
+      - table
+  - pattern: \.(mp3|wav|aac)$
+    icons:
+      - audio
+  - pattern: \.(png|jpg|bmp|webp)$
+    icons:
+      - image
+  - pattern: \.(mp4|mov|avi|mkv|webm)$
+    icons:
+      - video
+  - pattern: \.docx?$
+    icons:
+      - word
+  - pattern: \.xlsx?$
+    icons:
+      - excel
+  - pattern: \.pptx?$
+    icons:
+      - powerpoint
+  - pattern: \.(gform|gdoc|gspread|gsheet|gslides)$
+    icons:
+      - google
+  - pattern: \.(pages|numbers|key)$
+    icons:
+      - apple
+  - pattern: ^(justfile|Makefile)$
+    icons:
+      - runner
+  - pattern: \.(go|mod|sum)$
+    icons:
+      - go
+  - pattern: \.(sh|bash|zsh)$
+    icons:
+      - shell
+  - pattern: \.(zprofile|zshrc|zshenv|stow-local-ignore)$
+    icons:
+      - config
+  - pattern: \.(zsh_history)$
+    icons:
+      - history
+  - pattern: \.(zcompdump)$
+    icons:
+      - log
+  - pattern: \.(md|mdx)$
+    icons:
+      - markdown
+  - pattern: \.(py)$
+    icons:
+      - python
+
+  
+  

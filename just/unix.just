@@ -72,13 +72,17 @@ lt *args:
   fi
 
 # list long
-ll *args:
+lls *args:
   #!/usr/bin/env zsh
   if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
     lsd --almost-all --no-symlink --blocks name --blocks git --blocks permission --blocks user --blocks size --blocks date {{args}}
   else
     lsd --almost-all --no-symlink --blocks name --blocks permission --blocks user --blocks size --blocks date {{args}}
   fi
+
+# pls list
+ll *args:
+  pls {{args}}
 
 # new cat
 @cat *args:
@@ -137,3 +141,7 @@ tail *args:
 # new cut
 chz *args:
   choose {{args}}
+
+# new ping
+ping *args:
+  gping {{args}}

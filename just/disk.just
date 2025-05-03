@@ -5,17 +5,19 @@ default:
 
 #####################   DISK   #####################
 
+# disk usage
+disk:
+  duf /
+
 # disk usage tui
-d1:
+disk1:
   ncdu
 
 # disk usage
-d2:
+disk2:
   dust
 
 # disk usage
-d3:
+disk3:
   dua i
 
-d4:
-  df -h
