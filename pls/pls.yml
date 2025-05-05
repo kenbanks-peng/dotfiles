@@ -1,3 +1,19 @@
+
+app_const:
+  tree:
+    pipe_space: "│ "
+    space_space: "  "
+    tee_dash: "├─ "
+    bend_dash: "└─ "
+# default: [-1, "dimmed"], [1, "italic"], [2, "underline"]
+#   imp_styles:
+#     - [-2, "red dimmed"]
+#     - [-1, "yellow dimmed"]
+#     - [0, "blue"]
+#     - [1, "green italic"]
+#     - [2, "bright_magenta underline"]
+
+
 entry_const:
   symlink:
     ok:
@@ -69,63 +85,7 @@ icons:
   
 specs:
   # defaults
-  - pattern: \.sh$
-    icons:
-      - shell
-  - pattern: \.rs$
-    icons:
-      - rust
-    style: "rgb(247,76,0)"
-  - pattern: \.(txt|rtf)$
-    icons:
-      - text
-  - pattern: \.ini$
-    icons:
-      - config
-  - pattern: \.(json|toml|yml|yaml)$
-    icons:
-      - json
-  - pattern: \.(jpg|jpeg|png|svg|webp|gif|ico)$
-    icons:
-      - image
-  - pattern: \.(mov|mp4|mkv|webm|avi|flv)$
-    icons:
-      - video
-  - pattern: \.(mp3|flac|ogg|wav)$
-    icons:
-      - audio
-  - pattern: ^\.env\b
-    icons:  
-      - env
-  - pattern: ^README\b
-    icons:
-      - book
-    importance: 2
-  - pattern: ^LICENSE\b
-    icons:
-      - law
-  - pattern: docker-compose.*\.yml$
-    icons:
-      - container
-  - pattern: Dockerfile
-    icons:
-      - container
-  - pattern: ^\.DS_Store$
-    icons:
-      - apple
-    importance: -2
-  - pattern: ^\.pls\.yml$
-    icons:
-      - pls
-    importance: 0
-  - pattern: ^\.git$
-    icons:
-      - git
-    importance: -1
-  - pattern: ^\.gitignore$
-    icons:
-      - git
-    importance: -1
+  
   - pattern: ^\.github$
     icons:
       - github
@@ -145,25 +105,52 @@ specs:
   - pattern: ^rustfmt\.toml$
     icons:
       - broom
+  # undo defaults
+  - pattern: ^\.pls\.yml$
+    icons:
+      - pls
+    importance: -1
+  - pattern: ^\.git$
+    icons:
+      - git
+    importance: -1
+  - pattern: ^\.gitignore$
+    icons:
+      - git
+    importance: -1
+
   # custom
-  - pattern: \.pdf$
+
+  # shell
+  - pattern: \.(sh|bash|zsh)$
     icons:
-      - pdf
-  - pattern: \.(txt|rtf)$
+      - shell
+  - pattern: \.(zprofile|zshrc|zshenv|stow-local-ignore)$
     icons:
-      - text
-  - pattern: \.(csv|tsv)$
+      - config
+  - pattern: \.(zsh_history)$
     icons:
-      - table
-  - pattern: \.(mp3|wav|aac)$
+      - history
+  - pattern: \.(zcompdump)$
     icons:
-      - audio
-  - pattern: \.(png|jpg|bmp|webp)$
+      - log
+
+  # image
+  - pattern: \.(jpg|jpeg|png|svg|webp|gif|ico)$ # default
     icons:
       - image
-  - pattern: \.(mp4|mov|avi|mkv|webm)$
+
+  # audio
+  - pattern: \.(mp3|flac|ogg|wav|aac)$ # default
+    icons:
+      - audio
+
+  # video
+  - pattern: \.(mov|mp4|mkv|webm|avi|flv)$ # default
     icons:
       - video
+
+  # office docs
   - pattern: \.docx?$
     icons:
       - word
@@ -179,30 +166,62 @@ specs:
   - pattern: \.(pages|numbers|key)$
     icons:
       - apple
-  - pattern: ^(justfile|Makefile)$
+
+  # doc formats
+  - pattern: \.pdf$
     icons:
-      - runner
+      - pdf
+  - pattern: \.(txt|rtf)$ # default
+    icons:
+      - text
+  - pattern: \.(csv|tsv)$
+    icons:
+      - table
+  - pattern: \.ini$ # default
+    icons:
+      - config
+  - pattern: \.(json|toml|yml|yaml)$ # default
+    icons:
+      - json
+  - pattern: \.(md|mdx)$ # default
+    icons:
+      - markdown
+  # special files
+  - pattern: ^README\b # default
+    icons:
+      - book
+    importance: 0
+  - pattern: ^LICENSE\b # default
+    icons:
+      - law
+    importance: 0
+  - pattern: ^\.DS_Store$
+    icons:
+      - apple
+    importance: -2
+
+  # dev
+  - pattern: \.rs$ # default
+    icons:
+      - rust
+    style: "rgb(247,76,0)"
   - pattern: \.(go|mod|sum)$
     icons:
       - go
-  - pattern: \.(sh|bash|zsh)$
-    icons:
-      - shell
-  - pattern: \.(zprofile|zshrc|zshenv|stow-local-ignore)$
-    icons:
-      - config
-  - pattern: \.(zsh_history)$
-    icons:
-      - history
-  - pattern: \.(zcompdump)$
-    icons:
-      - log
-  - pattern: \.(md|mdx)$
-    icons:
-      - markdown
   - pattern: \.(py)$
     icons:
       - python
-
+  - pattern: ^(justfile|Makefile)$
+    icons:
+      - runner
+  - pattern: ^\.env\b # default
+    icons:  
+      - env
+  - pattern: docker-compose.*\.yml$ # default
+    icons:
+      - container
+  - pattern: Dockerfile # default
+    icons:
+      - container
   
   
