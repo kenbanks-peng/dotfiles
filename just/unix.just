@@ -40,7 +40,7 @@ sed3 *args:
 
 # pls list hide hidden files
 @l *args:
-  pls --suffix=false --imp=1 --sym=false --sort=cat --sort=name {{args}}
+  pls --exclude='^\.' --suffix=false --sym=false --sort=cat --sort=name {{args}}
 
 
 # pls list show hidden files
