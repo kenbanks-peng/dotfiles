@@ -5,13 +5,12 @@ app_const:
     space_space: "  "
     tee_dash: "├─ "
     bend_dash: "└─ "
-# default: [-1, "dimmed"], [1, "italic"], [2, "underline"]
-#   imp_styles:
-#     - [-2, "red dimmed"]
-#     - [-1, "yellow dimmed"]
-#     - [0, "blue"]
-#     - [1, "green italic"]
-#     - [2, "bright_magenta underline"]
+  # imp_styles:
+  #   - [-2, "red dimmed"]
+  #   - [-1, "yellow dimmed"]
+  #   - [0, "blue"]
+  #   - [1, "green italic"]
+  #   - [2, "bright_magenta underline"]
 
 
 entry_const:

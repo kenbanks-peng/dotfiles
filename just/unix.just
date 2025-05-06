@@ -40,12 +40,16 @@ sed3 *args:
 
 # pls list hide hidden files
 @l *args:
-  pls --exclude='^\.' --suffix=false --sym=false --sort=cat --sort=name {{args}}
+  pls --exclude='^\.' --suffix=false --sym=false --sort=cat --sort=name --typ=dir {{args}}
+  pls --exclude='^\.' --suffix=false --sym=false --sort=cat --sort=name --typ=file --typ=symlink --typ=fifo --typ=socket --typ=char-device --typ=block-device {{args}}
 
 
 # pls list show hidden files
 @ls *args:
-  pls --suffix=false --sort=cat --sort=name {{args}}
+  pls --only='^\.' --suffix=false --sort=cat --sort=name --typ=dir {{args}}
+  pls --only='^\.' --suffix=false --sort=cat --sort=name --typ=file --typ=symlink --typ=fifo --typ=socket --typ=char-device --typ=block-device {{args}}
+  pls --exclude='^\.' --suffix=false --sort=cat --typ=dir --sort=name {{args}}
+  pls --exclude='^\.' --suffix=false --sort=cat --sort=name --typ=file --typ=symlink --typ=fifo --typ=socket --typ=char-device --typ=block-device {{args}}
 
 # list w/ git-symbols
 #
