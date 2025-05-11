@@ -62,7 +62,7 @@ automatically-unhide-macos-hidden-apps = true
 exec-on-workspace-change = [
   '/bin/bash',
   '-c',
-  'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE PREV_WORKSPACE=$AEROSPACE_PREV_WORKSPACE',
+  '$HOME/bin/wm workspace_changed --prev $AEROSPACE_PREV_WORKSPACE --focused $AEROSPACE_FOCUSED_WORKSPACE',
 ]
 
 # Possible values: (qwerty|dvorak)
