@@ -131,6 +131,7 @@ previewers = [
 	# Code
 	{ mime = "text/*", run = "code" },
 	{ mime = "*/{xml,javascript,wine-extension-ini}", run = "code" },
+	{ name = "*.log", run = "code" },
 	# JSON
 	{ mime = "application/{json,ndjson}", run = "json" },
 	# Image

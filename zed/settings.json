@@ -17,7 +17,7 @@
     },
     "version": "2"
   },
-  "vim_mode": true,
+  "vim_mode": false,
   "autosave": "off",
   "current_line_highlight": "none",
   "cursor_blink": false,
