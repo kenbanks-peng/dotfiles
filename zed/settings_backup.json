@@ -10,7 +10,7 @@
   "features": {
     "edit_prediction_provider": "zed"
   },
-  "agent": {
+  "assistant": {
     "default_model": {
       "provider": "openai",
       "model": "gpt-4o"
@@ -26,9 +26,9 @@
     "light": "One Light",
     "dark": "Catppuccin Mocha"
   },
-  "ui_font_size": 18,
+  "ui_font_size": 15,
   "buffer_font_family": "Hasklug Nerd Font Mono",
-  "buffer_font_size": 18,
+  "buffer_font_size": 15,
   "tab_size": 2,
   "terminal": {
     "font_family": "Hasklug Nerd Font Mono",
