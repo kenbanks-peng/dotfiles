@@ -67,5 +67,10 @@ gdelta *args:
 @hb *args:
   hub {{args}}
 
+# launch services
 @srv *args:
   -lunchy {{args}}
+
+# git-bug
+@bug *args:
+  git-bug {{args}}
