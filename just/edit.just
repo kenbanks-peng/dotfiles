@@ -26,8 +26,12 @@ c *args:
   fi
 
 # git tui
-g:
-  lazygit
+g *args:
+  lazygit {{args}}
+
+# git tui
+gt *args:
+  gitui {{args}}
 
 # markdown tui
 m *args:
