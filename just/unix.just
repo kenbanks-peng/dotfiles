@@ -111,9 +111,9 @@ top:
 top2:
   glances
 
-# bandwidth util
-bw:
-  bandwich
+# resource monitor
+mon:
+  macmon
 
 # more readable path. duplicates in red.
 path:

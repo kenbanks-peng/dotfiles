@@ -74,3 +74,15 @@ gdelta *args:
 # git-bug
 @bug *args:
   git-bug {{args}}
+
+# log tui
+log *args:
+  nerdlog {{args}}
+
+# database tui
+db *args:
+  dblab {{args}}
+
+# database tui
+db2 *args:
+  gobang {{args}}
