@@ -111,4 +111,4 @@ scan *args:
 
 # fzf alternative
 fz *args:
-  sk {{args}}
+  -sk {{args}}
