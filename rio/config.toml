@@ -41,7 +41,7 @@ blinking-interval = 800
 
 # Editor
 [editor]
-program = "cursor"
+program = "/opt/homebrew/bin/nvim"
 # args = []
 
 # Window configuration
@@ -63,7 +63,7 @@ program = "cursor"
 # mode = "windowed"
 opacity = 1.0
 # blur = false
-# decorations = "enabled"
+decorations = "Transparent"
 
 # Renderer
 #
@@ -169,7 +169,7 @@ family = "Hasklug Nerd Font Mono"
 #
 # Example:
 # [navigation]
-# mode = "bookmark"
+# mode = "Bookmark"
 # clickable = false
 # hide-if-single = true
 # use-current-path = false
@@ -204,10 +204,9 @@ family = "Hasklug Nerd Font Mono"
 # Create custom Key bindings for Rio terminal
 # More information in: https://raphamorim.io/rio/docs/key-bindings
 #
-# [bindings]
-# keys = [
-#   { key = "q", with = "super", action = "Quit" },
-#   # Bytes[27, 91, 53, 126] is equivalent to "\x1b[5~"
-#   { key = "home", with = "super | shift", bytes = [27, 91, 53, 126] }
-# ]
-
+#  bytes = [27, 91, 53, 126] is equivalent to "\x1b[5~"
+[bindings]
+keys = [
+  { key = "/", with = "super", action = "SplitRight" },
+  { key = "\\", with = "super", action = "SplitDown" },
+]
