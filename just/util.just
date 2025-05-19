@@ -108,3 +108,7 @@ cs *args:
 # scan
 scan *args:
   rustscan {{args}}
+
+# fzf alternative
+fz *args:
+  sk {{args}}
