@@ -112,13 +112,6 @@ opacity = 1.0
 #
 # Configure fonts used by the terminal
 #
-# Note: You can set different font families but Rio terminal
-# will always look for regular font bounds whene
-#
-# You can also set family on root to overwrite all fonts.
-# [fonts]
-# family = "cascadiamono"
-#
 # You can also specify extra fonts to load
 # [fonts]
 # extras = [{ family = "Microsoft JhengHei" }]
@@ -139,30 +132,6 @@ opacity = 1.0
 # symbol-map = [
 #   { start = "2297", end = "2299", font-family = "Cascadia Code NF" }
 # ]
-#
-# Simple example:
-# [fonts]
-# size = 18
-#
-# [fonts.regular]
-# family = "cascadiamono"
-# style = "Normal"
-# weight = 400
-#
-# [fonts.bold]
-# family = "cascadiamono"
-# style = "Normal"
-# weight = 800
-#
-# [fonts.italic]
-# family = "cascadiamono"
-# style = "Italic"
-# weight = 400
-#
-# [fonts.bold-italic]
-# family = "cascadiamono"
-# style = "Italic"
-# weight = 800
 
 [fonts]
 size = 18
@@ -229,63 +198,16 @@ family = "Hasklug Nerd Font Mono"
 # program = "/opt/homebrew/bin/tmux"
 # args = ["new-session", "-c", "/var/www"]
 
-# Colors
-#
-# Colors definition will overwrite any property in theme
-# (considering if theme folder does exists and is being used)
-#
-# Example:
-# [colors]
-# background = '#0F0D0E'
-# foreground = '#F9F4DA'
-# cursor = '#F38BA3'
-# tabs = '#443d40'
-# tabs-active = '#F38BA3'
-# green = '#0BA95B'
-# red = '#ED203D'
-# blue = '#12B5E5'
-# yellow = '#FCBA28'
 
 # Bindings
 #
 # Create custom Key bindings for Rio terminal
 # More information in: https://raphamorim.io/rio/docs/key-bindings
 #
-# Example:
 # [bindings]
 # keys = [
 #   { key = "q", with = "super", action = "Quit" },
 #   # Bytes[27, 91, 53, 126] is equivalent to "\x1b[5~"
 #   { key = "home", with = "super | shift", bytes = [27, 91, 53, 126] }
 # ]
-
-# Platform
-#
-# Rio now allows you to have different configurations per OS
-# You can write ovewrite properties like `Shell`, `Navigation`
-# and `Window`.
-#
-# Example:
-# [shell]
-# # default (in this case will be used only on MacOS)
-# program = "/bin/fish"
-# args = ["--login"]
-#
-# [platform]
-# # Microsoft Windows overwrite
-# windows.shell.program = "pwsh"
-# windows.shell.args = ["-l"]
-#
-# # Linux overwrite
-# linux.shell.program = "tmux"
-# linux.shell.args = ["new-session", "-c", "/var/www"]
-
-# Log level
-#
-# This property enables log level filter and file. The default level is "OFF" and the logs are not logged to a file as default.
-#
-# Example:
-# [developer]
-# log-level = "OFF"
-# enable-log-file = false
 
