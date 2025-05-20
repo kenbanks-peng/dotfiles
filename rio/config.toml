@@ -1,69 +1,36 @@
-# Hide the cursor while typing
-# hide-cursor-when-typing = false
-
-# Ignore theme selection foreground color
-# ignore-selection-foreground-color = false
-
-# Theme in ~/.config/rio/themes/catppuccin.toml
 theme = "catppuccin"
-
-padding-x = 30
-padding-y = [10, 10]
-
-# Possible choices: 'both', 'left' and 'right'.
-option-as-alt = 'both'
-
-# line-height = 1.2
-
-# Startup directory
+hide-cursor-when-typing = true
+padding-x = 15
+padding-y = [0, 0]
+option-as-alt = 'both'         # 'both', 'left' and 'right'
+line-height = 1.0
+confirm-before-quit = false
 # working-dir = "/Users/raphael/Documents/"
 
-# Environment variables
-# env-vars = []
-
-# Defaults for POSIX-based systems
-# MacOS: spawn processes
-# Linux/BSD: fork processes
-# use-fork = false
-
-# Confirm before exiting Rio
-confirm-before-quit = false
-
-# Cursor
-# shape - 'block', 'underline', 'beam' or 'hidden'
-# blinking - Whether the cursor blinks. The default is false
-# blinking-interval - Cursor update on milliseconds interval
-#
 [cursor]
-shape = 'beam'
+shape = 'beam'          # 'block', 'underline', 'beam' or 'hidden'
 blinking = false
 blinking-interval = 800
 
-# Editor
 [editor]
 program = "/opt/homebrew/bin/nvim"
 # args = []
 
-# Window configuration
-#
-# • mode - define how the window will be created
-#     - "Windowed" (default) is based on width and height
-#     - "Maximized" window is created with maximized
-#     - "Fullscreen" window is created with fullscreen
-#
-# • opacity - Set window opacity
-#
-# • blur - Set blur on the window background. Changing this config requires restarting Rio to take effect.
-#
-# • decorations - Set window decorations, options: "Enabled", "Disabled", "Transparent", "Buttonless"
-#
 [window]
-# width = 600
-# height = 400
-# mode = "windowed"
+mode = "Maximized"          # "Windowed", "Maximized" or "Fullscreen"
 opacity = 1.0
-# blur = false
-decorations = "Transparent"
+blur = false
+decorations = "Transparent" #  "Enabled", "Disabled", "Transparent", "Buttonless"
+
+[fonts]
+size = 18
+family = "Hasklug Nerd Font Mono"
+
+[bindings]
+keys = [
+  { key = "/", with = "super", action = "SplitRight" },
+  { key = "\\", with = "super", action = "SplitDown" },
+]
 
 # Renderer
 #
@@ -108,47 +75,6 @@ decorations = "Transparent"
 # use-kitty-keyboard-protocol = false
 # disable-ctlseqs-alt = false
 
-# Fonts
-#
-# Configure fonts used by the terminal
-#
-# You can also specify extra fonts to load
-# [fonts]
-# extras = [{ family = "Microsoft JhengHei" }]
-#
-# In case you want to specify any font feature:
-# [fonts]
-# features = ["ss02", "ss03", "ss05", "ss19"]
-#
-# Note: Font features do not have support to live reload on configuration,
-# so to reflect your changes, you will need to close and reopen Rio.
-#
-# You can also disable font hinting. Font hinting is enabled by default.
-# [fonts]
-# hinting = false
-#
-# You can also map the specified Unicode codepoints to a particular font.
-# [fonts]
-# symbol-map = [
-#   { start = "2297", end = "2299", font-family = "Cascadia Code NF" }
-# ]
-
-[fonts]
-size = 18
-family = "Hasklug Nerd Font Mono"
-
-# Scroll
-#
-# You can change how many lines are scrolled each time by setting this option.
-#
-# Scroll calculation for canonical mode will be based on `lines = (accumulated scroll * multiplier / divider)`,
-# If you want a quicker scroll, keep increasing the multiplier.
-# If you want to reduce scroll speed you will need to increase the divider.
-# You can use both properties also to find the best scroll for you.
-#
-# Multiplier default is 3.0.
-# Divider default is 1.0.
-# Example:
 # [scroll]
 # multiplier = 3.0
 # divider = 1.0
@@ -175,38 +101,6 @@ family = "Hasklug Nerd Font Mono"
 # use-current-path = false
 # color-automation = []
 
-# Shell
-#
-# You can set `shell.program` to the path of your favorite shell, e.g. `/bin/fish`.
-# Entries in `shell.args` are passed unmodified as arguments to the shell.
-#
-# Default:
-#   - (macOS) user login shell
-#   - (Linux/BSD) user login shell
-#   - (Windows) powershell
-#
-# Example 1 using fish shell from bin path:
-#
-# [shell]
-# program = "/bin/fish"
-# args = ["--login"]
-#
-#
-# Example 4 for MacOS with tmux installed by homebrew
-#
 # [shell]
 # program = "/opt/homebrew/bin/tmux"
 # args = ["new-session", "-c", "/var/www"]
-
-
-# Bindings
-#
-# Create custom Key bindings for Rio terminal
-# More information in: https://raphamorim.io/rio/docs/key-bindings
-#
-#  bytes = [27, 91, 53, 126] is equivalent to "\x1b[5~"
-[bindings]
-keys = [
-  { key = "/", with = "super", action = "SplitRight" },
-  { key = "\\", with = "super", action = "SplitDown" },
-]

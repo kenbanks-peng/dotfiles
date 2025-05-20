@@ -14,7 +14,7 @@ function app_icons() {
      "Cursor")
           icon_result="􀈎"
           ;;
-     "WezTerm")
+     "WezTerm" | "Rio")
           icon_result="􀩼"
           ;;
      "Obsidian")
