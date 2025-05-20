@@ -112,3 +112,7 @@ scan *args:
 # fzf alternative
 fz *args:
   -sk {{args}}
+
+# echo 9 13 5 17 1 | spark
+s *args:
+  spark {{args}}
