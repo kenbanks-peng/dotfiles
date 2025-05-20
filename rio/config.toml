@@ -55,7 +55,6 @@ keys = [
 #
 # • filters: A list of paths to RetroArch slang shaders. Might not work with OpenGL.
 #
-# Example:
 # [renderer]
 # performance = "high"
 # backend = "automatic"
