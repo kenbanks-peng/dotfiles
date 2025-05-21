@@ -387,13 +387,13 @@ zx 8.5.4
 
 MISE PACKAGES
 -------------
-bun     1.2.4   ~/.config/mise/config.toml  latest
-deno    2.2.3   ~/.config/mise/config.toml  latest
-git     2.49.0  ~/.config/mise/config.toml  latest
-go      1.24.1  ~/.config/mise/config.toml  latest
-node    23.9.0  ~/.config/mise/config.toml  latest
-python  3.13.2  ~/.config/mise/config.toml  latest
-uv      0.6.5   ~/.config/mise/config.toml  latest
+bun     1.2.4   ~/Software/DevBox/dotfiles/mise/config.toml  latest
+deno    2.2.3   ~/Software/DevBox/dotfiles/mise/config.toml  latest
+git     2.49.0  ~/Software/DevBox/dotfiles/mise/config.toml  latest
+go      1.24.1  ~/Software/DevBox/dotfiles/mise/config.toml  latest
+node    23.9.0  ~/Software/DevBox/dotfiles/mise/config.toml  latest
+python  3.13.2  ~/Software/DevBox/dotfiles/mise/config.toml  latest
+uv      0.6.5   ~/Software/DevBox/dotfiles/mise/config.toml  latest
 
 UV TOOLS
 --------
