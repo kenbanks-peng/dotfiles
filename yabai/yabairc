@@ -68,6 +68,7 @@ yabai -m config "${space_settings[@]}"
 # RULES
 #
 
+yabai -m rule --add label="LanguageTool" app="^LanguageTool For Desktop$" manage=off
 yabai -m rule --add label="Finder" app="^Finder$" manage=off
 yabai -m rule --add label="System Settings" app="^System Settings$" manage=off
 yabai -m rule --add label="Activity Monitor" app="^Activity Monitor$" manage=off

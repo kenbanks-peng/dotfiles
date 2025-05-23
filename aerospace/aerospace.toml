@@ -47,10 +47,6 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 # Also see: https://nikitabobko.github.io/AeroSpace/goodies#disable-hide-app
 automatically-unhide-macos-hidden-apps = true
 
-# on-focus-changed = [
-#   "exec-and-forget osascript -e 'tell application id \"tracesOf.Uebersicht\" to refresh widget id \"simple-bar-index-jsx\"'",
-# ]
-
 # Notify simplebar about workspace change
 # exec-on-workspace-change = [
 #   '/bin/zsh',
@@ -247,11 +243,20 @@ shift-down = ['volume set 0', 'mode main']
 ########################   callbacks   ########################
 
 
+
 [[on-window-detected]]
 # if.app-id = 'com.apple.systempreferences'
 # if.window-title-regex-substring = 'substring'
 # if.workspace = 'workspace-name'
 # if.during-aerospace-startup = true
 if.app-name-regex-substring = 'DeskMinder'
-check-further-callbacks = true
+# check-further-callbacks = true
 run = ['layout floating', 'move-node-to-workspace S']
+
+[[on-window-detected]]
+if.app-id = 'org.languagetool.desktop'
+run = []
+
+
+
+
