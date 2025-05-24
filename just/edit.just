@@ -26,20 +26,20 @@ e *args: (_editor "void" args)
 # cursor editor
 c *args: (_editor "cursor" args)
 
-# nvim tui
+# nvim editor
 n *args: (_editor "nvim" args)
 
-# micro tui
+# micro editor
 mic *args: (_editor "micro" args)
 
 # zed editor
 z *args: (_editor "zed" args)
 
-# git tui
+# lazygit tui
 g *args:
   lazygit {{args}}
 
-# git tui
+# gitui tui
 gt *args:
   gitui {{args}}
 
