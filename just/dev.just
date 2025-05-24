@@ -86,3 +86,8 @@ db *args:
 # database tui
 db2 *args:
   gobang {{args}}
+
+# create linux vm
+linux *args:
+  limactl {{args}}
+
