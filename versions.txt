@@ -9,8 +9,9 @@ anybar 0.2.3
 anythingllm 1.8.1
 arc 1.95.1,62956
 boltai 1.35.2
+bruno 2.3.0
 claude 0.9.3,264905af69687040b91a366ebe1f7648c15551ac
-cursor 0.50.5,96e5b01ca25f8fbd4c4c10bc69b15f6228c80771
+cursor 0.50.6,f3f2ad556456ff2df80332923bb1e2a818110d1b
 daisydisk 4.31
 docker 4.41.2,191736
 espanso 2.2.1
@@ -27,7 +28,7 @@ font-sf-pro latest
 font-symbols-only-nerd-font 3.4.0
 font-tex-gyre-termes 2.004
 git-credential-manager 2.6.1
-github 3.4.19-d147b1a3
+github 3.4.20-d2e01c60
 gitkraken-cli 3.0.6
 grandperspective 3.5.3
 httpie 2025.2.0
@@ -35,17 +36,17 @@ itsycal 0.15.6
 jordanbaird-ice 0.11.12
 karabiner-elements 15.3.0
 keyclu 0.30.1
-languagetool 2.2.19
+languagetool 2.3.2
 lapce 0.4.2
 local 9.2.4,6788
 mark-text 0.17.1
 microsoft-auto-update 4.79.25033028
-microsoft-edge 136.0.3240.76,6c1c832d-07c9-4dab-b9a7-b55a7c5e4365
+microsoft-edge 136.0.3240.92,bdca5f71-4945-461d-9089-d85ca71ddf29
 obsidian 1.8.10
 omnifocus 4.5.3
 onyx 4.7.8
 pdf-pals 1.9.0
-raycast 1.98.5
+raycast 1.99.2
 redquits 2.0
 rio 0.2.16
 sf-symbols 6
@@ -55,14 +56,14 @@ syntax-highlight 2.1.25
 transmission 4.0.6
 typeface 4.0.1,4595
 ubersicht 1.6.82
-visual-studio-code 1.100.2
 vmware-fusion 13.6.3,24585314
-warp 0.2025.05.14.08.11.stable_03
+void 1.99.30034
+warp 0.2025.05.21.08.11.stable_01
 wezterm 20240203-110809,5046fc22
-yaak 2025.2.0
+yaak 2025.2.2
 youtube-music latest
-zed 0.186.12
-zen 1.12.6b
+zed 0.187.8
+zen 1.12.8b
 zoom 6.4.10.56141
 
 BREW FORMULAS
@@ -82,12 +83,12 @@ aws-c-common 0.12.3
 aws-c-compression 0.3.1
 aws-c-event-stream 0.5.4
 aws-c-http 0.10.1
-aws-c-io 0.19.0
+aws-c-io 0.19.1
 aws-c-mqtt 0.13.0
-aws-c-s3 0.7.18
+aws-c-s3 0.8.0
 aws-c-sdkutils 0.2.4
 aws-checksums 0.2.7
-aws-crt-cpp 0.32.5
+aws-crt-cpp 0.32.6
 aws-sdk-cpp 1.11.570
 bandwhich 0.23.1
 bash 5.2.37
@@ -119,7 +120,7 @@ dua-cli 2.30.1
 duf 0.8.1
 dust 1.2.0
 dvc 3.59.2
-fastfetch 2.43.0
+fastfetch 2.44.0
 fd 10.2.0
 ffmpeg 7.1.1_2
 fish 4.0.2
@@ -142,7 +143,7 @@ git-bug 0.10.1
 git-delta 0.18.2_3
 gitui 0.27.0
 glances 4.3.1_2
-glib 2.84.1
+glib 2.84.2
 glow 2.1.0
 gmp 6.3.0
 gnu-sed 4.9
@@ -185,11 +186,11 @@ jqp 0.7.0
 just 1.40.0
 lame 3.100
 lazydocker 0.24.1
-lazygit 0.50.0
+lazygit 0.51.1
 lcdf-typetools 2.110
 leptonica 1.85.0
 lf 35
-libarchive 3.7.9
+libarchive 3.8.0
 libass 0.17.3
 libassuan 3.0.2
 libavif 1.3.0
@@ -212,7 +213,7 @@ libmpc 1.3.1
 libnghttp2 1.65.0
 libogg 1.3.5
 libomp 20.1.5
-libplacebo 7.349.0
+libplacebo 7.351.0
 libpng 1.6.48
 libraw 0.21.4
 librist 0.2.11
@@ -242,7 +243,7 @@ libxdmcp 1.1.5
 libxext 1.3.6
 libxrender 0.9.12
 libyaml 0.2.5
-lima 1.0.7
+lima 1.1.1
 little-cms2 2.17
 llvm 20.1.5
 lolcat 100.0.1
@@ -267,11 +268,12 @@ molten-vk 1.3.0
 mpdecimal 4.0.1
 mpfr 4.2.2
 mpg123 1.32.10
-mpv 0.40.0
+mpv 0.40.0_1
 mujs 1.3.6
 navi 2.24.0
 ncdu 2.8.2
 ncurses 6.5
+neofetch 7.1.0
 neovim 0.11.1
 nettle 3.10.1
 nginx 1.27.5
@@ -281,8 +283,8 @@ npth 1.8
 nspr 4.36
 nss 3.111
 numpy 2.2.6
-nushell 0.104.0
-oh-my-posh 25.23.1
+nushell 0.104.1
+oh-my-posh 25.23.2
 onefetch 2.24.0
 oniguruma 6.9.10
 openblas 0.3.29
@@ -321,6 +323,7 @@ rubberband 4.0.0
 ruby 3.4.4
 rustscan 2.4.1
 sad 0.4.32
+screenresolution 1.6
 sd 1.0.0
 sdl2 2.32.6
 sevenzip 24.09
@@ -375,7 +378,7 @@ xz 5.8.1
 yabai 7.1.15
 yazi 25.4.8
 yq 4.45.4
-yt-dlp 2025.4.30
+yt-dlp 2025.5.22
 z3 4.15.0
 zellij 0.42.2
 zeromq 4.3.5_1
@@ -397,9 +400,9 @@ uv      0.6.5   ~/Software/DevBox/dotfiles/mise/config.toml  latest
 
 UV TOOLS
 --------
-aider-chat v0.83.1
+aider-chat v0.83.2
 - aider
-ruff v0.11.10
+ruff v0.11.11
 - ruff
 
 GO TOOLS
@@ -436,5 +439,5 @@ rustlings v6.4.0:
 BUN
 ---
 /Users/ken/.local/share/bun/install/global node_modules (36)
-├── @anthropic-ai/claude-code@0.2.124
+├── @anthropic-ai/claude-code@0.2.126
 └── nuekit@1.0.0-beta.2
