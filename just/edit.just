@@ -7,71 +7,33 @@ default:
 
 #####################   EDITORS   #####################
 
+# Common editor function
+_editor command *args:
+  #!/usr/bin/env zsh
+  if [ -n "{{args}}" ]; then
+    print "{{BrightMagenta}}{{command}} {{args}}"
+    print
+    {{command}} {{args}}
+  else
+    print "{{BrightMagenta}}{{command}} ."
+    print
+    {{command}} .
+  fi
 
 # void editor
-e *args:
-  #!/usr/bin/env zsh
-  if [ -n "{{args}}" ]; then
-    print "{{BrightMagenta}}void {{args}}"
-    print
-    void {{args}}
-  else
-    print "{{BrightMagenta}}void ."
-    print
-    void .
-  fi
+e *args: (_editor "void" args)
 
 # cursor editor
-c *args:
-  #!/usr/bin/env zsh
-  if [ -n "{{args}}" ]; then
-    print "{{BrightMagenta}}cursor {{args}}"
-    print
-    cursor {{args}}
-  else
-    print "{{BrightMagenta}}cursor ."
-    print
-    cursor .
-  fi
+c *args: (_editor "cursor" args)
 
 # nvim tui
-n *args:
-  #!/usr/bin/env zsh
-  if [ -n "{{args}}" ]; then
-    print "{{BrightMagenta}}nvim {{args}}"
-    print
-    nvim {{args}}
-  else
-    print "{{BrightMagenta}}nvim ."
-    print
-    nvim .
-  fi
+n *args: (_editor "nvim" args)
 
 # micro tui
-mic *args:
-  #!/usr/bin/env zsh
-  if [ -n "{{args}}" ]; then
-    print "{{BrightMagenta}}micro {{args}}"
-    print
-    micro {{args}}
-  else
-    print "{{BrightMagenta}}micro ."
-    print
-    micro .
-  fi
+mic *args: (_editor "micro" args)
 
 # zed editor
-z *args:
-  #!/usr/bin/env zsh
-  if [ -n "{{args}}" ]; then
-    print "{{BrightMagenta}}zed {{args}}"
-    print
-    zed {{args}}
-  else
-    print "{{BrightMagenta}}zed ."
-    print
-    zed .
-  fi
+z *args: (_editor "zed" args)
 
 # git tui
 g *args:
