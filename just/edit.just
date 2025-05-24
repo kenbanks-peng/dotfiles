@@ -12,11 +12,11 @@ default:
 e *args:
   #!/usr/bin/env zsh
   if [ -n "{{args}}" ]; then
-    print "{{BrightMagenta}}code {{args}}"
+    print "{{BrightMagenta}}void {{args}}"
     print
     void {{args}}
   else
-    print "{{BrightMagenta}}code ."
+    print "{{BrightMagenta}}void ."
     print
     void .
   fi
@@ -25,11 +25,11 @@ e *args:
 c *args:
   #!/usr/bin/env zsh
   if [ -n "{{args}}" ]; then
-    print "{{BrightMagenta}}code {{args}}"
+    print "{{BrightMagenta}}cursor {{args}}"
     print
     cursor {{args}}
   else
-    print "{{BrightMagenta}}code ."
+    print "{{BrightMagenta}}cursor ."
     print
     cursor .
   fi
@@ -38,11 +38,11 @@ c *args:
 n *args:
   #!/usr/bin/env zsh
   if [ -n "{{args}}" ]; then
-    print "{{BrightMagenta}}code {{args}}"
+    print "{{BrightMagenta}}nvim {{args}}"
     print
     nvim {{args}}
   else
-    print "{{BrightMagenta}}code ."
+    print "{{BrightMagenta}}nvim ."
     print
     nvim .
   fi
@@ -51,11 +51,11 @@ n *args:
 mic *args:
   #!/usr/bin/env zsh
   if [ -n "{{args}}" ]; then
-    print "{{BrightMagenta}}code {{args}}"
+    print "{{BrightMagenta}}micro {{args}}"
     print
     micro {{args}}
   else
-    print "{{BrightMagenta}}code ."
+    print "{{BrightMagenta}}micro ."
     print
     micro .
   fi
@@ -84,5 +84,3 @@ gt *args:
 # markdown tui
 m *args:
   glow {{args}}
-
-
