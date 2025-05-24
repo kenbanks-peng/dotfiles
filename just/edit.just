@@ -20,20 +20,20 @@ _editor command *args:
     {{command}} .
   fi
 
-# void editor
-e *args: (_editor "void" args)
-
 # cursor editor
-c *args: (_editor "cursor" args)
+e *args: (_editor "cursor" args)
+
+# code editor
+c *args: (_editor "code" args)
 
 # nvim editor
 n *args: (_editor "nvim" args)
 
-# micro editor
-mic *args: (_editor "micro" args)
-
 # zed editor
 z *args: (_editor "zed" args)
+
+# micro editor
+mic *args: (_editor "micro" args)
 
 # lazygit tui
 g *args:
