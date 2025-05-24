@@ -8,21 +8,69 @@ default:
 #####################   EDITORS   #####################
 
 
-# edit current directory
-e:
-  cursor .
+# void editor
+e *args:
+  #!/usr/bin/env zsh
+  if [ -n "{{args}}" ]; then
+    print "{{BrightMagenta}}code {{args}}"
+    print
+    void {{args}}
+  else
+    print "{{BrightMagenta}}code ."
+    print
+    void .
+  fi
 
-# vscode
+# cursor editor
 c *args:
   #!/usr/bin/env zsh
   if [ -n "{{args}}" ]; then
     print "{{BrightMagenta}}code {{args}}"
     print
-    code {{args}}
+    cursor {{args}}
   else
     print "{{BrightMagenta}}code ."
     print
-    code .
+    cursor .
+  fi
+
+# nvim tui
+n *args:
+  #!/usr/bin/env zsh
+  if [ -n "{{args}}" ]; then
+    print "{{BrightMagenta}}code {{args}}"
+    print
+    nvim {{args}}
+  else
+    print "{{BrightMagenta}}code ."
+    print
+    nvim .
+  fi
+
+# micro tui
+mic *args:
+  #!/usr/bin/env zsh
+  if [ -n "{{args}}" ]; then
+    print "{{BrightMagenta}}code {{args}}"
+    print
+    micro {{args}}
+  else
+    print "{{BrightMagenta}}code ."
+    print
+    micro .
+  fi
+
+# zed editor
+z *args:
+  #!/usr/bin/env zsh
+  if [ -n "{{args}}" ]; then
+    print "{{BrightMagenta}}zed {{args}}"
+    print
+    zed {{args}}
+  else
+    print "{{BrightMagenta}}zed ."
+    print
+    zed .
   fi
 
 # git tui
@@ -37,23 +85,4 @@ gt *args:
 m *args:
   glow {{args}}
 
-# nvim tui
-n *args:
-    nvim {{args}}
 
-# micro tui
-mic *args:
-  micro {{args}}
-
-# zed editor
-z *args:
-  #!/usr/bin/env zsh
-  if [ -n "{{args}}" ]; then
-    print "{{BrightMagenta}}zed {{args}}"
-    print
-    zed {{args}}
-  else
-    print "{{BrightMagenta}}zed ."
-    print
-    zed .
-  fi
