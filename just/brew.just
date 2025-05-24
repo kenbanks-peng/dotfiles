@@ -67,7 +67,7 @@ bl *$args:
   print "brew upgrade (greedy) /w cleanup"
   print
   brew upgrade --greedy
-  brew cleanup
+  brew cleanup --prune=all
 
 # brew remove (w/ autoremove, cleanup)
 @br *args:
@@ -75,7 +75,7 @@ bl *$args:
   print
   brew remove {{ args }}
   brew autoremove
-  brew cleanup
+  brew cleanup --prune=all
 
 # brew tree (casks and formulas)
 bt *args:
