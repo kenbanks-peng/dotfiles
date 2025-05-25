@@ -20,11 +20,11 @@ _editor command *args:
     {{command}} .
   fi
 
-# cursor editor
-e *args: (_editor "cursor" args)
+# vscode editor
+e *args: (_editor "code" args)
 
-# code editor
-c *args: (_editor "code" args)
+# cursor editor
+c *args: (_editor "cursor" args)
 
 # nvim editor
 n *args: (_editor "nvim" args)
