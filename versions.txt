@@ -11,7 +11,7 @@ arc 1.95.1,62956
 boltai 1.35.2
 bruno 2.3.0
 claude 0.9.3,264905af69687040b91a366ebe1f7648c15551ac
-cursor 0.50.6,f3f2ad556456ff2df80332923bb1e2a818110d1b
+cursor 0.50.7,02270c8441bdc4b2fdbc30e6f470a589ec78d60d
 daisydisk 4.31
 docker 4.41.2,191736
 espanso 2.2.1
@@ -29,7 +29,6 @@ font-symbols-only-nerd-font 3.4.0
 font-tex-gyre-termes 2.004
 git-credential-manager 2.6.1
 github 3.4.20-d2e01c60
-gitkraken-cli 3.0.6
 grandperspective 3.5.3
 httpie 2025.2.0
 itsycal 0.15.6
@@ -56,11 +55,11 @@ syntax-highlight 2.1.25
 transmission 4.0.6
 typeface 4.0.1,4595
 ubersicht 1.6.82
+visual-studio-code 1.100.2
 vmware-fusion 13.6.3,24585314
-void 1.99.30034
 warp 0.2025.05.21.08.11.stable_01
 wezterm 20240203-110809,5046fc22
-yaak 2025.2.2
+yaak 2025.2.3
 youtube-music latest
 zed 0.187.8
 zen 1.12.8b
@@ -72,7 +71,7 @@ abseil 20240722.1
 age 1.2.1
 aichat 0.29.0
 aom 3.12.1
-apache-arrow 19.0.1_4
+apache-arrow 19.0.1_5
 aribb24 1.0.4
 asciidoctor 2.0.23
 ast-grep 0.38.2
@@ -84,7 +83,7 @@ aws-c-compression 0.3.1
 aws-c-event-stream 0.5.4
 aws-c-http 0.10.1
 aws-c-io 0.19.1
-aws-c-mqtt 0.13.0
+aws-c-mqtt 0.13.1
 aws-c-s3 0.8.0
 aws-c-sdkutils 0.2.4
 aws-checksums 0.2.7
@@ -131,7 +130,7 @@ fontconfig 2.16.0
 freetype 2.13.3
 frei0r 2.3.3
 fribidi 1.0.16
-fx 35.0.0
+fx 36.0.2
 fzf 0.62.0
 gawk 5.3.1
 gcc 14.2.0_1
@@ -259,7 +258,7 @@ lzo 2.10
 m4 1.4.20
 macmon 0.6.0
 makensis 3.11
-mbedtls 3.6.3
+mbedtls 3.6.3.1
 mcfly 0.9.3
 md5sha1sum 0.9.5_1
 melody 0.20.0
@@ -284,7 +283,7 @@ nspr 4.36
 nss 3.111
 numpy 2.2.6
 nushell 0.104.1
-oh-my-posh 25.23.2
+oh-my-posh 25.23.3
 onefetch 2.24.0
 oniguruma 6.9.10
 openblas 0.3.29
@@ -351,7 +350,7 @@ tailspin 5.4.2
 tealdeer 1.7.2
 tesseract 5.5.0_1
 theora 1.1.1
-thrift 0.21.0
+thrift 0.22.0
 tokei 12.1.2
 tree 2.2.1
 tree-sitter 0.25.4
@@ -390,18 +389,16 @@ zx 8.5.4
 
 MISE PACKAGES
 -------------
-bun     1.2.4   ~/Software/DevBox/dotfiles/mise/config.toml  latest
-deno    2.2.3   ~/Software/DevBox/dotfiles/mise/config.toml  latest
-git     2.49.0  ~/Software/DevBox/dotfiles/mise/config.toml  latest
-go      1.24.1  ~/Software/DevBox/dotfiles/mise/config.toml  latest
-node    23.9.0  ~/Software/DevBox/dotfiles/mise/config.toml  latest
-python  3.13.2  ~/Software/DevBox/dotfiles/mise/config.toml  latest
-uv      0.6.5   ~/Software/DevBox/dotfiles/mise/config.toml  latest
+bun     1.2.4   ~/.config/mise/config.toml  latest
+deno    2.2.3   ~/.config/mise/config.toml  latest
+git     2.49.0  ~/.config/mise/config.toml  latest
+go      1.24.1  ~/.config/mise/config.toml  latest
+node    23.9.0  ~/.config/mise/config.toml  latest
+python  3.13.2  ~/.config/mise/config.toml  latest
+uv      0.6.5   ~/.config/mise/config.toml  latest
 
 UV TOOLS
 --------
-aider-chat v0.83.2
-- aider
 ruff v0.11.11
 - ruff
 
