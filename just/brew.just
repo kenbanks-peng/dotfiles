@@ -33,8 +33,8 @@ default:
 
 
 # brew list / leaves
+[script]
 bl *$args:
-  #! /usr/bin/env zsh
   a=(${=args})
   len=${#a[@]}
   a1=${a[1]}
@@ -80,8 +80,8 @@ bl *$args:
   brew cleanup --prune=all
 
 # brew tree (casks and formulas)
+[script]
 bt *args:
-  #! /usr/bin/env zsh
   print "brew tree {{args}}"
   print
   print "{{BrightMagenta}}FORMULAS"
@@ -109,8 +109,8 @@ bz:
   go clean -modcache
 
 # brew fonts 
+[script]
 bf *$args:
-  #! /usr/bin/env zsh
   a=(${=args})
   len=${#a[@]}
   a1=${a[1]}

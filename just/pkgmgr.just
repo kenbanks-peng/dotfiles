@@ -32,8 +32,9 @@ default:
   print -- "---------------------"
   -bun -g update
 
+# versions
+[script]
 v:
-  #!/usr/bin/env zsh 
   {
     print "BREW CASKS"
     print -- "----------"
@@ -66,7 +67,6 @@ v:
     bun pm ls -g 2>/dev/null || print "No global bun packages found"
   } > "$DOTFILES/versions.txt"
  
-
   git -C "$DOTFILES" add versions.txt &>/dev/null
   git -C "$DOTFILES" diff --staged --quiet || (git -C "$DOTFILES" commit -m "update versions" && git -C "$DOTFILES" push) &>/dev/null
   

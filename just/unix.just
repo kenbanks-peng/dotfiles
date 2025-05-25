@@ -70,8 +70,8 @@ sed3 *args:
 # T : type change
 # C : conflict
 #
+[script]
 lg *args:
-  #!/usr/bin/env zsh
   if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
     lsd --almost-all --blocks name --blocks git {{args}}
   else
@@ -80,8 +80,8 @@ lg *args:
 
 
 # list tree
+[script]
 lt *args:
-  #!/usr/bin/env zsh
   if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
     lsd --almost-all --tree --no-symlink --depth 2 -al --blocks name --blocks git {{args}}
   else
@@ -89,8 +89,8 @@ lt *args:
   fi
 
 # list long
+[script]
 ll *args:
-  #!/usr/bin/env zsh
   if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
     lsd --almost-all --no-symlink --blocks permission --blocks user --blocks size --blocks date --blocks git --blocks name {{args}}
   else
@@ -118,8 +118,8 @@ mon:
   macmon
 
 # more readable path. duplicates in red.
+[script]
 path:
-  #!/usr/bin/env zsh
   print $PATH | tr ':' '\n' | awk '{
     count[$0]++
     paths[NR] = $0

@@ -28,8 +28,8 @@ default:
   python "$PYTHON/switch/switch.py" {{ args }}
 
 # json cv to pdf
+[script]
 cv *args:
-  #!/usr/bin/env zsh
   source "$PYTHON/cv/.venv/bin/activate"
   uv run cv {{ args }}
 

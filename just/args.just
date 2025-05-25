@@ -7,9 +7,9 @@ default:
 
 ############  ARGS TEST  ############
 
+# test
+[script]
 test *$args:
-  #! /usr/bin/env zsh
-
   # using *$args format:
   a=(${=args})
   echo "args: {{args}}"
