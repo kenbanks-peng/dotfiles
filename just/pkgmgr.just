@@ -2,6 +2,8 @@ set unstable
 set script-interpreter := ['zsh']
 set shell := ['zsh', '-cu']
 
+import 'colors.just'
+
 default:
   @just --justfile "$JUST/pkgmgr.just" --list | zsh -c "$JUSTGREP"
 
@@ -10,26 +12,30 @@ default:
 # outdated
 @o:
   print
-  print "BREW: mac apps, binaries"
-  print -- "------------------------"
+  print "{{BrightCyan}}BREW: mac apps, binaries"
+  print -- "------------------------{{BrightBlue}}"
   brew outdated --greedy
   print
-  print "MISE: uv, bun, go, node, python, git"
-  print -- "------------------------------------"
+  print
+  print "{{BrightCyan}}MISE: uv, bun, go, node, python, git"
+  print -- "------------------------------------{{BrightBlue}}"
   mise --silent --yes self-update
   mise outdated --bump
   print
-  print "UV: python tools"
-  print -- "----------------"
+  print
+  print "{{BrightCyan}}UV: python tools"
+  print -- "----------------{{BrightBlue}}"
   uv tool upgrade --all
   print
-  print "RUST/CARGO: rust packages"
-  print -- "-------------------------"
+  print
+  print "{{BrightCyan}}RUST/CARGO: rust packages"
+  print -- "-------------------------{{BrightBlue}}"
   rustup check
   cargo install-update -a
   print
-  print "BUN: node js packages"
-  print -- "---------------------"
+  print
+  print "{{BrightCyan}}BUN: node js packages"
+  print -- "---------------------{{BrightBlue}}"
   -bun -g update
 
 # versions
@@ -70,3 +76,4 @@ v:
   git -C "$DOTFILES" add versions.txt &>/dev/null
   git -C "$DOTFILES" diff --staged --quiet || (git -C "$DOTFILES" commit -m "update versions" && git -C "$DOTFILES" push) &>/dev/null
   
+  print "{{BrightMagenta}}updated versions.txt{{BrightBlue}}"

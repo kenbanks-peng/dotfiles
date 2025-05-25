@@ -70,6 +70,7 @@ bl *$args:
   print
   brew upgrade --greedy
   brew cleanup --prune=all
+  just --justfile "$JUST/pkgmgr.just" v
 
 # brew remove (w/ autoremove, cleanup)
 @br *args:
@@ -78,6 +79,7 @@ bl *$args:
   brew remove {{ args }}
   brew autoremove
   brew cleanup --prune=all
+  just --justfile "$JUST/pkgmgr.just" v
 
 # brew tree (casks and formulas)
 [script]
