@@ -346,7 +346,7 @@ stow 2.4.1
 stylua 2.1.0
 svgo 3.3.2
 svt-av1 3.0.2
-tailspin 5.4.2
+tailspin 5.4.3
 tealdeer 1.7.2
 tesseract 5.5.0_1
 theora 1.1.1
