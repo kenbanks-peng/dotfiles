@@ -1,3 +1,5 @@
+set unstable
+set script-interpreter := ['zsh']
 set shell := ['zsh', '-cu']
 
 import 'colors.just'

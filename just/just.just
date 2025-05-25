@@ -3,6 +3,8 @@
 # if arg can be filename with spaces, use "{{args}}"
 # no need to deactivate venvs since shell will end after command
 
+set unstable
+set script-interpreter := ['zsh']
 set shell := ['zsh', '-cu']
 
 default:

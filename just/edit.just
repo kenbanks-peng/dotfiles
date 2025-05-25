@@ -1,3 +1,5 @@
+set unstable
+set script-interpreter := ['zsh']
 set shell := ['zsh', '-cu']
 
 import 'colors.just'
@@ -8,8 +10,9 @@ default:
 #####################   EDITORS   #####################
 
 # Common editor function
-_editor command *args:
-  #!/usr/bin/env zsh
+[private]
+[script]
+editor command *args:
   if [ -n "{{args}}" ]; then
     print "{{BrightMagenta}}{{command}} {{args}}"
     print
@@ -21,19 +24,19 @@ _editor command *args:
   fi
 
 # vscode editor
-e *args: (_editor "code" args)
+e *args: (editor "code" args)
 
 # cursor editor
-c *args: (_editor "cursor" args)
+c *args: (editor "cursor" args)
 
 # nvim editor
-n *args: (_editor "nvim" args)
+n *args: (editor "nvim" args)
 
 # zed editor
-z *args: (_editor "zed" args)
+z *args: (editor "zed" args)
 
 # micro editor
-mic *args: (_editor "micro" args)
+mic *args: (editor "micro" args)
 
 # lazygit tui
 g *args:
