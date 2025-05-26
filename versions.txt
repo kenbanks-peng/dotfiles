@@ -109,7 +109,7 @@ choose-rust 1.3.6
 cjson 1.7.18
 clipboard 0.10.0
 coreutils 9.7
-cryptography 45.0.2
+cryptography 45.0.3
 curlie 1.8.2
 dav1d 1.5.1
 dblab 0.32.0
@@ -130,10 +130,10 @@ fontconfig 2.16.0
 freetype 2.13.3
 frei0r 2.3.3
 fribidi 1.0.16
-fx 36.0.2
+fx 36.0.3
 fzf 0.62.0
 gawk 5.3.1
-gcc 14.2.0_1
+gcc 15.1.0
 gdk-pixbuf 2.42.12_1
 gettext 0.25
 ghostscript 10.05.1
