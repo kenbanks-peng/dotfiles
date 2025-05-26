@@ -71,7 +71,7 @@ abseil 20240722.1
 age 1.2.1
 aichat 0.29.0
 aom 3.12.1
-apache-arrow 19.0.1_5
+apache-arrow 20.0.0
 aribb24 1.0.4
 asciidoctor 2.0.23
 ast-grep 0.38.2
@@ -118,7 +118,7 @@ dotenvx 1.44.1
 dua-cli 2.30.1
 duf 0.8.1
 dust 1.2.0
-dvc 3.59.2
+dvc 3.59.2_1
 fastfetch 2.44.0
 fd 10.2.0
 ffmpeg 7.1.1_2
@@ -276,7 +276,7 @@ neofetch 7.1.0
 neovim 0.11.1
 nettle 3.10.1
 nginx 1.27.5
-nmap 7.95_1
+nmap 7.97
 node 23.11.0
 npth 1.8
 nspr 4.36
