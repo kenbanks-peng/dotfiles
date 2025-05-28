@@ -45,11 +45,11 @@ obsidian 1.8.10
 omnifocus 4.5.3
 onyx 4.7.8
 pdf-pals 1.9.0
-raycast 1.99.2
+raycast 1.99.3
 redquits 2.0
 rio 0.2.16
 sf-symbols 6
-siyuan 3.1.30
+siyuan 3.1.31
 symboliclinker 2.2
 syntax-highlight 2.1.25
 transmission 4.0.6
@@ -61,7 +61,7 @@ warp 0.2025.05.21.08.11.stable_01
 wezterm 20240203-110809,5046fc22
 yaak 2025.2.3
 youtube-music latest
-zed 0.187.8
+zed 0.187.9
 zen 1.12.8b
 zoom 6.4.10.56141
 
@@ -121,7 +121,7 @@ dust 1.2.0
 dvc 3.59.2_1
 fastfetch 2.44.0
 fd 10.2.0
-ffmpeg 7.1.1_2
+ffmpeg 7.1.1_3
 fish 4.0.2
 flac 1.5.0
 flock 0.4.0
@@ -280,7 +280,7 @@ nmap 7.97
 node 23.11.0
 npth 1.8
 nspr 4.36
-nss 3.111
+nss 3.112
 numpy 2.2.6
 nushell 0.104.1
 oh-my-posh 25.23.3
@@ -312,7 +312,7 @@ pygit2 1.18.0
 python-packaging 25.0
 python@3.12 3.12.10_1
 python@3.13 3.13.3_1
-rav1e 0.7.1
+rav1e 0.8.0
 re2 20240702_1
 readline 8.2.13
 resvg 0.45.1
@@ -382,7 +382,7 @@ z3 4.15.0
 zellij 0.42.2
 zeromq 4.3.5_1
 zimg 3.0.5
-zoxide 0.9.7
+zoxide 0.9.8
 zsh 5.9
 zstd 1.5.7
 zx 8.5.4
