@@ -8,7 +8,7 @@ affinity-publisher 2.6.3,3322
 anybar 0.2.3
 anythingllm 1.8.1
 arc 1.95.1,62956
-boltai 1.35.2
+boltai 1.35.3
 bruno 2.3.0
 claude 0.9.3,264905af69687040b91a366ebe1f7648c15551ac
 cursor 0.50.7,02270c8441bdc4b2fdbc30e6f470a589ec78d60d
@@ -43,7 +43,7 @@ microsoft-auto-update 4.79.25033028
 microsoft-edge 136.0.3240.92,bdca5f71-4945-461d-9089-d85ca71ddf29
 obsidian 1.8.10
 omnifocus 4.5.3
-onyx 4.7.8
+onyx 4.7.9
 pdf-pals 1.9.0
 raycast 1.99.3
 redquits 2.0
@@ -353,7 +353,7 @@ theora 1.1.1
 thrift 0.22.0
 tokei 12.1.2
 tree 2.2.1
-tree-sitter 0.25.4
+tree-sitter 0.25.5
 turso 1.0.10
 typst 0.13.1
 uchardet 0.0.8
