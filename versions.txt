@@ -63,7 +63,7 @@ yaak 2025.3.1
 youtube-music latest
 zed 0.188.3
 zen 1.12.8b
-zoom 6.4.10.56141
+zoom 6.4.12.56699
 
 BREW FORMULAS
 -------------
@@ -249,7 +249,7 @@ lolcat 100.0.1
 lpeg 1.1.0
 lsd 1.1.5
 lua 5.4.7
-luajit 2.1.1744318430
+luajit 2.1.1748459687
 luarocks 3.11.1
 lunchy-go 0.2.1
 luv 1.51.0-1
@@ -283,7 +283,7 @@ nspr 4.36
 nss 3.112
 numpy 2.2.6
 nushell 0.104.1
-oh-my-posh 25.23.3
+oh-my-posh 26.0.1
 onefetch 2.24.0
 oniguruma 6.9.10
 openblas 0.3.29
@@ -399,7 +399,7 @@ uv      0.6.5   ~/Software/DevBox/dotfiles/mise/config.toml  latest
 
 UV TOOLS
 --------
-ruff v0.11.11
+ruff v0.11.12
 - ruff
 
 GO TOOLS
