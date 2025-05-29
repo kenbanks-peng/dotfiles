@@ -1,0 +1,96 @@
+# rosewater #f5e0dc
+# flamingo  #f2cdcd
+# pink      #f5c2e7
+# mauve     #cba6f7
+# red       #f38ba8
+# maroon    #eba0ac
+# peach     #fab387
+# yellow    #f9e2af
+# green     #a6e3a1
+# teal      #94e2d5
+# sky       #89dceb
+# sapphire  #74c7ec
+# blue      #89b4fa
+# lavender  #b4befe
+# text      #cdd6f4
+# subtext1  #bac2de
+# subtext0  #a6adc8
+# overlay2  #9399b2
+# overlay1  #7f849c
+# overlay0  #6c7086
+# surface2  #585b70
+# surface1  #45475a
+# surface0  #313244
+# base      #1e1e2e
+# mantle    #181825
+# crust     #11111b
+
+# style format: foreground background attributes
+# special colors
+#   raw
+#   auto - delta will choose color
+#   normal - terminal background color (transparent)
+#   syntax - based on language spec (foreground only)
+#
+# attributes: blink, bold, dim, hidden, italic, reverse, strike, ul/underline
+
+[delta "catppuccin-mocha"]
+  dark = true
+
+  # ?? - base mantle crust suface0 surface1
+	blame-palette = "#1e1e2e #181825 #11111b #313244 #45475a"
+
+  # ?? - overlay0
+	commit-decoration-style = "#6c7086" bold box ul
+	
+  # ?? - overlay0
+	file-decoration-style = "#6c7086"
+
+  # ?? - text
+	file-style = "#cdd6f4"
+
+  # section - border - overlay0
+	hunk-header-decoration-style = "#6c7086" box ul
+
+	hunk-header-file-style = bold
+
+  # section text - subtext0
+	hunk-header-line-number-style = bold "#a6adc8" 
+
+	hunk-header-style = file line-number syntax
+	
+  # border - left - overlay0
+  line-numbers-left-style = "#6c7086"
+
+  # border - right - overlay0
+	line-numbers-right-style = "#6c7086"
+
+  # line numbers - no change - overlay0
+	line-numbers-zero-style = "#6c7086"
+
+  # line numbers - minus - red, red 40%
+	line-numbers-minus-style = "#f38ba8" "#644256" bold
+
+  # line numbers - plus - green, green 40%
+	line-numbers-plus-style = "#a6e3a1" "#4D5754" bold
+
+	# minus line - red, red 40% 
+	minus-style = "#f38ba8" "#644256"
+
+	# minus change - base, red
+	minus-emph-style = "#1e1e2e" "#f38ba8" bold
+
+	# plus line - green, green 40%
+	plus-style = "#a6e3a1" "#4D5754"
+
+	# plus change - base, green
+	plus-emph-style = "#1e1e2e" "#a6e3a1" bold
+
+	map-styles = \
+		bold purple => syntax "#494060", \
+		bold blue => syntax "#384361", \
+		bold cyan => syntax "#384d5d", \
+		bold yellow => syntax "#544f4e"
+    
+	# Should match the name of the bat theme
+	syntax-theme = catppuccin-mocha

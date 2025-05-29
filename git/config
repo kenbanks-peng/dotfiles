@@ -1,0 +1,45 @@
+[user]
+	name = Ken Banks
+	email = kenbanks.peng@gmail.com
+[core]
+  editor = vim
+  excludesfile = ~/.config/git/ignore
+	pager = delta
+[merge]
+  tool = vimdiff
+	conflictStyle = zdiff3
+[diff]
+  tool = vimdiff
+[push]
+  default = simple
+[alias]
+  st = status
+  co = checkout
+  br = branch
+  ci = commit
+  df = diff
+  lg = log --oneline --graph --all --decorate
+  last = log -1 HEAD
+[commit]
+  template = ~/git/commitmsg
+[init]
+  defaultBranch = main
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[credential]
+	helper =
+	helper = /usr/local/share/gcm-core/git-credential-manager
+[credential "https://dev.azure.com"]
+	useHttpPath = true
+[interactive]
+	diffFilter = delta --color-only
+[include]
+  path = ./catpuccin.gitconfig
+[delta]
+	features = catppuccin-mocha
+	navigate = true
+	dark = true
+	side-by-side = true
