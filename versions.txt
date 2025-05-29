@@ -59,9 +59,9 @@ visual-studio-code 1.100.2
 vmware-fusion 13.6.3,24585314
 warp 0.2025.05.21.08.11.stable_01
 wezterm 20240203-110809,5046fc22
-yaak 2025.2.3
+yaak 2025.3.1
 youtube-music latest
-zed 0.187.9
+zed 0.188.3
 zen 1.12.8b
 zoom 6.4.10.56141
 
@@ -87,7 +87,7 @@ aws-c-mqtt 0.13.1
 aws-c-s3 0.8.0
 aws-c-sdkutils 0.2.4
 aws-checksums 0.2.7
-aws-crt-cpp 0.32.6
+aws-crt-cpp 0.32.7
 aws-sdk-cpp 1.11.570
 bandwhich 0.23.1
 bash 5.2.37
@@ -277,7 +277,7 @@ neovim 0.11.1
 nettle 3.10.1
 nginx 1.27.5
 nmap 7.97
-node 23.11.0
+node 24.1.0
 npth 1.8
 nspr 4.36
 nss 3.112
@@ -375,7 +375,7 @@ xorgproto 2024.1
 xvid 1.3.7
 xz 5.8.1
 yabai 7.1.15
-yazi 25.4.8
+yazi 25.5.28
 yq 4.45.4
 yt-dlp 2025.5.22
 z3 4.15.0
