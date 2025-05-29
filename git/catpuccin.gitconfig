@@ -68,17 +68,17 @@
   # line numbers - no change - overlay0
 	line-numbers-zero-style = "#6c7086"
 
-  # line numbers - minus - red, red 40%
+  # line numbers - minus - red, red 20%
 	line-numbers-minus-style = "#f38ba8" "#412F41" bold
-
-  # line numbers - plus - green, green 20%
-	line-numbers-plus-style = "#a6e3a1" "#353940" bold
 
 	# minus line - syntax, red 20% 
 	minus-style = "#f38ba8" "#412F41"
 
 	# minus change - base, red
 	minus-emph-style = "#1e1e2e" "#f38ba8" bold
+
+  # line numbers - plus - green, green 20%
+	line-numbers-plus-style = "#a6e3a1" "#353940" bold
 
 	# plus line - syntax, green 20%
 	plus-style = "#a6e3a1" "#353940"
