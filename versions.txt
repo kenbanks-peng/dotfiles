@@ -57,11 +57,11 @@ typeface 4.0.1,4595
 ubersicht 1.6.82
 visual-studio-code 1.100.2
 vmware-fusion 13.6.3,24585314
-warp 0.2025.05.21.08.11.stable_01
+warp 0.2025.05.28.08.11.stable_02
 wezterm 20240203-110809,5046fc22
 yaak 2025.3.1
 youtube-music latest
-zed 0.188.3
+zed 0.188.4
 zen 1.12.8b
 zoom 6.4.12.56699
 
@@ -87,7 +87,7 @@ aws-c-mqtt 0.13.1
 aws-c-s3 0.8.0
 aws-c-sdkutils 0.2.4
 aws-checksums 0.2.7
-aws-crt-cpp 0.32.7
+aws-crt-cpp 0.32.8
 aws-sdk-cpp 1.11.570
 bandwhich 0.23.1
 bash 5.2.37
@@ -244,7 +244,7 @@ libxrender 0.9.12
 libyaml 0.2.5
 lima 1.1.1
 little-cms2 2.17
-llvm 20.1.5
+llvm 20.1.6
 lolcat 100.0.1
 lpeg 1.1.0
 lsd 1.1.5
@@ -282,7 +282,8 @@ npth 1.8
 nspr 4.36
 nss 3.112
 numpy 2.2.6
-oh-my-posh 26.0.1
+nushell 0.104.1
+oh-my-posh 26.0.4
 onefetch 2.24.0
 oniguruma 6.9.10
 openblas 0.3.29
@@ -338,7 +339,7 @@ speex 1.2.1
 sq 0.48.5
 sqlc 1.29.0
 sqld 0.24.31
-sqlite 3.49.2
+sqlite 3.50.0
 srt 1.5.4
 sshs 4.7.2
 stow 2.4.1
