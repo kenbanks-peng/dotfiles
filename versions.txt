@@ -18,6 +18,7 @@ espanso 2.2.1
 figma 125.4.9
 font-alegreya 2.008
 font-archivo-black latest
+font-fira-sans 4.202
 font-hasklug-nerd-font 3.4.0
 font-ia-writer-quattro latest
 font-ibm-plex-sans 1.1.0
@@ -51,6 +52,7 @@ rio 0.2.16
 screen-studio 2.26.0-3206
 sf-symbols 6
 siyuan 3.1.31
+skim 1.7.10
 symboliclinker 2.2
 syntax-highlight 2.1.25
 transmission 4.0.6
@@ -294,6 +296,7 @@ openjpeg 2.5.3
 openssl@3 3.5.0
 opus 1.5.2
 p11-kit 0.25.5
+pandoc 3.7.0.2
 pango 1.56.3
 pastel 0.10.0
 pcre2 10.45
