@@ -1,5 +1,0 @@
-return {
-  {
-    'nvimdev/dashboard-nvim',
-  }
-}

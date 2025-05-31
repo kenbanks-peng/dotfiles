@@ -1,1 +1,0 @@
-# Nvim using 💤 LazyVim
