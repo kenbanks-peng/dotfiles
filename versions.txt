@@ -11,7 +11,7 @@ arc 1.97.0,63507
 boltai 1.35.3
 bruno 2.4.0
 claude 0.9.3,264905af69687040b91a366ebe1f7648c15551ac
-cursor 0.50.7,02270c8441bdc4b2fdbc30e6f470a589ec78d60d
+cursor 0.51.1,a9dd46cbd249a30044eaae1526eb6ca1ec2f7568
 daisydisk 4.31
 docker 4.41.2,191736
 espanso 2.2.1
@@ -63,7 +63,7 @@ wezterm 20240203-110809,5046fc22
 yaak 2025.3.1
 youtube-music latest
 zed 0.188.5
-zen 1.12.8b
+zen 1.12.9b
 zoom 6.4.12.56699
 
 BREW FORMULAS
