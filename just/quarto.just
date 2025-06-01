@@ -10,6 +10,6 @@ default:
 ############  QUATRO  ############
 
 # quatro
-qmd *args:
-  quarto render --to revealjs --output-dir "$HOME/Documents/Presentations" {{args}}
+qmd file:
+  quarto render {{file}}--to revealjs --output-dir "$HOME/Documents/Presentations" 
 
