@@ -11,5 +11,5 @@ default:
 
 # quatro
 qmd file:
-  quarto render {{file}}--to revealjs --output-dir "$HOME/Documents/Presentations" 
+  quarto render {{file}} --to revealjs --output-dir "$HOME/Documents/Presentations" 
 
