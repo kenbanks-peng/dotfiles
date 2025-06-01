@@ -60,3 +60,6 @@ mod args
 
 # package managers
 mod pkgmgr
+
+# quarto
+mod quarto
