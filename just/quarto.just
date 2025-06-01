@@ -11,5 +11,5 @@ default:
 
 # quatro
 qmd *args:
-  quarto render --to revealjs --output-dir /Users/ken/Documents/Presentations {{args}}
+  quarto render --to revealjs --output-dir "$HOME/Documents/Presentations" {{args}}
 
