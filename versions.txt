@@ -66,7 +66,7 @@ wezterm 20240203-110809,5046fc22
 yaak 2025.3.1
 youtube-music latest
 zed 0.188.5
-zen 1.12.9b
+zen 1.12.10b
 zoom 6.4.12.56699
 
 BREW FORMULAS
@@ -78,7 +78,7 @@ aom 3.12.1
 apache-arrow 20.0.0
 aribb24 1.0.4
 asciidoctor 2.0.23
-ast-grep 0.38.3
+ast-grep 0.38.4
 autoconf 2.72
 aws-c-auth 0.9.0
 aws-c-cal 0.9.1
@@ -233,7 +233,7 @@ libtiff 4.7.0
 libtool 2.5.4
 libunibreak 6.1
 libunistring 1.3
-libusb 1.0.28
+libusb 1.0.29
 libuv 1.51.0
 libvidstab 1.1.1
 libvmaf 3.0.0
@@ -351,7 +351,7 @@ stow 2.4.1
 stylua 2.1.0
 svgo 3.3.2
 svt-av1 3.0.2
-tailspin 5.4.3
+tailspin 5.4.4
 tealdeer 1.7.2
 tesseract 5.5.1
 theora 1.1.1
