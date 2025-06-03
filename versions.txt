@@ -10,7 +10,7 @@ anythingllm 1.8.1
 arc 1.97.0,63507
 boltai 1.35.3
 bruno 2.4.0
-claude 0.9.3,264905af69687040b91a366ebe1f7648c15551ac
+claude 0.9.4,dc1240b3795e5731dc6741371d9c8939e34cee94
 cursor 0.51.1,a9dd46cbd249a30044eaae1526eb6ca1ec2f7568
 daisydisk 4.31
 docker 4.41.2,191736
@@ -23,6 +23,7 @@ font-hasklug-nerd-font 3.4.0
 font-ia-writer-quattro latest
 font-ibm-plex-sans 1.1.0
 font-ibm-plex-serif 1.1.0
+font-indie-flower latest
 font-inter 4.1
 font-monaspace 1.200
 font-sf-pro latest
@@ -41,7 +42,7 @@ lapce 0.4.2
 local 9.2.4,6788
 mark-text 0.17.1
 microsoft-auto-update 4.79.25033028
-microsoft-edge 137.0.3296.52,27a27010-8843-4b14-a424-5cc2bd4799e3
+microsoft-edge 137.0.3296.58,7950163a-bf2a-4a18-a1f9-bdc63ad5d94d
 obsidian 1.8.10
 omnifocus 4.5.3
 onyx 4.7.9
@@ -61,7 +62,7 @@ typeface 4.0.1,4595
 ubersicht 1.6.82
 visual-studio-code 1.100.2
 vmware-fusion 13.6.3,24585314
-warp 0.2025.05.28.08.11.stable_02
+warp 0.2025.05.28.08.11.stable_03
 wezterm 20240203-110809,5046fc22
 yaak 2025.3.1
 youtube-music latest
@@ -160,7 +161,7 @@ gpgme 1.24.3
 gping 1.19.0
 graphite2 1.3.14
 grex 1.4.5
-grpc 1.72.0
+grpc 1.72.1
 harfbuzz 11.2.1
 hexyl 0.16.0
 highway 1.2.0
@@ -193,7 +194,7 @@ lazygit 0.51.1
 lcdf-typetools 2.110
 leptonica 1.85.0
 lf 35
-libarchive 3.8.0
+libarchive 3.8.1
 libass 0.17.3
 libassuan 3.0.2
 libavif 1.3.0
@@ -260,7 +261,7 @@ luv 1.51.0-1
 lz4 1.10.0
 lzo 2.10
 m4 1.4.20
-macmon 0.6.0
+macmon 0.6.1
 makensis 3.11
 mbedtls 3.6.3.1
 mcfly 0.9.3
@@ -365,7 +366,7 @@ uchardet 0.0.8
 unbound 1.23.0
 unibilium 2.1.2
 utf8proc 2.10.0
-vapoursynth 71
+vapoursynth 72
 vulkan-headers 1.4.316
 vulkan-loader 1.4.316
 wallpaper 2.3.2
