@@ -11,7 +11,7 @@ arc 1.97.0,63507
 boltai 1.35.3
 bruno 2.4.0
 claude 0.9.4,dc1240b3795e5731dc6741371d9c8939e34cee94
-cursor 0.51.1,a9dd46cbd249a30044eaae1526eb6ca1ec2f7568
+cursor 0.51.2,f364e608fc11d38303429b80fd1e1f32d7587d43
 daisydisk 4.31
 docker 4.41.2,191736
 espanso 2.2.1
@@ -42,7 +42,7 @@ lapce 0.4.2
 local 9.2.4,6788
 mark-text 0.17.1
 microsoft-auto-update 4.79.25033028
-microsoft-edge 137.0.3296.58,7950163a-bf2a-4a18-a1f9-bdc63ad5d94d
+microsoft-edge 137.0.3296.62,8c0bf05c-f04c-4572-811c-2a514f4ad1f6
 obsidian 1.8.10
 omnifocus 4.5.3
 onyx 4.7.9
@@ -50,23 +50,23 @@ pdf-pals 1.9.0
 quarto 1.7.31
 raycast 1.99.3
 redquits 2.0
-rio 0.2.16
+rio 0.2.17
 screen-studio 2.26.0-3206
 sf-symbols 6
-siyuan 3.1.31
+siyuan 3.1.32
 skim 1.7.10
 symboliclinker 2.2
 syntax-highlight 2.1.25
 transmission 4.0.6
 typeface 4.0.1,4595
 ubersicht 1.6.82
-visual-studio-code 1.100.2
+visual-studio-code 1.100.3
 vmware-fusion 13.6.3,24585314
 warp 0.2025.05.28.08.11.stable_03
 wezterm 20240203-110809,5046fc22
 yaak 2025.3.1
 youtube-music latest
-zed 0.188.5
+zed 0.188.6
 zen 1.12.10b
 zoom 6.4.12.56699
 
@@ -288,7 +288,7 @@ nspr 4.36
 nss 3.112
 numpy 2.2.6
 nushell 0.104.1
-oh-my-posh 26.1.0
+oh-my-posh 26.2.1
 onefetch 2.24.0
 oniguruma 6.9.10
 openblas 0.3.29
@@ -330,7 +330,7 @@ rustscan 2.4.1
 sad 0.4.32
 screenresolution 1.6
 sd 1.0.0
-sdl2 2.32.6
+sdl2 2.32.8
 sevenzip 24.09
 shaderc 2025.2
 shared-mime-info 2.4
