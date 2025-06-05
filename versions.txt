@@ -1,7 +1,7 @@
 BREW CASKS
 ----------
 aerospace 0.18.5-Beta
-affine 0.22.0
+affine 0.22.2
 affinity-designer 2.6.3,3322
 affinity-photo 2.6.3,3322
 affinity-publisher 2.6.3,3322
@@ -10,7 +10,7 @@ anythingllm 1.8.1
 arc 1.97.1,63934
 boltai 1.35.3
 bruno 2.4.0
-claude 0.9.4,dc1240b3795e5731dc6741371d9c8939e34cee94
+claude 0.10.14,27cc6f763724a1af75b35c386a6b8d014eedc334
 cursor 1.0.0,53b99ce608cba35127ae3a050c1738a959750865
 daisydisk 4.31
 docker 4.42.0,195023
@@ -124,7 +124,7 @@ dua-cli 2.30.1
 duf 0.8.1
 dust 1.2.1
 dvc 3.59.2_1
-fastfetch 2.44.0
+fastfetch 2.45.0
 fd 10.2.0
 ffmpeg 7.1.1_3
 fish 4.0.2
@@ -359,7 +359,7 @@ theora 1.1.1
 thrift 0.22.0
 tokei 12.1.2
 tree 2.2.1
-tree-sitter 0.25.5
+tree-sitter 0.25.6
 turso 1.0.10
 typst 0.13.1
 uchardet 0.0.8
@@ -405,7 +405,7 @@ uv      0.6.5   ~/Software/DevBox/dotfiles/mise/config.toml  latest
 
 UV TOOLS
 --------
-ruff v0.11.12
+ruff v0.11.13
 - ruff
 
 GO TOOLS
