@@ -11,9 +11,9 @@ arc 1.97.1,63934
 boltai 1.35.3
 bruno 2.4.0
 claude 0.9.4,dc1240b3795e5731dc6741371d9c8939e34cee94
-cursor 0.51.2,f364e608fc11d38303429b80fd1e1f32d7587d43
+cursor 1.0.0,53b99ce608cba35127ae3a050c1738a959750865
 daisydisk 4.31
-docker 4.41.2,191736
+docker 4.42.0,195023
 espanso 2.2.1
 figma 125.4.9
 font-alegreya 2.008
@@ -44,7 +44,7 @@ mark-text 0.17.1
 microsoft-auto-update 4.79.25033028
 microsoft-edge 137.0.3296.62,8c0bf05c-f04c-4572-811c-2a514f4ad1f6
 obsidian 1.8.10
-omnifocus 4.5.3
+omnifocus 4.6
 onyx 4.7.9
 pdf-pals 1.9.0
 quarto 1.7.31
@@ -122,7 +122,7 @@ direnv 2.36.0
 dotenvx 1.44.1
 dua-cli 2.30.1
 duf 0.8.1
-dust 1.2.0
+dust 1.2.1
 dvc 3.59.2_1
 fastfetch 2.44.0
 fd 10.2.0
@@ -288,7 +288,7 @@ nspr 4.36
 nss 3.112
 numpy 2.2.6
 nushell 0.104.1
-oh-my-posh 26.2.1
+oh-my-posh 26.3.0
 onefetch 2.24.0
 oniguruma 6.9.10
 openblas 0.3.29
