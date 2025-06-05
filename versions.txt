@@ -82,7 +82,7 @@ asciidoctor 2.0.23
 ast-grep 0.38.4
 autoconf 2.72
 aws-c-auth 0.9.0
-aws-c-cal 0.9.1
+aws-c-cal 0.9.2
 aws-c-common 0.12.3
 aws-c-compression 0.3.1
 aws-c-event-stream 0.5.4
@@ -181,7 +181,7 @@ jasper 4.2.5
 jbig2dec 0.20
 jc 1.25.5
 jid 0.7.6
-jj 0.29.0
+jj 0.30.0
 jnv 0.6.0
 jpeg-turbo 3.1.0
 jpeg-xl 0.11.1_1
@@ -317,7 +317,7 @@ pycparser 2.22_1
 pygit2 1.18.0
 python-packaging 25.0
 python@3.12 3.12.11
-python@3.13 3.13.3_1
+python@3.13 3.13.4
 rav1e 0.8.0
 re2 20240702_1
 readline 8.2.13
