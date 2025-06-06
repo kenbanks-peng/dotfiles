@@ -42,7 +42,7 @@ lapce 0.4.2
 local 9.2.4,6788
 mark-text 0.17.1
 microsoft-auto-update 4.79.25033028
-microsoft-edge 137.0.3296.62,8c0bf05c-f04c-4572-811c-2a514f4ad1f6
+microsoft-edge 137.0.3296.68,647b51b4-d65e-4ff9-8058-f077fc83b9a6
 obsidian 1.8.10
 omnifocus 4.6
 onyx 4.7.9
@@ -204,7 +204,7 @@ libde265 1.0.16
 libdeflate 1.24
 libevent 2.1.12_1
 libgcrypt 1.11.1
-libgit2 1.9.0
+libgit2 1.9.1
 libgpg-error 1.55
 libheif 1.19.8
 libidn 1.43
@@ -288,7 +288,7 @@ nspr 4.36
 nss 3.112
 numpy 2.2.6
 nushell 0.104.1
-oh-my-posh 26.3.0
+oh-my-posh 26.4.0
 onefetch 2.24.0
 oniguruma 6.9.10
 openblas 0.3.29
