@@ -89,7 +89,7 @@ aws-c-event-stream 0.5.4
 aws-c-http 0.10.1
 aws-c-io 0.19.1
 aws-c-mqtt 0.13.1
-aws-c-s3 0.8.0
+aws-c-s3 0.8.1
 aws-c-sdkutils 0.2.4
 aws-checksums 0.2.7
 aws-crt-cpp 0.32.8
@@ -190,7 +190,7 @@ jqp 0.7.0
 just 1.40.0
 lame 3.100
 lazydocker 0.24.1
-lazygit 0.51.1
+lazygit 0.52.0
 lcdf-typetools 2.110
 leptonica 1.85.0
 lf 35
@@ -306,7 +306,7 @@ pet 1.0.1
 pinentry 1.3.1_1
 pixman 0.46.0
 pls 0.0.1-beta.9
-poppler 25.05.0
+poppler 25.06.0
 portal 1.2.3
 posting 2.6.0
 procs 0.14.10
@@ -345,7 +345,7 @@ speex 1.2.1
 sq 0.48.5
 sqlc 1.29.0
 sqld 0.24.31
-sqlite 3.50.0
+sqlite 3.50.1
 srt 1.5.4
 sshs 4.7.2
 stow 2.4.1
@@ -367,8 +367,8 @@ unbound 1.23.0
 unibilium 2.1.2
 utf8proc 2.10.0
 vapoursynth 72
-vulkan-headers 1.4.316
-vulkan-loader 1.4.316
+vulkan-headers 1.4.317
+vulkan-loader 1.4.317
 wallpaper 2.3.2
 watchexec 2.3.2
 webp 1.5.0
