@@ -288,7 +288,7 @@ nspr 4.36
 nss 3.112
 numpy 2.3.0
 nushell 0.104.1
-oh-my-posh 26.4.0
+oh-my-posh 26.4.1
 onefetch 2.24.0
 oniguruma 6.9.10
 openblas 0.3.29
