@@ -293,7 +293,7 @@ onefetch 2.24.0
 oniguruma 6.9.10
 openblas 0.3.29
 opencore-amr 0.1.6
-openexr 3.3.3
+openexr 3.3.4
 openjpeg 2.5.3
 openssl@3 3.5.0
 opus 1.5.2
