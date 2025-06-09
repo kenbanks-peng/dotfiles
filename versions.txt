@@ -155,7 +155,7 @@ gnupg 2.4.8
 gnutls 3.8.9
 go 1.24.4
 go-blueprint 0.10.10
-go-task 3.43.3
+go-task 3.44.0
 gobang 0.1.0-alpha.5
 gpgme 1.24.3
 gping 1.19.0
