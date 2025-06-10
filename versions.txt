@@ -62,7 +62,7 @@ typeface 4.0.1,4595
 ubersicht 1.6.82
 visual-studio-code 1.100.3
 vmware-fusion 13.6.3,24585314
-warp 0.2025.06.04.08.11.stable_01
+warp 0.2025.06.04.08.11.stable_03
 wezterm 20240203-110809,5046fc22
 yaak 2025.3.1
 youtube-music latest
@@ -93,7 +93,7 @@ aws-c-s3 0.8.1
 aws-c-sdkutils 0.2.4
 aws-checksums 0.2.7
 aws-crt-cpp 0.32.8
-aws-sdk-cpp 1.11.570
+aws-sdk-cpp 1.11.585
 bandwhich 0.23.1
 bash 5.2.37
 bat 0.25.0_1
@@ -114,7 +114,7 @@ choose-rust 1.3.6
 cjson 1.7.18
 clipboard 0.10.0
 coreutils 9.7
-cryptography 45.0.3
+cryptography 45.0.4
 curlie 1.8.2
 dav1d 1.5.1
 dblab 0.32.0
@@ -282,13 +282,13 @@ neovim 0.11.2
 nettle 3.10.1
 nginx 1.27.5
 nmap 7.97
-node 24.1.0
+node 24.2.0
 npth 1.8
 nspr 4.36
 nss 3.112
 numpy 2.3.0
 nushell 0.104.1
-oh-my-posh 26.4.1
+oh-my-posh 26.6.0
 onefetch 2.24.0
 oniguruma 6.9.10
 openblas 0.3.29
@@ -359,7 +359,7 @@ thrift 0.22.0
 tokei 12.1.2
 tree 2.2.1
 tree-sitter 0.25.6
-turso 1.0.10
+turso 1.0.11
 typst 0.13.1
 uchardet 0.0.8
 unbound 1.23.0
@@ -382,7 +382,7 @@ xz 5.8.1
 yabai 7.1.15
 yazi 25.5.31
 yq 4.45.4
-yt-dlp 2025.5.22
+yt-dlp 2025.6.9
 z3 4.15.0
 zellij 0.42.2
 zeromq 4.3.5_1
