@@ -139,10 +139,6 @@ path:
   print "recursively remove .DS_store"
   sudo fd --unrestricted '^\.DS_Store$' --type file --exec-batch rm
 
-# rm -rf
-@zap *args:
-  rm -rf {{args}}
-
 # new find
 find *args:
   fd -uuu {{args}}
