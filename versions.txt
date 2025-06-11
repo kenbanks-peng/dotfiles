@@ -6,7 +6,7 @@ affinity-designer 2.6.3,3322
 affinity-photo 2.6.3,3322
 affinity-publisher 2.6.3,3322
 anybar 0.2.3
-anythingllm 1.8.1
+anythingllm 1.8.2
 arc 1.97.1,63934
 boltai 1.35.3
 bruno 2.4.0
@@ -146,7 +146,7 @@ giflib 5.2.2
 git-bug 0.10.1
 git-delta 0.18.2_3
 gitui 0.27.0
-glances 4.3.1_2
+glances 4.3.1_3
 glib 2.84.2
 glow 2.1.1
 gmp 6.3.0
@@ -167,7 +167,7 @@ hexyl 0.16.0
 highway 1.2.0
 how2 3.0.3
 htmlq 0.4.0
-httpie 3.2.4_1
+httpie 3.2.4_2
 hub 2.14.2
 hurl 6.1.1
 hyperfine 1.19.0
@@ -287,7 +287,7 @@ npth 1.8
 nspr 4.36
 nss 3.112
 numpy 2.3.0
-nushell 0.104.1
+nushell 0.105.0
 oh-my-posh 26.6.1
 onefetch 2.24.0
 oniguruma 6.9.10
