@@ -287,7 +287,7 @@ npth 1.8
 nspr 4.36
 nss 3.112
 numpy 2.3.0
-nushell 0.105.0
+nushell 0.105.1
 oh-my-posh 26.6.1
 onefetch 2.24.0
 oniguruma 6.9.10
@@ -394,13 +394,12 @@ zx 8.5.5
 
 MISE PACKAGES
 -------------
-bun     1.2.4   ~/Software/DevBox/dotfiles/mise/config.toml  latest
-deno    2.2.3   ~/Software/DevBox/dotfiles/mise/config.toml  latest
-git     2.49.0  ~/Software/DevBox/dotfiles/mise/config.toml  latest
-go      1.24.1  ~/Software/DevBox/dotfiles/mise/config.toml  latest
-node    23.9.0  ~/Software/DevBox/dotfiles/mise/config.toml  latest
-python  3.13.2  ~/Software/DevBox/dotfiles/mise/config.toml  latest
-uv      0.6.5   ~/Software/DevBox/dotfiles/mise/config.toml  latest
+bun   1.2.4   ~/Software/DevBox/dotfiles/mise/config.toml  latest
+deno  2.2.3   ~/Software/DevBox/dotfiles/mise/config.toml  latest
+git   2.49.0  ~/Software/DevBox/dotfiles/mise/config.toml  latest
+go    1.24.1  ~/Software/DevBox/dotfiles/mise/config.toml  latest
+node  23.9.0  ~/Software/DevBox/dotfiles/mise/config.toml  latest
+uv    0.6.5   ~/Software/DevBox/dotfiles/mise/config.toml  latest
 
 UV TOOLS
 --------
