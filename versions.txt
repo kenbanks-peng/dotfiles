@@ -317,6 +317,7 @@ pycparser 2.22_1
 pygit2 1.18.0
 python@3.12 3.12.11
 python@3.13 3.13.4
+qsv 5.0.3
 rav1e 0.8.0
 re2 20240702_1
 readline 8.2.13
