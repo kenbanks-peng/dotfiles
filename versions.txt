@@ -437,6 +437,8 @@ cargo-update v16.3.1:
     cargo-install-update-config
 rustlings v6.4.0:
     rustlings
+sbyte v0.3.3:
+    sbyte
 
 BUN
 ---
