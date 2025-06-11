@@ -9,7 +9,7 @@ anybar 0.2.3
 anythingllm 1.8.2
 arc 1.97.1,63934
 boltai 1.35.3
-bruno 2.4.0
+bruno 2.5.0
 claude 0.10.14,27cc6f763724a1af75b35c386a6b8d014eedc334
 cursor 1.0.1,5491d1158b9f2bf4c483cff438c7cc162fd7d131
 daisydisk 4.31
