@@ -64,7 +64,6 @@ vmware-fusion 13.6.3,24585314
 warp 0.2025.06.04.08.11.stable_03
 wezterm 20240203-110809,5046fc22
 yaak 2025.4.0
-youtube-music latest
 zed 0.190.4
 zen 1.12.10b
 zoom 6.4.12.56699
