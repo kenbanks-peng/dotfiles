@@ -7,7 +7,7 @@ affinity-photo 2.6.3,3322
 affinity-publisher 2.6.3,3322
 anybar 0.2.3
 anythingllm 1.8.2
-arc 1.97.1,63934
+arc 1.99.0,64212
 boltai 1.35.3
 bruno 2.5.0
 claude 0.10.14,27cc6f763724a1af75b35c386a6b8d014eedc334
@@ -48,7 +48,7 @@ omnifocus 4.6
 onyx 4.8.0
 pdf-pals 1.9.0
 quarto 1.7.31
-raycast 1.100.0
+raycast 1.100.1
 rio 0.2.18
 screen-studio 2.26.0-3206
 sf-symbols 6
@@ -59,12 +59,12 @@ syntax-highlight 2.1.25
 transmission 4.0.6
 typeface 4.0.1,4595
 ubersicht 1.6.82
-visual-studio-code 1.100.3
+visual-studio-code 1.101.0
 vmware-fusion 13.6.3,24585314
-warp 0.2025.06.04.08.11.stable_03
+warp 0.2025.06.11.08.11.stable_01
 wezterm 20240203-110809,5046fc22
 yaak 2025.4.0
-zed 0.190.4
+zed 0.190.5
 zen 1.12.10b
 zoom 6.4.12.56699
 
@@ -85,7 +85,7 @@ aws-c-common 0.12.3
 aws-c-compression 0.3.1
 aws-c-event-stream 0.5.4
 aws-c-http 0.10.2
-aws-c-io 0.19.1
+aws-c-io 0.20.0
 aws-c-mqtt 0.13.1
 aws-c-s3 0.8.1
 aws-c-sdkutils 0.2.4
@@ -122,7 +122,7 @@ dotenvx 1.44.2
 dua-cli 2.30.1
 duf 0.8.1
 dust 1.2.1
-dvc 3.60.0_1
+dvc 3.60.1
 fastfetch 2.45.0
 fd 10.2.0
 ffmpeg 7.1.1_3
@@ -182,7 +182,7 @@ jc 1.25.5
 jid 0.7.6
 jj 0.30.0
 jnv 0.6.0
-jpeg-turbo 3.1.0
+jpeg-turbo 3.1.1
 jpeg-xl 0.11.1_1
 jq 1.8.0
 jqp 0.7.0
@@ -315,13 +315,13 @@ pv 1.9.31
 pycparser 2.22_1
 pygit2 1.18.0
 python@3.12 3.12.11
-python@3.13 3.13.4
+python@3.13 3.13.5
 qsv 5.0.3
 rav1e 0.8.0
 re2 20240702_1
 readline 8.2.13
 resvg 0.45.1
-rich-cli 1.8.0_6
+rich-cli 1.8.0_7
 ripgrep 14.1.1
 rubberband 4.0.0
 ruby 3.4.4
@@ -394,12 +394,13 @@ zx 8.5.5
 
 MISE PACKAGES
 -------------
-bun   1.2.4   ~/Software/DevBox/dotfiles/mise/config.toml  latest
-deno  2.2.3   ~/Software/DevBox/dotfiles/mise/config.toml  latest
-git   2.49.0  ~/Software/DevBox/dotfiles/mise/config.toml  latest
-go    1.24.1  ~/Software/DevBox/dotfiles/mise/config.toml  latest
-node  23.9.0  ~/Software/DevBox/dotfiles/mise/config.toml  latest
-uv    0.6.5   ~/Software/DevBox/dotfiles/mise/config.toml  latest
+bun     1.2.4   ~/Software/DevBox/dotfiles/mise/config.toml  latest
+deno    2.2.3   ~/Software/DevBox/dotfiles/mise/config.toml  latest
+git     2.49.0  ~/Software/DevBox/dotfiles/mise/config.toml  latest
+go      1.24.1  ~/Software/DevBox/dotfiles/mise/config.toml  latest
+node    23.9.0  ~/Software/DevBox/dotfiles/mise/config.toml  latest
+python  3.13.5
+uv      0.6.5   ~/Software/DevBox/dotfiles/mise/config.toml  latest
 
 UV TOOLS
 --------
