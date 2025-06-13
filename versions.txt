@@ -48,7 +48,7 @@ omnifocus 4.6
 onyx 4.8.0
 pdf-pals 1.9.0
 quarto 1.7.31
-raycast 1.100.1
+raycast 1.100.2
 rio 0.2.18
 screen-studio 2.26.0-3206
 sf-symbols 6
@@ -116,7 +116,7 @@ cryptography 45.0.4
 csvtk 0.34.0
 curlie 1.8.2
 dav1d 1.5.1
-dblab 0.32.0
+dblab 0.33.0
 direnv 2.36.0
 dotenvx 1.44.2
 dua-cli 2.30.1
