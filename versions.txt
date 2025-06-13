@@ -1,7 +1,7 @@
 BREW CASKS
 ----------
 aerospace 0.18.5-Beta
-affine 0.22.2
+affine 0.22.4
 affinity-designer 2.6.3,3322
 affinity-photo 2.6.3,3322
 affinity-publisher 2.6.3,3322
@@ -11,7 +11,7 @@ arc 1.99.0,64212
 boltai 1.35.3
 bruno 2.5.0
 claude 0.10.14,27cc6f763724a1af75b35c386a6b8d014eedc334
-cursor 1.0.1,5491d1158b9f2bf4c483cff438c7cc162fd7d131
+cursor 1.1.2,87ea1604be1f602f173c5fb67582e647fcef6c48
 daisydisk 4.31
 docker 4.42.0,195023
 espanso 2.2.1
