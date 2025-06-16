@@ -47,7 +47,7 @@ obsidian 1.8.10
 omnifocus 4.6
 onyx 4.8.0
 pdf-pals 1.9.0
-quarto 1.7.31
+quarto 1.7.32
 raycast 1.100.2
 rio 0.2.18
 screen-studio 2.26.0-3206
@@ -104,7 +104,7 @@ c-ares 1.34.5
 ca-certificates 2025-05-20
 caddy 2.10.0
 cairo 1.18.4
-certifi 2025.4.26
+certifi 2025.6.15
 cffi 1.17.1_1
 chafa 1.16.1
 cheat 4.4.2
@@ -318,7 +318,7 @@ pygit2 1.18.0
 python@3.12 3.12.11
 python@3.13 3.13.5
 qsv 5.0.3
-rav1e 0.8.0
+rav1e 0.8.1
 re2 20240702_1
 readline 8.2.13
 resvg 0.45.1
