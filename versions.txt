@@ -9,7 +9,7 @@ anybar 0.2.3
 anythingllm 1.8.2
 arc 1.99.0,64212
 boltai 1.35.3
-bruno 2.5.0
+bruno 2.6.0
 claude 0.10.38,e55f4e920cb71bb7a87a241eafa0b359f02c010b
 cursor 1.1.3,979ba33804ac150108481c14e0b5cb970bda3266
 daisydisk 4.31
@@ -25,6 +25,7 @@ font-ibm-plex-sans 1.1.0
 font-ibm-plex-serif 1.1.0
 font-indie-flower latest
 font-inter 4.1
+font-league-gothic 1.601
 font-monaspace 1.200
 font-sf-pro latest
 font-symbols-only-nerd-font 3.4.0
@@ -65,8 +66,8 @@ warp 0.2025.06.11.08.11.stable_01
 wezterm 20240203-110809,5046fc22
 yaak 2025.4.0
 zed 0.190.6
-zen 1.13.1b
-zoom 6.4.12.56699
+zen 1.13.2b
+zoom 6.5.0.57940
 
 BREW FORMULAS
 -------------
@@ -287,7 +288,7 @@ nspr 4.36
 nss 3.112
 numpy 2.3.0
 nushell 0.105.1
-oh-my-posh 26.8.0
+oh-my-posh 26.9.0
 onefetch 2.24.0
 oniguruma 6.9.10
 openblas 0.3.29
@@ -405,7 +406,7 @@ uv      0.6.5   ~/Software/DevBox/dotfiles/mise/config.toml  latest
 
 UV TOOLS
 --------
-ruff v0.11.13
+ruff v0.12.0
 - ruff
 
 GO TOOLS
