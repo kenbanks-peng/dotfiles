@@ -65,7 +65,7 @@ vmware-fusion 13.6.3,24585314
 warp 0.2025.06.11.08.11.stable_01
 wezterm 20240203-110809,5046fc22
 yaak 2025.4.0
-zed 0.191.4
+zed 0.191.5
 zen 1.13.2b
 zoom 6.5.0.57940
 
@@ -135,7 +135,7 @@ fontconfig 2.16.0
 freetype 2.13.3
 frei0r 2.3.3
 fribidi 1.0.16
-fx 36.0.3
+fx 36.0.4
 fzf 0.62.0
 gawk 5.3.1
 gcc 15.1.0
