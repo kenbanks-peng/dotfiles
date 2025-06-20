@@ -11,7 +11,7 @@ arc 1.99.0,64212
 boltai 1.35.3
 bruno 2.6.1
 claude 0.10.38,e55f4e920cb71bb7a87a241eafa0b359f02c010b
-cursor 1.1.3,979ba33804ac150108481c14e0b5cb970bda3266
+cursor 1.1.4,e86fcc937643bc6385aebd982c1c66012c98caec
 daisydisk 4.31
 docker 4.42.1,196648
 espanso 2.2.1
@@ -33,8 +33,7 @@ font-tex-gyre-termes 2.004
 git-credential-manager 2.6.1
 github 3.5.0-3d21337d
 grandperspective 3.5.3
-hoppscotch 25.5.2-0
-httpie 2025.2.0
+hoppscotch 25.5.3-0
 itsycal 0.15.6
 jordanbaird-ice 0.11.12
 karabiner-elements 15.3.0
@@ -44,14 +43,14 @@ lapce 0.4.2
 local 9.2.5,6810
 mark-text 0.17.1
 microsoft-auto-update 4.79.25033028
-microsoft-edge 137.0.3296.83,ce5492c7-7fd4-48a8-9702-7b9d5672c08e
+microsoft-edge 137.0.3296.93,d021cafe-f537-4f6d-81e5-f9a23af985c8
 obsidian 1.8.10
 omnifocus 4.6
 onyx 4.8.0
 pdf-pals 1.9.0
 quarto 1.7.32
 raycast 1.100.2
-rio 0.2.19
+rio 0.2.20
 screen-studio 2.26.0-3206
 sf-symbols 6
 siyuan 3.1.32
@@ -61,11 +60,11 @@ syntax-highlight 2.1.25
 transmission 4.0.6
 typeface 4.0.1,4595
 ubersicht 1.6.82
-visual-studio-code 1.101.0
+visual-studio-code 1.101.1
 vmware-fusion 13.6.3,24585314
-warp 0.2025.06.11.08.11.stable_01
+warp 0.2025.06.18.08.11.stable_03
 wezterm 20240203-110809,5046fc22
-zed 0.191.5
+zed 0.191.7
 zen 1.13.2b
 zoom 6.5.0.57940
 
@@ -88,7 +87,7 @@ aws-c-event-stream 0.5.4
 aws-c-http 0.10.2
 aws-c-io 0.20.1
 aws-c-mqtt 0.13.2
-aws-c-s3 0.8.1
+aws-c-s3 0.8.2
 aws-c-sdkutils 0.2.4
 aws-checksums 0.2.7
 aws-crt-cpp 0.32.9
@@ -123,8 +122,8 @@ dotenvx 1.44.2
 dua-cli 2.30.1
 duf 0.8.1
 dust 1.2.1
-dvc 3.60.1
-fastfetch 2.45.0
+dvc 3.60.1_1
+fastfetch 2.46.0
 fd 10.2.0
 ffmpeg 7.1.1_3
 fish 4.0.2
@@ -146,7 +145,7 @@ giflib 5.2.2
 git-bug 0.10.1
 git-delta 0.18.2_3
 gitui 0.27.0
-glances 4.3.1_3
+glances 4.3.1_4
 glib 2.84.3
 glow 2.1.1
 gmp 6.3.0
@@ -284,13 +283,13 @@ nmap 7.97
 node 24.2.0
 npth 1.8
 nspr 4.36
-nss 3.112
+nss 3.113
 numpy 2.3.0
 nushell 0.105.1
 oh-my-posh 26.9.0
 onefetch 2.24.0
 oniguruma 6.9.10
-openblas 0.3.29
+openblas 0.3.30
 opencode 0.0.53
 opencore-amr 0.1.6
 openexr 3.3.4
@@ -322,7 +321,7 @@ rav1e 0.8.1
 re2 20240702_1
 readline 8.2.13
 resvg 0.45.1
-rich-cli 1.8.0_7
+rich-cli 1.8.0_8
 ripgrep 14.1.1
 rubberband 4.0.0
 ruby 3.4.4
@@ -383,7 +382,7 @@ xz 5.8.1
 yabai 7.1.15
 yazi 25.5.31
 yq 4.45.4
-yt-dlp 2025.6.9
+yt-dlp 2025.6.9_1
 z3 4.15.1
 zellij 0.42.2
 zeromq 4.3.5_1
