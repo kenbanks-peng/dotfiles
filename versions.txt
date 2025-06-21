@@ -83,7 +83,7 @@ aws-c-auth 0.9.0
 aws-c-cal 0.9.2
 aws-c-common 0.12.3
 aws-c-compression 0.3.1
-aws-c-event-stream 0.5.4
+aws-c-event-stream 0.5.5
 aws-c-http 0.10.2
 aws-c-io 0.20.1
 aws-c-mqtt 0.13.2
@@ -96,7 +96,7 @@ bandwhich 0.23.1
 bash 5.2.37
 bat 0.25.0_1
 bat-extras 2024.08.24
-biome 1.9.4
+biome 2.0.4
 borders 1.7.0
 brotli 1.1.0
 btop 1.4.3
@@ -118,7 +118,7 @@ curlie 1.8.2
 dav1d 1.5.1
 dblab 0.33.0
 direnv 2.36.0
-dotenvx 1.44.2
+dotenvx 1.45.1
 dua-cli 2.30.1
 duf 0.8.1
 dust 1.2.1
@@ -366,8 +366,8 @@ unbound 1.23.0
 unibilium 2.1.2
 utf8proc 2.10.0
 vapoursynth 72
-vulkan-headers 1.4.318
-vulkan-loader 1.4.318
+vulkan-headers 1.4.319
+vulkan-loader 1.4.319
 wallpaper 2.3.2
 watchexec 2.3.2
 webp 1.5.0
