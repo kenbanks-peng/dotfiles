@@ -212,7 +212,7 @@ liblinear 2.49
 liblqr 0.4.3
 libmicrohttpd 1.0.1
 libmpc 1.3.1
-libnghttp2 1.65.0
+libnghttp2 1.66.0
 libogg 1.3.6
 libomp 20.1.7
 libplacebo 7.351.0
