@@ -13,7 +13,7 @@ bruno 2.6.1
 claude 0.10.38,e55f4e920cb71bb7a87a241eafa0b359f02c010b
 cursor 1.1.4,e86fcc937643bc6385aebd982c1c66012c98caec
 daisydisk 4.31
-docker 4.42.1,196648
+docker-desktop 4.42.1,196648
 espanso 2.2.1
 figma 125.4.9
 font-alegreya 2.008
@@ -38,7 +38,7 @@ itsycal 0.15.6
 jordanbaird-ice 0.11.12
 karabiner-elements 15.3.0
 keyclu 0.30.1
-languagetool 2.3.2
+languagetool-desktop 2.3.2
 lapce 0.4.2
 local 9.2.5,6810
 mark-text 0.17.1
@@ -49,7 +49,7 @@ omnifocus 4.6
 onyx 4.8.0
 pdf-pals 1.9.0
 quarto 1.7.32
-raycast 1.100.2
+raycast 1.100.3
 rio 0.2.20
 screen-studio 2.26.0-3206
 sf-symbols 6
@@ -66,7 +66,7 @@ warp 0.2025.06.18.08.11.stable_03
 wezterm 20240203-110809,5046fc22
 zed 0.191.7
 zen 1.13.2b
-zoom 6.5.0.57940
+zoom 6.5.1.58208
 
 BREW FORMULAS
 -------------
@@ -96,7 +96,7 @@ bandwhich 0.23.1
 bash 5.2.37
 bat 0.25.0_1
 bat-extras 2024.08.24
-biome 2.0.4
+biome 2.0.5
 borders 1.7.0
 brotli 1.1.0
 btop 1.4.3
@@ -390,7 +390,7 @@ zimg 3.0.5
 zoxide 0.9.8
 zsh 5.9
 zstd 1.5.7
-zx 8.5.5
+zx 8.6.0
 
 MISE PACKAGES
 -------------
