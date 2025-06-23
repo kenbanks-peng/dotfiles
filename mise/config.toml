@@ -2,7 +2,6 @@
 bun = "latest"
 deno = "latest"
 uv = "latest"
-python = "latest"
 node = "latest"
 go = "latest"
 git = "latest"

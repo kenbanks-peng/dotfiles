@@ -118,3 +118,11 @@ fz *args:
 # echo 9 13 5 17 1 | spark
 s *args:
   spark {{args}}
+
+@csv2 *args:
+  qsv {{args}}
+
+@csv *args:
+  csvtk {{args}}
+
+
