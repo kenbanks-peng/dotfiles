@@ -270,8 +270,8 @@ molten-vk 1.3.0
 mpdecimal 4.0.1
 mpfr 4.2.2
 mpg123 1.33.0
-mpv 0.40.0_1
-mujs 1.3.6
+mpv 0.40.0_2
+mujs 1.3.7
 navi 2.24.0
 ncdu 2.8.2
 ncurses 6.5
