@@ -422,6 +422,7 @@ rustup home:  /Users/ken/.local/share/rustup
 installed toolchains
 --------------------
 stable-aarch64-apple-darwin (active, default)
+nightly-aarch64-apple-darwin
 
 active toolchain
 ----------------
@@ -429,7 +430,7 @@ name: stable-aarch64-apple-darwin
 active because: it's the default toolchain
 installed targets:
   aarch64-apple-darwin
-cargo 1.86.0 (adf9b6ad1 2025-02-28)
+cargo 1.87.0 (99624be96 2025-05-06)
 cargo-outdated v0.17.0:
     cargo-outdated
 cargo-update v16.3.2:
@@ -442,6 +443,6 @@ sbyte v0.3.3:
 
 BUN
 ---
-/Users/ken/.local/share/bun/install/global node_modules (36)
-├── @anthropic-ai/claude-code@0.2.126
+/Users/ken/.local/share/bun/install/global node_modules (40)
+├── @anthropic-ai/claude-code@1.0.31
 └── nuekit@1.0.0-beta.2
