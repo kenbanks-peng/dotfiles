@@ -44,6 +44,8 @@ local 9.2.5,6810
 mark-text 0.17.1
 microsoft-auto-update 4.79.25033028
 microsoft-edge 137.0.3296.93,d021cafe-f537-4f6d-81e5-f9a23af985c8
+notion 4.13.1
+notion-calendar 1.130.0
 notion-mail 0.0.35
 obsidian 1.8.10
 omnifocus 4.6
@@ -65,7 +67,7 @@ visual-studio-code 1.101.1
 vmware-fusion 13.6.3,24585314
 warp 0.2025.06.20.22.47.stable_05
 wezterm 20240203-110809,5046fc22
-zed 0.191.8
+zed 0.191.9
 zen 1.13.2b
 zoom 6.5.1.58208
 
@@ -91,7 +93,7 @@ aws-c-mqtt 0.13.2
 aws-c-s3 0.8.2
 aws-c-sdkutils 0.2.4
 aws-checksums 0.2.7
-aws-crt-cpp 0.32.9
+aws-crt-cpp 0.32.10
 aws-sdk-cpp 1.11.585
 bandwhich 0.23.1
 bash 5.2.37
@@ -447,5 +449,5 @@ sbyte v0.3.3:
 BUN
 ---
 /Users/ken/.local/share/bun/install/global node_modules (40)
-├── @anthropic-ai/claude-code@1.0.33
+├── @anthropic-ai/claude-code@1.0.34
 └── nuekit@1.0.0-beta.2
