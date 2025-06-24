@@ -33,7 +33,7 @@ font-tex-gyre-termes 2.004
 git-credential-manager 2.6.1
 github 3.5.0-3d21337d
 grandperspective 3.5.3
-hoppscotch 25.5.3-0
+hoppscotch 25.5.4-0
 itsycal 0.15.6
 jordanbaird-ice 0.11.12
 karabiner-elements 15.3.0
@@ -62,7 +62,7 @@ typeface 4.0.1,4595
 ubersicht 1.6.82
 visual-studio-code 1.101.1
 vmware-fusion 13.6.3,24585314
-warp 0.2025.06.20.22.47.stable_04
+warp 0.2025.06.20.22.47.stable_05
 wezterm 20240203-110809,5046fc22
 zed 0.191.7
 zen 1.13.2b
@@ -173,7 +173,7 @@ icu4c@76 76.1_2
 icu4c@77 77.1
 imagemagick 7.1.1-47
 imath 3.1.12
-imgcat 1.0.21
+imgcat 1.0.22
 isl 0.27
 jasper 4.2.5
 jbig2dec 0.20
