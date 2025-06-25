@@ -63,7 +63,6 @@ syntax-highlight 2.1.25
 transmission 4.0.6
 typeface 4.0.1,4595
 ubersicht 1.6.82
-visual-studio-code 1.101.1
 vmware-fusion 13.6.3,24585314
 warp 0.2025.06.20.22.47.stable_05
 wezterm 20240203-110809,5046fc22
