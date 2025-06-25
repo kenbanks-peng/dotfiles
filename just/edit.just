@@ -24,10 +24,7 @@ editor command *args:
   fi
 
 # vscode editor
-e *args: (editor "code" args)
-
-# cursor editor
-c *args: (editor "cursor" args)
+e *args: (editor "cursor" args)
 
 # nvim editor
 n *args: (editor "nvim" args)
