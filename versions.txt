@@ -11,7 +11,7 @@ arc 1.100.0,64467
 boltai 1.35.3
 bruno 2.6.1
 claude 0.10.38,e55f4e920cb71bb7a87a241eafa0b359f02c010b
-cursor 1.1.5,ef5eeb47a684b4c217dfaf0463aa7ea952f8ab95
+cursor 1.1.6,5b19bac7a947f54e4caa3eb7e4c5fbf832389853
 daisydisk 4.31
 docker-desktop 4.42.1,196648
 espanso 2.2.1
@@ -285,13 +285,13 @@ neovim 0.11.2
 nettle 3.10.1
 nginx 1.29.0
 nmap 7.97
-node 24.2.0
+node 24.3.0
 npth 1.8
 nspr 4.36
 nss 3.113
 numpy 2.3.1
 nushell 0.105.1
-oh-my-posh 26.9.0
+oh-my-posh 26.10.1
 onefetch 2.24.0
 oniguruma 6.9.10
 openblas 0.3.30
