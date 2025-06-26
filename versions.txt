@@ -33,7 +33,7 @@ font-tex-gyre-termes 2.004
 git-credential-manager 2.6.1
 github 3.5.0-3d21337d
 grandperspective 3.5.3
-hoppscotch 25.5.4-0
+hoppscotch 25.6.0-0
 itsycal 0.15.6
 jordanbaird-ice 0.11.12
 karabiner-elements 15.3.0
@@ -66,7 +66,7 @@ ubersicht 1.6.82
 vmware-fusion 13.6.3,24585314
 warp 0.2025.06.20.22.47.stable_05
 wezterm 20240203-110809,5046fc22
-zed 0.192.5
+zed 0.192.6
 zen 1.13.2b
 zoom 6.5.1.58208
 
@@ -294,7 +294,7 @@ oh-my-posh 26.11.0
 onefetch 2.24.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.0.53
+opencode 0.0.54
 opencore-amr 0.1.6
 openexr 3.3.4
 openjpeg 2.5.3
