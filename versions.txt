@@ -7,10 +7,10 @@ affinity-photo 2.6.3,3322
 affinity-publisher 2.6.3,3322
 anybar 0.2.3
 anythingllm 1.8.2
-arc 1.100.0,64467
+arc 1.101.0,64746
 boltai 1.35.3
 bruno 2.6.1
-claude 0.10.38,e55f4e920cb71bb7a87a241eafa0b359f02c010b
+claude 0.11.3,58ae3f502685a990d5b2613ec400044c60e14cb1
 cursor 1.1.6,5b19bac7a947f54e4caa3eb7e4c5fbf832389853
 daisydisk 4.31
 docker-desktop 4.42.1,196648
@@ -43,7 +43,7 @@ lapce 0.4.2
 local 9.2.5,6810
 mark-text 0.17.1
 microsoft-auto-update 4.79.25033028
-microsoft-edge 137.0.3296.93,d021cafe-f537-4f6d-81e5-f9a23af985c8
+microsoft-edge 138.0.3351.55,90ef559f-a7e1-4603-beca-10fbe1c38611
 notion 4.14.0
 notion-calendar 1.130.0
 notion-mail 0.0.35
