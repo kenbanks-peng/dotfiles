@@ -64,7 +64,7 @@ transmission 4.0.6
 typeface 4.0.1,4595
 ubersicht 1.6.82
 vmware-fusion 13.6.3,24585314
-warp 0.2025.06.20.22.47.stable_05
+warp 0.2025.06.25.08.12.stable_01
 wezterm 20240203-110809,5046fc22
 zed 0.192.6
 zen 1.13.2b
@@ -98,7 +98,7 @@ bandwhich 0.23.1
 bash 5.2.37
 bat 0.25.0_1
 bat-extras 2024.08.24
-biome 2.0.5
+biome 2.0.6
 borders 1.7.0
 brotli 1.1.0
 btop 1.4.3
@@ -257,7 +257,7 @@ lpeg 1.1.0
 lsd 1.1.5
 lua 5.4.8
 luajit 2.1.1748459687
-luarocks 3.12.1
+luarocks 3.12.2
 lunchy-go 0.2.1
 luv 1.51.0-1
 lz4 1.10.0
@@ -294,7 +294,7 @@ oh-my-posh 26.11.0
 onefetch 2.24.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.0.54
+opencode 0.0.55
 opencore-amr 0.1.6
 openexr 3.3.4
 openjpeg 2.5.3
@@ -408,7 +408,7 @@ uv      0.6.5   ~/Software/DevBox/dotfiles/mise/config.toml  latest
 
 UV TOOLS
 --------
-ruff v0.12.0
+ruff v0.12.1
 - ruff
 
 GO TOOLS
