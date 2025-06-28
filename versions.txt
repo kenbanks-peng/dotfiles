@@ -44,7 +44,7 @@ local 9.2.5,6810
 mark-text 0.17.1
 microsoft-auto-update 4.79.25033028
 microsoft-edge 138.0.3351.55,90ef559f-a7e1-4603-beca-10fbe1c38611
-notion 4.14.0
+notion 4.14.1
 notion-calendar 1.130.0
 notion-mail 0.0.35
 obsidian 1.8.10
@@ -281,7 +281,7 @@ ncdu 2.8.2
 ncurses 6.5
 neofetch 7.1.0
 neovim 0.11.2
-nettle 3.10.1
+nettle 3.10.2
 nginx 1.29.0
 nmap 7.97
 node 24.3.0
