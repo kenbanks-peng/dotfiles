@@ -302,7 +302,7 @@ openssl@3 3.5.0
 opus 1.5.2
 p11-kit 0.25.5
 pandoc 3.7.0.2
-pango 1.56.3
+pango 1.56.4
 pastel 0.10.0
 pcre2 10.45
 pet 1.0.1
