@@ -11,7 +11,7 @@ arc 1.101.0,64746
 boltai 1.35.3
 boop 1.4.0
 bruno 2.6.1
-claude 0.11.4,f21922f663d71f4c4a41a050947ff03a28672579
+claude 0.11.6,0aa9ce1bb503e55a1a7a1bed5d514d5f3481f233
 cursor 1.1.6,5b19bac7a947f54e4caa3eb7e4c5fbf832389853
 daisydisk 4.31
 docker-desktop 4.42.1,196648
@@ -37,7 +37,7 @@ grandperspective 3.5.3
 hoppscotch 25.6.0-0
 itsycal 0.15.6
 jordanbaird-ice 0.11.12
-karabiner-elements 15.3.0
+karabiner-elements 15.4.0
 keyclu 0.30.1
 languagetool-desktop 2.3.2
 lapce 0.4.3
@@ -68,7 +68,7 @@ vmware-fusion 13.6.3,24585314
 warp 0.2025.06.25.08.12.stable_01
 wezterm 20240203-110809,5046fc22
 zed 0.192.7
-zen 1.13.2b
+zen 1.14b
 zoom 6.5.1.58208
 
 BREW FORMULAS
@@ -280,7 +280,6 @@ mujs 1.3.7
 navi 2.24.0
 ncdu 2.8.2
 ncurses 6.5
-neofetch 7.1.0
 neovim 0.11.2
 nettle 3.10.2
 nginx 1.29.0
@@ -291,7 +290,7 @@ nspr 4.36
 nss 3.113
 numpy 2.3.1
 nushell 0.105.1
-oh-my-posh 26.11.0
+oh-my-posh 26.12.0
 onefetch 2.24.0
 oniguruma 6.9.10
 openblas 0.3.30
@@ -323,7 +322,7 @@ python@3.12 3.12.11
 python@3.13 3.13.5
 qsv 5.1.0
 rav1e 0.8.1
-re2 20240702_1
+re2 20250626
 readline 8.2.13
 resvg 0.45.1
 rich-cli 1.8.0_8
@@ -332,7 +331,6 @@ rubberband 4.0.0
 ruby 3.4.4
 rustscan 2.4.1
 sad 0.4.32
-screenresolution 1.6
 sd 1.0.0
 sdl2 2.32.8
 sevenzip 24.09
@@ -340,7 +338,7 @@ shaderc 2025.3
 shared-mime-info 2.4
 shellcheck 0.10.0
 six 1.17.0
-sk 0.20.1
+sk 0.20.2
 sketchybar 2.22.1
 snappy 1.2.2
 sniffnet 1.4.0
@@ -349,7 +347,7 @@ speex 1.2.1
 sq 0.48.5
 sqlc 1.29.0
 sqld 0.24.31
-sqlite 3.50.1
+sqlite 3.50.2
 srt 1.5.4
 sshs 4.7.2
 stow 2.4.1
