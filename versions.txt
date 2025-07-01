@@ -12,7 +12,7 @@ boltai 1.35.3
 boop 1.4.0
 bruno 2.6.1
 claude 0.11.6,0aa9ce1bb503e55a1a7a1bed5d514d5f3481f233
-cursor 1.1.6,5b19bac7a947f54e4caa3eb7e4c5fbf832389853
+cursor 1.1.7,7111807980fa9c93aedd455ffa44b682c0dc1356
 daisydisk 4.31
 docker-desktop 4.42.1,196648
 espanso 2.2.1
@@ -60,7 +60,7 @@ sf-symbols 6
 siyuan 3.1.32
 skim 1.7.11
 symboliclinker 2.2
-syntax-highlight 2.1.25
+syntax-highlight 2.1.26
 transmission 4.0.6
 typeface 4.0.1,4595
 ubersicht 1.6.82
@@ -187,9 +187,9 @@ jj 0.30.0
 jnv 0.6.0
 jpeg-turbo 3.1.1
 jpeg-xl 0.11.1_1
-jq 1.8.0
+jq 1.8.1
 jqp 0.7.0
-just 1.40.0
+just 1.41.0
 lame 3.100
 lazydocker 0.24.1
 lazygit 0.52.0
@@ -208,7 +208,7 @@ libevent 2.1.12_1
 libgcrypt 1.11.1
 libgit2 1.9.1
 libgpg-error 1.55
-libheif 1.19.8
+libheif 1.20.0
 libidn 1.43
 libidn2 2.3.8
 libksba 1.6.7
@@ -385,7 +385,7 @@ xz 5.8.1
 yabai 7.1.15
 yazi 25.5.31
 yq 4.45.4
-yt-dlp 2025.6.25
+yt-dlp 2025.6.30
 z3 4.15.2
 zellij 0.42.2
 zeromq 4.3.5_1
@@ -393,7 +393,7 @@ zimg 3.0.5
 zoxide 0.9.8
 zsh 5.9
 zstd 1.5.7
-zx 8.6.0
+zx 8.6.1
 
 MISE PACKAGES
 -------------
@@ -446,7 +446,8 @@ sbyte v0.3.3:
 
 BUN
 ---
-/Users/ken/.local/share/bun/install/global node_modules (455)
+/Users/ken/.local/share/bun/install/global node_modules (533)
 ├── @anthropic-ai/claude-code@1.0.38
 ├── @google/gemini-cli@0.1.7
+├── @openai/codex@0.1.2505172129
 └── nuekit@1.0.0-beta.2
