@@ -58,7 +58,7 @@ rio 0.2.20
 screen-studio 2.26.0-3206
 sf-symbols 6
 siyuan 3.1.32
-skim 1.7.10
+skim 1.7.11
 symboliclinker 2.2
 syntax-highlight 2.1.25
 transmission 4.0.6
@@ -67,9 +67,9 @@ ubersicht 1.6.82
 vmware-fusion 13.6.3,24585314
 warp 0.2025.06.25.08.12.stable_01
 wezterm 20240203-110809,5046fc22
-zed 0.192.7
+zed 0.192.8
 zen 1.14b
-zoom 6.5.1.58208
+zoom 6.5.3.58803
 
 BREW FORMULAS
 -------------
@@ -104,7 +104,7 @@ borders 1.7.0
 brotli 1.1.0
 btop 1.4.3
 c-ares 1.34.5
-c3c 0.7.2
+c3c 0.7.3
 ca-certificates 2025-05-20
 caddy 2.10.0
 cairo 1.18.4
@@ -290,7 +290,7 @@ nspr 4.36
 nss 3.113
 numpy 2.3.1
 nushell 0.105.1
-oh-my-posh 26.12.0
+oh-my-posh 26.13.0
 onefetch 2.24.0
 oniguruma 6.9.10
 openblas 0.3.30
@@ -446,6 +446,7 @@ sbyte v0.3.3:
 
 BUN
 ---
-/Users/ken/.local/share/bun/install/global node_modules (40)
-├── @anthropic-ai/claude-code@1.0.35
+/Users/ken/.local/share/bun/install/global node_modules (455)
+├── @anthropic-ai/claude-code@1.0.38
+├── @google/gemini-cli@0.1.7
 └── nuekit@1.0.0-beta.2
