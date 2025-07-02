@@ -6,6 +6,11 @@ node = "latest"
 go = "latest"
 git = "latest"
 "cargo:sbyte" = "latest"
+"npm:@anthropic-ai/claude-code" = "latest"
+python = "latest"
+"npm:nuekit" = "latest"
+"npm:@google/gemini-cli" = "latest"
+"npm:@openai/codex" = "latest"
 
 [settings]
 experimental = true

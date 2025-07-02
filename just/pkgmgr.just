@@ -17,12 +17,6 @@ default:
   brew outdated --greedy
   print
   print
-  print "{{BrightCyan}}MISE: uv, bun, go, node, python, git"
-  print -- "------------------------------------{{BrightBlue}}"
-  mise --silent --yes self-update
-  mise outdated --bump
-  print
-  print
   print "{{BrightCyan}}UV: python tools"
   print -- "----------------{{BrightBlue}}"
   uv tool upgrade --all
@@ -37,6 +31,12 @@ default:
   print "{{BrightCyan}}BUN: node js packages"
   print -- "---------------------{{BrightBlue}}"
   -bun -g update
+  print
+  print
+  print "{{BrightCyan}}MISE: uv, bun, go, node, python, git"
+  print -- "------------------------------------{{BrightBlue}}"
+  mise --silent --yes self-update
+  mise upgrade
 
 # versions
 [script]
