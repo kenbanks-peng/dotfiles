@@ -11,7 +11,6 @@ arc 1.101.0,64746
 boltai 1.35.3
 boop 1.4.0
 bruno 2.6.1
-claude 0.11.6,0aa9ce1bb503e55a1a7a1bed5d514d5f3481f233
 cursor 1.2.0,eb5fa4768da0747b79dc34f0b79ab20dbf58202c
 daisydisk 4.31
 docker-desktop 4.42.1,196648
@@ -397,24 +396,25 @@ zx 8.6.1
 
 MISE PACKAGES
 -------------
-bun                            1.2.17          ~/Software/DevBox/dotfiles/mise/config.toml  latest
-cargo:cargo-update             16.3.2          ~/Software/DevBox/dotfiles/mise/config.toml  latest
-cargo:sbyte                    0.3.3           ~/Software/DevBox/dotfiles/mise/config.toml  latest
-deno                           2.3.7           ~/Software/DevBox/dotfiles/mise/config.toml  latest
-git                            2.50.0          ~/Software/DevBox/dotfiles/mise/config.toml  latest
-go                             1.24.4          ~/Software/DevBox/dotfiles/mise/config.toml  latest
-node                           24.3.0          ~/Software/DevBox/dotfiles/mise/config.toml  latest
-npm:@anthropic-ai/claude-code  1.0.40          ~/Software/DevBox/dotfiles/mise/config.toml  latest
-npm:@google/gemini-cli         0.1.9           ~/Software/DevBox/dotfiles/mise/config.toml  latest
-npm:@openai/codex              0.1.2505172129  ~/Software/DevBox/dotfiles/mise/config.toml  latest
-npm:nuekit                     1.0.0-RC.4      ~/Software/DevBox/dotfiles/mise/config.toml  latest
-python                         3.13.5          ~/Software/DevBox/dotfiles/mise/config.toml  latest
-uv                             0.7.18          ~/Software/DevBox/dotfiles/mise/config.toml  latest
+bun                            1.2.17            ~/Software/DevBox/dotfiles/mise/config.toml  latest
+cargo:cargo-update             16.3.2            ~/Software/DevBox/dotfiles/mise/config.toml  latest
+cargo:sbyte                    0.3.3             ~/Software/DevBox/dotfiles/mise/config.toml  latest
+deno                           2.3.7             ~/Software/DevBox/dotfiles/mise/config.toml  latest
+git                            2.50.0            ~/Software/DevBox/dotfiles/mise/config.toml  latest
+go                             1.24.4            ~/Software/DevBox/dotfiles/mise/config.toml  latest
+node                           24.3.0            ~/Software/DevBox/dotfiles/mise/config.toml  latest
+npm:@anthropic-ai/claude-code  1.0.40            ~/Software/DevBox/dotfiles/mise/config.toml  latest
+npm:@google/gemini-cli         0.1.9             ~/Software/DevBox/dotfiles/mise/config.toml  latest
+npm:@openai/codex              0.1.2505172129    ~/Software/DevBox/dotfiles/mise/config.toml  latest
+npm:nuekit                     1.0.0-RC.4        ~/Software/DevBox/dotfiles/mise/config.toml  latest
+pipx:ruff                      0.12.1            ~/Software/DevBox/dotfiles/mise/config.toml  latest
+python                         3.13.5            ~/Software/DevBox/dotfiles/mise/config.toml  latest
+ruby                           3.4.4             ~/Software/DevBox/dotfiles/mise/config.toml  latest
+rust                           1.88.0 (symlink)  ~/Software/DevBox/dotfiles/mise/config.toml  latest
+uv                             0.7.18            ~/Software/DevBox/dotfiles/mise/config.toml  latest
 
 UV TOOLS
 --------
-ruff v0.12.1
-- ruff
 
 GO TOOLS
 --------
@@ -426,20 +426,19 @@ wails
 RUSTUP/CARGO
 ------------
 Default host: aarch64-apple-darwin
-rustup home:  /Users/ken/.local/share/rustup
+rustup home:  /Users/ken/Software/rustup
 
 installed toolchains
 --------------------
-stable-aarch64-apple-darwin (active, default)
-nightly-aarch64-apple-darwin
+1.88.0-aarch64-apple-darwin (active, default)
 
 active toolchain
 ----------------
-name: stable-aarch64-apple-darwin
-active because: it's the default toolchain
+name: 1.88.0-aarch64-apple-darwin
+active because: overridden by environment variable RUSTUP_TOOLCHAIN
 installed targets:
   aarch64-apple-darwin
-cargo 1.87.0 (99624be96 2025-05-06)
+cargo 1.88.0 (873a06493 2025-05-10)
 
 BUN
 ---
