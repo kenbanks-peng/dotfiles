@@ -12,11 +12,11 @@ boltai 1.35.3
 boop 1.4.0
 bruno 2.6.1
 claude 0.11.6,0aa9ce1bb503e55a1a7a1bed5d514d5f3481f233
-cursor 1.1.7,7111807980fa9c93aedd455ffa44b682c0dc1356
+cursor 1.2.0,eb5fa4768da0747b79dc34f0b79ab20dbf58202c
 daisydisk 4.31
 docker-desktop 4.42.1,196648
 espanso 2.2.1
-figma 125.4.9
+figma 125.5.6
 font-alegreya 2.008
 font-archivo-black latest
 font-fira-sans 4.202
@@ -44,7 +44,7 @@ lapce 0.4.3
 local 9.2.5,6810
 mark-text 0.17.1
 microsoft-auto-update 4.79.25033028
-microsoft-edge 138.0.3351.55,90ef559f-a7e1-4603-beca-10fbe1c38611
+microsoft-edge 138.0.3351.65,872e4b54-2592-4a5d-b07e-a7003d07b1c6
 notion 4.14.1
 notion-calendar 1.130.0
 notion-mail 0.0.35
@@ -94,7 +94,7 @@ aws-c-s3 0.8.3
 aws-c-sdkutils 0.2.4
 aws-checksums 0.2.7
 aws-crt-cpp 0.32.10
-aws-sdk-cpp 1.11.585
+aws-sdk-cpp 1.11.600
 bandwhich 0.23.1
 bash 5.2.37
 bat 0.25.0_1
