@@ -68,7 +68,7 @@ vmware-fusion 13.6.3,24585314
 warp 0.2025.06.25.08.12.stable_01
 wezterm 20240203-110809,5046fc22
 zed 0.192.8
-zen 1.14b
+zen 1.14.1b
 zoom 6.5.3.58803
 
 BREW FORMULAS
@@ -121,7 +121,7 @@ csvtk 0.34.0
 curlie 1.8.2
 dav1d 1.5.1
 dblab 0.33.0
-direnv 2.36.0
+direnv 2.37.0
 dotenvx 1.45.1
 dua-cli 2.30.1
 duf 0.8.1
@@ -298,7 +298,7 @@ opencode 0.0.55
 opencore-amr 0.1.6
 openexr 3.3.4
 openjpeg 2.5.3
-openssl@3 3.5.0
+openssl@3 3.5.1
 opus 1.5.2
 p11-kit 0.25.5
 pandoc 3.7.0.2
@@ -397,13 +397,19 @@ zx 8.6.1
 
 MISE PACKAGES
 -------------
-bun     1.2.4   ~/Software/DevBox/dotfiles/mise/config.toml  latest
-deno    2.2.3   ~/Software/DevBox/dotfiles/mise/config.toml  latest
-git     2.49.0  ~/Software/DevBox/dotfiles/mise/config.toml  latest
-go      1.24.1  ~/Software/DevBox/dotfiles/mise/config.toml  latest
-node    23.9.0  ~/Software/DevBox/dotfiles/mise/config.toml  latest
-python  3.13.5
-uv      0.6.5   ~/Software/DevBox/dotfiles/mise/config.toml  latest
+bun                            1.2.17          ~/Software/DevBox/dotfiles/mise/config.toml  latest
+cargo:cargo-update             16.3.2          ~/Software/DevBox/dotfiles/mise/config.toml  latest
+cargo:sbyte                    0.3.3           ~/Software/DevBox/dotfiles/mise/config.toml  latest
+deno                           2.3.7           ~/Software/DevBox/dotfiles/mise/config.toml  latest
+git                            2.50.0          ~/Software/DevBox/dotfiles/mise/config.toml  latest
+go                             1.24.4          ~/Software/DevBox/dotfiles/mise/config.toml  latest
+node                           24.3.0          ~/Software/DevBox/dotfiles/mise/config.toml  latest
+npm:@anthropic-ai/claude-code  1.0.40          ~/Software/DevBox/dotfiles/mise/config.toml  latest
+npm:@google/gemini-cli         0.1.9           ~/Software/DevBox/dotfiles/mise/config.toml  latest
+npm:@openai/codex              0.1.2505172129  ~/Software/DevBox/dotfiles/mise/config.toml  latest
+npm:nuekit                     1.0.0-RC.4      ~/Software/DevBox/dotfiles/mise/config.toml  latest
+python                         3.13.5          ~/Software/DevBox/dotfiles/mise/config.toml  latest
+uv                             0.7.18          ~/Software/DevBox/dotfiles/mise/config.toml  latest
 
 UV TOOLS
 --------
@@ -434,20 +440,7 @@ active because: it's the default toolchain
 installed targets:
   aarch64-apple-darwin
 cargo 1.87.0 (99624be96 2025-05-06)
-cargo-outdated v0.17.0:
-    cargo-outdated
-cargo-update v16.3.2:
-    cargo-install-update
-    cargo-install-update-config
-rustlings v6.4.0:
-    rustlings
-sbyte v0.3.3:
-    sbyte
 
 BUN
 ---
-/Users/ken/.local/share/bun/install/global node_modules (537)
-├── @anthropic-ai/claude-code@1.0.40
-├── @google/gemini-cli@0.1.9
-├── @openai/codex@0.1.2505172129
-└── nuekit@1.0.0-beta.2
+No global bun packages found
