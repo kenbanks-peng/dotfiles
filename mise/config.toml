@@ -5,6 +5,7 @@ uv = "latest"
 node = "latest"
 go = "latest"
 git = "latest"
+"cargo:sbyte" = "latest"
 
 [settings]
 experimental = true
