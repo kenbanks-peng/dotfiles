@@ -15,23 +15,28 @@ default:
   print "{{BrightCyan}}BREW: mac apps, binaries"
   print -- "------------------------{{BrightBlue}}"
   brew outdated --greedy
-  print
-  print
-  print "{{BrightCyan}}UV: python tools"
-  print -- "----------------{{BrightBlue}}"
-  uv tool upgrade --all
-  print
-  print
-  print "{{BrightCyan}}RUST/CARGO: rust packages"
-  print -- "-------------------------{{BrightBlue}}"
-  rustup check
-  cargo install-update -a
-  print
-  print
-  print "{{BrightCyan}}BUN: node js packages"
-  print -- "---------------------{{BrightBlue}}"
-  -bun -g update
-  print
+  # print
+  # print
+  # print "{{BrightCyan}}UV: python tools"
+  # print -- "----------------{{BrightBlue}}"
+  # uv tool upgrade --all
+  # print
+  # print
+  # print "{{BrightCyan}}RUST/CARGO: rust packages"
+  # print -- "-------------------------{{BrightBlue}}"
+  # rustup check
+  # cargo install-update -a
+  # print
+  # print
+  # print "{{BrightCyan}}BUN: node js packages"
+  # print -- "---------------------{{BrightBlue}}"
+  # -bun -g update
+  # print
+  # print
+  # print "{{BrightCyan}}Go: go packages"
+  # print -- "----------------{{BrightBlue}}"
+  # -gup update
+  # print
   print
   print "{{BrightCyan}}MISE: uv, bun, go, node, python, git"
   print -- "------------------------------------{{BrightBlue}}"
@@ -56,11 +61,11 @@ v:
     print
     print "UV TOOLS"
     print -- "--------"
-    uv tool list
+    uv tool list 2>/dev/null || print "No global python packages found"
     print
     print "GO TOOLS"
     print -- "--------"
-    ls $GOBIN
+    gup list 2>/dev/null || print "No global go packages found"
     print
     print "RUSTUP/CARGO"
     print -- "------------"
