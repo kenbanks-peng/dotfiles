@@ -57,11 +57,11 @@ v:
     print
     print "MISE PACKAGES"
     print -- "-------------"
-    mise list
+    mise list 2>/dev/null || print "No global mise packages found"
     print
     print "UV TOOLS"
     print -- "--------"
-    uv tool list 2>/dev/null || print "No global python packages found"
+    uv tool list
     print
     print "GO TOOLS"
     print -- "--------"
@@ -71,7 +71,7 @@ v:
     print -- "------------"
     rustup show
     cargo version
-    cargo install --list
+    cargo install --list 2>/dev/null || print "No global cargo/rust packages found"
     print
     print "BUN"
     print -- "---"
