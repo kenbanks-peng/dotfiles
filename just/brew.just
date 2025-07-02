@@ -22,16 +22,6 @@ default:
   print -- "------------{{BrightCyan}}"
   brew list --versions --formula {{args}} || print "{{BrightRed}}No formula apps found{{BrightCyan}}"
 
-# brew casks
-@bc:
-  print "brew list --casks"
-  print
-  print "{{BrightMagenta}}CASK APPS"
-  print -- "---------{{BrightBlue}}"
-  brew list --cask
-
-
-
 # brew list / leaves
 [script]
 bl *$args:
@@ -45,6 +35,12 @@ bl *$args:
     print "{{BrightMagenta}}USER-INSTALLED LEAF FORMULAS"
     print -- "----------------------------{{BrightCyan}}"
     brew leaves --installed-on-request
+  elif [ $len = 1 ] && [ "$a1" = "casks" ]; then
+    print "brew list casks"
+    print
+    print "{{BrightMagenta}}CASK APPS"
+    print -- "---------{{BrightCyan}}"
+    brew list --cask 
   else
     print "brew list {{args}}"
     print
