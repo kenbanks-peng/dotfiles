@@ -446,8 +446,8 @@ sbyte v0.3.3:
 
 BUN
 ---
-/Users/ken/.local/share/bun/install/global node_modules (533)
-├── @anthropic-ai/claude-code@1.0.38
-├── @google/gemini-cli@0.1.7
+/Users/ken/.local/share/bun/install/global node_modules (537)
+├── @anthropic-ai/claude-code@1.0.40
+├── @google/gemini-cli@0.1.9
 ├── @openai/codex@0.1.2505172129
 └── nuekit@1.0.0-beta.2
