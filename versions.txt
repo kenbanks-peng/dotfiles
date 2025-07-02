@@ -425,6 +425,7 @@ UV TOOLS
 
 GO TOOLS
 --------
+No global go packages found
 
 RUSTUP/CARGO
 ------------
