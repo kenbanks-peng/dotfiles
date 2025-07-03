@@ -127,7 +127,7 @@ dua-cli 2.30.1
 duf 0.8.1
 dust 1.2.1
 dvc 3.60.1_1
-fastfetch 2.46.0
+fastfetch 2.47.0
 fd 10.2.0
 ffmpeg 7.1.1_3
 fish 4.0.2
