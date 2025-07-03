@@ -122,7 +122,7 @@ curlie 1.8.2
 dav1d 1.5.1
 dblab 0.33.0
 direnv 2.37.0
-dotenvx 1.45.1
+dotenvx 1.45.2
 dua-cli 2.30.1
 duf 0.8.1
 dust 1.2.1
