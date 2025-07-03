@@ -44,5 +44,5 @@ gt *args:
   gitui {{args}}
 
 # markdown tui
-m *args:
+md *args:
   glow {{args}}

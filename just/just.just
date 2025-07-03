@@ -63,3 +63,6 @@ mod pkgmgr
 
 # quarto
 mod quarto
+
+# mise
+mod mise
