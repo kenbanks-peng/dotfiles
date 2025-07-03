@@ -15,6 +15,11 @@ default:
   print "{{BrightCyan}}BREW: mac apps, binaries"
   print -- "------------------------{{BrightBlue}}"
   brew outdated --greedy
+  print
+  print "{{BrightCyan}}MISE: uv, bun, go, node, python, git"
+  print -- "------------------------------------{{BrightBlue}}"
+  mise self-update --silent --yes
+  mise upgrade --bump --silent
   # print
   # print
   # print "{{BrightCyan}}UV: python tools"
@@ -37,11 +42,7 @@ default:
   # print -- "----------------{{BrightBlue}}"
   # -gup update
   # print
-  print
-  print "{{BrightCyan}}MISE: uv, bun, go, node, python, git"
-  print -- "------------------------------------{{BrightBlue}}"
-  mise --silent --yes self-update
-  mise upgrade
+  
 
 # versions
 [script]
