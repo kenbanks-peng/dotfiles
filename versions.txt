@@ -10,9 +10,9 @@ anythingllm 1.8.2
 arc 1.101.1,65021
 boltai 1.35.3
 boop 1.4.0
-bruno 2.6.1
+bruno 2.7.0
 claude 0.11.6,0aa9ce1bb503e55a1a7a1bed5d514d5f3481f233
-cursor 1.2.0,eb5fa4768da0747b79dc34f0b79ab20dbf58202c
+cursor 1.2.1,031e7e0ff1e2eda9c1a0f5df67d44053b059c5df
 daisydisk 4.31
 docker-desktop 4.43.0,198134
 espanso 2.2.1
@@ -410,7 +410,7 @@ go:github.com/wailsapp/wails/v2/cmd/wails    2.10.1            ~/Software/DevBox
 go:golang.org/x/tools/gopls                  0.19.1            ~/Software/DevBox/dotfiles/mise/config.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck        0.7.0-0.dev       ~/Software/DevBox/dotfiles/mise/config.toml  latest
 node                                         24.3.0            ~/Software/DevBox/dotfiles/mise/config.toml  latest
-npm:@anthropic-ai/claude-code                1.0.41            ~/Software/DevBox/dotfiles/mise/config.toml  latest
+npm:@anthropic-ai/claude-code                1.0.43            ~/Software/DevBox/dotfiles/mise/config.toml  latest
 npm:@google/gemini-cli                       0.1.9             ~/Software/DevBox/dotfiles/mise/config.toml  latest
 npm:@openai/codex                            0.1.2505172129    ~/Software/DevBox/dotfiles/mise/config.toml  latest
 npm:nuekit                                   1.0.0-RC.4        ~/Software/DevBox/dotfiles/mise/config.toml  latest
