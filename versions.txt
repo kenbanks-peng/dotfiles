@@ -65,7 +65,7 @@ transmission 4.0.6
 typeface 4.0.1,4595
 ubersicht 1.6.82
 vmware-fusion 13.6.3,24585314
-warp 0.2025.06.25.08.12.stable_01
+warp 0.2025.07.02.08.36.stable_02
 wezterm 20240203-110809,5046fc22
 zed 0.193.3
 zen 1.14.1b
@@ -102,7 +102,7 @@ bat-extras 2024.08.24
 biome 2.0.6
 borders 1.7.0
 brotli 1.1.0
-btop 1.4.3
+btop 1.4.4
 c-ares 1.34.5
 c3c 0.7.3
 ca-certificates 2025-05-20
