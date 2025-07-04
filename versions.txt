@@ -14,7 +14,7 @@ bruno 2.7.0
 claude 0.11.6,0aa9ce1bb503e55a1a7a1bed5d514d5f3481f233
 cursor 1.2.1,031e7e0ff1e2eda9c1a0f5df67d44053b059c5df
 daisydisk 4.31
-docker-desktop 4.43.0,198134
+docker-desktop 4.43.1,198352
 espanso 2.2.1
 figma 125.5.6
 font-alegreya 2.008
@@ -149,7 +149,7 @@ giflib 5.2.2
 git-bug 0.10.1
 git-delta 0.18.2_3
 gitui 0.27.0
-glances 4.3.1_4
+glances 4.3.1_5
 glib 2.84.3
 glow 2.1.1
 gmp 6.3.0
@@ -326,7 +326,7 @@ rav1e 0.8.1
 re2 20250626
 readline 8.2.13
 resvg 0.45.1
-rich-cli 1.8.0_8
+rich-cli 1.8.1
 ripgrep 14.1.1
 rubberband 4.0.0
 ruby 3.4.4
@@ -338,7 +338,6 @@ sevenzip 24.09
 shaderc 2025.3
 shared-mime-info 2.4
 shellcheck 0.10.0
-six 1.17.0
 sk 0.20.2
 sketchybar 2.22.1
 snappy 1.2.2
@@ -401,10 +400,10 @@ MISE PACKAGES
 bun                                          1.2.18            ~/Software/DevBox/dotfiles/mise/config.toml  latest
 cargo:cargo-update                           16.3.2            ~/Software/DevBox/dotfiles/mise/config.toml  latest
 cargo:sbyte                                  0.3.3             ~/Software/DevBox/dotfiles/mise/config.toml  latest
-deno                                         2.3.7             ~/Software/DevBox/dotfiles/mise/config.toml  latest
+deno                                         2.4.0             ~/Software/DevBox/dotfiles/mise/config.toml  latest
 git                                          2.50.0            ~/Software/DevBox/dotfiles/mise/config.toml  latest
 go                                           1.24.4            ~/Software/DevBox/dotfiles/mise/config.toml  latest
-go:github.com/danielmiessler/fabric          1.4.224           ~/Software/DevBox/dotfiles/mise/config.toml  latest
+go:github.com/danielmiessler/fabric          1.4.226           ~/Software/DevBox/dotfiles/mise/config.toml  latest
 go:github.com/dimonomid/nerdlog/cmd/nerdlog  1.10.0            ~/Software/DevBox/dotfiles/mise/config.toml  latest
 go:github.com/wailsapp/wails/v2/cmd/wails    2.10.1            ~/Software/DevBox/dotfiles/mise/config.toml  latest
 go:golang.org/x/tools/gopls                  0.19.1            ~/Software/DevBox/dotfiles/mise/config.toml  latest
