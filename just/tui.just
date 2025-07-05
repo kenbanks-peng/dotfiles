@@ -20,6 +20,18 @@ pl:
 ld:
   lazydocker
 
+# lazysql
+lsql *args:
+  lazysql {{args}}
+
+# lazyjournal
+lj *args:
+  lazyjournal {{args}}
+
+# lazyjj
+ljj *args:
+  lazyjj {{args}}
+
 # shell cheatsheet
 cs:
   navi
