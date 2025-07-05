@@ -365,7 +365,6 @@ thrift 0.22.0
 tokei 12.1.2
 tree 2.2.1
 tree-sitter 0.25.6
-turso 1.0.11
 typst 0.13.1
 uchardet 0.0.8
 unbound 1.23.0
@@ -422,13 +421,6 @@ ruby                                         3.4.4             ~/Software/DevBox
 rust                                         1.88.0 (symlink)  ~/Software/DevBox/dotfiles/mise/config.toml  latest
 uv                                           0.7.18            ~/Software/DevBox/dotfiles/mise/config.toml  latest
 
-UV TOOLS
---------
-
-GO TOOLS
---------
-No global go packages found
-
 RUSTUP/CARGO
 ------------
 Default host: aarch64-apple-darwin
@@ -444,8 +436,3 @@ name: 1.88.0-aarch64-apple-darwin
 active because: overridden by environment variable RUSTUP_TOOLCHAIN
 installed targets:
   aarch64-apple-darwin
-cargo 1.88.0 (873a06493 2025-05-10)
-
-BUN
----
-No global bun packages found
