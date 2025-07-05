@@ -13,7 +13,7 @@ default:
 # editors
 mod edit
 
-# homebrew
+# homebrew + mise + rustup
 mod brew
 
 # utilities
@@ -58,11 +58,5 @@ mod scripts
 # args test
 mod args
 
-# package managers
-mod pkgmgr
-
 # quarto
 mod quarto
-
-# mise
-mod mise
