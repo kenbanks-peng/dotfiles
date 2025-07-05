@@ -38,7 +38,7 @@ _update:
   print "{{BrightCyan}}BREW: mac apps, binaries"
   print -- "------------------------{{BrightBlue}}"
   brew upgrade --greedy
-  brew cleanup --prune=all
+  brew cleanup
   print
   print "{{BrightCyan}}MISE: uv, bun, go, node, python, git"
   print -- "------------------------------------{{BrightBlue}}"
@@ -86,6 +86,7 @@ versions:
   git -C "$DOTFILES" add versions.txt &>/dev/null
   git -C "$DOTFILES" diff --staged --quiet || (git -C "$DOTFILES" commit -m "update versions" && git -C "$DOTFILES" push) &>/dev/null
   
+  print
   print "{{BrightMagenta}}updated versions.txt{{BrightBlue}}"
 
 
@@ -146,7 +147,7 @@ bl *$args:
   print
   brew remove {{ args }}
   brew autoremove
-  brew cleanup --prune=all
+  brew cleanup
   just --justfile "$JUST/brew.just" versions
 
 # brew tree (casks and formulas)
