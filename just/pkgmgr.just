@@ -19,7 +19,7 @@ default:
   print "{{BrightCyan}}MISE: uv, bun, go, node, python, git"
   print -- "------------------------------------{{BrightBlue}}"
   mise self-update --silent --yes
-  mise upgrade --bump --silent
+  mise outdated --bump --silent
   # print
   # print
   # print "{{BrightCyan}}UV: python tools"
@@ -43,6 +43,16 @@ default:
   # -gup update
   # print
   
+@u:
+  print
+  print "{{BrightCyan}}BREW: mac apps, binaries"
+  print -- "------------------------{{BrightBlue}}"
+  brew upgrade --greedy
+  print
+  print "{{BrightCyan}}MISE: uv, bun, go, node, python, git"
+  print -- "------------------------------------{{BrightBlue}}"
+  mise self-update --silent --yes
+  mise upgrade --bump --silent
 
 # versions
 [script]
