@@ -10,7 +10,8 @@ default:
 #############  PACKAGE MANAGERS  ##############
 
 # outdated
-@o:
+[script]
+o:
   print
   print "{{BrightCyan}}BREW: mac apps, binaries"
   print -- "------------------------{{BrightBlue}}"
@@ -42,8 +43,13 @@ default:
   # print -- "----------------{{BrightBlue}}"
   # -gup update
   # print
-  
-@u:
+ 
+
+# update
+u: _update _versions
+
+[script]
+_update:
   print
   print "{{BrightCyan}}BREW: mac apps, binaries"
   print -- "------------------------{{BrightBlue}}"
@@ -54,9 +60,8 @@ default:
   mise self-update --silent --yes
   mise upgrade --bump --silent
 
-# versions
 [script]
-v:
+_versions:
   {
     print "BREW CASKS"
     print -- "----------"
@@ -93,3 +98,5 @@ v:
   git -C "$DOTFILES" diff --staged --quiet || (git -C "$DOTFILES" commit -m "update versions" && git -C "$DOTFILES" push) &>/dev/null
   
   print "{{BrightMagenta}}updated versions.txt{{BrightBlue}}"
+
+
