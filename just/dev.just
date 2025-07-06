@@ -93,3 +93,6 @@ db2 *args:
 linux *args:
   limactl {{args}}
 
+# turso
+@turso *args:
+  tursodb {{args}}
