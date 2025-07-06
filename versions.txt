@@ -295,7 +295,7 @@ nss 3.113.1
 numpy 2.3.1
 nushell 0.105.1
 oh-my-posh 26.13.0
-onefetch 2.24.0
+onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
 opencode 0.0.55
@@ -327,7 +327,7 @@ python@3.13 3.13.5
 qsv 5.1.0
 rav1e 0.8.1
 re2 20250626
-readline 8.2.13
+readline 8.3
 resvg 0.45.1
 rich-cli 1.8.1
 ripgrep 14.1.1
@@ -400,27 +400,27 @@ zx 8.6.1
 
 MISE PACKAGES
 -------------
-bun                                          1.2.18            ~/Software/DevBox/dotfiles/mise/config.toml  latest
-cargo:cargo-update                           16.3.2            ~/Software/DevBox/dotfiles/mise/config.toml  latest
-cargo:sbyte                                  0.3.3             ~/Software/DevBox/dotfiles/mise/config.toml  latest
-deno                                         2.4.0             ~/Software/DevBox/dotfiles/mise/config.toml  latest
-git                                          2.50.0            ~/Software/DevBox/dotfiles/mise/config.toml  latest
-go                                           1.24.4            ~/Software/DevBox/dotfiles/mise/config.toml  latest
-go:github.com/danielmiessler/fabric          1.4.231           ~/Software/DevBox/dotfiles/mise/config.toml  latest
-go:github.com/dimonomid/nerdlog/cmd/nerdlog  1.10.0            ~/Software/DevBox/dotfiles/mise/config.toml  latest
-go:github.com/wailsapp/wails/v2/cmd/wails    2.10.1            ~/Software/DevBox/dotfiles/mise/config.toml  latest
-go:golang.org/x/tools/gopls                  0.19.1            ~/Software/DevBox/dotfiles/mise/config.toml  latest
-go:honnef.co/go/tools/cmd/staticcheck        0.7.0-0.dev       ~/Software/DevBox/dotfiles/mise/config.toml  latest
-node                                         24.3.0            ~/Software/DevBox/dotfiles/mise/config.toml  latest
-npm:@anthropic-ai/claude-code                1.0.43            ~/Software/DevBox/dotfiles/mise/config.toml  latest
-npm:@google/gemini-cli                       0.1.9             ~/Software/DevBox/dotfiles/mise/config.toml  latest
-npm:@openai/codex                            0.1.2505172129    ~/Software/DevBox/dotfiles/mise/config.toml  latest
-npm:nuekit                                   1.0.0-RC.4        ~/Software/DevBox/dotfiles/mise/config.toml  latest
-pipx:ruff                                    0.12.2            ~/Software/DevBox/dotfiles/mise/config.toml  latest
-python                                       3.13.5            ~/Software/DevBox/dotfiles/mise/config.toml  latest
-ruby                                         3.4.4             ~/Software/DevBox/dotfiles/mise/config.toml  latest
-rust                                         1.88.0 (symlink)  ~/Software/DevBox/dotfiles/mise/config.toml  latest
-uv                                           0.7.18            ~/Software/DevBox/dotfiles/mise/config.toml  latest
+bun                                          1.2.18            ~/.config/mise/config.toml  latest
+cargo:cargo-update                           16.3.2            ~/.config/mise/config.toml  latest
+cargo:sbyte                                  0.3.3             ~/.config/mise/config.toml  latest
+deno                                         2.4.0             ~/.config/mise/config.toml  latest
+git                                          2.50.0            ~/.config/mise/config.toml  latest
+go                                           1.24.4            ~/.config/mise/config.toml  latest
+go:github.com/danielmiessler/fabric          1.4.231           ~/.config/mise/config.toml  latest
+go:github.com/dimonomid/nerdlog/cmd/nerdlog  1.10.0            ~/.config/mise/config.toml  latest
+go:github.com/wailsapp/wails/v2/cmd/wails    2.10.1            ~/.config/mise/config.toml  latest
+go:golang.org/x/tools/gopls                  0.19.1            ~/.config/mise/config.toml  latest
+go:honnef.co/go/tools/cmd/staticcheck        0.7.0-0.dev       ~/.config/mise/config.toml  latest
+node                                         24.3.0            ~/.config/mise/config.toml  latest
+npm:@anthropic-ai/claude-code                1.0.43            ~/.config/mise/config.toml  latest
+npm:@google/gemini-cli                       0.1.9             ~/.config/mise/config.toml  latest
+npm:@openai/codex                            0.1.2505172129    ~/.config/mise/config.toml  latest
+npm:nuekit                                   1.0.0-RC.4        ~/.config/mise/config.toml  latest
+pipx:ruff                                    0.12.2            ~/.config/mise/config.toml  latest
+python                                       3.13.5            ~/.config/mise/config.toml  latest
+ruby                                         3.4.4             ~/.config/mise/config.toml  latest
+rust                                         1.88.0 (symlink)  ~/.config/mise/config.toml  latest
+uv                                           0.7.18            ~/.config/mise/config.toml  latest
 
 RUSTUP/CARGO
 ------------
