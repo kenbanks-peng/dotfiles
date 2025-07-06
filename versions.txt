@@ -406,9 +406,9 @@ cargo:sbyte                                  0.3.3             ~/.config/mise/co
 deno                                         2.4.0             ~/.config/mise/config.toml  latest
 git                                          2.50.0            ~/.config/mise/config.toml  latest
 go                                           1.24.4            ~/.config/mise/config.toml  latest
-go:github.com/danielmiessler/fabric          1.4.231           ~/.config/mise/config.toml  latest
+go:github.com/danielmiessler/fabric          1.4.235           ~/.config/mise/config.toml  latest
 go:github.com/dimonomid/nerdlog/cmd/nerdlog  1.10.0            ~/.config/mise/config.toml  latest
-go:github.com/wailsapp/wails/v2/cmd/wails    2.10.1            ~/.config/mise/config.toml  latest
+go:github.com/wailsapp/wails/v2/cmd/wails    2.10.2            ~/.config/mise/config.toml  latest
 go:golang.org/x/tools/gopls                  0.19.1            ~/.config/mise/config.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck        0.7.0-0.dev       ~/.config/mise/config.toml  latest
 node                                         24.3.0            ~/.config/mise/config.toml  latest
@@ -420,7 +420,7 @@ pipx:ruff                                    0.12.2            ~/.config/mise/co
 python                                       3.13.5            ~/.config/mise/config.toml  latest
 ruby                                         3.4.4             ~/.config/mise/config.toml  latest
 rust                                         1.88.0 (symlink)  ~/.config/mise/config.toml  latest
-uv                                           0.7.18            ~/.config/mise/config.toml  latest
+uv                                           0.7.19            ~/.config/mise/config.toml  latest
 
 RUSTUP/CARGO
 ------------
