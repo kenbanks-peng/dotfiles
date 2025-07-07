@@ -38,7 +38,7 @@ hoppscotch 25.6.0-0
 itsycal 0.15.6
 jordanbaird-ice 0.11.12
 karabiner-elements 15.4.0
-keyclu 0.30.1
+keyclu 0.30.2
 languagetool-desktop 2.3.2
 lapce 0.4.3
 local 9.2.5,6810
@@ -125,7 +125,7 @@ direnv 2.37.0
 dotenvx 1.45.2
 dua-cli 2.30.1
 duf 0.8.1
-dust 1.2.1
+dust 1.2.2
 dvc 3.60.1_1
 fastfetch 2.47.0
 fd 10.2.0
@@ -139,7 +139,7 @@ freetype 2.13.3
 frei0r 2.3.3
 fribidi 1.0.16
 fx 37.0.0
-fzf 0.63.0
+fzf 0.64.0
 gawk 5.3.1
 gcc 15.1.0
 gdk-pixbuf 2.42.12_1
@@ -337,7 +337,7 @@ rustscan 2.4.1
 sad 0.4.32
 sd 1.0.0
 sdl2 2.32.8
-sevenzip 24.09
+sevenzip 25.00
 shaderc 2025.3
 shared-mime-info 2.4
 shellcheck 0.10.0
@@ -406,7 +406,7 @@ cargo:sbyte                                  0.3.3             ~/.config/mise/co
 deno                                         2.4.0             ~/.config/mise/config.toml  latest
 git                                          2.50.0            ~/.config/mise/config.toml  latest
 go                                           1.24.4            ~/.config/mise/config.toml  latest
-go:github.com/danielmiessler/fabric          1.4.235           ~/.config/mise/config.toml  latest
+go:github.com/danielmiessler/fabric          1.4.236           ~/.config/mise/config.toml  latest
 go:github.com/dimonomid/nerdlog/cmd/nerdlog  1.10.0            ~/.config/mise/config.toml  latest
 go:github.com/wailsapp/wails/v2/cmd/wails    2.10.2            ~/.config/mise/config.toml  latest
 go:golang.org/x/tools/gopls                  0.19.1            ~/.config/mise/config.toml  latest
