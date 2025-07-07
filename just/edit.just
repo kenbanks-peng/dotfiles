@@ -27,7 +27,8 @@ editor command *args:
 e *args: (editor "cursor" args)
 
 # nvim editor
-n *args: (editor "nvim" args)
+n *args: 
+  nvim {{args}}
 
 # zed editor
 z *args: (editor "zed" args)
