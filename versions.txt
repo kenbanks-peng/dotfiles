@@ -7,7 +7,7 @@ affinity-photo 2.6.3,3322
 affinity-publisher 2.6.3,3322
 anybar 0.2.3
 anythingllm 1.8.2
-arc 1.101.1,65021
+arc 1.102.1,65116
 boltai 1.35.3
 boop 1.4.0
 bruno 2.7.0
@@ -44,12 +44,12 @@ lapce 0.4.3
 local 9.2.5,6810
 mark-text 0.17.1
 microsoft-auto-update 4.79.25033028
-microsoft-edge 138.0.3351.65,872e4b54-2592-4a5d-b07e-a7003d07b1c6
+microsoft-edge 138.0.3351.77,edb41d76-ff5b-4a76-9e0a-ae4675a97f94
 notion 4.14.1
 notion-calendar 1.130.0
 notion-mail 0.0.35
 obsidian 1.8.10
-omnifocus 4.6
+omnifocus 4.6.1
 onyx 4.8.0
 pdf-pals 1.9.0
 quarto 1.7.32
@@ -96,7 +96,7 @@ aws-checksums 0.2.7
 aws-crt-cpp 0.32.10
 aws-sdk-cpp 1.11.600
 bandwhich 0.23.1
-bash 5.2.37
+bash 5.3
 bat 0.25.0_1
 bat-extras 2024.08.24
 biome 2.0.6
@@ -122,11 +122,11 @@ curlie 1.8.2
 dav1d 1.5.1
 dblab 0.33.0
 direnv 2.37.0
-dotenvx 1.45.2
+dotenvx 1.46.0
 dua-cli 2.30.1
 duf 0.8.1
 dust 1.2.2
-dvc 3.60.1_1
+dvc 3.61.0
 fastfetch 2.47.0
 fd 10.2.0
 ffmpeg 7.1.1_3
@@ -149,7 +149,7 @@ giflib 5.2.2
 git-bug 0.10.1
 git-delta 0.18.2_3
 gitui 0.27.0
-glances 4.3.1_5
+glances 4.3.2
 glib 2.84.3
 glow 2.1.1
 gmp 6.3.0
@@ -294,7 +294,7 @@ nspr 4.36
 nss 3.113.1
 numpy 2.3.1
 nushell 0.105.1
-oh-my-posh 26.13.0
+oh-my-posh 26.14.3
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
@@ -406,7 +406,7 @@ cargo:sbyte                                  0.3.3             ~/Software/DevBox
 deno                                         2.4.0             ~/Software/DevBox/dotfiles/mise/config.toml  latest
 git                                          2.50.0            ~/Software/DevBox/dotfiles/mise/config.toml  latest
 go                                           1.24.4            ~/Software/DevBox/dotfiles/mise/config.toml  latest
-go:github.com/danielmiessler/fabric          1.4.238           ~/Software/DevBox/dotfiles/mise/config.toml  latest
+go:github.com/danielmiessler/fabric          1.4.240           ~/Software/DevBox/dotfiles/mise/config.toml  latest
 go:github.com/dimonomid/nerdlog/cmd/nerdlog  1.10.0            ~/Software/DevBox/dotfiles/mise/config.toml  latest
 go:github.com/wailsapp/wails/v2/cmd/wails    2.10.2            ~/Software/DevBox/dotfiles/mise/config.toml  latest
 go:golang.org/x/tools/gopls                  0.19.1            ~/Software/DevBox/dotfiles/mise/config.toml  latest
