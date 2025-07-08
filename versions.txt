@@ -12,7 +12,7 @@ boltai 1.35.3
 boop 1.4.0
 bruno 2.7.0
 claude 0.11.6,0aa9ce1bb503e55a1a7a1bed5d514d5f3481f233
-cursor 1.2.1,031e7e0ff1e2eda9c1a0f5df67d44053b059c5df
+cursor 1.2.2,faa03b17cce93e8a80b7d62d57f5eda6bb6ab9fa
 daisydisk 4.31
 docker-desktop 4.43.1,198352
 espanso 2.2.1
@@ -412,9 +412,9 @@ go:github.com/wailsapp/wails/v2/cmd/wails    2.10.2            ~/Software/DevBox
 go:golang.org/x/tools/gopls                  0.19.1            ~/Software/DevBox/dotfiles/mise/config.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck        0.7.0-0.dev       ~/Software/DevBox/dotfiles/mise/config.toml  latest
 node                                         24.3.0            ~/Software/DevBox/dotfiles/mise/config.toml  latest
-npm:@anthropic-ai/claude-code                1.0.43            ~/Software/DevBox/dotfiles/mise/config.toml  latest
+npm:@anthropic-ai/claude-code                1.0.44            ~/Software/DevBox/dotfiles/mise/config.toml  latest
 npm:@google/gemini-cli                       0.1.9             ~/Software/DevBox/dotfiles/mise/config.toml  latest
-npm:@openai/codex                            0.1.2505172129    ~/Software/DevBox/dotfiles/mise/config.toml  latest
+npm:@openai/codex                            0.3.0             ~/Software/DevBox/dotfiles/mise/config.toml  latest
 npm:nuekit                                   1.0.0-RC.4        ~/Software/DevBox/dotfiles/mise/config.toml  latest
 pipx:ruff                                    0.12.2            ~/Software/DevBox/dotfiles/mise/config.toml  latest
 python                                       3.13.5            ~/Software/DevBox/dotfiles/mise/config.toml  latest
