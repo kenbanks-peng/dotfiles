@@ -19,8 +19,8 @@ rust = "latest"
 "go:golang.org/x/tools/gopls" = "latest"
 "go:honnef.co/go/tools/cmd/staticcheck" = "latest"
 "go:github.com/wailsapp/wails/v2/cmd/wails" = "latest"
-"go:github.com/danielmiessler/fabric" = "1.4.240"
-yazi = "nightly"
+"go:github.com/danielmiessler/fabric/cmd/fabric" = "latest"
+yazi = "25"
 
 [settings]
 experimental = true
