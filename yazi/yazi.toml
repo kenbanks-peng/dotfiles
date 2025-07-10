@@ -150,9 +150,13 @@ previewers = [
 	# Fallback
 	{ name = "*", run = "file" },
 ]
+
 prepend_previewers = [
-  { name = "*.md", run = "glow" },
+	{ name = "*.md", run = 'piper -- CLICOLOR_FORCE=1 glow -w=$w -s=dark "$1"' },
+	{ name = "*.csv", run = 'piper -- bat -p --color=always "$1"' },
+	{ name = "*/", run = 'piper -- pls "$1"' },
 ]
+
 
 [input]
 cursor_blink = false

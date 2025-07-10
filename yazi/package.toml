@@ -1,24 +1,29 @@
 [[plugin.deps]]
-use = "Reledia/glow"
-rev = "c76bf4f"
-hash = "a6b78bf9af5390e3a85a6951fbb7b93"
-
-[[plugin.deps]]
 use = "Lil-Dank/lazygit"
-rev = "9f924e3"
-hash = "2b0c33928986f126d5c5a4cac31a6b46"
+rev = "7a08a09"
+hash = "a1fa2b3e1826c3a34804ea8c548e9f80"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "ceb053f"
-hash = "bcbf72738d4b7fb9a03cac84465b9ba4"
+rev = "b886025"
+hash = "63b6c222bf2103b3023389dde5e2ecfe"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:piper"
+rev = "b886025"
+hash = "2143a53182dbbe935a1abd1623424aa5"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:zoom"
+rev = "b886025"
+hash = "23d704e18d864036fc65c188bc6b2e47"
 
 [[flavor.deps]]
 use = "yazi-rs/flavors:catppuccin-mocha"
-rev = "b929df6"
-hash = "2ac87e1b3a61f5887472899e86535d29"
+rev = "d3fd3a5"
+hash = "288a0dedd5d13b28605cf82c05326dcd"
 
 [[flavor.deps]]
 use = "BennyOe/tokyo-night"
-rev = "695dac6"
-hash = "a8f426ea0d9cb843b081d62ab01364c8"
+rev = "5f56364"
+hash = "c0bf69ad2c44005892d586e9693993c6"
