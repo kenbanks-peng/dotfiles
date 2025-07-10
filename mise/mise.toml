@@ -20,7 +20,6 @@ rust = "latest"
 "go:honnef.co/go/tools/cmd/staticcheck" = "latest"
 "go:github.com/wailsapp/wails/v2/cmd/wails" = "latest"
 "go:github.com/danielmiessler/fabric/cmd/fabric" = "latest"
-yazi = "25"
 
 [settings]
 experimental = true

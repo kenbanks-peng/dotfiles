@@ -1,0 +1,83 @@
+[tools.bun]
+version = "1.2.18"
+backend = "core:bun"
+
+[tools."cargo:cargo-update"]
+version = "16.3.2"
+backend = "cargo:cargo-update"
+
+[tools."cargo:sbyte"]
+version = "0.3.3"
+backend = "cargo:sbyte"
+
+[tools.deno]
+version = "2.4.1"
+backend = "core:deno"
+
+[tools.git]
+version = "2.50.1"
+backend = "asdf:git"
+
+[tools.go]
+version = "1.24.5"
+backend = "core:go"
+
+[tools."go:github.com/danielmiessler/fabric/cmd/fabric"]
+version = "1.4.244"
+backend = "go:github.com/danielmiessler/fabric/cmd/fabric"
+
+[tools."go:github.com/dimonomid/nerdlog/cmd/nerdlog"]
+version = "1.10.0"
+backend = "go:github.com/dimonomid/nerdlog/cmd/nerdlog"
+
+[tools."go:github.com/wailsapp/wails/v2/cmd/wails"]
+version = "2.10.2"
+backend = "go:github.com/wailsapp/wails/v2/cmd/wails"
+
+[tools."go:golang.org/x/tools/gopls"]
+version = "0.19.1"
+backend = "go:golang.org/x/tools/gopls"
+
+[tools."go:honnef.co/go/tools/cmd/staticcheck"]
+version = "0.7.0-0.dev"
+backend = "go:honnef.co/go/tools/cmd/staticcheck"
+
+[tools.node]
+version = "24.4.0"
+backend = "core:node"
+
+[tools."npm:@anthropic-ai/claude-code"]
+version = "1.0.48"
+backend = "npm:@anthropic-ai/claude-code"
+
+[tools."npm:@google/gemini-cli"]
+version = "0.1.10"
+backend = "npm:@google/gemini-cli"
+
+[tools."npm:@openai/codex"]
+version = "0.4.0"
+backend = "npm:@openai/codex"
+
+[tools."npm:nuekit"]
+version = "1.0.0-RC.4"
+backend = "npm:nuekit"
+
+[tools."pipx:ruff"]
+version = "0.12.2"
+backend = "pipx:ruff"
+
+[tools.python]
+version = "3.13.5"
+backend = "core:python"
+
+[tools.ruby]
+version = "3.4.4"
+backend = "core:ruby"
+
+[tools.rust]
+version = "1.88.0"
+backend = "core:rust"
+
+[tools.uv]
+version = "0.7.20"
+backend = "aqua:astral-sh/uv"
