@@ -36,22 +36,32 @@ sed3 *args:
 
 
 
-# list minimal 
-# @l *args:
-#   lsd -l --no-symlink --blocks name {{args}}
-
 # pls list hide hidden files
-@l *args:
-  pls --exclude='^\.' --suffix=false --sym=false --sort=cat --sort=name --typ=dir {{args}}
-  pls --exclude='^\.' --suffix=false --sym=false --sort=cat --sort=name --typ=file --typ=symlink --typ=fifo --typ=socket --typ=char-device --typ=block-device {{args}}
+[script]
+l *args:
+  if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
+    pls --det=git --header=false --exclude='^\.' --suffix=false --sym=false --sort=cat --sort=name --typ=dir {{args}}
+    pls --det=git --header=false --exclude='^\.' --suffix=false --sym=false --sort=cat --sort=name --typ=file --typ=symlink --typ=fifo --typ=socket --typ=char-device --typ=block-device {{args}}
+  else
+    pls --header=false --exclude='^\.' --suffix=false --sym=false --sort=cat --sort=name --typ=dir {{args}}
+    pls --header=false --exclude='^\.' --suffix=false --sym=false --sort=cat --sort=name --typ=file --typ=symlink --typ=fifo --typ=socket --typ=char-device --typ=block-device {{args}}
+  fi
 
 
 # pls list show hidden files
-@ls *args:
-  pls --only='^\.' --suffix=false --sort=cat --sort=name --typ=dir {{args}}
-  pls --only='^\.' --suffix=false --sort=cat --sort=name --typ=file --typ=symlink --typ=fifo --typ=socket --typ=char-device --typ=block-device {{args}}
-  pls --exclude='^\.' --suffix=false --sort=cat --typ=dir --sort=name {{args}}
-  pls --exclude='^\.' --suffix=false --sort=cat --sort=name --typ=file --typ=symlink --typ=fifo --typ=socket --typ=char-device --typ=block-device {{args}}
+[script]
+ls *args:
+  if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
+    pls --det=git --header=false --only='^\.' --suffix=false --sort=cat --sort=name --typ=dir {{args}}
+    pls --det=git --header=false --only='^\.' --suffix=false --sort=cat --sort=name --typ=file --typ=symlink --typ=fifo --typ=socket --typ=char-device --typ=block-device {{args}}
+    pls --det=git --header=false --exclude='^\.' --suffix=false --sort=cat --typ=dir --sort=name {{args}}
+    pls --det=git --header=false --exclude='^\.' --suffix=false --sort=cat --sort=name --typ=file --typ=symlink --typ=fifo --typ=socket --typ=char-device --typ=block-device {{args}}
+  else
+    pls --header=false --only='^\.' --suffix=false --sort=cat --sort=name --typ=dir {{args}}
+    pls --header=false --only='^\.' --suffix=false --sort=cat --sort=name --typ=file --typ=symlink --typ=fifo --typ=socket --typ=char-device --typ=block-device {{args}}
+    pls --header=false --exclude='^\.' --suffix=false --sort=cat --typ=dir --sort=name {{args}}
+    pls --header=false --exclude='^\.' --suffix=false --sort=cat --sort=name --typ=file --typ=symlink --typ=fifo --typ=socket --typ=char-device --typ=block-device {{args}}
+  fi
 
 # list w/ git-symbols
 #
