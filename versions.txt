@@ -255,8 +255,8 @@ libxrender 0.9.12
 libyaml 0.2.5
 lima 1.2.0
 little-cms2 2.17
-lld 20.1.7
-llvm 20.1.7
+lld 20.1.8
+llvm 20.1.8
 lolcat 100.0.1
 lpeg 1.1.0
 lsd 1.1.5
@@ -413,10 +413,10 @@ go:golang.org/x/tools/gopls                     0.19.1            ~/.config/mise
 go:honnef.co/go/tools/cmd/staticcheck           0.7.0-0.dev       ~/.config/mise/mise.toml  latest
 node                                            24.4.0            ~/.config/mise/mise.toml  latest
 npm:@anthropic-ai/claude-code                   1.0.48            ~/.config/mise/mise.toml  latest
-npm:@google/gemini-cli                          0.1.10            ~/.config/mise/mise.toml  latest
+npm:@google/gemini-cli                          0.1.11            ~/.config/mise/mise.toml  latest
 npm:@openai/codex                               0.5.0             ~/.config/mise/mise.toml  latest
 npm:nuekit                                      1.0.0-RC.4        ~/.config/mise/mise.toml  latest
-pipx:ruff                                       0.12.2            ~/.config/mise/mise.toml  latest
+pipx:ruff                                       0.12.3            ~/.config/mise/mise.toml  latest
 python                                          3.13.5            ~/.config/mise/mise.toml  latest
 ruby                                            3.4.4             ~/.config/mise/mise.toml  latest
 rust                                            1.88.0 (symlink)  ~/.config/mise/mise.toml  latest
