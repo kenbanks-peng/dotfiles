@@ -51,16 +51,43 @@ l *args:
 # pls list show hidden files
 [script]
 ls *args:
+  # Check if -al or -la is present
+  has_al=false
+  for arg in {{args}}; do
+    if [[ "$arg" == "-al" || "$arg" == "-la" ]]; then
+      has_al=true
+      break
+    fi
+  done
+  
   if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
-    pls --det=git --header=false --only='^\.' --suffix=false --sort=cat --sort=name --typ=dir {{args}}
-    pls --det=git --header=false --only='^\.' --suffix=false --sort=cat --sort=name --typ=file --typ=symlink --typ=fifo --typ=socket --typ=char-device --typ=block-device {{args}}
-    pls --det=git --header=false --exclude='^\.' --suffix=false --sort=cat --typ=dir --sort=name {{args}}
-    pls --det=git --header=false --exclude='^\.' --suffix=false --sort=cat --sort=name --typ=file --typ=symlink --typ=fifo --typ=socket --typ=char-device --typ=block-device {{args}}
+    if [[ "$has_al" == "true" ]]; then
+      pls --det=git --det=perm --det=user --det=size --det=mtime --det=typ --header=false
+    else
+      pls --det=git --header=false --only='^\.' --suffix=false --sort=cat --sort=name --typ=dir {{args}}
+      pls --det=git --header=false --only='^\.' --suffix=false --sort=cat --sort=name --typ=file --typ=symlink --typ=fifo --typ=socket --typ=char-device --typ=block-device {{args}}
+      pls --det=git --header=false --exclude='^\.' --suffix=false --sort=cat --typ=dir --sort=name {{args}}
+      pls --det=git --header=false --exclude='^\.' --suffix=false --sort=cat --sort=name --typ=file --typ=symlink --typ=fifo --typ=socket --typ=char-device --typ=block-device {{args}}
+    fi
   else
-    pls --header=false --only='^\.' --suffix=false --sort=cat --sort=name --typ=dir {{args}}
-    pls --header=false --only='^\.' --suffix=false --sort=cat --sort=name --typ=file --typ=symlink --typ=fifo --typ=socket --typ=char-device --typ=block-device {{args}}
-    pls --header=false --exclude='^\.' --suffix=false --sort=cat --typ=dir --sort=name {{args}}
-    pls --header=false --exclude='^\.' --suffix=false --sort=cat --sort=name --typ=file --typ=symlink --typ=fifo --typ=socket --typ=char-device --typ=block-device {{args}}
+    if [[ "$has_al" == "true" ]]; then
+      pls --det=perm --det=user --det=size --det=mtime --det=typ --header=false
+    else
+      pls --header=false --only='^\.' --suffix=false --sort=cat --sort=name --typ=dir {{args}}
+      pls --header=false --only='^\.' --suffix=false --sort=cat --sort=name --typ=file --typ=symlink --typ=fifo --typ=socket --typ=char-device --typ=block-device {{args}}
+      pls --header=false --exclude='^\.' --suffix=false --sort=cat --typ=dir --sort=name {{args}}
+      pls --header=false --exclude='^\.' --suffix=false --sort=cat --sort=name --typ=file --typ=symlink --typ=fifo --typ=socket --typ=char-device --typ=block-device {{args}}
+    fi
+  fi
+  
+
+# list long
+[script]
+ll *args:
+  if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
+    pls --det=git --det=perm --det=user --det=size --det=mtime --det=typ --header=false {{args}}
+  else
+    pls --det=perm --det=user --det=size --det=mtime --det=typ --header=false {{args}}
   fi
 
 # list w/ git-symbols
@@ -96,15 +123,6 @@ lt *args:
     lsd --almost-all --tree --no-symlink --depth 2 -al --blocks name --blocks git {{args}}
   else
     lsd --almost-all --tree --no-symlink --depth 2 -al --blocks name {{args}}
-  fi
-
-# list long
-[script]
-ll *args:
-  if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
-    lsd --almost-all --no-symlink --blocks permission --blocks user --blocks size --blocks date --blocks git --blocks name {{args}}
-  else
-    lsd --almost-all --no-symlink --blocks permission --blocks user --blocks size --blocks date --blocks name {{args}}
   fi
 
 # new cat

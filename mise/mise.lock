@@ -23,7 +23,7 @@ version = "1.24.5"
 backend = "core:go"
 
 [tools."go:github.com/danielmiessler/fabric/cmd/fabric"]
-version = "1.4.244"
+version = "1.4.245"
 backend = "go:github.com/danielmiessler/fabric/cmd/fabric"
 
 [tools."go:github.com/dimonomid/nerdlog/cmd/nerdlog"]
@@ -47,11 +47,11 @@ version = "24.4.0"
 backend = "core:node"
 
 [tools."npm:@anthropic-ai/claude-code"]
-version = "1.0.48"
+version = "1.0.51"
 backend = "npm:@anthropic-ai/claude-code"
 
 [tools."npm:@google/gemini-cli"]
-version = "0.1.10"
+version = "0.1.11"
 backend = "npm:@google/gemini-cli"
 
 [tools."npm:@openai/codex"]
@@ -63,7 +63,7 @@ version = "1.0.0-RC.4"
 backend = "npm:nuekit"
 
 [tools."pipx:ruff"]
-version = "0.12.2"
+version = "0.12.3"
 backend = "pipx:ruff"
 
 [tools.python]
