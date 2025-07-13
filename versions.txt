@@ -51,6 +51,7 @@ notion-mail 0.0.37
 obsidian 1.8.10
 omnifocus 4.6.1
 onyx 4.8.1
+orbstack 1.11.3,19358
 pdf-pals 1.9.0
 quarto 1.7.32
 raycast 1.100.3
@@ -143,7 +144,6 @@ gawk 5.3.1
 gcc 15.1.0
 gdk-pixbuf 2.42.12_1
 gettext 0.25.1
-ghostscript 10.05.1
 giflib 5.2.2
 git-bug 0.10.1
 git-delta 0.18.2_3
@@ -174,12 +174,11 @@ hurl 6.1.1
 hyperfine 1.19.0
 icu4c@76 76.1_2
 icu4c@77 77.1
-imagemagick 7.1.1-47
+imagemagick 7.1.2-0
 imath 3.1.12
 imgcat 1.0.22
 isl 0.27
 jasper 4.2.5
-jbig2dec 0.20
 jc 1.25.5
 jid 0.7.6
 jj 0.31.0
@@ -211,7 +210,6 @@ libgcrypt 1.11.1
 libgit2 1.9.1
 libgpg-error 1.55
 libheif 1.20.1
-libidn 1.43
 libidn2 2.3.8
 libksba 1.6.7
 liblinear 2.49
@@ -398,27 +396,26 @@ zx 8.7.0
 
 MISE PACKAGES
 -------------
-bun                                             1.2.18            ~/.config/mise/mise.toml  latest
-cargo:cargo-update                              16.3.2            ~/.config/mise/mise.toml  latest
-cargo:sbyte                                     0.3.3             ~/.config/mise/mise.toml  latest
-deno                                            2.4.1             ~/.config/mise/mise.toml  latest
-git                                             2.50.1            ~/.config/mise/mise.toml  latest
-go                                              1.24.5            ~/.config/mise/mise.toml  latest
-go:github.com/danielmiessler/fabric/cmd/fabric  1.4.245           ~/.config/mise/mise.toml  latest
-go:github.com/dimonomid/nerdlog/cmd/nerdlog     1.10.0            ~/.config/mise/mise.toml  latest
-go:github.com/wailsapp/wails/v2/cmd/wails       2.10.2            ~/.config/mise/mise.toml  latest
-go:golang.org/x/tools/gopls                     0.19.1            ~/.config/mise/mise.toml  latest
-go:honnef.co/go/tools/cmd/staticcheck           0.7.0-0.dev       ~/.config/mise/mise.toml  latest
-node                                            24.4.0            ~/.config/mise/mise.toml  latest
-npm:@anthropic-ai/claude-code                   1.0.51            ~/.config/mise/mise.toml  latest
-npm:@google/gemini-cli                          0.1.12            ~/.config/mise/mise.toml  latest
-npm:@openai/codex                               0.6.0             ~/.config/mise/mise.toml  latest
-npm:nuekit                                      1.0.0-RC.4        ~/.config/mise/mise.toml  latest
-pipx:ruff                                       0.12.3            ~/.config/mise/mise.toml  latest
-python                                          3.13.5            ~/.config/mise/mise.toml  latest
-ruby                                            3.4.4             ~/.config/mise/mise.toml  latest
-rust                                            1.88.0 (symlink)  ~/.config/mise/mise.toml  latest
-uv                                              0.7.20            ~/.config/mise/mise.toml  latest
+bun                                          1.2.18            ~/.config/mise/mise.toml  latest
+cargo:cargo-update                           16.3.2            ~/.config/mise/mise.toml  latest
+cargo:sbyte                                  0.3.3             ~/.config/mise/mise.toml  latest
+deno                                         2.4.1             ~/.config/mise/mise.toml  latest
+git                                          2.50.1            ~/.config/mise/mise.toml  latest
+go                                           1.24.5            ~/.config/mise/mise.toml  latest
+go:github.com/dimonomid/nerdlog/cmd/nerdlog  1.10.0            ~/.config/mise/mise.toml  latest
+go:github.com/wailsapp/wails/v2/cmd/wails    2.10.2            ~/.config/mise/mise.toml  latest
+go:golang.org/x/tools/gopls                  0.19.1            ~/.config/mise/mise.toml  latest
+go:honnef.co/go/tools/cmd/staticcheck        0.7.0-0.dev       ~/.config/mise/mise.toml  latest
+node                                         24.4.0            ~/.config/mise/mise.toml  latest
+npm:@anthropic-ai/claude-code                1.0.51            ~/.config/mise/mise.toml  latest
+npm:@google/gemini-cli                       0.1.12            ~/.config/mise/mise.toml  latest
+npm:@openai/codex                            0.6.0             ~/.config/mise/mise.toml  latest
+npm:nuekit                                   1.0.0-RC.4        ~/.config/mise/mise.toml  latest
+pipx:ruff                                    0.12.3            ~/.config/mise/mise.toml  latest
+python                                       3.13.5            ~/.config/mise/mise.toml  latest
+ruby                                         3.4.4             ~/.config/mise/mise.toml  latest
+rust                                         1.88.0 (symlink)  ~/.config/mise/mise.toml  latest
+uv                                           0.7.20            ~/.config/mise/mise.toml  latest
 
 RUSTUP/CARGO
 ------------
