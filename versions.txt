@@ -76,7 +76,6 @@ BREW FORMULAS
 -------------
 abseil 20240722.1
 age 1.2.1
-aichat 0.30.0
 aom 3.12.1
 apache-arrow 20.0.0_1
 aribb24 1.0.4
