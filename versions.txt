@@ -97,7 +97,7 @@ aws-checksums 0.2.7
 aws-crt-cpp 0.33.0
 aws-sdk-cpp 1.11.600
 bandwhich 0.23.1
-bash 5.3
+bash 5.3_1
 bat 0.25.0_1
 bat-extras 2024.08.24
 biome 2.1.1
@@ -325,7 +325,7 @@ pycparser 2.22_1
 pygit2 1.18.0
 python@3.12 3.12.11
 python@3.13 3.13.5
-qsv 6.0.0
+qsv 6.0.1
 rav1e 0.8.1
 re2 20250626
 readline 8.3.1
@@ -414,8 +414,8 @@ go:golang.org/x/tools/gopls                     0.19.1            ~/.config/mise
 go:honnef.co/go/tools/cmd/staticcheck           0.7.0-0.dev       ~/.config/mise/mise.toml  latest
 node                                            24.4.0            ~/.config/mise/mise.toml  latest
 npm:@anthropic-ai/claude-code                   1.0.51            ~/.config/mise/mise.toml  latest
-npm:@google/gemini-cli                          0.1.11            ~/.config/mise/mise.toml  latest
-npm:@openai/codex                               0.5.0             ~/.config/mise/mise.toml  latest
+npm:@google/gemini-cli                          0.1.12            ~/.config/mise/mise.toml  latest
+npm:@openai/codex                               0.6.0             ~/.config/mise/mise.toml  latest
 npm:nuekit                                      1.0.0-RC.4        ~/.config/mise/mise.toml  latest
 pipx:ruff                                       0.12.3            ~/.config/mise/mise.toml  latest
 python                                          3.13.5            ~/.config/mise/mise.toml  latest
