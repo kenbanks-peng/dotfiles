@@ -168,7 +168,6 @@ gup 0.27.8
 harfbuzz 11.2.1
 hexyl 0.16.0
 highway 1.2.0
-how2 3.0.3
 htmlq 0.4.0
 hub 2.14.2
 hurl 6.1.1
