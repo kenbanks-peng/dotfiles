@@ -187,7 +187,7 @@ jpeg-turbo 3.1.1
 jpeg-xl 0.11.1_1
 jq 1.8.1
 jqp 0.7.0
-just 1.41.0
+just 1.42.0
 lame 3.100
 lazydocker 0.24.1
 lazygit 0.53.0
@@ -359,7 +359,7 @@ theora 1.1.1
 thrift 0.22.0
 tokei 12.1.2
 tree 2.2.1
-tree-sitter 0.25.7
+tree-sitter 0.25.8
 turso 0.1.1
 typst 0.13.1
 uchardet 0.0.8
