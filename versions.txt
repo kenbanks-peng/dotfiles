@@ -7,12 +7,13 @@ affinity-designer 2.6.3,3322
 affinity-photo 2.6.3,3322
 affinity-publisher 2.6.3,3322
 anybar 0.2.3
+anydesk 9.1.0
 anythingllm 1.8.3
 arc 1.103.0,65269
 boltai 1.35.3
 boop 1.4.0
 bruno 2.7.0
-claude 0.11.6,0aa9ce1bb503e55a1a7a1bed5d514d5f3481f233
+claude 0.12.15,b8b265823f4ee295e4cd533b6d47237f33d8de13
 cursor 1.2.4,a8e95743c5268be73767c46944a71f4465d05c90
 daisydisk 4.31
 espanso 2.2.1
@@ -69,8 +70,8 @@ vmware-fusion 13.6.3,24585314
 warp 0.2025.07.09.08.11.stable_01
 wezterm 20240203-110809,5046fc22
 zed 0.194.3
-zen 1.14.4b
-zoom 6.5.3.58803
+zen 1.14.5b
+zoom 6.5.5.59968
 
 BREW FORMULAS
 -------------
@@ -108,7 +109,7 @@ c3c 0.7.3
 ca-certificates 2025-05-20
 caddy 2.10.0
 cairo 1.18.4
-certifi 2025.7.9
+certifi 2025.7.14
 cffi 1.17.1_1
 cheat 4.4.2
 choose-rust 1.3.6
@@ -382,7 +383,7 @@ zimg 3.0.5
 zoxide 0.9.8
 zsh 5.9
 zstd 1.5.7
-zx 8.7.0
+zx 8.7.1
 
 MISE PACKAGES
 -------------
@@ -399,7 +400,7 @@ go:honnef.co/go/tools/cmd/staticcheck        0.7.0-0.dev       ~/.config/mise/mi
 node                                         24.4.0            ~/.config/mise/mise.toml  latest
 npm:@anthropic-ai/claude-code                1.0.51            ~/.config/mise/mise.toml  latest
 npm:@google/gemini-cli                       0.1.12            ~/.config/mise/mise.toml  latest
-npm:@openai/codex                            0.6.0             ~/.config/mise/mise.toml  latest
+npm:@openai/codex                            0.7.0             ~/.config/mise/mise.toml  latest
 npm:nuekit                                   1.0.0-RC.4        ~/.config/mise/mise.toml  latest
 pipx:ruff                                    0.12.3            ~/.config/mise/mise.toml  latest
 python                                       3.13.5            ~/.config/mise/mise.toml  latest
