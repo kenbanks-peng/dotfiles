@@ -22,10 +22,6 @@ backend = "asdf:git"
 version = "1.24.5"
 backend = "core:go"
 
-[tools."go:github.com/danielmiessler/fabric/cmd/fabric"]
-version = "1.4.245"
-backend = "go:github.com/danielmiessler/fabric/cmd/fabric"
-
 [tools."go:github.com/dimonomid/nerdlog/cmd/nerdlog"]
 version = "1.10.0"
 backend = "go:github.com/dimonomid/nerdlog/cmd/nerdlog"
@@ -51,11 +47,11 @@ version = "1.0.51"
 backend = "npm:@anthropic-ai/claude-code"
 
 [tools."npm:@google/gemini-cli"]
-version = "0.1.11"
+version = "0.1.12"
 backend = "npm:@google/gemini-cli"
 
 [tools."npm:@openai/codex"]
-version = "0.5.0"
+version = "0.7.0"
 backend = "npm:@openai/codex"
 
 [tools."npm:nuekit"]
