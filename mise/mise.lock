@@ -43,7 +43,7 @@ version = "24.4.0"
 backend = "core:node"
 
 [tools."npm:@anthropic-ai/claude-code"]
-version = "1.0.51"
+version = "1.0.52"
 backend = "npm:@anthropic-ai/claude-code"
 
 [tools."npm:@google/gemini-cli"]
