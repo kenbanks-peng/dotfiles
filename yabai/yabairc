@@ -61,7 +61,7 @@ space_settings=(
 yabai -m config "${space_settings[@]}"
 
 #
-# WINDOW SETTINGS managed with skhd / sketchybar
+# WINDOW SETTINGS managed with aerospace / sketchybar
 #
 
 #
@@ -78,6 +78,7 @@ yabai -m rule --add label="About This Mac" app="System Information" title="About
 yabai -m rule --add label="Safari" app="^Safari$" title="^(General|(Tab|Password|Website|Extension)s|AutoFill|Se(arch|curity)|Privacy|Advance)$" manage=off
 yabai -m rule --add label="App Store" app="^App Store$" manage=off
 yabai -m rule --add label="Dictionary" app="^Dictionary$" manage=off
+yabai -m rule --add label="Amazon Q" app="^Amazon Q$" manage=off
 
 #
 # SIGNALS
