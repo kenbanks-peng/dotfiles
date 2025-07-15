@@ -6,6 +6,7 @@ affine 0.22.4
 affinity-designer 2.6.3,3322
 affinity-photo 2.6.3,3322
 affinity-publisher 2.6.3,3322
+amazon-q 1.12.5
 anybar 0.2.3
 anydesk 9.1.0
 anythingllm 1.8.3
@@ -13,7 +14,7 @@ arc 1.103.0,65269
 boltai 1.35.3
 boop 1.4.0
 bruno 2.7.0
-claude 0.12.15,b8b265823f4ee295e4cd533b6d47237f33d8de13
+claude 0.12.16,fae442ffd62c0a275d62fe32d9d25aa7607c5bde
 cursor 1.2.4,a8e95743c5268be73767c46944a71f4465d05c90
 daisydisk 4.31
 espanso 2.2.1
@@ -91,7 +92,7 @@ aws-c-event-stream 0.5.5
 aws-c-http 0.10.2
 aws-c-io 0.21.0
 aws-c-mqtt 0.13.2
-aws-c-s3 0.8.3
+aws-c-s3 0.8.4
 aws-c-sdkutils 0.2.4
 aws-checksums 0.2.7
 aws-crt-cpp 0.33.0
@@ -183,7 +184,7 @@ jpeg-turbo 3.1.1
 jpeg-xl 0.11.1_1
 jq 1.8.1
 jqp 0.7.0
-just 1.42.0
+just 1.42.1
 lame 3.100
 lazydocker 0.24.1
 lazygit 0.53.0
