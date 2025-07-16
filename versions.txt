@@ -8,7 +8,6 @@ affinity-photo 2.6.3,3322
 affinity-publisher 2.6.3,3322
 amazon-q 1.12.5
 anybar 0.2.3
-anydesk 9.1.0
 anythingllm 1.8.3
 arc 1.103.0,65269
 boltai 1.35.3
