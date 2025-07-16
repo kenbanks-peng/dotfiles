@@ -90,7 +90,7 @@ aws-c-compression 0.3.1
 aws-c-event-stream 0.5.5
 aws-c-http 0.10.2
 aws-c-io 0.21.0
-aws-c-mqtt 0.13.2
+aws-c-mqtt 0.13.3
 aws-c-s3 0.8.4
 aws-c-sdkutils 0.2.4
 aws-checksums 0.2.7
@@ -398,7 +398,7 @@ go:github.com/wailsapp/wails/v2/cmd/wails    2.10.2            ~/.config/mise/mi
 go:golang.org/x/tools/gopls                  0.19.1            ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck        0.7.0-0.dev       ~/.config/mise/mise.toml  latest
 node                                         24.4.0            ~/.config/mise/mise.toml  latest
-npm:@anthropic-ai/claude-code                1.0.52            ~/.config/mise/mise.toml  latest
+npm:@anthropic-ai/claude-code                1.0.53            ~/.config/mise/mise.toml  latest
 npm:@google/gemini-cli                       0.1.12            ~/.config/mise/mise.toml  latest
 npm:@openai/codex                            0.7.0             ~/.config/mise/mise.toml  latest
 npm:nuekit                                   1.0.0-RC.4        ~/.config/mise/mise.toml  latest
