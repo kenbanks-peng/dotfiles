@@ -39,11 +39,14 @@ version = "0.7.0-0.dev"
 backend = "go:honnef.co/go/tools/cmd/staticcheck"
 
 [tools.node]
-version = "24.4.0"
+version = "24.4.1"
 backend = "core:node"
 
+[tools.node.checksums]
+"node-v24.4.1-darwin-arm64.tar.gz" = "sha256:55a772a600b7bdafb4b35945b3935090e27aff9934b4c11b281220fcd99139d7"
+
 [tools."npm:@anthropic-ai/claude-code"]
-version = "1.0.52"
+version = "1.0.53"
 backend = "npm:@anthropic-ai/claude-code"
 
 [tools."npm:@google/gemini-cli"]
