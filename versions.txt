@@ -13,7 +13,7 @@ arc 1.103.0,65269
 boltai 1.35.3
 boop 1.4.0
 bruno 2.7.0
-claude 0.12.16,fae442ffd62c0a275d62fe32d9d25aa7607c5bde
+claude 0.12.19,5e6edb0300c171889b8f97aa4e15a08fcb252da9
 cursor 1.2.4,a8e95743c5268be73767c46944a71f4465d05c90
 daisydisk 4.31
 espanso 2.2.1
@@ -40,6 +40,7 @@ itsycal 0.15.6
 jordanbaird-ice 0.11.12
 karabiner-elements 15.4.0
 keyclu 0.30.2
+kiro 0.1.9,202507161958
 languagetool-desktop 2.3.2
 lapce 0.4.3
 local 9.2.5,6810
@@ -69,7 +70,7 @@ ubersicht 1.6.82
 vmware-fusion 13.6.3,24585314
 warp 0.2025.07.09.08.11.stable_01
 wezterm 20240203-110809,5046fc22
-zed 0.194.3
+zed 0.195.3
 zen 1.14.5b
 zoom 6.5.5.59968
 
@@ -355,7 +356,7 @@ tree-sitter 0.25.8
 turso 0.1.2
 typst 0.13.1
 uchardet 0.0.8
-unbound 1.23.0
+unbound 1.23.1
 unibilium 2.1.2
 utf8proc 2.10.0
 vapoursynth 72
