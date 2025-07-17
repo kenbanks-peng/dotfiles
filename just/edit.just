@@ -23,8 +23,8 @@ editor command *args:
     {{command}} .
   fi
 
-# vscode editor
-e *args: (editor "cursor" args)
+# vscode editor - kiro / cursor / code  
+e *args: (editor "kiro" args)
 
 # nvim editor
 n *args: 
