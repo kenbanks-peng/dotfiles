@@ -286,7 +286,7 @@ oh-my-posh 26.16.0
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.3.13
+opencode 0.3.17
 opencore-amr 0.1.6
 openexr 3.3.4
 openjpeg 2.5.3
