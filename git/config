@@ -21,7 +21,7 @@
   lg = log --oneline --graph --all --decorate
   last = log -1 HEAD
 [commit]
-  template = ~/git/commitmsg
+  template = ~/.config/git/commitmsg
 [init]
   defaultBranch = main
 [filter "lfs"]
