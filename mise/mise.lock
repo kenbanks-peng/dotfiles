@@ -57,6 +57,10 @@ backend = "npm:@openai/codex"
 version = "1.0.0-RC.4"
 backend = "npm:nuekit"
 
+[tools."pipx:markitdown"]
+version = "0.1.2"
+backend = "pipx:markitdown"
+
 [tools."pipx:ruff"]
 version = "0.12.3"
 backend = "pipx:ruff"
