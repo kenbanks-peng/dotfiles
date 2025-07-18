@@ -13,7 +13,7 @@ arc 1.104.0,65533
 boltai 1.35.3
 boop 1.4.0
 bruno 2.7.0
-claude 0.12.19,5e6edb0300c171889b8f97aa4e15a08fcb252da9
+claude 0.12.20,29349a201577e0fc048b95a6d7c5fcfbcd759576
 cursor 1.2.4,a8e95743c5268be73767c46944a71f4465d05c90
 daisydisk 4.31
 espanso 2.2.1
@@ -95,7 +95,7 @@ aws-c-mqtt 0.13.3
 aws-c-s3 0.8.5
 aws-c-sdkutils 0.2.4
 aws-checksums 0.2.7
-aws-crt-cpp 0.33.0
+aws-crt-cpp 0.33.1
 aws-sdk-cpp 1.11.600
 bandwhich 0.23.1
 bash 5.3_1
@@ -399,7 +399,7 @@ go:github.com/wailsapp/wails/v2/cmd/wails  2.10.2            ~/.config/mise/mise
 go:golang.org/x/tools/gopls                0.19.1            ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise.toml  latest
 node                                       24.4.1            ~/.config/mise/mise.toml  latest
-npm:@anthropic-ai/claude-code              1.0.53            ~/.config/mise/mise.toml  latest
+npm:@anthropic-ai/claude-code              1.0.55            ~/.config/mise/mise.toml  latest
 npm:@google/gemini-cli                     0.1.12            ~/.config/mise/mise.toml  latest
 npm:@openai/codex                          0.7.0             ~/.config/mise/mise.toml  latest
 npm:nuekit                                 1.0.0-RC.4        ~/.config/mise/mise.toml  latest
