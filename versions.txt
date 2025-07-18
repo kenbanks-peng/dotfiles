@@ -129,7 +129,7 @@ dua-cli 2.30.1
 duf 0.8.1
 dust 1.2.2
 dvc 3.61.0
-fastfetch 2.48.0
+fastfetch 2.48.1
 fd 10.2.0
 ffmpeg 7.1.1_3
 flac 1.5.0
