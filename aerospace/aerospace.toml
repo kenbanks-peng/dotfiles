@@ -172,8 +172,8 @@ f19 = 'exec-and-forget $HOME/Software/bin/open-cursor-at' # right shift twice qu
 
 ########################   services   ########################
 
-alt-r = 'mode resize'
-alt-shift-semicolon = 'mode service'
+alt-comma = 'mode resize'
+alt-slash = 'mode service'
 
 
 ########################   resize   ########################
