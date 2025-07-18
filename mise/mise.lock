@@ -45,7 +45,7 @@ backend = "core:node"
 "node-v24.4.1-darwin-arm64.tar.gz" = "sha256:55a772a600b7bdafb4b35945b3935090e27aff9934b4c11b281220fcd99139d7"
 
 [tools."npm:@anthropic-ai/claude-code"]
-version = "1.0.53"
+version = "1.0.55"
 backend = "npm:@anthropic-ai/claude-code"
 
 [tools."npm:@google/gemini-cli"]
