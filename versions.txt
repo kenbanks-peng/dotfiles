@@ -193,7 +193,7 @@ lazyjj 0.5.0
 lazyjournal 0.7.9
 lazysql 0.3.8
 leptonica 1.85.0
-lf 35
+lf 36
 libarchive 3.8.1
 libass 0.17.4
 libassuan 3.0.2
@@ -279,7 +279,7 @@ nettle 3.10.2
 nmap 7.97
 node 24.4.1
 npth 1.8
-nspr 4.36
+nspr 4.37
 nss 3.113.1
 numpy 2.3.1
 nushell 0.105.1
