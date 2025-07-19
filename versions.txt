@@ -287,7 +287,7 @@ oh-my-posh 26.17.0
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.3.20
+opencode 0.3.24
 opencore-amr 0.1.6
 openexr 3.3.4
 openjpeg 2.5.3
@@ -390,7 +390,7 @@ zx 8.7.1
 MISE PACKAGES
 -------------
 bun                                        1.2.18            ~/.config/mise/mise.toml  latest
-cargo:cargo-update                         16.3.2            ~/.config/mise/mise.toml  latest
+cargo:cargo-update                         16.4.0            ~/.config/mise/mise.toml  latest
 cargo:sbyte                                0.3.3             ~/.config/mise/mise.toml  latest
 deno                                       2.4.2             ~/.config/mise/mise.toml  latest
 git                                        2.50.1            ~/.config/mise/mise.toml  latest
@@ -400,7 +400,7 @@ go:golang.org/x/tools/gopls                0.19.1            ~/.config/mise/mise
 go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise.toml  latest
 node                                       24.4.1            ~/.config/mise/mise.toml  latest
 npm:@anthropic-ai/claude-code              1.0.56            ~/.config/mise/mise.toml  latest
-npm:@google/gemini-cli                     0.1.12            ~/.config/mise/mise.toml  latest
+npm:@google/gemini-cli                     0.1.13            ~/.config/mise/mise.toml  latest
 npm:@openai/codex                          0.8.0             ~/.config/mise/mise.toml  latest
 npm:nuekit                                 1.0.0-RC.4        ~/.config/mise/mise.toml  latest
 pipx:markitdown                            0.1.2             ~/.config/mise/mise.toml  latest
