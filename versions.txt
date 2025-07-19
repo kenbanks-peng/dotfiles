@@ -70,7 +70,7 @@ ubersicht 1.6.82
 vmware-fusion 13.6.3,24585314
 warp 0.2025.07.09.08.11.stable_01
 wezterm 20240203-110809,5046fc22
-zed 0.195.4
+zed 0.195.5
 zen 1.14.5b
 zoom 6.5.6.60177
 
@@ -399,9 +399,9 @@ go:github.com/wailsapp/wails/v2/cmd/wails  2.10.2            ~/.config/mise/mise
 go:golang.org/x/tools/gopls                0.19.1            ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise.toml  latest
 node                                       24.4.1            ~/.config/mise/mise.toml  latest
-npm:@anthropic-ai/claude-code              1.0.55            ~/.config/mise/mise.toml  latest
+npm:@anthropic-ai/claude-code              1.0.56            ~/.config/mise/mise.toml  latest
 npm:@google/gemini-cli                     0.1.12            ~/.config/mise/mise.toml  latest
-npm:@openai/codex                          0.7.0             ~/.config/mise/mise.toml  latest
+npm:@openai/codex                          0.8.0             ~/.config/mise/mise.toml  latest
 npm:nuekit                                 1.0.0-RC.4        ~/.config/mise/mise.toml  latest
 pipx:markitdown                            0.1.2             ~/.config/mise/mise.toml  latest
 pipx:ruff                                  0.12.4            ~/.config/mise/mise.toml  latest
