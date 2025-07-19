@@ -6,14 +6,14 @@ affine 0.23.1
 affinity-designer 2.6.3,3322
 affinity-photo 2.6.3,3322
 affinity-publisher 2.6.3,3322
-amazon-q 1.12.5
+amazon-q 1.12.6
 anybar 0.2.3
 anythingllm 1.8.4
 arc 1.104.0,65533
 boltai 1.35.3
 boop 1.4.0
 bruno 2.7.0
-claude 0.12.20,29349a201577e0fc048b95a6d7c5fcfbcd759576
+claude 0.12.28,5f9bc7a885f8898698b944b60efed5b3b6c63db5
 cursor 1.2.4,a8e95743c5268be73767c46944a71f4465d05c90
 daisydisk 4.31
 espanso 2.2.1
@@ -185,7 +185,7 @@ jpeg-turbo 3.1.1
 jpeg-xl 0.11.1_1
 jq 1.8.1
 jqp 0.7.0
-just 1.42.2
+just 1.42.3
 lame 3.100
 lazydocker 0.24.1
 lazygit 0.53.0
@@ -280,7 +280,7 @@ nmap 7.97
 node 24.4.1
 npth 1.8
 nspr 4.37
-nss 3.113.1
+nss 3.114
 numpy 2.3.1
 nushell 0.105.1
 oh-my-posh 26.17.0
@@ -315,7 +315,7 @@ python@3.12 3.12.11
 python@3.13 3.13.5
 qsv 6.0.1
 rav1e 0.8.1
-re2 20250626
+re2 20250717
 readline 8.3.1
 resvg 0.45.1
 rich-cli 1.8.1
@@ -339,7 +339,7 @@ speex 1.2.1
 sq 0.48.5
 sqlc 1.29.0
 sqld 0.24.31
-sqlite 3.50.2
+sqlite 3.50.3
 srt 1.5.4
 sshs 4.7.2
 stow 2.4.1
