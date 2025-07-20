@@ -3,7 +3,7 @@ version = "1.2.18"
 backend = "core:bun"
 
 [tools."cargo:cargo-update"]
-version = "16.3.2"
+version = "16.4.0"
 backend = "cargo:cargo-update"
 
 [tools."cargo:sbyte"]
@@ -13,9 +13,6 @@ backend = "cargo:sbyte"
 [tools.deno]
 version = "2.4.2"
 backend = "core:deno"
-
-[tools.deno.checksums]
-"deno-aarch64-apple-darwin.zip" = "blake3:8f74b8f5836a61906e50d62c81d5ad54ece4e29f2495f8ff84eedb17880c764c"
 
 [tools.git]
 version = "2.50.1"
@@ -41,19 +38,16 @@ backend = "go:honnef.co/go/tools/cmd/staticcheck"
 version = "24.4.1"
 backend = "core:node"
 
-[tools.node.checksums]
-"node-v24.4.1-darwin-arm64.tar.gz" = "sha256:55a772a600b7bdafb4b35945b3935090e27aff9934b4c11b281220fcd99139d7"
-
 [tools."npm:@anthropic-ai/claude-code"]
-version = "1.0.55"
+version = "1.0.56"
 backend = "npm:@anthropic-ai/claude-code"
 
 [tools."npm:@google/gemini-cli"]
-version = "0.1.12"
+version = "0.1.13"
 backend = "npm:@google/gemini-cli"
 
 [tools."npm:@openai/codex"]
-version = "0.7.0"
+version = "0.8.0"
 backend = "npm:@openai/codex"
 
 [tools."npm:nuekit"]
