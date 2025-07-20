@@ -52,7 +52,7 @@ notion-calendar 1.130.0
 notion-mail 0.0.37
 obsidian 1.8.10
 omnifocus 4.6.1
-onyx 4.8.1
+onyx 4.8.2
 orbstack 1.11.3,19358
 pdf-pals 1.9.0
 quarto 1.7.32
@@ -123,7 +123,7 @@ csvtk 0.34.0
 curlie 1.8.2
 dav1d 1.5.1
 dblab 0.33.0
-direnv 2.37.0
+direnv 2.37.1
 dotenvx 1.48.0
 dua-cli 2.30.1
 duf 0.8.1
