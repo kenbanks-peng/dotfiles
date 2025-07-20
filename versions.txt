@@ -124,7 +124,7 @@ curlie 1.8.2
 dav1d 1.5.1
 dblab 0.33.0
 direnv 2.37.1
-dotenvx 1.48.0
+dotenvx 1.48.1
 dua-cli 2.30.1
 duf 0.8.1
 dust 1.2.2
@@ -146,7 +146,7 @@ gettext 0.25.1
 giflib 5.2.2
 git-bug 0.10.1
 git-delta 0.18.2_3
-gitleaks 8.27.2
+gitleaks 8.28.0
 gitui 0.27.0
 glances 4.3.3
 glib 2.84.3
@@ -287,7 +287,7 @@ oh-my-posh 26.17.0
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.3.24
+opencode 0.3.44
 opencore-amr 0.1.6
 openexr 3.3.4
 openjpeg 2.5.3
@@ -389,7 +389,7 @@ zx 8.7.1
 
 MISE PACKAGES
 -------------
-bun                                        1.2.18            ~/.config/mise/mise.toml  latest
+bun                                        1.2.19            ~/.config/mise/mise.toml  latest
 cargo:cargo-update                         16.4.0            ~/.config/mise/mise.toml  latest
 cargo:sbyte                                0.3.3             ~/.config/mise/mise.toml  latest
 deno                                       2.4.2             ~/.config/mise/mise.toml  latest
