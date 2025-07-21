@@ -34,7 +34,7 @@ font-sf-pro latest
 font-symbols-only-nerd-font 3.4.0
 font-tex-gyre-termes 2.004
 git-credential-manager 2.6.1
-github 3.5.1-42a2e52a
+github 3.5.2-14087268
 grandperspective 3.5.3
 hoppscotch 25.6.1-0
 itsycal 0.15.6
@@ -409,7 +409,7 @@ pipx:ruff                                  0.12.4            ~/.config/mise/mise
 python                                     3.13.5            ~/.config/mise/mise.toml  latest
 ruby                                       3.4.5             ~/.config/mise/mise.toml  latest
 rust                                       1.88.0 (symlink)  ~/.config/mise/mise.toml  latest
-uv                                         0.7.20            ~/.config/mise/mise.toml  latest
+uv                                         0.8.0             ~/.config/mise/mise.toml  latest
 
 RUSTUP/CARGO
 ------------
