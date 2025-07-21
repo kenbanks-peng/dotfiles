@@ -10,6 +10,7 @@ amazon-q 1.12.6
 anybar 0.2.3
 anythingllm 1.8.4
 arc 1.104.0,65533
+audacity 3.7.4
 boltai 1.35.3
 boop 1.4.0
 bruno 2.7.0
@@ -142,7 +143,7 @@ fx 37.0.1
 fzf 0.64.0
 gawk 5.3.1
 gcc 15.1.0
-gettext 0.25.1
+gettext 0.26
 giflib 5.2.2
 git-bug 0.10.1
 git-delta 0.18.2_3
@@ -244,7 +245,7 @@ libxdmcp 1.1.5
 libxext 1.3.6
 libxrender 0.9.12
 libyaml 0.2.5
-lima 1.2.0
+lima 1.2.1
 little-cms2 2.17
 lld 20.1.8
 llvm 20.1.8
@@ -300,7 +301,7 @@ pastel 0.10.0
 pcre2 10.45
 pet 1.0.1
 pinentry 1.3.1_1
-pixman 0.46.2
+pixman 0.46.4
 pls 0.0.1-beta.9
 poppler 25.07.0
 portal 1.2.3
