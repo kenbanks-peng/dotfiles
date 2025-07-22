@@ -13,7 +13,7 @@ arc 1.104.0,65533
 audacity 3.7.4
 boltai 1.35.3
 boop 1.4.0
-bruno 2.7.0
+bruno 2.8.0
 claude 0.12.28,5f9bc7a885f8898698b944b60efed5b3b6c63db5
 cursor 1.2.4,a8e95743c5268be73767c46944a71f4465d05c90
 daisydisk 4.31
@@ -58,10 +58,10 @@ orbstack 1.11.3,19358
 pdf-pals 1.9.0
 quarto 1.7.32
 raycast 1.101.1
-rio 0.2.22
+rio 0.2.23
 screen-studio 2.26.0-3206
 sf-symbols 6
-siyuan 3.2.0
+siyuan 3.2.1
 skim 1.7.11
 symboliclinker 2.2
 syntax-highlight 2.1.26
@@ -73,7 +73,7 @@ warp 0.2025.07.16.08.12.stable_04
 wezterm 20240203-110809,5046fc22
 zed 0.195.5
 zen 1.14.5b
-zoom 6.5.6.60177
+zoom 6.5.7.60598
 
 BREW FORMULAS
 -------------
@@ -125,7 +125,7 @@ curlie 1.8.2
 dav1d 1.5.1
 dblab 0.33.0
 direnv 2.37.1
-dotenvx 1.48.2
+dotenvx 1.48.3
 dua-cli 2.30.1
 duf 0.8.1
 dust 1.2.2
@@ -139,7 +139,7 @@ fontconfig 2.16.0
 freetype 2.13.3
 frei0r 2.3.3
 fribidi 1.0.16
-fx 37.0.1
+fx 38.0.0
 fzf 0.64.0
 gawk 5.3.1
 gcc 15.1.0
@@ -288,7 +288,7 @@ oh-my-posh 26.17.0
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.3.54
+opencode 0.3.56
 opencore-amr 0.1.6
 openexr 3.3.4
 openjpeg 2.5.3
@@ -391,7 +391,7 @@ zx 8.7.1
 MISE PACKAGES
 -------------
 bun                                        1.2.19            ~/.config/mise/mise.toml  latest
-cargo:cargo-update                         16.4.0            ~/.config/mise/mise.toml  latest
+cargo:cargo-update                         17.0.0            ~/.config/mise/mise.toml  latest
 cargo:sbyte                                0.3.3             ~/.config/mise/mise.toml  latest
 deno                                       2.4.2             ~/.config/mise/mise.toml  latest
 git                                        2.50.1            ~/.config/mise/mise.toml  latest
@@ -400,7 +400,7 @@ go:github.com/wailsapp/wails/v2/cmd/wails  2.10.2            ~/.config/mise/mise
 go:golang.org/x/tools/gopls                0.19.1            ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise.toml  latest
 node                                       24.4.1            ~/.config/mise/mise.toml  latest
-npm:@anthropic-ai/claude-code              1.0.57            ~/.config/mise/mise.toml  latest
+npm:@anthropic-ai/claude-code              1.0.58            ~/.config/mise/mise.toml  latest
 npm:@google/gemini-cli                     0.1.13            ~/.config/mise/mise.toml  latest
 npm:@openai/codex                          0.8.0             ~/.config/mise/mise.toml  latest
 npm:nuekit                                 1.0.0-RC.4        ~/.config/mise/mise.toml  latest
