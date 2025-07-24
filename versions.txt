@@ -405,7 +405,7 @@ npm:@google/gemini-cli                     0.1.13            ~/.config/mise/mise
 npm:@openai/codex                          0.9.0             ~/.config/mise/mise.toml  latest
 npm:nuekit                                 1.0.0-RC.4        ~/.config/mise/mise.toml  latest
 pipx:markitdown                            0.1.2             ~/.config/mise/mise.toml  latest
-pipx:ruff                                  0.12.4            ~/.config/mise/mise.toml  latest
+pipx:ruff                                  0.12.5            ~/.config/mise/mise.toml  latest
 python                                     3.13.5            ~/.config/mise/mise.toml  latest
 ruby                                       3.4.5             ~/.config/mise/mise.toml  latest
 rust                                       1.88.0 (symlink)  ~/.config/mise/mise.toml  latest
