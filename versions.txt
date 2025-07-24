@@ -1,12 +1,12 @@
 BREW CASKS
 ----------
-5ire 0.13.0
+5ire 0.13.2
 aerospace 0.19.2-Beta
 affine 0.23.2
 affinity-designer 2.6.3,3322
 affinity-photo 2.6.3,3322
 affinity-publisher 2.6.3,3322
-amazon-q 1.12.6
+amazon-q 1.12.7
 anybar 0.2.3
 anythingllm 1.8.4
 arc 1.104.0,65533
@@ -14,7 +14,7 @@ audacity 3.7.4
 boltai 1.35.3
 boop 1.4.0
 bruno 2.8.0
-claude 0.12.28,5f9bc7a885f8898698b944b60efed5b3b6c63db5
+claude 0.12.49,458d1e2a9f2cfd18f094e1977a81f634e5bdf193
 cursor 1.2.4,a8e95743c5268be73767c46944a71f4465d05c90
 daisydisk 4.31
 espanso 2.2.1
@@ -41,14 +41,14 @@ itsycal 0.15.6
 jordanbaird-ice 0.11.12
 karabiner-elements 15.4.0
 keyclu 0.30.2
-kiro 0.1.15,202507180224
+kiro 0.1.25,202507232015
 languagetool-desktop 2.3.2
 lapce 0.4.3
 local 9.2.5,6810
 mark-text 0.17.1
 microsoft-auto-update 4.79.25033028
 microsoft-edge 138.0.3351.95,70a9712a-3712-420f-a3f0-8f2032f1c838
-notion 4.15.3
+notion 4.16.0
 notion-calendar 1.130.0
 notion-mail 0.0.37
 obsidian 1.8.10
@@ -71,7 +71,7 @@ ubersicht 1.6.82
 vmware-fusion 13.6.3,24585314
 warp 0.2025.07.16.08.12.stable_04
 wezterm 20240203-110809,5046fc22
-zed 0.195.5
+zed 0.196.5
 zen 1.14.5b
 zoom 6.5.7.60598
 
@@ -99,7 +99,7 @@ aws-checksums 0.2.7
 aws-crt-cpp 0.33.1
 aws-sdk-cpp 1.11.600
 bandwhich 0.23.1
-bash 5.3_1
+bash 5.3.3
 bat 0.25.0_1
 bat-extras 2024.08.24
 biome 2.1.2
@@ -158,7 +158,7 @@ gnupg 2.4.8
 gnutls 3.8.10
 go 1.24.5
 go-blueprint 0.10.11
-go-task 3.44.0
+go-task 3.44.1
 gobang 0.1.0-alpha.5
 gpgme 1.24.3
 gping 1.19.0
@@ -192,7 +192,7 @@ lazydocker 0.24.1
 lazygit 0.53.0
 lazyjj 0.5.0
 lazyjournal 0.7.9
-lazysql 0.3.8
+lazysql 0.3.9
 leptonica 1.85.0
 lf 36
 libarchive 3.8.1
@@ -283,12 +283,12 @@ npth 1.8
 nspr 4.37
 nss 3.114
 numpy 2.3.1
-nushell 0.105.1
+nushell 0.106.0
 oh-my-posh 26.17.0
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.3.56
+opencode 0.3.58
 opencore-amr 0.1.6
 openexr 3.3.4
 openjpeg 2.5.3
@@ -316,7 +316,7 @@ python@3.12 3.12.11
 python@3.13 3.13.5
 qsv 6.0.1
 rav1e 0.8.1
-re2 20250717
+re2 20250722
 readline 8.3.1
 resvg 0.45.1
 rich-cli 1.8.1
@@ -377,7 +377,7 @@ xvid 1.3.7
 xz 5.8.1
 yabai 7.1.15
 yazi 25.5.31
-yq 4.46.1
+yq 4.47.1
 yt-dlp 2025.7.21
 z3 4.15.2
 zellij 0.42.2
@@ -400,7 +400,7 @@ go:github.com/wailsapp/wails/v2/cmd/wails  2.10.2            ~/.config/mise/mise
 go:golang.org/x/tools/gopls                0.19.1            ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise.toml  latest
 node                                       24.4.1            ~/.config/mise/mise.toml  latest
-npm:@anthropic-ai/claude-code              1.0.58            ~/.config/mise/mise.toml  latest
+npm:@anthropic-ai/claude-code              1.0.59            ~/.config/mise/mise.toml  latest
 npm:@google/gemini-cli                     0.1.13            ~/.config/mise/mise.toml  latest
 npm:@openai/codex                          0.9.0             ~/.config/mise/mise.toml  latest
 npm:nuekit                                 1.0.0-RC.4        ~/.config/mise/mise.toml  latest
