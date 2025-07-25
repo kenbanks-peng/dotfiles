@@ -69,7 +69,7 @@ transmission 4.0.6
 typeface 4.0.1,4595
 ubersicht 1.6.82
 vmware-fusion 13.6.3,24585314
-warp 0.2025.07.16.08.12.stable_04
+warp 0.2025.07.23.08.12.stable_02
 wezterm 20240203-110809,5046fc22
 zed 0.196.6
 zen 1.14.6b
@@ -253,7 +253,7 @@ lolcat 100.0.1
 lpeg 1.1.0
 lsd 1.1.5
 lua 5.4.8
-luajit 2.1.1748459687
+luajit 2.1.1753364724
 luarocks 3.12.2
 lunchy-go 0.2.1
 luv 1.51.0-1
@@ -282,7 +282,7 @@ node 24.4.1
 npth 1.8
 nspr 4.37
 nss 3.114
-numpy 2.3.1
+numpy 2.3.2
 nushell 0.106.0
 oh-my-posh 26.17.0
 onefetch 2.25.0
