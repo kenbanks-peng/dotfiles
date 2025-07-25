@@ -9,7 +9,7 @@ affinity-publisher 2.6.3,3322
 amazon-q 1.12.7
 anybar 0.2.3
 anythingllm 1.8.4
-arc 1.104.0,65533
+arc 1.105.0,65817
 audacity 3.7.4
 boltai 1.35.3
 boop 1.4.0
@@ -18,7 +18,7 @@ claude 0.12.49,458d1e2a9f2cfd18f094e1977a81f634e5bdf193
 cursor 1.2.4,a8e95743c5268be73767c46944a71f4465d05c90
 daisydisk 4.31
 espanso 2.2.1
-figma 125.5.6
+figma 125.6.5
 font-alegreya 2.008
 font-archivo-black latest
 font-fira-sans 4.202
@@ -71,7 +71,7 @@ ubersicht 1.6.82
 vmware-fusion 13.6.3,24585314
 warp 0.2025.07.16.08.12.stable_04
 wezterm 20240203-110809,5046fc22
-zed 0.196.5
+zed 0.196.6
 zen 1.14.5b
 zoom 6.5.7.60598
 
@@ -400,16 +400,16 @@ go:github.com/wailsapp/wails/v2/cmd/wails  2.10.2            ~/.config/mise/mise
 go:golang.org/x/tools/gopls                0.19.1            ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise.toml  latest
 node                                       24.4.1            ~/.config/mise/mise.toml  latest
-npm:@anthropic-ai/claude-code              1.0.59            ~/.config/mise/mise.toml  latest
+npm:@anthropic-ai/claude-code              1.0.60            ~/.config/mise/mise.toml  latest
 npm:@google/gemini-cli                     0.1.13            ~/.config/mise/mise.toml  latest
-npm:@openai/codex                          0.9.0             ~/.config/mise/mise.toml  latest
+npm:@openai/codex                          0.10.0            ~/.config/mise/mise.toml  latest
 npm:nuekit                                 1.0.0-RC.4        ~/.config/mise/mise.toml  latest
 pipx:markitdown                            0.1.2             ~/.config/mise/mise.toml  latest
 pipx:ruff                                  0.12.5            ~/.config/mise/mise.toml  latest
 python                                     3.13.5            ~/.config/mise/mise.toml  latest
 ruby                                       3.4.5             ~/.config/mise/mise.toml  latest
 rust                                       1.88.0 (symlink)  ~/.config/mise/mise.toml  latest
-uv                                         0.8.2             ~/.config/mise/mise.toml  latest
+uv                                         0.8.3             ~/.config/mise/mise.toml  latest
 
 RUSTUP/CARGO
 ------------
