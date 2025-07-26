@@ -72,7 +72,7 @@ vmware-fusion 13.6.3,24585314
 warp 0.2025.07.23.08.12.stable_02
 wezterm 20240203-110809,5046fc22
 zed 0.196.6
-zen 1.14.7b
+zen 1.14.8b
 zoom 6.5.7.60598
 
 BREW FORMULAS
@@ -309,9 +309,9 @@ posting 2.6.0
 procs 0.14.10
 protobuf 29.3
 pstree 2.40
-pv 1.9.31
+pv 1.9.34
 pycparser 2.22_1
-pygit2 1.18.0
+pygit2 1.18.1
 python@3.12 3.12.11
 python@3.13 3.13.5
 qsv 6.0.1
@@ -381,7 +381,7 @@ yq 4.47.1
 yt-dlp 2025.7.21
 z3 4.15.2
 zellij 0.42.2
-zeromq 4.3.5_1
+zeromq 4.3.5_2
 zimg 3.0.5
 zoxide 0.9.8
 zsh 5.9
