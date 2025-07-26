@@ -13,8 +13,8 @@ arc 1.105.0,65817
 audacity 3.7.4
 boltai 1.35.3
 boop 1.4.0
-bruno 2.8.0
-claude 0.12.49,458d1e2a9f2cfd18f094e1977a81f634e5bdf193
+bruno 2.8.1
+claude 0.12.55,d55c63cae429e48c72cd9f306dbf2880a694e8fe
 cursor 1.2.4,a8e95743c5268be73767c46944a71f4465d05c90
 daisydisk 4.31
 espanso 2.2.1
@@ -47,7 +47,7 @@ lapce 0.4.3
 local 9.2.5,6810
 mark-text 0.17.1
 microsoft-auto-update 4.79.25033028
-microsoft-edge 138.0.3351.95,70a9712a-3712-420f-a3f0-8f2032f1c838
+microsoft-edge 138.0.3351.109,9df63776-5526-4f79-aafb-f4ef461290f1
 notion 4.16.0
 notion-calendar 1.130.0
 notion-mail 0.0.37
@@ -72,7 +72,7 @@ vmware-fusion 13.6.3,24585314
 warp 0.2025.07.23.08.12.stable_02
 wezterm 20240203-110809,5046fc22
 zed 0.196.6
-zen 1.14.6b
+zen 1.14.7b
 zoom 6.5.7.60598
 
 BREW FORMULAS
@@ -288,6 +288,7 @@ oh-my-posh 26.17.0
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
+opencode 0.3.77
 opencore-amr 0.1.6
 openexr 3.3.4
 openjpeg 2.5.3
@@ -399,8 +400,8 @@ go:github.com/wailsapp/wails/v2/cmd/wails  2.10.2            ~/.config/mise/mise
 go:golang.org/x/tools/gopls                0.19.1            ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise.toml  latest
 node                                       24.4.1            ~/.config/mise/mise.toml  latest
-npm:@anthropic-ai/claude-code              1.0.60            ~/.config/mise/mise.toml  latest
-npm:@google/gemini-cli                     0.1.13            ~/.config/mise/mise.toml  latest
+npm:@anthropic-ai/claude-code              1.0.61            ~/.config/mise/mise.toml  latest
+npm:@google/gemini-cli                     0.1.14            ~/.config/mise/mise.toml  latest
 npm:@openai/codex                          0.10.0            ~/.config/mise/mise.toml  latest
 npm:nuekit                                 1.0.0-RC.4        ~/.config/mise/mise.toml  latest
 pipx:markitdown                            0.1.2             ~/.config/mise/mise.toml  latest
