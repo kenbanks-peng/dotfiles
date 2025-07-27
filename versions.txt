@@ -11,7 +11,7 @@ anybar 0.2.3
 anythingllm 1.8.4
 arc 1.105.0,65817
 audacity 3.7.4
-boltai 1.35.3
+boltai 1.36.0
 boop 1.4.0
 bruno 2.8.1
 claude 0.12.55,d55c63cae429e48c72cd9f306dbf2880a694e8fe
@@ -72,7 +72,7 @@ vmware-fusion 13.6.3,24585314
 warp 0.2025.07.23.08.12.stable_02
 wezterm 20240203-110809,5046fc22
 zed 0.196.6
-zen 1.14.8b
+zen 1.14.9b
 zoom 6.5.7.60598
 
 BREW FORMULAS
@@ -80,7 +80,7 @@ BREW FORMULAS
 abseil 20240722.1
 age 1.2.1
 aom 3.12.1
-apache-arrow 20.0.0_2
+apache-arrow 21.0.0
 aribb24 1.0.4
 asciidoctor 2.0.23
 ast-grep 0.39.1
@@ -129,7 +129,7 @@ dotenvx 1.48.3
 dua-cli 2.30.1
 duf 0.8.1
 dust 1.2.2
-dvc 3.61.0
+dvc 3.61.0_1
 fastfetch 2.48.1
 fd 10.2.0
 ffmpeg 7.1.1_3
@@ -140,7 +140,7 @@ freetype 2.13.3
 frei0r 2.3.3
 fribidi 1.0.16
 fx 38.0.0
-fzf 0.64.0
+fzf 0.65.0
 gawk 5.3.1
 gcc 15.1.0
 gettext 0.26
@@ -165,7 +165,7 @@ gping 1.19.0
 graphite2 1.3.14
 grex 1.4.5
 grpc 1.74.0
-harfbuzz 11.3.2
+harfbuzz 11.3.3
 hexyl 0.16.0
 highway 1.2.0
 htmlq 0.4.0
@@ -290,7 +290,7 @@ oniguruma 6.9.10
 openblas 0.3.30
 opencode 0.3.78
 opencore-amr 0.1.6
-openexr 3.3.4
+openexr 3.3.5
 openjpeg 2.5.3
 openssl@3 3.5.1
 opus 1.5.2
@@ -305,7 +305,7 @@ pixman 0.46.4
 pls 0.0.1-beta.9
 poppler 25.07.0
 portal 1.2.3
-posting 2.6.0
+posting 2.7.1
 procs 0.14.10
 protobuf 29.3
 pstree 2.40
@@ -331,7 +331,7 @@ sevenzip 25.00
 shaderc 2025.3
 shared-mime-info 2.4
 shellcheck 0.10.0
-sk 0.20.2
+sk 0.20.3
 sketchybar 2.22.1
 snappy 1.2.2
 sniffnet 1.4.0
