@@ -401,7 +401,7 @@ go:github.com/wailsapp/wails/v2/cmd/wails  2.10.2            ~/.config/mise/mise
 go:golang.org/x/tools/gopls                0.20.0            ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise.toml  latest
 node                                       24.4.1            ~/.config/mise/mise.toml  latest
-npm:@anthropic-ai/claude-code              1.0.61            ~/.config/mise/mise.toml  latest
+npm:@anthropic-ai/claude-code              1.0.62            ~/.config/mise/mise.toml  latest
 npm:@google/gemini-cli                     0.1.14            ~/.config/mise/mise.toml  latest
 npm:@openai/codex                          0.10.0            ~/.config/mise/mise.toml  latest
 npm:nuekit                                 1.0.0-RC.4        ~/.config/mise/mise.toml  latest
