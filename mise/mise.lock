@@ -31,7 +31,7 @@ version = "2.10.2"
 backend = "go:github.com/wailsapp/wails/v2/cmd/wails"
 
 [tools."go:golang.org/x/tools/gopls"]
-version = "0.19.1"
+version = "0.20.0"
 backend = "go:golang.org/x/tools/gopls"
 
 [tools."go:honnef.co/go/tools/cmd/staticcheck"]
