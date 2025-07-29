@@ -14,7 +14,6 @@ audacity 3.7.4
 boltai 1.36.1
 boop 1.4.0
 bruno 2.8.1
-claude 0.12.55,d55c63cae429e48c72cd9f306dbf2880a694e8fe
 cursor 1.2.4,a8e95743c5268be73767c46944a71f4465d05c90
 daisydisk 4.31
 espanso 2.2.1
