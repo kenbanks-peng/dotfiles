@@ -11,7 +11,7 @@ anybar 0.2.3
 anythingllm 1.8.4
 arc 1.105.0,65817
 audacity 3.7.4
-boltai 1.36.0
+boltai 1.36.1
 boop 1.4.0
 bruno 2.8.1
 claude 0.12.55,d55c63cae429e48c72cd9f306dbf2880a694e8fe
@@ -34,13 +34,13 @@ font-sf-pro latest
 font-symbols-only-nerd-font 3.4.0
 font-tex-gyre-termes 2.004
 git-credential-manager 2.6.1
-gitbutler 0.15.6,2263
+gitbutler 0.15.7,2269
 github 3.5.2-14087268
 grandperspective 3.5.3
 hoppscotch 25.6.1-0
 itsycal 0.15.6
 jordanbaird-ice 0.11.12
-karabiner-elements 15.4.0
+karabiner-elements 15.5.0
 keyclu 0.30.2
 kiro 0.1.25,202507232015
 languagetool-desktop 2.3.2
@@ -216,6 +216,8 @@ liblqr 0.4.3
 libmicrohttpd 1.0.2
 libmpc 1.3.1
 libnghttp2 1.66.0
+libnghttp3 1.11.0
+libngtcp2 1.14.0
 libogg 1.3.6
 libomp 20.1.8
 libplacebo 7.351.0
@@ -286,11 +288,11 @@ nspr 4.37
 nss 3.114
 numpy 2.3.2
 nushell 0.106.0
-oh-my-posh 26.17.1
+oh-my-posh 26.17.2
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.3.80
+opencode 0.3.81
 opencore-amr 0.1.6
 openexr 3.3.5
 openjpeg 2.5.3
@@ -333,6 +335,7 @@ sevenzip 25.00
 shaderc 2025.3
 shared-mime-info 2.4
 shellcheck 0.10.0
+simdjson 3.13.0
 sk 0.20.3
 sketchybar 2.22.1
 snappy 1.2.2
@@ -357,7 +360,7 @@ thrift 0.22.0
 tokei 12.1.2
 tree 2.2.1
 tree-sitter 0.25.8_1
-turso 0.1.2
+turso 0.1.3
 typst 0.13.1
 uchardet 0.0.8
 unbound 1.23.1
@@ -388,7 +391,7 @@ zimg 3.0.5
 zoxide 0.9.8
 zsh 5.9
 zstd 1.5.7
-zx 8.7.1
+zx 8.7.2
 
 MISE PACKAGES
 -------------
