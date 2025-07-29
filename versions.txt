@@ -50,7 +50,7 @@ mark-text 0.17.1
 microsoft-auto-update 4.79.25033028
 microsoft-edge 138.0.3351.109,9df63776-5526-4f79-aafb-f4ef461290f1
 notion 4.16.0
-notion-calendar 1.130.0
+notion-calendar 1.131.0
 notion-mail 0.0.37
 obsidian 1.8.10
 omnifocus 4.6.1
