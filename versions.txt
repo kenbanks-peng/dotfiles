@@ -72,7 +72,7 @@ ubersicht 1.6.82
 vmware-fusion 13.6.3,24585314
 warp 0.2025.07.23.08.12.stable_02
 wezterm 20240203-110809,5046fc22
-zed 0.196.7
+zed 0.197.3
 zen 1.14.9b
 zoom 6.5.7.60598
 
