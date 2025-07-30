@@ -145,7 +145,7 @@ fzf 0.65.0
 gawk 5.3.1
 gcc 15.1.0
 gettext 0.26
-gh 2.76.1
+gh 2.76.2
 giflib 5.2.2
 git-bug 0.10.1
 git-delta 0.18.2_3
@@ -408,7 +408,7 @@ go:github.com/wailsapp/wails/v2/cmd/wails  2.10.2            ~/.config/mise/mise
 go:golang.org/x/tools/gopls                0.20.0            ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise.toml  latest
 node                                       24.4.1            ~/.config/mise/mise.toml  latest
-npm:@anthropic-ai/claude-code              1.0.63            ~/.config/mise/mise.toml  latest
+npm:@anthropic-ai/claude-code              1.0.64            ~/.config/mise/mise.toml  latest
 npm:@google/gemini-cli                     0.1.15            ~/.config/mise/mise.toml  latest
 npm:@openai/codex                          0.10.0            ~/.config/mise/mise.toml  latest
 npm:nuekit                                 1.0.0-RC.4        ~/.config/mise/mise.toml  latest
