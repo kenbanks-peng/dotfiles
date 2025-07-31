@@ -19,6 +19,7 @@ cursor 1.3.6,68b8fe7396ea37d8acdaaaa08ba316ba359a4162
 daisydisk 4.31
 espanso 2.2.1
 figma 125.6.5
+flameshot 12.1.0
 font-alegreya 2.008
 font-archivo-black latest
 font-fira-sans 4.202
