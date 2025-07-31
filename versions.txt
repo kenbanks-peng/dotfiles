@@ -6,7 +6,7 @@ affine 0.23.2
 affinity-designer 2.6.3,3322
 affinity-photo 2.6.3,3322
 affinity-publisher 2.6.3,3322
-amazon-q 1.12.7
+amazon-q 1.13.0
 anybar 0.2.3
 anythingllm 1.8.4
 arc 1.106.0,66192
@@ -15,7 +15,7 @@ boltai 1.36.1
 boop 1.4.0
 bruno 2.8.1
 claude 0.12.55,d55c63cae429e48c72cd9f306dbf2880a694e8fe
-cursor 1.3.6,68b8fe7396ea37d8acdaaaa08ba316ba359a4162
+cursor 1.3.7,5d56108ff2401c28f239aa2a527ef424ce7719a3
 daisydisk 4.31
 espanso 2.2.1
 figma 125.6.5
@@ -49,7 +49,7 @@ lapce 0.4.3
 local 9.2.5,6810
 mark-text 0.17.1
 microsoft-auto-update 4.79.25033028
-microsoft-edge 138.0.3351.109,9df63776-5526-4f79-aafb-f4ef461290f1
+microsoft-edge 138.0.3351.121,157da964-2596-4b50-a0fb-b959727db5ae
 notion 4.16.2
 notion-calendar 1.131.0
 notion-mail 0.0.37
@@ -296,7 +296,7 @@ oh-my-posh 26.17.3
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.3.86
+opencode 0.3.101
 opencore-amr 0.1.6
 openexr 3.3.5
 openjpeg 2.5.3
