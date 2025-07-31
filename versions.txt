@@ -402,7 +402,7 @@ MISE PACKAGES
 bun                                        1.2.19            ~/.config/mise/mise.toml  latest
 cargo:cargo-update                         17.0.0            ~/.config/mise/mise.toml  latest
 cargo:sbyte                                0.3.3             ~/.config/mise/mise.toml  latest
-deno                                       2.4.2             ~/.config/mise/mise.toml  latest
+deno                                       2.4.3             ~/.config/mise/mise.toml  latest
 git                                        2.50.1            ~/.config/mise/mise.toml  latest
 go                                         1.24.5            ~/.config/mise/mise.toml  latest
 go:github.com/wailsapp/wails/v2/cmd/wails  2.10.2            ~/.config/mise/mise.toml  latest
