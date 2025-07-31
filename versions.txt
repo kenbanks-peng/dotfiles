@@ -145,6 +145,7 @@ fx 38.0.0
 fzf 0.65.0
 gawk 5.3.1
 gcc 15.1.0
+gemini-cli 0.1.15
 gettext 0.26
 gh 2.76.2
 giflib 5.2.2
@@ -325,6 +326,7 @@ qsv 6.0.1
 rav1e 0.8.1
 re2 20250722
 readline 8.3.1
+repomix 1.2.1
 resvg 0.45.1
 rich-cli 1.8.1
 ripgrep 14.1.1
