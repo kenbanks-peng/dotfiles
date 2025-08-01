@@ -71,7 +71,7 @@ transmission 4.0.6
 typeface 4.1.0,4682
 ubersicht 1.6.82
 vmware-fusion 13.6.3,24585314
-warp 0.2025.07.23.08.12.stable_02
+warp 0.2025.07.30.08.12.stable_01
 wezterm 20240203-110809,5046fc22
 zed 0.197.3
 zen 1.14.9b
@@ -119,7 +119,7 @@ cheat 4.4.2
 choose-rust 1.3.6
 cjson 1.7.18
 clipboard 0.10.0
-colima 0.8.1
+colima 0.8.2
 coreutils 9.7
 cryptography 45.0.5
 csvtk 0.34.0
@@ -130,7 +130,7 @@ direnv 2.37.1
 dotenvx 1.48.4
 dua-cli 2.30.1
 duf 0.8.1
-dust 1.2.2
+dust 1.2.3
 dvc 3.61.0_1
 fastfetch 2.49.0
 fd 10.2.0
@@ -411,7 +411,7 @@ go:github.com/wailsapp/wails/v2/cmd/wails  2.10.2            ~/.config/mise/mise
 go:golang.org/x/tools/gopls                0.20.0            ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise.toml  latest
 node                                       24.4.1            ~/.config/mise/mise.toml  latest
-npm:@anthropic-ai/claude-code              1.0.64            ~/.config/mise/mise.toml  latest
+npm:@anthropic-ai/claude-code              1.0.65            ~/.config/mise/mise.toml  latest
 npm:@google/gemini-cli                     0.1.15            ~/.config/mise/mise.toml  latest
 npm:@openai/codex                          0.10.0            ~/.config/mise/mise.toml  latest
 npm:nuekit                                 1.0.0-RC.4        ~/.config/mise/mise.toml  latest
