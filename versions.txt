@@ -128,7 +128,7 @@ dav1d 1.5.1
 dblab 0.33.0
 direnv 2.37.1
 dotenvx 1.48.4
-dua-cli 2.30.1
+dua-cli 2.31.0
 duf 0.8.1
 dust 1.2.3
 dvc 3.61.0_1
@@ -145,7 +145,7 @@ fx 38.0.0
 fzf 0.65.0
 gawk 5.3.1
 gcc 15.1.0
-gemini-cli 0.1.15
+gemini-cli 0.1.16
 gettext 0.26
 gh 2.76.2
 giflib 5.2.2
@@ -195,7 +195,7 @@ jqp 0.7.0
 just 1.42.4
 lame 3.100
 lazydocker 0.24.1
-lazygit 0.53.0
+lazygit 0.54.0
 lazyjj 0.5.0
 lazyjournal 0.7.9
 lazysql 0.4.0
