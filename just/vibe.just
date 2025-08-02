@@ -5,7 +5,7 @@ set shell := ['zsh', '-cu']
 import 'colors.just'
 
 default:
-  @just --justfile "$JUST/dev.just" --list | zsh -c "$JUSTGREP"
+  @just --justfile "$JUST/vibe.just" --list | zsh -c "$JUSTGREP"
 
 ############  AGENTIC VIBE CODING  ############
 
