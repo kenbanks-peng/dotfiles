@@ -60,3 +60,6 @@ mod args
 
 # quarto
 mod quarto
+
+# vide coding
+mod vibe

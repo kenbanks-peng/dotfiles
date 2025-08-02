@@ -43,20 +43,29 @@ version = "0.7.0-0.dev"
 backend = "go:honnef.co/go/tools/cmd/staticcheck"
 
 [tools.node]
-version = "24.4.1"
+version = "24.5.0"
 backend = "core:node"
 
+[tools.node.platforms.macos-arm64]
+checksum = "sha256:2a4172474565ecb8f0c87a1520590e00d6b28a78594c220d38eef991763dc276"
+size = 50983559
+url = "https://nodejs.org/dist/v24.5.0/node-v24.5.0-darwin-arm64.tar.gz"
+
 [tools."npm:@anthropic-ai/claude-code"]
-version = "1.0.65"
+version = "1.0.67"
 backend = "npm:@anthropic-ai/claude-code"
 
 [tools."npm:@google/gemini-cli"]
-version = "0.1.15"
+version = "0.1.16"
 backend = "npm:@google/gemini-cli"
 
 [tools."npm:@openai/codex"]
-version = "0.10.0"
+version = "0.11.0"
 backend = "npm:@openai/codex"
+
+[tools."npm:ccexp"]
+version = "4.0.0"
+backend = "npm:ccexp"
 
 [tools."npm:nuekit"]
 version = "1.0.0-RC.4"

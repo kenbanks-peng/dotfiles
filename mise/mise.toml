@@ -19,6 +19,7 @@ rust = "latest"
 "go:github.com/wailsapp/wails/v2/cmd/wails" = "latest"
 "pipx:markitdown" = "latest"
 "npm:@anthropic-ai/claude-code" = "latest"
+"npm:ccexp" = "latest"
 
 [settings]
 experimental = true
