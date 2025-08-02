@@ -43,7 +43,7 @@ itsycal 0.15.6
 jordanbaird-ice 0.11.12
 karabiner-elements 15.5.0
 keyclu 0.30.2
-kiro 0.1.25,202507232015
+kiro 0.1.42,202508020230
 languagetool-desktop 2.4.1
 lapce 0.4.3
 local 9.2.5,6810
@@ -412,7 +412,7 @@ go:golang.org/x/tools/gopls                0.20.0            ~/.config/mise/mise
 go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise.toml  latest
 node                                       24.5.0            ~/.config/mise/mise.toml  latest
 npm:@anthropic-ai/claude-code              1.0.67            ~/.config/mise/mise.toml  latest
-npm:@google/gemini-cli                     0.1.15            ~/.config/mise/mise.toml  latest
+npm:@google/gemini-cli                     0.1.16            ~/.config/mise/mise.toml  latest
 npm:@openai/codex                          0.11.0            ~/.config/mise/mise.toml  latest
 npm:nuekit                                 1.0.0-RC.4        ~/.config/mise/mise.toml  latest
 pipx:markitdown                            0.1.2             ~/.config/mise/mise.toml  latest
