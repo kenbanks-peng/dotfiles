@@ -51,6 +51,52 @@ l *args:
 # pls list show hidden files
 [script]
 ls *args:
+  # Create temp directory and config
+  temp_dir=$(mktemp -d)
+  temp_config="$temp_dir/pls.yml"
+  trap "rm -rf $temp_dir" EXIT
+  
+  # Copy base config and add SIP patterns
+  cp "$PLS_CONFIG" "$temp_config"
+  
+  # Build SIP-specific patterns for current directory files
+  sip_patterns=""
+  
+  # Set nullglob to handle cases where no files match the pattern
+  setopt nullglob
+  
+  # Check visible files
+  for item in *; do
+    if [[ -e "$item" ]]; then
+      if \ls -lO "$item" 2>/dev/null | grep -q "restricted"; then
+        # Escape special regex characters in filename
+        escaped_item=$(printf '%s\n' "$item" | sed 's/[[\.*^$()+?{|]/\\&/g')
+        sip_patterns+="  - pattern: ^${escaped_item}\$"$'\n'"    icons:"$'\n'"      - lock"$'\n'"    style: red"$'\n'
+      fi
+    fi
+  done
+  
+  # Check hidden files
+  for item in .*; do
+    if [[ "$item" != "." && "$item" != ".." && -e "$item" ]]; then
+      if \ls -lO "$item" 2>/dev/null | grep -q "restricted"; then
+        # Escape special regex characters in filename
+        escaped_item=$(printf '%s\n' "$item" | sed 's/[[\.*^$()+?{|]/\\&/g')
+        sip_patterns+="  - pattern: ^${escaped_item}\$"$'\n'"    icons:"$'\n'"      - lock"$'\n'"    style: red"$'\n'
+      fi
+    fi
+  done
+  
+  # Restore default glob behavior
+  unsetopt nullglob
+  
+  # Add SIP patterns to config if any found
+  if [[ -n "$sip_patterns" ]]; then
+    echo "" >> "$temp_config"
+    echo "  # SIP protected files" >> "$temp_config"
+    echo "$sip_patterns" >> "$temp_config"
+  fi
+  
   # Check if -al or -la is present
   has_al=false
   for arg in {{args}}; do
@@ -60,67 +106,18 @@ ls *args:
     fi
   done
   
-  # Function to check if item is SIP protected and add lock icon
-  check_sip_and_display() {
-    local pls_output="$1"
-    
-    # Process each line of pls output
-    while IFS= read -r line; do
-      if [[ -n "$line" ]]; then
-        # Extract the filename (last field after whitespace)
-        filename=$(echo "$line" | awk '{print $NF}')
-        
-        # Check if file/dir is SIP protected
-        if [[ -e "$filename" ]] && \ls -lO "$filename" 2>/dev/null | grep -q "restricted"; then
-          echo "$line 🔒"
-        else
-          echo "$line"
-        fi
-      fi
-    done <<< "$pls_output"
-  }
-  
+  # Run pls with custom config
   if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
     if [[ "$has_al" == "true" ]]; then
-      pls_output=$(pls --det=git --det=perm --det=user --det=size --det=mtime --det=typ --header=false)
-      check_sip_and_display "$pls_output"
+      PLS_CONFIG="$temp_config" pls --det=git --det=perm --det=user --det=size --det=mtime --det=typ --header=false {{args}}
     else
-      # Hidden directories
-      pls_output=$(pls --det=git --header=false --only='^\.' --suffix=false --sort=cat --sort=name --typ=dir {{args}})
-      check_sip_and_display "$pls_output"
-      
-      # Hidden files
-      pls_output=$(pls --det=git --header=false --only='^\.' --suffix=false --sort=cat --sort=name --typ=file --typ=symlink --typ=fifo --typ=socket --typ=char-device --typ=block-device {{args}})
-      check_sip_and_display "$pls_output"
-      
-      # Regular directories
-      pls_output=$(pls --det=git --header=false --exclude='^\.' --suffix=false --sort=cat --typ=dir --sort=name {{args}})
-      check_sip_and_display "$pls_output"
-      
-      # Regular files
-      pls_output=$(pls --det=git --header=false --exclude='^\.' --suffix=false --sort=cat --sort=name --typ=file --typ=symlink --typ=fifo --typ=socket --typ=char-device --typ=block-device {{args}})
-      check_sip_and_display "$pls_output"
+      PLS_CONFIG="$temp_config" pls --det=git --header=false --suffix=false --sort=cat --sort=name {{args}}
     fi
   else
     if [[ "$has_al" == "true" ]]; then
-      pls_output=$(pls --det=perm --det=user --det=size --det=mtime --det=typ --header=false)
-      check_sip_and_display "$pls_output"
+      PLS_CONFIG="$temp_config" pls --det=perm --det=user --det=size --det=mtime --det=typ --header=false {{args}}
     else
-      # Hidden directories
-      pls_output=$(pls --header=false --only='^\.' --suffix=false --sort=cat --sort=name --typ=dir {{args}})
-      check_sip_and_display "$pls_output"
-      
-      # Hidden files
-      pls_output=$(pls --header=false --only='^\.' --suffix=false --sort=cat --sort=name --typ=file --typ=symlink --typ=fifo --typ=socket --typ=char-device --typ=block-device {{args}})
-      check_sip_and_display "$pls_output"
-      
-      # Regular directories
-      pls_output=$(pls --header=false --exclude='^\.' --suffix=false --sort=cat --typ=dir --sort=name {{args}})
-      check_sip_and_display "$pls_output"
-      
-      # Regular files
-      pls_output=$(pls --header=false --exclude='^\.' --suffix=false --sort=cat --sort=name --typ=file --typ=symlink --typ=fifo --typ=socket --typ=char-device --typ=block-device {{args}})
-      check_sip_and_display "$pls_output"
+      PLS_CONFIG="$temp_config" pls --header=false --suffix=false --sort=cat --sort=name {{args}}
     fi
   fi
   
