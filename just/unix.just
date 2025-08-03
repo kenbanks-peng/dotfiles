@@ -50,6 +50,7 @@ l *args:
 
 # Common pls function with SIP protection
 [private]
+[no-cd]
 [script]
 pls_with_sip *pls_args:
   # Create temp directory and config
@@ -102,11 +103,24 @@ pls_with_sip *pls_args:
   PLS_CONFIG="$temp_config" pls {{pls_args}}
 
 # pls list show hidden files
-ls *args: (pls_with_sip "--det=git" "--header=false" "--suffix=false" "--sort=cat" "--sort=name" args)
+
+[script]
+ls *args:
+  if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
+    just --justfile "$JUST/unix.just" pls_with_sip --det=git --header=false --suffix=false --sort=cat --sort=name {{args}}
+  else
+    just --justfile "$JUST/unix.just" pls_with_sip --header=false --suffix=false --sort=cat --sort=name {{args}}
+  fi
   
 
 # list long
-ll *args: (pls_with_sip "--det=git" "--det=perm" "--det=user" "--det=size" "--det=mtime" "--det=typ" "--header=false" args)
+[script]
+ll *args:
+  if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
+    just --justfile "$JUST/unix.just" pls_with_sip --det=git --det=perm --det=user --det=size --det=mtime --det=typ --header=false {{args}}
+  else
+    just --justfile "$JUST/unix.just" pls_with_sip --det=perm --det=user --det=size --det=mtime --det=typ --header=false {{args}}
+  fi
 
 # list w/ git-symbols
 #
