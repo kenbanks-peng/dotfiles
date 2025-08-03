@@ -16,5 +16,3 @@ cc:
 # claude code config
 ccc:
     ccexp
-
-
