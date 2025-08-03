@@ -60,23 +60,67 @@ ls *args:
     fi
   done
   
+  # Function to check if item is SIP protected and add lock icon
+  check_sip_and_display() {
+    local pls_output="$1"
+    
+    # Process each line of pls output
+    while IFS= read -r line; do
+      if [[ -n "$line" ]]; then
+        # Extract the filename (last field after whitespace)
+        filename=$(echo "$line" | awk '{print $NF}')
+        
+        # Check if file/dir is SIP protected
+        if [[ -e "$filename" ]] && \ls -lO "$filename" 2>/dev/null | grep -q "restricted"; then
+          echo "$line 🔒"
+        else
+          echo "$line"
+        fi
+      fi
+    done <<< "$pls_output"
+  }
+  
   if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
     if [[ "$has_al" == "true" ]]; then
-      pls --det=git --det=perm --det=user --det=size --det=mtime --det=typ --header=false
+      pls_output=$(pls --det=git --det=perm --det=user --det=size --det=mtime --det=typ --header=false)
+      check_sip_and_display "$pls_output"
     else
-      pls --det=git --header=false --only='^\.' --suffix=false --sort=cat --sort=name --typ=dir {{args}}
-      pls --det=git --header=false --only='^\.' --suffix=false --sort=cat --sort=name --typ=file --typ=symlink --typ=fifo --typ=socket --typ=char-device --typ=block-device {{args}}
-      pls --det=git --header=false --exclude='^\.' --suffix=false --sort=cat --typ=dir --sort=name {{args}}
-      pls --det=git --header=false --exclude='^\.' --suffix=false --sort=cat --sort=name --typ=file --typ=symlink --typ=fifo --typ=socket --typ=char-device --typ=block-device {{args}}
+      # Hidden directories
+      pls_output=$(pls --det=git --header=false --only='^\.' --suffix=false --sort=cat --sort=name --typ=dir {{args}})
+      check_sip_and_display "$pls_output"
+      
+      # Hidden files
+      pls_output=$(pls --det=git --header=false --only='^\.' --suffix=false --sort=cat --sort=name --typ=file --typ=symlink --typ=fifo --typ=socket --typ=char-device --typ=block-device {{args}})
+      check_sip_and_display "$pls_output"
+      
+      # Regular directories
+      pls_output=$(pls --det=git --header=false --exclude='^\.' --suffix=false --sort=cat --typ=dir --sort=name {{args}})
+      check_sip_and_display "$pls_output"
+      
+      # Regular files
+      pls_output=$(pls --det=git --header=false --exclude='^\.' --suffix=false --sort=cat --sort=name --typ=file --typ=symlink --typ=fifo --typ=socket --typ=char-device --typ=block-device {{args}})
+      check_sip_and_display "$pls_output"
     fi
   else
     if [[ "$has_al" == "true" ]]; then
-      pls --det=perm --det=user --det=size --det=mtime --det=typ --header=false
+      pls_output=$(pls --det=perm --det=user --det=size --det=mtime --det=typ --header=false)
+      check_sip_and_display "$pls_output"
     else
-      pls --header=false --only='^\.' --suffix=false --sort=cat --sort=name --typ=dir {{args}}
-      pls --header=false --only='^\.' --suffix=false --sort=cat --sort=name --typ=file --typ=symlink --typ=fifo --typ=socket --typ=char-device --typ=block-device {{args}}
-      pls --header=false --exclude='^\.' --suffix=false --sort=cat --typ=dir --sort=name {{args}}
-      pls --header=false --exclude='^\.' --suffix=false --sort=cat --sort=name --typ=file --typ=symlink --typ=fifo --typ=socket --typ=char-device --typ=block-device {{args}}
+      # Hidden directories
+      pls_output=$(pls --header=false --only='^\.' --suffix=false --sort=cat --sort=name --typ=dir {{args}})
+      check_sip_and_display "$pls_output"
+      
+      # Hidden files
+      pls_output=$(pls --header=false --only='^\.' --suffix=false --sort=cat --sort=name --typ=file --typ=symlink --typ=fifo --typ=socket --typ=char-device --typ=block-device {{args}})
+      check_sip_and_display "$pls_output"
+      
+      # Regular directories
+      pls_output=$(pls --header=false --exclude='^\.' --suffix=false --sort=cat --typ=dir --sort=name {{args}})
+      check_sip_and_display "$pls_output"
+      
+      # Regular files
+      pls_output=$(pls --header=false --exclude='^\.' --suffix=false --sort=cat --sort=name --typ=file --typ=symlink --typ=fifo --typ=socket --typ=char-device --typ=block-device {{args}})
+      check_sip_and_display "$pls_output"
     fi
   fi
   
