@@ -183,7 +183,7 @@ imagemagick 7.1.2-0
 imath 3.1.12
 imgcat 1.0.22
 isl 0.27
-jasper 4.2.5
+jasper 4.2.7
 jc 1.25.5
 jid 0.7.6
 jj 0.31.0
@@ -336,7 +336,7 @@ rustscan 2.4.1
 sad 0.4.32
 sd 1.0.0
 sdl2 2.32.8
-sevenzip 25.00
+sevenzip 25.01
 shaderc 2025.3
 shared-mime-info 2.4
 shellcheck 0.10.0
