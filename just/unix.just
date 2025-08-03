@@ -48,9 +48,10 @@ l *args:
   fi
 
 
-# pls list show hidden files
+# Common pls function with SIP protection
+[private]
 [script]
-ls *args:
+pls_with_sip *pls_args:
   # Create temp directory and config
   temp_dir=$(mktemp -d)
   temp_config="$temp_dir/pls.yml"
@@ -97,39 +98,15 @@ ls *args:
     echo "$sip_patterns" >> "$temp_config"
   fi
   
-  # Check if -al or -la is present
-  has_al=false
-  for arg in {{args}}; do
-    if [[ "$arg" == "-al" || "$arg" == "-la" ]]; then
-      has_al=true
-      break
-    fi
-  done
-  
   # Run pls with custom config
-  if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
-    if [[ "$has_al" == "true" ]]; then
-      PLS_CONFIG="$temp_config" pls --det=git --det=perm --det=user --det=size --det=mtime --det=typ --header=false {{args}}
-    else
-      PLS_CONFIG="$temp_config" pls --det=git --header=false --suffix=false --sort=cat --sort=name {{args}}
-    fi
-  else
-    if [[ "$has_al" == "true" ]]; then
-      PLS_CONFIG="$temp_config" pls --det=perm --det=user --det=size --det=mtime --det=typ --header=false {{args}}
-    else
-      PLS_CONFIG="$temp_config" pls --header=false --suffix=false --sort=cat --sort=name {{args}}
-    fi
-  fi
+  PLS_CONFIG="$temp_config" pls {{pls_args}}
+
+# pls list show hidden files
+ls *args: (pls_with_sip "--det=git" "--header=false" "--suffix=false" "--sort=cat" "--sort=name" args)
   
 
 # list long
-[script]
-ll *args:
-  if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
-    pls --det=git --det=perm --det=user --det=size --det=mtime --det=typ --header=false {{args}}
-  else
-    pls --det=perm --det=user --det=size --det=mtime --det=typ --header=false {{args}}
-  fi
+ll *args: (pls_with_sip "--det=git" "--det=perm" "--det=user" "--det=size" "--det=mtime" "--det=typ" "--header=false" args)
 
 # list w/ git-symbols
 #
