@@ -10,9 +10,11 @@ default:
 ############  AGENTIC VIBE CODING  ############
 
 # claude code
+[no-exit-message]
 cc:
     claude
 
 # claude code config
+[no-exit-message]
 ccc:
     ccexp

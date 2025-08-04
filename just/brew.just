@@ -10,6 +10,7 @@ default:
 #############  BREW + MISE  ##############
 
 # outdated
+[no-exit-message]
 [script]
 o:
   print
@@ -30,8 +31,10 @@ o:
   # -gup update
 
 # update
+[no-exit-message]
 up: _update versions
 
+[no-exit-message]
 [script]
 _update:
   print
@@ -49,6 +52,8 @@ _update:
   print -- "------------------------------------{{BrightBlue}}"
   rustup update
 
+# brew versions
+[no-exit-message]
 [script]
 versions:
   {
@@ -93,6 +98,7 @@ versions:
 #############  BREW ONLY  ##############
 
 # brew versions
+[no-exit-message]
 @bv *args:
   print "brew list --versions {{args}}"
   print
@@ -105,6 +111,7 @@ versions:
   brew list --versions --formula {{args}} || print "{{BrightRed}}No formula apps found{{BrightCyan}}"
 
 # brew list / leaves
+[no-exit-message]
 [script]
 bl *$args:
   a=(${=args})
@@ -130,18 +137,21 @@ bl *$args:
   fi
 
 # brew outdated (greedy)
+[no-exit-message]
 @bo:
   print "brew outdated (greedy)"
   print
   brew outdated --greedy --verbose
 
 # brew search
+[no-exit-message]
 @bs *args:
   print "brew search" {{args}}
   print
   brew search {{args}}
 
 # brew remove (w/ autoremove, cleanup)
+[no-exit-message]
 @br *args:
   print "brew remove /w autoremove and cleanup"
   print
@@ -151,6 +161,7 @@ bl *$args:
   just --justfile "$JUST/brew.just" versions
 
 # brew tree (casks and formulas)
+[no-exit-message]
 [script]
 bt *args:
   print "brew tree {{args}}"
@@ -165,12 +176,14 @@ bt *args:
 
 
 # brew packages that depend on
+[no-exit-message]
 @bdo *args:
   print "brew packages that depend on" {{args}}
   print
   brew uses --installed {{args}}
 
 # brew zap
+[no-exit-message]
 bz:
   brew cleanup --prune=all
   rm -rf "$HOME/Library/Application Support/Caches"
@@ -180,6 +193,7 @@ bz:
   go clean -modcache
 
 # brew fonts 
+[no-exit-message]
 [script]
 bf *$args:
   a=(${=args})
@@ -199,6 +213,7 @@ bf *$args:
 #############  MISE ONLY  ##############
 
 # mise
+[no-exit-message]
 [script]
 ml *$args:
   a=(${=args})

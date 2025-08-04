@@ -9,3 +9,6 @@ email = "kenbanks.peng@gmail.com"
 "rest" = "#707070"
 "divergent rest" = "yellow"
 "divergent prefix" = { fg = "yellow", underline = true }
+
+[ui]
+default-command = "log"

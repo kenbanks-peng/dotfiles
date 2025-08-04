@@ -43,9 +43,6 @@ mod go
 # dev
 mod dev
 
-# ai
-mod ai
-
 # pdf
 mod pdf
 
