@@ -296,7 +296,7 @@ oh-my-posh 26.17.3
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.3.112
+opencode 0.3.126
 opencore-amr 0.1.6
 openexr 3.3.5
 openjpeg 2.5.3
@@ -311,7 +311,7 @@ pet 1.0.1
 pinentry 1.3.2
 pixman 0.46.4
 pls 0.0.1-beta.9
-poppler 25.07.0_1
+poppler 25.08.0
 portal 1.2.3
 posting 2.7.1
 procs 0.14.10
