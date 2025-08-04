@@ -8,48 +8,42 @@ default:
 ############  UNIX UTIL  ############
 
 # working directory
+[no-exit-message]
 @d *args:
   pwd {{args}}
 
 # new copy
+[no-exit-message]
 cp *args:
   ditto {{args}}
 
 # sed alternative for find/replace withing files
+[no-exit-message]
 sed2 *args:
   sd {{args}}
 
 # sed alternative with fzf
+[no-exit-message]
 sed3 *args:
   sad {{args}}
 
 # new grep for find within glob pattern
+[no-exit-message]
 @gr *args:
   print "rg (ripgrep)"
   print
   rg {{args}}
 
 # new man
+[no-exit-message]
 @man *args:
   print "tldr (tealdeer)"
   tldr {{ args }}
 
 
-
-# pls list hide hidden files
-[script]
-l *args:
-  if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
-    pls --det=git --header=false --exclude='^\.' --suffix=false --sym=false --sort=cat --sort=name --typ=dir {{args}}
-    pls --det=git --header=false --exclude='^\.' --suffix=false --sym=false --sort=cat --sort=name --typ=file --typ=symlink --typ=fifo --typ=socket --typ=char-device --typ=block-device {{args}}
-  else
-    pls --header=false --exclude='^\.' --suffix=false --sym=false --sort=cat --sort=name --typ=dir {{args}}
-    pls --header=false --exclude='^\.' --suffix=false --sym=false --sort=cat --sort=name --typ=file --typ=symlink --typ=fifo --typ=socket --typ=char-device --typ=block-device {{args}}
-  fi
-
-
 # Common pls function with SIP protection
 [private]
+[no-exit-message]
 [no-cd]
 [script]
 pls_with_sip *pls_args:
@@ -103,81 +97,64 @@ pls_with_sip *pls_args:
   PLS_CONFIG="$temp_config" pls {{pls_args}}
 
 # pls list show hidden files
-
+[no-exit-message]
 [script]
-ls *args:
+l *args:
   if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
     just --justfile "$JUST/unix.just" pls_with_sip --det=git --header=false --suffix=false --sort=cat --sort=name {{args}}
   else
     just --justfile "$JUST/unix.just" pls_with_sip --header=false --suffix=false --sort=cat --sort=name {{args}}
   fi
   
-
-# list long
+# pls list hide hidden files
+[no-exit-message]
 [script]
 ll *args:
+  if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
+    pls --det=git --header=false --exclude='^\.' --suffix=false --sym=false --sort=cat --sort=name --typ=dir {{args}}
+    pls --det=git --header=false --exclude='^\.' --suffix=false --sym=false --sort=cat --sort=name --typ=file --typ=symlink --typ=fifo --typ=socket --typ=char-device --typ=block-device {{args}}
+  else
+    pls --header=false --exclude='^\.' --suffix=false --sym=false --sort=cat --sort=name --typ=dir {{args}}
+    pls --header=false --exclude='^\.' --suffix=false --sym=false --sort=cat --sort=name --typ=file --typ=symlink --typ=fifo --typ=socket --typ=char-device --typ=block-device {{args}}
+  fi
+
+# list long
+[no-exit-message]
+[script]
+lll *args:
   if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
     just --justfile "$JUST/unix.just" pls_with_sip --det=git --det=perm --det=user --det=size --det=mtime --det=typ --header=false {{args}}
   else
     just --justfile "$JUST/unix.just" pls_with_sip --det=perm --det=user --det=size --det=mtime --det=typ --header=false {{args}}
   fi
 
-# list w/ git-symbols
-#
-# blocks means show the block
-#
-# git symbols
-# -----------
-# - : default
-# . : unmodified
-# N : new in index
-# ? : new in work directory
-# D : deleted
-# M : modified
-# R : renamed
-# I : ignored
-# T : type change
-# C : conflict
-#
-[script]
-lg *args:
-  if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
-    lsd --almost-all --blocks name --blocks git {{args}}
-  else
-    lsd --almost-all --blocks name {{args}}
-  fi
-
-
-# list tree
-[script]
-lt *args:
-  if git rev-parse --is-inside-work-tree > /dev/null 2>&1; then
-    lsd --almost-all --tree --no-symlink --depth 2 -al --blocks name --blocks git {{args}}
-  else
-    lsd --almost-all --tree --no-symlink --depth 2 -al --blocks name {{args}}
-  fi
-
 # new cat
+[no-exit-message]
 @cat *args:
   bat {{args}}
 
 # new ps
+[no-exit-message]
 process *args:
   procs {{args}}
 
 # top tui
+[no-exit-message]
 top:
   btop
 
 # top tui
+[no-exit-message]
 top2:
   glances
 
 # resource monitor
+[no-exit-message]
 mon:
   macmon
 
 # more readable path. duplicates in red.
+[no-exit-message]
 [script]
 path:
   print $PATH | tr ':' '\n' | awk '{
@@ -195,22 +172,27 @@ path:
   }'
 
 # remove .DS_store
+[no-exit-message]
 @clean:
   print "recursively remove .DS_store"
   sudo fd --unrestricted '^\.DS_Store$' --type file --exec-batch rm
 
 # new find
+[no-exit-message]
 find *args:
   fd -uuu {{args}}
 
 # new tail
+[no-exit-message]
 tail *args:
   tspin "{{args}}"
 
 # new cut
+[no-exit-message]
 chz *args:
   choose {{args}}
 
 # new ping
+[no-exit-message]
 ping *args:
   gping {{args}}

@@ -8,9 +8,11 @@ default:
 ############  SQL  ############
 
 # sqlite3 db
+[no-exit-message]
 sqlite *args:
   sqlite3 {{args}}
 
 # libsql
+[no-exit-message]
 sql *args:
   sqld {{args}}
