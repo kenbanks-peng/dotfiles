@@ -196,3 +196,26 @@ chz *args:
 [no-exit-message]
 ping *args:
   gping {{args}}
+
+# symlink
+[no-exit-message]
+[script]
+symlink original:
+  # Convert to absolute paths
+  original_abs=$(realpath "{{original}}")
+  filename=$(basename "$original_abs")
+  dir=$(dirname "$original_abs")
+  
+  if [[ "$filename" == *.* ]]; then
+    name="${filename%.*}"
+    ext="${filename##*.}"
+    symlink_name="${name}-symlink.${ext}"
+  else
+    symlink_name="${filename}-symlink"
+  fi
+  
+  symlink_path="${dir}/${symlink_name}"
+   
+  # Create the symlink using absolute paths
+  ln -s "$original_abs" "$symlink_path"
+  echo "$symlink_name -> $filename"
