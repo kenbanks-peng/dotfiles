@@ -18,3 +18,9 @@ cc:
 [no-exit-message]
 ccc:
     ccexp
+
+# claude workflow
+[no-exit-message]
+claude-workflow:
+    bunx @pimzino/claude-code-spec-workflow@latest
+
