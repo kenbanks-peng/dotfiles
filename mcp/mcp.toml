@@ -1,6 +1,5 @@
 [mcp.Obsidian]
-command = "bunx"
-args = ["mcp-obsidian", "/Users/ken/Documents/obsidian/Vault"]
+command = ["bunx", "mcp-obsidian", "/Users/ken/Documents/obsidian/Vault"]
 
 [mcp.context7]
 command = ["bunx", "@upstash/context7-mcp"]
@@ -10,17 +9,7 @@ command = ["bunx", "mcp-sequentialthinking-tools"]
 env = { MAX_HISTORY_SIZE = "1000" }
 
 [mcp.github]
-command = "docker"
-args = [
-    "run",
-    "-i",
-    "--rm",
-    "-e",
-    "GITHUB_PERSONAL_ACCESS_TOKEN=$GITHUB_PERSONAL_ACCESS_TOKEN",
-    "-e",
-    "GITHUB_TOOLSETS = $GITHUB_TOOLSETS",
-    "ghcr.io/github/github-mcp-server"
-]
+command = ["docker", "run", "-i", "--rm", "-e", "GITHUB_PERSONAL_ACCESS_TOKEN", "ghcr.io/github/github-mcp-server"]
 
 [mcp.playwright]
 command = ["bunx", "@playwright/mcp@latest"]
