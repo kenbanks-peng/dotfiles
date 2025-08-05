@@ -22,4 +22,5 @@ rust = "latest"
 "npm:ccexp" = "latest"
 
 [settings]
+idiomatic_version_file_enable_tools = []
 
