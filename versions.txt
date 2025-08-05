@@ -145,7 +145,7 @@ fx 38.0.0
 fzf 0.65.1
 gawk 5.3.1
 gcc 15.1.0
-gemini-cli 0.1.16
+gemini-cli 0.1.17
 gettext 0.26
 gh 2.76.2
 giflib 5.2.2
@@ -295,7 +295,7 @@ oh-my-posh 26.17.3
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.3.126
+opencode 0.3.130
 opencore-amr 0.1.6
 openexr 3.3.5
 openjpeg 2.5.3
