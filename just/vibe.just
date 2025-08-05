@@ -19,8 +19,8 @@ cc:
 ccc:
     ccexp
 
-# claude workflow
+# claude code init workflow
 [no-exit-message]
-claude-workflow:
+cciw:
     bunx @pimzino/claude-code-spec-workflow@latest
 
