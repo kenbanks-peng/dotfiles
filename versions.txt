@@ -85,7 +85,7 @@ aom 3.12.1
 apache-arrow 21.0.0
 aribb24 1.0.4
 asciidoctor 2.0.23
-ast-grep 0.39.2
+ast-grep 0.39.3
 autoconf 2.72
 aws-c-auth 0.9.0
 aws-c-cal 0.9.2
@@ -98,7 +98,7 @@ aws-c-mqtt 0.13.3
 aws-c-s3 0.8.6
 aws-c-sdkutils 0.2.4
 aws-checksums 0.2.7
-aws-crt-cpp 0.33.3
+aws-crt-cpp 0.33.4
 aws-sdk-cpp 1.11.615
 bandwhich 0.23.1
 bash 5.3.3
@@ -412,7 +412,7 @@ go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise
 node                                       24.5.0            ~/.config/mise/mise.toml  latest
 npm:@anthropic-ai/claude-code              1.0.69            ~/.config/mise/mise.toml  latest
 npm:@google/gemini-cli                     0.1.17            ~/.config/mise/mise.toml  latest
-npm:@openai/codex                          0.12.0            ~/.config/mise/mise.toml  latest
+npm:@openai/codex                          0.13.0            ~/.config/mise/mise.toml  latest
 npm:ccexp                                  4.0.0             ~/.config/mise/mise.toml  latest
 npm:nuekit                                 1.0.0-RC.4        ~/.config/mise/mise.toml  latest
 pipx:markitdown                            0.1.2             ~/.config/mise/mise.toml  latest
