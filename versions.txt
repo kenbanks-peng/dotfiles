@@ -15,7 +15,7 @@ boltai 1.36.1
 boop 1.4.0
 bruno 2.8.1
 claude 0.12.55,d55c63cae429e48c72cd9f306dbf2880a694e8fe
-cursor 1.3.9,54c27320fab08c9f5dd5873f07fca101f7a3e076
+cursor 1.4.1,99b5cf60d85d7216d67a3768cec0e22266159c61
 daisydisk 4.31
 espanso 2.2.1
 figma 125.6.5
@@ -121,7 +121,7 @@ cjson 1.7.18
 clipboard 0.10.0
 colima 0.8.3
 coreutils 9.7
-cryptography 45.0.5
+cryptography 45.0.6
 csvtk 0.34.0
 curlie 1.8.2
 dav1d 1.5.1
@@ -145,7 +145,7 @@ fx 38.0.0
 fzf 0.65.1
 gawk 5.3.1
 gcc 15.1.0
-gemini-cli 0.1.17
+gemini-cli 0.1.18
 gettext 0.26
 gh 2.76.2
 giflib 5.2.2
@@ -183,7 +183,7 @@ imagemagick 7.1.2-0
 imath 3.1.12
 imgcat 1.0.22
 isl 0.27
-jasper 4.2.7
+jasper 4.2.8
 jc 1.25.5
 jid 0.7.6
 jj 0.31.0
@@ -295,7 +295,7 @@ oh-my-posh 26.18.0
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.3.130
+opencode 0.3.131
 opencore-amr 0.1.6
 openexr 3.3.5
 openjpeg 2.5.3
@@ -323,7 +323,7 @@ python@3.12 3.12.11
 python@3.13 3.13.5
 qsv 6.0.1
 rav1e 0.8.1
-re2 20250722
+re2 20250805
 readline 8.3.1
 repomix 1.2.1
 resvg 0.45.1
@@ -412,7 +412,7 @@ go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise
 node                                       24.5.0            ~/.config/mise/mise.toml  latest
 npm:@anthropic-ai/claude-code              1.0.69            ~/.config/mise/mise.toml  latest
 npm:@google/gemini-cli                     0.1.18            ~/.config/mise/mise.toml  latest
-npm:@openai/codex                          0.13.0            ~/.config/mise/mise.toml  latest
+npm:@openai/codex                          0.14.0            ~/.config/mise/mise.toml  latest
 npm:ccexp                                  4.0.0             ~/.config/mise/mise.toml  latest
 npm:nuekit                                 1.0.0-RC.4        ~/.config/mise/mise.toml  latest
 pipx:markitdown                            0.1.2             ~/.config/mise/mise.toml  latest
