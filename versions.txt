@@ -73,7 +73,7 @@ ubersicht 1.6.82
 vmware-fusion 13.6.3,24585314
 warp 0.2025.07.30.08.12.stable_02
 wezterm 20240203-110809,5046fc22
-zed 0.197.5
+zed 0.197.6
 zen 1.14.9b
 zoom 6.5.7.60598
 
@@ -411,7 +411,7 @@ go:golang.org/x/tools/gopls                0.20.0            ~/.config/mise/mise
 go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise.toml  latest
 node                                       24.5.0            ~/.config/mise/mise.toml  latest
 npm:@anthropic-ai/claude-code              1.0.69            ~/.config/mise/mise.toml  latest
-npm:@google/gemini-cli                     0.1.17            ~/.config/mise/mise.toml  latest
+npm:@google/gemini-cli                     0.1.18            ~/.config/mise/mise.toml  latest
 npm:@openai/codex                          0.13.0            ~/.config/mise/mise.toml  latest
 npm:ccexp                                  4.0.0             ~/.config/mise/mise.toml  latest
 npm:nuekit                                 1.0.0-RC.4        ~/.config/mise/mise.toml  latest
@@ -420,7 +420,7 @@ pipx:ruff                                  0.12.7            ~/.config/mise/mise
 python                                     3.13.5            ~/.config/mise/mise.toml  latest
 ruby                                       3.4.5             ~/.config/mise/mise.toml  latest
 rust                                       1.88.0 (symlink)  ~/.config/mise/mise.toml  latest
-uv                                         0.8.4             ~/.config/mise/mise.toml  latest
+uv                                         0.8.5             ~/.config/mise/mise.toml  latest
 
 RUSTUP/CARGO
 ------------
