@@ -15,7 +15,7 @@ boltai 1.36.1
 boop 1.4.0
 bruno 2.9.0
 claude 0.12.55,d55c63cae429e48c72cd9f306dbf2880a694e8fe
-cursor 1.4.1,99b5cf60d85d7216d67a3768cec0e22266159c61
+cursor 1.4.2,07aa3b4519da4feab4761c58da3eeedd253a1671
 daisydisk 4.31
 espanso 2.2.1
 figma 125.6.5
