@@ -49,7 +49,7 @@ lapce 0.4.3
 local 9.2.5,6810
 mark-text 0.17.1
 microsoft-auto-update 4.79.25033028
-microsoft-edge 138.0.3351.121,157da964-2596-4b50-a0fb-b959727db5ae
+microsoft-edge 139.0.3405.86,bfb2f2c9-9ed9-4538-9e80-854b008bbab1
 notion 4.17.0
 notion-calendar 1.131.0
 notion-mail 0.0.37
@@ -60,7 +60,7 @@ orbstack 1.11.3,19358
 pdf-pals 1.9.0
 quarto 1.7.33
 raycast 1.102.3
-rio 0.2.26
+rio 0.2.27
 screen-studio 2.26.0-3206
 sf-symbols 6
 siyuan 3.2.1
@@ -417,7 +417,7 @@ npm:ccexp                                  4.0.0             ~/.config/mise/mise
 npm:nuekit                                 1.0.0-RC.4        ~/.config/mise/mise.toml  latest
 pipx:markitdown                            0.1.2             ~/.config/mise/mise.toml  latest
 pipx:ruff                                  0.12.8            ~/.config/mise/mise.toml  latest
-python                                     3.13.5            ~/.config/mise/mise.toml  latest
+python                                     3.13.6            ~/.config/mise/mise.toml  latest
 ruby                                       3.4.5             ~/.config/mise/mise.toml  latest
 rust                                       1.89.0 (symlink)  ~/.config/mise/mise.toml  latest
 uv                                         0.8.6             ~/.config/mise/mise.toml  latest
@@ -429,11 +429,12 @@ rustup home:  /Users/ken/Software/rustup
 
 installed toolchains
 --------------------
-1.89.0-aarch64-apple-darwin
+1.88.0-aarch64-apple-darwin (default)
+1.89.0-aarch64-apple-darwin (active)
 
 active toolchain
 ----------------
-name: 1.88.0-aarch64-apple-darwin
+name: 1.89.0-aarch64-apple-darwin
 active because: overridden by environment variable RUSTUP_TOOLCHAIN
 installed targets:
   aarch64-apple-darwin
