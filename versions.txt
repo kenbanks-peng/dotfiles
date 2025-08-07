@@ -9,7 +9,7 @@ affinity-publisher 2.6.3,3322
 amazon-q 1.13.1
 anybar 0.2.3
 anythingllm 1.8.4
-arc 1.106.0,66192
+arc 1.107.0,66519
 audacity 3.7.5
 boltai 1.36.1
 boop 1.4.0
@@ -104,7 +104,7 @@ bandwhich 0.23.1
 bash 5.3.3
 bat 0.25.0_1
 bat-extras 2024.08.24
-biome 2.1.3
+biome 2.1.4
 borders 1.7.0
 brotli 1.1.0
 btop 1.4.4
@@ -412,15 +412,15 @@ go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise
 node                                       24.5.0            ~/.config/mise/mise.toml  latest
 npm:@anthropic-ai/claude-code              1.0.70            ~/.config/mise/mise.toml  latest
 npm:@google/gemini-cli                     0.1.18            ~/.config/mise/mise.toml  latest
-npm:@openai/codex                          0.14.0            ~/.config/mise/mise.toml  latest
+npm:@openai/codex                          0.16.0            ~/.config/mise/mise.toml  latest
 npm:ccexp                                  4.0.0             ~/.config/mise/mise.toml  latest
 npm:nuekit                                 1.0.0-RC.4        ~/.config/mise/mise.toml  latest
 pipx:markitdown                            0.1.2             ~/.config/mise/mise.toml  latest
-pipx:ruff                                  0.12.7            ~/.config/mise/mise.toml  latest
+pipx:ruff                                  0.12.8            ~/.config/mise/mise.toml  latest
 python                                     3.13.5            ~/.config/mise/mise.toml  latest
 ruby                                       3.4.5             ~/.config/mise/mise.toml  latest
-rust                                       1.88.0 (symlink)  ~/.config/mise/mise.toml  latest
-uv                                         0.8.5             ~/.config/mise/mise.toml  latest
+rust                                       1.89.0 (symlink)  ~/.config/mise/mise.toml  latest
+uv                                         0.8.6             ~/.config/mise/mise.toml  latest
 
 RUSTUP/CARGO
 ------------
@@ -429,7 +429,7 @@ rustup home:  /Users/ken/Software/rustup
 
 installed toolchains
 --------------------
-1.88.0-aarch64-apple-darwin (active, default)
+1.89.0-aarch64-apple-darwin
 
 active toolchain
 ----------------
