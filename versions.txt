@@ -6,7 +6,7 @@ affine 0.23.2
 affinity-designer 2.6.3,3322
 affinity-photo 2.6.3,3322
 affinity-publisher 2.6.3,3322
-amazon-q 1.13.1
+amazon-q 1.13.2
 anybar 0.2.3
 anythingllm 1.8.4
 arc 1.107.0,66519
@@ -291,7 +291,7 @@ nspr 4.37
 nss 3.114
 numpy 2.3.2
 nushell 0.106.1
-oh-my-posh 26.18.0
+oh-my-posh 26.19.0
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
@@ -376,7 +376,7 @@ vulkan-headers 1.4.323
 vulkan-loader 1.4.323
 wallpaper 2.3.2
 watchexec 2.3.2
-webp 1.5.0
+webp 1.6.0
 wget 1.25.0
 wgo 0.5.13
 x264 r3108
