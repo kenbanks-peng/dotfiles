@@ -11,7 +11,7 @@ anybar 0.2.3
 anythingllm 1.8.4
 arc 1.107.0,66519
 audacity 3.7.5
-boltai 1.36.2
+boltai 1.36.3
 boop 1.4.0
 bruno 2.9.0
 claude 0.12.55,d55c63cae429e48c72cd9f306dbf2880a694e8fe
@@ -35,10 +35,10 @@ font-sf-pro latest
 font-symbols-only-nerd-font 3.4.0
 font-tex-gyre-termes 2.004
 git-credential-manager 2.6.1
-gitbutler 0.15.9,2293
+gitbutler 0.15.10,2296
 github 3.5.2-14087268
 grandperspective 3.5.3
-hoppscotch 25.7.0-0
+hoppscotch 25.7.1-0
 itsycal 0.15.6
 jordanbaird-ice 0.11.12
 karabiner-elements 15.5.0
@@ -79,10 +79,10 @@ zoom 6.5.7.60598
 
 BREW FORMULAS
 -------------
-abseil 20240722.1
+abseil 20250127.1
 age 1.2.1
 aom 3.12.1
-apache-arrow 21.0.0
+apache-arrow 21.0.0_1
 aribb24 1.0.4
 asciidoctor 2.0.23
 ast-grep 0.39.3
@@ -170,7 +170,7 @@ gpgmepp 2.0.0
 gping 1.19.0
 graphite2 1.3.14
 grex 1.4.5
-grpc 1.74.0
+grpc 1.74.1
 harfbuzz 11.3.3
 hexyl 0.16.0
 highway 1.2.0
@@ -295,7 +295,7 @@ oh-my-posh 26.18.0
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.3.133
+opencode 0.4.1
 opencore-amr 0.1.6
 openexr 3.3.5
 openjpeg 2.5.3
@@ -314,7 +314,7 @@ poppler 25.08.0
 portal 1.2.3
 posting 2.7.1
 procs 0.14.10
-protobuf 29.3
+protobuf 29.3_1
 pstree 2.40
 pv 1.9.34
 pycparser 2.22_1
@@ -323,7 +323,7 @@ python@3.12 3.12.11
 python@3.13 3.13.5
 qsv 6.0.1
 rav1e 0.8.1
-re2 20250805
+re2 20250805_1
 readline 8.3.1
 repomix 1.2.1
 resvg 0.45.1
@@ -390,7 +390,7 @@ yazi 25.5.31
 yq 4.47.1
 yt-dlp 2025.7.21
 z3 4.15.2
-zellij 0.43.0
+zellij 0.43.1
 zeromq 4.3.5_2
 zimg 3.0.5
 zoxide 0.9.8
@@ -410,7 +410,7 @@ go:github.com/wailsapp/wails/v2/cmd/wails  2.10.2            ~/.config/mise/mise
 go:golang.org/x/tools/gopls                0.20.0            ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise.toml  latest
 node                                       24.5.0            ~/.config/mise/mise.toml  latest
-npm:@anthropic-ai/claude-code              1.0.71            ~/.config/mise/mise.toml  latest
+npm:@anthropic-ai/claude-code              1.0.72            ~/.config/mise/mise.toml  latest
 npm:@google/gemini-cli                     0.1.18            ~/.config/mise/mise.toml  latest
 npm:@openai/codex                          0.19.0            ~/.config/mise/mise.toml  latest
 npm:ccexp                                  4.0.0             ~/.config/mise/mise.toml  latest
@@ -420,7 +420,7 @@ pipx:ruff                                  0.12.8            ~/.config/mise/mise
 python                                     3.13.6            ~/.config/mise/mise.toml  latest
 ruby                                       3.4.5             ~/.config/mise/mise.toml  latest
 rust                                       1.89.0 (symlink)  ~/.config/mise/mise.toml  latest
-uv                                         0.8.6             ~/.config/mise/mise.toml  latest
+uv                                         0.8.7             ~/.config/mise/mise.toml  latest
 
 RUSTUP/CARGO
 ------------
