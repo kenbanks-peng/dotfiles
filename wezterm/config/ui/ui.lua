@@ -26,7 +26,7 @@ return {
    -- window
    window_decorations = 'RESIZE | INTEGRATED_BUTTONS| MACOS_FORCE_DISABLE_SHADOW', -- NONE, TITLE, RESIZE, INTEGRATED_BUTTONS, MACOS_FORCE_DISABLE_SHADOW
    window_padding = {
-      top = 40,
+      top = 60,
       right = 5, -- scrollbar width
       bottom = 20,
       left = 30,

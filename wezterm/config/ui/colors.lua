@@ -52,7 +52,7 @@ local colors = {
    selection_bg = mocha.surface2,
    selection_fg = mocha.text,
    ansi = {
-      mocha.crust,  -- black
+      mocha.peach,  -- black alternative
       mocha.red,    -- red
       mocha.green,  -- green
       mocha.yellow, -- yellow
@@ -62,7 +62,7 @@ local colors = {
       mocha.text,   -- white
    },
    brights = {
-      mocha.crust,  -- black
+      mocha.peach,  -- black alternative
       mocha.red,    -- red
       mocha.green,  -- green
       mocha.yellow, -- yellow

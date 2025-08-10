@@ -26,11 +26,6 @@ default:
 @symlink:
   python "$PYTHON/symlink/symlink.py"
 
-# pass source to be symlinked and 2 destinations
-[no-exit-message]
-@switch *args:
-  python "$PYTHON/switch/switch.py" {{ args }}
-
 # json cv to pdf
 [no-exit-message]
 [script]

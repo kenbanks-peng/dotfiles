@@ -124,7 +124,7 @@ bl *$args:
     print "{{BrightMagenta}}USER-INSTALLED LEAF FORMULAS"
     print -- "----------------------------{{BrightCyan}}"
     brew leaves --installed-on-request
-  elif [ $len = 1 ] && [ "$a1" = "casks" ]; then
+  elif [ $len = 1 ] && [ "$a1" = "apps" ]; then
     print "brew list casks"
     print
     print "{{BrightMagenta}}CASK APPS"
