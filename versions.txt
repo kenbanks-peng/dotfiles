@@ -335,7 +335,7 @@ shaderc 2025.3
 shared-mime-info 2.4
 shellcheck 0.11.0
 simdjson 3.13.0
-sk 0.20.4
+sk 0.20.5
 sketchybar 2.22.1
 snappy 1.2.2
 sniffnet 1.4.0
