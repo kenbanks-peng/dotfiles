@@ -37,7 +37,6 @@ github 3.5.2-14087268
 grandperspective 3.5.3
 hoppscotch 25.7.1-0
 itsycal 0.15.6
-jan 0.6.7
 jordanbaird-ice 0.11.12
 karabiner-elements 15.5.0
 keyclu 0.30.2
