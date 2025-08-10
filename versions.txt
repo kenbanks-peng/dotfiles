@@ -1,6 +1,5 @@
 BREW CASKS
 ----------
-5ire 0.13.2
 aerospace 0.19.2-Beta
 affinity-designer 2.6.3,3322
 affinity-photo 2.6.3,3322
