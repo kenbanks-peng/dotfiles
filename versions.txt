@@ -43,7 +43,6 @@ karabiner-elements 15.5.0
 keyclu 0.30.2
 kiro 0.1.42,202508020230
 languagetool-desktop 2.4.2
-lapce 0.4.3
 local 9.2.5,6810
 mark-text 0.17.1
 microsoft-auto-update 4.79.25033028
