@@ -34,7 +34,6 @@ font-monaspace 1.200
 font-sf-pro latest
 font-symbols-only-nerd-font 3.4.0
 font-tex-gyre-termes 2.004
-ghostty 1.1.3
 git-credential-manager 2.6.1
 github 3.5.2-14087268
 grandperspective 3.5.3
