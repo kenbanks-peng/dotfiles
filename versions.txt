@@ -35,7 +35,6 @@ font-sf-pro latest
 font-symbols-only-nerd-font 3.4.0
 font-tex-gyre-termes 2.004
 git-credential-manager 2.6.1
-gitbutler 0.15.10,2296
 github 3.5.2-14087268
 grandperspective 3.5.3
 hoppscotch 25.7.1-0
