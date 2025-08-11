@@ -23,6 +23,9 @@ function app_icons() {
     "Obsidian")
         icon_result="􀉞"
         ;;
+    "Elephas")
+        icon_result="󰟆"
+        ;;
 
     # from https://github.com/kvndrsslr/sketchybar-app-font
     "Live")
