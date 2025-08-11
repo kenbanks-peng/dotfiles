@@ -7,8 +7,8 @@
 # but you can also override them on a per-application basis.
 
 # search_shortcut: off
-search_shortcut: ALT+SPACE
+search_shortcut: ALT+META+SPACE
 
 search_trigger: ":search"
 
-show_icon: false
+show_icon: true
