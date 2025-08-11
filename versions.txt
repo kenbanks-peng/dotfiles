@@ -15,7 +15,7 @@ bruno 2.9.0
 claude 0.12.55,d55c63cae429e48c72cd9f306dbf2880a694e8fe
 cursor 1.4.3,e50823e9ded15fddfd743c7122b4724130c25df8
 daisydisk 4.31
-espanso 2.2.1
+elephas 11.1087,11_1087
 figma 125.6.5
 flameshot 13.0.1
 font-alegreya 2.008
