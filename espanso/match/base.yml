@@ -21,5 +21,3 @@ matches:
   - trigger: ":test"
     replace: "123"
 
-  - trigger: ":test"
-    replace: "456"
