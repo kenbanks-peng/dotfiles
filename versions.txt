@@ -66,7 +66,7 @@ typeface 4.1.0,4682
 vmware-fusion 13.6.3,24585314
 wezterm 20240203-110809,5046fc22
 zed 0.198.5
-zen 1.14.10b
+zen 1.14.11b
 zoom 6.5.7.60598
 
 BREW FORMULAS
@@ -381,7 +381,7 @@ xz 5.8.1
 yabai 7.1.15
 yazi 25.5.31
 yq 4.47.1
-yt-dlp 2025.7.21
+yt-dlp 2025.8.11
 z3 4.15.2
 zellij 0.43.1
 zeromq 4.3.5_2
@@ -393,7 +393,7 @@ zx 8.8.0
 
 MISE PACKAGES
 -------------
-bun                                        1.2.19            ~/.config/mise/mise.toml  latest
+bun                                        1.2.20            ~/.config/mise/mise.toml  latest
 cargo:cargo-update                         17.0.0            ~/.config/mise/mise.toml  latest
 cargo:sbyte                                0.3.3             ~/.config/mise/mise.toml  latest
 deno                                       2.4.3             ~/.config/mise/mise.toml  latest
