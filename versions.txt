@@ -299,6 +299,7 @@ pango 1.56.4
 pastel 0.10.0
 pcre2 10.45
 pet 1.0.1
+pgvector 0.8.0
 pinentry 1.3.2
 pixman 0.46.4
 pls 0.0.1-beta.9
@@ -407,6 +408,7 @@ npm:@google/gemini-cli                     0.1.18            ~/.config/mise/mise
 npm:@openai/codex                          0.20.0            ~/.config/mise/mise.toml  latest
 npm:ccexp                                  4.0.0             ~/.config/mise/mise.toml  latest
 npm:nuekit                                 1.0.0-RC.4        ~/.config/mise/mise.toml  latest
+pipx:docling                               2.43.0            ~/.config/mise/mise.toml  latest
 pipx:markitdown                            0.1.2             ~/.config/mise/mise.toml  latest
 pipx:ruff                                  0.12.8            ~/.config/mise/mise.toml  latest
 python                                     3.13.6            ~/.config/mise/mise.toml  latest
