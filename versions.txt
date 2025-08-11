@@ -67,7 +67,7 @@ vmware-fusion 13.6.3,24585314
 wezterm 20240203-110809,5046fc22
 zed 0.198.5
 zen 1.14.11b
-zoom 6.5.7.60598
+zoom 6.5.9.61929
 
 BREW FORMULAS
 -------------
@@ -313,7 +313,7 @@ pv 1.9.34
 pycparser 2.22_1
 pygit2 1.18.1
 python@3.12 3.12.11
-python@3.13 3.13.5
+python@3.13 3.13.6
 qsv 6.0.1
 rav1e 0.8.1
 re2 20250805_1
@@ -402,6 +402,7 @@ go                                         1.24.6            ~/.config/mise/mise
 go:github.com/wailsapp/wails/v2/cmd/wails  2.10.2            ~/.config/mise/mise.toml  latest
 go:golang.org/x/tools/gopls                0.20.0            ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise.toml  latest
+node                                       12.22.12
 node                                       24.5.0            ~/.config/mise/mise.toml  latest
 npm:@anthropic-ai/claude-code              1.0.72            ~/.config/mise/mise.toml  latest
 npm:@google/gemini-cli                     0.1.18            ~/.config/mise/mise.toml  latest
