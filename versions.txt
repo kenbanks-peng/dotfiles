@@ -66,7 +66,7 @@ transmission 4.0.6
 typeface 4.1.0,4682
 vmware-fusion 13.6.3,24585314
 wezterm 20240203-110809,5046fc22
-zed 0.198.5
+zed 0.198.6
 zen 1.14.11b
 zoom 6.5.9.61929
 
@@ -88,7 +88,7 @@ aws-c-event-stream 0.5.6
 aws-c-http 0.10.4
 aws-c-io 0.21.2
 aws-c-mqtt 0.13.3
-aws-c-s3 0.8.6
+aws-c-s3 0.8.7
 aws-c-sdkutils 0.2.4
 aws-checksums 0.2.7
 aws-crt-cpp 0.33.5
@@ -103,7 +103,7 @@ brotli 1.1.0
 btop 1.4.4
 c-ares 1.34.5
 c3c 0.7.4
-ca-certificates 2025-07-15
+ca-certificates 2025-08-12
 caddy 2.10.0
 cairo 1.18.4
 certifi 2025.8.3
@@ -124,7 +124,7 @@ dotenvx 1.48.4
 dua-cli 2.31.0
 duf 0.8.1
 dust 1.2.3
-dvc 3.61.0_1
+dvc 3.62.0
 fastfetch 2.49.0
 fd 10.2.0
 ffmpeg 7.1.1_3
@@ -405,12 +405,12 @@ go:golang.org/x/tools/gopls                0.20.0            ~/.config/mise/mise
 go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise.toml  latest
 node                                       12.22.12
 node                                       24.5.0            ~/.config/mise/mise.toml  latest
-npm:@anthropic-ai/claude-code              1.0.73            ~/.config/mise/mise.toml  latest
+npm:@anthropic-ai/claude-code              1.0.74            ~/.config/mise/mise.toml  latest
 npm:@google/gemini-cli                     0.1.18            ~/.config/mise/mise.toml  latest
-npm:@openai/codex                          0.20.0            ~/.config/mise/mise.toml  latest
+npm:@openai/codex                          0.21.0            ~/.config/mise/mise.toml  latest
 npm:ccexp                                  4.0.0             ~/.config/mise/mise.toml  latest
 npm:nuekit                                 1.0.0-RC.4        ~/.config/mise/mise.toml  latest
-pipx:docling                               2.43.0            ~/.config/mise/mise.toml  latest
+pipx:docling                               2.44.0            ~/.config/mise/mise.toml  latest
 pipx:markitdown                            0.1.2             ~/.config/mise/mise.toml  latest
 pipx:ruff                                  0.12.8            ~/.config/mise/mise.toml  latest
 python                                     3.13.6            ~/.config/mise/mise.toml  latest
