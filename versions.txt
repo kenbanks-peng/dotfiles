@@ -405,7 +405,7 @@ go:golang.org/x/tools/gopls                0.20.0            ~/.config/mise/mise
 go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise.toml  latest
 node                                       12.22.12
 node                                       24.5.0            ~/.config/mise/mise.toml  latest
-npm:@anthropic-ai/claude-code              1.0.72            ~/.config/mise/mise.toml  latest
+npm:@anthropic-ai/claude-code              1.0.73            ~/.config/mise/mise.toml  latest
 npm:@google/gemini-cli                     0.1.18            ~/.config/mise/mise.toml  latest
 npm:@openai/codex                          0.20.0            ~/.config/mise/mise.toml  latest
 npm:ccexp                                  4.0.0             ~/.config/mise/mise.toml  latest
