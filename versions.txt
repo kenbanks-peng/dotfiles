@@ -4,7 +4,7 @@ aerospace 0.19.2-Beta
 affinity-designer 2.6.3,3322
 affinity-photo 2.6.3,3322
 affinity-publisher 2.6.3,3322
-amazon-q 1.13.2
+amazon-q 1.13.3
 anybar 0.2.3
 anythingllm 1.8.4
 arc 1.107.0,66519
