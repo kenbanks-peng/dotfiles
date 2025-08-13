@@ -43,7 +43,7 @@ karabiner-elements 15.5.0
 keyclu 0.30.2
 kiro 0.1.42,202508020230
 languagetool-desktop 2.4.2
-local 9.2.5,6810
+local 9.2.6,6872
 mark-text 0.17.1
 microsoft-auto-update 4.79.25033028
 microsoft-edge 139.0.3405.86,bfb2f2c9-9ed9-4538-9e80-854b008bbab1
@@ -138,7 +138,7 @@ fx 39.0.1
 fzf 0.65.1
 gawk 5.3.1
 gcc 15.1.0
-gemini-cli 0.1.18
+gemini-cli 0.1.20
 gettext 0.26
 gh 2.76.2
 giflib 5.2.2
@@ -284,7 +284,7 @@ nspr 4.37
 nss 3.114
 numpy 2.3.2
 nushell 0.106.1
-oh-my-posh 26.19.0
+oh-my-posh 26.19.1
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
@@ -366,8 +366,8 @@ unbound 1.23.1
 unibilium 2.1.2
 utf8proc 2.10.0
 vapoursynth 72
-vulkan-headers 1.4.323
-vulkan-loader 1.4.323
+vulkan-headers 1.4.325
+vulkan-loader 1.4.325
 wallpaper 2.3.2
 watchexec 2.3.2
 webp 1.6.0
@@ -406,7 +406,8 @@ go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise
 node                                       12.22.12
 node                                       24.5.0            ~/.config/mise/mise.toml  latest
 npm:@anthropic-ai/claude-code              1.0.77            ~/.config/mise/mise.toml  latest
-npm:@google/gemini-cli                     0.1.19            ~/.config/mise/mise.toml  latest
+npm:@google/gemini-cli                     0.1.19
+npm:@google/gemini-cli                     0.1.20            ~/.config/mise/mise.toml  latest
 npm:@openai/codex                          0.21.0            ~/.config/mise/mise.toml  latest
 npm:ccexp                                  4.0.0             ~/.config/mise/mise.toml  latest
 npm:nuekit                                 1.0.0-RC.4        ~/.config/mise/mise.toml  latest
@@ -416,7 +417,7 @@ pipx:ruff                                  0.12.8            ~/.config/mise/mise
 python                                     3.13.6            ~/.config/mise/mise.toml  latest
 ruby                                       3.4.5             ~/.config/mise/mise.toml  latest
 rust                                       1.89.0 (symlink)  ~/.config/mise/mise.toml  latest
-uv                                         0.8.8             ~/.config/mise/mise.toml  latest
+uv                                         0.8.9             ~/.config/mise/mise.toml  latest
 
 RUSTUP/CARGO
 ------------
