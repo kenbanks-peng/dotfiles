@@ -56,7 +56,7 @@ onyx 4.8.2
 orbstack 1.11.3,19358
 pdf-pals 1.9.0
 quarto 1.7.33
-raycast 1.102.3
+raycast 1.102.4
 screen-studio 2.26.0-3206
 sf-symbols 6
 skim 1.7.11
