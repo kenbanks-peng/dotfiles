@@ -13,7 +13,7 @@ boltai 1.36.3
 boop 1.4.0
 bruno 2.9.1
 claude 0.12.55,d55c63cae429e48c72cd9f306dbf2880a694e8fe
-cursor 1.4.3,e50823e9ded15fddfd743c7122b4724130c25df8
+cursor 1.4.5,af58d92614edb1f72bdd756615d131bf8dfa5299
 daisydisk 4.31
 elephas 11.1087,11_1087
 espanso 2.2.1
@@ -66,7 +66,7 @@ transmission 4.0.6
 typeface 4.1.0,4682
 vmware-fusion 13.6.3,24585314
 wezterm 20240203-110809,5046fc22
-zed 0.198.6
+zed 0.199.5
 zen 1.14.11b
 zoom 6.5.9.61929
 
@@ -154,7 +154,7 @@ gmp 6.3.0
 gnu-sed 4.9
 gnupg 2.4.8
 gnutls 3.8.10
-go 1.24.6
+go 1.25.0
 go-blueprint 0.10.11
 go-task 3.44.1
 gobang 0.1.0-alpha.5
@@ -172,7 +172,7 @@ hub 2.14.2
 hurl 7.0.0
 hyperfine 1.19.0
 icu4c@77 77.1
-imagemagick 7.1.2-0
+imagemagick 7.1.2-1
 imath 3.1.12
 imgcat 1.0.22
 isl 0.27
@@ -288,7 +288,7 @@ oh-my-posh 26.19.1
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.4.37
+opencode 0.4.44
 opencore-amr 0.1.6
 openexr 3.3.5
 openjpeg 2.5.3
@@ -397,7 +397,7 @@ MISE PACKAGES
 bun                                        1.2.20            ~/.config/mise/mise.toml  latest
 cargo:cargo-update                         17.0.0            ~/.config/mise/mise.toml  latest
 cargo:sbyte                                0.3.3             ~/.config/mise/mise.toml  latest
-deno                                       2.4.3             ~/.config/mise/mise.toml  latest
+deno                                       2.4.4             ~/.config/mise/mise.toml  latest
 git                                        2.50.1            ~/.config/mise/mise.toml  latest
 go                                         1.25.0            ~/.config/mise/mise.toml  latest
 go:github.com/wailsapp/wails/v2/cmd/wails  2.10.2            ~/.config/mise/mise.toml  latest
@@ -405,7 +405,7 @@ go:golang.org/x/tools/gopls                0.20.0            ~/.config/mise/mise
 go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise.toml  latest
 node                                       12.22.12
 node                                       24.5.0            ~/.config/mise/mise.toml  latest
-npm:@anthropic-ai/claude-code              1.0.77            ~/.config/mise/mise.toml  latest
+npm:@anthropic-ai/claude-code              1.0.80            ~/.config/mise/mise.toml  latest
 npm:@google/gemini-cli                     0.1.19
 npm:@google/gemini-cli                     0.1.20            ~/.config/mise/mise.toml  latest
 npm:@openai/codex                          0.21.0            ~/.config/mise/mise.toml  latest
@@ -417,7 +417,7 @@ pipx:ruff                                  0.12.8            ~/.config/mise/mise
 python                                     3.13.6            ~/.config/mise/mise.toml  latest
 ruby                                       3.4.5             ~/.config/mise/mise.toml  latest
 rust                                       1.89.0 (symlink)  ~/.config/mise/mise.toml  latest
-uv                                         0.8.9             ~/.config/mise/mise.toml  latest
+uv                                         0.8.10            ~/.config/mise/mise.toml  latest
 
 RUSTUP/CARGO
 ------------
