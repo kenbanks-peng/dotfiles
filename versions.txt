@@ -7,7 +7,7 @@ affinity-publisher 2.6.3,3322
 amazon-q 1.13.3
 anybar 0.2.3
 anythingllm 1.8.4
-arc 1.107.0,66519
+arc 1.108.0,66882
 audacity 3.7.5
 boltai 1.36.3
 boop 1.4.0
@@ -66,7 +66,7 @@ transmission 4.0.6
 typeface 4.1.0,4682
 vmware-fusion 13.6.3,24585314
 wezterm 20240203-110809,5046fc22
-zed 0.199.5
+zed 0.199.6
 zen 1.14.11b
 zoom 6.5.9.61929
 
@@ -97,7 +97,7 @@ bandwhich 0.23.1
 bash 5.3.3
 bat 0.25.0_1
 bat-extras 2024.08.24
-biome 2.1.4
+biome 2.2.0
 borders 1.7.0
 brotli 1.1.0
 btop 1.4.4
@@ -138,7 +138,7 @@ fx 39.0.1
 fzf 0.65.1
 gawk 5.3.1
 gcc 15.1.0
-gemini-cli 0.1.20
+gemini-cli 0.1.21
 gettext 0.26
 gh 2.76.2
 giflib 5.2.2
@@ -405,15 +405,15 @@ go:golang.org/x/tools/gopls                0.20.0            ~/.config/mise/mise
 go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise.toml  latest
 node                                       12.22.12
 node                                       24.5.0            ~/.config/mise/mise.toml  latest
-npm:@anthropic-ai/claude-code              1.0.80            ~/.config/mise/mise.toml  latest
+npm:@anthropic-ai/claude-code              1.0.81            ~/.config/mise/mise.toml  latest
 npm:@google/gemini-cli                     0.1.19
-npm:@google/gemini-cli                     0.1.20            ~/.config/mise/mise.toml  latest
+npm:@google/gemini-cli                     0.1.21            ~/.config/mise/mise.toml  latest
 npm:@openai/codex                          0.21.0            ~/.config/mise/mise.toml  latest
 npm:ccexp                                  4.0.0             ~/.config/mise/mise.toml  latest
 npm:nuekit                                 1.0.0-RC.4        ~/.config/mise/mise.toml  latest
 pipx:docling                               2.44.0            ~/.config/mise/mise.toml  latest
 pipx:markitdown                            0.1.2             ~/.config/mise/mise.toml  latest
-pipx:ruff                                  0.12.8            ~/.config/mise/mise.toml  latest
+pipx:ruff                                  0.12.9            ~/.config/mise/mise.toml  latest
 python                                     3.13.6            ~/.config/mise/mise.toml  latest
 ruby                                       3.4.5             ~/.config/mise/mise.toml  latest
 rust                                       1.89.0 (symlink)  ~/.config/mise/mise.toml  latest
