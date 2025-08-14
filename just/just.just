@@ -60,3 +60,6 @@ mod quarto
 
 # vide coding
 mod vibe
+
+# frameworks
+mod frameworks
