@@ -125,7 +125,7 @@ dua-cli 2.31.0
 duf 0.8.1
 dust 1.2.3
 dvc 3.62.0
-fastfetch 2.49.0
+fastfetch 2.50.1
 fd 10.2.0
 ffmpeg 7.1.1_3
 flac 1.5.0
@@ -288,7 +288,7 @@ oh-my-posh 26.19.1
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.4.44
+opencode 0.5.1
 opencore-amr 0.1.6
 openexr 3.3.5
 openjpeg 2.5.3
@@ -403,10 +403,8 @@ go                                         1.25.0            ~/.config/mise/mise
 go:github.com/wailsapp/wails/v2/cmd/wails  2.10.2            ~/.config/mise/mise.toml  latest
 go:golang.org/x/tools/gopls                0.20.0            ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise.toml  latest
-node                                       12.22.12
 node                                       24.5.0            ~/.config/mise/mise.toml  latest
 npm:@anthropic-ai/claude-code              1.0.81            ~/.config/mise/mise.toml  latest
-npm:@google/gemini-cli                     0.1.19
 npm:@google/gemini-cli                     0.1.21            ~/.config/mise/mise.toml  latest
 npm:@openai/codex                          0.21.0            ~/.config/mise/mise.toml  latest
 npm:ccexp                                  4.0.0             ~/.config/mise/mise.toml  latest
