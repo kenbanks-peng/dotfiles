@@ -6,7 +6,7 @@ affinity-photo 2.6.3,3322
 affinity-publisher 2.6.3,3322
 amazon-q 1.13.3
 anybar 0.2.3
-anythingllm 1.8.4
+anythingllm 1.8.5
 arc 1.108.0,66882
 audacity 3.7.5
 boltai 1.36.3
@@ -46,7 +46,7 @@ languagetool-desktop 2.4.2
 local 9.2.6,6872
 mark-text 0.17.1
 microsoft-auto-update 4.79.25033028
-microsoft-edge 139.0.3405.86,bfb2f2c9-9ed9-4538-9e80-854b008bbab1
+microsoft-edge 139.0.3405.102,8ca9915f-b139-421a-a251-73376a5b39fd
 notion 4.17.0
 notion-calendar 1.131.0
 notion-mail 0.0.37
@@ -72,10 +72,10 @@ zoom 6.5.9.61929
 
 BREW FORMULAS
 -------------
-abseil 20250127.1
+abseil 20250512.1
 age 1.2.1
 aom 3.12.1
-apache-arrow 21.0.0_1
+apache-arrow 21.0.0_2
 aribb24 1.0.4
 asciidoctor 2.0.23
 ast-grep 0.39.3
@@ -127,7 +127,7 @@ dust 1.2.3
 dvc 3.62.0
 fastfetch 2.50.1
 fd 10.2.0
-ffmpeg 7.1.1_3
+ffmpeg 7.1.1_4
 flac 1.5.0
 flock 0.4.0
 fontconfig 2.16.0
@@ -144,7 +144,7 @@ gh 2.76.2
 giflib 5.2.2
 git-bug 0.10.1
 git-delta 0.18.2_3
-github-mcp-server 0.11.0
+github-mcp-server 0.12.1
 gitleaks 8.28.0
 gitui 0.27.0
 glances 4.3.3_1
@@ -160,13 +160,13 @@ go-task 3.44.1
 gobang 0.1.0-alpha.5
 gpgme 2.0.0
 gpgmepp 2.0.0
-gping 1.19.0
+gping 1.20.1
 graphite2 1.3.14
 grex 1.4.5
-grpc 1.74.1
-harfbuzz 11.3.3
+grpc 1.74.1_1
+harfbuzz 11.4.1
 hexyl 0.16.0
-highway 1.2.0
+highway 1.3.0
 htmlq 0.4.0
 hub 2.14.2
 hurl 7.0.0
@@ -278,10 +278,10 @@ ncurses 6.5
 neovim 0.11.3
 nettle 3.10.2
 nmap 7.97
-node 24.5.0
+node 24.6.0
 npth 1.8
 nspr 4.37
-nss 3.114
+nss 3.115
 numpy 2.3.2
 nushell 0.106.1
 oh-my-posh 26.19.1
@@ -308,7 +308,7 @@ poppler 25.08.0
 portal 1.2.3
 posting 2.7.1
 procs 0.14.10
-protobuf 29.3_1
+protobuf 31.1
 pstree 2.40
 pv 1.9.34
 pycparser 2.22_1
@@ -317,7 +317,7 @@ python@3.12 3.12.11
 python@3.13 3.13.6
 qsv 6.0.1
 rav1e 0.8.1
-re2 20250805_1
+re2 20250812
 readline 8.3.1
 repomix 1.3.0
 resvg 0.45.1
@@ -354,7 +354,7 @@ tailspin 5.4.5
 tealdeer 1.7.2
 terminal-notifier 2.0.0
 tesseract 5.5.1
-theora 1.1.1
+theora 1.2.0
 thrift 0.22.0
 tokei 12.1.2
 tree 2.2.1
@@ -386,7 +386,7 @@ yt-dlp 2025.8.11
 z3 4.15.2
 zellij 0.43.1
 zeromq 4.3.5_2
-zimg 3.0.5
+zimg 3.0.6
 zoxide 0.9.8
 zsh 5.9
 zstd 1.5.7
@@ -403,19 +403,19 @@ go                                         1.25.0            ~/.config/mise/mise
 go:github.com/wailsapp/wails/v2/cmd/wails  2.10.2            ~/.config/mise/mise.toml  latest
 go:golang.org/x/tools/gopls                0.20.0            ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise.toml  latest
-node                                       24.5.0            ~/.config/mise/mise.toml  latest
+node                                       24.6.0            ~/.config/mise/mise.toml  latest
 npm:@anthropic-ai/claude-code              1.0.81            ~/.config/mise/mise.toml  latest
 npm:@google/gemini-cli                     0.1.21            ~/.config/mise/mise.toml  latest
-npm:@openai/codex                          0.21.0            ~/.config/mise/mise.toml  latest
+npm:@openai/codex                          0.22.0            ~/.config/mise/mise.toml  latest
 npm:ccexp                                  4.0.0             ~/.config/mise/mise.toml  latest
 npm:nuekit                                 1.0.0-RC.4        ~/.config/mise/mise.toml  latest
 pipx:docling                               2.44.0            ~/.config/mise/mise.toml  latest
 pipx:markitdown                            0.1.2             ~/.config/mise/mise.toml  latest
 pipx:ruff                                  0.12.9            ~/.config/mise/mise.toml  latest
-python                                     3.13.6            ~/.config/mise/mise.toml  latest
+python                                     3.13.7            ~/.config/mise/mise.toml  latest
 ruby                                       3.4.5             ~/.config/mise/mise.toml  latest
 rust                                       1.89.0 (symlink)  ~/.config/mise/mise.toml  latest
-uv                                         0.8.10            ~/.config/mise/mise.toml  latest
+uv                                         0.8.11            ~/.config/mise/mise.toml  latest
 
 RUSTUP/CARGO
 ------------
