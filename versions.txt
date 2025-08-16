@@ -75,7 +75,7 @@ BREW FORMULAS
 abseil 20250512.1
 age 1.2.1
 aom 3.12.1
-apache-arrow 21.0.0_2
+apache-arrow 21.0.0_3
 aribb24 1.0.4
 asciidoctor 2.0.23
 ast-grep 0.39.3
@@ -163,7 +163,7 @@ gpgmepp 2.0.0
 gping 1.20.1
 graphite2 1.3.14
 grex 1.4.5
-grpc 1.74.1_1
+grpc 1.74.1_2
 harfbuzz 11.4.1
 hexyl 0.16.0
 highway 1.3.0
@@ -308,7 +308,7 @@ poppler 25.08.0
 portal 1.2.3
 posting 2.7.1
 procs 0.14.10
-protobuf 31.1
+protobuf 32.0
 pstree 2.40
 pv 1.9.34
 pycparser 2.22_1
