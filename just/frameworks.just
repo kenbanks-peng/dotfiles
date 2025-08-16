@@ -9,9 +9,11 @@ default:
 
 #############  FRAMEWORKS  ##############
 
-# python
+# python project
 @python_init:
   uv init --build-backend uv
 
-
+# python package for pypi
+@python_package package:
+  uv init --build-backend uv --package {{package}}
 
