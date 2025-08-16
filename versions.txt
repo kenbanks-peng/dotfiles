@@ -288,7 +288,7 @@ oh-my-posh 26.19.1
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.5.1
+opencode 0.5.4
 opencore-amr 0.1.6
 openexr 3.3.5
 openjpeg 2.5.3
@@ -404,7 +404,7 @@ go:github.com/wailsapp/wails/v2/cmd/wails  2.10.2            ~/.config/mise/mise
 go:golang.org/x/tools/gopls                0.20.0            ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise.toml  latest
 node                                       24.6.0            ~/.config/mise/mise.toml  latest
-npm:@anthropic-ai/claude-code              1.0.81            ~/.config/mise/mise.toml  latest
+npm:@anthropic-ai/claude-code              1.0.83            ~/.config/mise/mise.toml  latest
 npm:@google/gemini-cli                     0.1.21            ~/.config/mise/mise.toml  latest
 npm:@openai/codex                          0.22.0            ~/.config/mise/mise.toml  latest
 npm:ccexp                                  4.0.0             ~/.config/mise/mise.toml  latest
