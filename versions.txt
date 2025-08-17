@@ -120,6 +120,7 @@ curlie 1.8.2
 dav1d 1.5.1
 dblab 0.33.0
 direnv 2.37.1
+doppler 3.75.1
 dotenvx 1.48.4
 dua-cli 2.31.0
 duf 0.8.1
@@ -151,6 +152,7 @@ glances 4.3.3_1
 glib 2.84.4
 glow 2.1.1
 gmp 6.3.0
+gnu-getopt 2.41.1
 gnu-sed 4.9
 gnupg 2.4.8
 gnutls 3.8.10
@@ -297,6 +299,7 @@ opus 1.5.2
 p11-kit 0.25.5
 pandoc 3.7.0.2
 pango 1.56.4
+pass 1.7.4
 pastel 0.10.0
 pcre2 10.45
 pet 1.0.1
@@ -315,6 +318,7 @@ pycparser 2.22_1
 pygit2 1.18.2
 python@3.12 3.12.11
 python@3.13 3.13.7
+qrencode 4.1.1
 qsv 6.0.1
 rav1e 0.8.1
 re2 20250812
