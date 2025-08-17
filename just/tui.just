@@ -53,4 +53,7 @@ tm:
 sniff:
   sudo sniffnet
 
-
+# gpg tui
+[no-exit-message]
+gpgtui:
+  gpg-tui

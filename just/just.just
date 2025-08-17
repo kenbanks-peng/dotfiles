@@ -63,3 +63,6 @@ mod vibe
 
 # frameworks
 mod frameworks
+
+# password
+mod password
