@@ -306,6 +306,8 @@ pcre2 10.45
 pet 1.0.1
 pgvector 0.8.0
 pinentry 1.3.2
+pinentry-mac 1.3.1.1
+pinentry-touchid 0.0.3
 pixman 0.46.4
 pls 0.0.1-beta.9
 poppler 25.08.0
@@ -377,7 +379,7 @@ wallpaper 2.3.2
 watchexec 2.3.2
 webp 1.6.0
 wget 1.25.0
-wgo 0.5.13
+wgo 0.5.14
 x264 r3108
 x265 4.1
 xh 0.24.1
