@@ -121,7 +121,7 @@ dav1d 1.5.1
 dblab 0.33.0
 direnv 2.37.1
 doppler 3.75.1
-dotenvx 1.48.4
+dotenvx 1.49.0
 dua-cli 2.31.0
 duf 0.8.1
 dust 1.2.3
@@ -291,7 +291,7 @@ oh-my-posh 26.19.1
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.5.5
+opencode 0.5.7
 opencore-amr 0.1.6
 openexr 3.3.5_1
 openjpeg 2.5.3
