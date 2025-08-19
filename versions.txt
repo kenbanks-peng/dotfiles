@@ -4,7 +4,7 @@ aerospace 0.19.2-Beta
 affinity-designer 2.6.3,3322
 affinity-photo 2.6.3,3322
 affinity-publisher 2.6.3,3322
-amazon-q 1.13.3
+amazon-q 1.14.0
 anybar 0.2.3
 anythingllm 1.8.5
 arc 1.108.0,66882
@@ -50,7 +50,7 @@ microsoft-edge 139.0.3405.102,8ca9915f-b139-421a-a251-73376a5b39fd
 notion 4.17.0
 notion-calendar 1.131.0
 notion-mail 0.0.37
-obsidian 1.8.10
+obsidian 1.9.10
 omnifocus 4.6.1
 onyx 4.8.2
 orbstack 1.11.3,19358
@@ -66,9 +66,9 @@ transmission 4.0.6
 typeface 4.1.0,4682
 vmware-fusion 13.6.3,24585314
 wezterm 20240203-110809,5046fc22
-zed 0.199.9
+zed 0.199.10
 zen 1.14.11b
-zoom 6.5.9.61929
+zoom 6.5.10.62715
 
 BREW FORMULAS
 -------------
@@ -139,7 +139,7 @@ fx 39.0.1
 fzf 0.65.1
 gawk 5.3.1
 gcc 15.1.0
-gemini-cli 0.1.21
+gemini-cli 0.1.22
 gettext 0.26
 gh 2.76.2
 giflib 5.2.2
@@ -411,7 +411,7 @@ go:github.com/wailsapp/wails/v2/cmd/wails  2.10.2            ~/.config/mise/mise
 go:golang.org/x/tools/gopls                0.20.0            ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise.toml  latest
 node                                       24.6.0            ~/.config/mise/mise.toml  latest
-npm:@anthropic-ai/claude-code              1.0.83            ~/.config/mise/mise.toml  latest
+npm:@anthropic-ai/claude-code              1.0.84            ~/.config/mise/mise.toml  latest
 npm:@google/gemini-cli                     0.1.22            ~/.config/mise/mise.toml  latest
 npm:@openai/codex                          0.22.0            ~/.config/mise/mise.toml  latest
 npm:ccexp                                  4.0.0             ~/.config/mise/mise.toml  latest
