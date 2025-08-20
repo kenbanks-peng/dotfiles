@@ -262,13 +262,20 @@ plugins {
 // eg. "https://example.com/my-plugin.wasm"
 load_plugins {
 }
+
+// UI configuration for better aesthetics
+ui {
+    pane_frames {
+        rounded_corners true
+        hide_session_name true
+    }
+}
  
 // Use a simplified UI without special fonts (arrow glyphs)
 // Options:
 //   - true
 //   - false (Default)
 // 
-// simplified_ui true
  
 // Choose the theme that is specified in the themes section.
 // Default: default
@@ -318,7 +325,7 @@ theme "catppuccin-mocha"
 //   - true (default, enabled)
 //   - false
 // 
-// pane_frames false
+pane_frames false
  
 // When attaching to an existing session with other users,
 // should the session be mirrored (true)
