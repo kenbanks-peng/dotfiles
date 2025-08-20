@@ -12,7 +12,7 @@ audacity 3.7.5
 boltai 1.36.4
 boop 1.4.0
 bruno 2.9.1
-claude 0.12.55,d55c63cae429e48c72cd9f306dbf2880a694e8fe
+claude 0.12.112,faff51446986f8dcd3b3e84faf68344b9cf8b096
 cursor 1.4.5,af58d92614edb1f72bdd756615d131bf8dfa5299
 daisydisk 4.31
 elephas 11.1087,11_1087
@@ -43,7 +43,7 @@ karabiner-elements 15.5.0
 keyclu 0.30.2
 kiro 0.1.42,202508020230
 languagetool-desktop 2.4.2
-local 9.2.6,6872
+local 9.2.7,6877
 mark-text 0.17.1
 microsoft-auto-update 4.79.25033028
 microsoft-edge 139.0.3405.102,8ca9915f-b139-421a-a251-73376a5b39fd
@@ -66,6 +66,7 @@ transmission 4.0.6
 typeface 4.1.0,4682
 vmware-fusion 13.6.3,24585314
 wezterm 20240203-110809,5046fc22
+whatsapp 2.25.21.80
 windterm 2.7.0
 zed 0.199.10
 zen 1.14.11b
@@ -118,6 +119,7 @@ coreutils 9.7
 cryptography 45.0.6
 csvtk 0.34.0
 curlie 1.8.2
+d2 0.7.1
 dav1d 1.5.1
 dblab 0.33.0
 direnv 2.37.1
@@ -391,7 +393,7 @@ xz 5.8.1
 yabai 7.1.15
 yazi 25.5.31
 yq 4.47.1
-yt-dlp 2025.8.11
+yt-dlp 2025.8.20
 z3 4.15.3
 zellij 0.43.1
 zeromq 4.3.5_2
@@ -399,7 +401,7 @@ zimg 3.0.6
 zoxide 0.9.8
 zsh 5.9
 zstd 1.5.7
-zx 8.8.0
+zx 8.8.1
 
 MISE PACKAGES
 -------------
@@ -413,12 +415,12 @@ go:github.com/wailsapp/wails/v2/cmd/wails  2.10.2            ~/.config/mise/mise
 go:golang.org/x/tools/gopls                0.20.0            ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise.toml  latest
 node                                       24.6.0            ~/.config/mise/mise.toml  latest
-npm:@anthropic-ai/claude-code              1.0.85            ~/.config/mise/mise.toml  latest
+npm:@anthropic-ai/claude-code              1.0.86            ~/.config/mise/mise.toml  latest
 npm:@google/gemini-cli                     0.1.22            ~/.config/mise/mise.toml  latest
 npm:@openai/codex                          0.23.0            ~/.config/mise/mise.toml  latest
 npm:ccexp                                  4.0.0             ~/.config/mise/mise.toml  latest
 npm:nuekit                                 1.0.0-RC.4        ~/.config/mise/mise.toml  latest
-pipx:docling                               2.45.0            ~/.config/mise/mise.toml  latest
+pipx:docling                               2.46.0            ~/.config/mise/mise.toml  latest
 pipx:markitdown                            0.1.2             ~/.config/mise/mise.toml  latest
 pipx:ruff                                  0.12.9            ~/.config/mise/mise.toml  latest
 python                                     3.13.7            ~/.config/mise/mise.toml  latest
