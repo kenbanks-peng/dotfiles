@@ -66,6 +66,7 @@ transmission 4.0.6
 typeface 4.1.0,4682
 vmware-fusion 13.6.3,24585314
 wezterm 20240203-110809,5046fc22
+windterm 2.7.0
 zed 0.199.10
 zen 1.14.11b
 zoom 6.5.10.62715
@@ -92,7 +93,7 @@ aws-c-s3 0.8.7
 aws-c-sdkutils 0.2.4
 aws-checksums 0.2.7
 aws-crt-cpp 0.33.5
-aws-sdk-cpp 1.11.615
+aws-sdk-cpp 1.11.630
 bandwhich 0.23.1
 bash 5.3.3
 bat 0.25.0_1
@@ -367,7 +368,7 @@ tmux 3.5a
 tokei 12.1.2
 tree 2.2.1
 tree-sitter 0.25.8_1
-turso 0.1.3
+turso 0.1.4
 typst 0.13.1
 uchardet 0.0.8
 unbound 1.23.1
@@ -414,7 +415,7 @@ go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise
 node                                       24.6.0            ~/.config/mise/mise.toml  latest
 npm:@anthropic-ai/claude-code              1.0.85            ~/.config/mise/mise.toml  latest
 npm:@google/gemini-cli                     0.1.22            ~/.config/mise/mise.toml  latest
-npm:@openai/codex                          0.22.0            ~/.config/mise/mise.toml  latest
+npm:@openai/codex                          0.23.0            ~/.config/mise/mise.toml  latest
 npm:ccexp                                  4.0.0             ~/.config/mise/mise.toml  latest
 npm:nuekit                                 1.0.0-RC.4        ~/.config/mise/mise.toml  latest
 pipx:docling                               2.45.0            ~/.config/mise/mise.toml  latest
