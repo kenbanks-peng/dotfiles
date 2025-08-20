@@ -146,7 +146,9 @@ local keys = {
    map('k', mod.SUPER, action.Multiple {
       action.ClearScrollback 'ScrollbackAndViewport',
       action.SendKey { key = 'L', mods = mod.CTRL },
-   }), -- clear and redraw prompt
+      action.SendString('tmux refresh-client\r'),
+   }), -- clear, redraw prompt, and refresh tmux
+
    map('c', mod.SUPER, action.CopyTo('Clipboard')),
    map('v', mod.SUPER, action.PasteFrom('Clipboard')),
 
