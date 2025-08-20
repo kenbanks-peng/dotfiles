@@ -35,7 +35,6 @@ ui {
 
 theme "catppuccin-mocha"
 default_mode "normal"
-default_shell "$SHELL"
 // default_cwd "/tmp"
 default_layout "default"
 // layout_dir "/tmp"
@@ -59,7 +58,7 @@ styled_underlines true
 // serialization_interval 10000
 disable_session_metadata false
 support_kitty_keyboard_protocol true
-stacked_resize true // Whether to stack panes when resizing beyond a certain size
+stacked_resize true
 show_startup_tips false
 release_notes true
 
