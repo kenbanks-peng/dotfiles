@@ -1,3 +1,3 @@
 return {
-  default_prog = { '/opt/homebrew/bin/zellij' }
+   default_prog = { '/opt/homebrew/bin/tmux' },
 }
