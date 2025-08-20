@@ -438,7 +438,8 @@ tmux_conf_urlscan_options="--compact --dedupe"
 set -g mouse on
 
 # remap splits to / and \
-bind -n M-/ split-window -h -c '#{pane_current_path}' #!important
+unbind / #!important
+bind / split-window -h -c '#{pane_current_path}' #!important
 bind \\ split-window -v -c '#{pane_current_path}' #!important
 
 # display a message after toggling mouse support
