@@ -417,7 +417,10 @@ tmux_conf_urlscan_options="--compact --dedupe"
 #set -g history-limit 10000
 
 # start with mouse mode enabled
-#set -g mouse on
+set -g mouse on
+
+# refresh status bar every second
+set -g status-interval 1
 
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
@@ -434,9 +437,6 @@ tmux_conf_urlscan_options="--compact --dedupe"
 # if you don't want Oh my tmux! to alter a binding or a setting, use #!important
 # bind c new-window -c '#{pane_current_path}' #!important
 
-# enable mouse mode
-set -g mouse on
-
 # remap splits to / and \
 unbind / #!important
 bind / split-window -h -c '#{pane_current_path}' #!important
@@ -447,6 +447,8 @@ bind m run "cut -c3- '#{TMUX_CONF}' | sh -s _toggle_mouse" \; display 'mouse #{?
 
 # move status line to top
 #set -g status-position top
+
+
 
 
 # -- tpm -----------------------------------------------------------------------
