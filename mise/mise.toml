@@ -17,11 +17,11 @@ rust = "latest"
 "go:honnef.co/go/tools/cmd/staticcheck" = "latest"
 "go:github.com/wailsapp/wails/v2/cmd/wails" = "latest"
 "pipx:markitdown" = "latest"
-"npm:@anthropic-ai/claude-code" = "latest"
 "npm:ccexp" = "latest"
 "pipx:docling" = "latest"
 "npm:@google/gemini-cli" = "latest"
 "pipx:seagoat" = "latest"
+"npm:n8n" = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = []

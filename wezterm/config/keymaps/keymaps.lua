@@ -80,7 +80,7 @@ local keys = {
    -- manage enter variants
    map("Enter", mod.NONE, action.SendString("\x0d")),
    map("Enter", mod.META, action.ToggleFullScreen),
-   map("Enter", mod.SHIFT, action.SendString("\x1b[13;2u")), -- escape sequence for shift+enter
+   map("Enter", mod.SHIFT, action.SendString("\n")), -- literal newline for shift+enter
    map("Enter", mod.CTRL, action.SendString("\x1b[13;5u")),  -- escape sequence for ctrl+enter
 
    -- APPLICATION
