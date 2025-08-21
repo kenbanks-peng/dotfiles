@@ -144,7 +144,7 @@ local keys = {
 
    -- CLEAR, COPY, PASTE, SEARCH
    map('k', mod.SUPER, action.Multiple {
-      action.SendString('zellij action switch-mode normal\r'),
+      -- action.SendString('zellij action switch-mode normal\r'),
       action.ClearScrollback 'ScrollbackAndViewport',
       action.SendKey { key = 'L', mods = mod.CTRL },
    }), -- clear, redraw prompt, and refresh tmux
