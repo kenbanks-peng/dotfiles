@@ -58,8 +58,8 @@ mod args
 # quarto
 mod quarto
 
-# vide coding
-mod vibe
+# ai
+mod ai
 
 # frameworks
 mod frameworks

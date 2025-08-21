@@ -29,3 +29,6 @@ cciw:
 cs *args:
   claude-squad {{args}}
 
+[no-exit-message]
+goat *args:
+  seagoat {{args}}

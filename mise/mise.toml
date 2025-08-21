@@ -21,6 +21,7 @@ rust = "latest"
 "npm:ccexp" = "latest"
 "pipx:docling" = "latest"
 "npm:@google/gemini-cli" = "latest"
+"pipx:seagoat" = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = []
