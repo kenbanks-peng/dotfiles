@@ -68,7 +68,7 @@ vmware-fusion 13.6.3,24585314
 wezterm 20240203-110809,5046fc22
 whatsapp 2.25.21.80
 windterm 2.7.0
-zed 0.199.10
+zed 0.200.4
 zen 1.14.11b
 zoom 6.5.10.62715
 
@@ -294,7 +294,7 @@ oh-my-posh 26.19.1
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.5.7
+opencode 0.5.12
 opencore-amr 0.1.6
 openexr 3.3.5_1
 openjpeg 2.5.3
