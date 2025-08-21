@@ -88,7 +88,7 @@ aws-c-common 0.12.4
 aws-c-compression 0.3.1
 aws-c-event-stream 0.5.6
 aws-c-http 0.10.4
-aws-c-io 0.21.3
+aws-c-io 0.21.4
 aws-c-mqtt 0.13.3
 aws-c-s3 0.8.7
 aws-c-sdkutils 0.2.4
