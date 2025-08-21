@@ -26,6 +26,9 @@ function app_icons() {
     "Elephas")
         icon_result="󰟆"
         ;;
+    "Claudia")
+        icon_result=":claude:"
+        ;;
 
     # from https://github.com/kvndrsslr/sketchybar-app-font
     "Live")
