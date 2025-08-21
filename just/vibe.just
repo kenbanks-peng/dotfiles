@@ -24,3 +24,8 @@ ccc:
 cciw:
     bunx @pimzino/claude-code-spec-workflow@latest
 
+# claude squad 
+[no-exit-message]
+cs *args:
+  claude-squad {{args}}
+
