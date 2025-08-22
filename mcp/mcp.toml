@@ -16,3 +16,9 @@ command = ["bunx", "@playwright/mcp@latest"]
 
 [mcp.mcp-server-chart]
 command = ["bunx", "@antv/mcp-server-chart"]
+
+[mcp.taskmaster-ai]
+command = ["bunx", "--package=task-master-ai", "task-master-ai"]
+
+[mcp.spec-workflow]
+command = ["bunx", "@pimzino/spec-workflow-mcp@latest"]

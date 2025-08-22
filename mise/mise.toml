@@ -22,6 +22,8 @@ rust = "latest"
 "npm:@google/gemini-cli" = "latest"
 "pipx:seagoat" = "latest"
 "npm:n8n" = "latest"
+"npm:task-master-ai" = "latest"
+"npm:@pimzino/claude-code-spec-workflow" = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = []

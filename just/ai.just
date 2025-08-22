@@ -5,7 +5,7 @@ set shell := ['zsh', '-cu']
 import 'colors.just'
 
 default:
-  @just --justfile "$JUST/vibe.just" --list | zsh -c "$JUSTGREP"
+  @just --justfile "$JUST/ai.just" --list | zsh -c "$JUSTGREP"
 
 ############  AGENTIC VIBE CODING  ############
 
@@ -35,5 +35,11 @@ goat *args:
   seagoat {{args}}
 
 # cc status line
+[no-exit-message]
 ccstatus:
   bunx ccstatusline@latest
+
+# cc spec workflow
+[no-exit-message]
+ccsw:
+  claude-code-spec-workflow
