@@ -29,6 +29,11 @@ cciw:
 cs *args:
   claude-squad {{args}}
 
+# search code
 [no-exit-message]
 goat *args:
   seagoat {{args}}
+
+# cc status line
+ccstatus:
+  bunx ccstatusline@latest
