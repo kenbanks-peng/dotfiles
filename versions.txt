@@ -397,7 +397,7 @@ xz 5.8.1
 yabai 7.1.15
 yazi 25.5.31
 yq 4.47.1
-yt-dlp 2025.8.20
+yt-dlp 2025.8.22
 z3 4.15.3
 zellij 0.43.1
 zeromq 4.3.5_2
