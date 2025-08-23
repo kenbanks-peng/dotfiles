@@ -13,7 +13,7 @@ boltai 1.36.4
 boop 1.4.0
 bruno 2.9.1
 claude 0.12.112,faff51446986f8dcd3b3e84faf68344b9cf8b096
-claude-code 1.0.88
+claude-code 1.0.89
 claudia 0.1.0
 cursor 1.5.2,460bf37e9a7b6a1f441c5faaae8d2c5dda059c18
 daisydisk 4.31
@@ -31,7 +31,7 @@ font-ibm-plex-serif 1.1.0
 font-indie-flower latest
 font-inter 4.1
 font-league-gothic 1.601
-font-monaspace 1.200
+font-monaspace 1.300
 font-sf-pro latest
 font-symbols-only-nerd-font 3.4.0
 font-tex-gyre-termes 2.004
@@ -107,7 +107,7 @@ btop 1.4.4
 c-ares 1.34.5
 c3c 0.7.4
 ca-certificates 2025-08-12
-caddy 2.10.0
+caddy 2.10.2
 cairo 1.18.4
 certifi 2025.8.3
 cffi 1.17.1_1
@@ -291,7 +291,7 @@ nmap 7.98
 node 24.6.0
 npth 1.8
 nspr 4.37
-nss 3.115
+nss 3.115.1
 numpy 2.3.2
 nushell 0.106.1
 oh-my-posh 26.19.1
@@ -425,7 +425,7 @@ npm:@pimzino/claude-code-spec-workflow     1.5.8             ~/.config/mise/mise
 npm:ccexp                                  4.0.0             ~/.config/mise/mise.toml  latest
 npm:n8n                                    1.107.4           ~/.config/mise/mise.toml  latest
 npm:nuekit                                 1.0.0-RC.4        ~/.config/mise/mise.toml  latest
-npm:task-master-ai                         0.25.0            ~/.config/mise/mise.toml  latest
+npm:task-master-ai                         0.25.1            ~/.config/mise/mise.toml  latest
 pipx:docling                               2.47.0            ~/.config/mise/mise.toml  latest
 pipx:markitdown                            0.1.2             ~/.config/mise/mise.toml  latest
 pipx:ruff                                  0.12.10           ~/.config/mise/mise.toml  latest
