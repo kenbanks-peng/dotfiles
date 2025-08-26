@@ -43,3 +43,9 @@ ccstatus:
 [no-exit-message]
 ccsw:
   claude-code-spec-workflow
+
+# abacus codellm cli
+[no-exit-message]
+llm:
+  codellm-cli
+

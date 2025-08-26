@@ -1,24 +1,53 @@
-[mcp.Obsidian]
-command = ["bunx", "mcp-obsidian", "/Users/ken/Documents/obsidian/Vault"]
+# npmjs - 350,000 weekly downloads
+[mcp.playwright]
+command = ["bunx", "@playwright/mcp@latest"]
+env = { OPENAI_API_KEY = "$OPENAI_API_KEY" }
 
+# npmjs - 273,000 downloads/month
 [mcp.context7]
 command = ["bunx", "@upstash/context7-mcp"]
 
-[mcp.mcp-sequentialthinking-tools]
-command = ["bunx", "mcp-sequentialthinking-tools"]
-env = { MAX_HISTORY_SIZE = "1000" }
+# npmjs - 196,000 downloads/month
+[mcp.filesystem]
+command = ["bunx", "@modelcontextprotocol/server-filesystem"]
 
-[mcp.github]
-command = ["docker", "run", "-i", "--rm", "-e", "GITHUB_PERSONAL_ACCESS_TOKEN", "ghcr.io/github/github-mcp-server"]
+# npmjs - 91,000 downloads/month
+[mcp.sequential-thinking]
+command = ["bunx", "@modelcontextprotocol/server-sequential-thinking"]
 
-[mcp.playwright]
-command = ["bunx", "@playwright/mcp@latest"]
+# npmjs - 65,000 weekly downloads
+[mcp.memory]
+command = ["bunx", "@modelcontextprotocol/server-memory"]
 
-[mcp.mcp-server-chart]
-command = ["bunx", "@antv/mcp-server-chart"]
-
+# npmjs - 33,500 weekly downloads
 [mcp.taskmaster-ai]
 command = ["bunx", "--package=task-master-ai", "task-master-ai"]
 
+# npmjs - 13000 weekly downloads
+[mcp.n8n-mcp]
+command = ["bunx", "n8n-mcp"]
+env = { MCP_MODE = "stdio", LOG_LEVEL = "error", DISABLE_CONSOLE_OUTPUT = "true" }
+
+# npmjs - 3000 weekly downloads
+[mcp.mcp-server-chart]
+command = ["bunx", "@antv/mcp-server-chart"]
+
+# npmjs - 1200 weekly downloads
 [mcp.spec-workflow]
 command = ["bunx", "@pimzino/spec-workflow-mcp@latest"]
+
+# npmjs - 750 weekly downloads
+[mcp.Obsidian]
+command = ["bunx", "mcp-obsidian", "$OBSIDIAN_VAULT"]
+
+# npmjs - 418 weekly downloads
+[mcp.github]
+command = ["docker", "run", "-i", "--rm", "-e", "GITHUB_PERSONAL_ACCESS_TOKEN", "ghcr.io/github/github-mcp-server"]
+env = { GITHUB_PERSONAL_ACCESS_TOKEN = "$GITHUB_PERSONAL_ACCESS_TOKEN" }
+
+# github
+[mcp.serena]
+type = "stdio"
+command = ["uvx", "--from", "git+https://github.com/oraios/serena", "serena", "start-mcp-server", "--context", "ide-assistant", "--project", "$PWD"]
+
+

@@ -26,7 +26,7 @@ editor command *args:
 
 # vscode editor - kiro / cursor / code  
 [no-exit-message]
-e *args: (editor "kiro" args)
+e *args: (editor "codellm" args)
 
 # nvim editor
 [no-exit-message]
