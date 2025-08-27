@@ -201,24 +201,12 @@ ml *$args:
   white="\033[97m"
   title="${purple}Tool                                       Version           Source                    Requested${white}"
 
-  if [ $len = 1 ]; then
-    # Map common aliases to actual prefixes (case-insensitive)
-    original_arg="$a1"
-    case "${a1:l}" in
-      rust) a1="cargo" ;;
-      python) a1="pipx" ;;
-      js|node) a1="npm" ;;
-    esac
+  # Helper function to filter ungrouped tools (excluding language-specific ones)
+  filter_ungrouped_tools() {
+    local ungrouped="$1"
+    local tools="go node python rust bun deno uv"
+    local filtered_ungrouped=""
 
-    echo -e "$title"
-
-    # Use the same logic as no-args case, but only for the specified category
-    # Define language tools that should be moved to their categories
-    tools="go node python rust bun deno uv"
-
-    # Show ungrouped tools (excluding language-specific ones)
-    ungrouped=$(echo "$mise_output" | grep -v ":")
-    filtered_ungrouped=""
     for line in ${(f)ungrouped}; do
       tool_name=$(echo "$line" | awk '{print $1}')
       is_tool=false
@@ -237,6 +225,73 @@ ml *$args:
       fi
     done
 
+    echo -e "$filtered_ungrouped"
+  }
+
+  # Helper function to get category tools for a specific tool category
+  get_category_tools() {
+    local tool_category="$1"
+    local ungrouped="$2"
+    local track_displayed="${3:-false}"
+    local category_tools=""
+
+    for line in ${(f)ungrouped}; do
+      tool_name=$(echo "$line" | awk '{print $1}')
+      should_include=false
+
+      case "$tool_category" in
+        cargo)
+          if [[ "$tool_name" == "rust" ]]; then
+            should_include=true
+          fi
+          ;;
+        npm)
+          if [[ "$tool_name" == "node" || "$tool_name" == "bun" || "$tool_name" == "deno" ]]; then
+            should_include=true
+          fi
+          ;;
+        pipx)
+          if [[ "$tool_name" == "python" || "$tool_name" == "uv" ]]; then
+            should_include=true
+          fi
+          ;;
+        *)
+          if [[ "$tool_name" == "$tool_category" ]]; then
+            should_include=true
+          fi
+          ;;
+      esac
+
+      if [[ "$should_include" == true ]]; then
+        if [[ -n "$category_tools" ]]; then
+          category_tools="$category_tools\n$line"
+        else
+          category_tools="$line"
+        fi
+        if [[ "$track_displayed" == true ]]; then
+          displayed_tools="$displayed_tools $tool_name"
+        fi
+      fi
+    done
+
+    echo -e "$category_tools"
+  }
+
+  if [ $len = 1 ]; then
+    # Map common aliases to actual prefixes (case-insensitive)
+    original_arg="$a1"
+    case "${a1:l}" in
+      rust) a1="cargo" ;;
+      python) a1="pipx" ;;
+      js|node) a1="npm" ;;
+    esac
+
+    echo -e "$title"
+
+    # Get ungrouped tools and filter them
+    ungrouped=$(echo "$mise_output" | grep -v ":")
+    filtered_ungrouped=$(filter_ungrouped_tools "$ungrouped")
+
     # Check if we have the requested category in the available tools
     available_tools=$(echo "$mise_output" | grep ":" | cut -d: -f1 | sort -u)
     category_exists=false
@@ -252,50 +307,8 @@ ml *$args:
       echo
       echo -e "${purple}$(echo "$a1" | tr '[:lower:]' '[:upper:]')${white}"
 
-      # First show any language tools that belong to this category
-      category_tools=""
-      for line in ${(f)ungrouped}; do
-        tool_name=$(echo "$line" | awk '{print $1}')
-        case "$a1" in
-          cargo)
-            if [[ "$tool_name" == "rust" ]]; then
-              if [[ -n "$category_tools" ]]; then
-                category_tools="$category_tools\n$line"
-              else
-                category_tools="$line"
-              fi
-            fi
-            ;;
-          npm)
-            if [[ "$tool_name" == "node" || "$tool_name" == "bun" || "$tool_name" == "deno" ]]; then
-              if [[ -n "$category_tools" ]]; then
-                category_tools="$category_tools\n$line"
-              else
-                category_tools="$line"
-              fi
-            fi
-            ;;
-          pipx)
-            if [[ "$tool_name" == "python" || "$tool_name" == "uv" ]]; then
-              if [[ -n "$category_tools" ]]; then
-                category_tools="$category_tools\n$line"
-              else
-                category_tools="$line"
-              fi
-            fi
-            ;;
-          *)
-            if [[ "$tool_name" == "$a1" ]]; then
-              if [[ -n "$category_tools" ]]; then
-                category_tools="$category_tools\n$line"
-              else
-                category_tools="$line"
-              fi
-            fi
-            ;;
-        esac
-      done
-
+      # Get category tools for this specific category
+      category_tools=$(get_category_tools "$a1" "$ungrouped")
       if [[ -n "$category_tools" ]]; then
         echo -e "$category_tools"
       fi
@@ -316,29 +329,9 @@ ml *$args:
   else
     echo -e "$title"
 
-    # Define language tools that should be moved to their categories
-    tools="go node python rust bun deno uv"
-
-    # Show ungrouped tools (excluding language-specific ones)
+    # Get ungrouped tools and filter them
     ungrouped=$(echo "$mise_output" | grep -v ":")
-    filtered_ungrouped=""
-    for line in ${(f)ungrouped}; do
-      tool_name=$(echo "$line" | awk '{print $1}')
-      is_tool=false
-      for tool in ${=tools}; do
-        if [[ "$tool_name" == "$tool" ]]; then
-          is_tool=true
-          break
-        fi
-      done
-      if [[ "$is_tool" == false ]]; then
-        if [[ -n "$filtered_ungrouped" ]]; then
-          filtered_ungrouped="$filtered_ungrouped\n$line"
-        else
-          filtered_ungrouped="$line"
-        fi
-      fi
-    done
+    filtered_ungrouped=$(filter_ungrouped_tools "$ungrouped")
 
     if [[ -n "$filtered_ungrouped" ]]; then
       echo -e "$filtered_ungrouped"
@@ -351,54 +344,8 @@ ml *$args:
       echo
       echo -e "${purple}$(echo "$tool" | tr '[:lower:]' '[:upper:]')${white}"
 
-      # First show any language tools that belong to this category
-      category_tools=""
-      for line in ${(f)ungrouped}; do
-        tool_name=$(echo "$line" | awk '{print $1}')
-        case "$tool" in
-          cargo)
-            if [[ "$tool_name" == "rust" ]]; then
-              if [[ -n "$category_tools" ]]; then
-                category_tools="$category_tools\n$line"
-              else
-                category_tools="$line"
-              fi
-              displayed_tools="$displayed_tools $tool_name"
-            fi
-            ;;
-          npm)
-            if [[ "$tool_name" == "node" || "$tool_name" == "bun" || "$tool_name" == "deno" ]]; then
-              if [[ -n "$category_tools" ]]; then
-                category_tools="$category_tools\n$line"
-              else
-                category_tools="$line"
-              fi
-              displayed_tools="$displayed_tools $tool_name"
-            fi
-            ;;
-          pipx)
-            if [[ "$tool_name" == "python" || "$tool_name" == "uv" ]]; then
-              if [[ -n "$category_tools" ]]; then
-                category_tools="$category_tools\n$line"
-              else
-                category_tools="$line"
-              fi
-              displayed_tools="$displayed_tools $tool_name"
-            fi
-            ;;
-          *)
-            if [[ "$tool_name" == "$tool" ]]; then
-              if [[ -n "$category_tools" ]]; then
-                category_tools="$category_tools\n$line"
-              else
-                category_tools="$line"
-              fi
-              displayed_tools="$displayed_tools $tool_name"
-            fi
-            ;;
-        esac
-      done
-
+      # Get category tools for this tool category
+      category_tools=$(get_category_tools "$tool" "$ungrouped" true)
       if [[ -n "$category_tools" ]]; then
         echo -e "$category_tools"
       fi
