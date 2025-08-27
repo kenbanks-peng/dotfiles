@@ -304,9 +304,6 @@ ml *$args:
 
     if [[ "$category_exists" == true ]]; then
 
-      echo
-      echo -e "${purple}$(echo "$a1" | tr '[:lower:]' '[:upper:]')${white}"
-
       # Get category tools for this specific category
       category_tools=$(get_category_tools "$a1" "$ungrouped")
       if [[ -n "$category_tools" ]]; then
