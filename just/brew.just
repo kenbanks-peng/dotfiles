@@ -212,27 +212,44 @@ bf *$args:
 
 #############  MISE ONLY  ##############
 
-# mise
+# mise list by category
 [no-exit-message]
 [script]
 ml *$args:
   a=(${=args})
   len=${#a[@]}
   a1=${a[1]}
-  
+
+  mise_output=$(mise list)
+  title="{{BrightMagenta}}Tool                                       Version           Source                    Requested{{White}}"
+
   if [ $len = 1 ]; then
-    if [ $a1 = "rust" ]; then
-      mise list | rg "^cargo:"
-    elif [ $a1 = "node" ]; then
-      mise list | rg "^npm:"
-    elif [ $a1 = "js" ]; then
-      mise list | rg "^npm:"
-    elif [ $a1 = "python" ]; then
-      mise list | rg "^pipx:"
-    else
-      mise list | rg "^$a1:"
+    # Map common aliases to actual prefixes
+    if [ "${a1:l}" = "rust" ]; then
+      a1="cargo"
+    elif [ "${a1:l}" = "python" ]; then
+      a1="pipx"
+    elif [ "${a1:l}" = "js" ]; then
+      a1="npm"
+    elif [ "${a1:l}" = "node" ]; then
+      a1="npm"
     fi
+
+    print $title
+    echo "$mise_output" | rg "^$a1:"
   else
-    mise list {{args}}
+    print $title
+    echo "$mise_output" | rg -v ":"
+
+    print
+    print "{{BrightMagenta}}CARGO{{White}}"
+    echo "$mise_output" | rg "^cargo:"
+
+    print
+    print "{{BrightMagenta}}NPM{{White}}"
+    echo "$mise_output" | rg "^npm:"
+
+    print
+    print "{{BrightMagenta}}PIPX{{White}}"
+    echo "$mise_output" | rg "^pipx:"
   fi
- 
