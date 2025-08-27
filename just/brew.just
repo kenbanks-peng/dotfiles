@@ -221,35 +221,30 @@ ml *$args:
   a1=${a[1]}
 
   mise_output=$(mise list)
-  title="{{BrightMagenta}}Tool                                       Version           Source                    Requested{{White}}"
+  purple="\033[95m"
+  white="\033[97m"
+  title="${purple}Tool                                       Version           Source                    Requested${white}"
 
   if [ $len = 1 ]; then
-    # Map common aliases to actual prefixes
-    if [ "${a1:l}" = "rust" ]; then
-      a1="cargo"
-    elif [ "${a1:l}" = "python" ]; then
-      a1="pipx"
-    elif [ "${a1:l}" = "js" ]; then
-      a1="npm"
-    elif [ "${a1:l}" = "node" ]; then
-      a1="npm"
-    fi
-
-    print $title
-    echo "$mise_output" | rg "^$a1:"
+    # Map common aliases to actual prefixes (case-insensitive)
+    case "${a1:l}" in
+      rust) a1="cargo" ;;
+      python) a1="pipx" ;;
+      js|node) a1="npm" ;;
+    esac
+    
+    echo -e "$title"
+    echo "$mise_output" | grep "^$a1:"
   else
-    print $title
-    echo "$mise_output" | rg -v ":"
-
-    print
-    print "{{BrightMagenta}}CARGO{{White}}"
-    echo "$mise_output" | rg "^cargo:"
-
-    print
-    print "{{BrightMagenta}}NPM{{White}}"
-    echo "$mise_output" | rg "^npm:"
-
-    print
-    print "{{BrightMagenta}}PIPX{{White}}"
-    echo "$mise_output" | rg "^pipx:"
+    echo -e "$title"
+    echo "$mise_output" | grep -v ":"
+    
+    # Get unique tool prefixes from mise output
+    tools=$(echo "$mise_output" | grep ":" | cut -d: -f1 | sort -u)
+    
+    for tool in ${=tools}; do
+      echo
+      echo -e "${purple}$(echo "$tool" | tr '[:lower:]' '[:upper:]')${white}"
+      echo "$mise_output" | grep "^$tool:"
+    done
   fi
