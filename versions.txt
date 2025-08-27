@@ -57,7 +57,7 @@ onyx 4.8.3
 orbstack 2.0.1,19784
 pdf-pals 1.9.0
 quarto 1.7.33
-raycast 1.102.5
+raycast 1.102.6
 screen-studio 3.4.7-3863
 sf-symbols 6
 skim 1.7.11
@@ -145,7 +145,7 @@ fx 39.0.2
 fzf 0.65.1
 gawk 5.3.1
 gcc 15.1.0
-gemini-cli 0.1.22
+gemini-cli 0.2.1
 gettext 0.26
 gh 2.78.0
 giflib 5.2.2
@@ -381,6 +381,7 @@ uchardet 0.0.8
 unbound 1.23.1
 unibilium 2.1.2
 utf8proc 2.10.0
+uvwasi 0.0.21
 vapoursynth 72
 vulkan-headers 1.4.325
 vulkan-loader 1.4.325
@@ -424,7 +425,7 @@ npm:@google/gemini-cli                     0.2.1             ~/.config/mise/mise
 npm:@openai/codex                          0.25.0            ~/.config/mise/mise.toml  latest
 npm:@pimzino/claude-code-spec-workflow     1.5.8             ~/.config/mise/mise.toml  latest
 npm:ccexp                                  4.0.0             ~/.config/mise/mise.toml  latest
-npm:n8n                                    1.108.1           ~/.config/mise/mise.toml  latest
+npm:n8n                                    1.108.2           ~/.config/mise/mise.toml  latest
 npm:nuekit                                 1.0.0-RC.4        ~/.config/mise/mise.toml  latest
 npm:task-master-ai                         0.25.1            ~/.config/mise/mise.toml  latest
 pipx:docling                               2.48.0            ~/.config/mise/mise.toml  latest
