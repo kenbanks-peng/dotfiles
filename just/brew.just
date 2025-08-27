@@ -5,7 +5,7 @@ set shell := ['zsh', '-cu']
 import 'colors.just'
 
 default:
-  @just --justfile "$JUST/brew.just" --list | zsh -c "$JUSTGREP"
+  @just --list
 
 #############  BREW + MISE  ##############
 
@@ -13,30 +13,6 @@ default:
 [no-exit-message]
 [script]
 o:
-  print
-  print "{{BrightCyan}}BREW: mac apps, binaries"
-  print -- "------------------------{{BrightBlue}}"
-  brew outdated --greedy --verbose
-  print
-  print "{{BrightCyan}}MISE: uv, bun, go, node, python, git"
-  print -- "------------------------------------{{BrightBlue}}"
-  mise outdated --bump --silent
-  print
-  print "{{BrightCyan}}RUSTUP: rust"
-  print -- "------------------------------------{{BrightBlue}}"
-  rustup check
-  # uv tool upgrade --all
-  # cargo install-update -a
-  # -bun -g update
-  # -gup update
-
-# update
-[no-exit-message]
-up: _update versions
-
-[no-exit-message]
-[script]
-_update:
   print
   print "{{BrightCyan}}BREW: mac apps, binaries"
   print -- "------------------------{{BrightBlue}}"
@@ -227,6 +203,7 @@ ml *$args:
 
   if [ $len = 1 ]; then
     # Map common aliases to actual prefixes (case-insensitive)
+    original_arg="$a1"
     case "${a1:l}" in
       rust) a1="cargo" ;;
       python) a1="pipx" ;;
@@ -234,7 +211,108 @@ ml *$args:
     esac
 
     echo -e "$title"
-    echo "$mise_output" | grep "^$a1:"
+
+    # Use the same logic as no-args case, but only for the specified category
+    # Define language tools that should be moved to their categories
+    tools="go node python rust bun deno uv"
+
+    # Show ungrouped tools (excluding language-specific ones)
+    ungrouped=$(echo "$mise_output" | grep -v ":")
+    filtered_ungrouped=""
+    for line in ${(f)ungrouped}; do
+      tool_name=$(echo "$line" | awk '{print $1}')
+      is_tool=false
+      for tool in ${=tools}; do
+        if [[ "$tool_name" == "$tool" ]]; then
+          is_tool=true
+          break
+        fi
+      done
+      if [[ "$is_tool" == false ]]; then
+        if [[ -n "$filtered_ungrouped" ]]; then
+          filtered_ungrouped="$filtered_ungrouped\n$line"
+        else
+          filtered_ungrouped="$line"
+        fi
+      fi
+    done
+
+    # Check if we have the requested category in the available tools
+    available_tools=$(echo "$mise_output" | grep ":" | cut -d: -f1 | sort -u)
+    category_exists=false
+    for tool in ${=available_tools}; do
+      if [[ "$tool" == "$a1" ]]; then
+        category_exists=true
+        break
+      fi
+    done
+
+    if [[ "$category_exists" == true ]]; then
+
+      echo
+      echo -e "${purple}$(echo "$a1" | tr '[:lower:]' '[:upper:]')${white}"
+
+      # First show any language tools that belong to this category
+      category_tools=""
+      for line in ${(f)ungrouped}; do
+        tool_name=$(echo "$line" | awk '{print $1}')
+        case "$a1" in
+          cargo)
+            if [[ "$tool_name" == "rust" ]]; then
+              if [[ -n "$category_tools" ]]; then
+                category_tools="$category_tools\n$line"
+              else
+                category_tools="$line"
+              fi
+            fi
+            ;;
+          npm)
+            if [[ "$tool_name" == "node" || "$tool_name" == "bun" || "$tool_name" == "deno" ]]; then
+              if [[ -n "$category_tools" ]]; then
+                category_tools="$category_tools\n$line"
+              else
+                category_tools="$line"
+              fi
+            fi
+            ;;
+          pipx)
+            if [[ "$tool_name" == "python" || "$tool_name" == "uv" ]]; then
+              if [[ -n "$category_tools" ]]; then
+                category_tools="$category_tools\n$line"
+              else
+                category_tools="$line"
+              fi
+            fi
+            ;;
+          *)
+            if [[ "$tool_name" == "$a1" ]]; then
+              if [[ -n "$category_tools" ]]; then
+                category_tools="$category_tools\n$line"
+              else
+                category_tools="$line"
+              fi
+            fi
+            ;;
+        esac
+      done
+
+      if [[ -n "$category_tools" ]]; then
+        echo -e "$category_tools"
+      fi
+
+      # Then show the regular category tools
+      echo "$mise_output" | grep "^$a1:"
+    else
+      # Fallback to original behavior if category doesn't exist
+      # First show the standalone tool if it exists (for cases like 'ml go')
+      if [[ "$original_arg" != "$a1" ]]; then
+        # If we mapped the argument, show the original standalone tool
+        echo "$mise_output" | grep -v ":" | grep "^$original_arg "
+      fi
+
+      # Then show the prefixed tools
+      echo "$mise_output" | grep "^$a1:"
+    fi
   else
     echo -e "$title"
 
