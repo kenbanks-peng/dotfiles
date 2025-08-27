@@ -232,19 +232,100 @@ ml *$args:
       python) a1="pipx" ;;
       js|node) a1="npm" ;;
     esac
-    
+
     echo -e "$title"
     echo "$mise_output" | grep "^$a1:"
   else
     echo -e "$title"
-    echo "$mise_output" | grep -v ":"
-    
+
+    # Define language tools that should be moved to their categories
+    tools="go node python rust bun deno uv"
+
+    # Show ungrouped tools (excluding language-specific ones)
+    ungrouped=$(echo "$mise_output" | grep -v ":")
+    filtered_ungrouped=""
+    for line in ${(f)ungrouped}; do
+      tool_name=$(echo "$line" | awk '{print $1}')
+      is_tool=false
+      for tool in ${=tools}; do
+        if [[ "$tool_name" == "$tool" ]]; then
+          is_tool=true
+          break
+        fi
+      done
+      if [[ "$is_tool" == false ]]; then
+        if [[ -n "$filtered_ungrouped" ]]; then
+          filtered_ungrouped="$filtered_ungrouped\n$line"
+        else
+          filtered_ungrouped="$line"
+        fi
+      fi
+    done
+
+    if [[ -n "$filtered_ungrouped" ]]; then
+      echo -e "$filtered_ungrouped"
+    fi
+
     # Get unique tool prefixes from mise output
     tools=$(echo "$mise_output" | grep ":" | cut -d: -f1 | sort -u)
-    
+
     for tool in ${=tools}; do
       echo
       echo -e "${purple}$(echo "$tool" | tr '[:lower:]' '[:upper:]')${white}"
+
+      # First show any language tools that belong to this category
+      category_tools=""
+      for line in ${(f)ungrouped}; do
+        tool_name=$(echo "$line" | awk '{print $1}')
+        case "$tool" in
+          cargo)
+            if [[ "$tool_name" == "rust" ]]; then
+              if [[ -n "$category_tools" ]]; then
+                category_tools="$category_tools\n$line"
+              else
+                category_tools="$line"
+              fi
+              displayed_tools="$displayed_tools $tool_name"
+            fi
+            ;;
+          npm)
+            if [[ "$tool_name" == "node" || "$tool_name" == "bun" || "$tool_name" == "deno" ]]; then
+              if [[ -n "$category_tools" ]]; then
+                category_tools="$category_tools\n$line"
+              else
+                category_tools="$line"
+              fi
+              displayed_tools="$displayed_tools $tool_name"
+            fi
+            ;;
+          pipx)
+            if [[ "$tool_name" == "python" || "$tool_name" == "uv" ]]; then
+              if [[ -n "$category_tools" ]]; then
+                category_tools="$category_tools\n$line"
+              else
+                category_tools="$line"
+              fi
+              displayed_tools="$displayed_tools $tool_name"
+            fi
+            ;;
+          *)
+            if [[ "$tool_name" == "$tool" ]]; then
+              if [[ -n "$category_tools" ]]; then
+                category_tools="$category_tools\n$line"
+              else
+                category_tools="$line"
+              fi
+              displayed_tools="$displayed_tools $tool_name"
+            fi
+            ;;
+        esac
+      done
+
+      if [[ -n "$category_tools" ]]; then
+        echo -e "$category_tools"
+      fi
+
+      # Then show the regular category tools
       echo "$mise_output" | grep "^$tool:"
     done
   fi
