@@ -243,6 +243,17 @@ ml *$args:
     npm         "NODE"
   )
 
+  # Create reverse mapping: category -> list of tools that belong to it
+  # This is derived from tool_aliases to avoid duplication
+  typeset -A category_tools_map
+  for alias category in ${(kv)tool_aliases}; do
+    if [[ -n "${category_tools_map[$category]}" ]]; then
+      category_tools_map[$category]="${category_tools_map[$category]} $alias"
+    else
+      category_tools_map[$category]="$alias"
+    fi
+  done
+
   mise_output=$(mise list)
   purple="\033[95m"
   white="\033[97m"
@@ -287,28 +298,21 @@ ml *$args:
       tool_name=$(echo "$line" | awk '{print $1}')
       should_include=false
 
-      case "$tool_category" in
-        cargo)
-          if [[ "$tool_name" == "rust" ]]; then
+      # Check if this tool belongs to the requested category using our reverse mapping
+      if [[ -n "${category_tools_map[$tool_category]}" ]]; then
+        # Check if tool_name is in the list of tools for this category
+        for category_tool in ${=category_tools_map[$tool_category]}; do
+          if [[ "$tool_name" == "$category_tool" ]]; then
             should_include=true
+            break
           fi
-          ;;
-        npm)
-          if [[ "$tool_name" == "node" || "$tool_name" == "bun" || "$tool_name" == "deno" ]]; then
-            should_include=true
-          fi
-          ;;
-        pipx)
-          if [[ "$tool_name" == "python" || "$tool_name" == "uv" ]]; then
-            should_include=true
-          fi
-          ;;
-        *)
-          if [[ "$tool_name" == "$tool_category" ]]; then
-            should_include=true
-          fi
-          ;;
-      esac
+        done
+      else
+        # Fallback: direct match (for categories not in our mapping)
+        if [[ "$tool_name" == "$tool_category" ]]; then
+          should_include=true
+        fi
+      fi
 
       if [[ "$should_include" == true ]]; then
         if [[ -n "$category_tools" ]]; then
