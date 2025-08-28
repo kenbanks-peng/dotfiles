@@ -228,6 +228,17 @@ ml *$args:
     echo -e "$filtered_ungrouped"
   }
 
+  # Helper function to get display name for tool categories
+  get_display_name() {
+    local tool="$1"
+    case "$tool" in
+      cargo) echo "RUST" ;;
+      pipx) echo "PYTHON" ;;
+      npm) echo "NODE" ;;
+      *) echo "$(echo "$tool" | tr '[:lower:]' '[:upper:]')" ;;
+    esac
+  }
+
   # Helper function to get category tools for a specific tool category
   get_category_tools() {
     local tool_category="$1"
@@ -339,7 +350,7 @@ ml *$args:
 
     for tool in ${=tools}; do
       echo
-      echo -e "${purple}$(echo "$tool" | tr '[:lower:]' '[:upper:]')${white}"
+      echo -e "${purple}$(get_display_name "$tool")${white}"
 
       # Get category tools for this tool category
       category_tools=$(get_category_tools "$tool" "$ungrouped" true)
