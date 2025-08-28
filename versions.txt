@@ -11,11 +11,11 @@ arc 1.110.0,67696
 audacity 3.7.5
 boltai 1.36.4
 boop 1.4.0
-bruno 2.9.1
+bruno 2.10.0
 claude 0.12.112,faff51446986f8dcd3b3e84faf68344b9cf8b096
 claude-code 1.0.96
 claudia 0.1.0
-cursor 1.5.5,823f58d4f60b795a6aefb9955933f3a2f0331d7b
+cursor 1.5.7,6aa7b3af0d578b9a3aa3ab443571e1a51ebb4e83
 daisydisk 4.31
 elephas 11.1087,11_1087
 espanso 2.2.1
@@ -47,7 +47,7 @@ languagetool-desktop 2.5.1
 local 9.2.7,6877
 mark-text 0.17.1
 microsoft-auto-update 4.79.25033028
-microsoft-edge 139.0.3405.119,4411985f-e977-4af3-bd60-a2e52dc0af91
+microsoft-edge 139.0.3405.125,54100b99-6d2e-42e1-bc8e-35e863acb814
 notion 4.18.1
 notion-calendar 1.131.0
 notion-mail 0.0.37
