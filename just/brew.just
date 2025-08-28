@@ -219,7 +219,7 @@ ml *$args:
 
   # Define tool category aliases and display names
   # These map user-friendly names to the actual mise category prefixes
-  typeset -A tool_aliases
+  declare -A tool_aliases
   tool_aliases=(
     # Rust ecosystem
     rust        cargo
@@ -236,7 +236,7 @@ ml *$args:
   )
 
   # Display names for mise categories (used in output headers)
-  typeset -A category_display_names
+  declare -A category_display_names
   category_display_names=(
     cargo       "RUST"
     pipx        "PYTHON"
@@ -245,7 +245,7 @@ ml *$args:
 
   # Create reverse mapping: category -> list of tools that belong to it
   # This is derived from tool_aliases to avoid duplication
-  typeset -A category_tools_map
+  declare -A category_tools_map
   for alias category in ${(kv)tool_aliases}; do
     if [[ -n "${category_tools_map[$category]}" ]]; then
       category_tools_map[$category]="${category_tools_map[$category]} $alias"
