@@ -13,7 +13,7 @@ boltai 1.36.4
 boop 1.4.0
 bruno 2.9.1
 claude 0.12.112,faff51446986f8dcd3b3e84faf68344b9cf8b096
-claude-code 1.0.93
+claude-code 1.0.95
 claudia 0.1.0
 cursor 1.5.5,823f58d4f60b795a6aefb9955933f3a2f0331d7b
 daisydisk 4.31
@@ -399,7 +399,7 @@ xz 5.8.1
 yabai 7.1.15
 yazi 25.5.31
 yq 4.47.1
-yt-dlp 2025.8.22
+yt-dlp 2025.8.27
 z3 4.15.3
 zellij 0.43.1
 zeromq 4.3.5_2
@@ -420,7 +420,7 @@ go                                         1.25.0            ~/.config/mise/mise
 go:github.com/wailsapp/wails/v2/cmd/wails  2.10.2            ~/.config/mise/mise.toml  latest
 go:golang.org/x/tools/gopls                0.20.0            ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise.toml  latest
-node                                       24.6.0            ~/.config/mise/mise.toml  latest
+node                                       24.7.0            ~/.config/mise/mise.toml  latest
 npm:@google/gemini-cli                     0.2.1             ~/.config/mise/mise.toml  latest
 npm:@openai/codex                          0.25.0            ~/.config/mise/mise.toml  latest
 npm:@pimzino/claude-code-spec-workflow     1.5.8             ~/.config/mise/mise.toml  latest
