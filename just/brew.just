@@ -214,9 +214,8 @@ bf *$args:
 [no-exit-message]
 [script]
 ml *$args:
-  a=(${=args})
-  len=${#a[@]}
-  a1=${a[1]}
+  set -- ${=args}
+  len=$#
 
   mise_output=$(mise list)
   purple="\033[95m"
@@ -312,11 +311,13 @@ ml *$args:
 
   if [ $len = 1 ]; then
     # Map common aliases to actual prefixes (case-insensitive)
-    original_arg="$a1"
-    case "${a1:l}" in
-      rust) a1="cargo" ;;
-      python) a1="pipx" ;;
-      js|node) a1="npm" ;;
+    original_arg=$1
+    arg_lower="${(L)1}"
+    case "$arg_lower" in
+      cargo|rust) a1="cargo" ;;
+      pipx|python|uv) a1="pipx" ;;
+      npm|js|node|bun|deno) a1="npm" ;;
+      *) a1="$1" ;;
     esac
 
     echo -e "$title"
@@ -338,7 +339,7 @@ ml *$args:
     if [[ "$category_exists" == true ]]; then
 
       # Get category tools for this specific category
-      category_tools=$(get_category_tools "$a1" "$ungrouped")
+      category_tools=$(get_category_tools $a1 "$ungrouped")
       if [[ -n "$category_tools" ]]; then
         echo -e "$category_tools"
       fi
