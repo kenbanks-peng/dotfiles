@@ -195,11 +195,10 @@ bz:
 [no-exit-message]
 [script]
 bf *$args:
-  a=(${=args})
-  len=${#a[@]}
-  a1=${a[1]}
+  set -- ${=args}
+  len=$#
 
-  if [ $len = 1 ] && [ "$a1" = "installed" ]; then
+  if [ $len = 1 ] && [ $1 = "installed" ]; then
     print "brew fonts installed"
     print
     brew list --cask | rg "font-"
