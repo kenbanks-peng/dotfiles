@@ -217,6 +217,32 @@ ml *$args:
   set -- ${=args}
   len=$#
 
+  # Define tool category aliases and display names
+  # These map user-friendly names to the actual mise category prefixes
+  typeset -A tool_aliases
+  tool_aliases=(
+    # Rust ecosystem
+    rust        cargo
+
+    # Python ecosystem
+    python      pipx
+    uv          pipx
+
+    # JavaScript/Node ecosystem
+    js          npm
+    node        npm
+    bun         npm
+    deno        npm
+  )
+
+  # Display names for mise categories (used in output headers)
+  typeset -A category_display_names
+  category_display_names=(
+    cargo       "RUST"
+    pipx        "PYTHON"
+    npm         "NODE"
+  )
+
   mise_output=$(mise list)
   purple="\033[95m"
   white="\033[97m"
@@ -225,7 +251,8 @@ ml *$args:
   # Helper function to filter ungrouped tools (excluding language-specific ones)
   filter_ungrouped_tools() {
     local ungrouped="$1"
-    local tools="go node python rust bun deno uv"
+    # Get all aliased tools plus standalone tools like 'go'
+    local tools="${(k)tool_aliases} go"
     local filtered_ungrouped=""
 
     for line in ${(f)ungrouped}; do
@@ -247,17 +274,6 @@ ml *$args:
     done
 
     echo -e "$filtered_ungrouped"
-  }
-
-  # Helper function to get display name for tool categories
-  get_display_name() {
-    local tool="$1"
-    case "$tool" in
-      cargo) echo "RUST" ;;
-      pipx) echo "PYTHON" ;;
-      npm) echo "NODE" ;;
-      *) echo "$(echo "$tool" | tr '[:lower:]' '[:upper:]')" ;;
-    esac
   }
 
   # Helper function to get category tools for a specific tool category
@@ -310,15 +326,12 @@ ml *$args:
   }
 
   if [ $len = 1 ]; then
-    # Map common aliases to actual prefixes (case-insensitive)
+    # Map aliases to actual prefixes using the predefined mapping
     original_arg=$1
     arg_lower="${(L)1}"
-    case "$arg_lower" in
-      cargo|rust) a1="cargo" ;;
-      pipx|python|uv) a1="pipx" ;;
-      npm|js|node|bun|deno) a1="npm" ;;
-      *) a1="$1" ;;
-    esac
+
+    # Check if the argument (case-insensitive) exists in our alias mapping
+    a1="${tool_aliases[$arg_lower]:-$1}"
 
     echo -e "$title"
 
@@ -373,7 +386,7 @@ ml *$args:
 
     for tool in ${=tools}; do
       echo
-      echo -e "${purple}$(get_display_name "$tool")${white}"
+      echo -e "${purple}${category_display_names[$tool]:-$(echo "$tool" | tr '[:lower:]' '[:upper:]')}${white}"
 
       # Get category tools for this tool category
       category_tools=$(get_category_tools "$tool" "$ungrouped" true)
