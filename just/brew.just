@@ -115,17 +115,16 @@ versions:
 [no-exit-message]
 [script]
 bl *$args:
-  a=(${=args})
-  len=${#a[@]}
-  a1=${a[1]}
+  set -- ${=args}
+  len=$#
 
-  if [ $len = 1 ] && [ "$a1" = "leaves" ]; then
+  if [ $len = 1 ] && [ $1 = "leaves" ]; then
     print "brew leaves"
     print
     print "{{BrightMagenta}}USER-INSTALLED LEAF FORMULAS"
     print -- "----------------------------{{BrightCyan}}"
     brew leaves --installed-on-request
-  elif [ $len = 1 ] && [ "$a1" = "apps" ]; then
+  elif [ $len = 1 ] && [ $1 = "apps" ]; then
     print "brew list casks"
     print
     print "{{BrightMagenta}}CASK APPS"
