@@ -16,6 +16,30 @@ o:
   print
   print "{{BrightCyan}}BREW: mac apps, binaries"
   print -- "------------------------{{BrightBlue}}"
+  brew outdated --greedy --verbose
+  print
+  print "{{BrightCyan}}MISE: uv, bun, go, node, python, git"
+  print -- "------------------------------------{{BrightBlue}}"
+  mise outdated --bump --silent
+  print
+  print "{{BrightCyan}}RUSTUP: rust"
+  print -- "------------------------------------{{BrightBlue}}"
+  rustup check
+  # uv tool upgrade --all
+  # cargo install-update -a
+  # -bun -g update
+  # -gup update
+
+# update
+[no-exit-message]
+up: _update versions
+
+[no-exit-message]
+[script]
+_update:
+  print
+  print "{{BrightCyan}}BREW: mac apps, binaries"
+  print -- "------------------------{{BrightBlue}}"
   brew upgrade --greedy
   brew cleanup
   print
@@ -27,6 +51,7 @@ o:
   print "{{BrightCyan}}RUSTUP: rust"
   print -- "------------------------------------{{BrightBlue}}"
   rustup update
+
 
 # brew versions
 [no-exit-message]
