@@ -5,7 +5,7 @@ set shell := ['zsh', '-cu']
 import 'colors.just'
 
 default:
-  @just --list
+  @just --justfile "$JUST/brew.just" --list | zsh -c "$JUSTGREP"
 
 #############  BREW + MISE  ##############
 
@@ -174,7 +174,6 @@ bt *args:
   else
     brew leaves | xargs brew deps --tree --formula
   fi
-
 
 # brew packages that depend on
 [no-exit-message]
