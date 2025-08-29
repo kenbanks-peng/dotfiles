@@ -422,7 +422,7 @@ go:golang.org/x/tools/gopls                0.20.0            ~/.config/mise/mise
 go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise.toml  latest
 node                                       24.7.0            ~/.config/mise/mise.toml  latest
 npm:@google/gemini-cli                     0.2.2             ~/.config/mise/mise.toml  latest
-npm:@openai/codex                          0.25.0            ~/.config/mise/mise.toml  latest
+npm:@openai/codex                          0.26.0            ~/.config/mise/mise.toml  latest
 npm:@pimzino/claude-code-spec-workflow     1.5.8             ~/.config/mise/mise.toml  latest
 npm:ccexp                                  4.0.0             ~/.config/mise/mise.toml  latest
 npm:n8n                                    1.108.2           ~/.config/mise/mise.toml  latest
@@ -435,7 +435,7 @@ pipx:seagoat                               0.54.17           ~/.config/mise/mise
 python                                     3.13.7            ~/.config/mise/mise.toml  latest
 ruby                                       3.4.5             ~/.config/mise/mise.toml  latest
 rust                                       1.89.0 (symlink)  ~/.config/mise/mise.toml  latest
-uv                                         0.8.13            ~/.config/mise/mise.toml  latest
+uv                                         0.8.14            ~/.config/mise/mise.toml  latest
 
 RUSTUP/CARGO
 ------------
