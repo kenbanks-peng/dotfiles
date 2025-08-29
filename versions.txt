@@ -69,8 +69,8 @@ vmware-fusion 13.6.3,24585314
 wezterm 20240203-110809,5046fc22
 whatsapp 2.25.22.79
 windterm 2.7.0
-zed 0.201.5
-zen 1.15b
+zed 0.201.6
+zen 1.15.1b
 zoom 6.5.11.62892
 
 BREW FORMULAS
