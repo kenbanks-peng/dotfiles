@@ -12,7 +12,7 @@ audacity 3.7.5
 boltai 1.36.4
 boop 1.4.0
 bruno 2.10.0
-claude 0.12.112,faff51446986f8dcd3b3e84faf68344b9cf8b096
+claude 0.12.125,b3e63e439cfd5c7bf55297b41368c8d637592960
 claude-code 1.0.96
 claudia 0.1.0
 cursor 1.5.7,6aa7b3af0d578b9a3aa3ab443571e1a51ebb4e83
@@ -181,7 +181,7 @@ hub 2.14.2
 hurl 7.0.0
 hyperfine 1.19.0
 icu4c@77 77.1
-imagemagick 7.1.2-2
+imagemagick 7.1.2-2_1
 imath 3.2.1
 imgcat 1.0.22
 isl 0.27
