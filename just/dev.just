@@ -51,21 +51,10 @@ uia component:
 i *libs:
   bun install {{libs}}
 
-# git origin
-[no-exit-message]
-gr:
-  git remote -v
-
 # count lines of code
 [no-exit-message]
 cloc:
   tokei
-
-# needs to be hooked into git
-# git delta viewer
-[no-exit-message]
-gdelta *args:
-  delta {{args}}
 
 # biome lint
 [no-exit-message]
@@ -76,20 +65,10 @@ gdelta *args:
   print -- "----------------------------{{BrightCyan}}"
   biome check --write
 
-# guthub cli
-[no-exit-message]
-@hb *args:
-  hub {{args}}
-
 # launch services
 [no-exit-message]
 @srv *args:
   -lunchy {{args}}
-
-# git-bug
-[no-exit-message]
-@bug *args:
-  git-bug {{args}}
 
 # log tui
 [no-exit-message]

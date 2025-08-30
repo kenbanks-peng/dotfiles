@@ -24,6 +24,7 @@ rust = "latest"
 "npm:n8n" = "latest"
 "npm:task-master-ai" = "latest"
 "npm:@pimzino/claude-code-spec-workflow" = "latest"
+"npm:@augmentcode/auggie" = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = []

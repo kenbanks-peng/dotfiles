@@ -43,6 +43,9 @@ mod go
 # dev
 mod dev
 
+# git
+mod git
+
 # pdf
 mod pdf
 
