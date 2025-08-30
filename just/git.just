@@ -9,7 +9,7 @@ default:
 
 ############  GIT  ############
 
-# git origin
+# git remote
 [no-exit-message]
 gr:
   git remote -v
