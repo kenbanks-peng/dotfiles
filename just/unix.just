@@ -29,7 +29,7 @@ sed3 *args:
 
 # new grep for find within glob pattern
 [no-exit-message]
-@gr *args:
+@grepp *args:
   print "rg (ripgrep)"
   print
   rg {{args}}

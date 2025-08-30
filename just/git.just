@@ -14,6 +14,11 @@ default:
 gr:
   git remote -v
 
+# git status
+[no-exit-message]
+gs:
+  git fetch; git status
+
 # needs to be hooked into git
 # git delta viewer
 [no-exit-message]
