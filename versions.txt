@@ -38,7 +38,7 @@ font-tex-gyre-termes 2.004
 git-credential-manager 2.6.1
 github 3.5.2-14087268
 grandperspective 3.6
-hoppscotch 25.8.0-0
+hoppscotch 25.8.1-0
 itsycal 0.15.6
 jordanbaird-ice 0.11.12
 karabiner-elements 15.5.0
@@ -134,8 +134,8 @@ dvc 3.62.0
 espeak-ng 1.52.0
 fastfetch 2.51.1
 fd 10.3.0
-ffmpeg 8.0
-ffmpeg@7 7.1.1
+ffmpeg 8.0_1
+ffmpeg@7 7.1.1_1
 flac 1.5.0
 flock 0.4.0
 fontconfig 2.17.1
@@ -345,7 +345,7 @@ ruby 3.4.5
 rustscan 2.4.1
 sad 0.4.32
 sd 1.0.0
-sdl2 2.32.8
+sdl2 2.32.10
 sevenzip 25.01
 shaderc 2025.3
 shared-mime-info 2.4
@@ -392,7 +392,7 @@ watchexec 2.3.2
 webp 1.6.0
 wget 1.25.0
 wgo 0.5.14
-x264 r3108
+x264 r3222
 x265 4.1
 xh 0.24.1
 xorgproto 2024.1
