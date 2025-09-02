@@ -13,7 +13,7 @@ boltai 1.36.4
 boop 1.4.0
 bruno 2.10.0
 claude 0.12.129,185ab35880f18c8192fa55fd63e266d6058f3744
-claude-code 1.0.98
+claude-code 1.0.100
 claudia 0.1.0
 cursor 1.5.9,de327274300c6f38ec9f4240d11e82c3b0660b29
 daisydisk 4.31
@@ -131,6 +131,7 @@ dua-cli 2.31.0
 duf 0.8.1
 dust 1.2.3
 dvc 3.62.0
+espeak-ng 1.52.0
 fastfetch 2.51.1
 fd 10.3.0
 ffmpeg 8.0
@@ -310,6 +311,7 @@ pandoc 3.7.0.2
 pango 1.57.0
 pass 1.7.4
 pastel 0.10.0
+pcaudiolib 1.3
 pcre2 10.46
 pet 1.0.1
 pgvector 0.8.0
@@ -318,7 +320,7 @@ pinentry-mac 1.3.1.1
 pinentry-touchid 0.0.3
 pixman 0.46.4
 pls 0.0.1-beta.9
-poppler 25.08.0
+poppler 25.09.0
 portal 1.2.3
 posting 2.7.1
 procs 0.14.10
@@ -356,7 +358,7 @@ sniffnet 1.4.0
 spark 1.0.1
 speex 1.2.1
 sq 0.48.5
-sqlc 1.29.0
+sqlc 1.30.0
 sqld 0.24.31
 sqlite 3.50.4
 srt 1.5.4
