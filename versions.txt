@@ -130,7 +130,7 @@ dotenvx 1.49.0
 dua-cli 2.31.0
 duf 0.8.1
 dust 1.2.3
-dvc 3.62.0
+dvc 3.63.0
 espeak-ng 1.52.0
 fastfetch 2.51.1
 fd 10.3.0
@@ -260,7 +260,6 @@ libyaml 0.2.5
 lima 1.2.1
 little-cms2 2.17
 lld@20 20.1.8
-llvm 21.1.0
 llvm@20 20.1.8
 lolcat 100.0.1
 lpeg 1.1.0
@@ -403,7 +402,6 @@ yazi 25.5.31
 yq 4.47.1
 yt-dlp 2025.8.27
 yyjson 0.12.0
-z3 4.15.3
 zellij 0.43.1
 zeromq 4.3.5_2
 zimg 3.0.6
