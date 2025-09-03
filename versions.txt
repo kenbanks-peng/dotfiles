@@ -64,7 +64,6 @@ symboliclinker 2.2
 syntax-highlight 2.1.26
 transmission 4.0.6
 typeface 4.1.0,4682
-vmware-fusion 13.6.3,24585314
 wezterm 20240203-110809,5046fc22
 whatsapp 2.25.22.79
 windterm 2.7.0
