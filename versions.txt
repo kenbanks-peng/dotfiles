@@ -420,7 +420,7 @@ go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise
 node                                       24.7.0            ~/.config/mise/mise.toml  latest
 npm:@augmentcode/auggie                    0.5.1             ~/.config/mise/mise.toml  latest
 npm:@google/gemini-cli                     0.2.2             ~/.config/mise/mise.toml  latest
-npm:@openai/codex                          0.28.0            ~/.config/mise/mise.toml  latest
+npm:@openai/codex                          0.29.0            ~/.config/mise/mise.toml  latest
 npm:@pimzino/claude-code-spec-workflow     1.5.8             ~/.config/mise/mise.toml  latest
 npm:ccexp                                  4.0.0             ~/.config/mise/mise.toml  latest
 npm:n8n                                    1.109.2           ~/.config/mise/mise.toml  latest
