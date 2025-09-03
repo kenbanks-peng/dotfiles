@@ -379,7 +379,7 @@ uchardet 0.0.8
 unbound 1.23.1
 unibilium 2.1.2
 utf8proc 2.10.0
-uvwasi 0.0.21
+uvwasi 0.0.22
 vapoursynth 72
 vulkan-headers 1.4.325
 vulkan-loader 1.4.325
