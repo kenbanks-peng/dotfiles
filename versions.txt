@@ -19,7 +19,6 @@ daisydisk 4.31
 elephas 11.1087,11_1087
 espanso 2.2.1
 figma 125.7.5
-flameshot 13.1.0
 font-alegreya 2.008
 font-archivo-black latest
 font-fira-sans 4.202
