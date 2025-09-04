@@ -9,6 +9,6 @@ merge(config, require('config.font'))
 merge(config, require('config.general'))
 merge(config, require('config.gpu.gpu'))
 merge(config, require('config.domains'))
--- merge(config, require('config.startup'))
+merge(config, require('config.startup'))
 
 return config
