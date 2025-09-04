@@ -11,10 +11,7 @@ function app_icons() {
     "BoltAI")
         icon_result="􀋥"
         ;;
-    "Kiro")
-        icon_result=":code:"
-        ;;
-    "Cursor")
+    "Kiro" | "Cursor" | "CodeLLM")
         icon_result=":code:"
         ;;
     "WezTerm" | "Rio")
