@@ -59,7 +59,7 @@ transmission 4.0.6
 typeface 4.1.0,4682
 wezterm 20240203-110809,5046fc22
 windterm 2.7.0
-zed 0.202.5
+zed 0.202.6
 zoom 6.5.12.63499
 
 BREW FORMULAS
@@ -371,7 +371,7 @@ uchardet 0.0.8
 unbound 1.23.1
 unibilium 2.1.2
 utf8proc 2.10.0
-uvwasi 0.0.22
+uvwasi 0.0.23
 vapoursynth 72
 vulkan-headers 1.4.326
 vulkan-loader 1.4.326
