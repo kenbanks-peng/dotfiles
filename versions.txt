@@ -11,7 +11,7 @@ boltai 1.36.4
 boop 1.4.0
 bruno 2.10.0
 claude 0.12.129,185ab35880f18c8192fa55fd63e266d6058f3744
-claude-code 1.0.103
+claude-code 1.0.105
 daisydisk 4.31
 elephas 11.1087,11_1087
 espanso 2.2.1
@@ -134,7 +134,7 @@ fx 39.0.4
 fzf 0.65.2
 gawk 5.3.1
 gcc 15.1.0
-gemini-cli 0.2.2
+gemini-cli 0.3.1
 gettext 0.26
 gh 2.78.0
 giflib 5.2.2
@@ -179,7 +179,7 @@ jc 1.25.5
 jid 0.7.6
 jj 0.33.0
 jnv 0.6.1
-jpeg-turbo 3.1.1
+jpeg-turbo 3.1.2
 jpeg-xl 0.11.1_2
 jq 1.8.1
 jqp 0.7.0
