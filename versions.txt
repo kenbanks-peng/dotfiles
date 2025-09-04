@@ -266,7 +266,6 @@ mcfly 0.9.3
 melody 0.20.0
 micro 2.0.14
 molten-vk 1.4.0
-most 5.2.0
 mpdecimal 4.0.1
 mpfr 4.2.2
 mpg123 1.33.2
@@ -332,7 +331,6 @@ ripgrep 14.1.1
 rubberband 4.0.0
 ruby 3.4.5
 rustscan 2.4.1
-s-lang 2.3.3
 sad 0.4.32
 sd 1.0.0
 sdl2 2.32.10
