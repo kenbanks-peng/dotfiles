@@ -1,1 +1,1 @@
-/Users/ken/Software/DevBox/scripts/zsh/pre-autocompletes/omp.zsh
+/Users/ken/Software/DevBox/zsh/pre-autocompletes/omp.zsh

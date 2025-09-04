@@ -17,10 +17,7 @@
     "**/*.gz": true,
     "build/": true,
     "next-env.d.ts": true,
-    "node_modules/": true,
-    ".vscode": true,
-    "logs": true,
-    ".DS_Store": true
+    "node_modules/": true
   },
   "hide-files.files": []
 }
