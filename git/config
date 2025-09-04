@@ -13,22 +13,13 @@
 [push]
   default = simple
 [alias]
-  st = status
-  co = checkout
-  br = branch
-  ci = commit
-  df = diff
+  s = status --short --branch
   lg = log --oneline --graph --all --decorate
   last = log -1 HEAD
 [commit]
   template = ~/.config/git/commitmsg
 [init]
   defaultBranch = main
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
 [credential]
 	helper = /usr/local/share/gcm-core/git-credential-manager
 [credential "https://dev.azure.com"]
