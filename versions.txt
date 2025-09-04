@@ -11,7 +11,7 @@ boltai 1.36.4
 boop 1.4.0
 bruno 2.10.0
 claude 0.12.129,185ab35880f18c8192fa55fd63e266d6058f3744
-claude-code 1.0.102
+claude-code 1.0.103
 daisydisk 4.31
 elephas 11.1087,11_1087
 espanso 2.2.1
@@ -45,7 +45,7 @@ notion 4.18.1
 notion-calendar 1.131.0
 notion-mail 0.0.37
 obsidian 1.9.12
-omnifocus 4.7
+omnifocus 4.7.1
 onyx 4.8.3
 opcode 0.2.0
 orbstack 2.0.1,19784
@@ -154,7 +154,7 @@ gnu-getopt 2.41.1
 gnu-sed 4.9
 gnupg 2.4.8
 gnutls 3.8.10
-go 1.25.0
+go 1.25.1
 go-blueprint 0.10.11
 go-task 3.44.1
 gobang 0.1.0-alpha.5
@@ -408,7 +408,7 @@ cargo:cargo-update                         18.0.0            ~/.config/mise/mise
 cargo:sbyte                                0.3.3             ~/.config/mise/mise.toml  latest
 deno                                       2.4.5             ~/.config/mise/mise.toml  latest
 git                                        2.51.0            ~/.config/mise/mise.toml  latest
-go                                         1.25.0            ~/.config/mise/mise.toml  latest
+go                                         1.25.1            ~/.config/mise/mise.toml  latest
 go:github.com/wailsapp/wails/v2/cmd/wails  2.10.2            ~/.config/mise/mise.toml  latest
 go:golang.org/x/tools/gopls                0.20.0            ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise.toml  latest
