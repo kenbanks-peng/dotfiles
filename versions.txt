@@ -63,7 +63,6 @@ typeface 4.1.0,4682
 wezterm 20240203-110809,5046fc22
 windterm 2.7.0
 zed 0.202.5
-zen 1.15.2b
 zoom 6.5.12.63499
 
 BREW FORMULAS
