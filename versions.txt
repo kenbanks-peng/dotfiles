@@ -40,7 +40,7 @@ languagetool-desktop 2.5.1
 local 9.2.8,6882
 microsoft-auto-update 4.80.25073044
 microsoft-edge 139.0.3405.125,54100b99-6d2e-42e1-bc8e-35e863acb814
-notion 4.18.1
+notion 4.19.0
 obsidian 1.9.12
 omnifocus 4.7.1
 onyx 4.8.3
@@ -128,7 +128,7 @@ flac 1.5.0
 flock 0.4.0
 fontconfig 2.17.1
 freetype 2.13.3
-frei0r 2.3.3
+frei0r 2.4.0
 fribidi 1.0.16
 fx 39.0.4
 fzf 0.65.2
@@ -177,7 +177,7 @@ isl 0.27
 jasper 4.2.8
 jc 1.25.5
 jid 0.7.6
-jj 0.32.0
+jj 0.33.0
 jnv 0.6.1
 jpeg-turbo 3.1.1
 jpeg-xl 0.11.1_2
@@ -287,7 +287,7 @@ oh-my-posh 26.20.1
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.6.3
+opencode 0.6.4
 opencore-amr 0.1.6
 openexr 3.3.5_1
 openjpeg 2.5.3
@@ -307,7 +307,7 @@ pinentry-mac 1.3.1.1
 pinentry-touchid 0.0.3
 pixman 0.46.4
 pls 0.0.1-beta.9
-poppler 25.09.0
+poppler 25.09.1
 portal 1.2.3
 posting 2.7.1
 procs 0.14.10
