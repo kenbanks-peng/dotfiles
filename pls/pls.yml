@@ -83,7 +83,7 @@ icons:
   log: ""
   
 specs:
-  # defaults
+  # defaults.
   
   - pattern: ^\.github$
     icons:
