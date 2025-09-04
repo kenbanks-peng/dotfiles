@@ -43,7 +43,6 @@ microsoft-auto-update 4.80.25073044
 microsoft-edge 139.0.3405.125,54100b99-6d2e-42e1-bc8e-35e863acb814
 notion 4.18.1
 notion-calendar 1.131.0
-notion-mail 0.0.37
 obsidian 1.9.12
 omnifocus 4.7.1
 onyx 4.8.3
