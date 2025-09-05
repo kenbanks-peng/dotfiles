@@ -11,7 +11,7 @@ boltai 1.36.4
 boop 1.4.0
 bruno 2.10.0
 claude 0.12.129,185ab35880f18c8192fa55fd63e266d6058f3744
-claude-code 1.0.106
+claude-code 1.0.107
 daisydisk 4.31
 elephas 11.1087,11_1087
 espanso 2.2.1
