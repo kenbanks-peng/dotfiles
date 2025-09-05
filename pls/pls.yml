@@ -29,7 +29,7 @@ entry_const:
       style: red italic
 
 icons:
-  # default
+  # default---
   pls: ""
   missing: ""
   file: ""
