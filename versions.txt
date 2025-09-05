@@ -89,7 +89,7 @@ bandwhich 0.23.1
 bash 5.3.3
 bat 0.25.0_1
 bat-extras 2024.08.24
-biome 2.2.2
+biome 2.2.3
 borders 1.7.0
 brotli 1.1.0
 btop 1.4.4
