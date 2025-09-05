@@ -9,7 +9,7 @@ arc 1.110.1,67961
 audacity 3.7.5
 boltai 1.36.4
 boop 1.4.0
-bruno 2.10.0
+bruno 2.10.1
 claude 0.12.129,185ab35880f18c8192fa55fd63e266d6058f3744
 claude-code 1.0.107
 daisydisk 4.31
@@ -57,6 +57,7 @@ syntax-highlight 2.1.26
 transmission 4.0.6
 typeface 4.1.0,4682
 visual-studio-code 1.103.2
+warp 0.2025.09.03.08.11.stable_02
 wezterm 20240203-110809,5046fc22
 windterm 2.7.0
 zed 0.202.7
