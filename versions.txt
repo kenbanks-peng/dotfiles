@@ -67,7 +67,7 @@ BREW FORMULAS
 -------------
 abseil 20250814.0
 age 1.2.1
-aom 3.13.0
+aom 3.13.1
 apache-arrow 21.0.0_5
 aribb24 1.0.4
 asciidoctor 2.0.23
@@ -136,7 +136,7 @@ fx 39.0.4
 fzf 0.65.2
 gawk 5.3.1
 gcc 15.1.0
-gemini-cli 0.3.2
+gemini-cli 0.3.3
 gettext 0.26
 gh 2.78.0
 giflib 5.2.2
@@ -188,7 +188,7 @@ jqp 0.7.0
 just 1.42.4
 lame 3.100
 lazydocker 0.24.1
-lazygit 0.54.2
+lazygit 0.55.0
 lazyjj 0.5.0
 lazyjournal 0.7.9
 lazysql 0.4.0
