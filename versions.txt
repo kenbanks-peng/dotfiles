@@ -136,7 +136,7 @@ fx 39.0.4
 fzf 0.65.2
 gawk 5.3.1
 gcc 15.1.0
-gemini-cli 0.3.3
+gemini-cli 0.3.4
 gettext 0.26
 gh 2.78.0
 giflib 5.2.2
@@ -146,7 +146,7 @@ github-mcp-server 0.14.0
 gitleaks 8.28.0
 gitui 0.27.0
 glances 4.3.3_1
-glib 2.84.4
+glib 2.86.0
 glow 2.1.1
 gmp 6.3.0
 gnu-getopt 2.41.1
@@ -414,7 +414,7 @@ go:golang.org/x/tools/gopls                0.20.0            ~/.config/mise/mise
 go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise.toml  latest
 node                                       24.7.0            ~/.config/mise/mise.toml  latest
 npm:@augmentcode/auggie                    0.5.3             ~/.config/mise/mise.toml  latest
-npm:@google/gemini-cli                     0.3.3             ~/.config/mise/mise.toml  latest
+npm:@google/gemini-cli                     0.3.4             ~/.config/mise/mise.toml  latest
 npm:@openai/codex                          0.30.0            ~/.config/mise/mise.toml  latest
 npm:@pimzino/claude-code-spec-workflow     1.5.8             ~/.config/mise/mise.toml  latest
 npm:ccexp                                  4.0.0             ~/.config/mise/mise.toml  latest
