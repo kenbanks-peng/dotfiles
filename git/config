@@ -1,13 +1,13 @@
 [user]
-	name = Ken Banks
-	email = kenbanks.peng@gmail.com
+  name = Ken Banks
+  email = kenbanks.peng@gmail.com
 [core]
   editor = vim
   excludesfile = ~/.config/git/ignore
-	pager = delta
+  pager = delta
 [merge]
   tool = vimdiff
-	conflictStyle = zdiff3
+  conflictStyle = zdiff3
 [diff]
   tool = vimdiff
 [push]
@@ -21,16 +21,16 @@
 [init]
   defaultBranch = main
 [credential]
-	helper = osxkeychain
+  helper = /usr/local/share/gcm-core/git-credential-manager
 [credential "https://dev.azure.com"]
-	useHttpPath = true
+  useHttpPath = true
 [interactive]
-	diffFilter = delta --color-only
+  diffFilter = delta --color-only
 [include]
   path = ./catpuccin.gitconfig
 [delta]
-	features = catppuccin-mocha
-	navigate = true
-	dark = true
-	side-by-side = true
+  features = catppuccin-mocha
+  navigate = true
+  dark = true
+  side-by-side = true
   pager = "ov"
