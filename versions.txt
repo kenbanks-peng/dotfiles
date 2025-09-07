@@ -172,7 +172,7 @@ hub 2.14.2
 hurl 7.0.0
 hyperfine 1.19.0
 icu4c@77 77.1
-imagemagick 7.1.2-3
+imagemagick 7.1.2-3_1
 imath 3.2.1
 imgcat 1.0.22
 isl 0.27
@@ -182,7 +182,7 @@ jid 0.7.6
 jj 0.33.0
 jnv 0.6.1
 jpeg-turbo 3.1.2
-jpeg-xl 0.11.1_2
+jpeg-xl 0.11.1_3
 jq 1.8.1
 jqp 0.7.0
 just 1.42.4
@@ -291,8 +291,9 @@ oniguruma 6.9.10
 openblas 0.3.30
 opencode 0.6.4
 opencore-amr 0.1.6
-openexr 3.3.5_1
+openexr 3.4.0
 openjpeg 2.5.3
+openjph 0.22.0
 openssl@3 3.5.2
 opus 1.5.2
 ov 0.43.0
@@ -322,8 +323,9 @@ pygit2 1.18.2
 python@3.12 3.12.11
 python@3.13 3.13.7
 qrencode 4.1.1
-qsv 7.0.1
+qsv 7.1.0
 rav1e 0.8.1
+rclone 1.71.0
 re2 20250812_1
 readline 8.3.1
 repomix 1.4.2
