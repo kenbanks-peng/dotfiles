@@ -419,7 +419,7 @@ node                                       24.7.0            ~/.config/mise/mise
 npm:@augmentcode/auggie                    0.5.3             ~/.config/mise/mise.toml  latest
 npm:@google/gemini-cli                     0.3.4             ~/.config/mise/mise.toml  latest
 npm:@openai/codex                          0.30.0            ~/.config/mise/mise.toml  latest
-npm:@pimzino/claude-code-spec-workflow     1.5.8             ~/.config/mise/mise.toml  latest
+npm:@pimzino/claude-code-spec-workflow     1.5.9             ~/.config/mise/mise.toml  latest
 npm:ccexp                                  4.0.0             ~/.config/mise/mise.toml  latest
 npm:n8n                                    1.109.2           ~/.config/mise/mise.toml  latest
 npm:nuekit                                 1.0.0-RC.4        ~/.config/mise/mise.toml  latest
