@@ -48,7 +48,7 @@ opcode 0.2.0
 orbstack 2.0.1,19784
 pdf-pals 1.9.0
 quarto 1.7.34
-raycast 1.102.6
+raycast 1.102.7
 screen-studio 3.4.9-3911
 sf-symbols 6
 skim 1.7.11
@@ -118,7 +118,7 @@ direnv 2.37.1
 doppler 3.75.1
 dotenvx 1.49.0
 dua-cli 2.31.0
-duf 0.8.1
+duf 0.9.0
 dust 1.2.3
 dvc 3.63.0
 espeak-ng 1.52.0
@@ -129,7 +129,7 @@ ffmpeg@7 7.1.1_1
 flac 1.5.0
 flock 0.4.0
 fontconfig 2.17.1
-freetype 2.13.3
+freetype 2.14.0
 frei0r 2.4.0
 fribidi 1.0.16
 fx 39.1.0
@@ -289,7 +289,7 @@ oh-my-posh 26.20.1
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.6.4
+opencode 0.6.5
 opencore-amr 0.1.6
 openexr 3.4.0
 openjpeg 2.5.3
@@ -359,7 +359,7 @@ stow 2.4.1
 stylua 2.1.0
 svgo 4.0.0
 svt-av1 3.1.2
-syncthing 2.0.7
+syncthing 2.0.8
 tailspin 5.5.0
 tealdeer 1.7.2
 terminal-notifier 2.0.0
@@ -421,7 +421,7 @@ npm:@google/gemini-cli                     0.3.4             ~/.config/mise/mise
 npm:@openai/codex                          0.30.0            ~/.config/mise/mise.toml  latest
 npm:@pimzino/claude-code-spec-workflow     1.5.9             ~/.config/mise/mise.toml  latest
 npm:ccexp                                  4.0.0             ~/.config/mise/mise.toml  latest
-npm:n8n                                    1.109.2           ~/.config/mise/mise.toml  latest
+npm:n8n                                    1.110.1           ~/.config/mise/mise.toml  latest
 npm:nuekit                                 1.0.0-RC.4        ~/.config/mise/mise.toml  latest
 npm:task-master-ai                         0.25.1            ~/.config/mise/mise.toml  latest
 pipx:docling                               2.51.0            ~/.config/mise/mise.toml  latest
