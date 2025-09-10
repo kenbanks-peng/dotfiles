@@ -409,7 +409,7 @@ MISE PACKAGES
 bun                                        1.2.21            ~/.config/mise/mise.toml  latest
 cargo:cargo-update                         18.0.0            ~/.config/mise/mise.toml  latest
 cargo:sbyte                                0.3.3             ~/.config/mise/mise.toml  latest
-deno                                       2.4.5             ~/.config/mise/mise.toml  latest
+deno                                       2.5.0             ~/.config/mise/mise.toml  latest
 git                                        2.51.0            ~/.config/mise/mise.toml  latest
 go                                         1.25.1            ~/.config/mise/mise.toml  latest
 go:github.com/wailsapp/wails/v2/cmd/wails  2.10.2            ~/.config/mise/mise.toml  latest
@@ -417,7 +417,7 @@ go:golang.org/x/tools/gopls                0.20.0            ~/.config/mise/mise
 go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise.toml  latest
 node                                       24.7.0            ~/.config/mise/mise.toml  latest
 npm:@augmentcode/auggie                    0.5.3             ~/.config/mise/mise.toml  latest
-npm:@google/gemini-cli                     0.3.4             ~/.config/mise/mise.toml  latest
+npm:@google/gemini-cli                     0.4.0             ~/.config/mise/mise.toml  latest
 npm:@openai/codex                          0.31.0            ~/.config/mise/mise.toml  latest
 npm:@pimzino/claude-code-spec-workflow     1.5.9             ~/.config/mise/mise.toml  latest
 npm:ccexp                                  4.0.0             ~/.config/mise/mise.toml  latest
@@ -432,7 +432,7 @@ python                                     3.12.11
 python                                     3.13.7            ~/.config/mise/mise.toml  latest
 ruby                                       3.4.5             ~/.config/mise/mise.toml  latest
 rust                                       1.89.0 (symlink)  ~/.config/mise/mise.toml  latest
-uv                                         0.8.15            ~/.config/mise/mise.toml  latest
+uv                                         0.8.16            ~/.config/mise/mise.toml  latest
 
 RUSTUP/CARGO
 ------------
