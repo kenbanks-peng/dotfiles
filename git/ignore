@@ -2,3 +2,5 @@
 .DS_Store
 **/.claude/
 **/.vscode/
+.mcp.json
+
