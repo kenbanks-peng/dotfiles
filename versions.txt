@@ -100,7 +100,6 @@ cffi 2.0.0
 cheat 4.4.2
 choose-rust 1.3.7
 cjson 1.7.19
-claude-squad 1.0.13
 clipboard 0.10.0
 colima 0.8.4
 coreutils 9.7
