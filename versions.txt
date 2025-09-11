@@ -69,7 +69,6 @@ aom 3.13.1
 apache-arrow 21.0.0_5
 aribb24 1.0.4
 ast-grep 0.39.5
-autoconf 2.72
 aws-c-auth 0.9.1
 aws-c-cal 0.9.2
 aws-c-common 0.12.4
