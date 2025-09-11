@@ -68,7 +68,6 @@ abseil 20250814.0
 aom 3.13.1
 apache-arrow 21.0.0_5
 aribb24 1.0.4
-asciidoctor 2.0.23
 ast-grep 0.39.5
 autoconf 2.72
 aws-c-auth 0.9.1
@@ -331,7 +330,6 @@ resvg 0.45.1
 rich-cli 1.8.1
 ripgrep 14.1.1
 rubberband 4.0.0
-ruby 3.4.5
 rustscan 2.4.1
 sad 0.4.32
 sd 1.0.0
