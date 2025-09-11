@@ -65,7 +65,6 @@ zoom 6.5.12.63499
 BREW FORMULAS
 -------------
 abseil 20250814.0
-age 1.2.1
 aom 3.13.1
 apache-arrow 21.0.0_5
 aribb24 1.0.4
