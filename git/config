@@ -5,6 +5,7 @@
   editor = vim
   excludesfile = ~/.config/git/ignore
   pager = delta
+	hooksPath = ~/.config/git/hooks
 [merge]
   tool = vimdiff
   conflictStyle = zdiff3
