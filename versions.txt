@@ -135,7 +135,6 @@ gemini-cli 0.4.0
 gettext 0.26
 gh 2.79.0
 giflib 5.2.2
-git-bug 0.10.1
 git-delta 0.18.2_3
 github-mcp-server 0.14.0
 gitleaks 8.28.0
