@@ -49,7 +49,7 @@ pdf-pals 1.9.0
 quarto 1.8.24
 raycast 1.102.7
 screen-studio 3.4.9-3911
-sf-symbols 6
+sf-symbols 7
 skim 1.7.11
 symboliclinker 2.2
 syntax-highlight 2.1.26
@@ -186,7 +186,7 @@ lame 3.100
 lazydocker 0.24.1
 lazygit 0.55.0
 lazyjj 0.6.1
-lazyjournal 0.7.9
+lazyjournal 0.8.0
 lazysql 0.4.1
 leptonica 1.85.0
 lf 37
@@ -281,11 +281,11 @@ nspr 4.37
 nss 3.116
 numpy 2.3.3
 nushell 0.107.0
-oh-my-posh 26.23.3
+oh-my-posh 26.23.4
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.7.9
+opencode 0.8.0
 opencore-amr 0.1.6
 openexr 3.4.0_1
 openjpeg 2.5.3
@@ -294,7 +294,7 @@ openssl@3 3.5.2
 opus 1.5.2
 ov 0.43.0
 p11-kit 0.25.8
-pandoc 3.7.0.2
+pandoc 3.8
 pango 1.57.0
 pass 1.7.4
 pastel 0.10.0
@@ -324,7 +324,7 @@ rav1e 0.8.1
 rclone 1.71.0
 re2 20250812_1
 readline 8.3.1
-repomix 1.4.2
+repomix 1.5.0
 resvg 0.45.1
 rich-cli 1.8.1
 ripgrep 14.1.1
@@ -401,7 +401,7 @@ zx 8.8.1
 
 MISE PACKAGES
 -------------
-bun                                        1.2.21            ~/.config/mise/mise.toml  latest
+bun                                        1.2.22            ~/.config/mise/mise.toml  latest
 cargo:cargo-update                         18.0.0            ~/.config/mise/mise.toml  latest
 cargo:sbyte                                0.3.3             ~/.config/mise/mise.toml  latest
 deno                                       2.5.0             ~/.config/mise/mise.toml  latest
