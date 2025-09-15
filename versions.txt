@@ -58,7 +58,6 @@ typeface 4.2.0,4734
 visual-studio-code 1.104.0
 warp 0.2025.09.10.08.11.stable_01
 wezterm 20240203-110809,5046fc22
-windterm 2.7.0
 zed 0.203.5
 zoom 6.5.12.63499
 
