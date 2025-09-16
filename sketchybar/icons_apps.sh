@@ -26,6 +26,9 @@ function app_icons() {
     "Claudia")
         icon_result=":claude:"
         ;;
+    "Structured")
+        icon_result=":tick_tick:"
+        ;;
 
     # from https://github.com/kvndrsslr/sketchybar-app-font
     "Live")
