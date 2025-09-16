@@ -39,7 +39,6 @@ languagetool-desktop 2.6.1
 local 9.2.8,6882
 microsoft-auto-update 4.80.25073044
 microsoft-edge 140.0.3485.66,4f42d7f0-bbcd-4236-8c31-e8fe4c1583f4
-notion 4.20.0
 obsidian 1.9.12
 omnifocus 4.8.2,185.0.16
 onyx 4.8.5
