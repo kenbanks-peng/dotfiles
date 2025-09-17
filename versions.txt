@@ -364,6 +364,7 @@ tmux 3.5a
 tokei 12.1.2
 tree 2.2.1
 tree-sitter 0.25.9
+tree-sitter-cli 0.25.9
 turso 0.1.4
 typst 0.13.1
 uchardet 0.0.8
