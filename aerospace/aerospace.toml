@@ -233,8 +233,11 @@ run = ['layout floating', 'move-node-to-workspace S']
 # if.app-id = 'org.languagetool.desktop'
 # run = []
 
-# [[on-window-detected]]
-# if.app-name-regex-substring = 'Amazon Q'
-# run = []
-
+# Position WezTerm at specific coordinates
+[[on-window-detected]]
+if.app-name-regex-substring = 'WezTerm'
+run = [
+   'layout floating',
+   'exec-and-forget $HOME/Software/bin/position-window "WezTerm" 100 100 1000 500'
+]
 
