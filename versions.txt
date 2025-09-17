@@ -8,7 +8,6 @@ anybar 0.2.3
 arc 1.112.0,68314
 audacity 3.7.5
 boltai 1.36.4
-boop 1.4.0
 bruno 2.11.0
 claude 0.13.11,cc3b19cc18909e27905b29f4983eebb124c321b9
 claude-code 1.0.115
