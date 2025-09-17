@@ -219,25 +219,15 @@ shift-down = ['volume set 0', 'mode main']
 ########################   callbacks   ########################
 
 
-
-[[on-window-detected]]
+# [[on-window-detected]]
 # if.app-id = 'com.apple.systempreferences'
 # if.window-title-regex-substring = 'substring'
 # if.workspace = 'workspace-name'
 # if.during-aerospace-startup = true
-if.app-name-regex-substring = 'DeskMinder'
+# if.app-name-regex-substring = 'DeskMinder'
 # check-further-callbacks = true
-run = ['layout floating', 'move-node-to-workspace S']
+# run = ['layout floating', 'move-node-to-workspace S']
 
 # [[on-window-detected]]
 # if.app-id = 'org.languagetool.desktop'
 # run = []
-
-# Position WezTerm at specific coordinates
-[[on-window-detected]]
-if.app-name-regex-substring = 'WezTerm'
-run = [
-   'layout floating',
-   'exec-and-forget $HOME/Software/bin/position-window "WezTerm" 100 100 1000 500'
-]
-
