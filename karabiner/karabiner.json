@@ -113,6 +113,7 @@
                     },
                     {
                         "description": "Map F4 to Command+Space",
+                        "enabled": false,
                         "manipulators": [
                             {
                                 "from": {
