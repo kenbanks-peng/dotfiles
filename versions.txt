@@ -12,6 +12,7 @@ boop 1.4.0
 bruno 2.11.0
 claude 0.13.11,cc3b19cc18909e27905b29f4983eebb124c321b9
 claude-code 1.0.115
+container 0.4.1
 daisydisk 4.31
 espanso 2.2.1
 figma 125.7.5
