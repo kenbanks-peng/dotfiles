@@ -32,7 +32,6 @@ font-tex-gyre-termes 2.004
 git-credential-manager 2.6.1
 grandperspective 3.6
 hoppscotch 25.8.1-0
-jordanbaird-ice 0.11.12
 karabiner-elements 15.5.0
 keyclu 0.30.2
 languagetool-desktop 2.6.1
