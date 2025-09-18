@@ -228,6 +228,7 @@ shift-down = ['volume set 0', 'mode main']
 # check-further-callbacks = true
 # run = ['layout floating', 'move-node-to-workspace S']
 
+
 [[on-window-detected]]
-if.app-id = 'com.leomehlig.today'
+if.app-id = 'com.leomehlig.today' # Structured App
 run = ['layout floating']
