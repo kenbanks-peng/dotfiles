@@ -365,7 +365,6 @@ tmux 3.5a
 tokei 12.1.2
 tree 2.2.1
 tree-sitter 0.25.9
-tree-sitter-cli 0.25.9
 turso 0.1.4
 typst 0.13.1
 uchardet 0.0.8
@@ -422,7 +421,6 @@ npm:n8n                                    1.111.0           ~/.config/mise/mise
 npm:nuekit                                 1.0.0-RC.4        ~/.config/mise/mise.toml  latest
 npm:task-master-ai                         0.26.0            ~/.config/mise/mise.toml  latest
 pipx:docling                               2.53.0            ~/.config/mise/mise.toml  latest
-pipx:markitdown                            0.1.3             ~/.config/mise/mise.toml  latest
 pipx:ruff                                  0.13.1            ~/.config/mise/mise.toml  latest
 pipx:seagoat                               0.54.17           ~/.config/mise/mise.toml  latest
 python                                     3.12.11
