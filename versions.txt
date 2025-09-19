@@ -41,7 +41,6 @@ microsoft-auto-update 4.80.25073044
 microsoft-edge 140.0.3485.81,62d9c938-1350-4517-b995-48ec73f69640
 obsidian 1.9.12
 omnifocus 4.8.2,185.0.16
-onyx 4.8.5
 opcode 0.2.0
 orbstack 2.0.1,19784
 pdf-pals 1.9.0
@@ -436,7 +435,6 @@ rustup home:  /Users/ken/Software/rustup
 
 installed toolchains
 --------------------
-1.88.0-aarch64-apple-darwin (default)
 1.90.0-aarch64-apple-darwin (active)
 
 active toolchain
