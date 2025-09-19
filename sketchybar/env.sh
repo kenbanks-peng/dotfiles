@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source "$HOME/.config/zsh/keys/nasa.zsh"
+export NASA_API_KEY="$NASA_API_KEY"
 
 source "$CONFIG_DIR/colors.sh"
 source "$CONFIG_DIR/icons.sh"

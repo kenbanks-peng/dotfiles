@@ -5,9 +5,7 @@ uv = "latest"
 node = "latest"
 go = "latest"
 git = "latest"
-python = "latest"
 ruby = "latest"
-rust = "latest"
 "cargo:sbyte" = "latest"
 "cargo:cargo-update" = "latest"
 "npm:nuekit" = "latest"
@@ -25,6 +23,8 @@ rust = "latest"
 "npm:@pimzino/claude-code-spec-workflow" = "latest"
 "npm:@augmentcode/auggie" = "latest"
 "pipx:markitdown" = "latest"
+rust = "latest"
+python = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = []
