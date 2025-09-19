@@ -5,16 +5,16 @@ affinity-designer 2.6.3,3322
 affinity-photo 2.6.3,3322
 affinity-publisher 2.6.3,3322
 anybar 0.2.3
-arc 1.112.0,68314
+arc 1.113.0,68787
 audacity 3.7.5
 boltai 1.36.4
 bruno 2.11.0
 claude 0.13.19,8834f14453599cf9d72e9491b956497c28e82ca8
-claude-code 1.0.117
+claude-code 1.0.119
 container 0.4.1
 daisydisk 4.31
 espanso 2.2.1
-figma 125.7.5
+figma 125.8.8
 font-alegreya 2.008
 font-archivo-black latest
 font-fira-sans 4.202
@@ -38,7 +38,7 @@ languagetool-desktop 2.6.1
 local 9.2.8,6882
 lunatask 2.1.8
 microsoft-auto-update 4.80.25073044
-microsoft-edge 140.0.3485.66,4f42d7f0-bbcd-4236-8c31-e8fe4c1583f4
+microsoft-edge 140.0.3485.81,62d9c938-1350-4517-b995-48ec73f69640
 obsidian 1.9.12
 omnifocus 4.8.2,185.0.16
 onyx 4.8.5
@@ -46,7 +46,7 @@ opcode 0.2.0
 orbstack 2.0.1,19784
 pdf-pals 1.9.0
 quarto 1.8.24
-raycast 1.103.1
+raycast 1.103.2
 screen-studio 3.4.9-3911
 sf-symbols 7.0,115
 skim 1.7.11
@@ -55,9 +55,9 @@ syntax-highlight 2.1.26
 transmission 4.0.6
 typeface 4.2.0,4734
 visual-studio-code 1.104.1
-warp 0.2025.09.10.08.11.stable_01
+warp 0.2025.09.17.08.11.stable_02
 wezterm 20240203-110809,5046fc22
-zed 0.204.1
+zed 0.204.2
 zoom 6.6.0.64511
 
 BREW FORMULAS
@@ -69,14 +69,14 @@ aribb24 1.0.4
 asciinema 3.0.0
 ast-grep 0.39.5
 aws-c-auth 0.9.1
-aws-c-cal 0.9.2
-aws-c-common 0.12.4
+aws-c-cal 0.9.3
+aws-c-common 0.12.5
 aws-c-compression 0.3.1
 aws-c-event-stream 0.5.7
 aws-c-http 0.10.4
 aws-c-io 0.22.0
 aws-c-mqtt 0.13.3
-aws-c-s3 0.8.7
+aws-c-s3 0.9.0
 aws-c-sdkutils 0.2.4
 aws-checksums 0.2.7
 aws-crt-cpp 0.34.4
@@ -110,7 +110,7 @@ dav1d 1.5.1
 dblab 0.33.0
 direnv 2.37.1
 doppler 3.75.1
-dotenvx 1.49.1
+dotenvx 1.50.1
 dua-cli 2.32.0
 duf 0.9.1
 dust 1.2.3
@@ -130,7 +130,7 @@ fx 39.1.0
 fzf 0.65.2
 gawk 5.3.1
 gcc 15.1.0
-gemini-cli 0.5.3
+gemini-cli 0.5.4
 gettext 0.26
 gh 2.79.0
 giflib 5.2.2
@@ -186,9 +186,9 @@ lazydocker 0.24.1
 lazygit 0.55.1
 lazyjj 0.6.1
 lazyjournal 0.8.0
-lazysql 0.4.1
+lazysql 0.4.2
 leptonica 1.85.0
-lf 37
+lf 38
 libarchive 3.8.1
 libass 0.17.4
 libassuan 3.0.2
@@ -281,11 +281,11 @@ nspr 4.37
 nss 3.116
 numpy 2.3.3
 nushell 0.107.0
-oh-my-posh 26.23.6
+oh-my-posh 26.23.8
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.9.11
+opencode 0.10.2
 opencore-amr 0.1.6
 openexr 3.4.0_1
 openjpeg 2.5.3
@@ -293,7 +293,7 @@ openjph 0.23.1
 openssl@3 3.5.2
 opus 1.5.2
 ov 0.43.0
-p11-kit 0.25.8
+p11-kit 0.25.9
 pandoc 3.8
 pango 1.57.0
 pass 1.7.4
@@ -309,7 +309,7 @@ pixman 0.46.4
 pls 0.0.1-beta.9
 poppler 25.09.1
 portal 1.2.3
-posting 2.7.1
+posting 2.9.0
 procs 0.14.10
 protobuf 32.1
 pstree 2.40
@@ -368,7 +368,7 @@ tree-sitter 0.25.9
 turso 0.1.4
 typst 0.13.1
 uchardet 0.0.8
-unbound 1.23.1
+unbound 1.24.0
 unibilium 2.1.2
 utf8proc 2.11.0
 uvwasi 0.0.23
@@ -412,21 +412,23 @@ go:github.com/wailsapp/wails/v2/cmd/wails  2.10.2            ~/.config/mise/mise
 go:golang.org/x/tools/gopls                0.20.0            ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise.toml  latest
 node                                       24.8.0            ~/.config/mise/mise.toml  latest
-npm:@augmentcode/auggie                    0.5.4             ~/.config/mise/mise.toml  latest
+npm:@augmentcode/auggie                    0.5.5             ~/.config/mise/mise.toml  latest
 npm:@google/gemini-cli                     0.5.4             ~/.config/mise/mise.toml  latest
-npm:@openai/codex                          0.38.0            ~/.config/mise/mise.toml  latest
+npm:@openai/codex                          0.39.0            ~/.config/mise/mise.toml  latest
 npm:@pimzino/claude-code-spec-workflow     1.5.9             ~/.config/mise/mise.toml  latest
 npm:ccexp                                  4.0.0             ~/.config/mise/mise.toml  latest
-npm:n8n                                    1.111.0           ~/.config/mise/mise.toml  latest
+npm:n8n                                    1.111.1           ~/.config/mise/mise.toml  latest
 npm:nuekit                                 1.0.0-RC.4        ~/.config/mise/mise.toml  latest
 npm:task-master-ai                         0.26.0            ~/.config/mise/mise.toml  latest
 pipx:docling                               2.53.0            ~/.config/mise/mise.toml  latest
+pipx:markitdown                            0.1.3             ~/.config/mise/mise.toml  latest
 pipx:ruff                                  0.13.1            ~/.config/mise/mise.toml  latest
 pipx:seagoat                               0.54.17           ~/.config/mise/mise.toml  latest
 python                                     3.12.11
 python                                     3.13.7            ~/.config/mise/mise.toml  latest
 ruby                                       3.4.6             ~/.config/mise/mise.toml  latest
-rust                                       1.89.0 (symlink)  ~/.config/mise/mise.toml  latest
+rust                                       1.89.0 (symlink)
+rust                                       1.90.0 (symlink)  ~/.config/mise/mise.toml  latest
 uv                                         0.8.18            ~/.config/mise/mise.toml  latest
 
 RUSTUP/CARGO
@@ -438,6 +440,7 @@ installed toolchains
 --------------------
 1.88.0-aarch64-apple-darwin (default)
 1.89.0-aarch64-apple-darwin (active)
+1.90.0-aarch64-apple-darwin
 
 active toolchain
 ----------------
