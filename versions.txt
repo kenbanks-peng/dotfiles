@@ -9,9 +9,11 @@ arc 1.113.0,68787
 audacity 3.7.5
 boltai 1.36.4
 boop 1.4.0
+brainfm 0.0.199
 bruno 2.11.0
 claude 0.13.19,8834f14453599cf9d72e9491b956497c28e82ca8
 claude-code 1.0.120
+container 0.4.1
 daisydisk 4.31
 espanso 2.2.1
 figma 125.8.8
@@ -69,6 +71,7 @@ aom 3.13.1
 apache-arrow 21.0.0_7
 aribb24 1.0.4
 asciidoctor 2.0.23
+asciinema 3.0.0
 ast-grep 0.39.5
 autoconf 2.72
 aws-c-auth 0.9.1
@@ -322,6 +325,7 @@ python@3.13 3.13.7
 qrencode 4.1.1
 qsv 7.1.0
 rav1e 0.8.1
+rclone 1.71.0
 re2 20250812_1
 readline 8.3.1
 repomix 1.6.0
@@ -354,6 +358,7 @@ stow 2.4.1
 stylua 2.2.0
 svgo 4.0.0
 svt-av1 3.1.2
+syncthing 2.0.9
 tailspin 5.5.0
 tealdeer 1.7.2
 terminal-notifier 2.0.0
@@ -434,11 +439,12 @@ rustup home:  /Users/kenbanks/Software/rustup
 
 installed toolchains
 --------------------
-1.90.0-aarch64-apple-darwin (default)
+1.88.0-aarch64-apple-darwin
+1.90.0-aarch64-apple-darwin (active, default)
 
 active toolchain
 ----------------
-name: 1.88.0-aarch64-apple-darwin
+name: 1.90.0-aarch64-apple-darwin
 active because: overridden by environment variable RUSTUP_TOOLCHAIN
 installed targets:
   aarch64-apple-darwin
