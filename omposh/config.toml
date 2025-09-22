@@ -5,7 +5,7 @@ final_space = true
 # jobs - env
 
 [palette]
-  red = "#a90000"    # oklch(45% 0.200 30) 
+  red = "#a90000"    # oklch(45% 0.200 30)
   gold = "#a17a00"   # oklch(60% 0.200 90) - lighter
   green = "#006b1d"  # oklch(45% 0.200 150)
   teal = "#005b95"   # oklch(45% 0.200 240)
@@ -21,7 +21,7 @@ final_space = true
   on_purple = "#e8e3ee"
   on_pink = "#ebe2eb"
   base = "#1e1e2e"
-  
+
   # rust, go, zig, lua, python...
   language = "#005b95"
   on_language = "#e5eaf0"
@@ -58,7 +58,7 @@ final_space = true
       '{{ if eq .Name "nu" }} 󰫻󰬂 {{ end }}',
     ]
     templates_logic = 'first_match'
-    
+
     [[blocks.segments]]
     type = 'root'
     style = 'diamond'
@@ -87,7 +87,7 @@ final_space = true
     background = 'p:blue'
     foreground = 'p:on_blue'
     template = ' {{ .Env.DIRPATH }} '
-  
+
   ######### LANGUAGES #########
 
   [[blocks.segments]]
@@ -159,7 +159,7 @@ final_space = true
     background = 'p:language'
     foreground = 'p:on_language'
     template = ' {{ .Env.JSENV }} '
-    
+
   ######### GIT #########
 
   [[blocks.segments]]
@@ -179,7 +179,7 @@ final_space = true
       branch_template = '{{ trunc 25 .Branch }}'
       fetch_status = true
       fetch_upstream_icon = true
-      
+
   ######### STATUS ENDCAP #########
 
   [[blocks.segments]]
@@ -190,7 +190,7 @@ final_space = true
     background = 'p:teal'
     foreground = 'p:on_teal'
     template = '    '
-    
+
     background_templates = ['{{ if gt .Code 0 }}p:red{{ end }}']
 
     [blocks.segments.properties]
@@ -234,4 +234,4 @@ final_space = true
     style = 'plain'
     background = 'transparent'
     foreground = 'p:orange'
-    template = '{{ repeat .SHLVL "❯" }}'
+    template = '{{ if .Env.SHLVL_RELATIVE }}{{ repeat (.Env.SHLVL_RELATIVE | int) "❯" }}{{ else }}{{ repeat .SHLVL "❯" }}{{ end }}'
