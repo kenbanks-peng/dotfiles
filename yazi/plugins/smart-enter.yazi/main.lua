@@ -4,7 +4,7 @@ return {
     -- but does nothing on files (just like pressing 'l' or right arrow)
     ya.emit("enter", {})
 
-    -- Quit without cwd-file to avoid task conflicts
-    ya.emit("quit", {})
+    -- Use the same quit command as the Q key binding to avoid confirmation
+    ya.emit("quit", { "--no-cwd-file" })
   end,
 }
