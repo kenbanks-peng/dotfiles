@@ -420,10 +420,10 @@ npm:@google/gemini-cli                     0.5.5             ~/.config/mise/mise
 npm:@openai/codex                          0.39.0            ~/.config/mise/mise.toml  latest
 npm:@pimzino/claude-code-spec-workflow     1.5.9             ~/.config/mise/mise.toml  latest
 npm:ccexp                                  4.0.0             ~/.config/mise/mise.toml  latest
-npm:n8n                                    1.111.1           ~/.config/mise/mise.toml  latest
+npm:n8n                                    1.112.3           ~/.config/mise/mise.toml  latest
 npm:nuekit                                 1.0.0-RC.4        ~/.config/mise/mise.toml  latest
 npm:task-master-ai                         0.26.0            ~/.config/mise/mise.toml  latest
-pipx:docling                               2.53.0            ~/.config/mise/mise.toml  latest
+pipx:docling                               2.54.0            ~/.config/mise/mise.toml  latest
 pipx:markitdown                            0.1.3             ~/.config/mise/mise.toml  latest
 pipx:ruff                                  0.13.1            ~/.config/mise/mise.toml  latest
 pipx:seagoat                               0.54.17           ~/.config/mise/mise.toml  latest
