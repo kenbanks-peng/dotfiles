@@ -29,7 +29,7 @@ ueberzug_scale  = 1
 ueberzug_offset = [ 0, 0, 0, 0 ]
 
 [opener]
-edit = [{ run = 'if [ -d "$1" ]; then zed "$1"; else zed "$(dirname "$1")"; fi', desc = "zed", block = true, for = "macos" }]
+edit = [{ run = 'if [ -d "$1" ]; then zed "$1"; else zed "$(dirname "$1")" "$1"; fi', desc = "zed", block = true, for = "macos" }]
 open = [{ run = 'open "$@"', desc = "Open", for = "macos" }]
 reveal = [
 	{ run = 'open -R "$1"', desc = "Reveal", for = "macos" },
