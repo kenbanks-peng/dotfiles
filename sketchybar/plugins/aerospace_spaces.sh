@@ -5,6 +5,8 @@ source "$PLUGIN_DIR/helpers/aerospace.sh"
 source "$PLUGIN_DIR/helpers/sketchy.sh"
 source "$PLUGIN_DIR/helpers/yabai.sh"
 
+echo $SENDER
+
 if [ "$SENDER" = "forced" ]; then
   for space in $(aerospace_workspaces); do
     aerospace_add_apps_in_spaceid "$space"
