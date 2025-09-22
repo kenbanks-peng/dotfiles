@@ -40,6 +40,7 @@ languagetool-desktop 2.6.1
 local 9.2.8,6882
 microsoft-auto-update 4.80.25073044
 microsoft-edge 140.0.3485.81,62d9c938-1350-4517-b995-48ec73f69640
+microsoft-outlook 16.101.25091314
 notion 4.20.0
 obsidian 1.9.12
 omnifocus 4.8.2,185.0.16
@@ -286,14 +287,14 @@ nspr 4.37
 nss 3.116
 numpy 2.3.3
 nushell 0.107.0
-oh-my-posh 26.23.8
+oh-my-posh 26.23.9
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.10.4
+opencode 0.11.1
 opencore-amr 0.1.6
 openexr 3.4.0_1
-openjpeg 2.5.3
+openjpeg 2.5.4
 openjph 0.23.1
 openssl@3 3.5.2
 opus 1.5.2
@@ -311,7 +312,6 @@ pinentry 1.3.2
 pinentry-mac 1.3.1.1
 pinentry-touchid 0.0.3
 pixman 0.46.4
-pls 0.0.1-beta.9
 poppler 25.09.1
 portal 1.2.3
 posting 2.9.0
@@ -402,7 +402,7 @@ zimg 3.0.6
 zoxide 0.9.8
 zsh 5.9
 zstd 1.5.7
-zx 8.8.2
+zx 8.8.3
 
 MISE PACKAGES
 -------------
