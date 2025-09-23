@@ -139,7 +139,7 @@ gawk 5.3.1
 gcc 15.1.0
 gemini-cli 0.5.5
 gettext 0.26
-gh 2.79.0
+gh 2.80.0
 giflib 5.2.2
 git 2.51.0
 git-bug 0.10.1
@@ -291,7 +291,7 @@ oh-my-posh 26.24.1
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.11.1
+opencode 0.11.2
 opencore-amr 0.1.6
 openexr 3.4.0_1
 openjpeg 2.5.4
@@ -430,7 +430,7 @@ pipx:seagoat                               0.54.17           ~/.config/mise/mise
 python                                     3.13.7            ~/.config/mise/mise.toml  latest
 ruby                                       3.4.6             ~/.config/mise/mise.toml  latest
 rust                                       1.90.0 (symlink)  ~/.config/mise/mise.toml  latest
-uv                                         0.8.20            ~/.config/mise/mise.toml  latest
+uv                                         0.8.21            ~/.config/mise/mise.toml  latest
 
 RUSTUP/CARGO
 ------------
