@@ -160,7 +160,7 @@ go-blueprint 0.10.11
 go-task 3.45.4
 gobang 0.1.0-alpha.5
 gpg-tui 0.11.1_1
-gpgme 2.0.0
+gpgme 2.0.1
 gpgmepp 2.0.0
 gping 1.20.1
 graphite2 1.3.14
