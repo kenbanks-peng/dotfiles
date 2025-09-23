@@ -34,7 +34,7 @@
 #
 # attributes: blink, bold, dim, hidden, italic, reverse, strike, ul/underline
 
-[delta "catppuccin-mocha"]
+[delta "Catppuccin-mocha"]
   dark = true
 
   # ?? - base mantle crust suface0 surface1
@@ -42,7 +42,7 @@
 
   # ?? - overlay0
 	commit-decoration-style = "#6c7086" bold box ul
-	
+
   # ?? - overlay0
 	file-decoration-style = "#6c7086"
 
@@ -55,10 +55,10 @@
 	hunk-header-file-style = bold
 
   # section text - subtext0
-	hunk-header-line-number-style = bold "#a6adc8" 
+	hunk-header-line-number-style = bold "#a6adc8"
 
 	hunk-header-style = file line-number syntax
-	
+
   # border - left - overlay0
   line-numbers-left-style = "#6c7086"
 
@@ -71,7 +71,7 @@
   # line numbers - minus - red, red 20%
 	line-numbers-minus-style = "#f38ba8" "#412F41" bold
 
-	# minus line - syntax, red 20% 
+	# minus line - syntax, red 20%
 	minus-style = "#f38ba8" "#412F41"
 
 	# minus change - base, red
@@ -91,6 +91,6 @@
 		bold blue => syntax "#384361", \
 		bold cyan => syntax "#384d5d", \
 		bold yellow => syntax "#544f4e"
-    
+
 	# Should match the name of the bat theme
-	syntax-theme = catppuccin-mocha
+	syntax-theme = Catppuccin-mocha
