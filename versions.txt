@@ -1,9 +1,9 @@
 BREW CASKS
 ----------
 aerospace 0.19.2-Beta
-affinity-designer 2.6.3,3322
-affinity-photo 2.6.3,3322
-affinity-publisher 2.6.3,3322
+affinity-designer 2.6.4,3634
+affinity-photo 2.6.4,3634
+affinity-publisher 2.6.4,3634
 anybar 0.2.3
 arc 1.113.0,68787
 audacity 3.7.5
@@ -15,7 +15,7 @@ claude 0.13.19,8834f14453599cf9d72e9491b956497c28e82ca8
 claude-code 1.0.120
 container 0.4.1
 daisydisk 4.31
-espanso 2.2.1
+espanso 2.2.7
 figma 125.8.8
 font-alegreya 2.008
 font-archivo-black latest
@@ -37,7 +37,7 @@ grandperspective 3.6
 hoppscotch 25.8.1-0
 karabiner-elements 15.5.0
 keyclu 0.30.2
-languagetool-desktop 2.6.1
+languagetool-desktop 2.7.0
 local 9.2.8,6882
 microsoft-auto-update 4.80.25073044
 microsoft-edge 140.0.3485.81,62d9c938-1350-4517-b995-48ec73f69640
@@ -61,12 +61,12 @@ typeface 4.2.0,4734
 visual-studio-code 1.104.1
 warp 0.2025.09.17.08.11.stable_02
 wezterm 20240203-110809,5046fc22
-zed 0.204.4
+zed 0.204.5
 zoom 6.6.0.64511
 
 BREW FORMULAS
 -------------
-abseil 20250814.0_1
+abseil 20250814.1
 age 1.2.1
 aom 3.13.1
 apache-arrow 21.0.0_7
@@ -109,7 +109,7 @@ cjson 1.7.19
 claude-squad 1.0.13
 clipboard 0.10.0
 colima 0.8.4
-coreutils 9.7
+coreutils 9.8
 cryptography 46.0.1
 csvtk 0.34.0
 curlie 1.8.2
@@ -124,7 +124,7 @@ duf 0.9.1
 dust 1.2.3
 dvc 3.63.0
 espeak-ng 1.52.0
-fastfetch 2.52.0
+fastfetch 2.53.0
 fd 10.3.0
 ffmpeg 8.0_1
 flac 1.5.0
@@ -151,7 +151,7 @@ glances 4.3.3_1
 glib 2.86.0
 glow 2.1.1
 gmp 6.3.0
-gnu-getopt 2.41.1
+gnu-getopt 2.41.2
 gnu-sed 4.9
 gnupg 2.4.8
 gnutls 3.8.10
@@ -166,7 +166,7 @@ gping 1.20.1
 graphite2 1.3.14
 grex 1.4.5
 grpc 1.75.0
-harfbuzz 11.5.0
+harfbuzz 11.5.1
 hexyl 0.16.0
 highway 1.3.0
 htmlq 0.4.0
@@ -287,7 +287,7 @@ nspr 4.37
 nss 3.116
 numpy 2.3.3
 nushell 0.107.0
-oh-my-posh 26.23.9
+oh-my-posh 26.24.1
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
@@ -299,7 +299,7 @@ openjph 0.23.1
 openssl@3 3.5.2
 opus 1.5.2
 ov 0.43.1
-p11-kit 0.25.9
+p11-kit 0.25.10
 pandoc 3.8
 pango 1.57.0
 pass 1.7.4
@@ -393,7 +393,7 @@ xz 5.8.1
 yabai 7.1.15
 yazi 25.5.31
 yq 4.47.2
-yt-dlp 2025.9.5
+yt-dlp 2025.9.23
 yyjson 0.12.0
 z3 4.15.3
 zellij 0.43.1
