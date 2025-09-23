@@ -118,7 +118,7 @@ dav1d 1.5.1
 dblab 0.33.0
 direnv 2.37.1
 doppler 3.75.1
-dotenvx 1.50.1
+dotenvx 1.51.0
 dua-cli 2.32.0
 duf 0.9.1
 dust 1.2.3
