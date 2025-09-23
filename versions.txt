@@ -420,7 +420,7 @@ npm:@google/gemini-cli                     0.5.5             ~/.config/mise/mise
 npm:@openai/codex                          0.39.0            ~/.config/mise/mise.toml  latest
 npm:@pimzino/claude-code-spec-workflow     1.5.9             ~/.config/mise/mise.toml  latest
 npm:ccexp                                  4.0.0             ~/.config/mise/mise.toml  latest
-npm:n8n                                    1.112.3           ~/.config/mise/mise.toml  latest
+npm:n8n                                    1.112.4           ~/.config/mise/mise.toml  latest
 npm:nuekit                                 1.0.0-RC.4        ~/.config/mise/mise.toml  latest
 npm:task-master-ai                         0.27.0            ~/.config/mise/mise.toml  latest
 pipx:docling                               2.54.0            ~/.config/mise/mise.toml  latest
@@ -430,7 +430,7 @@ pipx:seagoat                               0.54.17           ~/.config/mise/mise
 python                                     3.13.7            ~/.config/mise/mise.toml  latest
 ruby                                       3.4.6             ~/.config/mise/mise.toml  latest
 rust                                       1.90.0 (symlink)  ~/.config/mise/mise.toml  latest
-uv                                         0.8.19            ~/.config/mise/mise.toml  latest
+uv                                         0.8.20            ~/.config/mise/mise.toml  latest
 
 RUSTUP/CARGO
 ------------
