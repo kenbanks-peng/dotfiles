@@ -9,7 +9,7 @@ local layers = {
     height = '100%',
     width = '100%',
     opacity = 1.0,
- },
+  },
 }
 
 
