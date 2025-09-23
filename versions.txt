@@ -28,6 +28,7 @@ font-indie-flower latest
 font-inter 4.1
 font-league-gothic 1.601
 font-monaspace 1.301
+font-roboto latest
 font-sf-pro latest
 font-symbols-only-nerd-font 3.4.0
 font-tex-gyre-termes 2.004
@@ -60,7 +61,6 @@ typeface 4.2.0,4734
 visual-studio-code 1.104.1
 warp 0.2025.09.17.08.11.stable_02
 wezterm 20240203-110809,5046fc22
-windterm 2.7.0
 zed 0.204.4
 zoom 6.6.0.64511
 
