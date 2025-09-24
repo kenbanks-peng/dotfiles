@@ -12,7 +12,7 @@ boop 1.4.0
 brainfm 0.0.199
 bruno 2.11.0
 claude 0.13.19,8834f14453599cf9d72e9491b956497c28e82ca8
-claude-code 1.0.120
+claude-code 1.0.123
 container 0.4.1
 daisydisk 4.31
 espanso 2.2.7
@@ -41,11 +41,11 @@ languagetool-desktop 2.7.0
 local 9.2.8,6882
 microsoft-auto-update 4.80.25073044
 microsoft-edge 140.0.3485.81,62d9c938-1350-4517-b995-48ec73f69640
-microsoft-outlook 16.101.25091314
+microsoft-outlook 16.101.25092124
 notion 4.20.0
 obsidian 1.9.12
 omnifocus 4.8.2,185.0.16
-onyx 4.9.0
+onyx 4.9.1
 opcode 0.2.0
 orbstack 2.0.1,19784
 pdf-pals 1.9.0
@@ -137,7 +137,7 @@ fx 39.1.0
 fzf 0.65.2
 gawk 5.3.1
 gcc 15.1.0
-gemini-cli 0.5.5
+gemini-cli 0.6.0
 gettext 0.26
 gh 2.80.0
 giflib 5.2.2
@@ -291,11 +291,11 @@ oh-my-posh 26.24.1
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.11.2
+opencode 0.11.3
 opencore-amr 0.1.6
-openexr 3.4.0_1
+openexr 3.4.0_2
 openjpeg 2.5.4
-openjph 0.23.1
+openjph 0.24.0
 openssl@3 3.5.2
 opus 1.5.2
 ov 0.43.1
@@ -368,7 +368,7 @@ thrift 0.22.0
 tmux 3.5a
 tokei 12.1.2
 tree 2.2.1
-tree-sitter 0.25.9
+tree-sitter 0.25.10
 turso 0.1.4
 typst 0.13.1
 uchardet 0.0.8
@@ -416,7 +416,7 @@ go:golang.org/x/tools/gopls                0.20.0            ~/.config/mise/mise
 go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise.toml  latest
 node                                       24.8.0            ~/.config/mise/mise.toml  latest
 npm:@augmentcode/auggie                    0.5.5             ~/.config/mise/mise.toml  latest
-npm:@google/gemini-cli                     0.5.5             ~/.config/mise/mise.toml  latest
+npm:@google/gemini-cli                     0.6.0             ~/.config/mise/mise.toml  latest
 npm:@openai/codex                          0.40.0            ~/.config/mise/mise.toml  latest
 npm:@pimzino/claude-code-spec-workflow     1.5.9             ~/.config/mise/mise.toml  latest
 npm:ccexp                                  4.0.0             ~/.config/mise/mise.toml  latest
@@ -430,7 +430,7 @@ pipx:seagoat                               0.54.17           ~/.config/mise/mise
 python                                     3.13.7            ~/.config/mise/mise.toml  latest
 ruby                                       3.4.6             ~/.config/mise/mise.toml  latest
 rust                                       1.90.0 (symlink)  ~/.config/mise/mise.toml  latest
-uv                                         0.8.21            ~/.config/mise/mise.toml  latest
+uv                                         0.8.22            ~/.config/mise/mise.toml  latest
 
 RUSTUP/CARGO
 ------------
