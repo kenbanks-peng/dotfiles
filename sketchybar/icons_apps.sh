@@ -4,7 +4,10 @@
 function app_icons() {
     case "$1" in
 
-    # from SF symbols app
+    # overrides from SF symbols app or sketchybar-app-font
+    "Streaks")
+        icon_result=":lm_studio:"
+        ;;
     "Microsoft Outlook")
         icon_result="􀍕"
         ;;
@@ -29,6 +32,9 @@ function app_icons() {
     "Structured")
         icon_result=":tick_tick:"
         ;;
+    "Bible Study")
+        icon_result=":raspberry_pi:"
+         ;;
 
     # from https://github.com/kvndrsslr/sketchybar-app-font
     "AirPort Utility")
