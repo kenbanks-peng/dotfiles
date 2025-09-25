@@ -37,7 +37,6 @@ keyclu 0.30.2
 languagetool-desktop 2.7.0
 local 9.2.8,6882
 microsoft-auto-update 4.80.25073044
-microsoft-edge 140.0.3485.81,62d9c938-1350-4517-b995-48ec73f69640
 microsoft-outlook 16.101.25092124
 notion 4.20.0
 obsidian 1.9.12
