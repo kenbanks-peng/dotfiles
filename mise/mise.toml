@@ -1,6 +1,5 @@
 [tools]
 bun = "latest"
-deno = "latest"
 uv = "latest"
 node = "latest"
 go = "latest"
