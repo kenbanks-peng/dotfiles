@@ -3,7 +3,7 @@
 # active_color="gradient(top_left=0xff00ff00,bottom_right=0x00000000)"
 # active_color="0xff00ff00"
 options=(
-  style=round
+  style=uniform
   width=5.0
   hidpi=on
   active_color="0xff00ff00"
