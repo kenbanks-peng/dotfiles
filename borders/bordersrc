@@ -2,8 +2,9 @@
 
 # active_color="gradient(top_left=0xff00ff00,bottom_right=0x00000000)"
 # active_color="0xff00ff00"
+# style=uniform or round
 options=(
-  style=uniform
+  style=round
   width=5.0
   hidpi=on
   active_color="0xff00ff00"
