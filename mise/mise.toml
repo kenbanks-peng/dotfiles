@@ -23,7 +23,6 @@ ruby = "latest"
 "npm:@augmentcode/auggie" = "latest"
 "pipx:markitdown" = "latest"
 rust = "latest"
-python = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = []
