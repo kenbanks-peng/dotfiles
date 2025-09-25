@@ -23,6 +23,7 @@ ruby = "latest"
 "npm:@augmentcode/auggie" = "latest"
 "pipx:markitdown" = "latest"
 rust = "latest"
+"cargo:cargo-cache" = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = []

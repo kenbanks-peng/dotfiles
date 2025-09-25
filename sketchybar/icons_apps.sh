@@ -8,6 +8,9 @@ function app_icons() {
     "Streaks")
         icon_result=":lm_studio:"
         ;;
+    "Disk Utility")
+        icon_result=":logicpro:"
+        ;;
     "Microsoft Outlook")
         icon_result="􀍕"
         ;;
