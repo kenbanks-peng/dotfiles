@@ -11,7 +11,7 @@ boltai 1.36.4
 boop 1.4.0
 brainfm 0.0.199
 bruno 2.12.0
-claude 0.13.19,8834f14453599cf9d72e9491b956497c28e82ca8
+claude 0.13.37,bfd4edc4eb20f97ee38d1b36c081d83da6d1a37b
 claude-code 1.0.124
 container 0.4.1
 daisydisk 4.31
@@ -251,8 +251,8 @@ libxrender 0.9.12
 libyaml 0.2.5
 lima 1.2.1
 little-cms2 2.17
-lld 21.1.1
-llvm 21.1.1
+lld 21.1.2
+llvm 21.1.2
 lolcat 100.0.1
 lpeg 1.1.0
 lua 5.4.8
@@ -410,7 +410,6 @@ bun                                        1.2.22            ~/.config/mise/mise
 cargo:cargo-cache                          0.8.3             ~/.config/mise/mise.toml  latest
 cargo:cargo-update                         18.0.0            ~/.config/mise/mise.toml  latest
 cargo:sbyte                                0.3.3             ~/.config/mise/mise.toml  latest
-deno                                       2.5.2             ~/.config/mise/mise.toml  latest
 go                                         1.25.1            ~/.config/mise/mise.toml  latest
 go:github.com/wailsapp/wails/v2/cmd/wails  2.10.2            ~/.config/mise/mise.toml  latest
 go:golang.org/x/tools/gopls                0.20.0            ~/.config/mise/mise.toml  latest
