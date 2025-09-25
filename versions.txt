@@ -36,7 +36,6 @@ keyclu 0.30.2
 languagetool-desktop 2.7.0
 microsoft-auto-update 4.80.25073044
 microsoft-outlook 16.101.25092124
-notion 4.20.0
 obsidian 1.9.12
 omnifocus 4.8.3
 onyx 4.9.1
