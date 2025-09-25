@@ -13,7 +13,6 @@ claude-code 1.0.124
 container 0.4.1
 daisydisk 4.31
 espanso 2.2.7
-figma 125.8.8
 font-alegreya 2.008
 font-archivo-black latest
 font-fira-sans 4.202
