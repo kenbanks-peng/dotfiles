@@ -8,9 +8,9 @@ boltai 1.36.4
 boop 1.4.0
 bruno 2.12.0
 claude 0.13.37,bfd4edc4eb20f97ee38d1b36c081d83da6d1a37b
-claude-code 1.0.126
+claude-code 1.0.127
 container 0.4.1
-daisydisk 4.31
+daisydisk 4.32
 espanso 2.2.7
 font-alegreya 2.008
 font-archivo-black latest
@@ -33,6 +33,7 @@ hoppscotch 25.8.1-0
 karabiner-elements 15.5.0
 keyclu 0.30.2
 languagetool-desktop 2.7.0
+livewallpaper latest
 microsoft-auto-update 4.80.25073044
 microsoft-outlook 16.101.25092124
 obsidian 1.9.12
@@ -51,9 +52,10 @@ syntax-highlight 2.1.26
 transmission 4.0.6
 typeface 4.2.0,4734
 visual-studio-code 1.104.2
-warp 0.2025.09.17.08.11.stable_02
+vlc 3.0.21
+warp 0.2025.09.24.08.11.stable_00
 wezterm 20240203-110809,5046fc22
-zed 0.205.5
+zed 0.205.6
 zoom 6.6.0.64511
 
 BREW FORMULAS
@@ -115,7 +117,7 @@ giflib 5.2.2
 git 2.51.0
 git-bug 0.10.1
 git-delta 0.18.2_3
-github-mcp-server 0.15.0
+github-mcp-server 0.16.0
 gitleaks 8.28.0
 gitui 0.27.0
 glances 4.3.3_1
@@ -161,7 +163,7 @@ lame 3.100
 lazydocker 0.24.1
 lazygit 0.55.1
 lazyjj 0.6.1
-lazyjournal 0.8.0
+lazyjournal 0.8.1
 lazysql 0.4.2
 leptonica 1.85.0
 lf 38
@@ -255,7 +257,7 @@ nushell 0.107.0
 oh-my-posh 26.25.0
 onefetch 2.25.0
 oniguruma 6.9.10
-opencode 0.11.8
+opencode 0.12.1
 opencore-amr 0.1.6
 openexr 3.4.0_2
 openjpeg 2.5.4
@@ -300,7 +302,7 @@ sad 0.4.32
 sd 1.0.0
 sdl2 2.32.10
 sevenzip 25.01
-shaderc 2025.3
+shaderc 2025.4
 shared-mime-info 2.4
 shellcheck 0.11.0
 simdjson 3.13.0
