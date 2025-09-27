@@ -1,6 +1,7 @@
 BREW CASKS
 ----------
 aerospace 0.19.2-Beta
+affinity-photo 2.6.4,3634
 anybar 0.2.3
 arc 1.114.1,69158
 audacity 3.7.5
@@ -232,6 +233,7 @@ lz4 1.10.0
 lzo 2.10
 m4 1.4.20
 macmon 0.6.1
+mad 0.15.1b
 makensis 3.11
 mbedtls 3.6.4
 mcfly 0.9.3
@@ -264,6 +266,7 @@ openjpeg 2.5.4
 openjph 0.24.1
 openssl@3 3.5.2
 opus 1.5.2
+opusfile 0.12_1
 ov 0.43.1
 p11-kit 0.25.10
 pandoc 3.8
@@ -310,6 +313,7 @@ sk 0.20.5
 sketchybar 2.22.1
 snappy 1.2.2
 sniffnet 1.4.1
+sox 14.4.2_6
 spark 1.0.1
 speex 1.2.1
 sq 0.48.5
