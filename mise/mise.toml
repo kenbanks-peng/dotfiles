@@ -18,6 +18,8 @@ ruby = "latest"
 "pipx:markitdown" = "latest"
 rust = "latest"
 "cargo:cargo-cache" = "latest"
+"pipx:meson" = "latest"
+"pipx:ninja" = "latest"
 
 [settings]
 idiomatic_version_file_enable_tools = []
