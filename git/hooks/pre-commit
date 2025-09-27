@@ -2,13 +2,13 @@
 
 # Check for large files (>50MB)
 echo "Checking for large files..."
-large_files=$(git diff --cached --name-only --diff-filter=A | xargs -I {} find {} -size +51200k 2>/dev/null)
+large_files=$(git diff --cached --name-only --diff-filter=A | xargs -I {} find {} -size +10240k 2>/dev/null)
 if [ -n "$large_files" ]; then
-    echo "❌ Large files detected (>50MB):"
-    echo "$large_files"
-    echo "Consider using DVC: dvc add <filename>"
-    echo "To bypass this check, use: git commit --no-verify"
-    exit 1
+  echo "❌ Large files detected (>10MB):"
+  echo "$large_files"
+  echo "Consider using DVC: dvc add <filename>"
+  echo "To bypass this check, use: git commit --no-verify"
+  exit 1
 fi
 echo "✅ No large files detected"
 
@@ -19,11 +19,12 @@ gitleaks dir --verbose .
 
 # Check the exit status
 if [ $? -ne 0 ]; then
-    echo "❌ Gitleaks found potential secrets in your staged changes!"
-    echo "Please review and remove any secrets before committing."
-    echo "To bypass this check (NOT recommended), use: git commit --no-verify"
-    exit 1
+  echo "❌ Gitleaks found potential secrets in your staged changes!"
+  echo "Please review and remove any secrets before committing."
+  echo "To bypass this check (NOT recommended), use: git commit --no-verify"
+  exit 1
 fi
 
 echo "✅ No secrets detected by gitleaks"
 exit 0
+
