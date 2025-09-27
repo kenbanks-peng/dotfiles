@@ -1,5 +1,17 @@
 #!/bin/bash
 
+# Check for large files (>50MB)
+echo "Checking for large files..."
+large_files=$(git diff --cached --name-only --diff-filter=A | xargs -I {} find {} -size +51200k 2>/dev/null)
+if [ -n "$large_files" ]; then
+    echo "❌ Large files detected (>50MB):"
+    echo "$large_files"
+    echo "Consider using DVC: dvc add <filename>"
+    echo "To bypass this check, use: git commit --no-verify"
+    exit 1
+fi
+echo "✅ No large files detected"
+
 echo "Running gitleaks to check for secrets in working directory..."
 
 # Run gitleaks on the working directory (staged files)
