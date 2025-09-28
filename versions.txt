@@ -180,7 +180,7 @@ jpeg-turbo 3.1.2
 jpeg-xl 0.11.1_3
 jq 1.8.1
 jqp 0.7.0
-just 1.42.4
+just 1.43.0
 lame 3.100
 lazydocker 0.24.1
 lazygit 0.55.1
