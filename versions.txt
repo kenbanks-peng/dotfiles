@@ -402,7 +402,7 @@ zx 8.8.4
 
 MISE PACKAGES
 -------------
-bun                                        1.2.22            ~/.config/mise/mise.toml  latest
+bun                                        1.2.23            ~/.config/mise/mise.toml  latest
 cargo:cargo-cache                          0.8.3             ~/.config/mise/mise.toml  latest
 cargo:cargo-update                         18.0.0            ~/.config/mise/mise.toml  latest
 cargo:sbyte                                0.3.3             ~/.config/mise/mise.toml  latest
