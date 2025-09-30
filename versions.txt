@@ -55,7 +55,7 @@ visual-studio-code 1.104.2
 vlc 3.0.21
 warp 0.2025.09.24.08.11.stable_01
 wezterm 20240203-110809,5046fc22
-zed 0.205.6
+zed 0.205.8
 zoom 6.6.2.65462
 
 BREW FORMULAS
@@ -293,7 +293,7 @@ opus 1.5.2
 opusfile 0.12_1
 ov 0.43.1
 p11-kit 0.25.10
-pandoc 3.8
+pandoc 3.8.1
 pango 1.57.0
 pass 1.7.4
 pastel 0.10.0
