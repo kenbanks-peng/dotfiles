@@ -19,10 +19,6 @@ command = ["bunx", "@modelcontextprotocol/server-sequential-thinking"]
 [mcp.memory]
 command = ["bunx", "@modelcontextprotocol/server-memory"]
 
-# npmjs - 33,500 weekly downloads
-[mcp.taskmaster-ai]
-command = ["bunx", "--package=task-master-ai", "task-master-ai"]
-
 # npmjs - 13000 weekly downloads
 [mcp.n8n-mcp]
 command = ["bunx", "n8n-mcp"]
