@@ -36,12 +36,11 @@ command = ["bunx", "@pimzino/spec-workflow-mcp@latest"]
 [mcp.Obsidian]
 command = ["bunx", "mcp-obsidian", "$OBSIDIAN_VAULT"]
 
-# npmjs - 418 weekly downloads
-[mcp.github]
-command = ["docker", "run", "-i", "--rm", "-e", "GITHUB_PERSONAL_ACCESS_TOKEN", "ghcr.io/github/github-mcp-server"]
-env = { GITHUB_PERSONAL_ACCESS_TOKEN = "$GITHUB_PERSONAL_ACCESS_TOKEN" }
-
 # github
 [mcp.serena]
 type = "stdio"
 command = ["uvx", "--from", "git+https://github.com/oraios/serena", "serena", "start-mcp-server", "--context", "ide-assistant", "--project", "$PWD"]
+
+[mcp.github]
+command = ["docker", "run", "-i", "--rm", "-e", "GITHUB_PERSONAL_ACCESS_TOKEN", "ghcr.io/github/github-mcp-server"]
+env = { GITHUB_PERSONAL_ACCESS_TOKEN = "$GITHUB_PERSONAL_ACCESS_TOKEN" }
