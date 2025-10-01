@@ -45,5 +45,3 @@ env = { GITHUB_PERSONAL_ACCESS_TOKEN = "$GITHUB_PERSONAL_ACCESS_TOKEN" }
 [mcp.serena]
 type = "stdio"
 command = ["uvx", "--from", "git+https://github.com/oraios/serena", "serena", "start-mcp-server", "--context", "ide-assistant", "--project", "$PWD"]
-
-
