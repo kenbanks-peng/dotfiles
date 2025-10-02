@@ -9,8 +9,8 @@ boltai 1.36.4
 boop 1.4.0
 bruno 2.12.0
 claude 0.13.37,bfd4edc4eb20f97ee38d1b36c081d83da6d1a37b
-claude-code 2.0.1
-container 0.4.1
+claude-code 2.0.5
+container 0.5.0
 daisydisk 4.32
 espanso 2.2.7
 font-alegreya 2.008
@@ -52,9 +52,9 @@ symboliclinker 2.2
 syntax-highlight 2.1.26
 transmission 4.0.6
 typeface 4.2.1,4763
-visual-studio-code 1.104.2
+visual-studio-code 1.104.3
 vlc 3.0.21
-warp 0.2025.09.24.08.11.stable_03
+warp 0.2025.10.01.08.12.stable_02
 wezterm 20240203-110809,5046fc22
 zed 0.206.6
 zoom 6.6.2.65462
@@ -78,7 +78,7 @@ aws-c-event-stream 0.5.7
 aws-c-http 0.10.4
 aws-c-io 0.22.1
 aws-c-mqtt 0.13.3
-aws-c-s3 0.9.0
+aws-c-s3 0.9.1
 aws-c-sdkutils 0.2.4
 aws-checksums 0.2.7
 aws-crt-cpp 0.34.5
@@ -416,7 +416,7 @@ npm:ccexp                                  4.0.0             ~/.config/mise/mise
 npm:nuekit                                 1.0.0-RC.4        ~/.config/mise/mise.toml  latest
 pipx:meson                                 1.9.1             ~/.config/mise/mise.toml  latest
 pipx:ninja                                 1.13.0            ~/.config/mise/mise.toml  latest
-pipx:ruff                                  0.13.2            ~/.config/mise/mise.toml  latest
+pipx:ruff                                  0.13.3            ~/.config/mise/mise.toml  latest
 ruby                                       3.4.6             ~/.config/mise/mise.toml  latest
 rust                                       1.90.0 (symlink)  ~/.config/mise/mise.toml  latest
 uv                                         0.8.22            ~/.config/mise/mise.toml  latest
