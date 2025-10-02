@@ -3,7 +3,7 @@ BREW CASKS
 aerospace 0.19.2-Beta
 affinity-photo 2.6.4,3634
 anybar 0.2.3
-arc 1.114.1,69158
+arc 1.115.0,69267
 audacity 3.7.5
 boltai 1.36.4
 boop 1.4.0
