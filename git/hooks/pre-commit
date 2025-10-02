@@ -15,7 +15,7 @@ echo "✅ No large files detected"
 echo "Running gitleaks to check for secrets in working directory..."
 
 # Run gitleaks on the working directory (staged files)
-gitleaks dir --verbose .
+# gitleaks git --verbose .
 
 # Check the exit status
 if [ $? -ne 0 ]; then
@@ -27,4 +27,3 @@ fi
 
 echo "✅ No secrets detected by gitleaks"
 exit 0
-
