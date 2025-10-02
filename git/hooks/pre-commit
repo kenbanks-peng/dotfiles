@@ -12,10 +12,10 @@ if [ -n "$large_files" ]; then
 fi
 echo "✅ No large files detected"
 
-echo "Running gitleaks to check for secrets in working directory..."
+echo "Running gitleaks to check for secrets in staged files..."
 
-# Run gitleaks on the working directory (staged files)
-# gitleaks git --verbose .
+# Run gitleaks on staged files only
+gitleaks protect --staged --verbose
 
 # Check the exit status
 if [ $? -ne 0 ]; then
