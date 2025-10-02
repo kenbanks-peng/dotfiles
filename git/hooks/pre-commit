@@ -15,7 +15,7 @@ echo "✅ No large files detected"
 echo "Running gitleaks to check for secrets in staged files..."
 
 # Run gitleaks on staged files only
-gitleaks protect --staged --verbose
+gitleaks git --staged --verbose .
 
 # Check the exit status
 if [ $? -ne 0 ]; then
