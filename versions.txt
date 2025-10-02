@@ -41,11 +41,11 @@ obsidian 1.9.14
 omnifocus 4.8.3
 onyx 4.9.1
 opcode 0.2.0
-orbstack 2.0.2,19855
+orbstack 2.0.3,19876
 pdf-pals 1.9.0
 quarto 1.8.25
 raycast 1.103.2
-screen-studio 3.4.10-3940
+screen-studio 3.4.11-3961
 sf-symbols 7.0,115
 skim 1.7.11
 symboliclinker 2.2
@@ -136,7 +136,8 @@ giflib 5.2.2
 git 2.51.0
 git-bug 0.10.1
 git-delta 0.18.2_3
-github-mcp-server 0.17.0
+git-filter-repo 2.47.0
+github-mcp-server 0.17.1
 gitleaks 8.28.0
 gitui 0.27.0
 glances 4.3.3_1
@@ -279,7 +280,7 @@ nspr 4.37
 nss 3.116
 numpy 2.3.3
 nushell 0.107.0
-oh-my-posh 26.26.2
+oh-my-posh 26.26.3
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
@@ -322,7 +323,7 @@ rav1e 0.8.1
 rclone 1.71.1
 re2 20250812_1
 readline 8.3.1
-repomix 1.6.0
+repomix 1.6.1
 resvg 0.45.1
 rich-cli 1.8.1
 ripgrep 14.1.1
