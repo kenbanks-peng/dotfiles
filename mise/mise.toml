@@ -12,12 +12,7 @@ ruby = "latest"
 "go:honnef.co/go/tools/cmd/staticcheck" = "latest"
 "go:github.com/wailsapp/wails/v2/cmd/wails" = "latest"
 "npm:ccexp" = "latest"
-"npm:@pimzino/claude-code-spec-workflow" = "latest"
 rust = "latest"
 "cargo:cargo-cache" = "latest"
 "pipx:meson" = "latest"
 "pipx:ninja" = "latest"
-
-[settings]
-idiomatic_version_file_enable_tools = []
-

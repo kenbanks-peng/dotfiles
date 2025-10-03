@@ -1,3 +1,8 @@
+[mcp]
+
+[mcp.test]
+command = ["uvx", "--from", "$HOME/Software/DevApps/agent/mcp_server.py"]
+
 # npmjs - 350,000 weekly downloads
 [mcp.playwright]
 command = ["bunx", "@playwright/mcp@latest"]
@@ -44,3 +49,4 @@ command = ["uvx", "--from", "git+https://github.com/oraios/serena", "serena", "s
 [mcp.github]
 command = ["docker", "run", "-i", "--rm", "-e", "GITHUB_PERSONAL_ACCESS_TOKEN", "ghcr.io/github/github-mcp-server"]
 env = { GITHUB_PERSONAL_ACCESS_TOKEN = "$GITHUB_PERSONAL_ACCESS_TOKEN" }
+
