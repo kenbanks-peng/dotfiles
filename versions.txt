@@ -9,7 +9,7 @@ boltai 1.36.4
 boop 1.4.0
 bruno 2.12.0
 claude 0.13.37,bfd4edc4eb20f97ee38d1b36c081d83da6d1a37b
-claude-code 2.0.5
+claude-code 2.0.8
 container 0.5.0
 daisydisk 4.32
 espanso 2.2.7
@@ -68,7 +68,7 @@ apache-arrow 21.0.0_7
 aribb24 1.0.4
 asciidoctor 2.0.23
 asciinema 3.0.0
-ast-grep 0.39.5
+ast-grep 0.39.6
 autoconf 2.72
 aws-c-auth 0.9.1
 aws-c-cal 0.9.3
@@ -280,11 +280,11 @@ nspr 4.37
 nss 3.117
 numpy 2.3.3
 nushell 0.107.0
-oh-my-posh 27.0.0
+oh-my-posh 27.1.0
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.14.1
+opencode 0.14.3
 opencore-amr 0.1.6
 openexr 3.4.0_2
 openjpeg 2.5.4
@@ -356,6 +356,7 @@ svgo 4.0.0
 svt-av1 3.1.2
 syncthing 2.0.10
 tailspin 5.5.0
+tdd-guard 1.0.2
 tealdeer 1.8.0
 terminal-notifier 2.0.0
 tesseract 5.5.1
