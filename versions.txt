@@ -418,7 +418,7 @@ pipx:ninja                                 1.13.0            ~/.config/mise/mise
 pipx:ruff                                  0.13.3            ~/.config/mise/mise.toml  latest
 ruby                                       3.4.6             ~/.config/mise/mise.toml  latest
 rust                                       1.90.0 (symlink)  ~/.config/mise/mise.toml  latest
-uv                                         0.8.22            ~/.config/mise/mise.toml  latest
+uv                                         0.8.23            ~/.config/mise/mise.toml  latest
 
 RUSTUP/CARGO
 ------------
