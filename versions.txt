@@ -400,7 +400,6 @@ zimg 3.0.6
 zoxide 0.9.8
 zsh 5.9
 zstd 1.5.7
-zx 8.8.4
 
 MISE PACKAGES
 -------------
