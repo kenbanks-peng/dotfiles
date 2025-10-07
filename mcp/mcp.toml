@@ -1,7 +1,16 @@
 [mcp]
 
-[mcp.test]
-command = ["uvx", "--from", "$HOME/Software/DevApps/agent/mcp_server.py"]
+[mcp.lint]
+type = "stdio"
+command = ["$BINPATH/mcp_biome"]
+
+[mcp.seagoat]
+type = "stdio"
+command = ["$BINPATH/mcp_seagoat"]
+
+[mcp.tokei]
+type = "stdio"
+command = ["$BINPATH/mcp_tokei"]
 
 # npmjs - 350,000 weekly downloads
 [mcp.playwright]

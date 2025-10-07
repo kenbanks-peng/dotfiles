@@ -125,8 +125,8 @@ local keys = {
    map('u', mod.SUPER, action.CharSelect({ copy_on_select = true, copy_to = 'ClipboardAndPrimarySelection' })), -- emoji
 
    -- PANES
-   map('\\', mod.SUPER, action.SplitVertical({ domain = 'CurrentPaneDomain' })),
-   map('/', mod.SUPER, action.SplitHorizontal({ domain = 'CurrentPaneDomain' })),
+   map('/', mod.SUPER, action.SplitVertical({ domain = 'CurrentPaneDomain' })),
+   map('\\', mod.SUPER, action.SplitHorizontal({ domain = 'CurrentPaneDomain' })),
    map('Enter', mod.SUPER, action.TogglePaneZoomState), -- zoom
    map('p', mod.SUPER_REV, action.PaneSelect({ alphabet = '1234567890', mode = 'SwapWithActiveKeepFocus' })),
 
