@@ -36,7 +36,7 @@ karabiner-elements 15.5.0
 keyclu 0.30.2
 languagetool-desktop 2.7.2
 microsoft-auto-update 4.80.25073044
-microsoft-outlook 16.101.25092825
+microsoft-outlook 16.101.25100321
 obsidian 1.9.14
 omnifocus 4.8.3
 onyx 4.9.1
@@ -44,7 +44,7 @@ opcode 0.2.0
 orbstack 2.0.3,19876
 pdf-pals 1.9.0
 quarto 1.8.25
-raycast 1.103.2
+raycast 1.103.3
 screen-studio 3.4.11-3961
 sf-symbols 7.0,115
 skim 1.7.11
@@ -148,7 +148,7 @@ gnu-getopt 2.41.2
 gnu-sed 4.9
 gnupg 2.4.8
 gnutls 3.8.10
-go 1.25.1
+go 1.25.2
 go-blueprint 0.10.11
 go-task 3.45.4
 gobang 0.1.0-alpha.5
@@ -285,7 +285,7 @@ oh-my-posh 27.1.2
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.14.5
+opencode 0.14.6
 opencore-amr 0.1.6
 openexr 3.4.0_2
 openjpeg 2.5.4
@@ -407,7 +407,7 @@ bun                                        1.2.23            ~/.config/mise/mise
 cargo:cargo-cache                          0.8.3             ~/.config/mise/mise.toml  latest
 cargo:cargo-update                         18.0.0            ~/.config/mise/mise.toml  latest
 cargo:sbyte                                0.3.3             ~/.config/mise/mise.toml  latest
-go                                         1.25.1            ~/.config/mise/mise.toml  latest
+go                                         1.25.2            ~/.config/mise/mise.toml  latest
 go:github.com/wailsapp/wails/v2/cmd/wails  2.10.2            ~/.config/mise/mise.toml  latest
 go:golang.org/x/tools/gopls                0.20.0            ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise.toml  latest
@@ -417,7 +417,7 @@ npm:nuekit                                 1.0.0-RC.4        ~/.config/mise/mise
 pipx:SuperClaude                           4.1.5             ~/.config/mise/mise.toml  latest
 pipx:meson                                 1.9.1             ~/.config/mise/mise.toml  latest
 pipx:ninja                                 1.13.0            ~/.config/mise/mise.toml  latest
-pipx:ruff                                  0.13.3            ~/.config/mise/mise.toml  latest
+pipx:ruff                                  0.14.0            ~/.config/mise/mise.toml  latest
 pipx:seagoat                               0.54.17           ~/.config/mise/mise.toml  latest
 ruby                                       3.4.6             ~/.config/mise/mise.toml  latest
 rust                                       1.90.0 (symlink)  ~/.config/mise/mise.toml  latest
