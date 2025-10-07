@@ -29,7 +29,7 @@ ueberzug_scale  = 1
 ueberzug_offset = [ 0, 0, 0, 0 ]
 
 [opener]
-edit = [{ run = 'if [ -d "$1" ]; then "$EDITOR $1"; else "$EDITOR" $(dirname "$1")" "$1"; fi', desc = "editor", block = true, for = "macos" }]
+edit = [{ run = 'nvim "$@"', desc = "Edit", block = true, for = "macos" }]
 open = [{ run = 'open "$@"', desc = "Open", for = "macos" }]
 reveal = [
 	{ run = 'open -R "$1"', desc = "Reveal", for = "macos" },
