@@ -9,7 +9,7 @@ boltai 1.36.5
 boop 1.4.0
 bruno 2.12.0
 claude 0.13.37,bfd4edc4eb20f97ee38d1b36c081d83da6d1a37b
-claude-code 2.0.9
+claude-code 2.0.10
 container 0.5.0
 daisydisk 4.32
 espanso 2.2.7
@@ -419,7 +419,7 @@ pipx:meson                                 1.9.1             ~/.config/mise/mise
 pipx:ninja                                 1.13.0            ~/.config/mise/mise.toml  latest
 pipx:ruff                                  0.14.0            ~/.config/mise/mise.toml  latest
 pipx:seagoat                               0.54.17           ~/.config/mise/mise.toml  latest
-ruby                                       3.4.6             ~/.config/mise/mise.toml  latest
+ruby                                       3.4.7             ~/.config/mise/mise.toml  latest
 rust                                       1.90.0 (symlink)  ~/.config/mise/mise.toml  latest
 uv                                         0.8.24            ~/.config/mise/mise.toml  latest
 
