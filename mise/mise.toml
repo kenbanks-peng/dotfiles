@@ -19,6 +19,7 @@ rust = "latest"
 "pipx:seagoat" = "latest"
 "pipx:SuperClaude" = "latest"
 "npm:md-to-pdf" = "latest"
+"npm:github-markdown-css" = "latest"
 
 [settings]
 
