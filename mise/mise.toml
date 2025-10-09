@@ -18,3 +18,8 @@ rust = "latest"
 "pipx:ninja" = "latest"
 "pipx:seagoat" = "latest"
 "pipx:SuperClaude" = "latest"
+
+[settings]
+
+[settings.node]
+compile = false
