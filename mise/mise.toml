@@ -18,6 +18,7 @@ rust = "latest"
 "pipx:ninja" = "latest"
 "pipx:seagoat" = "latest"
 "pipx:SuperClaude" = "latest"
+"npm:md-to-pdf" = "latest"
 
 [settings]
 
