@@ -23,5 +23,3 @@ rust = "latest"
 
 [settings]
 
-[settings.node]
-compile = false
