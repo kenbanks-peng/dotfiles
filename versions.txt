@@ -8,8 +8,8 @@ audacity 3.7.5
 boltai 1.36.5
 boop 1.4.0
 bruno 2.12.0
-claude 0.13.37,bfd4edc4eb20f97ee38d1b36c081d83da6d1a37b
-claude-code 2.0.10
+claude 0.13.64,7d2335a19a4196466bab9122b10794dbbe5173f4
+claude-code 2.0.11
 container 0.5.0
 daisydisk 4.32
 espanso 2.2.7
@@ -34,7 +34,7 @@ grandperspective 3.6
 hoppscotch 25.9.1-0
 karabiner-elements 15.5.0
 keyclu 0.30.2
-languagetool-desktop 2.7.2
+languagetool-desktop 2.7.3
 microsoft-auto-update 4.80.25073044
 microsoft-outlook 16.101.25100321
 obsidian 1.9.14
@@ -56,7 +56,7 @@ visual-studio-code 1.104.3
 vlc 3.0.21
 warp 0.2025.10.01.08.12.stable_02
 wezterm 20240203-110809,5046fc22
-zed 0.206.7
+zed 0.207.3
 zoom 6.6.2.65462
 
 BREW FORMULAS
@@ -78,7 +78,7 @@ aws-c-event-stream 0.5.7
 aws-c-http 0.10.4
 aws-c-io 0.23.1
 aws-c-mqtt 0.13.3
-aws-c-s3 0.9.1
+aws-c-s3 0.9.2
 aws-c-sdkutils 0.2.4
 aws-checksums 0.2.7
 aws-crt-cpp 0.34.5
@@ -124,7 +124,7 @@ flac 1.5.0
 flock 0.4.0
 fontconfig 2.17.1
 freetype 2.14.1_1
-frei0r 2.4.1
+frei0r 2.5.0
 fribidi 1.0.16
 fx 39.1.0
 fzf 0.65.2
@@ -168,7 +168,7 @@ hurl 7.0.0
 hyperfine 1.19.0
 icu4c@77 77.1
 imagemagick 7.1.2-5
-imath 3.2.1
+imath 3.2.2
 imgcat 1.0.22
 isl 0.27
 jasper 4.2.8
@@ -199,7 +199,7 @@ libdeflate 1.24
 libevent 2.1.12_1
 libgcrypt 1.11.2
 libgit2 1.9.1
-libgpg-error 1.55
+libgpg-error 1.56
 libheif 1.20.2
 libidn2 2.3.8
 libksba 1.6.7
@@ -211,7 +211,7 @@ libnghttp2 1.67.1
 libnghttp3 1.12.0
 libngtcp2 1.16.0
 libogg 1.3.6
-libomp 21.1.2
+libomp 21.1.3
 libplacebo 7.351.0
 libpng 1.6.50
 libraw 0.21.4
@@ -287,13 +287,13 @@ oniguruma 6.9.10
 openblas 0.3.30
 opencode 0.14.6
 opencore-amr 0.1.6
-openexr 3.4.0_2
+openexr 3.4.1
 openjpeg 2.5.4
-openjph 0.24.1
+openjph 0.24.2
 openssl@3 3.6.0
 opus 1.5.2
 opusfile 0.12_1
-ov 0.43.1
+ov 0.44.0
 p11-kit 0.25.10
 pandoc 3.8.2
 pango 1.57.0
@@ -329,7 +329,7 @@ resvg 0.45.1
 rich-cli 1.8.1
 ripgrep 14.1.1
 rubberband 4.0.0
-ruby 3.4.6_1
+ruby 3.4.7
 rustscan 2.4.1
 sad 0.4.32
 sd 1.0.0
@@ -343,6 +343,7 @@ sk 0.20.5
 sketchybar 2.22.1
 snappy 1.2.2
 sniffnet 1.4.1
+snyk-cli 1.1300.0
 sox 14.4.2_6
 spark 1.0.1
 speex 1.2.1
@@ -367,7 +368,7 @@ tmux 3.5a
 tokei 12.1.2
 tree 2.2.1
 tree-sitter 0.25.10
-turso 0.2.1
+turso 0.2.2
 typst 0.13.1
 uchardet 0.0.8
 unbound 1.24.0
@@ -375,8 +376,8 @@ unibilium 2.1.2
 utf8proc 2.11.0
 uvwasi 0.0.23
 vapoursynth 72
-vulkan-headers 1.4.321.0
-vulkan-loader 1.4.321.0
+vulkan-headers 1.4.328.1
+vulkan-loader 1.4.328.1
 wallpaper 2.3.3
 watchexec 2.3.2
 webp 1.6.0
@@ -421,7 +422,7 @@ pipx:ruff                                  0.14.0            ~/.config/mise/mise
 pipx:seagoat                               0.54.17           ~/.config/mise/mise.toml  latest
 ruby                                       3.4.7             ~/.config/mise/mise.toml  latest
 rust                                       1.90.0 (symlink)  ~/.config/mise/mise.toml  latest
-uv                                         0.8.24            ~/.config/mise/mise.toml  latest
+uv                                         0.9.0             ~/.config/mise/mise.toml  latest
 
 RUSTUP/CARGO
 ------------
