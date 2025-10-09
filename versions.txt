@@ -404,27 +404,27 @@ zstd 1.5.7
 
 MISE PACKAGES
 -------------
-bun                                        1.2.23            ~/.config/mise/mise.toml  latest
-cargo:cargo-cache                          0.8.3             ~/.config/mise/mise.toml  latest
-cargo:cargo-update                         18.0.0            ~/.config/mise/mise.toml  latest
-cargo:sbyte                                0.3.3             ~/.config/mise/mise.toml  latest
-go                                         1.25.2            ~/.config/mise/mise.toml  latest
-go:github.com/wailsapp/wails/v2/cmd/wails  2.10.2            ~/.config/mise/mise.toml  latest
-go:golang.org/x/tools/gopls                0.20.0            ~/.config/mise/mise.toml  latest
-go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise.toml  latest
-node                                       24.9.0            ~/.config/mise/mise.toml  latest
-npm:ccexp                                  4.0.0             ~/.config/mise/mise.toml  latest
-npm:github-markdown-css                    5.8.1             ~/.config/mise/mise.toml  latest
-npm:md-to-pdf                              5.2.4             ~/.config/mise/mise.toml  latest
-npm:nuekit                                 1.0.0-RC.4        ~/.config/mise/mise.toml  latest
-pipx:SuperClaude                           4.1.5             ~/.config/mise/mise.toml  latest
-pipx:meson                                 1.9.1             ~/.config/mise/mise.toml  latest
-pipx:ninja                                 1.13.0            ~/.config/mise/mise.toml  latest
-pipx:ruff                                  0.14.0            ~/.config/mise/mise.toml  latest
-pipx:seagoat                               0.54.17           ~/.config/mise/mise.toml  latest
-ruby                                       3.4.7             ~/.config/mise/mise.toml  latest
-rust                                       1.90.0 (symlink)  ~/.config/mise/mise.toml  latest
-uv                                         0.9.0             ~/.config/mise/mise.toml  latest
+bun                                        1.2.23            ~/Software/Public/dotfiles/mise/mise.toml  latest
+cargo:cargo-cache                          0.8.3             ~/Software/Public/dotfiles/mise/mise.toml  latest
+cargo:cargo-update                         18.0.0            ~/Software/Public/dotfiles/mise/mise.toml  latest
+cargo:sbyte                                0.3.3             ~/Software/Public/dotfiles/mise/mise.toml  latest
+go                                         1.25.2            ~/Software/Public/dotfiles/mise/mise.toml  latest
+go:github.com/wailsapp/wails/v2/cmd/wails  2.10.2            ~/Software/Public/dotfiles/mise/mise.toml  latest
+go:golang.org/x/tools/gopls                0.20.0            ~/Software/Public/dotfiles/mise/mise.toml  latest
+go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/Software/Public/dotfiles/mise/mise.toml  latest
+node                                       24.10.0           ~/Software/Public/dotfiles/mise/mise.toml  latest
+npm:ccexp                                  4.0.0             ~/Software/Public/dotfiles/mise/mise.toml  latest
+npm:github-markdown-css                    5.8.1             ~/Software/Public/dotfiles/mise/mise.toml  latest
+npm:md-to-pdf                              5.2.4             ~/Software/Public/dotfiles/mise/mise.toml  latest
+npm:nuekit                                 1.0.0-RC.4        ~/Software/Public/dotfiles/mise/mise.toml  latest
+pipx:SuperClaude                           4.1.5             ~/Software/Public/dotfiles/mise/mise.toml  latest
+pipx:meson                                 1.9.1             ~/Software/Public/dotfiles/mise/mise.toml  latest
+pipx:ninja                                 1.13.0            ~/Software/Public/dotfiles/mise/mise.toml  latest
+pipx:ruff                                  0.14.0            ~/Software/Public/dotfiles/mise/mise.toml  latest
+pipx:seagoat                               0.54.17           ~/Software/Public/dotfiles/mise/mise.toml  latest
+ruby                                       3.4.7             ~/Software/Public/dotfiles/mise/mise.toml  latest
+rust                                       1.90.0 (symlink)  ~/Software/Public/dotfiles/mise/mise.toml  latest
+uv                                         0.9.0             ~/Software/Public/dotfiles/mise/mise.toml  latest
 
 RUSTUP/CARGO
 ------------
