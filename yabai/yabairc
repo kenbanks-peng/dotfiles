@@ -65,7 +65,7 @@ yabai -m config "${space_settings[@]}"
 #
 
 #
-# RULES
+# RULES - see also app_exclude.sh in sketchybar
 #
 
 yabai -m rule --add label="LanguageTool" app="^LanguageTool For Desktop$" manage=off

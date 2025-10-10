@@ -4,7 +4,7 @@
 # see also RULES section in yabairc 
 EXCLUDED_APPS=(
   "LanguageTool"
-  "Finder" 
+  "Finder"
   "System Settings"
   "Activity Monitor"
   "Calculator"
@@ -15,7 +15,7 @@ EXCLUDED_APPS=(
   "Dictionary"
   "Launchie"
   "mpv"
-  "Wisper Flow"
+  "Wispr Flow"
 )
 
 # Returns 0 (true) if app is allowed, 1 (false) if excluded
