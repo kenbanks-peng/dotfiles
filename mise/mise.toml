@@ -6,7 +6,6 @@ go = "latest"
 ruby = "latest"
 "cargo:sbyte" = "latest"
 "cargo:cargo-update" = "latest"
-"npm:nuekit" = "latest"
 "pipx:ruff" = "latest"
 "go:golang.org/x/tools/gopls" = "latest"
 "go:honnef.co/go/tools/cmd/staticcheck" = "latest"
@@ -20,6 +19,7 @@ rust = "latest"
 "pipx:SuperClaude" = "latest"
 "npm:md-to-pdf" = "latest"
 "npm:github-markdown-css" = "latest"
+"npm:nuekit" = "latest"
 
 [settings]
 
