@@ -2,7 +2,7 @@
 
 source "$PLUGIN_DIR/helpers/sketchy.sh"
 source "$CONFIG_DIR/plugins/helpers/util.sh"
-source "$CONFIG_DIR/plugins/helpers/app_exclude.sh"
+source "$CONFIG_DIR/plugins/helpers/app_type.sh"
 source "$CONFIG_DIR/env.sh"
 
 
