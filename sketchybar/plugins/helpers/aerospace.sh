@@ -2,6 +2,7 @@
 
 source "$PLUGIN_DIR/helpers/sketchy.sh"
 source "$CONFIG_DIR/plugins/helpers/util.sh"
+source "$CONFIG_DIR/plugins/helpers/app_exclude.sh"
 source "$CONFIG_DIR/env.sh"
 
 
@@ -174,6 +175,12 @@ aerospace_add_apps_in_spaceid() {
     read -ra window_id_array <<< "$aerospace_window_ids"
     for window_id in "${window_id_array[@]}"; do
       appname=$(aerospace_appname_from_window_id "$window_id")
+
+      # Skip excluded apps
+      if ! allow_app "$appname"; then
+        continue
+      fi
+
       item="window.$sid.$window_id.$appname"
       icon="$($CONFIG_DIR/icons_apps.sh "$appname")"
       icon_color="$(sketchy_get_space_foreground_color $window_id)"
