@@ -20,6 +20,7 @@ EXCLUDED_APPS=(
 
 # List of app names that should stick to the current workspace
 # These apps will be moved to the new workspace when switching
+# Sticky apps are likely also excluded apps, since they are hopefully outside of aerospace's window management. 
 STICKY_APPS=(
   "Wispr Flow"
 )
