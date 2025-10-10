@@ -30,6 +30,14 @@ aerospace_appname_from_window_id() {
   echo "$filtered"
 }
 
+# returns window_ids ex: "46356 46357" for given app_name
+aerospace_window_ids_for_app() {
+  local app_name="$1"
+  local json=$(aerospace list-windows --all --json --format '%{monitor-id}%{workspace}%{app-bundle-id}%{window-id}%{app-name}')
+  local filtered=$(echo "$json" | jq -r --arg app_name "$app_name" '.[] | select(."app-name" == $app_name) | ."window-id"' | jq -s -r 'join(" ")')
+  echo "$filtered"
+}
+
 remove_unmatched_items() {
   local sid="$1"
   aerospace_window_ids=$(aerospace_window_ids_in_workspace "$sid")
@@ -47,6 +55,9 @@ aerospace_workspace_change() {
   local sid="$1"
   local prev_sid="$2"
 
+  # move sticky apps to current workspace
+  show_sticky_apps "$sid" "$prev_sid"
+
   # keep prev workspace in sync
   remove_unmatched_items "$prev_sid"
 
@@ -59,12 +70,12 @@ aerospace_workspace_change() {
   # if default item, focus on finder so next change will produce yabai_window_focused event
   local default_item=$(sketchy_get_item_by_window_id "$sid")
   if [ -n "$default_item" ]; then
-    # BUG since previous app remains in focus, going from default item 
+    # BUG since previous app remains in focus, going from default item
     # back to the same app doesn't provide the required yabai_window_focused event
     # which would turn the icon green
-    
+
     # for default item, use spaceid as window_id
-    sketchy_highlight_window_id "$sid"  
+    sketchy_highlight_window_id "$sid"
   fi
 }
 
