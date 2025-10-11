@@ -17,7 +17,6 @@ EXCLUDED_APPS=(
   "mpv"
   "Wispr Flow"
   "CleanShot X"
-  "Drafts"
 )
 
 # List of app names that should stick to the current workspace
