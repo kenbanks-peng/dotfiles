@@ -82,7 +82,6 @@ yabai -m rule --add label="Launchie" app="^Launchie$" manage=off
 yabai -m rule --add label="mpv" app="^mpv$" manage=off
 yabai -m rule --add label="Wispr Flow" app="^Wispr Flow$" manage=off
 yabai -m rule --add label="CleanShot X" app="^CleanShot X$" manage=off
-yabai -m rule --add label="Drafts" app="^Drafts$" manage=off
 
 #
 # SIGNALS
