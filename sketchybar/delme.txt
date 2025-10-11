@@ -1,0 +1,14 @@
+[
+  {
+    "app": "Drafts",
+    "subrole": "AXSystemDialog",
+    "level": 3,
+    "layer": "above",
+  },
+  {
+    "app": "Drafts",
+    "subrole": "AXStandardWindow",
+    "level": 0,
+    "layer": "normal",
+  }
+]
