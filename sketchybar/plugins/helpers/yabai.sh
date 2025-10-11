@@ -35,3 +35,29 @@ yabai_autofocus() {
   # requery
   echo "$(yabai -m config focus_follows_mouse)"
 }
+
+# Check if a yabai window is a dialog/popup that should be excluded
+# Returns 0 (true) if window is a dialog, 1 (false) if it's a normal window
+yabai_is_dialog() {
+  local window_id="$1"
+
+  # Get window properties
+  local window_info=$(yabai -m query --windows --window "$window_id" 2>/dev/null)
+
+  if [[ -z "$window_info" ]]; then
+    return 0  # Treat as dialog if we can't get window info
+  fi
+
+  # Extract relevant properties
+  local app=$(echo "$window_info" | jq -r '.app')
+  local level=$(echo "$window_info" | jq -r '.level')
+  local subrole=$(echo "$window_info" | jq -r '.subrole')
+  local layer=$(echo "$window_info" | jq -r '.layer')
+
+  # Filter out events from popup dialogs (level=3, subrole=AXSystemDialog, layer=above)
+  if [[ "$level" == "3" || "$subrole" == "AXSystemDialog" || "$layer" == "above" ]]; then
+    return 0  # Is a dialog
+  fi
+
+  return 1  # Not a dialog
+}

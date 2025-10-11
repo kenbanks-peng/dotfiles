@@ -12,11 +12,20 @@ if [ "$SENDER" = "forced" ]; then
   # to initialize cache of previous window_id
   aerospace_focused_window_change
 elif [ "$SENDER" = "yabai_window_focused" ]; then
-  aerospace_focused_window_change $ID
+  # Skip dialogs/popups
+  if ! yabai_is_dialog "$ID"; then
+    aerospace_focused_window_change $ID
+  fi
 elif [ "$SENDER" = "aerospace_workspace_change" ]; then
   aerospace_workspace_change "$FOCUSED_WORKSPACE" "$PREV_WORKSPACE"
 elif [ "$SENDER" = "yabai_window_created" ] || [ "$SENDER" = "yabai_window_deminimized" ]; then
-  aerospace_new_window_id "$ID"
+  # Skip dialogs/popups
+  if ! yabai_is_dialog "$ID"; then
+    aerospace_new_window_id "$ID"
+  fi
 elif [ "$SENDER" = "yabai_window_destroyed" ] || [ "$SENDER" = "yabai_window_minimized" ]; then
-  aerospace_remove_window_id "$ID"
+  # Skip dialogs/popups
+  if ! yabai_is_dialog "$ID"; then
+    aerospace_remove_window_id "$ID"
+  fi
 fi
