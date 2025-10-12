@@ -315,7 +315,7 @@ posting 2.9.1
 procs 0.14.10
 protobuf 32.1
 pstree 2.40
-pv 1.9.34
+pv 1.9.42
 pycparser 2.23_1
 pygit2 1.18.2_1
 python@3.13 3.13.8
