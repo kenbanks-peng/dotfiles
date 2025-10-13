@@ -20,6 +20,7 @@ rust = "latest"
 "npm:md-to-pdf" = "latest"
 "npm:github-markdown-css" = "latest"
 "npm:nuekit" = "latest"
+"npm:@fission-ai/openspec" = "latest"
 
 [settings]
 
