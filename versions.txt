@@ -24,7 +24,6 @@ font-ibm-plex-serif 1.1.0
 font-indie-flower latest
 font-inter 4.1
 font-league-gothic 1.601
-font-monaspace-variable 1.301
 font-roboto latest
 font-sf-pro latest
 font-symbols-only-nerd-font 3.4.0
