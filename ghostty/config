@@ -2,12 +2,16 @@
 
 theme = Catppuccin Mocha
 
-# Hasklug Nerd Font Mono
-# Monaspace Argon, Krypton, Neon, Radon, Xenon
-font-family = Monaspace Neon
+# ghostty supports nerd fonts natively.
+#   Hasklug Nerd Font Mono -> Hasklig Font Mono
+# 
+# Variable fonts: Monaspace Argon, Krypton, Neon, Radon, Xenon
+#   wght (weight), slnt (slant), ital (italic),
+#   opsz (optical size), wdth (width), GRAD (gradient)
+font-family = Monaspace Neon Var
 font-size = 18
-font-variation = wght=700
-# font-variation-bold = wght=700
+font-variation = wght=400
+font-variation-bold = wght=700
 
 adjust-cell-width = 0%
 adjust-cell-height = 0%
