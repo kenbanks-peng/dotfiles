@@ -1,6 +1,6 @@
 # https://ghostty.org/docs/config
 
-theme = catppuccin-mocha
+theme = Catppuccin Mocha
 
 font-family = Hasklug Nerd Font Mono
 font-size = 18
