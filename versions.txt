@@ -24,11 +24,12 @@ font-ibm-plex-serif 1.1.0
 font-indie-flower latest
 font-inter 4.1
 font-league-gothic 1.601
-font-monaspace 1.301
+font-monaspace-variable 1.301
 font-roboto latest
 font-sf-pro latest
 font-symbols-only-nerd-font 3.4.0
 font-tex-gyre-termes 2.004
+ghostty 1.2.2
 git-credential-manager 2.6.1
 google-drive 115.0.1
 grandperspective 3.6
