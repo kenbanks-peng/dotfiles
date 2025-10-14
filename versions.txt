@@ -67,7 +67,6 @@ age 1.2.1
 aom 3.13.1
 apache-arrow 21.0.0_7
 aribb24 1.0.4
-asciidoctor 2.0.24
 asciinema 3.0.0
 ast-grep 0.39.6
 autoconf 2.72
@@ -331,7 +330,6 @@ resvg 0.45.1
 rich-cli 1.8.1
 ripgrep 14.1.1
 rubberband 4.0.0
-ruby 3.4.7
 rustscan 2.4.1
 sad 0.4.32
 sd 1.0.0
