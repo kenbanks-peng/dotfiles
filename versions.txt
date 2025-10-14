@@ -55,7 +55,7 @@ transmission 4.0.6
 typeface 4.2.1,4763
 visual-studio-code 1.105.0
 vlc 3.0.21
-warp 0.2025.10.08.08.12.stable_03
+warp 0.2025.10.08.08.12.stable_05
 wezterm 20240203-110809,5046fc22
 zed 0.207.4
 zoom 6.6.2.65462
@@ -67,12 +67,12 @@ age 1.2.1
 aom 3.13.1
 apache-arrow 21.0.0_7
 aribb24 1.0.4
-asciidoctor 2.0.23
+asciidoctor 2.0.24
 asciinema 3.0.0
 ast-grep 0.39.6
 autoconf 2.72
 aws-c-auth 0.9.1
-aws-c-cal 0.9.3
+aws-c-cal 0.9.4
 aws-c-common 0.12.5
 aws-c-compression 0.3.1
 aws-c-event-stream 0.5.7
@@ -286,7 +286,7 @@ oh-my-posh 27.2.0
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.15.1
+opencode 0.15.2
 opencore-amr 0.1.6
 openexr 3.4.1
 openjpeg 2.5.4
@@ -377,7 +377,7 @@ unbound 1.24.0
 unibilium 2.1.2
 utf8proc 2.11.0
 uvwasi 0.0.23
-vapoursynth 72
+vapoursynth 72_1
 vulkan-headers 1.4.328.1
 vulkan-loader 1.4.328.1
 wallpaper 2.3.3
@@ -410,12 +410,12 @@ bun                                        1.3.0             ~/.config/mise/mise
 cargo:cargo-cache                          0.8.3             ~/.config/mise/mise.toml  latest
 cargo:cargo-update                         18.0.0            ~/.config/mise/mise.toml  latest
 cargo:sbyte                                0.3.3             ~/.config/mise/mise.toml  latest
-go                                         1.25.2            ~/.config/mise/mise.toml  latest
+go                                         1.25.3            ~/.config/mise/mise.toml  latest
 go:github.com/wailsapp/wails/v2/cmd/wails  2.10.2            ~/.config/mise/mise.toml  latest
 go:golang.org/x/tools/gopls                0.20.0            ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise.toml  latest
 node                                       24.10.0           ~/.config/mise/mise.toml  latest
-npm:@fission-ai/openspec                   0.11.0            ~/.config/mise/mise.toml  latest
+npm:@fission-ai/openspec                   0.12.0            ~/.config/mise/mise.toml  latest
 npm:ccexp                                  4.0.0             ~/.config/mise/mise.toml  latest
 npm:github-markdown-css                    5.8.1             ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                              5.2.4             ~/.config/mise/mise.toml  latest
