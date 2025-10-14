@@ -30,4 +30,4 @@ macos-titlebar-style = transparent
 macos-window-shadow = false
 macos-icon = glass
 
-title = " "
+# title = " "
