@@ -2,12 +2,11 @@
 
 theme = Catppuccin Mocha
 
-# font-family = Hasklug Nerd Font Mono
-# font-family = "Monospace Krypton"
-# font-family = ""
-font-family = Monospace Krypton
+# Hasklug Nerd Font Mono
+# Monaspace Argon, Krypton, Neon, Radon, Xenon
+font-family = Monaspace Neon
 font-size = 18
-# font-variation = wght=400
+font-variation = wght=700
 # font-variation-bold = wght=700
 
 adjust-cell-width = 0%
