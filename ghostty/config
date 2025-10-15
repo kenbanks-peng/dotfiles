@@ -34,9 +34,13 @@ macos-titlebar-style = transparent
 macos-window-shadow = false
 macos-icon = glass
 
-# title = " "
+title = " "
 
 copy-on-select = clipboard
 
 selection-background = 004d89
 selection-foreground = e0e7ed
+
+# adjust-icon-height = -30%
+
+cursor-color = 004d89
