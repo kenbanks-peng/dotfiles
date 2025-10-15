@@ -36,7 +36,7 @@ grandperspective 3.6
 hoppscotch 25.9.1-0
 karabiner-elements 15.5.0
 keyclu 0.30.2
-languagetool-desktop 2.7.3
+languagetool-desktop 2.8.0
 microsoft-auto-update 4.80.25092610
 microsoft-outlook 16.102.25101223
 obsidian 1.9.14
@@ -169,7 +169,7 @@ hub 2.14.2
 hurl 7.0.0
 hyperfine 1.19.0
 icu4c@77 77.1
-imagemagick 7.1.2-5
+imagemagick 7.1.2-7
 imath 3.2.2
 imgcat 1.0.22
 isl 0.27
@@ -312,7 +312,7 @@ pixman 0.46.4
 pkgconf 2.5.1
 poppler 25.10.0
 portal 1.2.3
-posting 2.9.1
+posting 2.9.2
 procs 0.14.10
 protobuf 32.1
 pstree 2.40
@@ -394,7 +394,7 @@ xz 5.8.1
 yabai 7.1.16
 yazi 25.5.31
 yq 4.48.1
-yt-dlp 2025.9.26
+yt-dlp 2025.10.14
 yyjson 0.12.0
 z3 4.15.3
 zellij 0.43.1
