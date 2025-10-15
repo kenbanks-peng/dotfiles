@@ -54,16 +54,13 @@ yabai_is_dialog() {
   local subrole=$(echo "$window_info" | jq -r '.subrole')
   local layer=$(echo "$window_info" | jq -r '.layer')
 
-  echo "$app $level $subrole $layer"
-# AXStandardWindow
-  # Filter out events from popup dialogs (level=3, subrole=AXSystemDialog, layer=above)
-  if [[ "$level" == "3" || "$subrole" == "AXSystemDialog" || "$layer" == "above" ]]; then
-    echo "A dialog"
-
+  # Filter out floating windows and dialogs
+  # AXStandardWindow = normal window (NOT a dialog)
+  # AXFloatingWindow = floating window (IS a dialog)
+  # AXSystemDialog = system dialog (IS a dialog)
+  if [[ "$level" == "3" || "$subrole" != "AXStandardWindow" || "$layer" == "above" ]]; then
     return 0  # Is a dialog
   fi
-
-  echo "NOT a dialog"
 
   return 1  # Not a dialog
 }
