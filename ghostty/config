@@ -19,9 +19,14 @@ adjust-cell-height = 0%
 # block, bar, underline, block_hollow
 cursor-style = bar
 cursor-style-blink = false
-cursor-click-to-move = true
+# option-click!!
+cursor-click-to-move = true 
+cursor-color = ff5524
+cursor-opacity = 1
 
-background-opacity = 1.0
+background-opacity = 0.8
+# false, true, 0 to 20
+background-blur = 5
 
 window-padding-x = 30
 window-padding-y = 15
@@ -43,4 +48,3 @@ selection-foreground = e0e7ed
 
 # adjust-icon-height = -30%
 
-cursor-color = 004d89
