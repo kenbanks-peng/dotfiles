@@ -45,7 +45,7 @@ yabai_is_dialog() {
   local window_info=$(yabai -m query --windows --window "$window_id" 2>/dev/null)
 
   if [[ -z "$window_info" ]]; then
-    return 0  # Treat as dialog if we can't get window info
+    return 1  # if we can't get window info, the app was likely just destroyed
   fi
 
   # Extract relevant properties
