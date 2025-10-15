@@ -19,8 +19,11 @@ elif [ "$SENDER" = "yabai_window_focused" ]; then
 elif [ "$SENDER" = "aerospace_workspace_change" ]; then
   aerospace_workspace_change "$FOCUSED_WORKSPACE" "$PREV_WORKSPACE"
 elif [ "$SENDER" = "yabai_window_created" ] || [ "$SENDER" = "yabai_window_deminimized" ]; then
-  # Skip dialogs/popups
-  if ! yabai_is_dialog "$ID"; then
+  # Get app name to check if allowed
+  appname=$(aerospace_appname_from_window_id "$ID")
+
+  # Skip dialogs/popups and excluded apps
+  if ! yabai_is_dialog "$ID" && allow_app "$appname" "$ID"; then
     aerospace_new_window_id "$ID"
   fi
 elif [ "$SENDER" = "yabai_window_destroyed" ] || [ "$SENDER" = "yabai_window_minimized" ]; then

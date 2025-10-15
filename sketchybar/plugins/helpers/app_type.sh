@@ -28,14 +28,29 @@ STICKY_APPS=(
 )
 
 # Returns 0 (true) if app is allowed, 1 (false) if excluded
+# Usage: allow_app "AppName" [window_id]
 allow_app() {
   local appname="$1"
+  local window_id="$2"
 
+  # Check if app name is in excluded list
   for excluded in "${EXCLUDED_APPS[@]}"; do
     if [[ "$appname" == "$excluded" ]]; then
       return 1  # App is excluded
     fi
   done
+
+  # If window_id provided, check if it's a dialog
+  if [[ -n "$window_id" ]]; then
+    # Source yabai helpers if not already loaded
+    if ! declare -f yabai_is_dialog &>/dev/null; then
+      source "$PLUGIN_DIR/helpers/yabai.sh"
+    fi
+
+    if yabai_is_dialog "$window_id"; then
+      return 1  # Window is a dialog, exclude it
+    fi
+  fi
 
   return 0  # App is allowed
 }

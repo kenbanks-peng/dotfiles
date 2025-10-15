@@ -187,8 +187,8 @@ aerospace_add_apps_in_spaceid() {
     for window_id in "${window_id_array[@]}"; do
       appname=$(aerospace_appname_from_window_id "$window_id")
 
-      # Skip excluded apps
-      if ! allow_app "$appname"; then
+      # Skip excluded apps and dialogs
+      if ! allow_app "$appname" "$window_id"; then
         continue
       fi
 
