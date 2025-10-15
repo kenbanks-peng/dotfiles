@@ -43,9 +43,9 @@ window-padding-y = 15
 window-padding-balance = true
 macos-window-shadow = false
 quit-after-last-window-closed = true
-title = " "
-# native, transparent, tabs, hidden
 macos-titlebar-style = transparent
+macos-titlebar-proxy-icon = hidden
+title = " "
 
 
 # background
