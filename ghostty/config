@@ -35,3 +35,8 @@ macos-window-shadow = false
 macos-icon = glass
 
 # title = " "
+
+copy-on-select = clipboard
+
+selection-background = f9e2af
+selection-foreground = cell-background
