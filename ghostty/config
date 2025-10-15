@@ -56,5 +56,5 @@ window-padding-balance = true
 
 # Keybindings
 keybind = shift+enter=text:\n
-
-
+keybind = super+slash=new_split:down
+keybind = super+backslash=new_split:right
