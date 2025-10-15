@@ -75,8 +75,7 @@ focus-follows-mouse = true
 # quick terminal
 keybind = global:ctrl+alt+super+space=toggle_quick_terminal
 quick-terminal-position = top
-quick-terminal-size = 100%,100%
-
+quick-terminal-size = 1200px
 
 # Keybindings
 keybind = shift+enter=text:\n
