@@ -38,5 +38,5 @@ macos-icon = glass
 
 copy-on-select = clipboard
 
-selection-background = f9e2af
-selection-foreground = cell-background
+selection-background = 004d89
+selection-foreground = e0e7ed
