@@ -1,5 +1,9 @@
 # https://ghostty.org/docs/config
 
+# shift+command+, to reload config
+
+# command+Enter = toggle fullscreen!!
+
 theme = Catppuccin Mocha
 
 # ghostty supports nerd fonts natively.
@@ -24,9 +28,16 @@ cursor-click-to-move = true
 cursor-color = ff5524
 cursor-opacity = 1
 
-background-opacity = 0.8
 # false, true, 0 to 20
-background-blur = 5
+background-blur = false
+background-opacity = 1
+
+copy-on-select = clipboard
+
+selection-background = 004d89
+selection-foreground = e0e7ed
+
+# adjust-icon-height = -30%
 
 window-padding-x = 30
 window-padding-y = 15
@@ -41,10 +52,5 @@ macos-icon = glass
 
 title = " "
 
-copy-on-select = clipboard
-
-selection-background = 004d89
-selection-foreground = e0e7ed
-
-# adjust-icon-height = -30%
+window-padding-balance = true
 
