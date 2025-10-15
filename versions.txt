@@ -10,7 +10,7 @@ boop 1.4.0
 bruno 2.13.0
 claude 0.13.91,95eb705b8bd0745827a8194e3cd634ba4f6bd929
 claude-code 2.0.15
-cleanshot 4.8.3
+cleanshot 4.8.4
 container 0.5.0
 daisydisk 4.32
 espanso 2.2.7
@@ -282,7 +282,7 @@ npth 1.8
 nspr 4.37
 nss 3.117
 numpy 2.3.3_1
-nushell 0.107.0
+nushell 0.108.0
 oh-my-posh 27.2.0
 onefetch 2.25.0
 oniguruma 6.9.10
@@ -420,7 +420,7 @@ npm:ccexp                                  4.0.0             ~/.config/mise/mise
 npm:github-markdown-css                    5.8.1             ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                              5.2.4             ~/.config/mise/mise.toml  latest
 npm:nuekit                                 2.0.0-beta.2      ~/.config/mise/mise.toml  latest
-pipx:SuperClaude                           4.1.5             ~/.config/mise/mise.toml  latest
+pipx:SuperClaude                           4.1.6             ~/.config/mise/mise.toml  latest
 pipx:meson                                 1.9.1             ~/.config/mise/mise.toml  latest
 pipx:ninja                                 1.13.0            ~/.config/mise/mise.toml  latest
 pipx:ruff                                  0.14.0            ~/.config/mise/mise.toml  latest
