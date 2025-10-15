@@ -75,6 +75,4 @@ focus-follows-mouse = true
 
 quit-after-last-window-closed = true
 
-# to stop the Last Login message
-command = "login -fpql kenbanks /bin/zsh --login"
 
