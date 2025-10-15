@@ -54,6 +54,8 @@ title = " "
 
 window-padding-balance = true
 
+split-divider-color = 083e6c
+
 # Keybindings
 keybind = shift+enter=text:\n
 keybind = super+slash=new_split:down
