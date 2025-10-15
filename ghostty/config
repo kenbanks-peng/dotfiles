@@ -1,8 +1,8 @@
 # https://ghostty.org/docs/config
 
 # shift+command+, to reload config
-
 # command+Enter = toggle fullscreen!!
+# ctrl+alt+super+space = toggle quick terminal
 
 theme = Catppuccin Mocha
 
@@ -60,3 +60,5 @@ split-divider-color = 083e6c
 keybind = shift+enter=text:\n
 keybind = super+slash=new_split:down
 keybind = super+backslash=new_split:right
+keybind = global:ctrl+alt+super+space=toggle_quick_terminal
+
