@@ -11,7 +11,7 @@
   "grug-far.nvim": { "branch": "main", "commit": "2e991081c0e653e151fc9e659514d7c2fc31d22a" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
   "lazydev.nvim": { "branch": "main", "commit": "e28ce52fc7ff79fcb76f0e79ee6fb6182fca90b9" },
-  "lualine.nvim": { "branch": "master", "commit": "b8c23159c0161f4b89196f74ee3a6d02cdc3a955" },
+  "lualine.nvim": { "branch": "master", "commit": "3946f0122255bc377d14a59b27b609fb3ab25768" },
   "mason-lspconfig.nvim": { "branch": "main", "commit": "6bdb14f230de0904229ec367b410fb817e59b072" },
   "mason.nvim": { "branch": "main", "commit": "ad7146aa61dcaeb54fa900144d768f040090bff0" },
   "mini.ai": { "branch": "main", "commit": "11c57180bc9084089206e211ac7aa598bedc9673" },
@@ -21,7 +21,7 @@
   "nui.nvim": { "branch": "main", "commit": "de740991c12411b663994b2860f1a4fd0937c130" },
   "nvim-lint": { "branch": "master", "commit": "9da1fb942dd0668d5182f9c8dee801b9c190e2bb" },
   "nvim-lspconfig": { "branch": "master", "commit": "ac98db2f9f06a56498ec890a96928774eae412c3" },
-  "nvim-treesitter": { "branch": "main", "commit": "0606c7a9dcaa5c5beee0b0f09043e9fdd1ba0a68" },
+  "nvim-treesitter": { "branch": "main", "commit": "63fac0a576bc78a4790cbcce24646cca860bc8c1" },
   "nvim-treesitter-textobjects": { "branch": "main", "commit": "1b2d85d3de6114c4bcea89ffb2cd1ce9e3a19931" },
   "nvim-ts-autotag": { "branch": "main", "commit": "c4ca798ab95b316a768d51eaaaee48f64a4a46bc" },
   "persistence.nvim": { "branch": "main", "commit": "51eef57272742b773468949f6bd0503ec3f83874" },
@@ -32,5 +32,5 @@
   "trouble.nvim": { "branch": "main", "commit": "c098362fe603d3922095e7db595961e020bdf2d0" },
   "ts-comments.nvim": { "branch": "main", "commit": "217ab9cc137fceb6659b53790bd25e608219abe1" },
   "which-key.nvim": { "branch": "main", "commit": "b4177e3eaf15fe5eb8357ebac2286d488be1ed00" },
-  "yazi.nvim": { "branch": "main", "commit": "84fa726ca820925daae855ba1d45e6214808f2a9" }
+  "yazi.nvim": { "branch": "main", "commit": "87b71b769e357e42fe2d2383ac6aea629e928171" }
 }
