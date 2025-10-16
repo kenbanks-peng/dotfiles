@@ -9,7 +9,7 @@ boltai 1.36.5
 boop 1.4.0
 bruno 2.13.1
 claude 0.13.91,95eb705b8bd0745827a8194e3cd634ba4f6bd929
-claude-code 2.0.19
+claude-code 2.0.20
 cleanshot 4.8.4
 container 0.5.0
 daisydisk 4.32
@@ -38,6 +38,7 @@ hoppscotch 25.9.1-0
 karabiner-elements 15.5.0
 keyclu 0.30.2
 languagetool-desktop 2.8.0
+linear-linear 1.28.6,251002av7g3go28
 microsoft-auto-update 4.80.25092610
 microsoft-outlook 16.102.25101223
 obsidian 1.9.14
@@ -252,7 +253,7 @@ llvm 21.1.3
 lolcat 100.0.1
 lpeg 1.1.0
 lua 5.4.8
-luajit 2.1.1753364724
+luajit 2.1.1760617492
 luarocks 3.12.2
 lunchy-go 0.2.1
 luv 1.51.0-1
@@ -288,7 +289,7 @@ oh-my-posh 27.2.1
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.15.4
+opencode 0.15.5
 opencore-amr 0.1.6
 openexr 3.4.1
 openjpeg 2.5.4
@@ -424,7 +425,7 @@ npm:nuekit                                 2.0.0-beta.2      ~/.config/mise/mise
 pipx:SuperClaude                           4.1.6             ~/.config/mise/mise.toml  latest
 pipx:meson                                 1.9.1             ~/.config/mise/mise.toml  latest
 pipx:ninja                                 1.13.0            ~/.config/mise/mise.toml  latest
-pipx:ruff                                  0.14.0            ~/.config/mise/mise.toml  latest
+pipx:ruff                                  0.14.1            ~/.config/mise/mise.toml  latest
 pipx:seagoat                               0.54.17           ~/.config/mise/mise.toml  latest
 ruby                                       3.4.7             ~/.config/mise/mise.toml  latest
 rust                                       1.90.0 (symlink)  ~/.config/mise/mise.toml  latest
