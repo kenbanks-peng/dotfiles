@@ -8,6 +8,10 @@ command = ["$BINPATH/mcp_biome"]
 type = "stdio"
 command = ["bunx", "chrome-devtools-mcp@latest"]
 
+[mcp.linear]
+type = "stdio"
+command = ["bunx", "mcp-remote", "https://mcp.linear.app/sse"]
+
 [mcp.seagoat]
 type = "stdio"
 command = ["$BINPATH/mcp_seagoat"]
