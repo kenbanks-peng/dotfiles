@@ -3,7 +3,7 @@ BREW CASKS
 aerospace 0.19.2-Beta
 affinity-photo 2.6.4,3634
 anybar 0.2.3
-arc 1.116.0,69498
+arc 1.117.0,69739
 audacity 3.7.5
 boltai 1.36.5
 boop 1.4.0
@@ -289,7 +289,7 @@ oh-my-posh 27.2.1
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.15.5
+opencode 0.15.6
 opencore-amr 0.1.6
 openexr 3.4.1
 openjpeg 2.5.4
