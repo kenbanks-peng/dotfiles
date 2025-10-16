@@ -21,6 +21,7 @@ rust = "latest"
 "npm:github-markdown-css" = "latest"
 "npm:nuekit" = "latest"
 "npm:@fission-ai/openspec" = "latest"
+"npm:puppeteer" = "latest"
 
 [settings]
 

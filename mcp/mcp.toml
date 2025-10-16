@@ -4,6 +4,10 @@
 type = "stdio"
 command = ["$BINPATH/mcp_biome"]
 
+[mcp.chrome-devtools]
+type = "stdio"
+command = ["bunx", "chrome-devtools-mcp@latest"]
+
 [mcp.seagoat]
 type = "stdio"
 command = ["$BINPATH/mcp_seagoat"]
