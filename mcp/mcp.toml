@@ -50,10 +50,6 @@ env = { MCP_MODE = "stdio", LOG_LEVEL = "error", DISABLE_CONSOLE_OUTPUT = "true"
 [mcp.mcp-server-chart]
 command = ["bunx", "@antv/mcp-server-chart"]
 
-# npmjs - 1200 weekly downloads
-[mcp.spec-workflow]
-command = ["bunx", "@pimzino/spec-workflow-mcp@latest", "$PWD"]
-
 # npmjs - 750 weekly downloads
 [mcp.Obsidian]
 command = ["bunx", "mcp-obsidian", "$OBSIDIAN_VAULT"]
