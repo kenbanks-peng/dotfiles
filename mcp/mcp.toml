@@ -52,7 +52,7 @@ command = ["bunx", "@antv/mcp-server-chart"]
 
 # npmjs - 1200 weekly downloads
 [mcp.spec-workflow]
-command = ["bunx", "@pimzino/spec-workflow-mcp@latest"]
+command = ["bunx", "@pimzino/spec-workflow-mcp@latest", "$PWD"]
 
 # npmjs - 750 weekly downloads
 [mcp.Obsidian]
