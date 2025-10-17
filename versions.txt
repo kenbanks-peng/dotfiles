@@ -300,7 +300,7 @@ opusfile 0.12_1
 ov 0.44.0
 p11-kit 0.25.10
 pandoc 3.8.2
-pango 1.57.0
+pango 1.57.0_1
 pass 1.7.4
 pastel 0.10.0
 pcaudiolib 1.3
