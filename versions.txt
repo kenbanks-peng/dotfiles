@@ -9,7 +9,7 @@ boltai 1.36.5
 boop 1.4.0
 bruno 2.13.1
 claude 0.13.91,95eb705b8bd0745827a8194e3cd634ba4f6bd929
-claude-code 2.0.20
+claude-code 2.0.21
 cleanshot 4.8.4
 container 0.5.0
 daisydisk 4.32
@@ -61,7 +61,7 @@ visual-studio-code 1.105.1
 vlc 3.0.21
 warp 0.2025.10.08.08.12.stable_05
 wezterm 20240203-110809,5046fc22
-zed 0.208.4
+zed 0.208.5
 zoom 6.6.2.65462
 
 BREW FORMULAS
@@ -193,7 +193,7 @@ lazyjournal 0.8.1
 lazysql 0.4.2
 leptonica 1.86.0
 lf 38
-libarchive 3.8.1
+libarchive 3.8.2
 libass 0.17.4
 libassuan 3.0.2
 libb2 0.98.1
@@ -289,9 +289,9 @@ oh-my-posh 27.2.1
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.15.6
+opencode 0.15.7
 opencore-amr 0.1.6
-openexr 3.4.1
+openexr 3.4.2
 openjpeg 2.5.4
 openjph 0.24.2
 openssl@3 3.6.0
