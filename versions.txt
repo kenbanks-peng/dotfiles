@@ -13,7 +13,8 @@ claude-code 2.0.22
 cleanshot 4.8.4
 container 0.5.0
 daisydisk 4.32
-espanso 2.2.7
+deepchat 0.3.6
+espanso 2.3.0
 font-alegreya 2.008
 font-archivo-black latest
 font-fira-sans 4.202
