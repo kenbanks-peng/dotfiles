@@ -8,7 +8,6 @@ audacity 3.7.5
 boltai 1.36.5
 boop 1.4.0
 bruno 2.13.2
-claude 0.13.108,56164638079fe7d541e28aa95e2f59f438a591a4
 claude-code 2.0.22
 cleanshot 4.8.4
 container 0.5.0
@@ -290,7 +289,7 @@ oh-my-posh 27.2.1
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.15.7
+opencode 0.15.8
 opencore-amr 0.1.6
 openexr 3.4.2
 openjpeg 2.5.4
@@ -319,7 +318,7 @@ posting 2.9.2
 procs 0.14.10
 protobuf 33.0
 pstree 2.40
-pv 1.9.42
+pv 1.9.44
 pycparser 2.23_1
 pygit2 1.18.2_1
 python@3.13 3.13.9
@@ -420,6 +419,7 @@ go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise
 node                                       25.0.0            ~/.config/mise/mise.toml  latest
 npm:@fission-ai/openspec                   0.12.0            ~/.config/mise/mise.toml  latest
 npm:ccexp                                  4.0.0             ~/.config/mise/mise.toml  latest
+npm:codebuff                               1.0.502           ~/.config/mise/mise.toml  latest
 npm:github-markdown-css                    5.8.1             ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                              5.2.4             ~/.config/mise/mise.toml  latest
 npm:nuekit                                 2.0.0-beta.2      ~/.config/mise/mise.toml  latest
@@ -430,7 +430,7 @@ pipx:ruff                                  0.14.1            ~/.config/mise/mise
 pipx:seagoat                               0.54.17           ~/.config/mise/mise.toml  latest
 ruby                                       3.4.7             ~/.config/mise/mise.toml  latest
 rust                                       1.90.0 (symlink)  ~/.config/mise/mise.toml  latest
-uv                                         0.9.3             ~/.config/mise/mise.toml  latest
+uv                                         0.9.4             ~/.config/mise/mise.toml  latest
 
 RUSTUP/CARGO
 ------------
