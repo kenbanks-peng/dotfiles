@@ -217,7 +217,6 @@ libnghttp3 1.12.0
 libngtcp2 1.17.0
 libogg 1.3.6
 libomp 21.1.3
-libplacebo 7.351.0
 libpng 1.6.50
 libraw 0.21.4
 librist 0.2.11
@@ -268,12 +267,9 @@ mbedtls 3.6.4
 mcfly 0.9.3
 melody 0.20.0
 micro 2.0.14
-molten-vk 1.4.0
 mpdecimal 4.0.1
 mpfr 4.2.2
 mpg123 1.33.3
-mpv 0.40.0_4
-mujs 1.3.7
 navi 2.24.0
 ncdu 2.9.1
 ncurses 6.5
@@ -340,7 +336,6 @@ sad 0.4.32
 sd 1.0.0
 sdl2 2.32.10
 sevenzip 25.01
-shaderc 2025.4
 shared-mime-info 2.4
 shellcheck 0.11.0
 simdjson 4.0.7
@@ -375,14 +370,10 @@ tree 2.2.1
 tree-sitter 0.25.10
 turso 0.2.2
 typst 0.13.1
-uchardet 0.0.8
 unbound 1.24.0
 unibilium 2.1.2
 utf8proc 2.11.0
 uvwasi 0.0.23
-vapoursynth 72_1
-vulkan-headers 1.4.328.1
-vulkan-loader 1.4.328.1
 wallpaper 2.3.3
 watchexec 2.3.2
 webp 1.6.0
@@ -397,7 +388,6 @@ xz 5.8.1
 yabai 7.1.16
 yazi 25.5.31
 yq 4.48.1
-yt-dlp 2025.10.14
 yyjson 0.12.0
 z3 4.15.3
 zellij 0.43.1
