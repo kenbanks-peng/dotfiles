@@ -9,7 +9,7 @@ audacity 3.7.5
 boltai 1.36.5
 boop 1.4.0
 bruno 2.13.2
-claude-code 2.0.22
+claude-code 2.0.23
 cleanshot 4.8.4
 container 0.5.0
 daisydisk 4.32
@@ -52,7 +52,7 @@ quarto 1.8.25
 raycast 1.103.3
 screen-studio 3.4.11-3961
 sf-symbols 7.0,115
-sip-app 4.1
+sip-app 4.1.1
 skim 1.7.11
 symboliclinker 2.2
 syntax-highlight 2.1.26
@@ -62,7 +62,7 @@ visual-studio-code 1.105.1
 vlc 3.0.21
 warp 0.2025.10.15.08.12.stable_01
 wezterm 20240203-110809,5046fc22
-zed 0.208.5
+zed 0.208.6
 zoom 6.6.2.65462
 
 BREW FORMULAS
@@ -113,7 +113,7 @@ csvtk 0.35.0
 curlie 1.8.2
 d2 0.7.1
 dav1d 1.5.1
-dblab 0.34.0
+dblab 0.34.1
 direnv 2.37.1
 doppler 3.75.1
 dotenvx 1.51.0
@@ -217,6 +217,7 @@ libnghttp3 1.12.0
 libngtcp2 1.17.0
 libogg 1.3.6
 libomp 21.1.3
+libplacebo 7.351.0
 libpng 1.6.50
 libraw 0.21.4
 librist 0.2.11
@@ -267,9 +268,12 @@ mbedtls 3.6.4
 mcfly 0.9.3
 melody 0.20.0
 micro 2.0.14
+molten-vk 1.4.0
 mpdecimal 4.0.1
 mpfr 4.2.2
 mpg123 1.33.3
+mpv 0.40.0_4
+mujs 1.3.7
 navi 2.24.0
 ncdu 2.9.1
 ncurses 6.5
@@ -321,7 +325,7 @@ pygit2 1.18.2_1
 python@3.13 3.13.9
 python@3.14 3.14.0
 qrencode 4.1.1
-qsv 8.0.0
+qsv 8.1.0
 rav1e 0.8.1
 rclone 1.71.2
 re2 20250812_1
@@ -336,6 +340,7 @@ sad 0.4.32
 sd 1.0.0
 sdl2 2.32.10
 sevenzip 25.01
+shaderc 2025.4
 shared-mime-info 2.4
 shellcheck 0.11.0
 simdjson 4.0.7
@@ -370,10 +375,14 @@ tree 2.2.1
 tree-sitter 0.25.10
 turso 0.2.2
 typst 0.13.1
+uchardet 0.0.8
 unbound 1.24.0
 unibilium 2.1.2
 utf8proc 2.11.0
 uvwasi 0.0.23
+vapoursynth 72_1
+vulkan-headers 1.4.328.1
+vulkan-loader 1.4.328.1
 wallpaper 2.3.3
 watchexec 2.3.2
 webp 1.6.0
@@ -388,6 +397,7 @@ xz 5.8.1
 yabai 7.1.16
 yazi 25.5.31
 yq 4.48.1
+yt-dlp 2025.10.14
 yyjson 0.12.0
 z3 4.15.3
 zellij 0.43.1
