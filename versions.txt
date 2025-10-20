@@ -4,6 +4,7 @@ aerospace 0.19.2-Beta
 affinity-photo 2.6.4,3634
 anybar 0.2.3
 arc 1.117.0,69739
+atuin-desktop 0.1.8
 audacity 3.7.5
 boltai 1.36.5
 boop 1.4.0
@@ -141,7 +142,7 @@ git 2.51.1
 git-bug 0.10.1
 git-delta 0.18.2_3
 git-filter-repo 2.47.0
-github-mcp-server 0.18.0
+github-mcp-server 0.19.0
 gitleaks 8.28.0
 gitui 0.27.0
 glances 4.3.3_1
@@ -299,7 +300,7 @@ opus 1.5.2
 opusfile 0.12_1
 ov 0.44.0
 p11-kit 0.25.10
-pandoc 3.8.2
+pandoc 3.8.2.1
 pango 1.57.0_1
 pass 1.7.4
 pastel 0.11.0
@@ -326,7 +327,7 @@ python@3.14 3.14.0
 qrencode 4.1.1
 qsv 8.0.0
 rav1e 0.8.1
-rclone 1.71.1
+rclone 1.71.2
 re2 20250812_1
 readline 8.3.1
 repomix 1.8.0
