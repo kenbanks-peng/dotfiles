@@ -41,6 +41,7 @@ keyclu 0.30.2
 languagetool-desktop 2.8.0
 linear-linear 1.28.6,251002av7g3go28
 microsoft-auto-update 4.81.25101344
+microsoft-outlook 16.102.25101829
 obsidian 1.9.14
 omnifocus 4.8.4
 onyx 4.9.1
@@ -48,7 +49,7 @@ opcode 0.2.0
 orbstack 2.0.3,19876
 pdf-pals 1.9.0
 quarto 1.8.25
-raycast 1.103.3
+raycast 1.103.4
 screen-studio 3.5.0-4019
 sf-symbols 7.0,115
 sip-app 4.1.1
@@ -141,7 +142,7 @@ git 2.51.1
 git-bug 0.10.1
 git-delta 0.18.2_3
 git-filter-repo 2.47.0
-github-mcp-server 0.19.0
+github-mcp-server 0.19.1
 gitleaks 8.28.0
 gitui 0.27.0
 glances 4.3.3_1
@@ -347,7 +348,7 @@ sk 0.20.5
 sketchybar 2.22.1
 snappy 1.2.2
 sniffnet 1.4.1
-snyk-cli 1.1300.0
+snyk-cli 1.1300.1
 sox 14.4.2_6
 spark 1.0.1
 speex 1.2.1
