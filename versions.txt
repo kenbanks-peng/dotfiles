@@ -41,7 +41,6 @@ keyclu 0.30.2
 languagetool-desktop 2.8.0
 linear-linear 1.28.6,251002av7g3go28
 microsoft-auto-update 4.81.25101344
-microsoft-outlook 16.102.25101223
 obsidian 1.9.14
 omnifocus 4.8.4
 onyx 4.9.1
@@ -80,7 +79,7 @@ aws-c-cal 0.9.4
 aws-c-common 0.12.5
 aws-c-compression 0.3.1
 aws-c-event-stream 0.5.7
-aws-c-http 0.10.5
+aws-c-http 0.10.6
 aws-c-io 0.23.2
 aws-c-mqtt 0.13.3
 aws-c-s3 0.9.2
@@ -423,6 +422,7 @@ npm:ccexp                                  4.0.0             ~/.config/mise/mise
 npm:github-markdown-css                    5.8.1             ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                              5.2.4             ~/.config/mise/mise.toml  latest
 npm:nuekit                                 2.0.0-beta.2      ~/.config/mise/mise.toml  latest
+npm:vite                                   7.1.11            ~/.config/mise/mise.toml  latest
 pipx:SuperClaude                           4.1.6             ~/.config/mise/mise.toml  latest
 pipx:meson                                 1.9.1             ~/.config/mise/mise.toml  latest
 pipx:ninja                                 1.13.0            ~/.config/mise/mise.toml  latest
