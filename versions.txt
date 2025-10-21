@@ -49,7 +49,7 @@ orbstack 2.0.3,19876
 pdf-pals 1.9.0
 quarto 1.8.25
 raycast 1.103.3
-screen-studio 3.4.11-3961
+screen-studio 3.5.0-4019
 sf-symbols 7.0,115
 sip-app 4.1.1
 skim 1.7.11
