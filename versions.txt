@@ -38,7 +38,7 @@ grandperspective 3.6
 hoppscotch 25.9.1-0
 karabiner-elements 15.5.0
 keyclu 0.30.2
-languagetool-desktop 2.8.0
+languagetool-desktop 2.8.2
 linear-linear 1.28.6,251002av7g3go28
 microsoft-auto-update 4.81.25101344
 microsoft-outlook 16.102.25101829
@@ -325,7 +325,7 @@ pygit2 1.18.2_1
 python@3.13 3.13.9
 python@3.14 3.14.0
 qrencode 4.1.1
-qsv 8.1.0
+qsv 8.1.1
 rav1e 0.8.1
 rclone 1.71.2
 re2 20250812_1
