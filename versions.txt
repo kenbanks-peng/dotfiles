@@ -9,7 +9,7 @@ audacity 3.7.5
 boltai 1.36.5
 boop 1.4.0
 bruno 2.13.2
-claude-code 2.0.24
+claude-code 2.0.25
 cleanshot 4.8.4
 container 0.5.0
 daisydisk 4.32
@@ -216,7 +216,7 @@ libnghttp2 1.67.1
 libnghttp3 1.12.0
 libngtcp2 1.17.0
 libogg 1.3.6
-libomp 21.1.3
+libomp 21.1.4
 libplacebo 7.351.0
 libpng 1.6.50
 libraw 0.21.4
@@ -290,7 +290,7 @@ oh-my-posh 27.2.1
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.15.10
+opencode 0.15.13
 opencore-amr 0.1.6
 openexr 3.4.2
 openjpeg 2.5.4
@@ -431,7 +431,7 @@ pipx:ruff                                  0.14.1            ~/.config/mise/mise
 pipx:seagoat                               0.54.17           ~/.config/mise/mise.toml  latest
 ruby                                       3.4.7             ~/.config/mise/mise.toml  latest
 rust                                       1.90.0 (symlink)  ~/.config/mise/mise.toml  latest
-uv                                         0.9.4             ~/.config/mise/mise.toml  latest
+uv                                         0.9.5             ~/.config/mise/mise.toml  latest
 
 RUSTUP/CARGO
 ------------
