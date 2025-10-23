@@ -4,7 +4,7 @@ aerospace 0.19.2-Beta
 affinity-photo 2.6.4,3634
 anybar 0.2.3
 arc 1.117.0,69739
-atuin-desktop 0.1.9
+atuin-desktop 0.1.10
 audacity 3.7.5
 boltai 1.36.5
 boop 1.4.0
@@ -29,7 +29,7 @@ font-roboto latest
 font-sf-pro latest
 font-symbols-only-nerd-font 3.4.0
 font-tex-gyre-termes 2.004
-ghostty 1.2.2
+ghostty 1.2.3
 git-credential-manager 2.6.1
 google-chrome 141.0.7390.123
 google-drive 116.0.2
@@ -49,7 +49,7 @@ orbstack 2.0.3,19876
 pdf-pals 1.9.0
 quarto 1.8.25
 raycast 1.103.4
-screen-studio 3.5.0-4019
+screen-studio 3.5.0-4028
 sf-symbols 7.0,115
 sip-app 4.1.1
 skim 1.7.11
@@ -286,7 +286,7 @@ nspr 4.37
 nss 3.117
 numpy 2.3.4
 nushell 0.108.0
-oh-my-posh 27.2.1
+oh-my-posh 27.3.0
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
@@ -427,7 +427,7 @@ npm:vite                                   7.1.12            ~/.config/mise/mise
 pipx:SuperClaude                           4.1.6             ~/.config/mise/mise.toml  latest
 pipx:meson                                 1.9.1             ~/.config/mise/mise.toml  latest
 pipx:ninja                                 1.13.0            ~/.config/mise/mise.toml  latest
-pipx:ruff                                  0.14.1            ~/.config/mise/mise.toml  latest
+pipx:ruff                                  0.14.2            ~/.config/mise/mise.toml  latest
 pipx:seagoat                               0.54.17           ~/.config/mise/mise.toml  latest
 ruby                                       3.4.7             ~/.config/mise/mise.toml  latest
 rust                                       1.90.0 (symlink)  ~/.config/mise/mise.toml  latest
