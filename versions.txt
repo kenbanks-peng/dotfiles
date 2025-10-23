@@ -12,7 +12,7 @@ claude-code 2.0.25
 cleanshot 4.8.4
 container 0.5.0
 daisydisk 4.32
-deepchat 0.3.6
+deepchat 0.4.2
 espanso 2.3.0
 font-alegreya 2.008
 font-archivo-black latest
@@ -32,7 +32,7 @@ font-tex-gyre-termes 2.004
 ghostty 1.2.2
 git-credential-manager 2.6.1
 google-chrome 141.0.7390.123
-google-drive 115.0.1
+google-drive 116.0.2
 grandperspective 3.6
 hoppscotch 25.9.1-0
 karabiner-elements 15.5.0
@@ -146,7 +146,7 @@ github-mcp-server 0.19.1
 gitleaks 8.28.0
 gitui 0.27.0
 glances 4.3.3_1
-glib 2.86.0
+glib 2.86.1
 glow 2.1.1
 gmp 6.3.0
 gnu-getopt 2.41.2
@@ -250,7 +250,7 @@ libyaml 0.2.5
 libzip 1.11.4
 lima 1.2.1
 little-cms2 2.17
-llvm 21.1.3_1
+llvm 21.1.4
 lolcat 100.0.1
 lpeg 1.1.0
 lua 5.4.8
@@ -290,7 +290,7 @@ oh-my-posh 27.2.1
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.15.13
+opencode 0.15.14
 opencore-amr 0.1.6
 openexr 3.4.2
 openjpeg 2.5.4
@@ -321,7 +321,7 @@ protobuf 33.0
 pstree 2.40
 pv 1.9.44
 pycparser 2.23_1
-pygit2 1.18.2_1
+pygit2 1.19.0
 python@3.13 3.13.9
 python@3.14 3.14.0
 qrencode 4.1.1
@@ -333,7 +333,7 @@ readline 8.3.1
 repomix 1.8.0
 resvg 0.45.1
 rich-cli 1.8.1
-ripgrep 15.0.0
+ripgrep 15.1.0
 rubberband 4.0.0
 rustscan 2.4.1
 sad 0.4.32
@@ -376,7 +376,7 @@ tree-sitter 0.25.10
 turso 0.2.2
 typst 0.13.1
 uchardet 0.0.8
-unbound 1.24.0
+unbound 1.24.1
 unibilium 2.1.2
 utf8proc 2.11.0
 uvwasi 0.0.23
@@ -423,7 +423,7 @@ npm:ccexp                                  4.0.0             ~/.config/mise/mise
 npm:github-markdown-css                    5.8.1             ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                              5.2.4             ~/.config/mise/mise.toml  latest
 npm:nuekit                                 2.0.0-beta.2      ~/.config/mise/mise.toml  latest
-npm:vite                                   7.1.11            ~/.config/mise/mise.toml  latest
+npm:vite                                   7.1.12            ~/.config/mise/mise.toml  latest
 pipx:SuperClaude                           4.1.6             ~/.config/mise/mise.toml  latest
 pipx:meson                                 1.9.1             ~/.config/mise/mise.toml  latest
 pipx:ninja                                 1.13.0            ~/.config/mise/mise.toml  latest
