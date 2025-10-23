@@ -8,7 +8,6 @@ atuin-desktop 0.1.9
 audacity 3.7.5
 boltai 1.36.5
 boop 1.4.0
-bruno 2.13.2
 claude-code 2.0.25
 cleanshot 4.8.4
 container 0.5.0
@@ -62,7 +61,8 @@ visual-studio-code 1.105.1
 vlc 3.0.21
 warp 0.2025.10.15.08.12.stable_01
 wezterm 20240203-110809,5046fc22
-zed 0.208.6
+yaak 2025.7.2
+zed 0.209.5
 zoom 6.6.5.67181
 
 BREW FORMULAS
@@ -397,7 +397,7 @@ xz 5.8.1
 yabai 7.1.16
 yazi 25.5.31
 yq 4.48.1
-yt-dlp 2025.10.14
+yt-dlp 2025.10.22
 yyjson 0.12.0
 z3 4.15.3
 zellij 0.43.1
