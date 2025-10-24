@@ -27,13 +27,21 @@ uninstall-paths = [".specify", ".claude/commands/speckit*", ".claude/commands/sp
 name = "OpenSpec"
 description = "Initialize OpenSpec with AI support"
 
-[tool.openspec.install]
+[tool.openspec.install.claude]
 command = "bunx @fission-ai/openspec@latest init --tools claude"
 env = ["NODE_ENV=production"]
 initial-message = "🔄 Initializing OpenSpec...\n\nThis may take a few minutes as dependencies are downloaded and configured.\n\n"
 success-message = "✅ OpenSpec initialized successfully!"
 detect-path = "openspec"
 uninstall-paths = ["openspec", ".claude/commands/openspec"]
+
+[tool.openspec.install.opencode]
+command = "bunx @fission-ai/openspec@latest init --tools opencode"
+env = ["NODE_ENV=production"]
+initial-message = "🔄 Initializing OpenSpec...\n\nThis may take a few minutes as dependencies are downloaded and configured.\n\n"
+success-message = "✅ OpenSpec initialized successfully!"
+detect-path = "openspec"
+uninstall-paths = ["openspec", ".opencode/commands/openspec"]
 
 [tool.full-permission]
 name = "Full Permission"
