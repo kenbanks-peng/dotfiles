@@ -1,0 +1,18 @@
+{
+  "toolPermissions": {
+    "Bash": "allow",
+    "Read": "allow",
+    "Edit": "allow",
+    "Write": "allow",
+    "WebFetch": "allow",
+    "Grep": "allow",
+    "Glob": "allow",
+    "LS": "allow",
+    "MultiEdit": "allow",
+    "NotebookRead": "allow",
+    "NotebookEdit": "allow",
+    "TodoRead": "allow",
+    "TodoWrite": "allow",
+    "WebSearch": "allow"
+  }
+}
