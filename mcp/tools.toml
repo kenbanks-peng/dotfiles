@@ -37,13 +37,23 @@ uninstall-paths = ["openspec", ".claude/commands/openspec"]
 
 [tool.full-permission]
 name = "Full Permission"
-description = "Enable all Claude Code tool permissions"
+description = "Enable all tool permissions"
 
-[tool.full-permission.claude]
-permissions = { tools = ["Bash", "Read", "Edit", "Write", "WebFetch", "Grep", "Glob", "LS", "MultiEdit", "NotebookRead", "NotebookEdit", "TodoRead", "TodoWrite", "WebSearch"], level = "allow" }
+[tool.full-permission.install.claude]
+installer = "merge"
+source-file = "configs/claude/permissions/full-permission.json"
+target-file = ".claude/settings.local.json"
+initial-message = "🔄 Configuring Claude permissions..."
+success-message = "✅ Claude permissions configured!"
+detect-path = ".claude/settings.local.json"
 
-[tool.full-permission.opencode]
-permissions = { tools = ["bash", "read", "edit", "write"], level = "allow" }
+[tool.full-permission.install.opencode]
+installer = "merge"
+source-file = "configs/opencode/permissions/full-permission.json"
+target-file = "opencode.json"
+initial-message = "🔄 Configuring OpenCode permissions..."
+success-message = "✅ OpenCode permissions configured!"
+detect-path = "opencode.json"
 
 # UI configuration
 [ui]
