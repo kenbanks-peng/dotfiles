@@ -8,7 +8,7 @@ atuin-desktop 0.1.10
 audacity 3.7.5
 boltai 1.36.5
 boop 1.4.0
-claude-code 2.0.26
+claude-code 2.0.27
 cleanshot 4.8.4
 container 0.5.0
 daisydisk 4.32
@@ -59,7 +59,7 @@ transmission 4.0.6
 typeface 4.2.1,4763
 visual-studio-code 1.105.1
 vlc 3.0.21
-warp 0.2025.10.22.08.13.stable_01
+warp 0.2025.10.22.08.13.stable_02
 wezterm 20240203-110809,5046fc22
 yaak 2025.7.2
 zed 0.209.5
@@ -72,7 +72,7 @@ age 1.2.1
 aom 3.13.1
 apache-arrow 21.0.0_9
 aribb24 1.0.4
-asciinema 3.0.0
+asciinema 3.0.1
 ast-grep 0.39.6
 autoconf 2.72
 aws-c-auth 0.9.1
@@ -381,7 +381,7 @@ tree 2.2.1
 tree-sitter 0.25.10
 ttyd 1.7.7_3
 turso 0.2.2
-typst 0.13.1
+typst 0.14.0
 uchardet 0.0.8
 unbound 1.24.1
 unibilium 2.1.2
