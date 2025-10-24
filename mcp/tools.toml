@@ -33,7 +33,7 @@ env = ["NODE_ENV=production"]
 initial-message = "🔄 Initializing OpenSpec...\n\nThis may take a few minutes as dependencies are downloaded and configured.\n\n"
 success-message = "✅ OpenSpec initialized successfully!"
 detect-path = "openspec"
-uninstall-paths = ["openspec", ".claude/commands/openspec"]
+uninstall-paths = ["openspec", ".claude/commands/openspec*", "AGENTS.md", "CLAUDE.md"]
 
 [tool.openspec.install.opencode]
 command = "bunx @fission-ai/openspec@latest init --tools opencode"
@@ -41,7 +41,7 @@ env = ["NODE_ENV=production"]
 initial-message = "🔄 Initializing OpenSpec...\n\nThis may take a few minutes as dependencies are downloaded and configured.\n\n"
 success-message = "✅ OpenSpec initialized successfully!"
 detect-path = "openspec"
-uninstall-paths = ["openspec", ".opencode/commands/openspec"]
+uninstall-paths = ["openspec", ".opencode/command/openspec*", "AGENTS.md"]
 
 [tool.full-permission]
 name = "Full Permission"
