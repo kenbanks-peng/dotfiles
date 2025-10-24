@@ -13,41 +13,37 @@ permissions-file = "opencode.json"
 [tool.github-spec-kit]
 name = "GitHub Spec-kit"
 description = "Initialize spec-kit with AI support"
-platform-agnostic = true
-has-install = true
-install-command = "uvx --from git+https://github.com/github/spec-kit.git specify init --here --ai claude"
-install-stdin = "y\n"
-install-env = ["PYTHONUNBUFFERED=1"]
-install-initial-message = "🔄 Initializing spec-kit...\n\nThis may take a few minutes as dependencies are downloaded and configured.\n\n"
-install-success-message = "✅ Spec-kit initialized successfully!"
-uninstall-paths = [".specify", ".claude/commands/speckit*", ".claude/commands/specify.md", ".claude/commands/clarify.md", ".claude/commands/plan.md", ".claude/commands/tasks.md", ".claude/commands/analyze.md", ".claude/commands/implement.md", ".claude/commands/constitution.md"]
+
+[tool.github-spec-kit.install]
+command = "uvx --from git+https://github.com/github/spec-kit.git specify init --here --ai claude"
+stdin = "y\n"
+env = ["PYTHONUNBUFFERED=1"]
+initial-message = "🔄 Initializing spec-kit...\n\nThis may take a few minutes as dependencies are downloaded and configured.\n\n"
+success-message = "✅ Spec-kit initialized successfully!"
 detect-path = ".specify"
+uninstall-paths = [".specify", ".claude/commands/speckit*", ".claude/commands/specify.md", ".claude/commands/clarify.md", ".claude/commands/plan.md", ".claude/commands/tasks.md", ".claude/commands/analyze.md", ".claude/commands/implement.md", ".claude/commands/constitution.md"]
 
 [tool.openspec]
 name = "OpenSpec"
 description = "Initialize OpenSpec with AI support"
-platform-agnostic = true
-has-install = true
-install-command = "bunx @fission-ai/openspec@latest init --tools claude"
-install-env = ["NODE_ENV=production"]
-install-initial-message = "🔄 Initializing OpenSpec...\n\nThis may take a few minutes as dependencies are downloaded and configured.\n\n"
-install-success-message = "✅ OpenSpec initialized successfully!"
-uninstall-paths = ["openspec", ".claude/commands/openspec"]
+
+[tool.openspec.install]
+command = "bunx @fission-ai/openspec@latest init --tools claude"
+env = ["NODE_ENV=production"]
+initial-message = "🔄 Initializing OpenSpec...\n\nThis may take a few minutes as dependencies are downloaded and configured.\n\n"
+success-message = "✅ OpenSpec initialized successfully!"
 detect-path = "openspec"
+uninstall-paths = ["openspec", ".claude/commands/openspec"]
 
 [tool.full-permission]
 name = "Full Permission"
 description = "Enable all Claude Code tool permissions"
-platform-agnostic = false
-has-install = true
 
-[tool.full-permission.permissions.claude]
-tools = ["Bash", "Read", "Edit", "Write", "WebFetch", "Grep", "Glob", "LS", "MultiEdit", "NotebookRead", "NotebookEdit", "TodoRead", "TodoWrite", "WebSearch"]
-level = "allow"
+[tool.full-permission.claude]
+permissions = { tools = ["Bash", "Read", "Edit", "Write", "WebFetch", "Grep", "Glob", "LS", "MultiEdit", "NotebookRead", "NotebookEdit", "TodoRead", "TodoWrite", "WebSearch"], level = "allow" }
 
-[tool.full-permission.permissions.opencode]
-tools = ["bash", "read", "edit", "write"]
-level = "allow"
+[tool.full-permission.opencode]
+permissions = { tools = ["bash", "read", "edit", "write"], level = "allow" }
 
 # UI configuration
 [ui]
