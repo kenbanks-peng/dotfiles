@@ -127,6 +127,7 @@ espeak-ng 1.52.0
 fastfetch 2.54.0
 fd 10.3.0
 ffmpeg 8.0_1
+figlet 2.2.5
 flac 1.5.0
 flock 0.4.0
 fontconfig 2.17.1
