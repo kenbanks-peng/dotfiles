@@ -18,8 +18,6 @@ description = "Initialize spec-kit with AI support"
 command = "uvx --from git+https://github.com/github/spec-kit.git specify init --here --ai claude"
 stdin = "y\n"
 env = ["PYTHONUNBUFFERED=1"]
-initial-message = "🔄 Initializing spec-kit...\n\nThis may take a few minutes as dependencies are downloaded and configured.\n\n"
-success-message = "✅ Spec-kit initialized successfully!"
 detect-path = ".specify"
 uninstall-paths = [".specify", ".claude/commands/speckit*", ".claude/commands/specify.md", ".claude/commands/clarify.md", ".claude/commands/plan.md", ".claude/commands/tasks.md", ".claude/commands/analyze.md", ".claude/commands/implement.md", ".claude/commands/constitution.md"]
 
@@ -30,16 +28,12 @@ description = "Initialize OpenSpec with AI support"
 [tool.openspec.install.claude]
 command = "bunx @fission-ai/openspec@latest init --tools claude"
 env = ["NODE_ENV=production"]
-initial-message = "🔄 Initializing OpenSpec...\n\nThis may take a few minutes as dependencies are downloaded and configured.\n\n"
-success-message = "✅ OpenSpec initialized successfully!"
 detect-path = "openspec"
 uninstall-paths = ["openspec", ".claude/commands/openspec*", "AGENTS.md", "CLAUDE.md"]
 
 [tool.openspec.install.opencode]
 command = "bunx @fission-ai/openspec@latest init --tools opencode"
 env = ["NODE_ENV=production"]
-initial-message = "🔄 Initializing OpenSpec...\n\nThis may take a few minutes as dependencies are downloaded and configured.\n\n"
-success-message = "✅ OpenSpec initialized successfully!"
 detect-path = "openspec"
 uninstall-paths = ["openspec", ".opencode/command/openspec*", "AGENTS.md"]
 
@@ -51,16 +45,12 @@ description = "Enable all tool permissions"
 installer = "merge"
 source-file = "configs/claude/permissions/full-permission.json"
 target-file = ".claude/settings.local.json"
-initial-message = "🔄 Configuring Claude permissions..."
-success-message = "✅ Claude permissions configured!"
 detect-path = ".claude/settings.local.json"
 
 [tool.full-permission.install.opencode]
 installer = "merge"
 source-file = "configs/opencode/permissions/full-permission.json"
 target-file = "opencode.json"
-initial-message = "🔄 Configuring OpenCode permissions..."
-success-message = "✅ OpenCode permissions configured!"
 detect-path = "opencode.json"
 
 # UI configuration
