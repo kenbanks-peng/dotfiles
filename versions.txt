@@ -17,7 +17,6 @@ espanso 2.3.0
 font-fira-sans 4.202
 font-hasklug-nerd-font 3.4.0
 font-ia-writer-quattro latest
-font-ibm-plex-serif 1.1.0
 font-indie-flower latest
 font-inter 4.1
 font-lato latest
