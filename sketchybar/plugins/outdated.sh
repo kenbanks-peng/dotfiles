@@ -13,12 +13,20 @@ sketchybar --set "$NAME" "${props[@]}"
 sum=0
 
 count=$(mise list | grep -o '\boutdated\b' | wc -l | tr -d '[:space:]')
-sleep 3
 sum=$((sum + count))
 
 # this gives error when using --greedy and called via sketchybar
-count=$(brew outdated | wc -l | tr -d ' ')
-sleep 10
+brew_output=$(brew outdated 2>&1)
+if [ $? -ne 0 ]; then
+  props=(
+    icon.color="$RED"
+    label="E"
+    label.color="$RED"
+  )
+  sketchybar --set "$NAME" "${props[@]}"
+  exit 1
+fi
+count=$(echo "$brew_output" | wc -l | tr -d ' ')
 sum=$((sum + count))
 
 case "$sum" in
