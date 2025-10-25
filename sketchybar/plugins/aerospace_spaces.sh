@@ -28,7 +28,6 @@ elif [ "$SENDER" = "yabai_window_destroyed" ] || [ "$SENDER" = "yabai_window_min
   # Get app name to check if allowed (also checks dialogs)
   appname=$(aerospace_appname_from_window_id "$ID")
   if allow_app "$appname" "$ID"; then
-    echo "Removed $appname $ID"
     aerospace_remove_window_id "$ID"
   fi
 fi
