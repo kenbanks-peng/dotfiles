@@ -289,7 +289,7 @@ oh-my-posh 27.3.1
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.15.16
+opencode 0.15.17
 opencore-amr 0.1.6
 openexr 3.4.2
 openjpeg 2.5.4
@@ -321,7 +321,7 @@ pstree 2.40
 pv 1.9.44
 pycparser 2.23_1
 pygit2 1.19.0
-python@3.13 3.13.9
+python@3.13 3.13.9_1
 python@3.14 3.14.0
 qrencode 4.1.1
 qsv 8.1.1
