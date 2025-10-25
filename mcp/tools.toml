@@ -9,6 +9,11 @@ name = "OpenCode"
 config-file = "opencode.json"
 permissions-file = "opencode.json"
 
+[platform.test]
+name = "Test"
+config-file = "test.json"
+permissions-file = "test.json"
+
 # Tool definitions
 [tool.github-spec-kit]
 name = "GitHub Spec-kit"
@@ -52,6 +57,12 @@ installer = "merge"
 source-file = "configs/opencode/permissions/full-permission.json"
 target-file = "opencode.json"
 detect-path = "opencode.json"
+
+[tool.full-permission.install.test]
+installer = "merge"
+source-file = "configs/opencode/permissions/full-permission.json"
+target-file = "test.json"
+detect-path = "test.json"
 
 # UI configuration
 [ui]
