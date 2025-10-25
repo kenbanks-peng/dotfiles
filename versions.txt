@@ -18,13 +18,14 @@ font-hasklug-nerd-font 3.4.0
 font-ia-writer-quattro latest
 font-inter 4.1
 font-monaspace-var 1.301
+font-roboto latest
 font-sf-pro latest
 font-symbols-only-nerd-font 3.4.0
 font-tex-gyre-termes 2.004
 ghostty 1.2.3
 git-credential-manager 2.6.1
 google-chrome 141.0.7390.123
-google-drive 116.0.2
+google-drive 116.0.4
 grandperspective 3.6
 hoppscotch 25.9.1-0
 karabiner-elements 15.5.0
@@ -53,8 +54,8 @@ visual-studio-code 1.105.1
 vlc 3.0.21
 warp 0.2025.10.22.08.13.stable_02
 wezterm 20240203-110809,5046fc22
-yaak 2025.7.2
-zed 0.209.5
+yaak 2025.7.3
+zed 0.209.6
 zoom 6.6.5.67181
 
 BREW FORMULAS
