@@ -17,7 +17,7 @@ sleep 3
 sum=$((sum + count))
 
 # this gives error when using --greedy and called via sketchybar
-count=$(brew outdated 2>/dev/null | sed '/^$/d' | wc -l | tr -d ' ')
+count=$(brew outdated 2>/dev/null | wc -l | tr -d ' ')
 sleep 10
 sum=$((sum + count))
 
