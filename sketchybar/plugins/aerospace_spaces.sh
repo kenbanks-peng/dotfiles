@@ -26,7 +26,6 @@ elif [ "$SENDER" = "yabai_window_created" ] || [ "$SENDER" = "yabai_window_demin
   fi
 elif [ "$SENDER" = "yabai_window_destroyed" ] || [ "$SENDER" = "yabai_window_minimized" ]; then
   # Get app name to check if allowed (also checks dialogs)
-  echo "--> $SENDER $ID"
   appname=$(aerospace_appname_from_window_id "$ID")
   if allow_app "$appname" "$ID"; then
     echo "Removed $appname $ID"
