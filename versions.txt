@@ -14,7 +14,6 @@ container 0.5.0
 daisydisk 4.32
 deepchat 0.4.2
 espanso 2.3.0
-font-alegreya 2.008
 font-archivo-black latest
 font-fira-sans 4.202
 font-hasklug-nerd-font 3.4.0
@@ -23,6 +22,7 @@ font-ibm-plex-sans 1.1.0
 font-ibm-plex-serif 1.1.0
 font-indie-flower latest
 font-inter 4.1
+font-lato latest
 font-league-gothic 1.601
 font-monaspace-var 1.301
 font-roboto latest
