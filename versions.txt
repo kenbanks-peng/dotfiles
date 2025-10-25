@@ -14,7 +14,6 @@ container 0.5.0
 daisydisk 4.32
 deepchat 0.4.2
 espanso 2.3.0
-font-fira-sans 4.202
 font-hasklug-nerd-font 3.4.0
 font-ia-writer-quattro latest
 font-inter 4.1
