@@ -22,6 +22,7 @@ rust = "latest"
 "npm:nuekit" = "latest"
 "npm:@fission-ai/openspec" = "latest"
 "npm:vite" = "latest"
+"go:github.com/nizos/tdd-guard/reporters/go/cmd/tdd-guard-go" = "v0.2.1"
 
 [settings]
 
