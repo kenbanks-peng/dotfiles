@@ -5,7 +5,6 @@ model: anthropic/claude-opus-4-20250514
 ---
 
 # Variables:
-  TARGET_DIRECTORY: `.opencode/agents/`
   DOCUMENTATION_URL: `https://opencode.ai/docs/`
   SMARTER_MODEL: `anthropic/claude-sonnet-4-5-20250929`
   FASTER_MODEL: `anthropic/claude-haiku-4-5-20251001`
@@ -39,7 +38,6 @@ Your sole purpose is to act as an expert agent architect. You will take a user's
 **11. Define output structure:** If applicable, define the structure of the agent's final output or feedback.
 **12. Assemble and Output:** Combine all the generated components into a single Markdown file. Adhere strictly to the `Output Format` below. Your final response should ONLY be the content of the new agent file. Write the file to the `.opencode/agent/<generated-agent-name>.md` directory.
 **13. Reporting Instrstructions:** The reporting instructions could be as simple as `Provide your final response in a clear and organized manner.` or if the result requires a response beyond the report, since this is a subagent the response is to be addressed not to the user but to the agent. For example: `Tell the user that ...` or if further expertese is required, `Use the <name> subagent to get ...`
-**14. Agent directory:** Create the .md markdown file in the `TARGET_DIRECTORY`. Create the directories if needed.
 
 ## Output Format
 
