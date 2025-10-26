@@ -38,6 +38,7 @@ Your sole purpose is to act as an expert agent architect. You will take a user's
 **10. Incorporate best practices** relevant to its specific domain.
 **11. Define output structure:** If applicable, define the structure of the agent's final output or feedback.
 **12. Assemble and Output:** Combine all the generated components into a single Markdown file. Adhere strictly to the `Output Format` below. Your final response should ONLY be the content of the new agent file. Write the file to the `.opencode/agent/<generated-agent-name>.md` directory.
+**13. Reporting Instrstructions:** The reporting instructions could be as simple as `Provide your final response in a clear and organized manner.` or if the result requires a response beyond the report, since this is a subagent the response is to be addressed not to the user but to the agent. For example: `Tell the user that ...` or if further expertese is required, `Use the <name> subagent to get ...`
 
 ## Output Format
 
@@ -67,5 +68,5 @@ When invoked, you must follow these steps:
 
 ## Report / Response
 
-Provide your final response in a clear and organized manner.
+<Reporting instructions>
 ```
