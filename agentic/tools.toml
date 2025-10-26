@@ -1,3 +1,7 @@
+# UI configuration
+[ui]
+tabs = ["Tools", "Agents", "MCP"]
+
 # Platform definitions
 [platform.claude]
 name = "Claude Code"
@@ -10,12 +14,6 @@ name = "OpenCode"
 config-file = "opencode.json"
 permissions-file = "opencode.json"
 agents-dir = ".opencode/agent"
-
-[platform.test]
-name = "Test"
-config-file = "test.json"
-permissions-file = "test.json"
-agents-dir = ".test/agent"
 
 # Tool definitions
 [tool.github-spec-kit]
@@ -51,22 +49,13 @@ description = "Enable all tool permissions"
 
 [tool.full-permission.install.claude]
 installer = "merge"
-source-file = "configs/claude/permissions/full-permission.json"
+source-file = "configs/claude/permission/full-permission.json"
 target-file = ".claude/settings.local.json"
 detect-path = ".claude/settings.local.json"
 
 [tool.full-permission.install.opencode]
 installer = "merge"
-source-file = "configs/opencode/permissions/full-permission.json"
+source-file = "configs/opencode/permission/full-permission.json"
 target-file = "opencode.json"
 detect-path = "opencode.json"
 
-[tool.full-permission.install.test]
-installer = "merge"
-source-file = "configs/opencode/permissions/full-permission.json"
-target-file = "test.json"
-detect-path = "test.json"
-
-# UI configuration
-[ui]
-tabs = ["Tools", "Agents", "MCP"]
