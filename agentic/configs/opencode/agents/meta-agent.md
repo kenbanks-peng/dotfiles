@@ -47,7 +47,7 @@ You must generate a single Markdown file containing the complete agent definitio
 ---
 description: <generated-action-oriented-description>
 mode: subagent | primary
-model: <selected-provider/model-id>
+model: `SMARTER_MODEL` | `FASTER_MODEL`
 ---
 
 # Purpose
@@ -69,13 +69,3 @@ When invoked, you must follow these steps:
 
 Provide your final response in a clear and organized manner.
 ```
-
-## Notes
-
-- The filename (without .md extension) becomes the agent name
-- Use `mode: subagent` for specialized agents only invoked by the task tool
-- Default to `model: anthropic/claude-sonnet-4-20250514` unless specified otherwise
-- Only include tools the agent actually needs
-- Permissions are optional and default to `ask` if not specified
-- The `temperature` field is optional (defaults: 0 for most models, 0.55 for Qwen)
-- Additional frontmatter options are passed through to the provider as model options
