@@ -66,4 +66,4 @@ detect-path = "test.json"
 
 # UI configuration
 [ui]
-tabs = ["Tools", "Agents", "MCP"]
+tabs = ["Tools", "MCP"]
