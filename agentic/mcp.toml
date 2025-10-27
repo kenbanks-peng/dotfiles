@@ -43,9 +43,7 @@ command = ["$BINPATH/mcp_seagoat"]
 type = "stdio"
 command = ["$BINPATH/mcp_tokei"]
 
-# npmjs - 196,000 downloads/month
-[mcp.filesystem]
-command = ["bunx", "@modelcontextprotocol/server-filesystem"]
+
 
 # npmjs - 13000 weekly downloads
 [mcp.n8n-mcp]
@@ -73,3 +71,5 @@ command = ["uvx", "--from", "git+https://github.com/oraios/serena", "serena", "s
 # [mcp.memory]
 # command = ["bunx", "@modelcontextprotocol/server-memory"]
 
+# [mcp.filesystem]
+# command = ["bunx", "@modelcontextprotocol/server-filesystem"]
