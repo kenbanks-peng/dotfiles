@@ -43,8 +43,6 @@ command = ["$BINPATH/mcp_seagoat"]
 type = "stdio"
 command = ["$BINPATH/mcp_tokei"]
 
-
-
 # npmjs - 13000 weekly downloads
 [mcp.n8n-mcp]
 command = ["bunx", "n8n-mcp"]
