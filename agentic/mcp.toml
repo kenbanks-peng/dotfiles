@@ -4,13 +4,12 @@
 [mcp.context7]
 command = ["bunx", "@upstash/context7-mcp"]
 
-# installed using
-# claude mcp add --transport http github https://api.githubcopilot.com/mcp -H "Authorization: Bearer $GITHUB_PERSONAL_ACCESS_TOKEN"
+# github
 # command = ["docker", "run", "-i", "--rm", "-e", "GITHUB_PERSONAL_ACCESS_TOKEN", "ghcr.io/github/github-mcp-server"]
 # env = { GITHUB_PERSONAL_ACCESS_TOKEN = "$GITHUB_PERSONAL_ACCESS_TOKEN" }
 [mcp.github]
-type = "http"
-url = "https://api.githubcopilot.com/mcp",
+type = "remote"
+url = "https://api.githubcopilot.com/mcp"
 headers = { Authorization = "Bearer $GITHUB_PERSONAL_ACCESS_TOKEN" }
 
 # npmjs - 350,000 weekly downloads
