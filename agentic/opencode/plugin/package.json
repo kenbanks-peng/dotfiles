@@ -1,0 +1,13 @@
+{
+  "name": "opencode-observability-plugin",
+  "version": "1.0.0",
+  "description": "Multi-agent observability plugin for OpenCode",
+  "type": "module",
+  "dependencies": {
+    "@opencode-ai/plugin": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}
