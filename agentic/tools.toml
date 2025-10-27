@@ -1,6 +1,18 @@
-# UI configuration
-[ui]
-tabs = ["Tools", "Agents", "MCP"]
+# Service configuration
+[[service]]
+type = "tools"
+name = "Tools"
+enabled = true
+
+[[service]]
+type = "agents"
+name = "Agents"
+enabled = true
+
+[[service]]
+type = "mcp"
+name = "MCP Servers"
+enabled = true
 
 # Platform definitions
 [platform.claude]
