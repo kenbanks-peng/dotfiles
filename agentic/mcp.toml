@@ -1,14 +1,16 @@
+# see github mcp registry: https://github.com/mcp
 [mcp]
 
-# npmjs - 273,000 downloads/month
+# markitdown - 82,000 github mcp downloads
+[mcp.markitdown]
+type = "stdio"
+command = ["uvx", "--python", "3.13", "--prerelease", "allow", "markitdown-mcp"]
+
+# npmjs - 35,000 github mcp downloads
 [mcp.context7]
 command = ["bunx", "@upstash/context7-mcp"]
 
-# install using uv tool
-markitdown-mcp
-
-
-# github
+# github - 24,000 github mcp downloads
 # command = ["docker", "run", "-i", "--rm", "-e", "GITHUB_PERSONAL_ACCESS_TOKEN", "ghcr.io/github/github-mcp-server"]
 # env = { GITHUB_PERSONAL_ACCESS_TOKEN = "$GITHUB_PERSONAL_ACCESS_TOKEN" }
 [mcp.github]
@@ -16,7 +18,7 @@ type = "remote"
 url = "https://api.githubcopilot.com/mcp"
 headers = { Authorization = "Bearer $GITHUB_PERSONAL_ACCESS_TOKEN" }
 
-# npmjs - 350,000 weekly downloads
+# playwright - 22,000 github mcp downloads
 [mcp.playwright]
 command = ["bunx", "@playwright/mcp@latest"]
 env = { OPENAI_API_KEY = "$OPENAI_API_KEY" }
@@ -45,14 +47,6 @@ command = ["$BINPATH/mcp_tokei"]
 [mcp.filesystem]
 command = ["bunx", "@modelcontextprotocol/server-filesystem"]
 
-# npmjs - 91,000 downloads/month
-# [mcp.sequential-thinking]
-# command = ["bunx", "@modelcontextprotocol/server-sequential-thinking"]
-
-# npmjs - 65,000 weekly downloads
-# [mcp.memory]
-# command = ["bunx", "@modelcontextprotocol/server-memory"]
-
 # npmjs - 13000 weekly downloads
 [mcp.n8n-mcp]
 command = ["bunx", "n8n-mcp"]
@@ -71,4 +65,11 @@ command = ["bunx", "mcp-obsidian", "$OBSIDIAN_VAULT"]
 type = "stdio"
 command = ["uvx", "--from", "git+https://github.com/oraios/serena", "serena", "start-mcp-server", "--context", "ide-assistant", "--project", "$PWD"]
 
+# redundant in claude and opencode
+
+# [mcp.sequential-thinking]
+# command = ["bunx", "@modelcontextprotocol/server-sequential-thinking"]
+
+# [mcp.memory]
+# command = ["bunx", "@modelcontextprotocol/server-memory"]
 
