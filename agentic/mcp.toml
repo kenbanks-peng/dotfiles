@@ -4,6 +4,10 @@
 [mcp.context7]
 command = ["bunx", "@upstash/context7-mcp"]
 
+# install using uv tool
+markitdown-mcp
+
+
 # github
 # command = ["docker", "run", "-i", "--rm", "-e", "GITHUB_PERSONAL_ACCESS_TOKEN", "ghcr.io/github/github-mcp-server"]
 # env = { GITHUB_PERSONAL_ACCESS_TOKEN = "$GITHUB_PERSONAL_ACCESS_TOKEN" }
