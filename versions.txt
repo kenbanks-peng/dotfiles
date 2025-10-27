@@ -12,7 +12,7 @@ claude-code 2.0.27
 cleanshot 4.8.4
 container 0.5.0
 daisydisk 4.32
-deepchat 0.4.2
+deepchat 0.4.3
 espanso 2.3.0
 font-hasklug-nerd-font 3.4.0
 font-ia-writer-quattro latest
@@ -56,7 +56,7 @@ warp 0.2025.10.22.08.13.stable_02
 wezterm 20240203-110809,5046fc22
 yaak 2025.7.3
 zed 0.209.6
-zoom 6.6.5.67181
+zoom 6.6.6.67409
 
 BREW FORMULAS
 -------------
@@ -85,7 +85,7 @@ bandwhich 0.23.1
 bash 5.3.3
 bat 0.26.0
 bat-extras 2024.08.24
-biome 2.3.0
+biome 2.3.1
 borders 1.8.4
 brotli 1.1.0
 btop 1.4.5
@@ -128,7 +128,7 @@ freetype 2.14.1_1
 frei0r 2.5.0
 fribidi 1.0.16
 fx 39.1.0
-fzf 0.66.0
+fzf 0.66.1
 gawk 5.3.1
 gcc 15.2.0
 gettext 0.26
@@ -138,7 +138,7 @@ git 2.51.1
 git-bug 0.10.1
 git-delta 0.18.2_3
 git-filter-repo 2.47.0
-github-mcp-server 0.19.1
+github-mcp-server 0.20.0
 gitleaks 8.28.0
 gitui 0.27.0
 glances 4.3.3_1
@@ -168,7 +168,7 @@ hub 2.14.2
 hurl 7.0.0
 hyperfine 1.19.0
 icu4c@77 77.1
-imagemagick 7.1.2-7
+imagemagick 7.1.2-8
 imath 3.2.2
 imgcat 1.0.22
 isl 0.27
@@ -210,7 +210,7 @@ liblinear 2.49
 liblqr 0.4.3
 libmicrohttpd 1.0.2
 libmpc 1.3.1
-libnghttp2 1.67.1
+libnghttp2 1.68.0
 libnghttp3 1.12.0
 libngtcp2 1.17.0
 libogg 1.3.6
@@ -285,11 +285,11 @@ nspr 4.37
 nss 3.117
 numpy 2.3.4
 nushell 0.108.0
-oh-my-posh 27.3.1
+oh-my-posh 27.4.0
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.15.17
+opencode 0.15.18
 opencore-amr 0.1.6
 openexr 3.4.2
 openjpeg 2.5.4
@@ -297,7 +297,7 @@ openjph 0.24.2
 openssl@3 3.6.0
 opus 1.5.2
 opusfile 0.12_1
-ov 0.44.0
+ov 0.45.1
 p11-kit 0.25.10
 pandoc 3.8.2.1
 pango 1.57.0_1
@@ -322,7 +322,7 @@ pv 1.9.44
 pycparser 2.23_1
 pygit2 1.19.0
 python@3.13 3.13.9_1
-python@3.14 3.14.0
+python@3.14 3.14.0_1
 qrencode 4.1.1
 qsv 8.1.1
 rav1e 0.8.1
@@ -409,29 +409,30 @@ zstd 1.5.7
 
 MISE PACKAGES
 -------------
-bun                                        1.3.1             ~/.config/mise/mise.toml  latest
-cargo:cargo-cache                          0.8.3             ~/.config/mise/mise.toml  latest
-cargo:cargo-update                         18.0.0            ~/.config/mise/mise.toml  latest
-cargo:sbyte                                0.3.3             ~/.config/mise/mise.toml  latest
-go                                         1.25.3            ~/.config/mise/mise.toml  latest
-go:github.com/wailsapp/wails/v2/cmd/wails  2.10.2            ~/.config/mise/mise.toml  latest
-go:golang.org/x/tools/gopls                0.20.0            ~/.config/mise/mise.toml  latest
-go:honnef.co/go/tools/cmd/staticcheck      0.7.0-0.dev       ~/.config/mise/mise.toml  latest
-node                                       25.0.0            ~/.config/mise/mise.toml  latest
-npm:@fission-ai/openspec                   0.13.0            ~/.config/mise/mise.toml  latest
-npm:ccexp                                  4.0.0             ~/.config/mise/mise.toml  latest
-npm:github-markdown-css                    5.8.1             ~/.config/mise/mise.toml  latest
-npm:md-to-pdf                              5.2.4             ~/.config/mise/mise.toml  latest
-npm:nuekit                                 2.0.0-beta.2      ~/.config/mise/mise.toml  latest
-npm:vite                                   7.1.12            ~/.config/mise/mise.toml  latest
-pipx:SuperClaude                           4.1.6             ~/.config/mise/mise.toml  latest
-pipx:meson                                 1.9.1             ~/.config/mise/mise.toml  latest
-pipx:ninja                                 1.13.0            ~/.config/mise/mise.toml  latest
-pipx:ruff                                  0.14.2            ~/.config/mise/mise.toml  latest
-pipx:seagoat                               0.54.17           ~/.config/mise/mise.toml  latest
-ruby                                       3.4.7             ~/.config/mise/mise.toml  latest
-rust                                       1.90.0 (symlink)  ~/.config/mise/mise.toml  latest
-uv                                         0.9.5             ~/.config/mise/mise.toml  latest
+bun                                                          1.3.1             ~/.config/mise/mise.toml  latest
+cargo:cargo-cache                                            0.8.3             ~/.config/mise/mise.toml  latest
+cargo:cargo-update                                           18.0.0            ~/.config/mise/mise.toml  latest
+cargo:sbyte                                                  0.3.3             ~/.config/mise/mise.toml  latest
+go                                                           1.25.3            ~/.config/mise/mise.toml  latest
+go:github.com/nizos/tdd-guard/reporters/go/cmd/tdd-guard-go  v0.2.1            ~/.config/mise/mise.toml  v0.2.1
+go:github.com/wailsapp/wails/v2/cmd/wails                    2.10.2            ~/.config/mise/mise.toml  latest
+go:golang.org/x/tools/gopls                                  0.20.0            ~/.config/mise/mise.toml  latest
+go:honnef.co/go/tools/cmd/staticcheck                        0.7.0-0.dev       ~/.config/mise/mise.toml  latest
+node                                                         25.0.0            ~/.config/mise/mise.toml  latest
+npm:@fission-ai/openspec                                     0.13.0            ~/.config/mise/mise.toml  latest
+npm:ccexp                                                    4.0.0             ~/.config/mise/mise.toml  latest
+npm:github-markdown-css                                      5.8.1             ~/.config/mise/mise.toml  latest
+npm:md-to-pdf                                                5.2.4             ~/.config/mise/mise.toml  latest
+npm:nuekit                                                   2.0.0-beta.2      ~/.config/mise/mise.toml  latest
+npm:vite                                                     7.1.12            ~/.config/mise/mise.toml  latest
+pipx:SuperClaude                                             4.1.6             ~/.config/mise/mise.toml  latest
+pipx:meson                                                   1.9.1             ~/.config/mise/mise.toml  latest
+pipx:ninja                                                   1.13.0            ~/.config/mise/mise.toml  latest
+pipx:ruff                                                    0.14.2            ~/.config/mise/mise.toml  latest
+pipx:seagoat                                                 0.54.17           ~/.config/mise/mise.toml  latest
+ruby                                                         3.4.7             ~/.config/mise/mise.toml  latest
+rust                                                         1.90.0 (symlink)  ~/.config/mise/mise.toml  latest
+uv                                                           0.9.5             ~/.config/mise/mise.toml  latest
 
 RUSTUP/CARGO
 ------------
