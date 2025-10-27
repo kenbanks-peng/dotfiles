@@ -42,9 +42,12 @@ interface EventData {
  * OpenCode Event Types (from FORMATS.md):
  * - installation.updated
  * - lsp.client.diagnostics
- * - message.updated
+ * - message.updated - Fires when a complete message is added (user OR assistant)
+ *   * For user prompt detection: check message.role === "user"
  * - message.removed
- * - message.part.updated
+ * - message.part.updated - Fires during ASSISTANT streaming (NOT for user input)
+ *   * Contains incremental text deltas as AI responds
+ *   * NOT suitable for detecting user prompt submission
  * - message.part.removed
  * - session.compacted
  * - session.updated
@@ -121,6 +124,14 @@ export const ObservabilityPlugin: Plugin = async ({
 				directory: workingDirectory,
 				worktree: gitWorktree,
 			};
+
+			if (event.type === "message.updated") {
+				const message = event.properties?.info;
+				if (message?.role === "user") {
+					const userPrompt = message.summary?.body || "";
+					eventData.summary = `User prompt: ${userPrompt.slice(0, 100)}${userPrompt.length > 100 ? "..." : ""}`;
+				}
+			}
 
 			await sendEventToServer(eventData);
 		},
