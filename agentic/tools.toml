@@ -14,20 +14,24 @@ type = "tools"
 name = "Tools"
 enabled = true
 
-# Platform definitions
-[platform.claude]
+# Platform configuration
+[[platform]]
+id = "claude"
 name = "Claude Code"
 config-file = ".mcp.json"
 permissions-file = ".claude/settings.local.json"
 agents-dir = ".claude/agent"
 format = "claude"
+enabled = true
 
-[platform.opencode]
+[[platform]]
+id = "opencode"
 name = "OpenCode"
 config-file = "opencode.json"
 permissions-file = "opencode.json"
 agents-dir = ".opencode/agent"
 format = "opencode"
+enabled = true
 
 # Tool definitions
 [tool.github-spec-kit]
@@ -39,14 +43,34 @@ command = "uvx --from git+https://github.com/github/spec-kit.git specify init --
 stdin = "y\n"
 env = ["PYTHONUNBUFFERED=1"]
 detect-path = ".specify"
-uninstall-paths = [".specify", ".claude/commands/speckit*", ".claude/commands/specify.md", ".claude/commands/clarify.md", ".claude/commands/plan.md", ".claude/commands/tasks.md", ".claude/commands/analyze.md", ".claude/commands/implement.md", ".claude/commands/constitution.md"]
+uninstall-paths = [
+    ".specify",
+    ".claude/commands/speckit*",
+    ".claude/commands/specify.md",
+    ".claude/commands/clarify.md",
+    ".claude/commands/plan.md",
+    ".claude/commands/tasks.md",
+    ".claude/commands/analyze.md",
+    ".claude/commands/implement.md",
+    ".claude/commands/constitution.md",
+]
 
 [tool.github-spec-kit.install.opencode]
 command = "uvx --from git+https://github.com/github/spec-kit.git specify init --here --ai claude"
 stdin = "y\n"
 env = ["PYTHONUNBUFFERED=1"]
 detect-path = ".specify"
-uninstall-paths = [".specify", ".opencode/command/speckit*", ".opencode/command/specify.md", ".opencode/command/clarify.md", ".opencode/command/plan.md", ".opencode/command/tasks.md", ".opencode/command/analyze.md", ".opencode/command/implement.md", ".opencode/command/constitution.md"]
+uninstall-paths = [
+    ".specify",
+    ".opencode/command/speckit*",
+    ".opencode/command/specify.md",
+    ".opencode/command/clarify.md",
+    ".opencode/command/plan.md",
+    ".opencode/command/tasks.md",
+    ".opencode/command/analyze.md",
+    ".opencode/command/implement.md",
+    ".opencode/command/constitution.md",
+]
 
 [tool.openspec]
 name = "OpenSpec"
@@ -56,7 +80,12 @@ description = "Initialize OpenSpec with AI support"
 command = "bunx @fission-ai/openspec@latest init --tools claude"
 env = ["NODE_ENV=production"]
 detect-path = "openspec"
-uninstall-paths = ["openspec", ".claude/commands/openspec*", "AGENTS.md", "CLAUDE.md"]
+uninstall-paths = [
+    "openspec",
+    ".claude/commands/openspec*",
+    "AGENTS.md",
+    "CLAUDE.md",
+]
 
 [tool.openspec.install.opencode]
 command = "bunx @fission-ai/openspec@latest init --tools opencode"
