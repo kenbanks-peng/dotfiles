@@ -1,7 +1,7 @@
 BREW CASKS
 ----------
 aerospace 0.19.2-Beta
-affinity-photo 2.6.4,3634
+affinity-photo 2.6.5,3782
 anybar 0.2.3
 arc 1.117.0,69739
 atuin-desktop 0.1.10
@@ -36,7 +36,7 @@ microsoft-auto-update 4.81.25101344
 microsoft-outlook 16.102.25101829
 obsidian 1.9.14
 omnifocus 4.8.4
-onyx 4.9.1
+onyx 4.9.2
 opcode 0.2.0
 orbstack 2.0.4,19887
 pdf-pals 1.9.0
