@@ -14,8 +14,6 @@ type = "tools"
 name = "Tools"
 enabled = true
 
-# graceful, miniwi, emboss, smallblock
-
 # Platform configuration
 [[platform]]
 id = "claude"
