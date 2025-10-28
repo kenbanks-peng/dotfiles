@@ -16,69 +16,65 @@ type = "remote"
 url = "https://api.githubcopilot.com/mcp"
 headers = { Authorization = "Bearer $GITHUB_PERSONAL_ACCESS_TOKEN" }
 
-# playwright - 22,000 github mcp downloads
-[mcp.playwright]
-command = ["bunx", "@playwright/mcp@latest"]
-env = { OPENAI_API_KEY = "$OPENAI_API_KEY" }
-
-# needed ??
-[mcp.lint]
-type = "local"
-command = ["$BINPATH/mcp_biome"]
-
-# web dev ??
-[mcp.chrome-devtools]
-type = "local"
-command = ["bunx", "chrome-devtools-mcp@latest"]
-
 # workflow ??
 [mcp.linear]
 type = "local"
 command = ["bunx", "mcp-remote", "https://mcp.linear.app/sse"]
 
 # ??
-[mcp.seagoat]
-type = "local"
-command = ["$BINPATH/mcp_seagoat"]
-
-# ??
-[mcp.tokei]
-type = "local"
-command = ["$BINPATH/mcp_tokei"]
-
-# ??
 [mcp.n8n-mcp]
 command = ["bunx", "n8n-mcp"]
 env = { MCP_MODE = "stdio", LOG_LEVEL = "error", DISABLE_CONSOLE_OUTPUT = "true" }
 
-
-# github - heavy
-[mcp.serena]
-type = "local"
-command = [
-    "uvx",
-    "--from",
-    "git+https://github.com/oraios/serena",
-    "serena",
-    "start-mcp-server",
-    "--context",
-    "ide-assistant",
-    "--project",
-    "$PWD",
-]
-
-# ok
-[mcp.mcp-server-chart]
-command = ["bunx", "@antv/mcp-server-chart"]
+# ?? ast-grep
 
 # ok
 [mcp.Obsidian]
 command = ["bunx", "mcp-obsidian", "$OBSIDIAN_VAULT"]
 
-# ok
-[mcp.mermaid]
-type = "local"
-command = ["bunx", "mcp-mermaid"]
+# # playwright - 22,000 github mcp downloads
+# [mcp.playwright]
+# command = ["bunx", "@playwright/mcp@latest"]
+# env = { OPENAI_API_KEY = "$OPENAI_API_KEY" }
+
+# # needed ?? opencode uses lsps
+# [mcp.lint]
+# type = "local"
+# command = ["$BINPATH/mcp_biome"]
+
+# # web dev ??
+# [mcp.chrome-devtools]
+# type = "local"
+# command = ["bunx", "chrome-devtools-mcp@latest"]
+
+# # ok
+# [mcp.mermaid]
+# type = "local"
+# command = ["bunx", "mcp-mermaid"]
+
+# # for big projects??
+# [mcp.serena]
+# type = "local"
+# command = [
+#     "uvx",
+#     "--from",
+#     "git+https://github.com/oraios/serena",
+#     "serena",
+#     "start-mcp-server",
+#     "--context",
+#     "ide-assistant",
+#     "--project",
+#     "$PWD",
+# ]
+
+# # ??
+# [mcp.seagoat]
+# type = "local"
+# command = ["$BINPATH/mcp_seagoat"]
+
+# # ok
+# [mcp.mcp-server-chart]
+# command = ["bunx", "@antv/mcp-server-chart"]
 
 
 # redundant in claude and opencode
