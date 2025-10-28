@@ -34,12 +34,19 @@ format = "opencode"
 name = "GitHub Spec-kit"
 description = "Initialize spec-kit with AI support"
 
-[tool.github-spec-kit.install]
+[tool.github-spec-kit.install.claude]
 command = "uvx --from git+https://github.com/github/spec-kit.git specify init --here --ai claude"
 stdin = "y\n"
 env = ["PYTHONUNBUFFERED=1"]
 detect-path = ".specify"
 uninstall-paths = [".specify", ".claude/commands/speckit*", ".claude/commands/specify.md", ".claude/commands/clarify.md", ".claude/commands/plan.md", ".claude/commands/tasks.md", ".claude/commands/analyze.md", ".claude/commands/implement.md", ".claude/commands/constitution.md"]
+
+[tool.github-spec-kit.install.opencode]
+command = "uvx --from git+https://github.com/github/spec-kit.git specify init --here --ai claude"
+stdin = "y\n"
+env = ["PYTHONUNBUFFERED=1"]
+detect-path = ".specify"
+uninstall-paths = [".specify", ".opencode/command/speckit*", ".opencode/command/specify.md", ".opencode/command/clarify.md", ".opencode/command/plan.md", ".opencode/command/tasks.md", ".opencode/command/analyze.md", ".opencode/command/implement.md", ".opencode/command/constitution.md"]
 
 [tool.openspec]
 name = "OpenSpec"
