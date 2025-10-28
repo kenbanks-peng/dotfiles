@@ -66,7 +66,7 @@ aom 3.13.1
 apache-arrow 21.0.0_9
 aribb24 1.0.4
 asciinema 3.0.1
-ast-grep 0.39.6
+ast-grep 0.39.7
 autoconf 2.72
 aws-c-auth 0.9.1
 aws-c-cal 0.9.5
@@ -134,11 +134,10 @@ gcc 15.2.0
 gettext 0.26
 gh 2.82.1
 giflib 5.2.2
-git 2.51.1
+git 2.51.2
 git-bug 0.10.1
 git-delta 0.18.2_3
 git-filter-repo 2.47.0
-github-mcp-server 0.20.0
 gitleaks 8.28.0
 gitui 0.27.0
 glances 4.3.3_1
@@ -189,7 +188,7 @@ lazydocker 0.24.1
 lazygit 0.55.1
 lazyjj 0.6.1
 lazyjournal 0.8.1
-lazysql 0.4.2
+lazysql 0.4.3
 leptonica 1.86.0
 lf 38
 libarchive 3.8.2
@@ -414,6 +413,7 @@ cargo:cargo-cache                                            0.8.3             ~
 cargo:cargo-update                                           18.0.0            ~/.config/mise/mise.toml  latest
 cargo:sbyte                                                  0.3.3             ~/.config/mise/mise.toml  latest
 go                                                           1.25.3            ~/.config/mise/mise.toml  latest
+go:github.com/jfeliu007/goplantuml/cmd/goplantuml            1.6.3             ~/.config/mise/mise.toml  latest
 go:github.com/nizos/tdd-guard/reporters/go/cmd/tdd-guard-go  v0.2.1            ~/.config/mise/mise.toml  v0.2.1
 go:github.com/wailsapp/wails/v2/cmd/wails                    2.10.2            ~/.config/mise/mise.toml  latest
 go:golang.org/x/tools/gopls                                  0.20.0            ~/.config/mise/mise.toml  latest
@@ -454,7 +454,5 @@ UV TOOLS
 --------
 markitdown v0.1.3
 - markitdown
-markitdown-mcp v0.0.1a4
-- markitdown-mcp
 specify-cli v0.0.20
 - specify
