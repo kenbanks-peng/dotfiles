@@ -21,44 +21,38 @@ headers = { Authorization = "Bearer $GITHUB_PERSONAL_ACCESS_TOKEN" }
 command = ["bunx", "@playwright/mcp@latest"]
 env = { OPENAI_API_KEY = "$OPENAI_API_KEY" }
 
-[mcp.mermaid]
-type = "local"
-command = ["bunx", "mcp-mermaid"]
-
+# needed ??
 [mcp.lint]
 type = "local"
 command = ["$BINPATH/mcp_biome"]
 
+# web dev ??
 [mcp.chrome-devtools]
 type = "local"
 command = ["bunx", "chrome-devtools-mcp@latest"]
 
+# workflow ??
 [mcp.linear]
 type = "local"
 command = ["bunx", "mcp-remote", "https://mcp.linear.app/sse"]
 
+# ??
 [mcp.seagoat]
 type = "local"
 command = ["$BINPATH/mcp_seagoat"]
 
+# ??
 [mcp.tokei]
 type = "local"
 command = ["$BINPATH/mcp_tokei"]
 
-# npmjs - 13000 weekly downloads
+# ??
 [mcp.n8n-mcp]
 command = ["bunx", "n8n-mcp"]
 env = { MCP_MODE = "stdio", LOG_LEVEL = "error", DISABLE_CONSOLE_OUTPUT = "true" }
 
-# npmjs - 3000 weekly downloads
-[mcp.mcp-server-chart]
-command = ["bunx", "@antv/mcp-server-chart"]
 
-# npmjs - 750 weekly downloads
-[mcp.Obsidian]
-command = ["bunx", "mcp-obsidian", "$OBSIDIAN_VAULT"]
-
-# github
+# github - heavy
 [mcp.serena]
 type = "local"
 command = [
@@ -72,6 +66,20 @@ command = [
     "--project",
     "$PWD",
 ]
+
+# ok
+[mcp.mcp-server-chart]
+command = ["bunx", "@antv/mcp-server-chart"]
+
+# ok
+[mcp.Obsidian]
+command = ["bunx", "mcp-obsidian", "$OBSIDIAN_VAULT"]
+
+# ok
+[mcp.mermaid]
+type = "local"
+command = ["bunx", "mcp-mermaid"]
+
 
 # redundant in claude and opencode
 
