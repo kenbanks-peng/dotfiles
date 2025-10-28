@@ -1,8 +1,7 @@
 {
-  "permissions": {
-    "bash": true,
-    "read": true,
-    "edit": true,
-    "write": true
+  "permission": {
+    "edit": "allow",
+    "webfetch": "allow",
+    "bash": "allow"
   }
 }
