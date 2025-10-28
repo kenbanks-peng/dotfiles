@@ -11,8 +11,6 @@ command = ["uvx", "--python", "3.13", "--prerelease", "allow", "markitdown-mcp"]
 command = ["bunx", "@upstash/context7-mcp"]
 
 # github - 24,000 github mcp downloads
-# command = ["docker", "run", "-i", "--rm", "-e", "GITHUB_PERSONAL_ACCESS_TOKEN", "ghcr.io/github/github-mcp-server"]
-# env = { GITHUB_PERSONAL_ACCESS_TOKEN = "$GITHUB_PERSONAL_ACCESS_TOKEN" }
 [mcp.github]
 type = "remote"
 url = "https://api.githubcopilot.com/mcp"
@@ -59,7 +57,17 @@ command = ["bunx", "mcp-obsidian", "$OBSIDIAN_VAULT"]
 # github
 [mcp.serena]
 type = "stdio"
-command = ["uvx", "--from", "git+https://github.com/oraios/serena", "serena", "start-mcp-server", "--context", "ide-assistant", "--project", "$PWD"]
+command = [
+    "uvx",
+    "--from",
+    "git+https://github.com/oraios/serena",
+    "serena",
+    "start-mcp-server",
+    "--context",
+    "ide-assistant",
+    "--project",
+    "$PWD",
+]
 
 # redundant in claude and opencode
 
