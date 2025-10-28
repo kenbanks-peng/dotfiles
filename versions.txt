@@ -2,14 +2,14 @@ BREW CASKS
 ----------
 aerospace 0.19.2-Beta
 anybar 0.2.3
-arc 1.117.0,69739
+arc 1.118.0,69942
 atuin-desktop 0.1.10
 audacity 3.7.5
 boltai 1.36.5
 boop 1.4.0
-claude-code 2.0.27
+claude-code 2.0.28
 cleanshot 4.8.4
-container 0.5.0
+container 0.6.0
 daisydisk 4.32
 deepchat 0.4.3
 espanso 2.3.0
@@ -32,15 +32,15 @@ keyclu 0.30.2
 languagetool-desktop 2.8.3
 linear-linear 1.28.6,251002av7g3go28
 microsoft-auto-update 4.81.25101344
-microsoft-outlook 16.102.25101829
+microsoft-outlook 16.102.25102623
 obsidian 1.9.14
-omnifocus 4.8.4
+omnifocus 4.8.5
 onyx 4.9.2
 opcode 0.2.0
 orbstack 2.0.4,19887
 pdf-pals 1.9.0
 quarto 1.8.25
-raycast 1.103.4
+raycast 1.103.5
 screen-studio 3.5.0-4028
 sf-symbols 7.0,115
 sip-app 4.1.1
@@ -54,7 +54,7 @@ vlc 3.0.21
 warp 0.2025.10.22.08.13.stable_02
 wezterm 20240203-110809,5046fc22
 yaak 2025.7.3
-zed 0.209.6
+zed 0.209.7
 zoom 6.6.6.67409
 
 BREW FORMULAS
@@ -84,7 +84,7 @@ bandwhich 0.23.1
 bash 5.3.3
 bat 0.26.0
 bat-extras 2024.08.24
-biome 2.3.1
+biome 2.3.2
 borders 1.8.4
 brotli 1.1.0
 btop 1.4.5
@@ -111,12 +111,12 @@ dblab 0.34.2
 direnv 2.37.1
 doppler 3.75.1
 dotenvx 1.51.0
-dua-cli 2.32.0
+dua-cli 2.32.2
 duf 0.9.1
 dust 1.2.3
 dvc 3.63.0
 espeak-ng 1.52.0
-fastfetch 2.54.0
+fastfetch 2.54.0_1
 fd 10.3.0
 ffmpeg 8.0_1
 figlet 2.2.5
@@ -257,7 +257,7 @@ llvm 21.1.4
 lolcat 100.0.1
 lpeg 1.1.0
 lua 5.4.8
-luajit 2.1.1760617492
+luajit 2.1.1761623958
 luarocks 3.12.2
 lunchy-go 0.2.1
 luv 1.51.0-1
@@ -284,7 +284,7 @@ neovim 0.11.4
 netpbm 11.02.19
 nettle 3.10.2
 nmap 7.98
-node 24.10.0
+node 24.10.0_1
 npth 1.8
 nspr 4.37
 nss 3.117
@@ -294,12 +294,12 @@ oh-my-posh 27.4.0
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.15.18
+opencode 0.15.20
 opencore-amr 0.1.6
 openexr 3.4.2
 openjdk 25.0.1
 openjpeg 2.5.4
-openjph 0.24.2
+openjph 0.24.3
 openssl@3 3.6.0
 opus 1.5.2
 opusfile 0.12_1
@@ -349,12 +349,12 @@ sevenzip 25.01
 shaderc 2025.4
 shared-mime-info 2.4
 shellcheck 0.11.0
-simdjson 4.0.7
+simdjson 4.1.0
 sk 0.20.5
 sketchybar 2.22.1
 snappy 1.2.2
 sniffnet 1.4.1
-snyk-cli 1.1300.1
+snyk-cli 1.1300.2
 sox 14.4.2_6
 spark 1.0.1
 speex 1.2.1
@@ -405,7 +405,6 @@ yabai 7.1.16
 yazi 25.5.31
 yq 4.48.1
 yt-dlp 2025.10.22
-yyjson 0.12.0
 z3 4.15.3
 zellij 0.43.1
 zeromq 4.3.5_2
