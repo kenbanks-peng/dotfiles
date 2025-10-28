@@ -21,8 +21,9 @@ enabled = true
 id = "claude"
 name = "Claude Code"
 ascii = '''
-█▀▀ █   ▄▀█ █ █ █▀▄ █▀▀   █▀▀ █▀█ █▀▄ █▀▀
-█▄▄ █▄▄ █▀█ █▄█ █▄▀ ██▄   █▄▄ █▄█ █▄▀ ██▄
+█▀▀ █   █▀▀█ █  █ █▀▀▄ █▀▀    █▀▀ █▀▀█ █▀▀▄ █▀▀
+█░░ █░░ █▄▄█ █  █ █░░█ █▀▀    █░░ █░░█ █░░█ █▀▀
+▀▀▀ ▀▀▀ ▀  ▀ ▀▀▀▀ ▀▀▀  ▀▀▀    ▀▀▀ ▀▀▀▀ ▀▀▀  ▀▀▀
 '''
 config-file = ".mcp.json"
 permissions-file = ".claude/settings.local.json"
@@ -35,8 +36,9 @@ enabled = true
 id = "opencode"
 name = "OpenCode"
 ascii = '''
-█▀█ █▀█ █▀▀ █▀▀▄   █▀▀ █▀█ █▀▄ █▀▀
-█▄█ █▀▀ ██▄ █  █   █▄▄ █▄█ █▄▀ ██▄
+█▀▀█ █▀▀█ █▀▀ █▀▀▄ █▀▀ █▀▀█ █▀▀▄ █▀▀
+█░░█ █░░█ █▀▀ █░░█ █░░ █░░█ █░░█ █▀▀
+▀▀▀▀ █▀▀▀ ▀▀▀ ▀  ▀ ▀▀▀ ▀▀▀▀ ▀▀▀  ▀▀▀
 '''
 config-file = "opencode.json"
 permissions-file = "opencode.json"
