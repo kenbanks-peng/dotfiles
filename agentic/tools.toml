@@ -63,13 +63,12 @@ description = "Enable all tool permissions"
 
 [tool.full-permission.install.claude]
 installer = "merge"
-source-file = "configs/claude/permission/full-permission.json"
+source-file = "claude/permissions/full-permission.json"
 target-file = ".claude/settings.local.json"
 detect-path = ".claude/settings.local.json"
 
 [tool.full-permission.install.opencode]
 installer = "merge"
-source-file = "configs/opencode/permission/full-permission.json"
+source-file = "opencode/permission/full-permission.json"
 target-file = "opencode.json"
 detect-path = "opencode.json"
-
