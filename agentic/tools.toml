@@ -30,6 +30,7 @@ permissions-file = ".claude/settings.local.json"
 agents-dir = ".claude/agent"
 format = "claude"
 accent-color = "#00AA00"
+signature = ".claude"
 enabled = true
 
 [[platform]]
@@ -45,6 +46,7 @@ permissions-file = "opencode.json"
 agents-dir = ".opencode/agent"
 format = "opencode"
 accent-color = "#5588FF"
+signature = "opencode.json"
 enabled = true
 
 # Tool definitions
