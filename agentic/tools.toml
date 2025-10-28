@@ -21,10 +21,10 @@ enabled = true
 id = "claude"
 name = "Claude Code"
 ascii = '''
-█▀▀ █   █▀▀█ █  █ █▀▀▄ █▀▀    █▀▀ █▀▀█ █▀▀▄ █▀▀
-█░░ █░░ █▄▄█ █  █ █░░█ █▀▀    █░░ █░░█ █░░█ █▀▀
-▀▀▀ ▀▀▀ ▀  ▀ ▀▀▀▀ ▀▀▀  ▀▀▀    ▀▀▀ ▀▀▀▀ ▀▀▀  ▀▀▀
-'''
+
+ ▐▛███▜▌   Claude Code
+▝▜█████▛▘
+  ▘▘ ▝▝'''
 config-file = ".mcp.json"
 permissions-file = ".claude/settings.local.json"
 agents-dir = ".claude/agent"
@@ -36,11 +36,10 @@ enabled = true
 [[platform]]
 id = "opencode"
 name = "OpenCode"
-ascii = '''
-█▀▀█ █▀▀█ █▀▀ █▀▀▄ █▀▀ █▀▀█ █▀▀▄ █▀▀
-█░░█ █░░█ █▀▀ █░░█ █░░ █░░█ █░░█ █▀▀
-▀▀▀▀ █▀▀▀ ▀▀▀ ▀  ▀ ▀▀▀ ▀▀▀▀ ▀▀▀  ▀▀▀
-'''
+ascii = '''                                 ▄
+█▀▀█ █▀▀█ █▀▀█ █▀▀▄ █▀▀▀ █▀▀█ █▀▀█ █▀▀█
+█░░█ █░░█ █▀▀▀ █░░█ █░░░ █░░█ █░░█ █▀▀▀
+▀▀▀▀ █▀▀▀ ▀▀▀▀ ▀  ▀ ▀▀▀▀ ▀▀▀▀ ▀▀▀▀ ▀▀▀▀'''
 config-file = "opencode.json"
 permissions-file = "opencode.json"
 agents-dir = ".opencode/agent"
