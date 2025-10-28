@@ -1,7 +1,6 @@
 BREW CASKS
 ----------
 aerospace 0.19.2-Beta
-affinity-photo 2.6.5,3782
 anybar 0.2.3
 arc 1.117.0,69739
 atuin-desktop 0.1.10
