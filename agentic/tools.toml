@@ -18,6 +18,12 @@ enabled = true
 [[platform]]
 id = "claude"
 name = "Claude Code"
+ascii = '''
+   ▜         ▌            ▌   
+▞▀▖▐ ▝▀▖▌ ▌▞▀▌▞▀▖ ▞▀▖▞▀▖▞▀▌▞▀▖
+▌ ▖▐ ▞▀▌▌ ▌▌ ▌▛▀  ▌ ▖▌ ▌▌ ▌▛▀ 
+▝▀  ▘▝▀▘▝▀▘▝▀▘▝▀▘ ▝▀ ▝▀ ▝▀▘▝▀▘
+'''
 config-file = ".mcp.json"
 permissions-file = ".claude/settings.local.json"
 agents-dir = ".claude/agent"
@@ -28,6 +34,12 @@ enabled = true
 [[platform]]
 id = "opencode"
 name = "OpenCode"
+ascii = '''
+                    ▌   
+▞▀▖▛▀▖▞▀▖▛▀▖▞▀▖▞▀▖▞▀▌▞▀▖
+▌ ▌▙▄▘▛▀ ▌ ▌▌ ▖▌ ▌▌ ▌▛▀ 
+▝▀ ▌  ▝▀▘▘ ▘▝▀ ▝▀ ▝▀▘▝▀▘
+'''
 config-file = "opencode.json"
 permissions-file = "opencode.json"
 agents-dir = ".opencode/agent"
