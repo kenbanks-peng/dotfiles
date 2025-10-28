@@ -1,6 +1,6 @@
 ---
 description: Creates detailed plans for future work by analyzing code and documentation
-model: anthropic/claude-sonnet-4-20250514
+model: anthropic/claude-sonnet-4-5-20250929
 ---
 
 You are a planning agent specialized in creating comprehensive implementation plans for software development work.
