@@ -21,24 +21,28 @@ headers = { Authorization = "Bearer $GITHUB_PERSONAL_ACCESS_TOKEN" }
 command = ["bunx", "@playwright/mcp@latest"]
 env = { OPENAI_API_KEY = "$OPENAI_API_KEY" }
 
+[mcp.mermaid]
+type = "local"
+command = ["bunx", "mcp-mermaid"]
+
 [mcp.lint]
-type = "stdio"
+type = "local"
 command = ["$BINPATH/mcp_biome"]
 
 [mcp.chrome-devtools]
-type = "stdio"
+type = "local"
 command = ["bunx", "chrome-devtools-mcp@latest"]
 
 [mcp.linear]
-type = "stdio"
+type = "local"
 command = ["bunx", "mcp-remote", "https://mcp.linear.app/sse"]
 
 [mcp.seagoat]
-type = "stdio"
+type = "local"
 command = ["$BINPATH/mcp_seagoat"]
 
 [mcp.tokei]
-type = "stdio"
+type = "local"
 command = ["$BINPATH/mcp_tokei"]
 
 # npmjs - 13000 weekly downloads
@@ -56,7 +60,7 @@ command = ["bunx", "mcp-obsidian", "$OBSIDIAN_VAULT"]
 
 # github
 [mcp.serena]
-type = "stdio"
+type = "local"
 command = [
     "uvx",
     "--from",
