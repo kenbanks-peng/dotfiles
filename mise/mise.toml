@@ -2,7 +2,6 @@
 bun = "latest"
 uv = "latest"
 node = "latest"
-go = "latest"
 ruby = "latest"
 "cargo:sbyte" = "latest"
 "cargo:cargo-update" = "latest"
