@@ -23,13 +23,13 @@ font-symbols-only-nerd-font 3.4.0
 font-tex-gyre-termes 2.004
 ghostty 1.2.3
 git-credential-manager 2.6.1
-google-chrome 141.0.7390.123
-google-drive 116.0.4
+google-chrome 142.0.7444.60
+google-drive 116.0.6
 grandperspective 3.6
 hoppscotch 25.9.1-0
 karabiner-elements 15.5.0
 keyclu 0.30.2
-languagetool-desktop 2.8.3
+languagetool-desktop 2.8.4
 linear-linear 1.28.6,251002av7g3go28
 microsoft-auto-update 4.81.25101344
 microsoft-outlook 16.102.25102623
@@ -86,7 +86,7 @@ bat 0.26.0
 bat-extras 2024.08.24
 biome 2.3.2
 borders 1.8.4
-brotli 1.1.0
+brotli 1.2.0
 btop 1.4.5
 c-ares 1.34.5
 ca-certificates 2025-09-09
@@ -141,7 +141,7 @@ git-delta 0.18.2_3
 git-filter-repo 2.47.0
 gitleaks 8.28.0
 gitui 0.27.0
-glances 4.3.3_1
+glances 4.3.3_2
 glib 2.86.1
 glow 2.1.1
 gmp 6.3.0
@@ -288,11 +288,11 @@ nspr 4.37
 nss 3.117
 numpy 2.3.4
 nushell 0.108.0
-oh-my-posh 27.4.0
+oh-my-posh 27.4.1
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.15.20
+opencode 0.15.23
 opencore-amr 0.1.6
 openexr 3.4.2
 openjdk 25.0.1
@@ -423,7 +423,7 @@ go:github.com/nizos/tdd-guard/reporters/go/cmd/tdd-guard-go  v0.2.1            ~
 go:github.com/wailsapp/wails/v2/cmd/wails                    2.10.2            ~/.config/mise/mise.toml  latest
 go:golang.org/x/tools/gopls                                  0.20.0            ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck                        0.7.0-0.dev       ~/.config/mise/mise.toml  latest
-node                                                         25.0.0            ~/.config/mise/mise.toml  latest
+node                                                         25.1.0            ~/.config/mise/mise.toml  latest
 npm:@fission-ai/openspec                                     0.13.0            ~/.config/mise/mise.toml  latest
 npm:ccexp                                                    4.0.0             ~/.config/mise/mise.toml  latest
 npm:github-markdown-css                                      5.8.1             ~/.config/mise/mise.toml  latest
