@@ -3,6 +3,7 @@ BREW CASKS
 aerospace 0.19.2-Beta
 anybar 0.2.3
 arc 1.118.0,69942
+athas-editor 0.1.2
 atuin-desktop 0.1.10
 audacity 3.7.5
 boltai 1.36.5
@@ -68,11 +69,11 @@ asciinema 3.0.1
 ast-grep 0.39.7
 autoconf 2.72
 aws-c-auth 0.9.1
-aws-c-cal 0.9.5
+aws-c-cal 0.9.6
 aws-c-common 0.12.5
 aws-c-compression 0.3.1
 aws-c-event-stream 0.5.7
-aws-c-http 0.10.6
+aws-c-http 0.10.7
 aws-c-io 0.23.2
 aws-c-mqtt 0.13.3
 aws-c-s3 0.9.2
