@@ -3,7 +3,7 @@ BREW CASKS
 aerospace 0.19.2-Beta
 anybar 0.2.3
 arc 1.118.0,69942
-athas-editor 0.1.2
+athas-editor 0.2.1
 atuin-desktop 0.1.10
 audacity 3.7.5
 boltai 1.36.5
