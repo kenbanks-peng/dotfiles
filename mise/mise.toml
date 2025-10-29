@@ -24,6 +24,7 @@ rust = "latest"
 "go:github.com/nizos/tdd-guard/reporters/go/cmd/tdd-guard-go" = "v0.2.1"
 "go:github.com/jfeliu007/goplantuml/cmd/goplantuml" = "latest"
 "npm:mcp-mermaid" = "latest"
+"go:github.com/melkeydev/go-blueprint" = "latest"
 
 [settings]
 
