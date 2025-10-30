@@ -21,7 +21,8 @@ type = "local"
 command = [
     "$HOME/.local/share/mise/installs/go-github-com-h0rv-d2-mcp/latest/bin/d2-mcp",
     "--image-type",
-    "png",
+    "svg",
+    "--write-files",
 ]
 
 # workflow ??
