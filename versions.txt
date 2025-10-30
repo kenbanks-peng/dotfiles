@@ -55,7 +55,7 @@ vlc 3.0.21
 warp 0.2025.10.22.08.13.stable_02
 wezterm 20240203-110809,5046fc22
 yaak 2025.7.3
-zed 0.209.7
+zed 0.210.4
 zoom 6.6.6.67409
 
 BREW FORMULAS
@@ -256,7 +256,7 @@ llvm 21.1.4
 lolcat 100.0.1
 lpeg 1.1.0
 lua 5.4.8
-luajit 2.1.1761623958
+luajit 2.1.1761727121
 luarocks 3.12.2
 lunchy-go 0.2.1
 luv 1.51.0-1
@@ -293,7 +293,7 @@ oh-my-posh 27.4.1
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.15.23
+opencode 0.15.28
 opencore-amr 0.1.6
 openexr 3.4.2
 openjdk 25.0.1
@@ -393,7 +393,7 @@ wallpaper 2.3.3
 watchexec 2.3.2
 webp 1.6.0
 wget 1.25.0
-wgo 0.5.14
+wgo 0.6.2
 x264 r3222
 x265 4.1
 xh 0.25.0
@@ -418,6 +418,7 @@ bun                                                          1.3.1             ~
 cargo:cargo-cache                                            0.8.3             ~/.config/mise/mise.toml  latest
 cargo:cargo-update                                           18.0.0            ~/.config/mise/mise.toml  latest
 cargo:sbyte                                                  0.3.3             ~/.config/mise/mise.toml  latest
+go:github.com/h0rv/d2-mcp                                    latest            ~/.config/mise/mise.toml  latest
 go:github.com/jfeliu007/goplantuml/cmd/goplantuml            1.6.3             ~/.config/mise/mise.toml  latest
 go:github.com/melkeydev/go-blueprint                         0.10.11           ~/.config/mise/mise.toml  latest
 go:github.com/nizos/tdd-guard/reporters/go/cmd/tdd-guard-go  v0.2.1            ~/.config/mise/mise.toml  v0.2.1
