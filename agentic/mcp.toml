@@ -16,15 +16,6 @@ type = "remote"
 url = "https://api.githubcopilot.com/mcp"
 headers = { Authorization = "Bearer $GITHUB_PERSONAL_ACCESS_TOKEN" }
 
-[mcp.d2]
-type = "local"
-command = [
-    "$HOME/.local/share/mise/installs/go-github-com-h0rv-d2-mcp/latest/bin/d2-mcp",
-    "--image-type",
-    "svg",
-    "--write-files",
-]
-
 # workflow ??
 [mcp.linear]
 type = "local"
