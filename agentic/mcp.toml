@@ -3,7 +3,7 @@
 
 # markitdown - 82,000 github mcp downloads
 [mcp.markitdown]
-type = "stdio"
+type = "local"
 command = ["uvx", "--python", "3.13", "--prerelease", "allow", "markitdown-mcp"]
 
 # npmjs - 35,000 github mcp downloads
@@ -15,6 +15,14 @@ command = ["bunx", "@upstash/context7-mcp"]
 type = "remote"
 url = "https://api.githubcopilot.com/mcp"
 headers = { Authorization = "Bearer $GITHUB_PERSONAL_ACCESS_TOKEN" }
+
+[mcp.d2]
+type = "local"
+command = [
+    "$HOME/.local/share/mise/installs/go-github-com-h0rv-d2-mcp/latest/bin/d2-mcp",
+    "--image-type",
+    "png",
+]
 
 # workflow ??
 [mcp.linear]

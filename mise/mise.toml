@@ -25,6 +25,7 @@ rust = "latest"
 "go:github.com/jfeliu007/goplantuml/cmd/goplantuml" = "latest"
 "npm:mcp-mermaid" = "latest"
 "go:github.com/melkeydev/go-blueprint" = "latest"
+"go:github.com/h0rv/d2-mcp" = "latest"
 
 [settings]
 
