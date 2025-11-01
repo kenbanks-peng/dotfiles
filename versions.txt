@@ -1,6 +1,10 @@
 BREW CASKS
 ----------
 aerospace 0.19.2-Beta
+affinity 3.0.0,3791
+affinity-designer 2.6.5,3782
+affinity-photo 2.6.5,3782
+affinity-publisher 2.6.5,3782
 anybar 0.2.3
 arc 1.119.0,70075
 athas-editor 0.2.1
@@ -8,9 +12,11 @@ atuin-desktop 0.1.10
 audacity 3.7.5
 boltai 1.36.5
 boop 1.4.0
-claude-code 2.0.29
+claude-code 2.0.31
 cleanshot 4.8.4
+codex 0.53.0
 container 0.6.0
+cursor 2.0.43,8e4da76ad196925accaa169efcae28c45454cce3
 daisydisk 4.32
 deepchat 0.4.3
 espanso 2.3.0
@@ -27,7 +33,7 @@ git-credential-manager 2.6.1
 google-chrome 142.0.7444.60
 google-drive 116.0.6
 grandperspective 3.6
-hoppscotch 25.9.1-0
+hoppscotch 25.10.0-0
 karabiner-elements 15.5.0
 keyclu 0.30.2
 languagetool-desktop 2.8.4
@@ -52,7 +58,7 @@ transmission 4.0.6
 typeface 4.2.1,4763
 visual-studio-code 1.105.1
 vlc 3.0.21
-warp 0.2025.10.29.08.12.stable_01
+warp 0.2025.10.29.08.12.stable_02
 wezterm 20240203-110809,5046fc22
 yaak 2025.7.3
 zed 0.210.4
@@ -69,7 +75,7 @@ asciinema 3.0.1
 ast-grep 0.39.7
 autoconf 2.72
 aws-c-auth 0.9.1
-aws-c-cal 0.9.7
+aws-c-cal 0.9.8
 aws-c-common 0.12.5
 aws-c-compression 0.3.1
 aws-c-event-stream 0.5.7
@@ -289,16 +295,16 @@ nspr 4.37
 nss 3.117
 numpy 2.3.4
 nushell 0.108.0
-oh-my-posh 27.4.3
+oh-my-posh 27.4.4
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 0.15.29
+opencode 1.0.7
 opencore-amr 0.1.6
 openexr 3.4.2
 openjdk 25.0.1
 openjpeg 2.5.4
-openjph 0.24.4
+openjph 0.24.5
 openssl@3 3.6.0
 opus 1.5.2
 opusfile 0.12_1
@@ -436,11 +442,11 @@ npm:vite                                                     7.1.12            ~
 pipx:SuperClaude                                             4.1.6             ~/.config/mise/mise.toml  latest
 pipx:meson                                                   1.9.1             ~/.config/mise/mise.toml  latest
 pipx:ninja                                                   1.13.0            ~/.config/mise/mise.toml  latest
-pipx:ruff                                                    0.14.2            ~/.config/mise/mise.toml  latest
+pipx:ruff                                                    0.14.3            ~/.config/mise/mise.toml  latest
 pipx:seagoat                                                 0.54.17           ~/.config/mise/mise.toml  latest
 ruby                                                         3.4.7             ~/.config/mise/mise.toml  latest
 rust                                                         1.91.0 (symlink)  ~/.config/mise/mise.toml  latest
-uv                                                           0.9.6             ~/.config/mise/mise.toml  latest
+uv                                                           0.9.7             ~/.config/mise/mise.toml  latest
 
 RUSTUP/CARGO
 ------------
