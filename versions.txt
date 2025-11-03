@@ -10,7 +10,6 @@ arc 1.119.0,70075
 athas-editor 0.2.1
 atuin-desktop 0.1.10
 audacity 3.7.5
-block-goose 1.12.1
 boltai 1.36.5
 boop 1.4.0
 claude-code 2.0.31
