@@ -91,7 +91,7 @@ bandwhich 0.23.1
 bash 5.3.3
 bat 0.26.0
 bat-extras 2024.08.24
-biome 2.3.2
+biome 2.3.3
 borders 1.8.4
 brotli 1.2.0
 btop 1.4.5
@@ -148,7 +148,7 @@ git-delta 0.18.2_3
 git-filter-repo 2.47.0
 gitleaks 8.28.0
 gitui 0.27.0
-glances 4.4.0
+glances 4.4.1
 glib 2.86.1
 glow 2.1.1
 gmp 6.3.0
@@ -299,7 +299,7 @@ oh-my-posh 27.4.4
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 1.0.12
+opencode 1.0.15
 opencore-amr 0.1.6
 openexr 3.4.2_1
 openjdk 25.0.1
