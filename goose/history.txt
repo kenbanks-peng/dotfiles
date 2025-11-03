@@ -1,2 +1,4 @@
 #V2
 This app currently makes a d2 diagram based on an analysis of folders and function calls and if a folder is specified to be focused, then the analysis also includes the files within that focused folder.\n\nI would like to migrate to the go package being the primary object of analysis replacing folders. Only if a package existed in multiple folders would folders be added in the analysis.\\ 
+This is an app which creates a d2 diagram based on folders, files, and function calls. I would like the diagram to now be based off of go packages, files, and function calls. Folders would only be added when a package exists across multiple folders.
+continue
