@@ -10,6 +10,7 @@ arc 1.119.0,70075
 athas-editor 0.2.1
 atuin-desktop 0.1.10
 audacity 3.7.5
+block-goose 1.12.1
 boltai 1.36.5
 boop 1.4.0
 claude-code 2.0.31
@@ -34,7 +35,7 @@ google-chrome 142.0.7444.60
 google-drive 116.0.6
 grandperspective 3.6
 hoppscotch 25.10.0-0
-karabiner-elements 15.5.0
+karabiner-elements 15.6.0
 keyclu 0.30.2
 languagetool-desktop 2.8.4
 linear-linear 1.28.6,251002av7g3go28
@@ -58,7 +59,7 @@ transmission 4.0.6
 typeface 4.2.1,4763
 visual-studio-code 1.105.1
 vlc 3.0.21
-warp 0.2025.10.29.08.12.stable_02
+warp 0.2025.10.29.08.12.stable_03
 wezterm 20240203-110809,5046fc22
 yaak 2025.7.3
 zed 0.210.4
@@ -85,13 +86,14 @@ aws-c-mqtt 0.13.3
 aws-c-s3 0.9.2
 aws-c-sdkutils 0.2.4
 aws-checksums 0.2.7
-aws-crt-cpp 0.35.1
+aws-crt-cpp 0.35.2
 aws-sdk-cpp 1.11.675
 bandwhich 0.23.1
 bash 5.3.3
 bat 0.26.0
 bat-extras 2024.08.24
 biome 2.3.2
+block-goose-cli 1.12.1
 borders 1.8.4
 brotli 1.2.0
 btop 1.4.5
@@ -113,7 +115,7 @@ cryptography 46.0.3
 csvtk 0.35.0
 curlie 1.8.2
 d2 0.7.1
-dav1d 1.5.1
+dav1d 1.5.2
 dblab 0.34.2
 direnv 2.37.1
 doppler 3.75.1
@@ -148,7 +150,7 @@ git-delta 0.18.2_3
 git-filter-repo 2.47.0
 gitleaks 8.28.0
 gitui 0.27.0
-glances 4.3.3_2
+glances 4.4.0
 glib 2.86.1
 glow 2.1.1
 gmp 6.3.0
@@ -193,7 +195,7 @@ json-c 0.18
 just 1.43.0
 lame 3.100
 lazydocker 0.24.1
-lazygit 0.55.1
+lazygit 0.56.0
 lazyjj 0.6.1
 lazyjournal 0.8.1
 lazysql 0.4.3
@@ -206,7 +208,7 @@ libavif 1.3.0
 libb2 0.98.1
 libbluray 1.4.0
 libde265 1.0.16
-libdeflate 1.24
+libdeflate 1.25
 libevent 2.1.12_1
 libgcrypt 1.11.2
 libgit2 1.9.1
@@ -285,7 +287,7 @@ mujs 1.3.7
 navi 2.24.0
 ncdu 2.9.2
 ncurses 6.5
-neovim 0.11.4
+neovim 0.11.5
 netpbm 11.02.19
 nettle 3.10.2
 nmap 7.98
@@ -299,12 +301,12 @@ oh-my-posh 27.4.4
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 1.0.7
+opencode 1.0.12
 opencore-amr 0.1.6
-openexr 3.4.2
+openexr 3.4.2_1
 openjdk 25.0.1
 openjpeg 2.5.4
-openjph 0.24.5
+openjph 0.25.0
 openssl@3 3.6.0
 opus 1.5.2
 opusfile 0.12_1
@@ -332,6 +334,7 @@ protobuf 33.0
 pstree 2.40
 pv 1.9.44
 pycparser 2.23_1
+pydantic-core 2.41.4
 pygit2 1.19.0
 python@3.13 3.13.9_1
 python@3.14 3.14.0_1
@@ -356,7 +359,7 @@ shared-mime-info 2.4
 shellcheck 0.11.0
 simdjson 4.1.0
 sk 0.20.5
-sketchybar 2.22.1
+sketchybar 2.23.0
 snappy 1.2.2
 sniffnet 1.4.1
 snyk-cli 1.1300.2
@@ -369,7 +372,7 @@ sqlite 3.50.4
 srt 1.5.4
 sshs 4.7.2
 stow 2.4.1
-stylua 2.3.0
+stylua 2.3.1
 svgo 4.0.0
 svt-av1 3.1.2
 syncthing 2.0.10
@@ -385,7 +388,7 @@ tokei 12.1.2
 tree 2.2.1
 tree-sitter 0.25.10
 ttyd 1.7.7_3
-turso 0.3.0
+turso 0.3.2
 typst 0.14.0
 uchardet 0.0.8
 unbound 1.24.1
