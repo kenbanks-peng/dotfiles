@@ -2,7 +2,6 @@ BREW CASKS
 ----------
 aerospace 0.19.2-Beta
 affinity 3.0.0,3791
-affinity-publisher 2.6.5,3782
 anybar 0.2.3
 arc 1.119.0,70075
 athas-editor 0.2.1
