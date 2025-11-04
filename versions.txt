@@ -2,7 +2,6 @@ BREW CASKS
 ----------
 aerospace 0.19.2-Beta
 affinity 3.0.0,3791
-affinity-designer 2.6.5,3782
 affinity-photo 2.6.5,3782
 affinity-publisher 2.6.5,3782
 anybar 0.2.3
@@ -434,9 +433,9 @@ go:golang.org/x/tools/gopls                                  0.20.0            ~
 go:honnef.co/go/tools/cmd/staticcheck                        0.7.0-0.dev       ~/.config/mise/mise.toml  latest
 node                                                         25.1.0            ~/.config/mise/mise.toml  latest
 npm:@fission-ai/openspec                                     0.13.0            ~/.config/mise/mise.toml  latest
-npm:ccexp                                                    4.0.0             ~/.config/mise/mise.toml  latest
+npm:@opentui/core                                            0.1.33            ~/.config/mise/mise.toml  latest
+npm:@opentui/react                                           0.1.33            ~/.config/mise/mise.toml  latest
 npm:github-markdown-css                                      5.8.1             ~/.config/mise/mise.toml  latest
-npm:mcp-mermaid                                              0.3.0             ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                                                5.2.4             ~/.config/mise/mise.toml  latest
 npm:nuekit                                                   2.0.0-beta.2      ~/.config/mise/mise.toml  latest
 npm:vite                                                     7.1.12            ~/.config/mise/mise.toml  latest
