@@ -27,23 +27,8 @@ config-file = ".mcp.json"
 permissions-file = ".claude/settings.local.json"
 agents-dir = ".claude/agent"
 format = "claude"
-accent-color = "#00AA00"
-signature = ".claude"
-enabled = true
-
-[[platform]]
-id = "opencode"
-name = "OpenCode"
-ascii = '''                                 ▄
-█▀▀█ █▀▀█ █▀▀█ █▀▀▄ █▀▀▀ █▀▀█ █▀▀█ █▀▀█
-█░░█ █░░█ █▀▀▀ █░░█ █░░░ █░░█ █░░█ █▀▀▀
-▀▀▀▀ █▀▀▀ ▀▀▀▀ ▀  ▀ ▀▀▀▀ ▀▀▀▀ ▀▀▀▀ ▀▀▀▀'''
-config-file = "opencode.json"
-permissions-file = "opencode.json"
-agents-dir = ".opencode/agent"
-format = "opencode"
 accent-color = "#5588FF"
-signature = "opencode.json"
+signature = ".claude"
 enabled = true
 
 # Tool definitions
