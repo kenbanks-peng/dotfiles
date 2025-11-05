@@ -237,17 +237,17 @@ userFlow: {
   shape: sequence_diagram
   
   User
-  "cmd/openconfig"
+  "cmd/cctui"
   "internal/mcp"
   "internal/agents"
   "internal/util"
   
-  User -> "cmd/openconfig": Start Application
-  "cmd/openconfig" -> "internal/mcp": ListServers()
+  User -> "cmd/cctui": Start Application
+  "cmd/cctui" -> "internal/mcp": ListServers()
   "internal/mcp" -> "internal/util": ReadConfigFile()
   "internal/util" -> "internal/mcp": configData
-  "internal/mcp" -> "cmd/openconfig": serverList
-  "cmd/openconfig" -> User: Display Servers
+  "internal/mcp" -> "cmd/cctui": serverList
+  "cmd/cctui" -> User: Display Servers
 }
 ```
 
