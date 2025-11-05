@@ -3,7 +3,6 @@
 
 [cctui]
 version = "1.0"
-config-dir = "~/.config/agentic"
 
 # Platform configuration
 [cctui.platform]
@@ -23,59 +22,73 @@ signature = ".claude"
 enabled = true
 
 # ============================================================================
-# MCP Service - with embedded server definitions
+# Service Definitions
 # ============================================================================
+
 [cctui.service.mcp]
 type = "mcp"
 name = "MCP"
 enabled = true
 
-# MCP servers embedded under this service
+[cctui.service.tools]
+type = "tools"
+name = "Tools"
+enabled = true
+
+[cctui.service.agents]
+type = "agents"
+name = "Agents"
+enabled = true
+
+# ============================================================================
+# MCP Servers
+# ============================================================================
+
 # markitdown - 82,000 github mcp downloads
-[cctui.service.mcp.servers.markitdown]
+[mcp.markitdown]
 type = "local"
 command = ["uvx", "--python", "3.13", "--prerelease", "allow", "markitdown-mcp"]
 
 # npmjs - 35,000 github mcp downloads
-[cctui.service.mcp.servers.context7]
+[mcp.context7]
 command = ["bunx", "@upstash/context7-mcp"]
 
 # github - 24,000 github mcp downloads
-[cctui.service.mcp.servers.github]
+[mcp.github]
 type = "remote"
 url = "https://api.githubcopilot.com/mcp"
 headers = { Authorization = "Bearer $GITHUB_PERSONAL_ACCESS_TOKEN" }
 
 # workflow
-[cctui.service.mcp.servers.linear]
+[mcp.linear]
 type = "local"
 command = ["bunx", "mcp-remote", "https://mcp.linear.app/sse"]
 
-[cctui.service.mcp.servers.n8n-mcp]
+[mcp.n8n-mcp]
 command = ["bunx", "n8n-mcp"]
 env = { MCP_MODE = "stdio", LOG_LEVEL = "error", DISABLE_CONSOLE_OUTPUT = "true" }
 
-[cctui.service.mcp.servers.Obsidian]
+[mcp.Obsidian]
 command = ["bunx", "mcp-obsidian", "$OBSIDIAN_VAULT"]
 
 # Commented out servers from original mcp.toml
-# [cctui.service.mcp.servers.playwright]
+# [mcp.playwright]
 # command = ["bunx", "@playwright/mcp@latest"]
 # env = { OPENAI_API_KEY = "$OPENAI_API_KEY" }
 
-# [cctui.service.mcp.servers.lint]
+# [mcp.lint]
 # type = "local"
 # command = ["$BINPATH/mcp_biome"]
 
-# [cctui.service.mcp.servers.chrome-devtools]
+# [mcp.chrome-devtools]
 # type = "local"
 # command = ["bunx", "chrome-devtools-mcp@latest"]
 
-# [cctui.service.mcp.servers.mermaid]
+# [mcp.mermaid]
 # type = "local"
 # command = ["bunx", "mcp-mermaid"]
 
-# [cctui.service.mcp.servers.serena]
+# [mcp.serena]
 # type = "local"
 # command = [
 #     "uvx",
@@ -89,33 +102,28 @@ command = ["bunx", "mcp-obsidian", "$OBSIDIAN_VAULT"]
 #     "$PWD",
 # ]
 
-# [cctui.service.mcp.servers.seagoat]
+# [mcp.seagoat]
 # type = "local"
 # command = ["$BINPATH/mcp_seagoat"]
 
-# [cctui.service.mcp.servers.mcp-server-chart]
+# [mcp.mcp-server-chart]
 # command = ["bunx", "@antv/mcp-server-chart"]
 
 # Redundant in claude and opencode
-# [cctui.service.mcp.servers.sequential-thinking]
+# [mcp.sequential-thinking]
 # command = ["bunx", "@modelcontextprotocol/server-sequential-thinking"]
 
-# [cctui.service.mcp.servers.memory]
+# [mcp.memory]
 # command = ["bunx", "@modelcontextprotocol/server-memory"]
 
-# [cctui.service.mcp.servers.filesystem]
+# [mcp.filesystem]
 # command = ["bunx", "@modelcontextprotocol/server-filesystem"]
 
 # ============================================================================
-# Tools Service - with embedded tool definitions
+# Tools
 # ============================================================================
-[cctui.service.tools]
-type = "tools"
-name = "Tools"
-enabled = true
 
-# Tools embedded under this service
-[cctui.service.tools.items.github-spec-kit]
+[tool.github-spec-kit]
 name = "GitHub Spec-kit"
 description = "Initialize spec-kit with AI support"
 command = "uvx --from git+https://github.com/github/spec-kit.git specify init --here --ai claude"
@@ -134,7 +142,7 @@ uninstall-paths = [
     ".claude/commands/constitution.md",
 ]
 
-[cctui.service.tools.items.openspec]
+[tool.openspec]
 name = "OpenSpec"
 description = "Initialize OpenSpec with AI support"
 command = "bunx @fission-ai/openspec@latest init --tools claude"
@@ -147,7 +155,7 @@ uninstall-paths = [
     "CLAUDE.md",
 ]
 
-[cctui.service.tools.items.full-permission]
+[tool.full-permission]
 name = "Full Permission"
 description = "Enable all tool permissions"
 installer = "merge"
@@ -156,11 +164,7 @@ target-file = ".claude/settings.local.json"
 detect-path = ".claude/settings.local.json"
 
 # ============================================================================
-# Agents Service - with embedded agent definitions
+# Agents
 # ============================================================================
-[cctui.service.agents]
-type = "agents"
-name = "Agents"
-enabled = true
 
-# Future: agent definitions would go here under cctui.service.agents.items.*
+# Future: agent definitions would go here as [agent.name]
