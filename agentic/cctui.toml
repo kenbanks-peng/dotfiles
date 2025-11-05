@@ -1,4 +1,4 @@
-# proposed.toml - Single entry point for all cctui configuration
+# cctui.toml - Single entry point for all cctui configuration
 # This consolidates tools.toml and mcp.toml into one traceable structure
 
 [cctui]
@@ -41,17 +41,22 @@ name = "Agents"
 enabled = true
 
 # ============================================================================
-# MCP Servers
+#                              MCP Servers
 # ============================================================================
+
+# see github mcp registry: https://github.com/mcp
+[mcp]
 
 # markitdown - 82,000 github mcp downloads
 [mcp.markitdown]
 type = "local"
-command = ["uvx", "--python", "3.13", "--prerelease", "allow", "markitdown-mcp"]
+command = "uvx"
+args = ["--python", "3.13", "--prerelease", "allow", "markitdown-mcp"]
 
 # npmjs - 35,000 github mcp downloads
 [mcp.context7]
-command = ["bunx", "@upstash/context7-mcp"]
+command = "bunx"
+args = ["@upstash/context7-mcp"]
 
 # github - 24,000 github mcp downloads
 [mcp.github]
@@ -59,35 +64,46 @@ type = "remote"
 url = "https://api.githubcopilot.com/mcp"
 headers = { Authorization = "Bearer $GITHUB_PERSONAL_ACCESS_TOKEN" }
 
-# workflow
+# workflow ??
 [mcp.linear]
 type = "local"
-command = ["bunx", "mcp-remote", "https://mcp.linear.app/sse"]
+command = "bunx"
+args = ["mcp-remote", "https://mcp.linear.app/sse"]
 
+# ??
 [mcp.n8n-mcp]
-command = ["bunx", "n8n-mcp"]
+command = "bunx"
+args = ["n8n-mcp"]
 env = { MCP_MODE = "stdio", LOG_LEVEL = "error", DISABLE_CONSOLE_OUTPUT = "true" }
 
-[mcp.Obsidian]
-command = ["bunx", "mcp-obsidian", "$OBSIDIAN_VAULT"]
+# ?? ast-grep
 
-# Commented out servers from original mcp.toml
+# ok
+[mcp.Obsidian]
+command = "bunx"
+args = ["mcp-obsidian", "$OBSIDIAN_VAULT"]
+
+# # playwright - 22,000 github mcp downloads
 # [mcp.playwright]
 # command = ["bunx", "@playwright/mcp@latest"]
 # env = { OPENAI_API_KEY = "$OPENAI_API_KEY" }
 
+# # needed ?? opencode uses lsps
 # [mcp.lint]
 # type = "local"
 # command = ["$BINPATH/mcp_biome"]
 
+# # web dev ??
 # [mcp.chrome-devtools]
 # type = "local"
 # command = ["bunx", "chrome-devtools-mcp@latest"]
 
+# # ok
 # [mcp.mermaid]
 # type = "local"
 # command = ["bunx", "mcp-mermaid"]
 
+# # for big projects??
 # [mcp.serena]
 # type = "local"
 # command = [
@@ -102,14 +118,18 @@ command = ["bunx", "mcp-obsidian", "$OBSIDIAN_VAULT"]
 #     "$PWD",
 # ]
 
+# # ??
 # [mcp.seagoat]
 # type = "local"
 # command = ["$BINPATH/mcp_seagoat"]
 
+# # ok
 # [mcp.mcp-server-chart]
 # command = ["bunx", "@antv/mcp-server-chart"]
 
-# Redundant in claude and opencode
+
+# redundant in claude and opencode
+
 # [mcp.sequential-thinking]
 # command = ["bunx", "@modelcontextprotocol/server-sequential-thinking"]
 
@@ -119,8 +139,9 @@ command = ["bunx", "mcp-obsidian", "$OBSIDIAN_VAULT"]
 # [mcp.filesystem]
 # command = ["bunx", "@modelcontextprotocol/server-filesystem"]
 
+
 # ============================================================================
-# Tools
+#                                   Tools
 # ============================================================================
 
 [tool.github-spec-kit]
@@ -131,15 +152,15 @@ stdin = "y\n"
 env = ["PYTHONUNBUFFERED=1"]
 detect-path = ".specify"
 uninstall-paths = [
-    ".specify",
-    ".claude/commands/speckit*",
-    ".claude/commands/specify.md",
-    ".claude/commands/clarify.md",
-    ".claude/commands/plan.md",
-    ".claude/commands/tasks.md",
-    ".claude/commands/analyze.md",
-    ".claude/commands/implement.md",
-    ".claude/commands/constitution.md",
+  ".specify",
+  ".claude/commands/speckit*",
+  ".claude/commands/specify.md",
+  ".claude/commands/clarify.md",
+  ".claude/commands/plan.md",
+  ".claude/commands/tasks.md",
+  ".claude/commands/analyze.md",
+  ".claude/commands/implement.md",
+  ".claude/commands/constitution.md",
 ]
 
 [tool.openspec]
@@ -149,17 +170,17 @@ command = "bunx @fission-ai/openspec@latest init --tools claude"
 env = ["NODE_ENV=production"]
 detect-path = "openspec"
 uninstall-paths = [
-    "openspec",
-    ".claude/commands/openspec*",
-    "AGENTS.md",
-    "CLAUDE.md",
+  "openspec",
+  ".claude/commands/openspec*",
+  "AGENTS.md",
+  "CLAUDE.md",
 ]
 
-[tool.full-permission]
-name = "Full Permission"
+[tool.permissions]
+name = "Permissions"
 description = "Enable all tool permissions"
 installer = "merge"
-source-file = "claude/permissions/full-permission.json"
+source-file = "claude/permissions/permissions.json"
 target-file = ".claude/settings.local.json"
 detect-path = ".claude/settings.local.json"
 
