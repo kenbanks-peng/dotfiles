@@ -29,16 +29,19 @@ enabled = true
 type = "mcp"
 name = "MCP"
 enabled = true
+order = 1
 
 [cctui.service.tools]
 type = "tools"
 name = "Tools"
 enabled = true
+order = 2
 
 [cctui.service.agents]
 type = "agents"
 name = "Agents"
 enabled = true
+order = 3
 
 # ============================================================================
 #                              MCP Servers
