@@ -9,7 +9,6 @@ atuin-desktop 0.1.10
 audacity 3.7.5
 boltai 1.36.5
 boop 1.4.0
-claude-code 2.0.33
 cleanshot 4.8.4
 codex 0.55.0
 container 0.6.0
