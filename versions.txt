@@ -1,20 +1,21 @@
 BREW CASKS
 ----------
 aerospace 0.19.2-Beta
-affinity 3.0.0,3791
+affinity 3.0.1,3808
 anybar 0.2.3
-arc 1.119.0,70075
+arc 1.120.0,70500
 athas-editor 0.2.1
-atuin-desktop 0.1.10
+atuin-desktop 0.1.11
 audacity 3.7.5
 boltai 1.36.5
 boop 1.4.0
+claude-code 2.0.35
 cleanshot 4.8.4
 codex 0.55.0
 container 0.6.0
-cursor 2.0.60,c6d93c13f57509f77eb65783b28e75a857b74c03
+cursor 2.0.64,25412918da7e74b2686b25d62da1f01cfcd27683
 daisydisk 4.32
-deepchat 0.4.3
+deepchat 0.4.4
 espanso 2.3.0
 font-hasklug-nerd-font 3.4.0
 font-ia-writer-quattro latest
@@ -56,8 +57,8 @@ visual-studio-code 1.105.1
 vlc 3.0.21
 warp 0.2025.10.29.08.12.stable_04
 wezterm 20240203-110809,5046fc22
-yaak 2025.7.3
-zed 0.210.4
+yaak 2025.8.2
+zed 0.211.6
 zoom 6.6.6.67409
 
 BREW FORMULAS
@@ -430,16 +431,16 @@ go:golang.org/x/tools/gopls                                  0.20.0            ~
 go:honnef.co/go/tools/cmd/staticcheck                        0.7.0-0.dev       ~/.config/mise/mise.toml  latest
 node                                                         25.1.0            ~/.config/mise/mise.toml  latest
 npm:@fission-ai/openspec                                     0.14.0            ~/.config/mise/mise.toml  latest
-npm:@opentui/core                                            0.1.34            ~/.config/mise/mise.toml  latest
-npm:@opentui/react                                           0.1.34            ~/.config/mise/mise.toml  latest
+npm:@opentui/core                                            0.1.36            ~/.config/mise/mise.toml  latest
+npm:@opentui/react                                           0.1.36            ~/.config/mise/mise.toml  latest
 npm:github-markdown-css                                      5.8.1             ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                                                5.2.4             ~/.config/mise/mise.toml  latest
 npm:nuekit                                                   2.0.0-beta.2      ~/.config/mise/mise.toml  latest
-npm:vite                                                     7.2.0             ~/.config/mise/mise.toml  latest
+npm:vite                                                     7.2.1             ~/.config/mise/mise.toml  latest
 pipx:SuperClaude                                             4.1.6             ~/.config/mise/mise.toml  latest
 pipx:meson                                                   1.9.1             ~/.config/mise/mise.toml  latest
 pipx:ninja                                                   1.13.0            ~/.config/mise/mise.toml  latest
-pipx:ruff                                                    0.14.3            ~/.config/mise/mise.toml  latest
+pipx:ruff                                                    0.14.4            ~/.config/mise/mise.toml  latest
 pipx:seagoat                                                 0.54.17           ~/.config/mise/mise.toml  latest
 ruby                                                         3.4.7             ~/.config/mise/mise.toml  latest
 rust                                                         1.91.0 (symlink)  ~/.config/mise/mise.toml  latest
