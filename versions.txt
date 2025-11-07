@@ -33,7 +33,7 @@ grandperspective 3.6
 hoppscotch 25.10.0-0
 karabiner-elements 15.6.0
 keyclu 0.30.2
-languagetool-desktop 2.9.0
+languagetool-desktop 2.9.1
 linear-linear 1.28.6,251002av7g3go28
 microsoft-auto-update 4.81.25101344
 microsoft-outlook 16.102.25102623
@@ -55,7 +55,7 @@ transmission 4.0.6
 typeface 4.2.1,4763
 visual-studio-code 1.105.1
 vlc 3.0.21
-warp 0.2025.10.29.08.12.stable_04
+warp 0.2025.11.05.08.12.stable_00
 wezterm 20240203-110809,5046fc22
 yaak 2025.8.2
 zed 0.211.6
@@ -69,7 +69,7 @@ aom 3.13.1
 apache-arrow 21.0.0_9
 aribb24 1.0.4
 asciinema 3.0.1
-ast-grep 0.39.7
+ast-grep 0.39.9
 autoconf 2.72
 aws-c-auth 0.9.1
 aws-c-cal 0.9.10
@@ -296,7 +296,7 @@ oh-my-posh 27.5.2
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 1.0.36
+opencode 1.0.39
 opencore-amr 0.1.6
 openexr 3.4.3
 openjdk 25.0.1
@@ -329,7 +329,7 @@ protobuf 33.0
 pstree 2.40
 pv 1.9.44
 pycparser 2.23_1
-pydantic-core 2.41.4
+pydantic 2.41.4
 pygit2 1.19.0
 python@3.13 3.13.9_1
 python@3.14 3.14.0_1
