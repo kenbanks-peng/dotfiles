@@ -52,24 +52,25 @@ order = 3
 
 # markitdown - 82,000 github mcp downloads
 [mcp.markitdown]
-type = "local"
+type = "stdio"
 command = "uvx"
 args = ["--python", "3.13", "--prerelease", "allow", "markitdown-mcp"]
 
 # npmjs - 35,000 github mcp downloads
 [mcp.context7]
+type = "stdio"
 command = "bunx"
 args = ["@upstash/context7-mcp"]
 
 # github - 24,000 github mcp downloads
 [mcp.github]
-type = "remote"
+type = "sse"
 url = "https://api.githubcopilot.com/mcp"
 headers = { Authorization = "Bearer $GITHUB_PERSONAL_ACCESS_TOKEN" }
 
 # workflow ??
 [mcp.linear]
-type = "local"
+type = "stdio"
 command = "bunx"
 args = ["mcp-remote", "https://mcp.linear.app/sse"]
 
