@@ -9,11 +9,11 @@ atuin-desktop 0.1.11
 audacity 3.7.5
 boltai 1.36.5
 boop 1.4.0
-claude-code 2.0.35
+claude-code 2.0.36
 cleanshot 4.8.4
-codex 0.55.0
+codex 0.56.0
 container 0.6.0
-cursor 2.0.64,25412918da7e74b2686b25d62da1f01cfcd27683
+cursor 2.0.69,63fcac100bd5d5749f2a98aa47d65f6eca61db39
 daisydisk 4.32
 deepchat 0.4.4
 espanso 2.3.0
@@ -36,6 +36,7 @@ keyclu 0.30.2
 languagetool-desktop 2.9.1
 linear-linear 1.28.6,251002av7g3go28
 microsoft-auto-update 4.81.25101344
+microsoft-outlook 16.102.25110228
 obsidian 1.9.14
 omnifocus 4.8.6
 onyx 4.9.2
@@ -78,7 +79,7 @@ aws-c-event-stream 0.5.7
 aws-c-http 0.10.7
 aws-c-io 0.23.3
 aws-c-mqtt 0.13.3
-aws-c-s3 0.9.3
+aws-c-s3 0.10.1
 aws-c-sdkutils 0.2.4
 aws-checksums 0.2.7
 aws-crt-cpp 0.35.2
@@ -258,7 +259,7 @@ llvm 21.1.5
 lolcat 100.0.1
 lpeg 1.1.0
 lua 5.4.8
-luajit 2.1.1762386122
+luajit 2.1.1762617240
 luarocks 3.12.2
 lunchy-go 0.2.1
 luv 1.51.0-1
@@ -295,12 +296,12 @@ oh-my-posh 27.5.2
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 1.0.39
+opencode 1.0.46
 opencore-amr 0.1.6
 openexr 3.4.3
 openjdk 25.0.1
 openjpeg 2.5.4
-openjph 0.25.0
+openjph 0.25.2
 openssl@3 3.6.0
 opus 1.5.2
 opusfile 0.12_1
@@ -326,7 +327,7 @@ posting 2.9.2
 procs 0.14.10
 protobuf 33.0
 pstree 2.40
-pv 1.9.44
+pv 1.10.0
 pycparser 2.23_1
 pydantic 2.41.4
 pygit2 1.19.0
@@ -338,7 +339,7 @@ rav1e 0.8.1
 rclone 1.71.2
 re2 20251105
 readline 8.3.1
-repomix 1.8.0
+repomix 1.9.0
 resvg 0.45.1
 rich-cli 1.8.1
 ripgrep 15.1.0
@@ -417,7 +418,7 @@ zstd 1.5.7
 
 MISE PACKAGES
 -------------
-bun                                                          1.3.1             ~/.config/mise/mise.toml  latest
+bun                                                          1.3.2             ~/.config/mise/mise.toml  latest
 cargo:cargo-cache                                            0.8.3             ~/.config/mise/mise.toml  latest
 cargo:cargo-update                                           18.0.0            ~/.config/mise/mise.toml  latest
 cargo:sbyte                                                  0.3.3             ~/.config/mise/mise.toml  latest
@@ -425,17 +426,17 @@ go:github.com/h0rv/d2-mcp                                    latest            ~
 go:github.com/jfeliu007/goplantuml/cmd/goplantuml            1.6.3             ~/.config/mise/mise.toml  latest
 go:github.com/melkeydev/go-blueprint                         0.10.11           ~/.config/mise/mise.toml  latest
 go:github.com/nizos/tdd-guard/reporters/go/cmd/tdd-guard-go  v0.2.1            ~/.config/mise/mise.toml  v0.2.1
-go:github.com/wailsapp/wails/v2/cmd/wails                    2.10.2            ~/.config/mise/mise.toml  latest
+go:github.com/wailsapp/wails/v2/cmd/wails                    2.11.0            ~/.config/mise/mise.toml  latest
 go:golang.org/x/tools/gopls                                  0.20.0            ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck                        0.7.0-0.dev       ~/.config/mise/mise.toml  latest
 node                                                         25.1.0            ~/.config/mise/mise.toml  latest
 npm:@fission-ai/openspec                                     0.14.0            ~/.config/mise/mise.toml  latest
-npm:@opentui/core                                            0.1.36            ~/.config/mise/mise.toml  latest
-npm:@opentui/react                                           0.1.36            ~/.config/mise/mise.toml  latest
+npm:@opentui/core                                            0.1.39            ~/.config/mise/mise.toml  latest
+npm:@opentui/react                                           0.1.39            ~/.config/mise/mise.toml  latest
 npm:github-markdown-css                                      5.8.1             ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                                                5.2.4             ~/.config/mise/mise.toml  latest
 npm:nuekit                                                   2.0.0-beta.2      ~/.config/mise/mise.toml  latest
-npm:vite                                                     7.2.1             ~/.config/mise/mise.toml  latest
+npm:vite                                                     7.2.2             ~/.config/mise/mise.toml  latest
 pipx:SuperClaude                                             4.1.6             ~/.config/mise/mise.toml  latest
 pipx:meson                                                   1.9.1             ~/.config/mise/mise.toml  latest
 pipx:ninja                                                   1.13.0            ~/.config/mise/mise.toml  latest
@@ -443,7 +444,7 @@ pipx:ruff                                                    0.14.4            ~
 pipx:seagoat                                                 0.54.17           ~/.config/mise/mise.toml  latest
 ruby                                                         3.4.7             ~/.config/mise/mise.toml  latest
 rust                                                         1.91.0 (symlink)  ~/.config/mise/mise.toml  latest
-uv                                                           0.9.7             ~/.config/mise/mise.toml  latest
+uv                                                           0.9.8             ~/.config/mise/mise.toml  latest
 
 RUSTUP/CARGO
 ------------
