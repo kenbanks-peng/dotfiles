@@ -10,9 +10,7 @@ ascii = '''
  ▐▛███▜▌   Claude Code
 ▝▜█████▛▘
   ▘▘ ▝▝'''
-config-file = ".mcp.json"
 permissions-file = ".claude/settings.local.json"
-agents-dir = ".claude/agent"
 format = "claude"
 accent-color = "#5588FF"
 signature = ".claude"
@@ -43,6 +41,9 @@ order = 3
 
 # see github mcp registry: https://github.com/mcp
 [mcp]
+
+[mcp.config.claude]
+config-file = ".mcp.json"
 
 # markitdown - 82,000 github mcp downloads
 [mcp.markitdown]
