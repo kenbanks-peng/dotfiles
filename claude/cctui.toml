@@ -28,14 +28,14 @@ name = "MCP"
 enabled = true
 order = 1
 
-[cctui.service.tools]
-type = "tools"
+[cctui.service.tool]
+type = "tool"
 name = "Tools"
 enabled = true
 order = 2
 
-[cctui.service.agents]
-type = "agents"
+[cctui.service.agent]
+type = "agent"
 name = "Agents"
 enabled = true
 order = 3
@@ -191,5 +191,6 @@ detect-path = ".claude/settings.local.json"
 # ============================================================================
 # Agents
 # ============================================================================
+[agent]
 
 # Future: agent definitions would go here as [agent.name]
