@@ -185,6 +185,6 @@ detect-path = ".claude/settings.local.json"
 # ============================================================================
 # Agents
 # ============================================================================
-[agent]
+[agent.config.claude]
 config-source-dir = "agent"
 target-dir = "agent"
