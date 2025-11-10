@@ -4,11 +4,11 @@ version = "1.0"
 # Platform configuration
 [cctui.platform.claude]
 name = "Claude Code"
-ascii = '''
+ascii = """
 
  ▐▛███▜▌   Claude Code
 ▝▜█████▛▘
-  ▘▘ ▝▝'''
+  ▘▘ ▝▝"""
 accent-color = "#5588FF"
 enabled = true
 
