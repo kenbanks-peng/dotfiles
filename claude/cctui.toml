@@ -184,7 +184,7 @@ rm -rf openspec .claude/commands/openspec* AGENTS.md
 name = "Permissions"
 description = "Enable all tool permissions"
 installer = "merge"
-source-file = "claude/permissions/permissions.json"
+source-file = "permissions/permissions.json"
 target-file = ".claude/settings.local.json"
 detect-path = ".claude/settings.local.json"
 
