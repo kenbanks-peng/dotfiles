@@ -1,6 +1,3 @@
-# cctui.toml - Single entry point for all cctui configuration
-# This consolidates tools.toml and mcp.toml into one traceable structure
-
 [cctui]
 version = "1.0"
 
@@ -176,12 +173,10 @@ command = "bunx @fission-ai/openspec@latest init --tools claude"
 env = ["NODE_ENV=production"]
 detect-path = "openspec"
 uninstall-command = """
-# Remove openspec-specific sections from CLAUDE.md if it exists
 if [ -f CLAUDE.md ]; then
   # Remove content between OPENSPEC markers and clean up extra blank lines
   sed -e '/<!-- OPENSPEC:START -->/,/<!-- OPENSPEC:END -->/d' -e '/./,$!d' CLAUDE.md > CLAUDE.md.tmp && mv CLAUDE.md.tmp CLAUDE.md || rm -f CLAUDE.md.tmp
 fi
-# Remove other openspec files
 rm -rf openspec .claude/commands/openspec* AGENTS.md
 """
 
