@@ -2,18 +2,14 @@
 version = "1.0"
 
 # Platform configuration
-[cctui.platform]
-id = "claude"
+[cctui.platform.claude]
 name = "Claude Code"
 ascii = '''
 
  ▐▛███▜▌   Claude Code
 ▝▜█████▛▘
   ▘▘ ▝▝'''
-permissions-file = ".claude/settings.local.json"
-format = "claude"
 accent-color = "#5588FF"
-signature = ".claude"
 enabled = true
 
 # ============================================================================
