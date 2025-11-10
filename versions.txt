@@ -11,7 +11,7 @@ boltai 1.36.5
 boop 1.4.0
 claude-code 2.0.36
 cleanshot 4.8.4
-codex 0.56.0
+codex 0.57.0
 container 0.6.0
 cursor 2.0.69,63fcac100bd5d5749f2a98aa47d65f6eca61db39
 daisydisk 4.32
