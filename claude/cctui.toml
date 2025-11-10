@@ -153,17 +153,17 @@ command = "uvx --from git+https://github.com/github/spec-kit.git specify init --
 stdin = "y\n"
 env = ["PYTHONUNBUFFERED=1"]
 detect-path = ".specify"
-uninstall-paths = [
-  ".specify",
-  ".claude/commands/speckit*",
-  ".claude/commands/specify.md",
-  ".claude/commands/clarify.md",
-  ".claude/commands/plan.md",
-  ".claude/commands/tasks.md",
-  ".claude/commands/analyze.md",
-  ".claude/commands/implement.md",
-  ".claude/commands/constitution.md",
-]
+uninstall = """
+rm -rf .specify
+rm -rf .claude/commands/speckit*
+rm -rf .claude/commands/specify.md
+rm -rf .claude/commands/clarify.md
+rm -rf .claude/commands/plan.md
+rm -rf .claude/commands/tasks.md
+rm -rf .claude/commands/analyze.md
+rm -rf .claude/commands/implement.md
+rm -rf .claude/commands/constitution.md
+"""
 
 [tool.openspec]
 name = "OpenSpec"
@@ -172,9 +172,9 @@ installer = "command"
 command = "bunx @fission-ai/openspec@latest init --tools claude"
 env = ["NODE_ENV=production"]
 detect-path = "openspec"
-uninstall-command = """
+uninstall = """
+# Remove content between OPENSPEC markers
 if [ -f CLAUDE.md ]; then
-  # Remove content between OPENSPEC markers and clean up extra blank lines
   sed -e '/<!-- OPENSPEC:START -->/,/<!-- OPENSPEC:END -->/d' -e '/./,$!d' CLAUDE.md > CLAUDE.md.tmp && mv CLAUDE.md.tmp CLAUDE.md || rm -f CLAUDE.md.tmp
 fi
 rm -rf openspec .claude/commands/openspec* AGENTS.md
