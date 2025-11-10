@@ -1,7 +1,0 @@
-{
-  "permission": {
-    "edit": "allow",
-    "webfetch": "allow",
-    "bash": "allow"
-  }
-}
