@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-### START-OF-ICON-MAP
 function app_icons() {
     case "$1" in
 
@@ -40,7 +39,7 @@ function app_icons() {
          ;;
 
     # from https://github.com/kvndrsslr/sketchybar-app-font
-    
+
     ### START-OF-ICON-MAP
    "Live")
         icon_result=":ableton:"
