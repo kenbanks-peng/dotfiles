@@ -31,6 +31,11 @@ name = "Agents"
 enabled = true
 order = 3
 
+[cctui.service.command]
+name = "Commands"
+enabled = true
+order = 4
+
 # ============================================================================
 #                              MCP Servers
 # ============================================================================
@@ -188,3 +193,10 @@ detect-path = ".claude/settings.local.json"
 [agent.config.claude]
 config-source-dir = "agents"
 target-dir = ".claude/agents"
+
+# ============================================================================
+# Commands
+# ============================================================================
+[command.config.claude]
+config-source-dir = "commands"
+target-dir = ".claude/commands"
