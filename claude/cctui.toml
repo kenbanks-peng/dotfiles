@@ -36,7 +36,7 @@ name = "Commands"
 enabled = true
 order = 4
 
-[cctui.service.output-style]
+[cctui.service.output]
 name = "Output Styles"
 enabled = true
 order = 5
@@ -210,3 +210,19 @@ target-dir = ".claude/agents"
 [command.config.claude]
 config-source-dir = "commands"
 target-dir = ".claude/commands"
+
+
+# ============================================================================
+# Output Styles
+# ============================================================================
+[output.config.claude]
+config-source-dir = "output-styles"
+target-dir = ".claude/output-styles"
+
+
+# ============================================================================
+# Skills
+# ============================================================================
+[skill.config.claude]
+config-source-dir = "skills"
+target-dir = ".claude/skills"
