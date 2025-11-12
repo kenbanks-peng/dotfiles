@@ -36,6 +36,16 @@ name = "Commands"
 enabled = true
 order = 4
 
+[cctui.service.output-style]
+name = "Output Styles"
+enabled = true
+order = 5
+
+[cctui.service.skill]
+name = "Skills"
+enabled = true
+order = 6
+
 # ============================================================================
 #                              MCP Servers
 # ============================================================================
