@@ -1,0 +1,37 @@
+{
+  "markitdown": {
+    "type": "stdio",
+    "command": "uvx",
+    "args": ["--python", "3.13", "--prerelease", "allow", "markitdown-mcp"]
+  },
+  "context7": {
+    "type": "stdio",
+    "command": "bunx",
+    "args": ["@upstash/context7-mcp"]
+  },
+  "github": {
+    "type": "sse",
+    "url": "https://api.githubcopilot.com/mcp",
+    "headers": {
+      "Authorization": "Bearer $GITHUB_PERSONAL_ACCESS_TOKEN"
+    }
+  },
+  "linear": {
+    "type": "stdio",
+    "command": "bunx",
+    "args": ["mcp-remote", "https://mcp.linear.app/sse"]
+  },
+  "n8n-mcp": {
+    "command": "bunx",
+    "args": ["n8n-mcp"],
+    "env": {
+      "MCP_MODE": "stdio",
+      "LOG_LEVEL": "error",
+      "DISABLE_CONSOLE_OUTPUT": "true"
+    }
+  },
+  "Obsidian": {
+    "command": "bunx",
+    "args": ["mcp-obsidian", "$OBSIDIAN_VAULT"]
+  }
+}
