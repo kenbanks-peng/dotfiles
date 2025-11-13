@@ -6,7 +6,7 @@ allowed-tools: Bash, Read, Glob, Grep
 
 # Purpose
 
-List all git worktrees in the `trees/` directory with comprehensive information including branch names, directories, environment variables, port configuration, and service status.
+List all git worktrees in the `trees/` directory with comprehensive information including branch names, directories, environment variables, dependencies, and build status.
 
 ## Variables
 
@@ -19,10 +19,10 @@ WORKTREE_BASE_DIR: trees/
 
 - List all worktrees managed by git
 - For each worktree in trees/, gather configuration details
-- Read environment files to extract port configuration
-- Check if services are running on configured ports
+- Read environment files if present
+- Check for installed dependencies
+- Check for build artifacts
 - Display comprehensive information in a clear, organized format
-- Show which worktrees are active vs stopped
 - Provide quick action commands for each worktree
 
 ## Workflow
@@ -46,54 +46,38 @@ For each worktree found in trees/:
 - Branch name from git worktree list
 - Working directory path
 
-**Read Server Configuration:**
-- Check if `<worktree>/apps/server/.env` exists
-- If exists, read and extract:
-  - `SERVER_PORT`
-  - `DB_PATH`
-- If doesn't exist, note as "Not configured"
-
-**Read Client Configuration:**
-- Check if `<worktree>/apps/client/.env` exists
-- If exists, read and extract:
-  - `VITE_PORT`
-  - `VITE_API_URL`
-  - `VITE_WS_URL`
-  - `VITE_MAX_EVENTS_TO_DISPLAY`
-- If doesn't exist, note as "Not configured"
-
 **Read Root Configuration:**
 - Check if `<worktree>/.env` exists
-- Note presence/absence (contains API keys, don't display values)
+- Note presence/absence (don't display sensitive values)
 
-### 3. Check Service Status
+### 3. Check Dependencies
 
-For each worktree with port configuration:
+For each worktree, check for common dependency indicators:
+- If package.json exists, check if `<worktree>/node_modules` exists
+- If go.mod exists, check if go modules are downloaded (`go list -m all` succeeds)
+- If requirements.txt exists, check if venv or virtualenv exists
+- If Gemfile exists, check if `<worktree>/vendor` or gems are installed
+- If Cargo.toml exists, check if `<worktree>/target` exists
+- Note if dependencies are installed or missing
 
-**Check Server Status:**
-- If SERVER_PORT identified, check: `lsof -i :<SERVER_PORT>`
-- Determine if process is running
-- Extract PID if running
-
-**Check Client Status:**
-- If VITE_PORT identified, check: `lsof -i :<VITE_PORT>`
-- Determine if process is running
-- Extract PID if running
-
-### 4. Check Dependencies
+### 4. Check Build Artifacts
 
 For each worktree:
-- Check if `<worktree>/apps/server/node_modules` exists
-- Check if `<worktree>/apps/client/node_modules` exists
-- Note if dependencies are installed or missing
+- If justfile exists, look for common build directories (build/, dist/, target/, bin/)
+- If Makefile exists, look for build artifacts based on common patterns
+- Check for language-specific build outputs:
+  - Go: build/, bin/, compiled binaries
+  - Node: dist/, build/
+  - Python: dist/, build/, *.egg-info
+  - Rust: target/
+  - Ruby: pkg/
+- Note if build artifacts exist
 
 ### 5. Calculate Statistics
 
 - Total number of worktrees
-- Number with services running
-- Number with services stopped
-- Total ports in use
-- Available port offsets (suggest next available)
+- Number with dependencies installed
+- Number with build artifacts present
 
 ### 6. Report
 
@@ -110,20 +94,15 @@ After gathering all information, provide a comprehensive report in the following
 
 📈 Summary:
    Total Worktrees: <count>
-   Running: <count> | Stopped: <count>
-   Next Available Port Offset: <offset>
+   With Dependencies: <count>
+   With Build Artifacts: <count>
 
 ═══════════════════════════════════════════════════════════════
 
 🌳 Main Repository (Default)
    📁 Location: <project-root>
    🌿 Branch: <current-branch>
-   🔌 Ports: 4000 (server), 5173 (client)
-   🎯 Status: <RUNNING|STOPPED>
-
-   Actions:
-   └─ Start: ./scripts/start-system.sh
-   └─ Stop: ./scripts/reset-system.sh
+   ⚙️  Config: <✓ .env exists | ❌ No .env>
 
 ───────────────────────────────────────────────────────────────
 
@@ -133,28 +112,19 @@ After gathering all information, provide a comprehensive report in the following
    📝 Commit: <commit-hash-short>
 
    ⚙️  Configuration:
-   ├─ Server Port: <SERVER_PORT>
-   ├─ Client Port: <VITE_PORT>
-   ├─ Database: <DB_PATH>
-   ├─ API URL: <VITE_API_URL>
-   └─ WebSocket: <VITE_WS_URL>
+   └─ Environment: <✓ .env exists | ❌ No .env>
 
    📦 Dependencies:
-   ├─ Server: <✓ Installed | ❌ Missing>
-   └─ Client: <✓ Installed | ❌ Missing>
+   └─ Status: <✓ Installed | ❌ Not installed | ℹ️  Not applicable>
+   └─ Type: <npm/go/pip/bundler/cargo/composer if detected>
 
-   🎯 Service Status:
-   ├─ Server: <🟢 RUNNING (PID: xxxx) | 🔴 STOPPED>
-   └─ Client: <🟢 RUNNING (PID: xxxx) | 🔴 STOPPED>
-
-   🌐 Access URLs (if running):
-   ├─ Dashboard: http://localhost:<VITE_PORT>
-   ├─ Server API: http://localhost:<SERVER_PORT>
-   └─ WebSocket: ws://localhost:<SERVER_PORT>/stream
+   🔨 Build Artifacts:
+   └─ Status: <✓ Found | ❌ Not found>
+   └─ Location: <path to build artifacts if found>
 
    Actions:
-   ├─ Start: cd trees/<branch-name> && SERVER_PORT=<port> CLIENT_PORT=<port> sh scripts/start-system.sh
-   ├─ Stop: SERVER_PORT=<port> CLIENT_PORT=<port> ./scripts/reset-system.sh
+   ├─ Navigate: cd trees/<branch-name>
+   ├─ Build: [show project-specific build command if justfile/Makefile exists]
    └─ Remove: /remove_worktree <branch-name>
 
 ───────────────────────────────────────────────────────────────
@@ -166,16 +136,13 @@ After gathering all information, provide a comprehensive report in the following
 💡 Quick Commands:
 
 Create new worktree:
-└─ /create_worktree <branch-name> [port-offset]
+└─ /create_worktree <branch-name>
 
 Remove worktree:
 └─ /remove_worktree <branch-name>
 
-Start a stopped worktree:
-└─ cd trees/<branch-name> && SERVER_PORT=<port> CLIENT_PORT=<port> sh scripts/start-system.sh &
-
-Stop a running worktree:
-└─ lsof -ti :<SERVER_PORT> | xargs kill -9 && lsof -ti :<CLIENT_PORT> | xargs kill -9
+Navigate to worktree:
+└─ cd trees/<branch-name>
 
 View this list again:
 └─ /list_worktrees
@@ -193,8 +160,6 @@ If no worktrees exist in trees/:
 🌳 Main Repository (Default)
    📁 Location: <project-root>
    🌿 Branch: <current-branch>
-   🔌 Ports: 4000 (server), 5173 (client)
-   🎯 Status: <RUNNING|STOPPED>
 
 ═══════════════════════════════════════════════════════════════
 
@@ -205,9 +170,9 @@ If no worktrees exist in trees/:
 
    This will:
    • Create isolated git worktree
-   • Configure unique ports (4010, 5183)
    • Install dependencies
-   • Start services automatically
+   • Build the project
+   • Set up environment configuration
 
 ═══════════════════════════════════════════════════════════════
 ```
@@ -217,23 +182,21 @@ If worktrees have configuration issues:
 ```
 ⚠️  Configuration Warnings:
 
-• trees/<branch-name>: Missing .env files
-  └─ Fix: Recreate with /create_worktree <branch-name>
+• trees/<branch-name>: Missing .env file
+  └─ Fix: Copy from main repo or recreate with /create_worktree <branch-name>
 
 • trees/<branch-name>: Dependencies not installed
-  └─ Fix: cd trees/<branch-name>/apps/server && bun install
-  └─ Fix: cd trees/<branch-name>/apps/client && bun install
+  └─ Fix: cd trees/<branch-name> && [run appropriate dependency install command]
 
-• trees/<branch-name>: Services running but ports mismatch
-  └─ Fix: Stop services and update .env files
+• trees/<branch-name>: Build artifacts not found
+  └─ Fix: cd trees/<branch-name> && [run appropriate build command]
 ```
 
 ## Notes
 
-- Main repository is always shown first (uses default ports)
+- Main repository is always shown first
 - Worktrees are sorted alphabetically by branch name
-- Service status is checked in real-time
-- Port conflicts are detected and highlighted
+- Dependency and build status is checked at the time of listing
 - Orphaned worktrees (in git but not in trees/) are noted
-- PIDs are shown for running processes for easy termination
 - All commands are copy-paste ready
+- Environment files are detected but values are not displayed (may contain secrets)

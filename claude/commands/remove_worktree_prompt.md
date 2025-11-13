@@ -1,13 +1,13 @@
 ---
 model: claude-sonnet-4-5-20250929
-description: Remove a git worktree, delete its branch, and stop its running services
+description: Remove a git worktree and delete its branch
 argument-hint: <branch-name>
 allowed-tools: Bash, Read, Glob, Grep
 ---
 
 # Purpose
 
-Remove an existing git worktree from the `trees/` directory AND delete the associated git branch. This includes stopping any running services on its ports, cleaning up processes, removing the worktree directory, and permanently deleting the branch. This ensures complete cleanup without orphaned processes or files.
+Remove an existing git worktree from the `trees/` directory AND delete the associated git branch. This includes removing the worktree directory and permanently deleting the branch. This ensures complete cleanup without orphaned files.
 
 ## Variables
 
@@ -20,12 +20,10 @@ WORKTREE_DIR: trees/<BRANCH_NAME>
 ## Instructions
 
 - This command safely removes a worktree and all associated resources
-- Stops any running server and client processes for the worktree
 - Removes the git worktree using git's built-in removal command
 - Deletes the git branch associated with the worktree (PERMANENT)
 - Validates that the worktree and branch were completely removed
 - Provides clear feedback about what was removed and any issues encountered
-- If services can't be stopped gracefully, force kills them
 - Handles cases where worktree is already partially removed
 - WARNING: Both worktree and branch deletion are permanent and cannot be undone
 
@@ -46,33 +44,15 @@ WORKTREE_DIR: trees/<BRANCH_NAME>
   - If directory exists, note it for manual cleanup
   - If neither exists, error with message that worktree not found
 
-### 3. Identify Port Configuration
+### 3. Check for Running Processes (optional)
 
-- Check if WORKTREE_DIR/apps/server/.env exists
-- If exists, read SERVER_PORT from the file
-- Check if WORKTREE_DIR/apps/client/.env exists
-- If exists, read VITE_PORT from the file
-- If env files don't exist, try to infer ports from worktree count:
-  - Count existing worktrees in PROJECT_CWD/trees/
-  - Estimate ports based on typical offset pattern
-  - Note: This is best-effort if env files are missing
-
-### 4. Stop Running Services
-
-- If SERVER_PORT identified, stop processes on that port:
-  - Find PIDs: `lsof -ti :<SERVER_PORT>`
-  - Kill processes: `kill -9 <PIDs>`
-  - Verify processes stopped
-- If VITE_PORT identified, stop processes on that port:
-  - Find PIDs: `lsof -ti :<VITE_PORT>`
-  - Kill processes: `kill -9 <PIDs>`
-  - Verify processes stopped
-- Check for any remaining processes in WORKTREE_DIR:
+- Check for any processes running from WORKTREE_DIR:
   - `ps aux | grep "trees/<BRANCH_NAME>"`
-  - Kill any orphaned processes
-- Wait 2 seconds for processes to fully terminate
+  - Note any found processes (don't automatically kill)
+  - Warn user if processes are found
+- This is informational only - user should manually stop any running processes
 
-### 5. Remove Git Worktree
+### 4. Remove Git Worktree
 
 - Remove worktree using git: `git worktree remove trees/<BRANCH_NAME>`
 - If removal fails with error (e.g., worktree has uncommitted changes):
