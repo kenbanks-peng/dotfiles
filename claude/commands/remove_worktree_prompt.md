@@ -61,17 +61,15 @@ WORKTREE_DIR: trees/<BRANCH_NAME>
 - Verify worktree was removed: `git worktree list | grep trees/<BRANCH_NAME>`
 - Should return nothing if successfully removed
 
-### 6. Clean Up Orphaned Files
+### 5. Clean Up Orphaned Files
 
 - Check if WORKTREE_DIR still exists after git worktree remove
 - If directory still exists (shouldn't, but possible with force):
   - Note this in warnings
   - Do NOT automatically delete with rm -rf (security)
   - Provide manual cleanup instructions
-- Check for any SQLite WAL files in the removed worktree location
-- Check for any lingering lock files
 
-### 7. Delete Git Branch
+### 6. Delete Git Branch
 
 - After worktree is successfully removed, delete the git branch:
   - First try safe delete: `git branch -d <BRANCH_NAME>`
@@ -81,15 +79,14 @@ WORKTREE_DIR: trees/<BRANCH_NAME>
 - Should return nothing if successfully deleted
 - Important: This is destructive and permanent
 
-### 8. Validation
+### 7. Validation
 
 - Confirm worktree no longer appears in: `git worktree list`
 - Confirm directory no longer exists at WORKTREE_DIR
 - Confirm branch no longer exists: `git branch --list <BRANCH_NAME>`
-- Confirm no processes running on identified ports
 - If any validation fails, include in warnings section
 
-### 9. Report
+### 8. Report
 
 Follow the Report section format below to provide comprehensive removal information.
 
@@ -105,16 +102,10 @@ After successful worktree removal, provide a detailed report in the following fo
    Branch: <BRANCH_NAME>
    Status: ❌ REMOVED
 
-🛑 Services Stopped:
-   ✓ Server on port <SERVER_PORT> (if identified)
-   ✓ Client on port <VITE_PORT> (if identified)
-   ✓ All orphaned processes terminated
-
 🗑️  Cleanup:
    ✓ Git worktree removed
    ✓ Git branch deleted
    ✓ Directory removed from trees/
-   ✓ No lingering processes
 
 📝 Important Notes:
    • Both the worktree AND branch '<BRANCH_NAME>' have been deleted
@@ -126,7 +117,6 @@ After successful worktree removal, provide a detailed report in the following fo
    ✓ Worktree not in git worktree list
    ✓ Branch not in git branch list
    ✓ Directory trees/<BRANCH_NAME> removed
-   ✓ Ports <SERVER_PORT>, <VITE_PORT> are free
 ```
 
 If any issues occurred during removal, include a warnings section:
@@ -135,8 +125,7 @@ If any issues occurred during removal, include a warnings section:
 ⚠️  Warnings / Issues:
 - Used --force flag to remove worktree (had uncommitted changes)
 - Used -D flag to force delete branch (had unmerged changes)
-- Port <PORT> could not be identified (no .env file found)
-- Processes manually killed: <PID1>, <PID2>
+- Found running processes in worktree (user should stop manually)
 ```
 
 If worktree was already partially removed or not found:
@@ -159,6 +148,4 @@ If orphaned directory exists after removal:
 - This should not happen normally
 - To manually remove, run from PROJECT_CWD:
    rm -rf trees/<BRANCH_NAME>
-- Or use the reset script with port variables:
-   SERVER_PORT=<PORT> CLIENT_PORT=<PORT> ./scripts/reset-system.sh
 ```
