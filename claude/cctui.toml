@@ -46,6 +46,11 @@ name = "Skills"
 enabled = true
 order = 6
 
+[cctui.service.permission]
+name = "Permissions"
+enabled = true
+order = 7
+
 # ============================================================================
 #                              MCP Servers
 # ============================================================================
@@ -189,14 +194,6 @@ fi
 rm -rf openspec .claude/commands/openspec* AGENTS.md
 """
 
-[tool.permissions]
-name = "Permissions"
-description = "Enable all tool permissions"
-installer = "merge"
-config-source-file = "permissions/permissions.json"
-target-file = ".claude/settings.local.json"
-detect-path = ".claude/settings.local.json"
-
 # ============================================================================
 # Agents
 # ============================================================================
@@ -226,3 +223,11 @@ target-dir = ".claude/output-styles"
 [skill.config.claude]
 config-source-dir = "skills"
 target-dir = ".claude/skills"
+
+
+# ============================================================================
+# Permissions
+# ============================================================================
+[permission.config.claude]
+config-source-file = "permissions/permissions.json"
+target-file = ".claude/settings.local.json"
