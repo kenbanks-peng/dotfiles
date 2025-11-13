@@ -16,28 +16,28 @@ enabled = true
 # Service Definitions
 # ============================================================================
 
+[cctui.service.permission]
+name = "Permissions"
+enabled = true
+order = 1
+
 [cctui.service.mcp]
 name = "MCP"
 enabled = true
-order = 1
+order = 2
 
 [cctui.service.tool]
 name = "Tools"
 enabled = true
-order = 2
+order = 3
 
 [cctui.service.agent]
 name = "Agents"
 enabled = true
-order = 3
+order = 4
 
 [cctui.service.command]
 name = "Commands"
-enabled = true
-order = 4
-
-[cctui.service.output]
-name = "Output Styles"
 enabled = true
 order = 5
 
@@ -46,10 +46,11 @@ name = "Skills"
 enabled = true
 order = 6
 
-[cctui.service.permission]
-name = "Permissions"
+[cctui.service.output]
+name = "Output Styles"
 enabled = true
 order = 7
+
 
 # ============================================================================
 #                              MCP Servers
