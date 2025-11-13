@@ -51,6 +51,11 @@ name = "Output Styles"
 enabled = true
 order = 7
 
+[cctui.service.plugin]
+name = "Plugins"
+enabled = true
+order = 8
+
 
 # ============================================================================
 #                              MCP Servers
@@ -138,3 +143,16 @@ target-dir = ".claude/skills"
 [permission.config.claude]
 config-source-file = "permissions/permissions.json"
 target-file = ".claude/settings.local.json"
+
+
+# ============================================================================
+# Plugins
+# ============================================================================
+[plugin.config.claude]
+config-source-dir = "plugins"                    # Global: ~/.config/claude/plugins/
+project-plugin-dir = ".claude-plugins"           # Project-local plugins
+enable-external-store = false                    # Future: plugin registry
+external-store-url = ""                          # Future: marketplace URL
+conflict-resolution = "warn"                     # warn, prefer-global, prefer-plugin, error
+show-plugin-resources-in-services = true         # Show plugin resources in service views
+namespace-display = "full"                       # full, short, hidden
