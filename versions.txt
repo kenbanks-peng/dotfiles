@@ -3,7 +3,7 @@ BREW CASKS
 aerospace 0.19.2-Beta
 affinity 3.0.1,3808
 anybar 0.2.3
-arc 1.120.0,70500
+arc 1.121.0,70772
 athas-editor 0.2.1
 atuin-desktop 0.1.11
 audacity 3.7.5
@@ -11,9 +11,9 @@ boltai 1.36.5
 boop 1.4.0
 claude-code 2.0.37
 cleanshot 4.8.4
-codex 0.57.0
+codex 0.58.0
 container 0.6.0
-cursor 2.0.69,63fcac100bd5d5749f2a98aa47d65f6eca61db39
+cursor 2.0.77,ba90f2f88e4911312761abab9492c42442117cfe
 daisydisk 4.32
 deepchat 0.4.5
 espanso 2.3.0
@@ -27,17 +27,17 @@ font-symbols-only-nerd-font 3.4.0
 font-tex-gyre-termes 2.004
 ghostty 1.2.3
 git-credential-manager 2.6.1
-google-chrome 142.0.7444.60
+google-chrome 142.0.7444.162
 google-drive 116.0.6
 grandperspective 3.6
-hoppscotch 25.10.0-0
+hoppscotch 25.10.1-0
 karabiner-elements 15.7.0
 keyclu 0.30.2
 languagetool-desktop 2.9.1
 linear-linear 1.28.6,251002av7g3go28
 microsoft-auto-update 4.81.25101344
-microsoft-outlook 16.102.25110228
-obsidian 1.9.14
+microsoft-outlook 16.103.25110922
+obsidian 1.10.3
 omnifocus 4.8.6
 onyx 4.9.2
 opcode 0.2.0
@@ -53,12 +53,12 @@ symboliclinker 2.2
 syntax-highlight 2.1.26
 transmission 4.0.6
 typeface 4.2.1,4763
-visual-studio-code 1.105.1
+visual-studio-code 1.106.0
 vlc 3.0.21
-warp 0.2025.11.05.08.12.stable_00
+warp 0.2025.11.12.08.12.stable_02
 wezterm 20240203-110809,5046fc22
 yaak 2025.8.2
-zed 0.211.6
+zed 0.212.5
 zoom 6.6.6.67409
 
 BREW FORMULAS
@@ -83,7 +83,7 @@ aws-c-s3 0.10.1
 aws-c-sdkutils 0.2.4
 aws-checksums 0.2.7
 aws-crt-cpp 0.35.2
-aws-sdk-cpp 1.11.675
+aws-sdk-cpp 1.11.690
 bandwhich 0.23.1
 bash 5.3.3
 bat 0.26.0
@@ -97,7 +97,7 @@ ca-certificates 2025-11-04
 caddy 2.10.2
 cairo 1.18.4
 cbonsai 1.4.2
-certifi 2025.10.5_1
+certifi 2025.11.12
 cffi 2.0.0_1
 cheat 4.4.2
 choose-rust 1.3.7
@@ -112,13 +112,14 @@ curlie 1.8.2
 d2 0.7.1
 dav1d 1.5.2
 dblab 0.34.2
+deno 2.5.6
 direnv 2.37.1
 doppler 3.75.1
 dotenvx 1.51.1
 dua-cli 2.32.2
 duf 0.9.1
 dust 1.2.3
-dvc 3.63.0
+dvc 3.64.0
 espeak-ng 1.52.0
 fastfetch 2.55.0
 fd 10.3.0
@@ -130,14 +131,14 @@ fontconfig 2.17.1
 freetype 2.14.1_1
 frei0r 2.5.0
 fribidi 1.0.16
-fx 39.1.0
+fx 39.2.0
 fzf 0.66.1
 gawk 5.3.1
 gcc 15.2.0
 gd 2.3.3_6
 gdk-pixbuf 2.44.4
 gettext 0.26_1
-gh 2.83.0
+gh 2.83.1
 giflib 5.2.2
 git 2.51.2
 git-bug 0.10.1
@@ -153,7 +154,7 @@ gnu-getopt 2.41.2
 gnu-sed 4.9
 gnupg 2.4.8
 gnutls 3.8.10
-go-task 3.45.4
+go-task 3.45.5
 gobang 0.1.0-alpha.5
 gpg-tui 0.11.1_1
 gpgme 2.0.1
@@ -161,17 +162,18 @@ gpgmepp 2.0.0
 gping 1.20.1
 graphite2 1.3.14
 graphviz 14.0.2
-grex 1.4.5
+grex 1.4.6
 grpc 1.76.0
 gts 0.7.6_3
-harfbuzz 12.2.0
+harfbuzz 12.2.0_1
 hexyl 0.16.0
 highway 1.3.0
 htmlq 0.4.0
 hub 2.14.2
 hurl 7.0.0_1
 hyperfine 1.19.0
-icu4c@77 77.1
+icu4c@77 77.1_1
+icu4c@78 78.1
 imagemagick 7.1.2-8_1
 imath 3.2.2
 imgcat 1.0.22
@@ -187,9 +189,9 @@ jq 1.8.1
 jqp 0.8.0
 jrnl 4.2.1
 json-c 0.18
-just 1.43.0
+just 1.43.1
 lame 3.100
-lazydocker 0.24.1
+lazydocker 0.24.2
 lazygit 0.56.0
 lazyjj 0.6.1
 lazyjournal 0.8.1
@@ -286,17 +288,17 @@ neovim 0.11.5
 netpbm 11.02.19_1
 nettle 3.10.2
 nmap 7.98
-node 25.1.0_1
+node 25.2.0
 npth 1.8
 nspr 4.38.2
 nss 3.117
 numpy 2.3.4
 nushell 0.108.0
-oh-my-posh 27.5.2
+oh-my-posh 27.6.0
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 1.0.55
+opencode 1.0.65
 opencore-amr 0.1.6
 openexr 3.4.3
 openjdk 25.0.1
@@ -327,7 +329,7 @@ posting 2.9.2
 procs 0.14.10
 protobuf 33.0
 pstree 2.40
-pv 1.10.0
+pv 1.10.1
 pycparser 2.23_1
 pydantic 2.41.4
 pygit2 1.19.0
@@ -352,7 +354,7 @@ sevenzip 25.01
 shaderc 2025.4
 shared-mime-info 2.4_1
 shellcheck 0.11.0
-simdjson 4.2.1
+simdjson 4.2.2
 sk 0.20.5
 sketchybar 2.23.0
 snappy 1.2.2
@@ -373,9 +375,9 @@ svt-av1 3.1.2
 syncthing 2.0.11
 tailspin 5.5.0
 tdd-guard 1.1.0
-tealdeer 1.8.0
+tealdeer 1.8.1
 terminal-notifier 2.0.0
-tesseract 5.5.1
+tesseract 5.5.1_1
 theora 1.2.0
 thrift 0.22.0
 tmux 3.5a
@@ -388,7 +390,7 @@ typst 0.14.0
 uchardet 0.0.8
 unbound 1.24.1
 unibilium 2.1.2
-utf8proc 2.11.0
+utf8proc 2.11.1
 uvwasi 0.0.23
 vapoursynth 72_1
 vulkan-headers 1.4.328.1
@@ -407,7 +409,7 @@ xz 5.8.1
 yabai 7.1.16
 yazi 25.5.31
 yq 4.48.1
-yt-dlp 2025.10.22_1
+yt-dlp 2025.11.12
 z3 4.15.4
 zellij 0.43.1
 zeromq 4.3.5_2
@@ -429,22 +431,22 @@ go:github.com/nizos/tdd-guard/reporters/go/cmd/tdd-guard-go  v0.2.1            ~
 go:github.com/wailsapp/wails/v2/cmd/wails                    2.11.0            ~/.config/mise/mise.toml  latest
 go:golang.org/x/tools/gopls                                  0.20.0            ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck                        0.7.0-0.dev       ~/.config/mise/mise.toml  latest
-node                                                         25.1.0            ~/.config/mise/mise.toml  latest
-npm:@fission-ai/openspec                                     0.14.0            ~/.config/mise/mise.toml  latest
-npm:@opentui/core                                            0.1.40            ~/.config/mise/mise.toml  latest
-npm:@opentui/react                                           0.1.40            ~/.config/mise/mise.toml  latest
+node                                                         25.2.0            ~/.config/mise/mise.toml  latest
+npm:@fission-ai/openspec                                     0.15.0            ~/.config/mise/mise.toml  latest
+npm:@opentui/core                                            0.1.44            ~/.config/mise/mise.toml  latest
+npm:@opentui/react                                           0.1.44            ~/.config/mise/mise.toml  latest
 npm:github-markdown-css                                      5.8.1             ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                                                5.2.4             ~/.config/mise/mise.toml  latest
 npm:nuekit                                                   2.0.0-beta.2      ~/.config/mise/mise.toml  latest
 npm:vite                                                     7.2.2             ~/.config/mise/mise.toml  latest
-pipx:SuperClaude                                             4.1.6             ~/.config/mise/mise.toml  latest
+pipx:SuperClaude                                             4.1.9             ~/.config/mise/mise.toml  latest
 pipx:meson                                                   1.9.1             ~/.config/mise/mise.toml  latest
 pipx:ninja                                                   1.13.0            ~/.config/mise/mise.toml  latest
-pipx:ruff                                                    0.14.4            ~/.config/mise/mise.toml  latest
+pipx:ruff                                                    0.14.5            ~/.config/mise/mise.toml  latest
 pipx:seagoat                                                 0.54.17           ~/.config/mise/mise.toml  latest
 ruby                                                         3.4.7             ~/.config/mise/mise.toml  latest
 rust                                                         1.91.1 (symlink)  ~/.config/mise/mise.toml  latest
-uv                                                           0.9.8             ~/.config/mise/mise.toml  latest
+uv                                                           0.9.9             ~/.config/mise/mise.toml  latest
 
 RUSTUP/CARGO
 ------------
@@ -453,11 +455,12 @@ rustup home:  /Users/kenbanks/Software/rustup
 
 installed toolchains
 --------------------
-1.91.1-aarch64-apple-darwin
+1.91.0-aarch64-apple-darwin
+1.91.1-aarch64-apple-darwin (active)
 
 active toolchain
 ----------------
-name: 1.91.0-aarch64-apple-darwin
+name: 1.91.1-aarch64-apple-darwin
 active because: overridden by environment variable RUSTUP_TOOLCHAIN
 installed targets:
   aarch64-apple-darwin
