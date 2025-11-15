@@ -1,10 +1,10 @@
 {
   "carapace": {
-    "Description": "#74c7ec",
-    "FlagArg": "#f9e2af",
-    "FlagNoArg": "#a6e3a1",
-    "FlagOptArg": "#fab387",
-    "Highlight": "bold #1e1e2e underlined",
+    "Description": "#89b4fa",
+    "FlagArg": "#89b4fa",
+    "FlagNoArg": "#89b4fa",
+    "FlagOptArg": "#89b4fa",
+    "Highlight": "bold #89b4fa underlined",
     "Value": "#89b4fa"
   }
 }
