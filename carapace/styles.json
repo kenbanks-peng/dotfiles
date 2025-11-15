@@ -1,10 +1,16 @@
 {
   "carapace": {
-    "Description": "#89b4fa",
+    "Argument": "#a6e3a1",
+    "Command": "#a6e3a1",
+    "Description": "#f38ba8",
+    "Flag": "#a6e3a1",
     "FlagArg": "#a6e3a1",
     "FlagNoArg": "#a6e3a1",
     "FlagOptArg": "#a6e3a1",
-    "Highlight": "bold #89b4fa underlined",
+    "Highlight": "#a6e3a1",
+    "KeyValue": "#a6e3a1",
+    "Positional": "#a6e3a1",
+    "Subcommand": "#a6e3a1",
     "Value": "#a6e3a1"
   }
 }
