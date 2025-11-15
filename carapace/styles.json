@@ -1,0 +1,10 @@
+{
+  "carapace": {
+    "Description": "#eba0ac",
+    "FlagArg": "#f9e2af",
+    "FlagNoArg": "#a6e3a1",
+    "FlagOptArg": "#fab387",
+    "Highlight": "bold #cba6f7 underlined",
+    "Value": "#89b4fa"
+  }
+}
