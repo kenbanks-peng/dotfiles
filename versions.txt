@@ -9,7 +9,7 @@ atuin-desktop 0.1.11
 audacity 3.7.5
 boltai 1.36.5
 boop 1.4.0
-claude-code 2.0.37
+claude-code 2.0.42
 cleanshot 4.8.4
 codex 0.58.0
 container 0.6.0
@@ -58,7 +58,7 @@ vlc 3.0.21
 warp 0.2025.11.12.08.12.stable_02
 wezterm 20240203-110809,5046fc22
 yaak 2025.8.2
-zed 0.212.5
+zed 0.212.6
 zoom 6.6.6.67409
 
 BREW FORMULAS
@@ -66,7 +66,7 @@ BREW FORMULAS
 abseil 20250814.1
 age 1.2.1
 aom 3.13.1
-apache-arrow 21.0.0_9
+apache-arrow 21.0.0_10
 aribb24 1.0.4
 asciinema 3.0.1
 ast-grep 0.39.9
@@ -96,6 +96,7 @@ c-ares 1.34.5
 ca-certificates 2025-11-04
 caddy 2.10.2
 cairo 1.18.4
+carapace 1.5.4
 cbonsai 1.4.2
 certifi 2025.11.12
 cffi 2.0.0_1
@@ -121,7 +122,7 @@ duf 0.9.1
 dust 1.2.3
 dvc 3.64.0
 espeak-ng 1.52.0
-fastfetch 2.55.0
+fastfetch 2.55.1
 fd 10.3.0
 ffmpeg 8.0_2
 figlet 2.2.5
@@ -161,9 +162,9 @@ gpgme 2.0.1
 gpgmepp 2.0.0
 gping 1.20.1
 graphite2 1.3.14
-graphviz 14.0.2
+graphviz 14.0.4
 grex 1.4.6
-grpc 1.76.0
+grpc 1.76.0_1
 gts 0.7.6_3
 harfbuzz 12.2.0_1
 hexyl 0.16.0
@@ -261,7 +262,7 @@ llvm 21.1.5
 lolcat 100.0.1
 lpeg 1.1.0
 lua 5.4.8
-luajit 2.1.1762795099
+luajit 2.1.1763148144
 luarocks 3.12.2
 lunchy-go 0.2.1
 luv 1.51.0-1
@@ -327,7 +328,7 @@ poppler 25.11.0
 portal 1.2.3
 posting 2.9.2
 procs 0.14.10
-protobuf 33.0
+protobuf 33.1
 pstree 2.40
 pv 1.10.1
 pycparser 2.23_1
@@ -341,7 +342,7 @@ rav1e 0.8.1
 rclone 1.71.2
 re2 20251105
 readline 8.3.1
-repomix 1.9.0
+repomix 1.9.1
 resvg 0.45.1
 rich-cli 1.8.1
 ripgrep 15.1.0
@@ -393,6 +394,7 @@ unibilium 2.1.2
 utf8proc 2.11.1
 uvwasi 0.0.23
 vapoursynth 72_1
+vivid 0.10.1
 vulkan-headers 1.4.328.1
 vulkan-loader 1.4.328.1
 wallpaper 2.3.3
@@ -408,8 +410,9 @@ xvid 1.3.7
 xz 5.8.1
 yabai 7.1.16
 yazi 25.5.31
-yq 4.48.1
+yq 4.48.2
 yt-dlp 2025.11.12
+yyjson 0.12.0
 z3 4.15.4
 zellij 0.43.1
 zeromq 4.3.5_2
@@ -469,5 +472,5 @@ UV TOOLS
 --------
 markitdown v0.1.3
 - markitdown
-specify-cli v0.0.20
+specify-cli v0.0.22
 - specify
