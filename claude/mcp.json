@@ -1,92 +1,124 @@
 {
-  "markitdown": {
-    "type": "stdio",
-    "command": "uvx",
-    "args": ["--python", "3.13", "--prerelease", "allow", "markitdown-mcp"]
-  },
-  "context7": {
-    "type": "stdio",
-    "command": "bunx",
-    "args": ["@upstash/context7-mcp"]
-  },
-  "github": {
-    "type": "sse",
-    "url": "https://api.githubcopilot.com/mcp",
-    "headers": {
-      "Authorization": "Bearer $GITHUB_PERSONAL_ACCESS_TOKEN"
+  "mcpServers": {
+    "markitdown": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "--python",
+        "3.13",
+        "--prerelease",
+        "allow",
+        "markitdown-mcp"
+      ]
+    },
+    "context7": {
+      "type": "stdio",
+      "command": "bunx",
+      "args": [
+        "@upstash/context7-mcp"
+      ]
+    },
+    "github": {
+      "type": "sse",
+      "url": "https://api.githubcopilot.com/mcp",
+      "headers": {
+        "Authorization": "Bearer $GITHUB_PERSONAL_ACCESS_TOKEN"
+      }
+    },
+    "linear": {
+      "type": "stdio",
+      "command": "bunx",
+      "args": [
+        "mcp-remote",
+        "https://mcp.linear.app/sse"
+      ]
+    },
+    "n8n-mcp": {
+      "command": "bunx",
+      "args": [
+        "n8n-mcp"
+      ],
+      "env": {
+        "MCP_MODE": "stdio",
+        "LOG_LEVEL": "error",
+        "DISABLE_CONSOLE_OUTPUT": "true"
+      }
+    },
+    "Obsidian": {
+      "command": "bunx",
+      "args": [
+        "mcp-obsidian",
+        "$OBSIDIAN_VAULT"
+      ]
+    },
+    "playwright": {
+      "command": "bunx",
+      "args": [
+        "@playwright/mcp@latest"
+      ],
+      "env": {
+        "OPENAI_API_KEY": "$OPENAI_API_KEY"
+      }
+    },
+    "lint": {
+      "type": "local",
+      "command": "$BINPATH/mcp_biome"
+    },
+    "chrome-devtools": {
+      "type": "local",
+      "command": "bunx",
+      "args": [
+        "chrome-devtools-mcp@latest"
+      ]
+    },
+    "mermaid": {
+      "type": "local",
+      "command": "bunx",
+      "args": [
+        "mcp-mermaid"
+      ]
+    },
+    "serena": {
+      "type": "local",
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/oraios/serena",
+        "serena",
+        "start-mcp-server",
+        "--context",
+        "ide-assistant",
+        "--project",
+        "$PWD"
+      ]
+    },
+    "seagoat": {
+      "type": "local",
+      "command": "$BINPATH/mcp_seagoat"
+    },
+    "mcp-server-chart": {
+      "command": "bunx",
+      "args": [
+        "@antv/mcp-server-chart"
+      ]
+    },
+    "sequential-thinking": {
+      "command": "bunx",
+      "args": [
+        "@modelcontextprotocol/server-sequential-thinking"
+      ]
+    },
+    "memory": {
+      "command": "bunx",
+      "args": [
+        "@modelcontextprotocol/server-memory"
+      ]
+    },
+    "filesystem": {
+      "command": "bunx",
+      "args": [
+        "@modelcontextprotocol/server-filesystem"
+      ]
     }
-  },
-  "linear": {
-    "type": "stdio",
-    "command": "bunx",
-    "args": ["mcp-remote", "https://mcp.linear.app/sse"]
-  },
-  "n8n-mcp": {
-    "command": "bunx",
-    "args": ["n8n-mcp"],
-    "env": {
-      "MCP_MODE": "stdio",
-      "LOG_LEVEL": "error",
-      "DISABLE_CONSOLE_OUTPUT": "true"
-    }
-  },
-  "Obsidian": {
-    "command": "bunx",
-    "args": ["mcp-obsidian", "$OBSIDIAN_VAULT"]
-  },
-  "playwright": {
-    "command": "bunx",
-    "args": ["@playwright/mcp@latest"],
-    "env": {
-      "OPENAI_API_KEY": "$OPENAI_API_KEY"
-    }
-  },
-  "lint": {
-    "type": "local",
-    "command": "$BINPATH/mcp_biome"
-  },
-  "chrome-devtools": {
-    "type": "local",
-    "command": "bunx",
-    "args": ["chrome-devtools-mcp@latest"]
-  },
-  "mermaid": {
-    "type": "local",
-    "command": "bunx",
-    "args": ["mcp-mermaid"]
-  },
-  "serena": {
-    "type": "local",
-    "command": "uvx",
-    "args": [
-      "--from",
-      "git+https://github.com/oraios/serena",
-      "serena",
-      "start-mcp-server",
-      "--context",
-      "ide-assistant",
-      "--project",
-      "$PWD"
-    ]
-  },
-  "seagoat": {
-    "type": "local",
-    "command": "$BINPATH/mcp_seagoat"
-  },
-  "mcp-server-chart": {
-    "command": "bunx",
-    "args": ["@antv/mcp-server-chart"]
-  },
-  "sequential-thinking": {
-    "command": "bunx",
-    "args": ["@modelcontextprotocol/server-sequential-thinking"]
-  },
-  "memory": {
-    "command": "bunx",
-    "args": ["@modelcontextprotocol/server-memory"]
-  },
-  "filesystem": {
-    "command": "bunx",
-    "args": ["@modelcontextprotocol/server-filesystem"]
   }
 }
