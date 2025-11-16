@@ -69,7 +69,7 @@ aom 3.13.1
 apache-arrow 21.0.0_10
 aribb24 1.0.4
 asciinema 3.0.1
-ast-grep 0.39.9
+ast-grep 0.40.0
 autoconf 2.72
 aws-c-auth 0.9.1
 aws-c-cal 0.9.10
@@ -133,7 +133,7 @@ freetype 2.14.1_1
 frei0r 2.5.0
 fribidi 1.0.16
 fx 39.2.0
-fzf 0.66.1
+fzf 0.67.0
 gawk 5.3.1
 gcc 15.2.0
 gd 2.3.3_6
@@ -299,7 +299,7 @@ oh-my-posh 27.6.0
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 1.0.65
+opencode 1.0.67
 opencore-amr 0.1.6
 openexr 3.4.3
 openjdk 25.0.1
