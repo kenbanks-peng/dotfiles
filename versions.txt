@@ -299,12 +299,12 @@ oh-my-posh 27.6.0
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 1.0.67
+opencode 1.0.68
 opencore-amr 0.1.6
 openexr 3.4.3
 openjdk 25.0.1
 openjpeg 2.5.4
-openjph 0.25.2
+openjph 0.25.3
 openssl@3 3.6.0
 opus 1.5.2
 opusfile 0.12_1
@@ -436,8 +436,8 @@ go:golang.org/x/tools/gopls                                  0.20.0            ~
 go:honnef.co/go/tools/cmd/staticcheck                        0.7.0-0.dev       ~/.config/mise/mise.toml  latest
 node                                                         25.2.0            ~/.config/mise/mise.toml  latest
 npm:@fission-ai/openspec                                     0.15.0            ~/.config/mise/mise.toml  latest
-npm:@opentui/core                                            0.1.44            ~/.config/mise/mise.toml  latest
-npm:@opentui/react                                           0.1.44            ~/.config/mise/mise.toml  latest
+npm:@opentui/core                                            0.1.45            ~/.config/mise/mise.toml  latest
+npm:@opentui/react                                           0.1.45            ~/.config/mise/mise.toml  latest
 npm:github-markdown-css                                      5.8.1             ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                                                5.2.4             ~/.config/mise/mise.toml  latest
 npm:nuekit                                                   2.0.0-beta.2      ~/.config/mise/mise.toml  latest
