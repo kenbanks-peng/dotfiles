@@ -26,6 +26,7 @@ rust = "latest"
 "go:github.com/h0rv/d2-mcp" = "latest"
 "npm:@opentui/core" = "latest"
 "npm:@opentui/react" = "latest"
+"npm:claude-pdd-cli" = "latest"
 
 [settings]
 
