@@ -9,7 +9,7 @@ atuin-desktop 0.1.11
 audacity 3.7.5
 boltai 1.36.5
 boop 1.4.0
-claude-code 2.0.44
+claude-code 2.0.45
 cleanshot 4.8.4
 codex 0.58.0
 container 0.6.0
@@ -299,7 +299,7 @@ oh-my-posh 27.6.0
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 1.0.72
+opencode 1.0.74
 opencore-amr 0.1.6
 openexr 3.4.3
 openjdk 25.0.1
@@ -438,6 +438,7 @@ node                                                         25.2.1            ~
 npm:@fission-ai/openspec                                     0.15.0            ~/.config/mise/mise.toml  latest
 npm:@opentui/core                                            0.1.46            ~/.config/mise/mise.toml  latest
 npm:@opentui/react                                           0.1.46            ~/.config/mise/mise.toml  latest
+npm:claude-pdd-cli                                           1.0.5             ~/.config/mise/mise.toml  latest
 npm:github-markdown-css                                      5.8.1             ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                                                5.2.4             ~/.config/mise/mise.toml  latest
 npm:nuekit                                                   2.0.0-beta.2      ~/.config/mise/mise.toml  latest
