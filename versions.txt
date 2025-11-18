@@ -9,7 +9,7 @@ atuin-desktop 0.1.11
 audacity 3.7.5
 boltai 1.36.5
 boop 1.4.0
-claude-code 2.0.42
+claude-code 2.0.44
 cleanshot 4.8.4
 codex 0.58.0
 container 0.6.0
@@ -27,7 +27,7 @@ font-symbols-only-nerd-font 3.4.0
 font-tex-gyre-termes 2.004
 ghostty 1.2.3
 git-credential-manager 2.6.1
-google-chrome 142.0.7444.162
+google-chrome 142.0.7444.176
 google-drive 117.0.0
 grandperspective 3.6
 hoppscotch 25.10.1-0
@@ -53,7 +53,7 @@ symboliclinker 2.2
 syntax-highlight 2.1.26
 transmission 4.0.6
 typeface 4.2.1,4763
-visual-studio-code 1.106.0
+visual-studio-code 1.106.1
 vlc 3.0.21
 warp 0.2025.11.12.08.12.stable_02
 wezterm 20240203-110809,5046fc22
@@ -88,7 +88,7 @@ bandwhich 0.23.1
 bash 5.3.3
 bat 0.26.0
 bat-extras 2024.08.24
-biome 2.3.5
+biome 2.3.6
 borders 1.8.4
 brotli 1.2.0
 btop 1.4.5
@@ -96,7 +96,7 @@ c-ares 1.34.5
 ca-certificates 2025-11-04
 caddy 2.10.2
 cairo 1.18.4
-carapace 1.5.4
+carapace 1.5.5
 cbonsai 1.4.2
 certifi 2025.11.12
 cffi 2.0.0_1
@@ -141,7 +141,7 @@ gdk-pixbuf 2.44.4
 gettext 0.26_1
 gh 2.83.1
 giflib 5.2.2
-git 2.51.2
+git 2.52.0
 git-bug 0.10.1
 git-delta 0.18.2_3
 git-filter-repo 2.47.0
@@ -172,7 +172,7 @@ highway 1.3.0
 htmlq 0.4.0
 hub 2.14.2
 hurl 7.0.0_1
-hyperfine 1.19.0
+hyperfine 1.20.0
 icu4c@77 77.1_1
 icu4c@78 78.1
 imagemagick 7.1.2-8_1
@@ -262,7 +262,7 @@ llvm 21.1.5
 lolcat 100.0.1
 lpeg 1.1.0
 lua 5.4.8
-luajit 2.1.1763148144
+luajit 2.1.1763318511
 luarocks 3.12.2
 lunchy-go 0.2.1
 luv 1.51.0-1
@@ -289,17 +289,17 @@ neovim 0.11.5
 netpbm 11.02.19_1
 nettle 3.10.2
 nmap 7.98
-node 25.2.0
+node 25.2.1
 npth 1.8
 nspr 4.38.2
 nss 3.117
-numpy 2.3.4
+numpy 2.3.5
 nushell 0.108.0
 oh-my-posh 27.6.0
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 1.0.68
+opencode 1.0.72
 opencore-amr 0.1.6
 openexr 3.4.3
 openjdk 25.0.1
@@ -434,10 +434,10 @@ go:github.com/nizos/tdd-guard/reporters/go/cmd/tdd-guard-go  v0.2.1            ~
 go:github.com/wailsapp/wails/v2/cmd/wails                    2.11.0            ~/.config/mise/mise.toml  latest
 go:golang.org/x/tools/gopls                                  0.20.0            ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck                        0.7.0-0.dev       ~/.config/mise/mise.toml  latest
-node                                                         25.2.0            ~/.config/mise/mise.toml  latest
+node                                                         25.2.1            ~/.config/mise/mise.toml  latest
 npm:@fission-ai/openspec                                     0.15.0            ~/.config/mise/mise.toml  latest
-npm:@opentui/core                                            0.1.45            ~/.config/mise/mise.toml  latest
-npm:@opentui/react                                           0.1.45            ~/.config/mise/mise.toml  latest
+npm:@opentui/core                                            0.1.46            ~/.config/mise/mise.toml  latest
+npm:@opentui/react                                           0.1.46            ~/.config/mise/mise.toml  latest
 npm:github-markdown-css                                      5.8.1             ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                                                5.2.4             ~/.config/mise/mise.toml  latest
 npm:nuekit                                                   2.0.0-beta.2      ~/.config/mise/mise.toml  latest
@@ -449,7 +449,7 @@ pipx:ruff                                                    0.14.5            ~
 pipx:seagoat                                                 0.54.17           ~/.config/mise/mise.toml  latest
 ruby                                                         3.4.7             ~/.config/mise/mise.toml  latest
 rust                                                         1.91.1 (symlink)  ~/.config/mise/mise.toml  latest
-uv                                                           0.9.9             ~/.config/mise/mise.toml  latest
+uv                                                           0.9.10            ~/.config/mise/mise.toml  latest
 
 RUSTUP/CARGO
 ------------
