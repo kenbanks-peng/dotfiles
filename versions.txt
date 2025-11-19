@@ -9,7 +9,7 @@ atuin-desktop 0.1.11
 audacity 3.7.5
 boltai 1.36.5
 boop 1.4.0
-claude-code 2.0.45
+claude-code 2.0.46
 cleanshot 4.8.4
 codex 0.58.0
 container 0.6.0
@@ -45,7 +45,7 @@ orbstack 2.0.4,19887
 pdf-pals 1.9.0
 quarto 1.8.26
 raycast 1.103.6
-screen-studio 3.5.0-4028
+screen-studio 3.5.1-4051
 sf-symbols 7.0,115
 sip-app 4.1.1
 skim 1.7.11
@@ -55,10 +55,10 @@ transmission 4.0.6
 typeface 4.2.1,4763
 visual-studio-code 1.106.1
 vlc 3.0.21
-warp 0.2025.11.12.08.12.stable_02
+warp 0.2025.11.18.12.24.stable_02
 wezterm 20240203-110809,5046fc22
 yaak 2025.8.2
-zed 0.212.7
+zed 0.213.3
 zoom 6.6.6.67409
 
 BREW FORMULAS
@@ -108,7 +108,7 @@ colima 0.9.1
 coreutils 9.9
 croc 10.2.7
 cryptography 46.0.3
-csvtk 0.35.0
+csvtk 0.36.0
 curlie 1.8.2
 d2 0.7.1
 dav1d 1.5.2
@@ -292,14 +292,14 @@ nmap 7.98
 node 25.2.1
 npth 1.8
 nspr 4.38.2
-nss 3.117
+nss 3.118.1
 numpy 2.3.5
 nushell 0.108.0
 oh-my-posh 27.6.0
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 1.0.77
+opencode 1.0.78
 opencore-amr 0.1.6
 openexr 3.4.3
 openjdk 25.0.1
@@ -360,7 +360,7 @@ sk 0.20.5
 sketchybar 2.23.0
 snappy 1.2.2
 sniffnet 1.4.2
-snyk-cli 1.1300.2
+snyk-cli 1.1301.0
 sox 14.4.2_6
 spark 1.0.1
 speex 1.2.1
