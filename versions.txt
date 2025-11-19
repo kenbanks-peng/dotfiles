@@ -58,7 +58,7 @@ vlc 3.0.21
 warp 0.2025.11.12.08.12.stable_02
 wezterm 20240203-110809,5046fc22
 yaak 2025.8.2
-zed 0.212.6
+zed 0.212.7
 zoom 6.6.6.67409
 
 BREW FORMULAS
@@ -299,7 +299,7 @@ oh-my-posh 27.6.0
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 1.0.76
+opencode 1.0.77
 opencore-amr 0.1.6
 openexr 3.4.3
 openjdk 25.0.1
