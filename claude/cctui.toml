@@ -155,7 +155,7 @@ target-dir = ".claude/hooks"
 # ============================================================================
 [permission.config.claude]
 config-source-file = "permissions/permissions.json"
-target-file = ".claude/settings.local.json"
+target-file = ".claude/settings.json"
 
 
 # ============================================================================
