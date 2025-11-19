@@ -51,10 +51,15 @@ name = "Output Styles"
 enabled = true
 order = 7
 
+[cctui.service.hook]
+name = "Hooks"
+enabled = true
+order = 8
+
 [cctui.service.plugin]
 name = "Plugins"
 enabled = true
-order = 8
+order = 9
 
 
 # ============================================================================
@@ -135,6 +140,14 @@ target-dir = ".claude/output-styles"
 [skill.config.claude]
 config-source-dir = "skills"
 target-dir = ".claude/skills"
+
+
+# ============================================================================
+# Hooks
+# ============================================================================
+[hook.config.claude]
+config-source-dir = "hooks"
+target-dir = ".claude/hooks"
 
 
 # ============================================================================
