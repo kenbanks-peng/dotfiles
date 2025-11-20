@@ -3,15 +3,15 @@ BREW CASKS
 aerospace 0.19.2-Beta
 affinity 3.0.1,3808
 anybar 0.2.3
-arc 1.121.0,70772
+arc 1.121.1,71020
 athas-editor 0.2.1
 atuin-desktop 0.1.11
 audacity 3.7.5
 boltai 1.36.5
 boop 1.4.0
-claude-code 2.0.46
+claude-code 2.0.47
 cleanshot 4.8.4
-codex 0.58.0
+codex 0.60.1
 container 0.6.0
 cursor 2.0.77,ba90f2f88e4911312761abab9492c42442117cfe
 daisydisk 4.32
@@ -53,7 +53,7 @@ symboliclinker 2.2
 syntax-highlight 2.1.26
 transmission 4.0.6
 typeface 4.2.1,4763
-visual-studio-code 1.106.1
+visual-studio-code 1.106.2
 vlc 3.0.21
 warp 0.2025.11.18.12.24.stable_02
 wezterm 20240203-110809,5046fc22
@@ -71,9 +71,9 @@ aribb24 1.0.4
 asciinema 3.0.1
 ast-grep 0.40.0
 autoconf 2.72
-aws-c-auth 0.9.1
+aws-c-auth 0.9.2
 aws-c-cal 0.9.10
-aws-c-common 0.12.5
+aws-c-common 0.12.6
 aws-c-compression 0.3.1
 aws-c-event-stream 0.5.7
 aws-c-http 0.10.7
@@ -145,7 +145,7 @@ git 2.52.0
 git-bug 0.10.1
 git-delta 0.18.2_3
 git-filter-repo 2.47.0
-gitleaks 8.29.0
+gitleaks 8.29.1
 gitui 0.27.0
 glances 4.4.1
 glib 2.86.1
@@ -436,8 +436,8 @@ go:golang.org/x/tools/gopls                                  0.20.0            ~
 go:honnef.co/go/tools/cmd/staticcheck                        0.7.0-0.dev       ~/.config/mise/mise.toml  latest
 node                                                         25.2.1            ~/.config/mise/mise.toml  latest
 npm:@fission-ai/openspec                                     0.15.0            ~/.config/mise/mise.toml  latest
-npm:@opentui/core                                            0.1.46            ~/.config/mise/mise.toml  latest
-npm:@opentui/react                                           0.1.46            ~/.config/mise/mise.toml  latest
+npm:@opentui/core                                            0.1.47            ~/.config/mise/mise.toml  latest
+npm:@opentui/react                                           0.1.47            ~/.config/mise/mise.toml  latest
 npm:claude-pdd-cli                                           1.0.5             ~/.config/mise/mise.toml  latest
 npm:github-markdown-css                                      5.8.1             ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                                                5.2.4             ~/.config/mise/mise.toml  latest
