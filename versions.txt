@@ -460,7 +460,6 @@ rustup home:  /Users/kenbanks/Software/rustup
 
 installed toolchains
 --------------------
-1.91.0-aarch64-apple-darwin
 1.91.1-aarch64-apple-darwin (active)
 
 active toolchain
