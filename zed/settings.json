@@ -7,6 +7,13 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+  "context_servers": {
+    "mcp-server-sequential-thinking": {
+      "source": "extension",
+      "enabled": false,
+      "settings": {}
+    }
+  },
   "icon_theme": "Catppuccin Mocha",
   "features": {
     "edit_prediction_provider": "zed"
