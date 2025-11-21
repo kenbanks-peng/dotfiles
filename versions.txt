@@ -11,7 +11,7 @@ boltai 1.36.5
 boop 1.4.0
 claude-code 2.0.47
 cleanshot 4.8.4
-codex 0.60.1
+codex 0.61.0
 container 0.6.0
 cursor 2.0.77,ba90f2f88e4911312761abab9492c42442117cfe
 daisydisk 4.32
@@ -55,18 +55,17 @@ transmission 4.0.6
 typeface 4.2.1,4763
 visual-studio-code 1.106.2
 vlc 3.0.21
-warp 0.2025.11.18.12.24.stable_02
+warp 0.2025.11.19.08.12.stable_01
 wezterm 20240203-110809,5046fc22
 yaak 2025.8.2
 zed 0.213.3
-zoom 6.6.6.67409
 
 BREW FORMULAS
 -------------
 abseil 20250814.1
 age 1.2.1
 aom 3.13.1
-apache-arrow 21.0.0_10
+apache-arrow 22.0.0
 aribb24 1.0.4
 asciinema 3.0.1
 ast-grep 0.40.0
@@ -120,7 +119,7 @@ dotenvx 1.51.1
 dua-cli 2.32.2
 duf 0.9.1
 dust 1.2.3
-dvc 3.64.0
+dvc 3.64.0_1
 espeak-ng 1.52.0
 fastfetch 2.55.1
 fd 10.3.0
@@ -154,7 +153,7 @@ gmp 6.3.0
 gnu-getopt 2.41.2
 gnu-sed 4.9
 gnupg 2.4.8
-gnutls 3.8.10
+gnutls 3.8.11
 go-task 3.45.5
 gobang 0.1.0-alpha.5
 gpg-tui 0.11.1_1
@@ -299,7 +298,7 @@ oh-my-posh 27.6.0
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 1.0.80
+opencode 1.0.82
 opencore-amr 0.1.6
 openexr 3.4.4
 openjdk 25.0.1
@@ -450,7 +449,7 @@ pipx:ruff                                                    0.14.5            ~
 pipx:seagoat                                                 0.54.17           ~/.config/mise/mise.toml  latest
 ruby                                                         3.4.7             ~/.config/mise/mise.toml  latest
 rust                                                         1.91.1 (symlink)  ~/.config/mise/mise.toml  latest
-uv                                                           0.9.10            ~/.config/mise/mise.toml  latest
+uv                                                           0.9.11            ~/.config/mise/mise.toml  latest
 
 RUSTUP/CARGO
 ------------
