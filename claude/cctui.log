@@ -2,3 +2,19 @@
 2025-11-21 11:57:40,665 - cctui - INFO - main:87 - Project path: /Users/kenbanks/Software/DevApps/cctui
 2025-11-21 11:57:40,665 - cctui - INFO - main:88 - Config path: /Users/kenbanks/.config/claude
 2025-11-21 11:57:40,666 - cctui - INFO - main:102 - Configuration loaded successfully
+2025-11-21 19:57:00,425 - cctui - INFO - main:75 - Starting CCTUI application
+2025-11-21 19:57:00,425 - cctui - INFO - main:76 - Project path: /Users/kenbanks/Software/DevApps/cctui
+2025-11-21 19:57:00,425 - cctui - INFO - main:77 - Config path: /Users/kenbanks/.config/claude
+2025-11-21 19:57:00,426 - cctui - INFO - main:93 - Configuration loaded successfully
+2025-11-21 19:59:00,048 - cctui - INFO - main:75 - Starting CCTUI application
+2025-11-21 19:59:00,048 - cctui - INFO - main:76 - Project path: /Users/kenbanks/Software/DevApps/cctui
+2025-11-21 19:59:00,048 - cctui - INFO - main:77 - Config path: /Users/kenbanks/.config/claude
+2025-11-21 19:59:00,049 - cctui - INFO - main:93 - Configuration loaded successfully
+2025-11-21 20:00:06,284 - cctui.resources.plugin_operations - INFO - uninstall_plugin:100 - Uninstalling plugin 'feature-dev' from marketplace 'claude-code'
+2025-11-21 20:00:06,288 - cctui.resources.plugin_operations - INFO - uninstall_plugin:126 - Successfully uninstalled plugin: feature-dev
+2025-11-21 20:00:08,935 - cctui.resources.plugin_operations - INFO - install_plugin:28 - Installing plugin 'feature-dev' from marketplace 'claude-code'
+2025-11-21 20:00:08,956 - cctui.resources.plugin_operations - INFO - install_plugin:97 - Successfully installed plugin: feature-dev
+2025-11-21 20:00:11,052 - cctui.resources.plugin_operations - INFO - uninstall_plugin:100 - Uninstalling plugin 'feature-dev' from marketplace 'claude-code'
+2025-11-21 20:00:11,054 - cctui.resources.plugin_operations - INFO - uninstall_plugin:126 - Successfully uninstalled plugin: feature-dev
+2025-11-21 20:00:12,314 - cctui.resources.plugin_operations - INFO - install_plugin:28 - Installing plugin 'code-review' from marketplace 'claude-code'
+2025-11-21 20:00:12,320 - cctui.resources.plugin_operations - INFO - install_plugin:97 - Successfully installed plugin: code-review
