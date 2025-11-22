@@ -34,3 +34,7 @@
 2025-11-21 23:09:53,055 - cctui - INFO - main:86 - Project path: /Users/kenbanks/Software/DevApps/cctui
 2025-11-21 23:09:53,055 - cctui - INFO - main:87 - Config path: /Users/kenbanks/.config/claude
 2025-11-21 23:09:53,056 - cctui - INFO - main:102 - Configuration loaded successfully
+2025-11-21 23:33:33,180 - cctui - INFO - main:85 - Starting CCTUI application
+2025-11-21 23:33:33,180 - cctui - INFO - main:86 - Project path: /Users/kenbanks/Software/DevApps/cctui
+2025-11-21 23:33:33,180 - cctui - INFO - main:87 - Config path: /Users/kenbanks/.config/claude
+2025-11-21 23:33:33,181 - cctui - INFO - main:102 - Configuration loaded successfully
