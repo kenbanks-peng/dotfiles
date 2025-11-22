@@ -42,3 +42,15 @@
 2025-11-22 01:19:10,765 - cctui - INFO - main:86 - Project path: /Users/kenbanks/Software/DevApps/cctui
 2025-11-22 01:19:10,765 - cctui - INFO - main:87 - Config path: /Users/kenbanks/.config/claude
 2025-11-22 01:19:10,766 - cctui - INFO - main:102 - Configuration loaded successfully
+2025-11-22 12:02:50,439 - cctui - INFO - main:85 - Starting CCTUI application
+2025-11-22 12:02:50,439 - cctui - INFO - main:86 - Project path: /Users/kenbanks/Software/DevApps/cctui
+2025-11-22 12:02:50,439 - cctui - INFO - main:87 - Config path: /Users/kenbanks/.config/claude
+2025-11-22 12:02:50,440 - cctui - INFO - main:102 - Configuration loaded successfully
+2025-11-22 12:06:32,052 - cctui - INFO - main:85 - Starting CCTUI application
+2025-11-22 12:06:32,052 - cctui - INFO - main:86 - Project path: /Users/kenbanks/Software/DevApps/cctui
+2025-11-22 12:06:32,052 - cctui - INFO - main:87 - Config path: /Users/kenbanks/.config/claude
+2025-11-22 12:06:32,053 - cctui - INFO - main:102 - Configuration loaded successfully
+2025-11-22 12:08:00,424 - cctui - INFO - main:85 - Starting CCTUI application
+2025-11-22 12:08:00,424 - cctui - INFO - main:86 - Project path: /Users/kenbanks/Software/DevResearch/DORAs
+2025-11-22 12:08:00,424 - cctui - INFO - main:87 - Config path: /Users/kenbanks/.config/claude
+2025-11-22 12:08:00,425 - cctui - INFO - main:102 - Configuration loaded successfully
