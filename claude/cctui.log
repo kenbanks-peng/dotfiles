@@ -18,3 +18,7 @@
 2025-11-21 20:00:11,054 - cctui.resources.plugin_operations - INFO - uninstall_plugin:126 - Successfully uninstalled plugin: feature-dev
 2025-11-21 20:00:12,314 - cctui.resources.plugin_operations - INFO - install_plugin:28 - Installing plugin 'code-review' from marketplace 'claude-code'
 2025-11-21 20:00:12,320 - cctui.resources.plugin_operations - INFO - install_plugin:97 - Successfully installed plugin: code-review
+2025-11-21 20:40:26,542 - cctui - INFO - main:75 - Starting CCTUI application
+2025-11-21 20:40:26,542 - cctui - INFO - main:76 - Project path: /Users/kenbanks/Software/DevApps/cctui
+2025-11-21 20:40:26,542 - cctui - INFO - main:77 - Config path: /Users/kenbanks/.config/claude
+2025-11-21 20:40:26,543 - cctui - INFO - main:93 - Configuration loaded successfully
