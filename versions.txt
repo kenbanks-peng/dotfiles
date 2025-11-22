@@ -56,7 +56,6 @@ transmission 4.0.6
 typeface 4.2.1,4763
 visual-studio-code 1.106.2
 vlc 3.0.21
-warp 0.2025.11.19.08.12.stable_03
 wezterm 20240203-110809,5046fc22
 yaak 2025.8.2
 zed 0.213.3
