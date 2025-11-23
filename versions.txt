@@ -22,7 +22,6 @@ font-hasklug-nerd-font 3.4.0
 font-ia-writer-quattro latest
 font-inter 4.1
 font-monaspace-var 1.301
-font-roboto latest
 font-sf-pro latest
 font-symbols-only-nerd-font 3.4.0
 font-tex-gyre-termes 2.004
