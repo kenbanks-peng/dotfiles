@@ -14,7 +14,7 @@ claude-code 2.0.50
 cleanshot 4.8.4
 codex 0.63.0
 container 0.6.0
-cursor 2.1.25,7584ea888f7eb7bf76c9873a8f71b28f034a982e
+cursor 2.1.26,f628a4761be40b8869ca61a6189cafd14756dff4
 daisydisk 4.32
 deepchat 0.4.5
 espanso 2.3.0
@@ -299,7 +299,7 @@ oh-my-posh 28.0.0
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 1.0.106
+opencode 1.0.107
 opencore-amr 0.1.6
 openexr 3.4.4
 openjdk 25.0.1
@@ -337,7 +337,7 @@ pygit2 1.19.0
 python@3.13 3.13.9_1
 python@3.14 3.14.0_1
 qrencode 4.1.1
-qsv 9.1.0
+qsv 10.0.0
 rav1e 0.8.1
 rclone 1.72.0
 re2 20251105
