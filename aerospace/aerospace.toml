@@ -118,8 +118,14 @@ alt-9 = 'workspace 9'
 alt-0 = 'workspace 10'
 
 # cycle apps in current workspace
-alt-up = ['focus up --boundaries-action wrap-around-the-workspace','focus right --boundaries-action wrap-around-the-workspace']
-alt-down = ['focus down --boundaries-action wrap-around-the-workspace','focus left --boundaries-action wrap-around-the-workspace']
+alt-up = [
+  'focus up --boundaries-action wrap-around-the-workspace',
+  'focus right --boundaries-action wrap-around-the-workspace',
+]
+alt-down = [
+  'focus down --boundaries-action wrap-around-the-workspace',
+  'focus left --boundaries-action wrap-around-the-workspace',
+]
 
 # prev/next adjacent workspace
 ctrl-left = 'exec-and-forget $HOME/Software/bin/wm goto_space --dir="prev"'
@@ -215,6 +221,7 @@ down = 'volume down'
 up = 'volume up'
 shift-down = ['volume set 0', 'mode main']
 
+# persistent-workspaces = ['A', 'B', 'C'] <-- new feature to investigate
 
 ########################   callbacks   ########################
 
