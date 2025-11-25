@@ -54,6 +54,8 @@ exec-on-workspace-change = [
   '$HOME/Software/bin/wm workspace_changed --prev $AEROSPACE_PREV_WORKSPACE --focused $AEROSPACE_FOCUSED_WORKSPACE',
 ]
 
+# persistent-workspaces = ['A', 'B', 'C'] <-- new feature to investigate
+
 # Possible values: (qwerty|dvorak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
 [key-mapping]
@@ -178,53 +180,47 @@ alt-t = 'exec-and-forget open /Applications/Ghostty.app'            # Terminal
 
 ########################   services   ########################
 
-alt-comma = 'mode resize'
-alt-slash = 'mode service'
-
+# alt-comma = 'mode resize'
+# alt-slash = 'mode service'
 
 ########################   resize   ########################
 
-[mode.resize.binding]
-left = 'resize width -50'
-up = 'resize height +50'
-down = 'resize height -50'
-right = 'resize width +50'
-enter = 'mode main'
-esc = 'mode main'
-
+# [mode.resize.binding]
+# left = 'resize width -50'
+# up = 'resize height +50'
+# down = 'resize height -50'
+# right = 'resize width +50'
+# enter = 'mode main'
+# esc = 'mode main'
 
 ###################   layout tree services   ###################
-
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
 
-[mode.service.binding]
-esc = ['reload-config', 'mode main']
-r = ['flatten-workspace-tree', 'mode main'] # reset layout
-f = [
-  'layout floating tiling',
-  'mode main',
-] # Toggle between floating and tiling layout
-backspace = ['close-all-windows-but-current', 'mode main']
+# [mode.service.binding]
+# esc = ['reload-config', 'mode main']
+# r = ['flatten-workspace-tree', 'mode main'] # reset layout
+# f = [
+#   'layout floating tiling',
+#   'mode main',
+# ] # Toggle between floating and tiling layout
+# backspace = ['close-all-windows-but-current', 'mode main']
 
-# sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
-#s = ['layout sticky tiling', 'mode main']
+# # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
+# #s = ['layout sticky tiling', 'mode main']
 
-alt-shift-h = ['join-with left', 'mode main']
-alt-shift-j = ['join-with down', 'mode main']
-alt-shift-k = ['join-with up', 'mode main']
-alt-shift-l = ['join-with right', 'mode main']
+# alt-shift-h = ['join-with left', 'mode main']
+# alt-shift-j = ['join-with down', 'mode main']
+# alt-shift-k = ['join-with up', 'mode main']
+# alt-shift-l = ['join-with right', 'mode main']
 
-down = 'volume down'
-up = 'volume up'
-shift-down = ['volume set 0', 'mode main']
-
-# persistent-workspaces = ['A', 'B', 'C'] <-- new feature to investigate
+# down = 'volume down'
+# up = 'volume up'
+# shift-down = ['volume set 0', 'mode main']
 
 ########################   callbacks   ########################
-
 
 # [[on-window-detected]]
 # if.app-id = 'com.apple.systempreferences'
@@ -234,7 +230,6 @@ shift-down = ['volume set 0', 'mode main']
 # if.app-name-regex-substring = 'DeskMinder'
 # check-further-callbacks = true
 # run = ['layout floating', 'move-node-to-workspace S']
-
 
 [[on-window-detected]]
 if.app-id = 'com.leomehlig.today' # Structured App
