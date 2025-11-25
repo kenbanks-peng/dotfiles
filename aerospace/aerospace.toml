@@ -46,7 +46,7 @@ automatically-unhide-macos-hidden-apps = true
 # even when they are invisible.
 # This config version is only available since 'config-version = 2'
 # Fallback value (if you omit the key): persistent-workspaces = []
-# persistent-workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+persistent-workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
 # A callback that runs every time binding mode changes
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -157,8 +157,8 @@ cmd-left = 'exec-and-forget $HOME/Software/bin/wm goto_space --dir="prev" --mode
 cmd-right = 'exec-and-forget $HOME/Software/bin/wm goto_space --dir="next" --mode="empty"'
 
 
-alt-shift-right = 'exec-and-forget `echo -e "1 2 3 4 5 6 7 8 9" | aerospace move-node-to-workspace next --focus-follows-window --stdin`'
-alt-shift-left = 'exec-and-forget `echo -e "1 2 3 4 5 6 7 8 9" | aerospace move-node-to-workspace prev --focus-follows-window --stdin`'
+alt-shift-left = ['move-node-to-workspace prev', 'workspace prev']
+alt-shift-right = ['move-node-to-workspace next', 'workspace next']
 
 alt-shift-up = 'move right'
 alt-shift-down = 'move left'
