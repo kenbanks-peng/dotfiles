@@ -53,7 +53,7 @@ symboliclinker 2.2
 syntax-highlight 2.1.26
 transmission 4.0.6
 typeface 4.2.1,4763
-visual-studio-code 1.106.2
+visual-studio-code 1.106.3
 vlc 3.0.21
 wezterm 20240203-110809,5046fc22
 yaak 2025.8.2
@@ -382,7 +382,7 @@ terminal-notifier 2.0.0
 tesseract 5.5.1_1
 theora 1.2.0
 thrift 0.22.0
-tmux 3.5a
+tmux 3.6
 tokei 13.0.0
 tree 2.2.1
 tree-sitter 0.25.10
