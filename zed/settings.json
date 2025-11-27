@@ -7,6 +7,12 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+  "context_servers": {
+    "mcp-server-sequential-thinking": {
+      "enabled": false,
+      "settings": {}
+    }
+  },
   "agent": {
     "notify_when_agent_waiting": "all_screens",
     "play_sound_when_agent_done": true
