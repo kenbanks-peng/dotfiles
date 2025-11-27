@@ -9,7 +9,8 @@
   {
     "context": "Workspace",
     "bindings": {
-      // "shift shift": "file_finder::Toggle"
+      "ctrl-alt-cmd-.": "agent::AddSelectionToThread",
+      "shift shift": "file_finder::Toggle",
       "ctrl-alt-cmd-g": [
         "agent::NewExternalAgentThread",
         { "agent": "gemini" }

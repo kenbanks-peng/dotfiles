@@ -23,11 +23,11 @@
   },
   "icon_theme": "Catppuccin Mocha",
   "features": {
-    "edit_prediction_provider": "zed"
+    "edit_prediction_provider": "supermaven"
   },
   "vim_mode": false,
   "autosave": "off",
-  "current_line_highlight": "none",
+  "current_line_highlight": "gutter",
   "cursor_blink": false,
   "theme": {
     "mode": "system",
