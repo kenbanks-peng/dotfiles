@@ -8,10 +8,7 @@
 // command palette
 {
   "context_servers": {
-    "mcp-server-sequential-thinking": {
-      "enabled": false,
-      "settings": {}
-    }
+    
   },
   "agent": {
     "default_model": {
