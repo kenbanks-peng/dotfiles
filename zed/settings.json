@@ -7,9 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
-  "context_servers": {
-    
-  },
+  "context_servers": {},
   "agent": {
     "default_model": {
       "provider": "google",
@@ -30,7 +28,7 @@
   },
   "icon_theme": "Catppuccin Mocha",
   "features": {
-    "edit_prediction_provider": "supermaven"
+    "edit_prediction_provider": "zed"
   },
   "vim_mode": false,
   "autosave": "off",
