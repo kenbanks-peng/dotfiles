@@ -9,7 +9,6 @@
 {
   "context_servers": {
     "mcp-server-sequential-thinking": {
-      "source": "extension",
       "enabled": false,
       "settings": {}
     }

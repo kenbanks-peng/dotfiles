@@ -7,15 +7,23 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+  "context_servers": {
+    "mcp-server-sequential-thinking": {
+      "source": "extension",
+      "enabled": false,
+      "settings": {}
+    }
+  },
+  "icon_theme": "Catppuccin Mocha",
   "features": {
     "edit_prediction_provider": "zed"
   },
   "agent": {
+    "always_allow_tool_actions": true,
     "default_model": {
       "provider": "zed.dev",
       "model": "claude-sonnet-4"
-    },
-    "version": "2"
+    }
   },
   "vim_mode": false,
   "autosave": "off",
