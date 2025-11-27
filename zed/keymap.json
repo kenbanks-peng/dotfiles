@@ -10,6 +10,15 @@
     "context": "Workspace",
     "bindings": {
       // "shift shift": "file_finder::Toggle"
+      "ctrl-alt-cmd-g": [
+        "agent::NewExternalAgentThread",
+        { "agent": "gemini" }
+      ],
+      "ctrl-alt-cmd-c": [
+        "agent::NewExternalAgentThread",
+        { "agent": "claude_code" }
+      ],
+      "ctrl-alt-cmd-o": ["agent::NewExternalAgentThread", { "agent": "codex" }]
     }
   },
   {
