@@ -14,6 +14,10 @@
     }
   },
   "agent": {
+    "default_model": {
+      "provider": "google",
+      "model": "gemini-3-pro-preview"
+    },
     "notify_when_agent_waiting": "all_screens",
     "play_sound_when_agent_done": true
   },
