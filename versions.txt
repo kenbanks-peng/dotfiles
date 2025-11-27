@@ -8,7 +8,6 @@ arc 1.122.0,71105
 athas-editor 0.2.1
 atuin-desktop 0.2.3
 audacity 3.7.5
-boltai 1.36.5
 boop 1.4.0
 claude-code 2.0.55
 cleanshot 4.8.4
