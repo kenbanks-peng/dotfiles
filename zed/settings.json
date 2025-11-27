@@ -7,22 +7,19 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
-  "context_servers": {
-    "mcp-server-sequential-thinking": {
-      "enabled": false,
-      "settings": {}
+  "agent_servers": {
+    "gemini": {
+      "ignore_system_version": false
+    },
+    "claude": {
+      "env": {
+        "CLAUDE_CODE_EXECUTABLE": "/opt/homebrew/bin/claude"
+      }
     }
   },
   "icon_theme": "Catppuccin Mocha",
   "features": {
     "edit_prediction_provider": "zed"
-  },
-  "agent": {
-    "always_allow_tool_actions": true,
-    "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4"
-    }
   },
   "vim_mode": false,
   "autosave": "off",
