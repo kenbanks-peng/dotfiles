@@ -27,5 +27,35 @@
     "bindings": {
       // "j k": ["workspace::SendKeystrokes", "escape"]
     }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-d": null
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "cmd-d": null
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "cmd-d": null
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-d": "workspace::ToggleLeftDock"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-b": null
+    }
   }
 ]
