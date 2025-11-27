@@ -7,6 +7,10 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+  "agent": {
+    "notify_when_agent_waiting": "all_screens",
+    "play_sound_when_agent_done": true
+  },
   "agent_servers": {
     "gemini": {
       "ignore_system_version": false
