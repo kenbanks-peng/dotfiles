@@ -13,7 +13,7 @@ claude-code 2.0.55
 cleanshot 4.8.4
 codex 0.63.0
 container 0.6.0
-cursor 2.1.36,9cd7c8b6cebcbccc1242df211dee45a4b6fe15e4
+cursor 2.1.39,60d42bed27e5775c43ec0428d8c653c49e58e26a
 daisydisk 4.32
 deepchat 0.5.0
 espanso 2.3.0
@@ -29,7 +29,7 @@ git-credential-manager 2.6.1
 google-chrome 142.0.7444.176
 google-drive 117.0.0
 grandperspective 3.6
-hoppscotch 25.10.1-0
+hoppscotch 25.11.0-0
 karabiner-elements 15.7.0
 keyclu 0.30.2
 languagetool-desktop 2.9.1
