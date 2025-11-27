@@ -2,15 +2,15 @@ BREW CASKS
 ----------
 aerospace 0.20.0-Beta
 affinity 3.0.1,3808
-antigravity 1.11.5,5234145629700096
+antigravity 1.11.9,4787439284912128
 anybar 0.2.3
 arc 1.122.0,71105
 athas-editor 0.2.1
-atuin-desktop 0.2.2
+atuin-desktop 0.2.3
 audacity 3.7.5
 boltai 1.36.5
 boop 1.4.0
-claude-code 2.0.54
+claude-code 2.0.55
 cleanshot 4.8.4
 codex 0.63.0
 container 0.6.0
@@ -57,7 +57,7 @@ visual-studio-code 1.106.3
 vlc 3.0.21
 wezterm 20240203-110809,5046fc22
 yaak 2025.8.2
-zed 0.213.8
+zed 0.214.5
 zoom 6.6.10.69071
 
 BREW FORMULAS
@@ -71,7 +71,7 @@ asciinema 3.0.1
 ast-grep 0.40.0
 autoconf 2.72
 aws-c-auth 0.9.2
-aws-c-cal 0.9.12
+aws-c-cal 0.9.13
 aws-c-common 0.12.6
 aws-c-compression 0.3.1
 aws-c-event-stream 0.5.7
@@ -84,7 +84,7 @@ aws-checksums 0.2.7
 aws-crt-cpp 0.35.3
 aws-sdk-cpp 1.11.690
 bandwhich 0.23.1
-bash 5.3.3
+bash 5.3.8
 bat 0.26.0
 bat-extras 2024.08.24
 biome 2.3.7
@@ -145,7 +145,7 @@ git 2.52.0
 git-bug 0.10.1
 git-delta 0.18.2_3
 git-filter-repo 2.47.0
-gitleaks 8.29.1
+gitleaks 8.30.0
 gitui 0.27.0
 glances 4.4.1
 glib 2.86.2
@@ -451,7 +451,7 @@ pipx:ruff                                                    0.14.6            ~
 pipx:seagoat                                                 0.54.17           ~/.config/mise/mise.toml  latest
 ruby                                                         3.4.7             ~/.config/mise/mise.toml  latest
 rust                                                         1.91.1 (symlink)  ~/.config/mise/mise.toml  latest
-uv                                                           0.9.12            ~/.config/mise/mise.toml  latest
+uv                                                           0.9.13            ~/.config/mise/mise.toml  latest
 
 RUSTUP/CARGO
 ------------
