@@ -53,12 +53,13 @@ persistent-workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 on-mode-changed = []
 
 # Notify Sketchybar about workspace change
-exec-on-workspace-change = [
-  '/bin/bash',
-  '-c',
-  '$HOME/Software/bin/wm workspace_changed --prev $AEROSPACE_PREV_WORKSPACE --focused $AEROSPACE_FOCUSED_WORKSPACE',
-]
+# exec-on-workspace-change = [
+#   '/bin/bash',
+#   '-c',
+#   '$HOME/Software/bin/wm workspace_changed --prev $AEROSPACE_PREV_WORKSPACE --focused $AEROSPACE_FOCUSED_WORKSPACE',
+# ]
 
+# Notify Sketchybar about workspace/focus change
 on-focus-changed = [
   'exec-and-forget sketchybar --trigger aerospace_workspace_change FOCUS_CHANGE=true',
 ]
