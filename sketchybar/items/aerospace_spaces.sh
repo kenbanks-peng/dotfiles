@@ -11,7 +11,6 @@ location="left"
 sketchybar --add event aerospace_workspace_change
 sketchybar --add event yabai_window_created
 sketchybar --add event yabai_window_destroyed
-sketchybar --add event yabai_window_focused
 sketchybar --add event yabai_window_minimized
 sketchybar --add event yabai_window_deminimized
 
@@ -31,7 +30,6 @@ props=(
   aerospace_workspace_change \
   yabai_window_created \
   yabai_window_destroyed \
-  yabai_window_focused \
   yabai_window_minimized \
   yabai_window_deminimized
 
