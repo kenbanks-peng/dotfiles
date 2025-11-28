@@ -19,9 +19,9 @@ elif [ "$SENDER" = "aerospace_workspace_change" ]; then
     if allow_app "$appname" "$ID"; then
       aerospace_focused_window_change $ID
     fi
-  #else
+  else
     # from aerospace exec_on_workspace_change
-    # aerospace_workspace_change "$FOCUSED_WORKSPACE" "$PREV_WORKSPACE"
+    aerospace_workspace_change "$FOCUSED_WORKSPACE" "$PREV_WORKSPACE"
   fi
 elif [ "$SENDER" = "yabai_window_created" ] || [ "$SENDER" = "yabai_window_deminimized" ]; then
   # Get app name to check if allowed (also checks dialogs)
