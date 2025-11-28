@@ -43,7 +43,7 @@ opcode 0.2.0
 orbstack 2.0.5,19905
 pdf-pals 1.9.0
 quarto 1.8.26
-raycast 1.103.8
+raycast 1.103.9
 screen-studio 3.5.1-4051
 sf-symbols 7.0,115
 sip-app 4.1.1
