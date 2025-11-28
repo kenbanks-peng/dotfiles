@@ -56,7 +56,7 @@ visual-studio-code 1.106.3
 vlc 3.0.21
 wezterm 20240203-110809,5046fc22
 yaak 2025.8.2
-zed 0.214.5
+zed 0.214.6
 zoom 6.6.10.69071
 
 BREW FORMULAS
@@ -86,7 +86,7 @@ bandwhich 0.23.1
 bash 5.3.8
 bat 0.26.0
 bat-extras 2024.08.24
-biome 2.3.7
+biome 2.3.8
 borders 1.8.4
 brotli 1.2.0
 btop 1.4.5
