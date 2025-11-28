@@ -1,14 +1,11 @@
 [tools]
-uv = "latest"
 node = "latest"
-ruby = "latest"
 "cargo:sbyte" = "latest"
 "cargo:cargo-update" = "latest"
 "pipx:ruff" = "latest"
 "go:golang.org/x/tools/gopls" = "latest"
 "go:honnef.co/go/tools/cmd/staticcheck" = "latest"
 "go:github.com/wailsapp/wails/v2/cmd/wails" = "latest"
-rust = "latest"
 "cargo:cargo-cache" = "latest"
 "pipx:meson" = "latest"
 "pipx:ninja" = "latest"
@@ -27,6 +24,9 @@ rust = "latest"
 "npm:@opentui/react" = "latest"
 "npm:claude-pdd-cli" = "latest"
 "nix:bun" = "latest"
+"nix:ruby" = "latest"
+"nix:rustc" = "latest"
+"nix:uv" = "latest"
 
 [settings]
 experimental = true
