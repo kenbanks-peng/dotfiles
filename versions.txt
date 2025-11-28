@@ -352,7 +352,7 @@ sad 0.4.32
 sd 1.0.0
 sdl2 2.32.10
 sevenzip 25.01
-shaderc 2025.4
+shaderc 2025.5
 shared-mime-info 2.4_1
 shellcheck 0.11.0
 simdjson 4.2.2
