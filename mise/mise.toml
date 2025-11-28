@@ -26,6 +26,7 @@ rust = "latest"
 "npm:@opentui/core" = "latest"
 "npm:@opentui/react" = "latest"
 "npm:claude-pdd-cli" = "latest"
+"nix:bun" = "latest"
 
 [settings]
 experimental = true
