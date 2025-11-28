@@ -59,7 +59,10 @@ exec-on-workspace-change = [
   '$HOME/Software/bin/wm workspace_changed --prev $AEROSPACE_PREV_WORKSPACE --focused $AEROSPACE_FOCUSED_WORKSPACE',
 ]
 
-# on-focus-changed = ['exec-and-forget say "debug"']
+on-focus-changed = [
+  'exec-and-forget sketchybar --trigger aerospace_workspace_change FOCUS_CHANGE=true',
+]
+
 
 # Possible values: (qwerty|dvorak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
