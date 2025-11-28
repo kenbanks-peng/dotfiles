@@ -11,6 +11,13 @@ if [ "$SENDER" = "forced" ]; then
   done
   # to initialize cache of previous window_id
   aerospace_focused_window_change
+elif [ "$SENDER" = "yabai_window_focused" ]; then
+  echo "yabai_window_focused"
+  # Get app name to check if allowed (also checks dialogs)
+  # appname=$(aerospace_appname_from_window_id "$ID")
+  # if allow_app "$appname" "$ID"; then
+  #   aerospace_focused_window_change $ID
+  # fi
 elif [ "$SENDER" = "aerospace_workspace_change" ]; then
   if [[ "$FOCUS_CHANGE" == "true" ]]; then
     # from aerospace on_focus_changed event
