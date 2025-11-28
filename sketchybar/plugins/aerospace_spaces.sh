@@ -17,7 +17,11 @@ elif [ "$SENDER" = "yabai_window_focused" ]; then
     aerospace_focused_window_change $ID
   fi
 elif [ "$SENDER" = "aerospace_workspace_change" ]; then
-  aerospace_workspace_change "$FOCUSED_WORKSPACE" "$PREV_WORKSPACE"
+  if [[ "$FOCUS_CHANGE" == "true" ]]; then
+    say "Very good"
+  else
+    aerospace_workspace_change "$FOCUSED_WORKSPACE" "$PREV_WORKSPACE"
+  fi
 elif [ "$SENDER" = "yabai_window_created" ] || [ "$SENDER" = "yabai_window_deminimized" ]; then
   # Get app name to check if allowed (also checks dialogs)
   appname=$(aerospace_appname_from_window_id "$ID")
