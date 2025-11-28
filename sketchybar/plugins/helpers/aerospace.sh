@@ -55,6 +55,8 @@ aerospace_workspace_change() {
   local sid="$1"
   local prev_sid="$2"
 
+  echo "** workspace $prev_sid -> $sid"
+
   # move sticky apps to current workspace
   show_sticky_apps "$sid" "$prev_sid"
 
@@ -74,6 +76,8 @@ aerospace_workspace_change() {
     # back to the same app doesn't provide the required yabai_window_focused event
     # which would turn the icon green
 
+    echo "DEBUG 1"
+
     # for default item, use spaceid as window_id
     sketchy_highlight_window_id "$sid"
   fi
@@ -86,6 +90,8 @@ aerospace_focused_window_change() {
   if [ -z "$window_id" ]; then
     window_id=$(yabai_get_focused_window_id)
   fi
+
+  echo "DEBUG 2"
 
   sketchy_highlight_workspace "$sid"
   sketchy_highlight_window_id "$window_id"
