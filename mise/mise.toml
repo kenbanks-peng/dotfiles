@@ -1,5 +1,4 @@
 [tools]
-bun = "latest"
 uv = "latest"
 node = "latest"
 ruby = "latest"
@@ -29,4 +28,5 @@ rust = "latest"
 "npm:claude-pdd-cli" = "latest"
 
 [settings]
+experimental = true
 
