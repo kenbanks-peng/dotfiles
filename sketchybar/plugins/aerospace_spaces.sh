@@ -3,6 +3,7 @@
 source "$CONFIG_DIR/env.sh"
 source "$PLUGIN_DIR/helpers/aerospace.sh"
 source "$PLUGIN_DIR/helpers/sketchy.sh"
+source "$PLUGIN_DIR/helpers/yabai.sh"
 
 if [ "$SENDER" = "forced" ]; then
   for space in $(aerospace_workspaces); do
@@ -10,16 +11,16 @@ if [ "$SENDER" = "forced" ]; then
   done
   # to initialize cache of previous window_id
   aerospace_focused_window_change
-elif [ "$SENDER" = "yabai_window_focused" ]; then
-  # Get app name to check if allowed (also checks dialogs)
-  appname=$(aerospace_appname_from_window_id "$ID")
-  if allow_app "$appname" "$ID"; then
-    aerospace_focused_window_change $ID
-  fi
 elif [ "$SENDER" = "aerospace_workspace_change" ]; then
   if [[ "$FOCUS_CHANGE" == "true" ]]; then
-    say "Very good"
+    # from aerospace on_focus_changed event
+    ID=$(yabai_get_focused_window_id)
+    appname=$(aerospace_appname_from_window_id "$ID")
+    if allow_app "$appname" "$ID"; then
+      aerospace_focused_window_change $ID
+    fi
   else
+    # from aerospace exec_on_workspace_change
     aerospace_workspace_change "$FOCUSED_WORKSPACE" "$PREV_WORKSPACE"
   fi
 elif [ "$SENDER" = "yabai_window_created" ] || [ "$SENDER" = "yabai_window_deminimized" ]; then
