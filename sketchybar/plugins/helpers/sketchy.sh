@@ -78,8 +78,6 @@ sketchy_highlight_window_id() {
   local window_id="$1"
   local prev_window_id
 
-  echo "prev: $prev_window_id new: $window_id"
-
   if [ -f "$CACHE_DIR/highlighted.window_id" ]; then
     read -r prev_window_id <"$CACHE_DIR/highlighted.window_id"
   fi
@@ -89,7 +87,6 @@ sketchy_highlight_window_id() {
     if [ -n "$prev_item" ]; then
       local color=$(sketchy_get_space_foreground_color false)
       sketchybar --set "$prev_item" icon.color="$color"
-      echo "prev off"
     fi
   fi
 
@@ -98,7 +95,6 @@ sketchy_highlight_window_id() {
     if [ -n "$item" ]; then 
       local color=$(sketchy_get_space_foreground_color true)
       sketchybar --set "$item" icon.color="$color"
-      echo "new on"
     fi
     echo "$window_id" >"$CACHE_DIR/highlighted.window_id"
   fi
