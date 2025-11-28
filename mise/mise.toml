@@ -1,5 +1,4 @@
 [tools]
-node = "latest"
 "cargo:sbyte" = "latest"
 "cargo:cargo-update" = "latest"
 "pipx:ruff" = "latest"
@@ -27,6 +26,7 @@ node = "latest"
 "nix:ruby" = "latest"
 "nix:rustc" = "latest"
 "nix:uv" = "latest"
+"nix:nodejs" = "latest"
 
 [settings]
 experimental = true
