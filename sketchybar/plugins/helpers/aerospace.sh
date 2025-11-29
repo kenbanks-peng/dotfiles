@@ -14,12 +14,67 @@ aerospace_focused_workspace() {
   echo "$(aerospace list-workspaces --focused)"
 }
 
-# returns window_ids ex: 46356
+# returns window_ids in DFS (visual layout) order ex: 46356 46357
 aerospace_window_ids_in_workspace() {
   local sid="$1"
-  local json=$(aerospace list-windows --workspace "$sid" --json --format %{monitor-id}%{workspace}%{app-bundle-id}%{window-id}%{app-name})
-  local filtered=$(echo "$json" | jq -r '.[] | ."window-id"' | jq -s -r 'join(" ")')
-  echo "$filtered"
+
+  # Get all window IDs in this workspace (arbitrary order)
+  local json=$(aerospace list-windows --workspace "$sid" --json --format '%{monitor-id}%{workspace}%{app-bundle-id}%{window-id}%{app-name}')
+  local all_window_ids=($(echo "$json" | jq -r '.[] | ."window-id"'))
+
+  # If no windows or only one window, return as-is
+  if [ ${#all_window_ids[@]} -le 1 ]; then
+    echo "${all_window_ids[@]}"
+    return
+  fi
+
+  # Save current state
+  local original_workspace=$(aerospace list-workspaces --focused 2>/dev/null)
+  local original_window_id=$(aerospace list-windows --focused --format '%{window-id}' 2>/dev/null)
+  local need_restore=false
+
+  # Switch to target workspace if needed
+  if [ "$original_workspace" != "$sid" ]; then
+    aerospace workspace "$sid" 2>/dev/null
+    need_restore=true
+  fi
+
+  # Build DFS-ordered list
+  local ordered_ids=()
+  local dfs_index=0
+
+  while [ $dfs_index -lt ${#all_window_ids[@]} ]; do
+    # Focus window at this DFS index
+    if aerospace focus --dfs-index "$dfs_index" 2>/dev/null; then
+      local window_id=$(aerospace list-windows --focused --format '%{window-id}' 2>/dev/null)
+      if [ -n "$window_id" ]; then
+        ordered_ids+=("$window_id")
+      fi
+    fi
+    dfs_index=$((dfs_index + 1))
+
+    # Safety limit
+    if [ $dfs_index -gt 50 ]; then
+      break
+    fi
+  done
+
+  # Restore original state only if we changed it
+  if [ "$need_restore" = true ]; then
+    if [ -n "$original_workspace" ]; then
+      aerospace workspace "$original_workspace" 2>/dev/null
+    fi
+    if [ -n "$original_window_id" ]; then
+      aerospace focus --window-id "$original_window_id" 2>/dev/null
+    fi
+  fi
+
+  # Return ordered list, or fallback to original list if DFS failed
+  if [ ${#ordered_ids[@]} -gt 0 ]; then
+    echo "${ordered_ids[@]}"
+  else
+    echo "${all_window_ids[@]}"
+  fi
 }
 
 # returns appname ex: Cursor from window_id ex: 46356
@@ -269,11 +324,45 @@ aerospace_new_window_id() {
     icon.font="$ICON_FONT:$ICON_FONTSIZE"
     icon.width="$APP_WIDTH"
   )
+
+  # Get aerospace's window ordering for this workspace (in DFS/visual order)
+  local aerospace_window_order=($(aerospace_window_ids_in_workspace "$sid"))
+
+  # Find the position of this window in aerospace's ordering
+  local position=-1
+  local index=0
+  for wid in "${aerospace_window_order[@]}"; do
+    if [ "$wid" = "$window_id" ]; then
+      position=$index
+      break
+    fi
+    index=$((index + 1))
+  done
+
+  # Add the item
   sketchy_add_item "$item" left \
-    --move "$item" before "workspace.end.$sid" \
     --set "$item" "${props[@]}" \
     icon="$icon" icon.color="$icon_color" \
     click_script="aerospace focus --window-id $window_id"
+
+  # Position it correctly based on aerospace's ordering
+  if [ $position -eq 0 ]; then
+    # First window, move right after workspace.start
+    sketchybar --move "$item" after "workspace.start.$sid"
+  else
+    # Find the window that should be before this one
+    local prev_index=$((position - 1))
+    local prev_window_id="${aerospace_window_order[$prev_index]}"
+    local prev_item=$(sketchy_get_item_by_window_id "$prev_window_id")
+
+    if [ -n "$prev_item" ]; then
+      # Insert after the previous window
+      sketchybar --move "$item" after "$prev_item"
+    else
+      # Fallback: insert before workspace.end
+      sketchybar --move "$item" before "workspace.end.$sid"
+    fi
+  fi
 
   sketchy_highlight_window_id "$window_id"
 
@@ -296,6 +385,8 @@ aerospace_add_apps_in_spaceid() {
   if [ -n "${aerospace_window_ids}" ]; then
     # Read space-separated window_ids into an array and iterate
     read -ra window_id_array <<< "$aerospace_window_ids"
+    local prev_item="workspace.start.$sid"
+
     for window_id in "${window_id_array[@]}"; do
       appname=$(aerospace_appname_from_window_id "$window_id")
 
@@ -315,10 +406,13 @@ aerospace_add_apps_in_spaceid() {
 
       # only add if doesn't already exist
       sketchy_add_item "$item" left \
-        --move "$item" before "workspace.end.$sid" \
         --set "$item" "${props[@]}" \
         icon="$icon" icon.color="$icon_color" \
         click_script="aerospace focus --window-id $window_id"
+
+      # Position after the previous item to maintain aerospace's order
+      sketchybar --move "$item" after "$prev_item"
+      prev_item="$item"
     done
   fi
 }
