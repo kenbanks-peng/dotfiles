@@ -37,16 +37,15 @@ index=0
 echo "Step 1: Moving to temp workspaces" >> "$log_file"
 for sid in "${occupied[@]}"; do
   temp_workspace=$((temp_offset + index))
-  aerospace_window_ids=$(aerospace list-windows --workspace "$sid" --format '%{window-id}')
-  echo "  Workspace $sid -> temp $temp_workspace (windows: $aerospace_window_ids)" >> "$log_file"
+  # Get window IDs - aerospace outputs one per line
+  mapfile -t window_id_array < <(aerospace list-windows --workspace "$sid" --format '%{window-id}')
+  echo "  Workspace $sid -> temp $temp_workspace (windows: ${window_id_array[*]})" >> "$log_file"
 
-  if [[ -n "$aerospace_window_ids" ]]; then
-    # Read into array
-    read -ra window_id_array <<< "$aerospace_window_ids"
-    for window_id in "${window_id_array[@]}"; do
+  for window_id in "${window_id_array[@]}"; do
+    if [[ -n "$window_id" ]]; then
       aerospace move-node-to-workspace "$temp_workspace" --window-id "$window_id" </dev/null
-    done
-  fi
+    fi
+  done
   index=$((index + 1))
 done
 
@@ -56,16 +55,15 @@ new_number=1
 index=0
 for sid in "${occupied[@]}"; do
   temp_workspace=$((temp_offset + index))
-  aerospace_window_ids=$(aerospace list-windows --workspace "$temp_workspace" --format '%{window-id}')
-  echo "  Temp $temp_workspace -> workspace $new_number (windows: $aerospace_window_ids)" >> "$log_file"
+  # Get window IDs - aerospace outputs one per line
+  mapfile -t window_id_array < <(aerospace list-windows --workspace "$temp_workspace" --format '%{window-id}')
+  echo "  Temp $temp_workspace -> workspace $new_number (windows: ${window_id_array[*]})" >> "$log_file"
 
-  if [[ -n "$aerospace_window_ids" ]]; then
-    # Read into array
-    read -ra window_id_array <<< "$aerospace_window_ids"
-    for window_id in "${window_id_array[@]}"; do
+  for window_id in "${window_id_array[@]}"; do
+    if [[ -n "$window_id" ]]; then
       aerospace move-node-to-workspace "$new_number" --window-id "$window_id" </dev/null
-    done
-  fi
+    fi
+  done
   new_number=$((new_number + 1))
   index=$((index + 1))
 done

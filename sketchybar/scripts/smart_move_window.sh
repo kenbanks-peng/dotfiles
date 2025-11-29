@@ -68,13 +68,21 @@ if [[ "$direction" == "next" ]]; then
     fi
   else
     echo "Not on last workspace, using default next" >> "$log_file"
-    # Not on last workspace, use default behavior
+
+    # Get the focused window ID before moving (so we can focus it after renumbering)
+    focused_window_id=$(aerospace list-windows --focused --format '%{window-id}')
+    echo "Focused window ID: $focused_window_id" >> "$log_file"
+
+    # Move window to next workspace (don't follow yet)
     aerospace move-node-to-workspace --no-stdin next 2>> "$log_file"
-    aerospace workspace --no-stdin next 2>> "$log_file"
 
     # Ensure workspaces remain contiguous after move (in case source workspace is now empty)
     echo "Ensuring contiguous workspaces" >> "$log_file"
     "$HOME/Software/Public/dotfiles/sketchybar/scripts/ensure_contiguous_workspaces.sh" 2>> "$log_file"
+
+    # After renumbering, focus the window by its ID
+    echo "Focusing window $focused_window_id" >> "$log_file"
+    aerospace focus --window-id "$focused_window_id" </dev/null 2>> "$log_file"
   fi
 
 elif [[ "$direction" == "prev" ]]; then
@@ -124,13 +132,21 @@ elif [[ "$direction" == "prev" ]]; then
     fi
   else
     echo "Not on first workspace, using default prev" >> "$log_file"
-    # Not on first workspace, use default behavior
+
+    # Get the focused window ID before moving (so we can focus it after renumbering)
+    focused_window_id=$(aerospace list-windows --focused --format '%{window-id}')
+    echo "Focused window ID: $focused_window_id" >> "$log_file"
+
+    # Move window to prev workspace (don't follow yet)
     aerospace move-node-to-workspace --no-stdin prev 2>> "$log_file"
-    aerospace workspace --no-stdin prev 2>> "$log_file"
 
     # Ensure workspaces remain contiguous after move (in case source workspace is now empty)
     echo "Ensuring contiguous workspaces" >> "$log_file"
     "$HOME/Software/Public/dotfiles/sketchybar/scripts/ensure_contiguous_workspaces.sh" 2>> "$log_file"
+
+    # After renumbering, focus the window by its ID
+    echo "Focusing window $focused_window_id" >> "$log_file"
+    aerospace focus --window-id "$focused_window_id" </dev/null 2>> "$log_file"
   fi
 fi
 
