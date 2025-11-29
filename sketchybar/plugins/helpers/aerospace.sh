@@ -320,7 +320,7 @@ aerospace_new_window_id() {
 aerospace_add_apps_in_spaceid() {
   local sid="$1"
 
-  props=(
+  local props=(
     y_offset=1
     background.corner_radius=0
     icon.font="$ICON_FONT:$ICON_FONTSIZE"
