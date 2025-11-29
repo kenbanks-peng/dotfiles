@@ -42,9 +42,10 @@ props=(
   background.height=$BAR_HEIGHT
   background.color=$BAR
   background.corner_radius=0
-  icon.width=10
-  icon.padding_left=5
-  icon.padding_right=5
+  width=0
+  icon.drawing=off
+  label.drawing=off
+  y_offset=0
 )
 workspaces=($(aerospace_workspaces | sort -n))
 for sid in "${workspaces[@]}"; do

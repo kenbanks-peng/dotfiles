@@ -112,9 +112,10 @@ rebuild_workspaces() {
     background.height=$BAR_HEIGHT
     background.color=$BAR
     background.corner_radius=0
-    icon.width=10
-    icon.padding_left=5
-    icon.padding_right=5
+    width=0
+    icon.drawing=off
+    label.drawing=off
+    y_offset=0
   )
 
   for sid in "${occupied_workspaces[@]}"; do
@@ -156,9 +157,10 @@ sync_workspaces() {
         background.height=$BAR_HEIGHT
         background.color=$BAR
         background.corner_radius=0
-        icon.width=10
-        icon.padding_left=5
-        icon.padding_right=5
+        width=0
+        icon.drawing=off
+        label.drawing=off
+        y_offset=0
       )
 
       # Find the correct position to insert this workspace

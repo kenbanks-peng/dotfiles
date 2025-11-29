@@ -62,6 +62,6 @@ default=(
   label.align="left"
   label.y_offset=0
   label.padding_left=0
-  label.padding_right=5
+  label.padding_right=0
 )
 sketchybar --default "${default[@]}"
