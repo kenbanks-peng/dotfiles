@@ -15,13 +15,16 @@ if [[ "$direction" == "next" ]]; then
   echo "Ensuring contiguous workspaces before move" >> "$log_file"
   "$HOME/Software/Public/dotfiles/sketchybar/scripts/ensure_contiguous_workspaces.sh" 2>> "$log_file"
 
-  # Get current workspace (may have changed after renumbering)
-  current=$(aerospace list-workspaces --focused)
-  echo "Current workspace: $current" >> "$log_file"
+  # Wait a moment for aerospace to process the workspace changes
+  sleep 0.1
 
-  # Get all occupied workspaces sorted numerically
+  # Get current workspace AFTER renumbering
+  current=$(aerospace list-workspaces --focused)
+  echo "Current workspace after renumbering: $current" >> "$log_file"
+
+  # Get all occupied workspaces sorted numerically AFTER renumbering
   mapfile -t occupied < <(aerospace list-workspaces --all | sort -n)
-  echo "Occupied workspaces: ${occupied[*]}" >> "$log_file"
+  echo "Occupied workspaces after renumbering: ${occupied[*]}" >> "$log_file"
 
   # Check if we're on the last occupied workspace
   last_workspace="${occupied[-1]}"
@@ -38,11 +41,9 @@ if [[ "$direction" == "next" ]]; then
     if [[ $window_count -gt 1 ]]; then
       echo "Multiple windows, creating new workspace" >> "$log_file"
 
-      # Find next contiguous workspace number
-      # Count how many workspaces we have, next will be count + 1
-      workspace_count=${#occupied[@]}
-      next_workspace=$((workspace_count + 1))
-      echo "Next workspace (contiguous): $next_workspace" >> "$log_file"
+      # Next workspace is always last + 1 (since workspaces are contiguous)
+      next_workspace=$((last_workspace + 1))
+      echo "Next workspace (last + 1): $next_workspace" >> "$log_file"
 
       # Cap at 9 (max workspace in aerospace config)
       if [[ $next_workspace -le 9 ]]; then
