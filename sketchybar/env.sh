@@ -24,5 +24,6 @@ export ICOMOON="Icomoon:Regular"
 
 export BAR_HEIGHT=40
 export ITEM_HEIGHT=24
+export BACKGROUND_HEIGHT=20
 export APP_WIDTH=16
 export WORKSPACE_DIVIDER_WIDTH=4
