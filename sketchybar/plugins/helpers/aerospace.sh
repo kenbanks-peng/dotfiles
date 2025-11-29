@@ -45,7 +45,6 @@ remove_unmatched_items() {
   apps_to_remove=$(unmatched_items "$aerospace_window_ids" "$sketchy_apps")
   if [[ -n "$apps_to_remove" ]]; then
     sketchy_remove_item "$apps_to_remove"
-    maybe_add_default_item_to_spaceid "$sid"
   fi
 }
 
@@ -67,16 +66,8 @@ aerospace_workspace_change() {
   # highlight workspace
   sketchy_highlight_workspace "$sid"
 
-  # if default item, focus on finder so next change will produce yabai_window_focused event
-  local default_item=$(sketchy_get_item_by_window_id "$sid")
-  if [ -n "$default_item" ]; then
-    # BUG since previous app remains in focus, going from default item
-    # back to the same app doesn't provide the required yabai_window_focused event
-    # which would turn the icon green
-
-    # for default item, use spaceid as window_id
-    sketchy_highlight_window_id "$sid"
-  fi
+  # Sync workspaces after workspace change
+  sync_workspaces
 }
 
 aerospace_focused_window_change() {
@@ -91,40 +82,50 @@ aerospace_focused_window_change() {
   sketchy_highlight_window_id "$window_id"
 }
 
-maybe_add_default_item_to_spaceid() {
-  local sid="$1"
-  local items=$(sketchy_get_window_items_in_spaceid "$sid")
-  
-  # 10 is optioni 0
-  local icon="$((sid % 10))"
-  local font_size=$(($ICON_FONTSIZE-4))
+# Removed: maybe_add_default_item_to_spaceid - no longer needed with persistent-workspaces=[]
+# Removed: maybe_remove_default_item_from_spaceid - no longer needed with persistent-workspaces=[]
 
-  if [ -z "$items" ]; then
-    # if no items, add a default item
-    local item="window.$sid.$sid.default"
-    local props=(
-      background.corner_radius=0
-      icon.font="$FONT:$font_size"
-      icon.width="$APP_WIDTH"
-      icon="$icon"
-    )
-    sketchy_add_item "$item" left \
-      --move "$item" before "workspace.end.$sid" \
-      --set "$item" "${props[@]}" \
-      click_script="aerospace workspace $sid"
-    
-    # for default item, use spaceid as window_id
-    sketchy_highlight_window_id "$sid"
-  fi
-}
+# Sync workspaces: add workspace dividers for new workspaces, remove for empty ones
+sync_workspaces() {
+  local occupied_workspaces=($(aerospace list-workspaces --all | sort -n))
+  local sketchy_workspaces=($(sketchybar --query bar | jq -r '.items[] | select(test("^workspace\\.start\\.\\d+$"))' | sed 's/workspace\.start\.//'))
 
-maybe_remove_default_item_from_spaceid() {
-  local sid="$1"
-  local items=$(sketchy_get_window_items_in_spaceid "$sid")
-  local item_count=$(echo "$items" | wc -w | tr -d ' ')
-  if [[ "$items" == *"window.$sid.$sid.default"* ]] && [[ "$item_count" -gt 1 ]]; then
-    sketchy_remove_item "window.$sid.$sid.default"
-  fi
+  # Add missing workspaces
+  for sid in "${occupied_workspaces[@]}"; do
+    if ! printf '%s\n' "${sketchy_workspaces[@]}" | grep -q "^${sid}$"; then
+      # Workspace doesn't exist in sketchybar, add it
+      local start="workspace.start.$sid"
+      local end="workspace.end.$sid"
+
+      local props=(
+        background.padding_left=0
+        background.padding_right=0
+        background.height=$BAR_HEIGHT
+        background.color=$BAR
+        icon.width=10
+        icon.padding_left=5
+        icon.padding_right=5
+      )
+
+      sketchy_add_item "$start" left \
+        --set "$start" "${props[@]}"
+
+      sketchy_add_item "$end" left \
+        --set "$end" "${props[@]}"
+
+      sketchy_add_workspace "$sid"
+    fi
+  done
+
+  # Remove empty workspaces
+  for sid in "${sketchy_workspaces[@]}"; do
+    if ! printf '%s\n' "${occupied_workspaces[@]}" | grep -q "^${sid}$"; then
+      # Workspace exists in sketchybar but not in aerospace, remove it
+      sketchy_remove_item "workspace.start.$sid"
+      sketchy_remove_item "workspace.end.$sid"
+      sketchy_remove_item "workspace.$sid"
+    fi
+  done
 }
 
 
@@ -136,8 +137,8 @@ aerospace_remove_window_id() {
   item=$(sketchy_get_item_by_window_id "$window_id")
   sketchy_remove_item "$item"
 
-  # add default if no apps in workspace
-  maybe_add_default_item_to_spaceid "$sid"
+  # Sync workspaces after removing window
+  sync_workspaces
 }
 
 
@@ -146,8 +147,19 @@ aerospace_new_window_id() {
   local window_id="$1"
   local sid=$(aerospace_focused_workspace)
 
+  # Skip if window_id is empty
+  if [ -z "$window_id" ]; then
+    return
+  fi
+
   # ex: Cursor
   appname=$(aerospace_appname_from_window_id "$window_id")
+
+  # Skip if appname is empty
+  if [ -z "$appname" ]; then
+    return
+  fi
+
   item="window.$sid.$window_id.$appname"
 
   icon="$($CONFIG_DIR/icons_apps.sh "$appname")"
@@ -164,9 +176,10 @@ aerospace_new_window_id() {
     icon="$icon" icon.color="$icon_color" \
     click_script="aerospace focus --window-id $window_id"
 
-   # remove default if it exists
-  maybe_remove_default_item_from_spaceid "$sid"
   sketchy_highlight_window_id "$window_id"
+
+  # Sync workspaces after adding window
+  sync_workspaces
 }
 
 aerospace_add_apps_in_spaceid() {
@@ -187,6 +200,11 @@ aerospace_add_apps_in_spaceid() {
     for window_id in "${window_id_array[@]}"; do
       appname=$(aerospace_appname_from_window_id "$window_id")
 
+      # Skip windows with empty window_id or appname
+      if [ -z "$window_id" ] || [ -z "$appname" ]; then
+        continue
+      fi
+
       # Skip excluded apps and dialogs
       if ! allow_app "$appname" "$window_id"; then
         continue
@@ -203,11 +221,6 @@ aerospace_add_apps_in_spaceid() {
         icon="$icon" icon.color="$icon_color" \
         click_script="aerospace focus --window-id $window_id"
     done
-
-    # remove default item if no apps in workspace
-    maybe_remove_default_item_from_spaceid "$sid"
-  else
-    maybe_add_default_item_to_spaceid "$sid"
   fi
 }
 
