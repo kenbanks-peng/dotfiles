@@ -71,6 +71,10 @@ if [[ "$direction" == "next" ]]; then
     # Not on last workspace, use default behavior
     aerospace move-node-to-workspace --no-stdin next 2>> "$log_file"
     aerospace workspace --no-stdin next 2>> "$log_file"
+
+    # Ensure workspaces remain contiguous after move (in case source workspace is now empty)
+    echo "Ensuring contiguous workspaces" >> "$log_file"
+    "$HOME/Software/Public/dotfiles/sketchybar/scripts/ensure_contiguous_workspaces.sh" 2>> "$log_file"
   fi
 
 elif [[ "$direction" == "prev" ]]; then
@@ -123,6 +127,10 @@ elif [[ "$direction" == "prev" ]]; then
     # Not on first workspace, use default behavior
     aerospace move-node-to-workspace --no-stdin prev 2>> "$log_file"
     aerospace workspace --no-stdin prev 2>> "$log_file"
+
+    # Ensure workspaces remain contiguous after move (in case source workspace is now empty)
+    echo "Ensuring contiguous workspaces" >> "$log_file"
+    "$HOME/Software/Public/dotfiles/sketchybar/scripts/ensure_contiguous_workspaces.sh" 2>> "$log_file"
   fi
 fi
 
