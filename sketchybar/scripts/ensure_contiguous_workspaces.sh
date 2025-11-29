@@ -30,6 +30,10 @@ fi
 
 echo "Not contiguous, renumbering..." >> "$log_file"
 
+# Get the currently focused window so we can track where it ends up
+focused_window_id=$(aerospace list-windows --focused --format '%{window-id}' 2>/dev/null)
+echo "Focused window before renumbering: $focused_window_id" >> "$log_file"
+
 # Temporarily disable yabai signals to prevent intermediate rebuilds during renumbering
 echo "Disabling yabai signals during renumbering" >> "$log_file"
 yabai -m signal --remove window_created 2>/dev/null
@@ -59,6 +63,15 @@ for sid in "${occupied[@]}"; do
 done
 
 echo "Renumbering complete" >> "$log_file"
+
+# Focus the workspace containing the previously focused window
+if [[ -n "$focused_window_id" ]]; then
+  new_workspace=$(aerospace list-windows --all --format '%{workspace} %{window-id}' | grep " $focused_window_id$" | awk '{print $1}')
+  if [[ -n "$new_workspace" ]]; then
+    echo "Focusing workspace $new_workspace (contains focused window $focused_window_id)" >> "$log_file"
+    aerospace workspace "$new_workspace" </dev/null
+  fi
+fi
 
 # Re-enable yabai signals
 echo "Re-enabling yabai signals" >> "$log_file"
