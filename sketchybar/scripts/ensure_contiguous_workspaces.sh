@@ -23,21 +23,39 @@ if [[ "$is_contiguous" == "true" ]]; then
 fi
 
 # Renumber workspaces to be contiguous SYNCHRONOUSLY
-new_number=1
+# Step 1: Move all workspaces to temporary numbers (100+) to avoid conflicts
+temp_offset=100
+index=0
 for sid in "${occupied[@]}"; do
-  if [[ $sid -ne $new_number ]]; then
-    # Move all windows from old workspace to new workspace
-    aerospace_window_ids=$(aerospace list-windows --workspace "$sid" --format '%{window-id}')
+  temp_workspace=$((temp_offset + index))
+  aerospace_window_ids=$(aerospace list-windows --workspace "$sid" --format '%{window-id}')
 
-    if [[ -n "$aerospace_window_ids" ]]; then
-      # Read into array
-      read -ra window_id_array <<< "$aerospace_window_ids"
-      for window_id in "${window_id_array[@]}"; do
-        aerospace move-node-to-workspace "$new_number" --window-id "$window_id" </dev/null
-      done
-    fi
+  if [[ -n "$aerospace_window_ids" ]]; then
+    # Read into array
+    read -ra window_id_array <<< "$aerospace_window_ids"
+    for window_id in "${window_id_array[@]}"; do
+      aerospace move-node-to-workspace "$temp_workspace" --window-id "$window_id" </dev/null
+    done
+  fi
+  index=$((index + 1))
+done
+
+# Step 2: Move from temporary numbers to final contiguous numbers (1, 2, 3...)
+new_number=1
+index=0
+for sid in "${occupied[@]}"; do
+  temp_workspace=$((temp_offset + index))
+  aerospace_window_ids=$(aerospace list-windows --workspace "$temp_workspace" --format '%{window-id}')
+
+  if [[ -n "$aerospace_window_ids" ]]; then
+    # Read into array
+    read -ra window_id_array <<< "$aerospace_window_ids"
+    for window_id in "${window_id_array[@]}"; do
+      aerospace move-node-to-workspace "$new_number" --window-id "$window_id" </dev/null
+    done
   fi
   new_number=$((new_number + 1))
+  index=$((index + 1))
 done
 
 # CRITICAL: Trigger Sketchybar to re-sync AFTER all moves are complete
