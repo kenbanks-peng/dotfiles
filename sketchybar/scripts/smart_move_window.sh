@@ -34,22 +34,34 @@ if [[ "$direction" == "next" ]]; then
     if [[ $window_count -gt 1 ]]; then
       echo "Multiple windows, creating new workspace" >> "$log_file"
 
-      # Find first available workspace number (fill gaps, then last + 1)
+      # Find first gap in workspace numbers, or use last + 1
       next_workspace=0
-      for i in {1..9}; do
-        # Check if workspace $i exists in occupied list
-        if ! printf '%s\n' "${occupied[@]}" | grep -q "^${i}$"; then
-          next_workspace=$i
+      expected=1
+      for sid in "${occupied[@]}"; do
+        if [[ $sid -ne $expected ]]; then
+          # Found a gap
+          next_workspace=$expected
           break
         fi
+        expected=$((expected + 1))
       done
 
-      if [[ $next_workspace -gt 0 ]]; then
-        echo "Creating workspace $next_workspace (filling gap or extending)" >> "$log_file"
+      # If no gap found, use last + 1
+      if [[ $next_workspace -eq 0 ]]; then
+        next_workspace=$((last_workspace + 1))
+      fi
+
+      if [[ $next_workspace -le 9 ]]; then
+        echo "Creating workspace $next_workspace" >> "$log_file"
+        # Move window to new workspace
         aerospace move-node-to-workspace "$next_workspace" </dev/null 2>> "$log_file"
         aerospace workspace "$next_workspace" </dev/null 2>> "$log_file"
+
+        # SYNCHRONOUSLY ensure workspaces are contiguous
+        echo "Ensuring contiguous workspaces" >> "$log_file"
+        "$HOME/Software/Public/dotfiles/sketchybar/scripts/ensure_contiguous_workspaces.sh" 2>> "$log_file"
       else
-        echo "All workspaces 1-9 are occupied, cannot create new workspace" >> "$log_file"
+        echo "Already at max workspace 9, cannot create new workspace" >> "$log_file"
       fi
     else
       echo "Only one window, not creating new workspace" >> "$log_file"

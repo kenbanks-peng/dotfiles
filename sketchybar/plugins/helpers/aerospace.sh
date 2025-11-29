@@ -141,8 +141,9 @@ aerospace_remove_window_id() {
   item=$(sketchy_get_item_by_window_id "$window_id")
   sketchy_remove_item "$item"
 
-  # Sync workspaces after removing window
-  sync_workspaces
+  # Ensure contiguous workspace numbering after removing window
+  # This will also trigger Sketchybar sync
+  "$CONFIG_DIR/scripts/ensure_contiguous_workspaces.sh"
 }
 
 
