@@ -102,13 +102,9 @@ rebuild_workspaces() {
     if ! printf '%s\n' "${occupied_workspaces[@]}" | grep -q "^${sid}$"; then
       # Workspace no longer exists - remove only the workspace dividers, not window items
       echo "  Removing workspace $sid dividers (no longer exists)" >> "$log_file"
-      echo "    Calling: sketchy_remove_item workspace.start.$sid" >> "$log_file"
       sketchy_remove_item "workspace.start.$sid"
-      echo "    Calling: sketchy_remove_item workspace.end.$sid" >> "$log_file"
       sketchy_remove_item "workspace.end.$sid"
-      echo "    Calling: sketchy_remove_item workspace.$sid" >> "$log_file"
       sketchy_remove_item "workspace.$sid"
-      echo "    Removal complete for workspace $sid" >> "$log_file"
     fi
   done
 

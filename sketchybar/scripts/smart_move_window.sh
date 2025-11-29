@@ -5,11 +5,8 @@
 # 2. Fewer spaces: pull other windows opposite to arrow direction
 # 3. More spaces: create new space and move focused window in arrow direction
 
-# Source the rebuild function directly
-source "$HOME/Software/Public/dotfiles/sketchybar/plugins/helpers/aerospace.sh"
-source "$HOME/Software/Public/dotfiles/sketchybar/plugins/helpers/sketchy.sh"
-source "$HOME/Software/Public/dotfiles/sketchybar/plugins/helpers/yabai.sh"
-source "$HOME/Software/Public/dotfiles/sketchybar/env.sh"
+# NOTE: This script only moves windows. Sketchybar rebuild is triggered automatically
+# by yabai signals when windows are created/destroyed/moved.
 
 direction="$1"  # "next" or "prev"
 
@@ -54,8 +51,8 @@ if [[ "$direction" == "next" ]]; then
         echo "Ensuring contiguous workspaces" >> "$log_file"
         "$HOME/Software/Public/dotfiles/sketchybar/scripts/ensure_contiguous_workspaces.sh" 2>> "$log_file"
 
-        echo "Rebuilding Sketchybar synchronously" >> "$log_file"
-        rebuild_workspaces
+        # NOTE: Do NOT call rebuild_workspaces() here - yabai signals automatically trigger it
+        # when windows are created/destroyed/moved
       else
         echo "Already at max workspace 9" >> "$log_file"
       fi
@@ -100,11 +97,8 @@ if [[ "$direction" == "next" ]]; then
       echo "Ensuring contiguous workspaces" >> "$log_file"
       "$HOME/Software/Public/dotfiles/sketchybar/scripts/ensure_contiguous_workspaces.sh" 2>> "$log_file"
 
-      echo "Rebuilding Sketchybar synchronously" >> "$log_file"
-      rebuild_workspaces
-
-      echo "Restoring focus to window $focused_window_id" >> "$log_file"
-      aerospace focus --window-id "$focused_window_id" </dev/null 2>> "$log_file"
+      # NOTE: Do NOT call rebuild_workspaces() here - yabai signals automatically trigger it
+      # when windows are created/destroyed/moved
     else
       echo "No next workspace found" >> "$log_file"
     fi
@@ -144,11 +138,8 @@ elif [[ "$direction" == "prev" ]]; then
       echo "Ensuring contiguous workspaces" >> "$log_file"
       "$HOME/Software/Public/dotfiles/sketchybar/scripts/ensure_contiguous_workspaces.sh" 2>> "$log_file"
 
-      echo "Rebuilding Sketchybar synchronously" >> "$log_file"
-      rebuild_workspaces
-
-      echo "Restoring focus to window $focused_window_id" >> "$log_file"
-      aerospace focus --window-id "$focused_window_id" </dev/null 2>> "$log_file"
+      # NOTE: Do NOT call rebuild_workspaces() here - yabai signals automatically trigger it
+      # when windows are created/destroyed/moved
     else
       echo "Only one window, no action" >> "$log_file"
     fi
@@ -190,11 +181,8 @@ elif [[ "$direction" == "prev" ]]; then
       echo "Ensuring contiguous workspaces" >> "$log_file"
       "$HOME/Software/Public/dotfiles/sketchybar/scripts/ensure_contiguous_workspaces.sh" 2>> "$log_file"
 
-      echo "Rebuilding Sketchybar synchronously" >> "$log_file"
-      rebuild_workspaces
-
-      echo "Restoring focus to window $focused_window_id" >> "$log_file"
-      aerospace focus --window-id "$focused_window_id" </dev/null 2>> "$log_file"
+      # NOTE: Do NOT call rebuild_workspaces() here - yabai signals automatically trigger it
+      # when windows are created/destroyed/moved
     else
       echo "No prev workspace found" >> "$log_file"
     fi
