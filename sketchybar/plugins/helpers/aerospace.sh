@@ -14,67 +14,12 @@ aerospace_focused_workspace() {
   echo "$(aerospace list-workspaces --focused)"
 }
 
-# returns window_ids in DFS (visual layout) order ex: 46356 46357
+# returns window_ids ex: 46356
 aerospace_window_ids_in_workspace() {
   local sid="$1"
-
-  # Get all window IDs in this workspace (arbitrary order)
-  local json=$(aerospace list-windows --workspace "$sid" --json --format '%{monitor-id}%{workspace}%{app-bundle-id}%{window-id}%{app-name}')
-  local all_window_ids=($(echo "$json" | jq -r '.[] | ."window-id"'))
-
-  # If no windows or only one window, return as-is
-  if [ ${#all_window_ids[@]} -le 1 ]; then
-    echo "${all_window_ids[@]}"
-    return
-  fi
-
-  # Save current state
-  local original_workspace=$(aerospace list-workspaces --focused 2>/dev/null)
-  local original_window_id=$(aerospace list-windows --focused --format '%{window-id}' 2>/dev/null)
-  local need_restore=false
-
-  # Switch to target workspace if needed
-  if [ "$original_workspace" != "$sid" ]; then
-    aerospace workspace "$sid" 2>/dev/null
-    need_restore=true
-  fi
-
-  # Build DFS-ordered list
-  local ordered_ids=()
-  local dfs_index=0
-
-  while [ $dfs_index -lt ${#all_window_ids[@]} ]; do
-    # Focus window at this DFS index
-    if aerospace focus --dfs-index "$dfs_index" 2>/dev/null; then
-      local window_id=$(aerospace list-windows --focused --format '%{window-id}' 2>/dev/null)
-      if [ -n "$window_id" ]; then
-        ordered_ids+=("$window_id")
-      fi
-    fi
-    dfs_index=$((dfs_index + 1))
-
-    # Safety limit
-    if [ $dfs_index -gt 50 ]; then
-      break
-    fi
-  done
-
-  # Restore original state only if we changed it
-  if [ "$need_restore" = true ]; then
-    if [ -n "$original_workspace" ]; then
-      aerospace workspace "$original_workspace" 2>/dev/null
-    fi
-    if [ -n "$original_window_id" ]; then
-      aerospace focus --window-id "$original_window_id" 2>/dev/null
-    fi
-  fi
-
-  # Return ordered list, or fallback to original list if DFS failed
-  if [ ${#ordered_ids[@]} -gt 0 ]; then
-    echo "${ordered_ids[@]}"
-  else
-    echo "${all_window_ids[@]}"
-  fi
+  local json=$(aerospace list-windows --workspace "$sid" --json --format %{monitor-id}%{workspace}%{app-bundle-id}%{window-id}%{app-name})
+  local filtered=$(echo "$json" | jq -r '.[] | ."window-id"' | jq -s -r 'join(" ")')
+  echo "$filtered"
 }
 
 # returns appname ex: Cursor from window_id ex: 46356
