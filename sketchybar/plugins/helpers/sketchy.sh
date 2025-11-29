@@ -98,6 +98,7 @@ sketchy_highlight_window_id() {
     read -r prev_window_id <"$CACHE_DIR/highlighted.window_id"
   fi
 
+  # Only unhighlight previous window if we're changing to a different window
   if [ -n "$prev_window_id" ] && [ "$prev_window_id" != "$window_id" ]; then
     local prev_item=$(sketchy_get_item_by_window_id "$prev_window_id")
     if [ -n "$prev_item" ]; then
@@ -106,9 +107,10 @@ sketchy_highlight_window_id() {
     fi
   fi
 
-  if [ -n "$window_id" ] && [ "$prev_window_id" != "$window_id" ]; then
+  # Highlight the current window (even if it's the same as before to ensure it stays highlighted)
+  if [ -n "$window_id" ]; then
     local item=$(sketchy_get_item_by_window_id "$window_id")
-    if [ -n "$item" ]; then 
+    if [ -n "$item" ]; then
       local color=$(sketchy_get_space_foreground_color true)
       sketchybar --set "$item" icon.color="$color"
     fi
