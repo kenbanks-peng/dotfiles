@@ -264,7 +264,7 @@ aerospace_new_window_id() {
   item="window.$sid.$window_id.$appname"
 
   icon="$($CONFIG_DIR/icons_apps.sh "$appname")"
-  icon_color="$(sketchy_get_space_foreground_color $window_id)"
+  icon_color="$(sketchy_get_space_foreground_color false)"
 
   props=(
     background.corner_radius=0
@@ -349,13 +349,23 @@ aerospace_add_apps_in_spaceid() {
 
       item="window.$sid.$window_id.$appname"
       icon="$($CONFIG_DIR/icons_apps.sh "$appname")"
-      icon_color="$(sketchy_get_space_foreground_color $window_id)"
 
-      # only add if doesn't already exist
-      sketchy_add_item "$item" left \
-        --set "$item" "${props[@]}" \
-        icon="$icon" icon.color="$icon_color" \
-        click_script="aerospace focus --window-id $window_id"
+      # Check if item already exists
+      local items=$(sketchybar --query bar | jq -r '.items[]')
+      if ! item_in_array "$item" "$items"; then
+        # New item - set all properties including icon.color
+        icon_color="$(sketchy_get_space_foreground_color false)"
+        sketchy_add_item "$item" left \
+          --set "$item" "${props[@]}" \
+          icon="$icon" icon.color="$icon_color" \
+          click_script="aerospace focus --window-id $window_id"
+      else
+        # Existing item - update properties but preserve icon.color (which might be highlighted)
+        sketchy_add_item "$item" left \
+          --set "$item" "${props[@]}" \
+          icon="$icon" \
+          click_script="aerospace focus --window-id $window_id"
+      fi
 
       # Position after the previous item to maintain aerospace's order
       sketchybar --move "$item" after "$prev_item"
