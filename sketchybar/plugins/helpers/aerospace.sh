@@ -116,15 +116,31 @@ sync_workspaces() {
 
       sketchy_add_workspace "$sid"
 
-      # Populate the workspace with existing apps
+      # Move any existing window items for this workspace to correct position
+      local existing_windows=$(sketchybar --query bar | jq -r --arg sid "$sid" '.items[] | select(test("^window\\." + $sid + "\\."))')
+      if [[ -n "$existing_windows" ]]; then
+        while IFS= read -r item; do
+          sketchybar --move "$item" before "workspace.end.$sid"
+        done <<< "$existing_windows"
+      fi
+
+      # Populate the workspace with any missing apps
       aerospace_add_apps_in_spaceid "$sid"
     fi
   done
 
-  # Remove empty workspaces
+  # Remove workspaces that don't exist in AeroSpace
   for sid in "${sketchy_workspaces[@]}"; do
     if ! printf '%s\n' "${occupied_workspaces[@]}" | grep -q "^${sid}$"; then
-      # Workspace exists in sketchybar but not in aerospace, remove it
+      # Remove all window items in this workspace first
+      local window_items=$(sketchybar --query bar | jq -r --arg sid "$sid" '.items[] | select(test("^window\\." + $sid + "\\."))')
+      if [[ -n "$window_items" ]]; then
+        while IFS= read -r item; do
+          sketchy_remove_item "$item"
+        done <<< "$window_items"
+      fi
+
+      # Then remove workspace dividers and bracket
       sketchy_remove_item "workspace.start.$sid"
       sketchy_remove_item "workspace.end.$sid"
       sketchy_remove_item "workspace.$sid"
