@@ -154,7 +154,7 @@ sync_workspaces() {
       local props=(
         background.padding_left=0
         background.padding_right=0
-        background.height=$BAR_HEIGHT
+        background.height=$BACKGROUND_HEIGHT
         background.color=$BAR
         background.corner_radius=0
         width=$WORKSPACE_DIVIDER_WIDTH
