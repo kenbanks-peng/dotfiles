@@ -11,20 +11,13 @@ echo "=== $(date) ===" >> "$log_file"
 echo "Direction: $direction" >> "$log_file"
 
 if [[ "$direction" == "next" ]]; then
-  # First, ensure workspaces are contiguous before we do anything
-  echo "Ensuring contiguous workspaces before move" >> "$log_file"
-  "$HOME/Software/Public/dotfiles/sketchybar/scripts/ensure_contiguous_workspaces.sh" 2>> "$log_file"
-
-  # Wait a moment for aerospace to process the workspace changes
-  sleep 0.1
-
-  # Get current workspace AFTER renumbering
+  # Get current workspace
   current=$(aerospace list-workspaces --focused)
-  echo "Current workspace after renumbering: $current" >> "$log_file"
+  echo "Current workspace: $current" >> "$log_file"
 
-  # Get all occupied workspaces sorted numerically AFTER renumbering
+  # Get all occupied workspaces sorted numerically
   mapfile -t occupied < <(aerospace list-workspaces --all | sort -n)
-  echo "Occupied workspaces after renumbering: ${occupied[*]}" >> "$log_file"
+  echo "Occupied workspaces: ${occupied[*]}" >> "$log_file"
 
   # Check if we're on the last occupied workspace
   last_workspace="${occupied[-1]}"
@@ -40,20 +33,9 @@ if [[ "$direction" == "next" ]]; then
     # Only create new workspace if there are multiple windows (so we're not the only one)
     if [[ $window_count -gt 1 ]]; then
       echo "Multiple windows, creating new workspace" >> "$log_file"
-
-      # Next workspace is always last + 1 (since workspaces are contiguous)
-      next_workspace=$((last_workspace + 1))
-      echo "Next workspace (last + 1): $next_workspace" >> "$log_file"
-
-      # Cap at 9 (max workspace in aerospace config)
-      if [[ $next_workspace -le 9 ]]; then
-        echo "Moving to workspace $next_workspace" >> "$log_file"
-        aerospace move-node-to-workspace "$next_workspace" </dev/null 2>> "$log_file"
-        aerospace workspace "$next_workspace" </dev/null 2>> "$log_file"
-      else
-        echo "At max (9 workspaces), cannot create new workspace" >> "$log_file"
-        # Already at max, do nothing
-      fi
+      # Let AeroSpace decide the next workspace number
+      aerospace move-node-to-workspace --no-stdin next 2>> "$log_file"
+      aerospace workspace --no-stdin next 2>> "$log_file"
     else
       echo "Only one window, not creating new workspace" >> "$log_file"
     fi
