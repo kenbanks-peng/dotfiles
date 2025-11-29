@@ -24,21 +24,32 @@ if [[ "$direction" == "next" ]]; then
   echo "Last workspace: $last_workspace" >> "$log_file"
 
   if [[ "$current" == "$last_workspace" ]]; then
-    echo "On last workspace, creating new one" >> "$log_file"
-    # We're on the last workspace - find next available number
-    next_workspace=$((current + 1))
-    echo "Next workspace: $next_workspace" >> "$log_file"
+    echo "On last workspace" >> "$log_file"
 
-    # Cap at 9 (max workspace in aerospace config)
-    if [[ $next_workspace -le 9 ]]; then
-      echo "Moving to workspace $next_workspace" >> "$log_file"
-      aerospace move-node-to-workspace "$next_workspace" </dev/null 2>> "$log_file"
-      aerospace workspace "$next_workspace" </dev/null 2>> "$log_file"
+    # Check how many windows are in the current workspace
+    window_count=$(aerospace list-windows --workspace "$current" --format '%{window-id}' | wc -l | tr -d ' ')
+    echo "Window count in workspace $current: $window_count" >> "$log_file"
+
+    # Only create new workspace if there are multiple windows (so we're not the only one)
+    if [[ $window_count -gt 1 ]]; then
+      echo "Multiple windows, creating new workspace" >> "$log_file"
+      # We're on the last workspace - find next available number
+      next_workspace=$((current + 1))
+      echo "Next workspace: $next_workspace" >> "$log_file"
+
+      # Cap at 9 (max workspace in aerospace config)
+      if [[ $next_workspace -le 9 ]]; then
+        echo "Moving to workspace $next_workspace" >> "$log_file"
+        aerospace move-node-to-workspace "$next_workspace" </dev/null 2>> "$log_file"
+        aerospace workspace "$next_workspace" </dev/null 2>> "$log_file"
+      else
+        echo "At max, using default next" >> "$log_file"
+        # Already at max, just use default behavior
+        aerospace move-node-to-workspace --no-stdin next 2>> "$log_file"
+        aerospace workspace --no-stdin next 2>> "$log_file"
+      fi
     else
-      echo "At max, using default next" >> "$log_file"
-      # Already at max, just use default behavior
-      aerospace move-node-to-workspace --no-stdin next 2>> "$log_file"
-      aerospace workspace --no-stdin next 2>> "$log_file"
+      echo "Only one window, not creating new workspace" >> "$log_file"
     fi
   else
     echo "Not on last workspace, using default next" >> "$log_file"
