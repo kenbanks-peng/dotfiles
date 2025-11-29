@@ -112,7 +112,7 @@ rebuild_workspaces() {
     background.height=$BAR_HEIGHT
     background.color=$BAR
     background.corner_radius=0
-    width=0
+    width=$WORKSPACE_DIVIDER_WIDTH
     icon.drawing=off
     label.drawing=off
     y_offset=0
@@ -157,7 +157,7 @@ sync_workspaces() {
         background.height=$BAR_HEIGHT
         background.color=$BAR
         background.corner_radius=0
-        width=0
+        width=$WORKSPACE_DIVIDER_WIDTH
         icon.drawing=off
         label.drawing=off
         y_offset=0
