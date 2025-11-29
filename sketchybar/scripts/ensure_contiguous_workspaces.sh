@@ -70,6 +70,5 @@ done
 
 echo "Renumbering complete" >> "$log_file"
 
-# CRITICAL: Trigger Sketchybar to re-sync AFTER all moves are complete
-# This ensures Sketchybar sees the final state, not intermediate states
-sketchybar --trigger aerospace_workspace_change FORCED=true
+# NOTE: Do NOT trigger sketchybar here - let the caller handle it
+# The caller (smart_move_window.sh) will trigger the rebuild synchronously
