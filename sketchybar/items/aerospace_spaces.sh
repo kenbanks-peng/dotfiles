@@ -41,9 +41,9 @@ props=(
   background.padding_right=0
   background.height=$BAR_HEIGHT
   background.color=$BAR
-  icon.width=2
-  icon.padding_left=0
-  icon.padding_right=0
+  icon.width=10
+  icon.padding_left=5
+  icon.padding_right=5
 )
 workspaces=($(aerospace_workspaces))
 for sid in "${workspaces[@]}"; do

@@ -53,8 +53,8 @@ default=(
   icon.font="$FONT:$ICON_FONTSIZE"
   icon.color=$TEXT
   icon.align="center"
-  icon.padding_left=5
-  icon.padding_right=5
+  icon.padding_left=2
+  icon.padding_right=2
 
   label.font="$FONT:$FONTSIZE"
   label.color=$TEXT
