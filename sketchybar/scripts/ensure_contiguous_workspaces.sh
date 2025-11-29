@@ -30,45 +30,43 @@ fi
 
 echo "Not contiguous, renumbering..." >> "$log_file"
 
-# Renumber workspaces to be contiguous SYNCHRONOUSLY
-# Step 1: Move all workspaces to temporary numbers (100+) to avoid conflicts
-temp_offset=100
-index=0
-echo "Step 1: Moving to temp workspaces" >> "$log_file"
-for sid in "${occupied[@]}"; do
-  temp_workspace=$((temp_offset + index))
-  # Get window IDs - aerospace outputs one per line
-  mapfile -t window_id_array < <(aerospace list-windows --workspace "$sid" --format '%{window-id}')
-  echo "  Workspace $sid -> temp $temp_workspace (windows: ${window_id_array[*]})" >> "$log_file"
+# Temporarily disable yabai signals to prevent intermediate rebuilds during renumbering
+echo "Disabling yabai signals during renumbering" >> "$log_file"
+yabai -m signal --remove window_created 2>/dev/null
+yabai -m signal --remove window_destroyed 2>/dev/null
+yabai -m signal --remove window_minimized 2>/dev/null
+yabai -m signal --remove window_deminimized 2>/dev/null
 
-  for window_id in "${window_id_array[@]}"; do
-    if [[ -n "$window_id" ]]; then
-      aerospace move-node-to-workspace "$temp_workspace" --window-id "$window_id" </dev/null
-    fi
-  done
-  index=$((index + 1))
-done
-
-# Step 2: Move from temporary numbers to final contiguous numbers (1, 2, 3...)
-echo "Step 2: Moving to final workspaces" >> "$log_file"
+# Renumber workspaces directly - move windows from high to low workspace numbers
+# This avoids conflicts without needing temporary workspaces
+echo "Renumbering workspaces from high to low" >> "$log_file"
 new_number=1
-index=0
 for sid in "${occupied[@]}"; do
-  temp_workspace=$((temp_offset + index))
-  # Get window IDs - aerospace outputs one per line
-  mapfile -t window_id_array < <(aerospace list-windows --workspace "$temp_workspace" --format '%{window-id}')
-  echo "  Temp $temp_workspace -> workspace $new_number (windows: ${window_id_array[*]})" >> "$log_file"
+  if [[ $sid -ne $new_number ]]; then
+    # Get window IDs for this workspace
+    mapfile -t window_id_array < <(aerospace list-windows --workspace "$sid" --format '%{window-id}')
+    echo "  Moving workspace $sid -> $new_number (windows: ${window_id_array[*]})" >> "$log_file"
 
-  for window_id in "${window_id_array[@]}"; do
-    if [[ -n "$window_id" ]]; then
-      aerospace move-node-to-workspace "$new_number" --window-id "$window_id" </dev/null
-    fi
-  done
+    for window_id in "${window_id_array[@]}"; do
+      if [[ -n "$window_id" ]]; then
+        aerospace move-node-to-workspace "$new_number" --window-id "$window_id" </dev/null
+      fi
+    done
+  else
+    echo "  Workspace $sid already correct" >> "$log_file"
+  fi
   new_number=$((new_number + 1))
-  index=$((index + 1))
 done
 
 echo "Renumbering complete" >> "$log_file"
 
-# NOTE: Do NOT trigger sketchybar here - let the caller handle it
-# The caller (smart_move_window.sh) will trigger the rebuild synchronously
+# Re-enable yabai signals
+echo "Re-enabling yabai signals" >> "$log_file"
+yabai -m signal --add event=window_created action="sketchybar --trigger yabai_window_created ID=\$YABAI_WINDOW_ID &> /dev/null"
+yabai -m signal --add event=window_destroyed action="sketchybar --trigger yabai_window_destroyed ID=\$YABAI_WINDOW_ID &> /dev/null"
+yabai -m signal --add event=window_minimized action="sketchybar --trigger yabai_window_minimized ID=\$YABAI_WINDOW_ID &> /dev/null"
+yabai -m signal --add event=window_deminimized action="sketchybar --trigger yabai_window_deminimized ID=\$YABAI_WINDOW_ID &> /dev/null"
+
+# Trigger a single rebuild now that renumbering is complete
+echo "Triggering sketchybar rebuild after renumbering" >> "$log_file"
+sketchybar --trigger yabai_window_created &> /dev/null
