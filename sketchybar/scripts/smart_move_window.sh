@@ -11,7 +11,11 @@ echo "=== $(date) ===" >> "$log_file"
 echo "Direction: $direction" >> "$log_file"
 
 if [[ "$direction" == "next" ]]; then
-  # Get current workspace
+  # First, ensure workspaces are contiguous before we do anything
+  echo "Ensuring contiguous workspaces before move" >> "$log_file"
+  "$HOME/Software/Public/dotfiles/sketchybar/scripts/ensure_contiguous_workspaces.sh" 2>> "$log_file"
+
+  # Get current workspace (may have changed after renumbering)
   current=$(aerospace list-workspaces --focused)
   echo "Current workspace: $current" >> "$log_file"
 
@@ -45,9 +49,6 @@ if [[ "$direction" == "next" ]]; then
         echo "Moving to workspace $next_workspace" >> "$log_file"
         aerospace move-node-to-workspace "$next_workspace" </dev/null 2>> "$log_file"
         aerospace workspace "$next_workspace" </dev/null 2>> "$log_file"
-
-        # Ensure workspaces remain contiguous after this move
-        "$HOME/Software/Public/dotfiles/sketchybar/scripts/ensure_contiguous_workspaces.sh" 2>> "$log_file"
       else
         echo "At max (9 workspaces), cannot create new workspace" >> "$log_file"
         # Already at max, do nothing
