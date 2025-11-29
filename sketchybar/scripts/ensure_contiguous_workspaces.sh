@@ -22,9 +22,11 @@ for sid in "${occupied[@]}"; do
   expected=$((expected + 1))
 done
 
-# If already contiguous, nothing to do
+# If already contiguous, trigger rebuild and exit
+# (Windows may have moved even if workspace numbers are correct)
 if [[ "$is_contiguous" == "true" ]]; then
-  echo "Already contiguous, exiting" >> "$log_file"
+  echo "Already contiguous, triggering rebuild" >> "$log_file"
+  sketchybar --trigger yabai_window_created &> /dev/null
   exit 0
 fi
 

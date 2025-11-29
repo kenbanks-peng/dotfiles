@@ -92,6 +92,10 @@ if [[ "$direction" == "next" ]]; then
         # Scenario 1: Multiple windows in current workspace - move focused window
         echo "Scenario 1: Multiple windows in workspace, moving focused window to $next_workspace" >> "$log_file"
         aerospace move-node-to-workspace "$next_workspace" --window-id "$focused_window_id" </dev/null 2>> "$log_file"
+
+        # Follow the focused window to its new workspace and restore focus
+        echo "Following window to workspace $next_workspace and restoring focus to $focused_window_id" >> "$log_file"
+        aerospace focus --window-id "$focused_window_id" </dev/null 2>> "$log_file"
       fi
 
       echo "Ensuring contiguous workspaces" >> "$log_file"
@@ -176,6 +180,10 @@ elif [[ "$direction" == "prev" ]]; then
         # Scenario 1: Multiple windows in current workspace - move focused window
         echo "Scenario 1: Multiple windows in workspace, moving focused window to $prev_workspace" >> "$log_file"
         aerospace move-node-to-workspace "$prev_workspace" --window-id "$focused_window_id" </dev/null 2>> "$log_file"
+
+        # Follow the focused window to its new workspace and restore focus
+        echo "Following window to workspace $prev_workspace and restoring focus to $focused_window_id" >> "$log_file"
+        aerospace focus --window-id "$focused_window_id" </dev/null 2>> "$log_file"
       fi
 
       echo "Ensuring contiguous workspaces" >> "$log_file"
