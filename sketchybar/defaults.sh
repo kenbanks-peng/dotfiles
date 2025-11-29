@@ -47,8 +47,8 @@ default=(
   background.height=$ITEM_HEIGHT
   background.color=$TRANSPARENT
   background.corner_radius=5
-  background.padding_left=4
-  background.padding_right=4
+  background.padding_left=6
+  background.padding_right=6
 
   icon.font="$FONT:$ICON_FONTSIZE"
   icon.color=$TEXT
