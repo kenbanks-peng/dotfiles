@@ -97,17 +97,24 @@ elif [[ "$direction" == "prev" ]]; then
     if [[ $window_count -gt 1 ]]; then
       echo "Multiple windows, creating new workspace to the left" >> "$log_file"
 
+      # Get the focused window ID before moving (so we can focus it after renumbering)
+      focused_window_id=$(aerospace list-windows --focused --format '%{window-id}')
+      echo "Focused window ID: $focused_window_id" >> "$log_file"
+
       # Use workspace 0 temporarily - ensure_contiguous will renumber everything
       prev_workspace=0
       echo "Creating workspace $prev_workspace" >> "$log_file"
 
-      # Move window to new workspace
+      # Move window to new workspace (don't focus workspace 0 yet)
       aerospace move-node-to-workspace "$prev_workspace" </dev/null 2>> "$log_file"
-      aerospace workspace "$prev_workspace" </dev/null 2>> "$log_file"
 
       # SYNCHRONOUSLY ensure workspaces are contiguous (will renumber 0 -> 1, others shift right)
       echo "Ensuring contiguous workspaces" >> "$log_file"
       "$HOME/Software/Public/dotfiles/sketchybar/scripts/ensure_contiguous_workspaces.sh" 2>> "$log_file"
+
+      # After renumbering, focus the window by its ID (it's now in workspace 1)
+      echo "Focusing window $focused_window_id" >> "$log_file"
+      aerospace focus --window-id "$focused_window_id" </dev/null 2>> "$log_file"
     else
       echo "Only one window, not creating new workspace" >> "$log_file"
     fi

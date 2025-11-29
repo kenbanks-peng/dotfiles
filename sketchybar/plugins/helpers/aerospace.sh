@@ -139,9 +139,14 @@ rebuild_workspaces() {
     prev_end="$end"
   done
 
-  # Highlight current workspace
+  # Highlight current workspace and focused window
   local focused_sid=$(aerospace_focused_workspace)
   sketchy_highlight_workspace "$focused_sid"
+
+  local focused_window_id=$(yabai_get_focused_window_id)
+  if [ -n "$focused_window_id" ]; then
+    sketchy_highlight_window_id "$focused_window_id"
+  fi
 }
 
 # Sync workspaces: add workspace dividers for new workspaces, remove for empty ones
