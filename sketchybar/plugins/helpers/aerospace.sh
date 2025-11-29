@@ -108,11 +108,36 @@ sync_workspaces() {
         icon.padding_right=5
       )
 
-      sketchy_add_item "$start" left \
-        --set "$start" "${props[@]}"
+      # Find the correct position to insert this workspace
+      # Look for the next higher workspace number that exists in sketchybar
+      local position_found=false
+      for next_sid in "${occupied_workspaces[@]}"; do
+        if [ "$next_sid" -gt "$sid" ]; then
+          # Check if this next workspace exists in sketchybar
+          if printf '%s\n' "${sketchy_workspaces[@]}" | grep -q "^${next_sid}$"; then
+            # Insert before this workspace
+            sketchy_add_item "$start" left \
+              --set "$start" "${props[@]}"
+            sketchybar --move "$start" before "workspace.start.$next_sid"
 
-      sketchy_add_item "$end" left \
-        --set "$end" "${props[@]}"
+            sketchy_add_item "$end" left \
+              --set "$end" "${props[@]}"
+            sketchybar --move "$end" after "$start"
+
+            position_found=true
+            break
+          fi
+        fi
+      done
+
+      # If no higher workspace found, just add to left (will be at the end)
+      if [ "$position_found" = false ]; then
+        sketchy_add_item "$start" left \
+          --set "$start" "${props[@]}"
+
+        sketchy_add_item "$end" left \
+          --set "$end" "${props[@]}"
+      fi
 
       sketchy_add_workspace "$sid"
 

@@ -46,7 +46,7 @@ props=(
   icon.padding_left=5
   icon.padding_right=5
 )
-workspaces=($(aerospace_workspaces))
+workspaces=($(aerospace_workspaces | sort -n))
 for sid in "${workspaces[@]}"; do
   start="workspace.start.$sid"
   end="workspace.end.$sid"
