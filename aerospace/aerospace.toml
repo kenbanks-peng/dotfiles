@@ -138,6 +138,7 @@ alt-6 = 'workspace 6'
 alt-7 = 'workspace 7'
 alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
+alt-0 = 'exec-and-forget $HOME/Software/Public/dotfiles/sketchybar/scripts/new_workspace.sh'
 
 # cycle apps in current workspace
 alt-up = [
@@ -162,8 +163,8 @@ cmd-left = 'exec-and-forget $HOME/Software/bin/wm goto_space --dir="prev" --mode
 cmd-right = 'exec-and-forget $HOME/Software/bin/wm goto_space --dir="next" --mode="empty"'
 
 
-alt-shift-left = ['move-node-to-workspace prev', 'workspace prev']
-alt-shift-right = ['move-node-to-workspace next', 'workspace next']
+alt-shift-left = 'exec-and-forget $HOME/Software/Public/dotfiles/sketchybar/scripts/smart_move_window.sh prev'
+alt-shift-right = 'exec-and-forget $HOME/Software/Public/dotfiles/sketchybar/scripts/smart_move_window.sh next'
 
 alt-shift-up = 'move right'
 alt-shift-down = 'move left'
