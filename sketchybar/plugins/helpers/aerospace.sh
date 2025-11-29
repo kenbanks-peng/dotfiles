@@ -102,6 +102,7 @@ sync_workspaces() {
         background.padding_right=0
         background.height=$BAR_HEIGHT
         background.color=$BAR
+        background.corner_radius=0
         icon.width=10
         icon.padding_left=5
         icon.padding_right=5
@@ -114,6 +115,9 @@ sync_workspaces() {
         --set "$end" "${props[@]}"
 
       sketchy_add_workspace "$sid"
+
+      # Populate the workspace with existing apps
+      aerospace_add_apps_in_spaceid "$sid"
     fi
   done
 

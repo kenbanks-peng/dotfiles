@@ -52,6 +52,7 @@ sketchy_add_workspace() {
   sketchybar --add bracket workspace.$sid "$start" "$end" \
            --set workspace.$sid \
                     background.corner_radius=0  \
+                    background.height=$BAR_HEIGHT \
                     background.color=$(sketchy_get_space_background_color false)
 }
 

@@ -41,6 +41,7 @@ props=(
   background.padding_right=0
   background.height=$BAR_HEIGHT
   background.color=$BAR
+  background.corner_radius=0
   icon.width=10
   icon.padding_left=5
   icon.padding_right=5
