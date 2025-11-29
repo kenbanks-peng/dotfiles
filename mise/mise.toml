@@ -24,9 +24,9 @@
 "npm:claude-pdd-cli" = "latest"
 "nix:bun" = "latest"
 "nix:ruby" = "latest"
-"nix:rustc" = "latest"
 "nix:uv" = "latest"
 "nix:nodejs" = "latest"
+"nix:rustup" = "latest"
 
 [settings]
 experimental = true
