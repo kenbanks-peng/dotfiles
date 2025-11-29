@@ -118,20 +118,25 @@ rebuild_workspaces() {
     y_offset=0
   )
 
+  local prev_end="aerospace_spaces_spacer"
   for sid in "${occupied_workspaces[@]}"; do
     local start="workspace.start.$sid"
     local end="workspace.end.$sid"
 
     sketchy_add_item "$start" left \
       --set "$start" "${props[@]}"
+    sketchybar --move "$start" after "$prev_end"
 
     sketchy_add_item "$end" left \
       --set "$end" "${props[@]}"
+    sketchybar --move "$end" after "$start"
 
     sketchy_add_workspace "$sid"
 
     # Populate the workspace with apps
     aerospace_add_apps_in_spaceid "$sid"
+
+    prev_end="$end"
   done
 
   # Highlight current workspace
