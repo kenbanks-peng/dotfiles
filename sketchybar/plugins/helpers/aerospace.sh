@@ -96,19 +96,12 @@ rebuild_workspaces() {
   echo "Occupied workspaces (aerospace): ${occupied_workspaces[*]}" >> "$log_file"
   echo "Existing workspaces (sketchybar): ${existing_workspaces[*]}" >> "$log_file"
 
-  # Step 1: Remove workspaces that no longer exist
+  # Step 1: Remove workspaces that no longer exist (but NOT window items - Step 3 will handle those)
   echo "Step 1: Removing orphaned workspaces" >> "$log_file"
   for sid in "${existing_workspaces[@]}"; do
     if ! printf '%s\n' "${occupied_workspaces[@]}" | grep -q "^${sid}$"; then
-      # Workspace no longer exists - remove all its items
-      echo "  Removing workspace $sid (no longer exists)" >> "$log_file"
-      local window_items=$(sketchybar --query bar | jq -r --arg sid "$sid" '.items[] | select(test("^window\\." + $sid + "\\."))')
-      if [[ -n "$window_items" ]]; then
-        while IFS= read -r item; do
-          echo "    Removing window item: $item" >> "$log_file"
-          sketchy_remove_item "$item"
-        done <<< "$window_items"
-      fi
+      # Workspace no longer exists - remove only the workspace dividers, not window items
+      echo "  Removing workspace $sid dividers (no longer exists)" >> "$log_file"
       sketchy_remove_item "workspace.start.$sid"
       sketchy_remove_item "workspace.end.$sid"
       sketchy_remove_item "workspace.$sid"
@@ -184,14 +177,15 @@ rebuild_workspaces() {
     local prev_item="workspace.start.$sid"
     for window_id in "${aerospace_window_ids[@]}"; do
       local appname=$(aerospace_appname_from_window_id "$window_id")
+      echo "    Processing window_id=$window_id appname=$appname" >> "$log_file"
 
       if [ -z "$window_id" ] || [ -z "$appname" ]; then
+        echo "      SKIP: window_id or appname is empty" >> "$log_file"
         continue
       fi
 
-      if ! allow_app "$appname" "$window_id"; then
-        continue
-      fi
+      # NOTE: Do NOT use allow_app here - rebuild syncs ALL windows that aerospace has
+      # Filtering is done when windows are initially added, not during rebuild
 
       # The correct item name for this window in this workspace
       local correct_item="window.$sid.$window_id.$appname"
