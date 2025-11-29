@@ -33,20 +33,24 @@ if [[ "$direction" == "next" ]]; then
     # Only create new workspace if there are multiple windows (so we're not the only one)
     if [[ $window_count -gt 1 ]]; then
       echo "Multiple windows, creating new workspace" >> "$log_file"
-      # We're on the last workspace - find next available number
-      next_workspace=$((current + 1))
-      echo "Next workspace: $next_workspace" >> "$log_file"
+
+      # Find next contiguous workspace number
+      # Count how many workspaces we have, next will be count + 1
+      workspace_count=${#occupied[@]}
+      next_workspace=$((workspace_count + 1))
+      echo "Next workspace (contiguous): $next_workspace" >> "$log_file"
 
       # Cap at 9 (max workspace in aerospace config)
       if [[ $next_workspace -le 9 ]]; then
         echo "Moving to workspace $next_workspace" >> "$log_file"
         aerospace move-node-to-workspace "$next_workspace" </dev/null 2>> "$log_file"
         aerospace workspace "$next_workspace" </dev/null 2>> "$log_file"
+
+        # Ensure workspaces remain contiguous after this move
+        "$HOME/Software/Public/dotfiles/sketchybar/scripts/ensure_contiguous_workspaces.sh" 2>> "$log_file"
       else
-        echo "At max, using default next" >> "$log_file"
-        # Already at max, just use default behavior
-        aerospace move-node-to-workspace --no-stdin next 2>> "$log_file"
-        aerospace workspace --no-stdin next 2>> "$log_file"
+        echo "At max (9 workspaces), cannot create new workspace" >> "$log_file"
+        # Already at max, do nothing
       fi
     else
       echo "Only one window, not creating new workspace" >> "$log_file"
