@@ -25,8 +25,8 @@ done
 # If already contiguous, trigger rebuild and exit
 # (Windows may have moved even if workspace numbers are correct)
 if [[ "$is_contiguous" == "true" ]]; then
-  echo "Already contiguous, triggering rebuild" >> "$log_file"
-  sketchybar --trigger yabai_window_created &> /dev/null
+  echo "Already contiguous, triggering full rebuild" >> "$log_file"
+  sketchybar --trigger aerospace_workspace_change FORCED=true &> /dev/null
   exit 0
 fi
 
@@ -82,6 +82,6 @@ yabai -m signal --add event=window_destroyed action="sketchybar --trigger yabai_
 yabai -m signal --add event=window_minimized action="sketchybar --trigger yabai_window_minimized ID=\$YABAI_WINDOW_ID &> /dev/null"
 yabai -m signal --add event=window_deminimized action="sketchybar --trigger yabai_window_deminimized ID=\$YABAI_WINDOW_ID &> /dev/null"
 
-# Trigger a single rebuild now that renumbering is complete
-echo "Triggering sketchybar rebuild after renumbering" >> "$log_file"
-sketchybar --trigger yabai_window_created &> /dev/null
+# Trigger a full rebuild now that renumbering is complete
+echo "Triggering full sketchybar rebuild after renumbering" >> "$log_file"
+sketchybar --trigger aerospace_workspace_change FORCED=true &> /dev/null
