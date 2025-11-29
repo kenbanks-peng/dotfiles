@@ -31,8 +31,14 @@ sketchy_add_item() {
 sketchy_remove_item() {
   local item="$1"
   local items=$(sketchybar --query bar | jq -r '.items[]')
+  local log_file="/tmp/rebuild_workspaces.log"
+  echo "      sketchy_remove_item: checking if '$item' exists" >> "$log_file"
   if item_in_array "$item" "$items"; then
+    echo "      sketchy_remove_item: '$item' exists, removing..." >> "$log_file"
     sketchybar --remove "$@"
+    echo "      sketchy_remove_item: removal command executed for '$item'" >> "$log_file"
+  else
+    echo "      sketchy_remove_item: '$item' does not exist, skipping" >> "$log_file"
   fi
 }
 

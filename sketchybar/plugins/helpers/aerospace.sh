@@ -102,9 +102,13 @@ rebuild_workspaces() {
     if ! printf '%s\n' "${occupied_workspaces[@]}" | grep -q "^${sid}$"; then
       # Workspace no longer exists - remove only the workspace dividers, not window items
       echo "  Removing workspace $sid dividers (no longer exists)" >> "$log_file"
+      echo "    Calling: sketchy_remove_item workspace.start.$sid" >> "$log_file"
       sketchy_remove_item "workspace.start.$sid"
+      echo "    Calling: sketchy_remove_item workspace.end.$sid" >> "$log_file"
       sketchy_remove_item "workspace.end.$sid"
+      echo "    Calling: sketchy_remove_item workspace.$sid" >> "$log_file"
       sketchy_remove_item "workspace.$sid"
+      echo "    Removal complete for workspace $sid" >> "$log_file"
     fi
   done
 
@@ -143,8 +147,8 @@ rebuild_workspaces() {
         prev_item="$item"
       done
     else
-      # Workspace doesn't exist - create it
-      echo "  Workspace $sid doesn't exist - creating" >> "$log_file"
+      # Workspace doesn't exist - create it (Step 3 will populate windows)
+      echo "  Workspace $sid doesn't exist - creating dividers only" >> "$log_file"
       sketchy_add_item "$start" left \
         --set "$start" "${props[@]}"
       sketchybar --move "$start" after "$prev_end"
@@ -154,9 +158,6 @@ rebuild_workspaces() {
       sketchybar --move "$end" after "$start"
 
       sketchy_add_workspace "$sid"
-
-      # Populate the workspace with apps
-      aerospace_add_apps_in_spaceid "$sid"
     fi
 
     prev_end="$end"
