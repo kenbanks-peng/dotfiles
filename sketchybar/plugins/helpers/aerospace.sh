@@ -85,6 +85,59 @@ aerospace_focused_window_change() {
 # Removed: maybe_add_default_item_to_spaceid - no longer needed with persistent-workspaces=[]
 # Removed: maybe_remove_default_item_from_spaceid - no longer needed with persistent-workspaces=[]
 
+# Rebuild workspaces: completely remove and recreate all workspace dividers in correct order
+rebuild_workspaces() {
+  local occupied_workspaces=($(aerospace list-workspaces --all | sort -n))
+
+  # Remove ALL existing workspace dividers and brackets
+  local existing_workspaces=$(sketchybar --query bar | jq -r '.items[] | select(test("^workspace\\.(start|end|\[0-9\]+)$"))')
+  if [[ -n "$existing_workspaces" ]]; then
+    while IFS= read -r item; do
+      sketchy_remove_item "$item"
+    done <<< "$existing_workspaces"
+  fi
+
+  # Remove ALL existing window items
+  local existing_windows=$(sketchybar --query bar | jq -r '.items[] | select(test("^window\\."))')
+  if [[ -n "$existing_windows" ]]; then
+    while IFS= read -r item; do
+      sketchy_remove_item "$item"
+    done <<< "$existing_windows"
+  fi
+
+  # Recreate workspaces in correct order
+  local props=(
+    background.padding_left=0
+    background.padding_right=0
+    background.height=$BAR_HEIGHT
+    background.color=$BAR
+    background.corner_radius=0
+    icon.width=10
+    icon.padding_left=5
+    icon.padding_right=5
+  )
+
+  for sid in "${occupied_workspaces[@]}"; do
+    local start="workspace.start.$sid"
+    local end="workspace.end.$sid"
+
+    sketchy_add_item "$start" left \
+      --set "$start" "${props[@]}"
+
+    sketchy_add_item "$end" left \
+      --set "$end" "${props[@]}"
+
+    sketchy_add_workspace "$sid"
+
+    # Populate the workspace with apps
+    aerospace_add_apps_in_spaceid "$sid"
+  done
+
+  # Highlight current workspace
+  local focused_sid=$(aerospace_focused_workspace)
+  sketchy_highlight_workspace "$focused_sid"
+}
+
 # Sync workspaces: add workspace dividers for new workspaces, remove for empty ones
 sync_workspaces() {
   local occupied_workspaces=($(aerospace list-workspaces --all | sort -n))

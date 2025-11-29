@@ -14,10 +14,7 @@ if [ "$SENDER" = "forced" ]; then
 elif [ "$SENDER" = "aerospace_workspace_change" ]; then
   # Handle forced sync from ensure_contiguous_workspaces.sh
   if [[ "$FORCED" == "true" ]]; then
-    sync_workspaces
-    # Highlight current workspace
-    sid=$(aerospace_focused_workspace)
-    sketchy_highlight_workspace "$sid"
+    rebuild_workspaces
     exit 0
   fi
   if [[ "$FOCUS_CHANGE" != "true" ]]; then
