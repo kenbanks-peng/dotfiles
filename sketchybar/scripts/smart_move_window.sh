@@ -74,10 +74,49 @@ if [[ "$direction" == "next" ]]; then
   fi
 
 elif [[ "$direction" == "prev" ]]; then
-  echo "Moving to prev workspace" >> "$log_file"
-  # For prev, just use default behavior
-  aerospace move-node-to-workspace --no-stdin prev 2>> "$log_file"
-  aerospace workspace --no-stdin prev 2>> "$log_file"
+  # Get current workspace
+  current=$(aerospace list-workspaces --focused)
+  echo "Current workspace: $current" >> "$log_file"
+
+  # Get all occupied workspaces sorted numerically
+  mapfile -t occupied < <(aerospace list-workspaces --all | sort -n)
+  echo "Occupied workspaces: ${occupied[*]}" >> "$log_file"
+
+  # Check if we're on the first occupied workspace
+  first_workspace="${occupied[0]}"
+  echo "First workspace: $first_workspace" >> "$log_file"
+
+  if [[ "$current" == "$first_workspace" ]]; then
+    echo "On first workspace" >> "$log_file"
+
+    # Check how many windows are in the current workspace
+    window_count=$(aerospace list-windows --workspace "$current" --format '%{window-id}' | wc -l | tr -d ' ')
+    echo "Window count in workspace $current: $window_count" >> "$log_file"
+
+    # Only create new workspace if there are multiple windows (so we're not the only one)
+    if [[ $window_count -gt 1 ]]; then
+      echo "Multiple windows, creating new workspace to the left" >> "$log_file"
+
+      # Use workspace 0 temporarily - ensure_contiguous will renumber everything
+      prev_workspace=0
+      echo "Creating workspace $prev_workspace" >> "$log_file"
+
+      # Move window to new workspace
+      aerospace move-node-to-workspace "$prev_workspace" </dev/null 2>> "$log_file"
+      aerospace workspace "$prev_workspace" </dev/null 2>> "$log_file"
+
+      # SYNCHRONOUSLY ensure workspaces are contiguous (will renumber 0 -> 1, others shift right)
+      echo "Ensuring contiguous workspaces" >> "$log_file"
+      "$HOME/Software/Public/dotfiles/sketchybar/scripts/ensure_contiguous_workspaces.sh" 2>> "$log_file"
+    else
+      echo "Only one window, not creating new workspace" >> "$log_file"
+    fi
+  else
+    echo "Not on first workspace, using default prev" >> "$log_file"
+    # Not on first workspace, use default behavior
+    aerospace move-node-to-workspace --no-stdin prev 2>> "$log_file"
+    aerospace workspace --no-stdin prev 2>> "$log_file"
+  fi
 fi
 
 echo "Done" >> "$log_file"
