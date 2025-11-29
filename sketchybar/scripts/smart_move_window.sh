@@ -5,43 +5,53 @@
 
 direction="$1"  # "next" or "prev"
 
-# Get current workspace
-current=$(aerospace list-workspaces --focused)
-
-# Get all occupied workspaces sorted numerically
-occupied=($(aerospace list-workspaces --all | sort -n))
-
-# Find position of current workspace in occupied list
-current_index=-1
-for i in "${!occupied[@]}"; do
-  if [[ "${occupied[$i]}" == "$current" ]]; then
-    current_index=$i
-    break
-  fi
-done
+# Log for debugging
+log_file="/tmp/smart_move_window.log"
+echo "=== $(date) ===" >> "$log_file"
+echo "Direction: $direction" >> "$log_file"
 
 if [[ "$direction" == "next" ]]; then
+  # Get current workspace
+  current=$(aerospace list-workspaces --focused)
+  echo "Current workspace: $current" >> "$log_file"
+
+  # Get all occupied workspaces sorted numerically
+  mapfile -t occupied < <(aerospace list-workspaces --all | sort -n)
+  echo "Occupied workspaces: ${occupied[*]}" >> "$log_file"
+
   # Check if we're on the last occupied workspace
-  if [[ $current_index -eq $((${#occupied[@]} - 1)) ]]; then
+  last_workspace="${occupied[-1]}"
+  echo "Last workspace: $last_workspace" >> "$log_file"
+
+  if [[ "$current" == "$last_workspace" ]]; then
+    echo "On last workspace, creating new one" >> "$log_file"
     # We're on the last workspace - find next available number
     next_workspace=$((current + 1))
+    echo "Next workspace: $next_workspace" >> "$log_file"
 
     # Cap at 9 (max workspace in aerospace config)
     if [[ $next_workspace -le 9 ]]; then
-      aerospace move-node-to-workspace "$next_workspace"
-      aerospace workspace "$next_workspace"
+      echo "Moving to workspace $next_workspace" >> "$log_file"
+      aerospace move-node-to-workspace --no-stdin "$next_workspace" 2>> "$log_file"
+      aerospace workspace --no-stdin "$next_workspace" 2>> "$log_file"
     else
+      echo "At max, using default next" >> "$log_file"
       # Already at max, just use default behavior
-      aerospace move-node-to-workspace next
-      aerospace workspace next
+      aerospace move-node-to-workspace --no-stdin next 2>> "$log_file"
+      aerospace workspace --no-stdin next 2>> "$log_file"
     fi
   else
+    echo "Not on last workspace, using default next" >> "$log_file"
     # Not on last workspace, use default behavior
-    aerospace move-node-to-workspace next
-    aerospace workspace next
+    aerospace move-node-to-workspace --no-stdin next 2>> "$log_file"
+    aerospace workspace --no-stdin next 2>> "$log_file"
   fi
+
 elif [[ "$direction" == "prev" ]]; then
+  echo "Moving to prev workspace" >> "$log_file"
   # For prev, just use default behavior
-  aerospace move-node-to-workspace prev
-  aerospace workspace prev
+  aerospace move-node-to-workspace --no-stdin prev 2>> "$log_file"
+  aerospace workspace --no-stdin prev 2>> "$log_file"
 fi
+
+echo "Done" >> "$log_file"
