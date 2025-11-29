@@ -32,8 +32,8 @@ if [[ "$direction" == "next" ]]; then
     # Cap at 9 (max workspace in aerospace config)
     if [[ $next_workspace -le 9 ]]; then
       echo "Moving to workspace $next_workspace" >> "$log_file"
-      aerospace move-node-to-workspace --no-stdin "$next_workspace" 2>> "$log_file"
-      aerospace workspace --no-stdin "$next_workspace" 2>> "$log_file"
+      aerospace move-node-to-workspace "$next_workspace" </dev/null 2>> "$log_file"
+      aerospace workspace "$next_workspace" </dev/null 2>> "$log_file"
     else
       echo "At max, using default next" >> "$log_file"
       # Already at max, just use default behavior
