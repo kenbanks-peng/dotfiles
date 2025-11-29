@@ -2,13 +2,28 @@
 
 source "$CONFIG_DIR/plugins/helpers/util.sh"
 
-# add item only if not exists
+# add item only if not exists, but always apply --set properties
 sketchy_add_item() {
   local item="$1"
   local items=$(sketchybar --query bar | jq -r '.items[]')
   item=${item// /_}
   if ! item_in_array "$item" "$items"; then
     sketchybar --add item "$@"
+  else
+    # Item exists, extract and apply --set properties if present
+    local set_flag=false
+    local set_args=()
+    for arg in "$@"; do
+      if [ "$set_flag" = true ]; then
+        set_args+=("$arg")
+      elif [ "$arg" = "--set" ]; then
+        set_flag=true
+        set_args+=("$arg")
+      fi
+    done
+    if [ "${#set_args[@]}" -gt 0 ]; then
+      sketchybar "${set_args[@]}"
+    fi
   fi
 }
 
@@ -52,6 +67,7 @@ sketchy_add_workspace() {
   sketchybar --add bracket workspace.$sid "$start" "$end" \
            --set workspace.$sid \
                     background.corner_radius=0  \
+                    background.height=$BACKGROUND_HEIGHT \
                     background.color=$(sketchy_get_space_background_color false)
 }
 

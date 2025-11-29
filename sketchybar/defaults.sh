@@ -44,17 +44,17 @@ sketchybar --bar "${bar[@]}"
 
 ##### Changing Defaults #####
 default=(
-  background.height=$ITEM_HEIGHT
+  background.height=$BACKGROUND_HEIGHT
   background.color=$TRANSPARENT
   background.corner_radius=5
-  background.padding_left=2
-  background.padding_right=2
+  background.padding_left=6
+  background.padding_right=6
 
   icon.font="$FONT:$ICON_FONTSIZE"
   icon.color=$TEXT
   icon.align="center"
-  icon.padding_left=5
-  icon.padding_right=5
+  icon.padding_left=0
+  icon.padding_right=0
 
   label.font="$FONT:$FONTSIZE"
   label.color=$TEXT
@@ -62,6 +62,6 @@ default=(
   label.align="left"
   label.y_offset=0
   label.padding_left=0
-  label.padding_right=5
+  label.padding_right=0
 )
 sketchybar --default "${default[@]}"

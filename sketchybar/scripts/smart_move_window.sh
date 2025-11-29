@@ -1,0 +1,122 @@
+#!/usr/bin/env bash
+
+# Smart window movement: if on last occupied workspace, create new one to the right
+# Otherwise, use default aerospace behavior
+
+direction="$1"  # "next" or "prev"
+
+# Log for debugging
+log_file="/tmp/smart_move_window.log"
+echo "=== $(date) ===" >> "$log_file"
+echo "Direction: $direction" >> "$log_file"
+
+if [[ "$direction" == "next" ]]; then
+  # Get current workspace
+  current=$(aerospace list-workspaces --focused)
+  echo "Current workspace: $current" >> "$log_file"
+
+  # Get all occupied workspaces sorted numerically
+  mapfile -t occupied < <(aerospace list-workspaces --all | sort -n)
+  echo "Occupied workspaces: ${occupied[*]}" >> "$log_file"
+
+  # Check if we're on the last occupied workspace
+  last_workspace="${occupied[-1]}"
+  echo "Last workspace: $last_workspace" >> "$log_file"
+
+  if [[ "$current" == "$last_workspace" ]]; then
+    echo "On last workspace" >> "$log_file"
+
+    # Check how many windows are in the current workspace
+    window_count=$(aerospace list-windows --workspace "$current" --format '%{window-id}' | wc -l | tr -d ' ')
+    echo "Window count in workspace $current: $window_count" >> "$log_file"
+
+    # Only create new workspace if there are multiple windows (so we're not the only one)
+    if [[ $window_count -gt 1 ]]; then
+      echo "Multiple windows, creating new workspace" >> "$log_file"
+
+      # Find first gap in workspace numbers, or use last + 1
+      next_workspace=0
+      expected=1
+      for sid in "${occupied[@]}"; do
+        if [[ $sid -ne $expected ]]; then
+          # Found a gap
+          next_workspace=$expected
+          break
+        fi
+        expected=$((expected + 1))
+      done
+
+      # If no gap found, use last + 1
+      if [[ $next_workspace -eq 0 ]]; then
+        next_workspace=$((last_workspace + 1))
+      fi
+
+      if [[ $next_workspace -le 9 ]]; then
+        echo "Creating workspace $next_workspace" >> "$log_file"
+        # Move window to new workspace
+        aerospace move-node-to-workspace "$next_workspace" </dev/null 2>> "$log_file"
+        aerospace workspace "$next_workspace" </dev/null 2>> "$log_file"
+
+        # SYNCHRONOUSLY ensure workspaces are contiguous
+        echo "Ensuring contiguous workspaces" >> "$log_file"
+        "$HOME/Software/Public/dotfiles/sketchybar/scripts/ensure_contiguous_workspaces.sh" 2>> "$log_file"
+      else
+        echo "Already at max workspace 9, cannot create new workspace" >> "$log_file"
+      fi
+    else
+      echo "Only one window, not creating new workspace" >> "$log_file"
+    fi
+  else
+    echo "Not on last workspace, using default next" >> "$log_file"
+    # Not on last workspace, use default behavior
+    aerospace move-node-to-workspace --no-stdin next 2>> "$log_file"
+    aerospace workspace --no-stdin next 2>> "$log_file"
+  fi
+
+elif [[ "$direction" == "prev" ]]; then
+  # Get current workspace
+  current=$(aerospace list-workspaces --focused)
+  echo "Current workspace: $current" >> "$log_file"
+
+  # Get all occupied workspaces sorted numerically
+  mapfile -t occupied < <(aerospace list-workspaces --all | sort -n)
+  echo "Occupied workspaces: ${occupied[*]}" >> "$log_file"
+
+  # Check if we're on the first occupied workspace
+  first_workspace="${occupied[0]}"
+  echo "First workspace: $first_workspace" >> "$log_file"
+
+  if [[ "$current" == "$first_workspace" ]]; then
+    echo "On first workspace" >> "$log_file"
+
+    # Check how many windows are in the current workspace
+    window_count=$(aerospace list-windows --workspace "$current" --format '%{window-id}' | wc -l | tr -d ' ')
+    echo "Window count in workspace $current: $window_count" >> "$log_file"
+
+    # Only create new workspace if there are multiple windows (so we're not the only one)
+    if [[ $window_count -gt 1 ]]; then
+      echo "Multiple windows, creating new workspace to the left" >> "$log_file"
+
+      # Use workspace 0 temporarily - ensure_contiguous will renumber everything
+      prev_workspace=0
+      echo "Creating workspace $prev_workspace" >> "$log_file"
+
+      # Move window to new workspace
+      aerospace move-node-to-workspace "$prev_workspace" </dev/null 2>> "$log_file"
+      aerospace workspace "$prev_workspace" </dev/null 2>> "$log_file"
+
+      # SYNCHRONOUSLY ensure workspaces are contiguous (will renumber 0 -> 1, others shift right)
+      echo "Ensuring contiguous workspaces" >> "$log_file"
+      "$HOME/Software/Public/dotfiles/sketchybar/scripts/ensure_contiguous_workspaces.sh" 2>> "$log_file"
+    else
+      echo "Only one window, not creating new workspace" >> "$log_file"
+    fi
+  else
+    echo "Not on first workspace, using default prev" >> "$log_file"
+    # Not on first workspace, use default behavior
+    aerospace move-node-to-workspace --no-stdin prev 2>> "$log_file"
+    aerospace workspace --no-stdin prev 2>> "$log_file"
+  fi
+fi
+
+echo "Done" >> "$log_file"

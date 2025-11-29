@@ -34,22 +34,24 @@ props=(
   yabai_window_deminimized
 
 
-# add workspace.start and workspace.end dividers 
-# as anchor points for the workspaces
+# Initialize workspaces - only create dividers for currently occupied workspaces
+# (with persistent-workspaces=[], only occupied workspaces exist)
 props=(
   background.padding_left=0
   background.padding_right=0
-  background.height=$BAR_HEIGHT
+  background.height=$BACKGROUND_HEIGHT
   background.color=$BAR
-  icon.width=2
-  icon.padding_left=0
-  icon.padding_right=0
+  background.corner_radius=0
+  width=$WORKSPACE_DIVIDER_WIDTH
+  icon.drawing=off
+  label.drawing=off
+  y_offset=0
 )
-workspaces=($(aerospace_workspaces))
+workspaces=($(aerospace_workspaces | sort -n))
 for sid in "${workspaces[@]}"; do
   start="workspace.start.$sid"
   end="workspace.end.$sid"
-  
+
   sketchy_add_item "$start" "$location" \
     --set "$start" "${props[@]}"
 
@@ -57,4 +59,7 @@ for sid in "${workspaces[@]}"; do
     --set "$end" "${props[@]}"
 
   sketchy_add_workspace "$sid"
+
+  # Add apps to this workspace immediately
+  aerospace_add_apps_in_spaceid "$sid"
 done
