@@ -145,7 +145,6 @@ alt-down = [
 alt-left = 'workspace --wrap-around prev'
 alt-right = 'workspace --wrap-around next'
 
-
 alt-shift-left = 'exec-and-forget sketchybar --trigger aerospace_move_window_prev'
 alt-shift-right = 'exec-and-forget sketchybar --trigger aerospace_move_window_next'
 
