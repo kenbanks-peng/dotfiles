@@ -106,52 +106,56 @@ else
     # At edge with single window: no action
     echo "At edge with single window - no action" >> "$log_file"
   else
-    # Track which workspaces will be emptied so we can remove them from sketchybar
-    local workspaces_to_remove=()
-
-    # Ripple-pull all windows from target direction into current workspace
-    echo "Ripple pulling from index $target_index onwards" >> "$log_file"
+    # Ripple: shift each workspace in the direction one space over
+    echo "Ripple: shifting workspaces in direction" >> "$log_file"
 
     if [[ "$direction" == "next" ]]; then
-      # Pull from right: iterate from target_index to end
-      for ((i = target_index; i < ${#workspaces[@]}; i++)); do
+      # Ripple right: Move windows from workspaces to the RIGHT, one space LEFT
+      # Start from the rightmost and work backwards to avoid conflicts
+      # Example: s1w1 s2wf s3w2 s4w3 -> s1w1,w2 s2wf s3w3
+      echo "Ripple right: shifting workspaces from right to left" >> "$log_file"
+
+      for ((i = ${#workspaces[@]} - 1; i >= target_index; i--)); do
         source_workspace="${workspaces[$i]}"
-        workspaces_to_remove+=("$source_workspace")
-        echo "Pulling all windows from workspace $source_workspace to $current" >> "$log_file"
+        dest_workspace="${workspaces[$((i - 1))]}"
+        echo "Moving all windows from workspace $source_workspace -> $dest_workspace" >> "$log_file"
 
         mapfile -t windows_to_move < <(aerospace list-windows --workspace "$source_workspace" --format '%{window-id}')
         for window_id in "${windows_to_move[@]}"; do
           if [[ -n "$window_id" ]]; then
             echo "  Moving window $window_id" >> "$log_file"
-            aerospace move-node-to-workspace "$current" --window-id "$window_id" </dev/null 2>> "$log_file"
+            aerospace move-node-to-workspace "$dest_workspace" --window-id "$window_id" </dev/null 2>> "$log_file"
           fi
         done
+
+        # Remove the now-empty workspace from sketchybar
+        remove_sketchybar_workspace "$source_workspace"
       done
     else
-      # Pull from left: iterate from target_index down to 0
-      for ((i = target_index; i >= 0; i--)); do
+      # Ripple left: Move windows from workspaces to the LEFT, one space RIGHT
+      # Start from the leftmost and work forwards to avoid conflicts
+      # Example: s1w1 s2w2 s3wf s4w3 -> s1 s2w2,w1 s3wf s4w3
+      echo "Ripple left: shifting workspaces from left to right" >> "$log_file"
+
+      for ((i = 0; i <= target_index; i++)); do
         source_workspace="${workspaces[$i]}"
-        workspaces_to_remove+=("$source_workspace")
-        echo "Pulling all windows from workspace $source_workspace to $current" >> "$log_file"
+        dest_workspace="${workspaces[$((i + 1))]}"
+        echo "Moving all windows from workspace $source_workspace -> $dest_workspace" >> "$log_file"
 
         mapfile -t windows_to_move < <(aerospace list-windows --workspace "$source_workspace" --format '%{window-id}')
         for window_id in "${windows_to_move[@]}"; do
           if [[ -n "$window_id" ]]; then
             echo "  Moving window $window_id" >> "$log_file"
-            aerospace move-node-to-workspace "$current" --window-id "$window_id" </dev/null 2>> "$log_file"
+            aerospace move-node-to-workspace "$dest_workspace" --window-id "$window_id" </dev/null 2>> "$log_file"
           fi
         done
+
+        # Remove the now-empty workspace from sketchybar
+        remove_sketchybar_workspace "$source_workspace"
       done
     fi
 
-    # Remove workspaces from sketchybar (aerospace already removed them)
-    echo "Removing ${#workspaces_to_remove[@]} workspaces from sketchybar" >> "$log_file"
-    for sid in "${workspaces_to_remove[@]}"; do
-      echo "  Removing workspace $sid from sketchybar" >> "$log_file"
-      remove_sketchybar_workspace "$sid"
-    done
-
-    # After ripple-pull, renumber aerospace and sketchybar to close gaps
+    # After ripple, renumber aerospace and sketchybar to close gaps
     renumber_workspaces_and_sketchybar
   fi
 fi
