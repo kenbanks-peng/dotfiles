@@ -52,13 +52,6 @@ persistent-workspaces = []
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 on-mode-changed = []
 
-# Notify Sketchybar about workspace change
-exec-on-workspace-change = [
-  '/bin/bash',
-  '-c',
-  '$HOME/Software/bin/wm workspace_changed --prev $AEROSPACE_PREV_WORKSPACE --focused $AEROSPACE_FOCUSED_WORKSPACE',
-]
-
 # Notify Sketchybar about focus change
 on-focus-changed = [
   'exec-and-forget sketchybar --trigger aerospace_workspace_change FOCUS_CHANGE=true',
