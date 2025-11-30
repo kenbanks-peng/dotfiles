@@ -129,7 +129,7 @@ alt-shift-minus = 'resize smart -50'
 alt-shift-equal = 'resize smart +50'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
-alt-0 = 'exec-and-forget $HOME/Software/Public/dotfiles/sketchybar/scripts/new_workspace.sh'
+alt-0 = 'exec-and-forget sketchybar --trigger aerospace_new_workspace'
 
 # cycle apps in current workspace
 alt-up = [
@@ -154,8 +154,8 @@ cmd-left = 'exec-and-forget $HOME/Software/bin/wm goto_space --dir="prev" --mode
 cmd-right = 'exec-and-forget $HOME/Software/bin/wm goto_space --dir="next" --mode="empty"'
 
 
-alt-shift-left = 'exec-and-forget $HOME/Software/Public/dotfiles/sketchybar/scripts/smart_move_window.sh prev'
-alt-shift-right = 'exec-and-forget $HOME/Software/Public/dotfiles/sketchybar/scripts/smart_move_window.sh next'
+alt-shift-left = 'exec-and-forget sketchybar --trigger aerospace_move_window_prev'
+alt-shift-right = 'exec-and-forget sketchybar --trigger aerospace_move_window_next'
 
 alt-shift-up = 'move right'
 alt-shift-down = 'move left'
