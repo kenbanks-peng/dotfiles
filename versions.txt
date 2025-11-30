@@ -439,8 +439,8 @@ nix:ruby                                                     3.4.7 (symlink)    
 nix:rustup                                                   1.28.2 (symlink)   ~/.config/mise/mise.toml  latest
 nix:uv                                                       0.9.9 (symlink)    ~/.config/mise/mise.toml  latest
 npm:@fission-ai/openspec                                     0.16.0             ~/.config/mise/mise.toml  latest
-npm:@opentui/core                                            0.1.52             ~/.config/mise/mise.toml  latest
-npm:@opentui/react                                           0.1.52             ~/.config/mise/mise.toml  latest
+npm:@opentui/core                                            0.1.53             ~/.config/mise/mise.toml  latest
+npm:@opentui/react                                           0.1.53             ~/.config/mise/mise.toml  latest
 npm:claude-pdd-cli                                           1.0.5              ~/.config/mise/mise.toml  latest
 npm:github-markdown-css                                      5.8.1              ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                                                5.2.5              ~/.config/mise/mise.toml  latest
