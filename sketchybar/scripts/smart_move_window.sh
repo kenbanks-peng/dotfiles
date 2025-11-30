@@ -205,7 +205,9 @@ else
       desired_workspace_ids=("${workspace_ids[@]:0:${#workspace_ids[@]}-1}")
 
     else
-      # Ripple left: workspaces to the left shift right
+      # Ripple left: workspaces to the left shift right (to make room)
+      # Example: s1w1 s2w2 s3wf s4w3 -> s1w1 s2w2,wf s3w3 (s1 removed after renumber)
+      # Data flow: s1→s2, s2→s3(current), s1 removed
       echo "Ripple left" >> "$log_file"
 
       for i in "${!workspace_ids[@]}"; do
@@ -214,15 +216,15 @@ else
           # Workspaces after current: unchanged
           desired_state[$sid]="${current_state[$sid]}"
         elif [[ $i -eq $current_index ]]; then
-          # Current workspace: gets windows from previous workspace
+          # Current workspace: gets windows from previous workspace PLUS keeps its own
           prev_sid="${workspace_ids[$((i - 1))]}"
           desired_state[$sid]="${current_state[$prev_sid]} ${current_state[$sid]}"
         elif [[ $i -lt $current_index ]] && [[ $i -gt 0 ]]; then
-          # Workspaces before current (except first): get windows from previous
+          # Workspaces before current (except first): shift right (get previous workspace's content)
           prev_sid="${workspace_ids[$((i - 1))]}"
           desired_state[$sid]="${current_state[$prev_sid]}"
         fi
-        # First workspace is omitted (will be empty, removed)
+        # First workspace (i=0) is omitted (will be removed)
       done
 
       # New workspace list (first one removed)
