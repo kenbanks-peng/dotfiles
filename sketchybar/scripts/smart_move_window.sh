@@ -105,7 +105,7 @@ if [[ $window_count -gt 1 ]]; then
         for sid in "${workspace_ids[@]}"; do
           if [[ $sid -eq $current_sid ]]; then
             # Remove focused window from current workspace
-            local windows=()
+            windows=()
             for wid in ${current_state[$sid]}; do
               if [[ $wid != $focused_window_id ]]; then
                 windows+=("$wid")
@@ -126,7 +126,7 @@ if [[ $window_count -gt 1 ]]; then
       # Remove focused window from current workspace
       for sid in "${workspace_ids[@]}"; do
         if [[ $sid -eq $current_sid ]]; then
-          local windows=()
+          windows=()
           for wid in ${current_state[$sid]}; do
             if [[ $wid != $focused_window_id ]]; then
               windows+=("$wid")
@@ -156,7 +156,7 @@ if [[ $window_count -gt 1 ]]; then
     for sid in "${workspace_ids[@]}"; do
       if [[ $sid -eq $current_sid ]]; then
         # Remove focused window from current
-        local windows=()
+        windows=()
         for wid in ${current_state[$sid]}; do
           if [[ $wid != $focused_window_id ]]; then
             windows+=("$wid")
@@ -347,7 +347,7 @@ for item in "${all_window_items[@]}"; do
 
     # Create new item with correct workspace ID
     correct_item="window.$correct_sid.$item_window_id.$item_appname"
-    local props=(
+    props=(
       background.corner_radius=0
       icon.font="$ICON_FONT:$ICON_FONTSIZE"
       icon.width="$APP_WIDTH"
@@ -363,28 +363,9 @@ for item in "${all_window_items[@]}"; do
   fi
 done
 
-# Fix window highlighting: ensure only focused window is highlighted
-echo "Fixing window highlighting..." >> "$log_file"
-unfocused_color=$(sketchy_get_space_foreground_color false)
-focused_color=$(sketchy_get_space_foreground_color true)
-
-# Re-read all window items after updates (use mapfile to handle spaces in appnames)
-mapfile -t all_window_items < <(sketchybar --query bar 2>/dev/null | jq -r '.items[]? // empty | select(test("^window\\."))' | sort)
-
-for item in "${all_window_items[@]}"; do
-  # Extract window_id from item name: window.SID.WINDOW_ID.APPNAME
-  item_window_id=$(echo "$item" | awk -F'.' '{print $3}')
-
-  if [[ "$item_window_id" == "$new_focused_window_id" ]]; then
-    echo "  Highlighting $item" >> "$log_file"
-    sketchybar --set "$item" icon.color="$focused_color"
-  else
-    echo "  Unhighlighting $item" >> "$log_file"
-    sketchybar --set "$item" icon.color="$unfocused_color"
-  fi
-done
-
-# Update cache
-echo "$new_focused_window_id" > "$CACHE_DIR/highlighted.window_id"
+# Manually trigger highlighting to ensure it happens synchronously
+# The aerospace focus command above (line 292) triggers an event, but we need immediate feedback
+echo "Triggering window highlighting for window $new_focused_window_id" >> "$log_file"
+sketchy_highlight_window_id "$new_focused_window_id"
 
 echo "Done" >> "$log_file"
