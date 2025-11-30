@@ -13,7 +13,6 @@
 "npm:md-to-pdf" = "latest"
 "npm:github-markdown-css" = "latest"
 "npm:nuekit" = "latest"
-"npm:@fission-ai/openspec" = "latest"
 "npm:vite" = "latest"
 "go:github.com/nizos/tdd-guard/reporters/go/cmd/tdd-guard-go" = "v0.2.1"
 "go:github.com/jfeliu007/goplantuml/cmd/goplantuml" = "latest"
@@ -21,12 +20,12 @@
 "go:github.com/h0rv/d2-mcp" = "latest"
 "npm:@opentui/core" = "latest"
 "npm:@opentui/react" = "latest"
-"npm:claude-pdd-cli" = "latest"
 "nix:bun" = "latest"
 "nix:ruby" = "latest"
 "nix:uv" = "latest"
 "nix:nodejs" = "latest"
 "nix:rustup" = "latest"
+"npm:@langwatch/better-agents" = "latest"
 
 [settings]
 experimental = true
