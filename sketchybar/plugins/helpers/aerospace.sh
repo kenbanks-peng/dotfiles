@@ -343,7 +343,7 @@ aerospace_remove_window_id() {
 
   # Ensure contiguous workspace numbering after removing window
   # This will also trigger Sketchybar sync
-  "$CONFIG_DIR/scripts/ensure_contiguous_workspaces.sh"
+  "$PLUGIN_DIR/helpers/ensure_contiguous_workspaces.sh"
 }
 
 
