@@ -1,12 +1,9 @@
 #!/usr/bin/env bash
 
-# Smart window movement with three scenarios:
-# 1. Same number of spaces: move focused window in arrow direction
-# 2. Fewer spaces: pull other windows opposite to arrow direction
-# 3. More spaces: create new space and move focused window in arrow direction
-
-# NOTE: This script only moves windows. Sketchybar rebuild is triggered automatically
-# by yabai signals when windows are created/destroyed/moved.
+# Smart window movement that maintains contiguous workspace numbering
+# - Multiple windows in current workspace: move focused window in direction
+# - Single window in current workspace: ripple-pull all windows from direction
+# - Edge case (single window at boundary): create new workspace
 
 direction="$1"  # "next" or "prev"
 
@@ -15,186 +12,174 @@ log_file="/tmp/smart_move_window.log"
 echo "=== $(date) ===" >> "$log_file"
 echo "Direction: $direction" >> "$log_file"
 
-if [[ "$direction" == "next" ]]; then
-  # Get current workspace and focused window
-  current=$(aerospace list-workspaces --focused)
-  echo "Current workspace: $current" >> "$log_file"
+# Get current state
+current=$(aerospace list-workspaces --focused)
+focused_window_id=$(aerospace list-windows --focused --format '%{window-id}')
+mapfile -t workspaces < <(aerospace list-workspaces --all | sort -n)
 
-  focused_window_id=$(aerospace list-windows --focused --format '%{window-id}')
-  echo "Focused window ID: $focused_window_id" >> "$log_file"
+echo "Current workspace: $current" >> "$log_file"
+echo "Focused window: $focused_window_id" >> "$log_file"
+echo "All workspaces: ${workspaces[*]}" >> "$log_file"
 
-  # Get all occupied workspaces before the operation
-  mapfile -t occupied_before < <(aerospace list-workspaces --all | sort -n)
-  echo "Occupied workspaces before: ${occupied_before[*]}" >> "$log_file"
-  workspace_count_before=${#occupied_before[@]}
-
-  # Check if we're on the last workspace
-  last_workspace="${occupied_before[-1]}"
-  echo "Last workspace: $last_workspace" >> "$log_file"
-
-  if [[ "$current" == "$last_workspace" ]]; then
-    # On last workspace - check window count
-    window_count=$(aerospace list-windows --workspace "$current" --format '%{window-id}' | wc -l | tr -d ' ')
-    echo "Window count in workspace $current: $window_count" >> "$log_file"
-
-    if [[ $window_count -gt 1 ]]; then
-      # Multiple windows - Scenario 3: Create new space and move focused window
-      echo "Scenario 3: Creating new workspace and moving focused window" >> "$log_file"
-
-      # Find next available workspace number
-      next_workspace=$((last_workspace + 1))
-      if [[ $next_workspace -le 9 ]]; then
-        echo "Creating workspace $next_workspace and moving window $focused_window_id" >> "$log_file"
-        aerospace move-node-to-workspace "$next_workspace" </dev/null 2>> "$log_file"
-        aerospace workspace "$next_workspace" </dev/null 2>> "$log_file"
-
-        echo "Ensuring contiguous workspaces" >> "$log_file"
-        "$HOME/Software/Public/dotfiles/sketchybar/scripts/ensure_contiguous_workspaces.sh" 2>> "$log_file"
-
-        # NOTE: Do NOT call rebuild_workspaces() here - yabai signals automatically trigger it
-        # when windows are created/destroyed/moved
-      else
-        echo "Already at max workspace 9" >> "$log_file"
-      fi
-    else
-      echo "Only one window, no action" >> "$log_file"
-    fi
-  else
-    # Not on last workspace - check if next workspace exists
-    next_workspace=""
-    for i in "${!occupied_before[@]}"; do
-      if [[ "${occupied_before[$i]}" == "$current" ]] && [[ $((i + 1)) -lt ${#occupied_before[@]} ]]; then
-        next_workspace="${occupied_before[$((i + 1))]}"
-        break
-      fi
-    done
-
-    if [[ -n "$next_workspace" ]]; then
-      # Check if current workspace will become empty after moving focused window
-      window_count_current=$(aerospace list-windows --workspace "$current" --format '%{window-id}' | wc -l | tr -d ' ')
-      echo "Window count in current workspace $current: $window_count_current" >> "$log_file"
-
-      if [[ $window_count_current -eq 1 ]]; then
-        # Scenario 2: Only one window in current workspace - pull windows from next instead
-        echo "Scenario 2: Only window in workspace, pulling windows from $next_workspace instead" >> "$log_file"
-
-        # Pull all windows from next workspace to current
-        mapfile -t windows_to_move < <(aerospace list-windows --workspace "$next_workspace" --format '%{window-id}')
-        echo "Windows to pull: ${windows_to_move[*]}" >> "$log_file"
-
-        for window_id in "${windows_to_move[@]}"; do
-          if [[ -n "$window_id" ]]; then
-            echo "  Moving window $window_id to workspace $current" >> "$log_file"
-            aerospace move-node-to-workspace "$current" --window-id "$window_id" </dev/null 2>> "$log_file"
-          fi
-        done
-      else
-        # Scenario 1: Multiple windows in current workspace - move focused window
-        echo "Scenario 1: Multiple windows in workspace, moving focused window to $next_workspace" >> "$log_file"
-        aerospace move-node-to-workspace "$next_workspace" --window-id "$focused_window_id" </dev/null 2>> "$log_file"
-
-        # Follow the focused window to its new workspace and restore focus
-        echo "Following window to workspace $next_workspace and restoring focus to $focused_window_id" >> "$log_file"
-        aerospace focus --window-id "$focused_window_id" </dev/null 2>> "$log_file"
-      fi
-
-      echo "Ensuring contiguous workspaces" >> "$log_file"
-      "$HOME/Software/Public/dotfiles/sketchybar/scripts/ensure_contiguous_workspaces.sh" 2>> "$log_file"
-
-      # NOTE: Do NOT call rebuild_workspaces() here - yabai signals automatically trigger it
-      # when windows are created/destroyed/moved
-    else
-      echo "No next workspace found" >> "$log_file"
-    fi
+# Find current workspace index
+current_index=-1
+for i in "${!workspaces[@]}"; do
+  if [[ "${workspaces[$i]}" == "$current" ]]; then
+    current_index=$i
+    break
   fi
+done
 
+if [[ $current_index -eq -1 ]]; then
+  echo "ERROR: Could not find current workspace in list" >> "$log_file"
+  exit 1
+fi
+
+# Count windows in current workspace
+window_count=$(aerospace list-windows --workspace "$current" --format '%{window-id}' | wc -l | tr -d ' ')
+echo "Window count in current workspace: $window_count" >> "$log_file"
+
+# Determine target index based on direction
+if [[ "$direction" == "next" ]]; then
+  target_index=$((current_index + 1))
+  is_at_edge=$((current_index == ${#workspaces[@]} - 1))
 elif [[ "$direction" == "prev" ]]; then
-  # Get current workspace and focused window
-  current=$(aerospace list-workspaces --focused)
-  echo "Current workspace: $current" >> "$log_file"
+  target_index=$((current_index - 1))
+  is_at_edge=$((current_index == 0))
+else
+  echo "ERROR: Invalid direction '$direction'" >> "$log_file"
+  exit 1
+fi
 
-  focused_window_id=$(aerospace list-windows --focused --format '%{window-id}')
-  echo "Focused window ID: $focused_window_id" >> "$log_file"
+echo "Current index: $current_index, Target index: $target_index, At edge: $is_at_edge" >> "$log_file"
 
-  # Get all occupied workspaces before the operation
-  mapfile -t occupied_before < <(aerospace list-workspaces --all | sort -n)
-  echo "Occupied workspaces before: ${occupied_before[*]}" >> "$log_file"
-  workspace_count_before=${#occupied_before[@]}
+# === MAIN LOGIC ===
 
-  # Check if we're on the first workspace
-  first_workspace="${occupied_before[0]}"
-  echo "First workspace: $first_workspace" >> "$log_file"
+if [[ $window_count -gt 1 ]]; then
+  # Multiple windows: move focused window in direction
+  echo "Multiple windows - moving focused window" >> "$log_file"
 
-  if [[ "$current" == "$first_workspace" ]]; then
-    # On first workspace - check window count
-    window_count=$(aerospace list-windows --workspace "$current" --format '%{window-id}' | wc -l | tr -d ' ')
-    echo "Window count in workspace $current: $window_count" >> "$log_file"
+  if [[ $is_at_edge -eq 1 ]]; then
+    # At edge: create new workspace
+    echo "At edge - creating new workspace" >> "$log_file"
 
-    if [[ $window_count -gt 1 ]]; then
-      # Multiple windows - Scenario 3: Create new space and move focused window
-      echo "Scenario 3: Creating new workspace to the left and moving focused window" >> "$log_file"
-
-      # Use workspace 0 temporarily
-      echo "Moving window $focused_window_id to workspace 0" >> "$log_file"
+    if [[ "$direction" == "next" ]]; then
+      # Moving right from last workspace
+      new_workspace=$((${workspaces[-1]} + 1))
+      if [[ $new_workspace -le 9 ]]; then
+        echo "Creating workspace $new_workspace" >> "$log_file"
+        aerospace move-node-to-workspace "$new_workspace" --window-id "$focused_window_id" </dev/null 2>> "$log_file"
+        aerospace workspace "$new_workspace" </dev/null 2>> "$log_file"
+      else
+        echo "Cannot create workspace > 9" >> "$log_file"
+      fi
+    else
+      # Moving left from first workspace - use temporary workspace 0
+      echo "Moving to workspace 0 (will become 1 after renumber)" >> "$log_file"
       aerospace move-node-to-workspace 0 --window-id "$focused_window_id" </dev/null 2>> "$log_file"
 
-      # Renumber (0 becomes 1, others shift right)
-      echo "Ensuring contiguous workspaces" >> "$log_file"
-      "$HOME/Software/Public/dotfiles/sketchybar/scripts/ensure_contiguous_workspaces.sh" 2>> "$log_file"
+      # Renumber: 0→1, 1→2, 2→3, etc.
+      renumber_workspaces
 
-      # NOTE: Do NOT call rebuild_workspaces() here - yabai signals automatically trigger it
-      # when windows are created/destroyed/moved
-    else
-      echo "Only one window, no action" >> "$log_file"
+      # Focus the new workspace 1
+      aerospace workspace 1 </dev/null 2>> "$log_file"
     fi
   else
-    # Not on first workspace - check if prev workspace exists
-    prev_workspace=""
-    for i in "${!occupied_before[@]}"; do
-      if [[ "${occupied_before[$i]}" == "$current" ]] && [[ $i -gt 0 ]]; then
-        prev_workspace="${occupied_before[$((i - 1))]}"
-        break
-      fi
-    done
+    # Not at edge: move to existing adjacent workspace
+    target_workspace="${workspaces[$target_index]}"
+    echo "Moving to existing workspace $target_workspace" >> "$log_file"
+    aerospace move-node-to-workspace "$target_workspace" --window-id "$focused_window_id" </dev/null 2>> "$log_file"
+    aerospace focus --window-id "$focused_window_id" </dev/null 2>> "$log_file"
+  fi
 
-    if [[ -n "$prev_workspace" ]]; then
-      # Check if current workspace will become empty after moving focused window
-      window_count_current=$(aerospace list-windows --workspace "$current" --format '%{window-id}' | wc -l | tr -d ' ')
-      echo "Window count in current workspace $current: $window_count_current" >> "$log_file"
+else
+  # Single window: ripple-pull windows from direction
+  echo "Single window - ripple pulling from direction" >> "$log_file"
 
-      if [[ $window_count_current -eq 1 ]]; then
-        # Scenario 2: Only one window in current workspace - pull windows from prev instead
-        echo "Scenario 2: Only window in workspace, pulling windows from $prev_workspace instead" >> "$log_file"
+  if [[ $is_at_edge -eq 1 ]]; then
+    # At edge with single window: no action
+    echo "At edge with single window - no action" >> "$log_file"
+  else
+    # Ripple-pull all windows from target direction into current workspace
+    echo "Ripple pulling from index $target_index onwards" >> "$log_file"
 
-        # Pull all windows from prev workspace to current
-        mapfile -t windows_to_move < <(aerospace list-windows --workspace "$prev_workspace" --format '%{window-id}')
-        echo "Windows to pull: ${windows_to_move[*]}" >> "$log_file"
+    if [[ "$direction" == "next" ]]; then
+      # Pull from right: iterate from target_index to end
+      for ((i = target_index; i < ${#workspaces[@]}; i++)); do
+        source_workspace="${workspaces[$i]}"
+        echo "Pulling all windows from workspace $source_workspace to $current" >> "$log_file"
 
+        mapfile -t windows_to_move < <(aerospace list-windows --workspace "$source_workspace" --format '%{window-id}')
         for window_id in "${windows_to_move[@]}"; do
           if [[ -n "$window_id" ]]; then
-            echo "  Moving window $window_id to workspace $current" >> "$log_file"
+            echo "  Moving window $window_id" >> "$log_file"
             aerospace move-node-to-workspace "$current" --window-id "$window_id" </dev/null 2>> "$log_file"
           fi
         done
-      else
-        # Scenario 1: Multiple windows in current workspace - move focused window
-        echo "Scenario 1: Multiple windows in workspace, moving focused window to $prev_workspace" >> "$log_file"
-        aerospace move-node-to-workspace "$prev_workspace" --window-id "$focused_window_id" </dev/null 2>> "$log_file"
-
-        # Follow the focused window to its new workspace and restore focus
-        echo "Following window to workspace $prev_workspace and restoring focus to $focused_window_id" >> "$log_file"
-        aerospace focus --window-id "$focused_window_id" </dev/null 2>> "$log_file"
-      fi
-
-      echo "Ensuring contiguous workspaces" >> "$log_file"
-      "$HOME/Software/Public/dotfiles/sketchybar/scripts/ensure_contiguous_workspaces.sh" 2>> "$log_file"
-
-      # NOTE: Do NOT call rebuild_workspaces() here - yabai signals automatically trigger it
-      # when windows are created/destroyed/moved
+      done
     else
-      echo "No prev workspace found" >> "$log_file"
+      # Pull from left: iterate from target_index down to 0
+      for ((i = target_index; i >= 0; i--)); do
+        source_workspace="${workspaces[$i]}"
+        echo "Pulling all windows from workspace $source_workspace to $current" >> "$log_file"
+
+        mapfile -t windows_to_move < <(aerospace list-windows --workspace "$source_workspace" --format '%{window-id}')
+        for window_id in "${windows_to_move[@]}"; do
+          if [[ -n "$window_id" ]]; then
+            echo "  Moving window $window_id" >> "$log_file"
+            aerospace move-node-to-workspace "$current" --window-id "$window_id" </dev/null 2>> "$log_file"
+          fi
+        done
+      done
     fi
+
+    # After ripple-pull, renumber to close gaps
+    renumber_workspaces
   fi
 fi
 
 echo "Done" >> "$log_file"
+
+# === HELPER FUNCTIONS ===
+
+renumber_workspaces() {
+  echo "Renumbering workspaces to ensure contiguity" >> "$log_file"
+
+  # Get all workspaces sorted
+  mapfile -t occupied < <(aerospace list-workspaces --all | sort -n)
+  echo "Workspaces before renumber: ${occupied[*]}" >> "$log_file"
+
+  # Check if already contiguous
+  is_contiguous=true
+  expected=1
+  for sid in "${occupied[@]}"; do
+    if [[ $sid -ne $expected ]]; then
+      is_contiguous=false
+      break
+    fi
+    expected=$((expected + 1))
+  done
+
+  if [[ "$is_contiguous" == "true" ]]; then
+    echo "Already contiguous" >> "$log_file"
+    return
+  fi
+
+  # Renumber from low to high
+  new_number=1
+  for sid in "${occupied[@]}"; do
+    if [[ $sid -ne $new_number ]]; then
+      echo "Renumbering workspace $sid -> $new_number" >> "$log_file"
+
+      mapfile -t window_ids < <(aerospace list-windows --workspace "$sid" --format '%{window-id}')
+      for window_id in "${window_ids[@]}"; do
+        if [[ -n "$window_id" ]]; then
+          aerospace move-node-to-workspace "$new_number" --window-id "$window_id" </dev/null 2>> "$log_file"
+        fi
+      done
+    fi
+    new_number=$((new_number + 1))
+  done
+
+  echo "Renumbering complete" >> "$log_file"
+}
