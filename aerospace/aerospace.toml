@@ -141,17 +141,9 @@ alt-down = [
   'focus left --boundaries-action wrap-around-the-workspace',
 ]
 
-# prev/next adjacent workspace
-ctrl-left = 'exec-and-forget $HOME/Software/bin/wm goto_space --dir="prev"'
-ctrl-right = 'exec-and-forget $HOME/Software/bin/wm goto_space --dir="next"'
-
 # prev/next occupied workspace
-alt-left = 'exec-and-forget $HOME/Software/bin/wm goto_space --dir="prev" --mode="occupied"'
-alt-right = 'exec-and-forget $HOME/Software/bin/wm goto_space --dir="next" --mode="occupied"'
-
-# prev/next empty workspace
-cmd-left = 'exec-and-forget $HOME/Software/bin/wm goto_space --dir="prev" --mode="empty"'
-cmd-right = 'exec-and-forget $HOME/Software/bin/wm goto_space --dir="next" --mode="empty"'
+alt-left = 'workspace --wrap-around prev'
+alt-right = 'workspace --wrap-around next'
 
 
 alt-shift-left = 'exec-and-forget sketchybar --trigger aerospace_move_window_prev'
