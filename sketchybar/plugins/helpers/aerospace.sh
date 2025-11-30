@@ -135,7 +135,8 @@ rebuild_workspaces() {
       sketchybar --move "$end" after "$start"
 
       # Move all window items for this workspace to correct position
-      local window_items=($(sketchybar --query bar | jq -r --arg sid "$sid" '.items[] | select(test("^window\\." + $sid + "\\."))'))
+      local window_items
+      mapfile -t window_items < <(sketchybar --query bar | jq -r --arg sid "$sid" '.items[] | select(test("^window\\." + $sid + "\\."))' | sort)
       echo "    Window items to move: ${window_items[*]}" >> "$log_file"
       local prev_item="$start"
       for item in "${window_items[@]}"; do
@@ -162,7 +163,8 @@ rebuild_workspaces() {
   # Step 3: Update window items to match aerospace's current state
   # First, get ALL window items across all workspaces
   echo "Step 3: Updating window items" >> "$log_file"
-  local all_sketchy_items=($(sketchybar --query bar | jq -r '.items[] | select(test("^window\\."))'))
+  local all_sketchy_items
+  mapfile -t all_sketchy_items < <(sketchybar --query bar | jq -r '.items[] | select(test("^window\\."))' | sort)
   echo "  All existing window items: ${all_sketchy_items[*]}" >> "$log_file"
 
   for sid in "${occupied_workspaces[@]}"; do

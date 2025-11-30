@@ -5,9 +5,14 @@
 # 2. Calculate desired end state in arrays
 # 3. Apply minimal changes to both aerospace and sketchybar
 
+# Set required paths
+export CONFIG_DIR="$HOME/Software/Public/dotfiles/sketchybar"
+export PLUGIN_DIR="$CONFIG_DIR/plugins"
+export CACHE_DIR="$HOME/.cache/sketchybar"
+
 # Source helpers for sketchybar management
-source "$HOME/Software/Public/dotfiles/sketchybar/plugins/helpers/sketchy.sh"
-source "$HOME/Software/Public/dotfiles/sketchybar/env.sh"
+source "$CONFIG_DIR/env.sh"
+source "$PLUGIN_DIR/helpers/sketchy.sh"
 
 direction="$1"  # "next" or "prev"
 
@@ -15,6 +20,8 @@ direction="$1"  # "next" or "prev"
 log_file="/tmp/smart_move_window.log"
 echo "=== $(date) ===" >> "$log_file"
 echo "Direction: $direction" >> "$log_file"
+echo "WORKSPACE_FOREGROUND=$WORKSPACE_FOREGROUND" >> "$log_file"
+echo "WORKSPACE_FOCUSED_FOREGROUND=$WORKSPACE_FOCUSED_FOREGROUND" >> "$log_file"
 
 # === STEP 1: READ CURRENT STATE ===
 
@@ -297,8 +304,8 @@ fi
 # Update window items: ensure items match aerospace state
 echo "Updating window items to match aerospace state..." >> "$log_file"
 
-# Get all current window items from sketchybar
-all_window_items=($(sketchybar --query bar 2>/dev/null | jq -r '.items[]? // empty | select(test("^window\\."))'))
+# Get all current window items from sketchybar (use mapfile to handle spaces in appnames)
+mapfile -t all_window_items < <(sketchybar --query bar 2>/dev/null | jq -r '.items[]? // empty | select(test("^window\\."))' | sort)
 
 # Build map of window_id -> correct_workspace_id from aerospace
 declare -A window_workspace_map
@@ -330,8 +337,10 @@ for item in "${all_window_items[@]}"; do
     # Item has wrong workspace ID, recreate it
     echo "  Recreating $item with correct workspace $correct_sid" >> "$log_file"
 
-    # Get icon
+    # Get icon and color
     icon="$($CONFIG_DIR/icons_apps.sh "$item_appname" 2>/dev/null || echo "")"
+    item_color=$(sketchy_get_space_foreground_color false)
+    echo "  Icon: $icon, Color: $item_color" >> "$log_file"
 
     # Remove old item
     sketchy_remove_item "$item"
@@ -346,7 +355,7 @@ for item in "${all_window_items[@]}"; do
 
     sketchy_add_item "$correct_item" left \
       --set "$correct_item" "${props[@]}" \
-      icon="$icon" icon.color=$(sketchy_get_space_foreground_color false) \
+      icon="$icon" icon.color="$item_color" \
       click_script="aerospace focus --window-id $item_window_id"
 
     # Position it
@@ -359,8 +368,8 @@ echo "Fixing window highlighting..." >> "$log_file"
 unfocused_color=$(sketchy_get_space_foreground_color false)
 focused_color=$(sketchy_get_space_foreground_color true)
 
-# Re-read all window items after updates
-all_window_items=($(sketchybar --query bar 2>/dev/null | jq -r '.items[]? // empty | select(test("^window\\."))'))
+# Re-read all window items after updates (use mapfile to handle spaces in appnames)
+mapfile -t all_window_items < <(sketchybar --query bar 2>/dev/null | jq -r '.items[]? // empty | select(test("^window\\."))' | sort)
 
 for item in "${all_window_items[@]}"; do
   # Extract window_id from item name: window.SID.WINDOW_ID.APPNAME
