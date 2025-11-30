@@ -18,18 +18,12 @@ direction="$1"  # "next" or "prev"
 
 # Log for debugging
 log_file="/tmp/smart_move_window.log"
-echo "=== $(date) ===" >> "$log_file"
-echo "Direction: $direction" >> "$log_file"
-echo "WORKSPACE_FOREGROUND=$WORKSPACE_FOREGROUND" >> "$log_file"
-echo "WORKSPACE_FOCUSED_FOREGROUND=$WORKSPACE_FOCUSED_FOREGROUND" >> "$log_file"
+echo "=== $(date) EVENT: smart_move_window.sh direction=$direction ===" >> "$log_file"
 
 # === STEP 1: READ CURRENT STATE ===
 
 current_sid=$(aerospace list-workspaces --focused)
 focused_window_id=$(aerospace list-windows --focused --format '%{window-id}')
-
-echo "Current workspace: $current_sid" >> "$log_file"
-echo "Focused window: $focused_window_id" >> "$log_file"
 
 # Build current state: array of workspaces, each with array of window_ids
 declare -A current_state  # workspace_id -> "window_id1 window_id2 ..."
@@ -38,11 +32,6 @@ mapfile -t workspace_ids < <(aerospace list-workspaces --all | sort -n)
 for sid in "${workspace_ids[@]}"; do
   mapfile -t windows < <(aerospace list-windows --workspace "$sid" --format '%{window-id}')
   current_state[$sid]="${windows[*]}"
-done
-
-echo "Current state:" >> "$log_file"
-for sid in "${workspace_ids[@]}"; do
-  echo "  Workspace $sid: ${current_state[$sid]}" >> "$log_file"
 done
 
 # Find current workspace index
@@ -55,7 +44,6 @@ for i in "${!workspace_ids[@]}"; do
 done
 
 if [[ $current_index -eq -1 ]]; then
-  echo "ERROR: Could not find current workspace" >> "$log_file"
   exit 1
 fi
 
@@ -63,7 +51,6 @@ fi
 
 # Count windows in current workspace
 window_count=$(echo "${current_state[$current_sid]}" | wc -w | tr -d ' ')
-echo "Window count in current workspace: $window_count" >> "$log_file"
 
 # Determine if at edge
 if [[ "$direction" == "next" ]]; then
@@ -74,8 +61,6 @@ elif [[ "$direction" == "prev" ]]; then
   target_index=$((current_index - 1))
 fi
 
-echo "At edge: $is_at_edge, Target index: $target_index" >> "$log_file"
-
 # Calculate desired state
 declare -A desired_state
 declare -a desired_workspace_ids
@@ -84,17 +69,14 @@ new_focused_window_id="$focused_window_id"
 
 if [[ $window_count -gt 1 ]]; then
   # === MULTIPLE WINDOWS: MOVE FOCUSED WINDOW ===
-  echo "Strategy: Move focused window" >> "$log_file"
 
   if [[ $is_at_edge -eq 1 ]]; then
     # Create new workspace at edge
-    echo "Creating new workspace at edge" >> "$log_file"
 
     if [[ "$direction" == "next" ]]; then
       # Add workspace at end
       new_sid=$((workspace_ids[-1] + 1))
       if [[ $new_sid -gt 9 ]]; then
-        echo "Cannot create workspace > 9, no changes" >> "$log_file"
         # Copy current state as desired state
         for sid in "${workspace_ids[@]}"; do
           desired_state[$sid]="${current_state[$sid]}"
@@ -151,7 +133,6 @@ if [[ $window_count -gt 1 ]]; then
   else
     # Move to existing adjacent workspace
     target_sid="${workspace_ids[$target_index]}"
-    echo "Moving to existing workspace $target_sid" >> "$log_file"
 
     for sid in "${workspace_ids[@]}"; do
       if [[ $sid -eq $current_sid ]]; then
@@ -176,11 +157,9 @@ if [[ $window_count -gt 1 ]]; then
 
 else
   # === SINGLE WINDOW: RIPPLE ===
-  echo "Strategy: Ripple" >> "$log_file"
 
   if [[ $is_at_edge -eq 1 ]]; then
     # No action at edge with single window
-    echo "At edge with single window - no action" >> "$log_file"
     for sid in "${workspace_ids[@]}"; do
       desired_state[$sid]="${current_state[$sid]}"
     done
@@ -363,9 +342,11 @@ for item in "${all_window_items[@]}"; do
   fi
 done
 
-# Manually trigger highlighting to ensure it happens synchronously
-# The aerospace focus command above (line 292) triggers an event, but we need immediate feedback
-echo "Triggering window highlighting for window $new_focused_window_id" >> "$log_file"
-sketchy_highlight_window_id "$new_focused_window_id"
+# Wait for aerospace focus event to trigger highlighting
+# The aerospace focus command above (line 292) will trigger aerospace_workspace_change event
+# which will call aerospace_focused_window_change -> sketchy_highlight_window_id
+# Calling it here would race with the event handler
+echo "Waiting for aerospace focus event to handle highlighting" >> "$log_file"
+sleep 0.05  # Brief delay to let aerospace focus event complete
 
 echo "Done" >> "$log_file"
