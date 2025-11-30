@@ -87,21 +87,13 @@ aerospace_focused_window_change() {
 
 # Rebuild workspaces: intelligently update workspace order without unnecessary removals
 rebuild_workspaces() {
-  local log_file="/tmp/rebuild_workspaces.log"
-  echo "=== $(date) ===" >> "$log_file"
-
   local occupied_workspaces=($(aerospace list-workspaces --all | sort -n))
   local existing_workspaces=($(sketchybar --query bar | jq -r '.items[] | select(test("^workspace\\.start\\.\\d+$"))' | sed 's/workspace\.start\.//'))
 
-  echo "Occupied workspaces (aerospace): ${occupied_workspaces[*]}" >> "$log_file"
-  echo "Existing workspaces (sketchybar): ${existing_workspaces[*]}" >> "$log_file"
-
   # Step 1: Remove workspaces that no longer exist (but NOT window items - Step 3 will handle those)
-  echo "Step 1: Removing orphaned workspaces" >> "$log_file"
   for sid in "${existing_workspaces[@]}"; do
     if ! printf '%s\n' "${occupied_workspaces[@]}" | grep -q "^${sid}$"; then
       # Workspace no longer exists - remove only the workspace dividers, not window items
-      echo "  Removing workspace $sid dividers (no longer exists)" >> "$log_file"
       sketchy_remove_item "workspace.start.$sid"
       sketchy_remove_item "workspace.end.$sid"
       sketchy_remove_item "workspace.$sid"
@@ -109,7 +101,6 @@ rebuild_workspaces() {
   done
 
   # Step 2: Reorder existing workspaces and add missing ones
-  echo "Step 2: Reordering/creating workspaces" >> "$log_file"
   local prev_end="aerospace_spaces_spacer"
   local props=(
     background.padding_left=0
@@ -130,14 +121,12 @@ rebuild_workspaces() {
     # Check if workspace already exists
     if printf '%s\n' "${existing_workspaces[@]}" | grep -q "^${sid}$"; then
       # Workspace exists - just move it to correct position
-      echo "  Workspace $sid exists - moving to correct position" >> "$log_file"
       sketchybar --move "$start" after "$prev_end"
       sketchybar --move "$end" after "$start"
 
       # Move all window items for this workspace to correct position
       local window_items
       mapfile -t window_items < <(sketchybar --query bar | jq -r --arg sid "$sid" '.items[] | select(test("^window\\." + $sid + "\\."))' | sort)
-      echo "    Window items to move: ${window_items[*]}" >> "$log_file"
       local prev_item="$start"
       for item in "${window_items[@]}"; do
         sketchybar --move "$item" after "$prev_item"
@@ -145,7 +134,6 @@ rebuild_workspaces() {
       done
     else
       # Workspace doesn't exist - create it (Step 3 will populate windows)
-      echo "  Workspace $sid doesn't exist - creating dividers only" >> "$log_file"
       sketchy_add_item "$start" left \
         --set "$start" "${props[@]}"
       sketchybar --move "$start" after "$prev_end"
@@ -162,24 +150,19 @@ rebuild_workspaces() {
 
   # Step 3: Update window items to match aerospace's current state
   # First, get ALL window items across all workspaces
-  echo "Step 3: Updating window items" >> "$log_file"
   local all_sketchy_items
   mapfile -t all_sketchy_items < <(sketchybar --query bar | jq -r '.items[] | select(test("^window\\."))' | sort)
-  echo "  All existing window items: ${all_sketchy_items[*]}" >> "$log_file"
 
   for sid in "${occupied_workspaces[@]}"; do
     # Get aerospace's window list for this workspace
     local aerospace_window_ids=($(aerospace_window_ids_in_workspace "$sid"))
-    echo "  Workspace $sid aerospace windows: ${aerospace_window_ids[*]}" >> "$log_file"
 
     # Add/update windows and ensure correct order
     local prev_item="workspace.start.$sid"
     for window_id in "${aerospace_window_ids[@]}"; do
       local appname=$(aerospace_appname_from_window_id "$window_id")
-      echo "    Processing window_id=$window_id appname=$appname" >> "$log_file"
 
       if [ -z "$window_id" ] || [ -z "$appname" ]; then
-        echo "      SKIP: window_id or appname is empty" >> "$log_file"
         continue
       fi
 
@@ -202,11 +185,9 @@ rebuild_workspaces() {
 
       if [[ -n "$existing_item" && "$existing_item" == "$correct_item" ]]; then
         # Item exists with correct name - just move to correct position
-        echo "    Window $window_id ($appname): correct item exists, moving" >> "$log_file"
         sketchybar --move "$correct_item" after "$prev_item"
       elif [[ -n "$existing_item" ]]; then
         # Item exists but with wrong workspace ID in name - remove old, create new
-        echo "    Window $window_id ($appname): wrong name '$existing_item', recreating as '$correct_item'" >> "$log_file"
         sketchy_remove_item "$existing_item"
 
         local icon="$($CONFIG_DIR/icons_apps.sh "$appname")"
@@ -224,7 +205,6 @@ rebuild_workspaces() {
         sketchybar --move "$correct_item" after "$prev_item"
       else
         # Item doesn't exist - create it
-        echo "    Window $window_id ($appname): doesn't exist, creating '$correct_item'" >> "$log_file"
         local icon="$($CONFIG_DIR/icons_apps.sh "$appname")"
         local icon_color="$(sketchy_get_space_foreground_color false)"
         local props=(
@@ -245,30 +225,22 @@ rebuild_workspaces() {
   done
 
   # Step 3.5: Remove any orphaned window items (windows that no longer exist in any workspace)
-  echo "Step 3.5: Removing orphaned window items" >> "$log_file"
   local all_aerospace_window_ids=($(aerospace list-windows --all --format '%{window-id}'))
-  echo "  All aerospace window IDs: ${all_aerospace_window_ids[*]}" >> "$log_file"
   for item in "${all_sketchy_items[@]}"; do
     local item_window_id=$(echo "$item" | awk -F'.' '{print $3}')
     if ! printf '%s\n' "${all_aerospace_window_ids[@]}" | grep -q "^${item_window_id}$"; then
-      echo "  Removing orphaned item: $item (window $item_window_id no longer exists)" >> "$log_file"
       sketchy_remove_item "$item"
     fi
   done
 
   # Step 4: Highlight current workspace and focused window
-  echo "Step 4: Highlighting focused workspace and window" >> "$log_file"
   local focused_sid=$(aerospace_focused_workspace)
-  echo "  Focused workspace: $focused_sid" >> "$log_file"
   sketchy_highlight_workspace "$focused_sid"
 
   local focused_window_id=$(yabai_get_focused_window_id)
-  echo "  Focused window ID: $focused_window_id" >> "$log_file"
   if [ -n "$focused_window_id" ]; then
     sketchy_highlight_window_id "$focused_window_id"
   fi
-
-  echo "Rebuild complete" >> "$log_file"
 }
 
 # Sync workspaces: add workspace dividers for new workspaces, remove for empty ones

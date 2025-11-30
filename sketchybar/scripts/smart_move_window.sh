@@ -16,10 +16,6 @@ source "$PLUGIN_DIR/helpers/sketchy.sh"
 
 direction="$1"  # "next" or "prev"
 
-# Log for debugging
-log_file="/tmp/smart_move_window.log"
-echo "=== $(date) EVENT: smart_move_window.sh direction=$direction ===" >> "$log_file"
-
 # === STEP 1: READ CURRENT STATE ===
 
 current_sid=$(aerospace list-workspaces --focused)
@@ -88,9 +84,9 @@ if [[ $window_count -gt 1 ]]; then
           if [[ $sid -eq $current_sid ]]; then
             # Remove focused window from current workspace
             windows=()
-            for wid in ${current_state[$sid]}; do
-              if [[ $wid != $focused_window_id ]]; then
-                windows+=("$wid")
+            for window_id in ${current_state[$sid]}; do
+              if [[ $window_id != $focused_window_id ]]; then
+                windows+=("$window_id")
               fi
             done
             desired_state[$sid]="${windows[*]}"
@@ -109,9 +105,9 @@ if [[ $window_count -gt 1 ]]; then
       for sid in "${workspace_ids[@]}"; do
         if [[ $sid -eq $current_sid ]]; then
           windows=()
-          for wid in ${current_state[$sid]}; do
-            if [[ $wid != $focused_window_id ]]; then
-              windows+=("$wid")
+          for window_id in ${current_state[$sid]}; do
+            if [[ $window_id != $focused_window_id ]]; then
+              windows+=("$window_id")
             fi
           done
           desired_state[$((sid + 1))]="${windows[*]}"
@@ -138,9 +134,9 @@ if [[ $window_count -gt 1 ]]; then
       if [[ $sid -eq $current_sid ]]; then
         # Remove focused window from current
         windows=()
-        for wid in ${current_state[$sid]}; do
-          if [[ $wid != $focused_window_id ]]; then
-            windows+=("$wid")
+        for window_id in ${current_state[$sid]}; do
+          if [[ $window_id != $focused_window_id ]]; then
+            windows+=("$window_id")
           fi
         done
         desired_state[$sid]="${windows[*]}"
