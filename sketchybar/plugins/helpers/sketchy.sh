@@ -90,32 +90,34 @@ sketchy_highlight_workspace() {
 
 
 sketchy_highlight_window_id() {
-  # ex: 66286 - since window.3.66286.WezTerm could now be window.4.66286.WezTerm
-  local window_id="$1"
-  local prev_window_id
+  # State-based approach: iterate through ALL windows and set correct color
+  local focused_window_id="$1"
+  local log_file="/tmp/smart_move_window.log"
 
-  if [ -f "$CACHE_DIR/highlighted.window_id" ]; then
-    read -r prev_window_id <"$CACHE_DIR/highlighted.window_id"
-  fi
+  # Get colors
+  local focused_color=$(sketchy_get_space_foreground_color true)
+  local unfocused_color=$(sketchy_get_space_foreground_color false)
 
-  # Only unhighlight previous window if we're changing to a different window
-  if [ -n "$prev_window_id" ] && [ "$prev_window_id" != "$window_id" ]; then
-    local prev_item=$(sketchy_get_item_by_window_id "$prev_window_id")
-    if [ -n "$prev_item" ]; then
-      local color=$(sketchy_get_space_foreground_color false)
-      sketchybar --set "$prev_item" icon.color="$color"
+  # Get all window items from sketchybar
+  local all_window_items
+  mapfile -t all_window_items < <(sketchybar --query bar 2>/dev/null | jq -r '.items[]? // empty | select(test("^window\\."))' | sort)
+
+  # Set each window to correct color based on whether it's focused
+  for item in "${all_window_items[@]}"; do
+    # Extract window_id from item name: window.SID.WINDOW_ID.APPNAME
+    local item_window_id=$(echo "$item" | awk -F'.' '{print $3}')
+
+    if [[ "$item_window_id" == "$focused_window_id" ]]; then
+      echo "  ICON ON: $item (window $item_window_id) color=$focused_color" >> "$log_file"
+      sketchybar --set "$item" icon.color="$focused_color"
+    else
+      echo "  ICON OFF: $item (window $item_window_id) color=$unfocused_color" >> "$log_file"
+      sketchybar --set "$item" icon.color="$unfocused_color"
     fi
-  fi
+  done
 
-  # Highlight the current window (even if it's the same as before to ensure it stays highlighted)
-  if [ -n "$window_id" ]; then
-    local item=$(sketchy_get_item_by_window_id "$window_id")
-    if [ -n "$item" ]; then
-      local color=$(sketchy_get_space_foreground_color true)
-      sketchybar --set "$item" icon.color="$color"
-    fi
-    echo "$window_id" >"$CACHE_DIR/highlighted.window_id"
-  fi
+  # Update cache
+  echo "$focused_window_id" >"$CACHE_DIR/highlighted.window_id"
 }
 
 sketchy_get_space_background_color() {

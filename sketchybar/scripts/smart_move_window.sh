@@ -168,7 +168,6 @@ else
     # Ripple: shift workspaces in direction
     if [[ "$direction" == "next" ]]; then
       # Ripple right: workspaces to the right shift left
-      echo "Ripple right" >> "$log_file"
 
       for i in "${!workspace_ids[@]}"; do
         sid="${workspace_ids[$i]}"
@@ -194,7 +193,6 @@ else
       # Ripple left: workspaces to the left shift right (to make room)
       # Example: s1w1 s2w2 s3wf s4w3 -> s1w1 s2w2,wf s3w3 (s1 removed after renumber)
       # Data flow: s1→s2, s2→s3(current), s1 removed
-      echo "Ripple left" >> "$log_file"
 
       for i in "${!workspace_ids[@]}"; do
         sid="${workspace_ids[$i]}"
@@ -238,15 +236,7 @@ else
   fi
 fi
 
-echo "Desired state:" >> "$log_file"
-for sid in "${desired_workspace_ids[@]}"; do
-  echo "  Workspace $sid: ${desired_state[$sid]}" >> "$log_file"
-done
-echo "New focused workspace: $new_focused_sid" >> "$log_file"
-
 # === STEP 3: APPLY CHANGES ===
-
-echo "Applying changes..." >> "$log_file"
 
 # Apply to aerospace
 for sid in "${desired_workspace_ids[@]}"; do
@@ -262,8 +252,7 @@ for sid in "${desired_workspace_ids[@]}"; do
       done
 
       if [[ "$current_ws" != "$sid" ]]; then
-        echo "Moving window $window_id: $current_ws -> $sid" >> "$log_file"
-        aerospace move-node-to-workspace "$sid" --window-id "$window_id" </dev/null 2>> "$log_file"
+        aerospace move-node-to-workspace "$sid" --window-id "$window_id" </dev/null 2>/dev/null
       fi
     fi
   done
@@ -271,17 +260,14 @@ done
 
 # Focus the new workspace and window
 if [[ "$new_focused_sid" != "$current_sid" ]]; then
-  echo "Switching to workspace $new_focused_sid" >> "$log_file"
-  aerospace workspace "$new_focused_sid" </dev/null 2>> "$log_file"
+  aerospace workspace "$new_focused_sid" </dev/null 2>/dev/null
 fi
 
 if [[ "$new_focused_window_id" != "$focused_window_id" ]] || [[ "$new_focused_sid" != "$current_sid" ]]; then
-  echo "Focusing window $new_focused_window_id" >> "$log_file"
-  aerospace focus --window-id "$new_focused_window_id" </dev/null 2>> "$log_file"
+  aerospace focus --window-id "$new_focused_window_id" </dev/null 2>/dev/null
 fi
 
 # Update window items: ensure items match aerospace state
-echo "Updating window items to match aerospace state..." >> "$log_file"
 
 # Get all current window items from sketchybar (use mapfile to handle spaces in appnames)
 mapfile -t all_window_items < <(sketchybar --query bar 2>/dev/null | jq -r '.items[]? // empty | select(test("^window\\."))' | sort)
@@ -310,16 +296,11 @@ for item in "${all_window_items[@]}"; do
 
   if [[ -z "$correct_sid" ]]; then
     # Window no longer exists in aerospace, remove from sketchybar
-    echo "  Removing orphaned item: $item (window $item_window_id not in aerospace)" >> "$log_file"
     sketchy_remove_item "$item"
   elif [[ "$item_sid" != "$correct_sid" ]]; then
     # Item has wrong workspace ID, recreate it
-    echo "  Recreating $item with correct workspace $correct_sid" >> "$log_file"
-
-    # Get icon and color
     icon="$($CONFIG_DIR/icons_apps.sh "$item_appname" 2>/dev/null || echo "")"
     item_color=$(sketchy_get_space_foreground_color false)
-    echo "  Icon: $icon, Color: $item_color" >> "$log_file"
 
     # Remove old item
     sketchy_remove_item "$item"
@@ -343,10 +324,4 @@ for item in "${all_window_items[@]}"; do
 done
 
 # Wait for aerospace focus event to trigger highlighting
-# The aerospace focus command above (line 292) will trigger aerospace_workspace_change event
-# which will call aerospace_focused_window_change -> sketchy_highlight_window_id
-# Calling it here would race with the event handler
-echo "Waiting for aerospace focus event to handle highlighting" >> "$log_file"
 sleep 0.05  # Brief delay to let aerospace focus event complete
-
-echo "Done" >> "$log_file"
