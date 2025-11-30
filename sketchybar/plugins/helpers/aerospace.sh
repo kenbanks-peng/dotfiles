@@ -55,7 +55,7 @@ aerospace_workspace_change() {
   local prev_sid="$2"
 
   # move sticky apps to current workspace
-  show_sticky_apps "$sid" "$prev_sid"
+  apptype_show_sticky_apps "$sid" "$prev_sid"
 
   # keep prev workspace in sync
   remove_unmatched_items "$prev_sid"
@@ -166,7 +166,7 @@ rebuild_workspaces() {
         continue
       fi
 
-      # NOTE: Do NOT use allow_app here - rebuild syncs ALL windows that aerospace has
+      # NOTE: Do NOT use apptype_allow_app here - rebuild syncs ALL windows that aerospace has
       # Filtering is done when windows are initially added, not during rebuild
 
       # The correct item name for this window in this workspace
@@ -382,8 +382,8 @@ aerospace_new_window_id() {
   # Find the position of this window in aerospace's ordering
   local position=-1
   local index=0
-  for wid in "${aerospace_window_order[@]}"; do
-    if [ "$wid" = "$window_id" ]; then
+  for ordered_window_id in "${aerospace_window_order[@]}"; do
+    if [ "$ordered_window_id" = "$window_id" ]; then
       position=$index
       break
     fi
@@ -447,7 +447,7 @@ aerospace_add_apps_in_spaceid() {
       fi
 
       # Skip excluded apps and dialogs
-      if ! allow_app "$appname" "$window_id"; then
+      if ! apptype_allow_app "$appname" "$window_id"; then
         continue
       fi
 

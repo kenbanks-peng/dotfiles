@@ -28,8 +28,8 @@ STICKY_APPS=(
 )
 
 # Returns 0 (true) if app is allowed, 1 (false) if excluded
-# Usage: allow_app "AppName" [window_id]
-allow_app() {
+# Usage: apptype_allow_app "AppName" [window_id]
+apptype_allow_app() {
   local appname="$1"
   local window_id="$2"
 
@@ -56,7 +56,7 @@ allow_app() {
 }
 
 # Move sticky apps from previous workspace to current workspace
-show_sticky_apps() {
+apptype_show_sticky_apps() {
   local sid="$1"
   local prev_sid="$2"
 

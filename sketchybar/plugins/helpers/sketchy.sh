@@ -92,7 +92,6 @@ sketchy_highlight_workspace() {
 sketchy_highlight_window_id() {
   # State-based approach: iterate through ALL windows and set correct color
   local focused_window_id="$1"
-  local log_file="/tmp/smart_move_window.log"
 
   # Get colors
   local focused_color=$(sketchy_get_space_foreground_color true)
@@ -108,10 +107,8 @@ sketchy_highlight_window_id() {
     local item_window_id=$(echo "$item" | awk -F'.' '{print $3}')
 
     if [[ "$item_window_id" == "$focused_window_id" ]]; then
-      echo "  ICON ON: $item (window $item_window_id) color=$focused_color" >> "$log_file"
       sketchybar --set "$item" icon.color="$focused_color"
     else
-      echo "  ICON OFF: $item (window $item_window_id) color=$unfocused_color" >> "$log_file"
       sketchybar --set "$item" icon.color="$unfocused_color"
     fi
   done
