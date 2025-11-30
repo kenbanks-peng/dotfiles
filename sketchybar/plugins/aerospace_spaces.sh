@@ -11,6 +11,12 @@ if [ "$SENDER" = "forced" ]; then
   done
   # to initialize cache of previous window_id
   aerospace_focused_window_change
+elif [ "$SENDER" = "aerospace_new_workspace" ]; then
+  aerospace_create_new_workspace
+elif [ "$SENDER" = "aerospace_move_window_next" ]; then
+  aerospace_smart_move_window "next"
+elif [ "$SENDER" = "aerospace_move_window_prev" ]; then
+  aerospace_smart_move_window "prev"
 elif [ "$SENDER" = "aerospace_workspace_change" ]; then
   # Handle forced sync from ensure_contiguous_workspaces.sh
   if [[ "$FORCED" == "true" ]]; then

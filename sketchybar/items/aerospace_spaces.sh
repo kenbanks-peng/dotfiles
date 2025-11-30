@@ -9,6 +9,9 @@ source "$PLUGIN_DIR/helpers/aerospace.sh"
 location="left"
 
 sketchybar --add event aerospace_workspace_change
+sketchybar --add event aerospace_new_workspace
+sketchybar --add event aerospace_move_window_next
+sketchybar --add event aerospace_move_window_prev
 sketchybar --add event yabai_window_created
 sketchybar --add event yabai_window_destroyed
 sketchybar --add event yabai_window_minimized
@@ -28,6 +31,9 @@ props=(
   script="$PLUGIN_DIR/aerospace_spaces.sh" \
   --subscribe space_listener \
   aerospace_workspace_change \
+  aerospace_new_workspace \
+  aerospace_move_window_next \
+  aerospace_move_window_prev \
   yabai_window_created \
   yabai_window_destroyed \
   yabai_window_minimized \
