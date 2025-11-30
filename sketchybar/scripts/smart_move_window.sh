@@ -294,31 +294,88 @@ if [[ "$new_focused_window_id" != "$focused_window_id" ]] || [[ "$new_focused_si
   aerospace focus --window-id "$new_focused_window_id" </dev/null 2>> "$log_file"
 fi
 
-# Apply to sketchybar
-# Remove workspaces that no longer exist
-for sid in "${workspace_ids[@]}"; do
-  exists=false
-  for desired_sid in "${desired_workspace_ids[@]}"; do
-    if [[ $sid -eq $desired_sid ]]; then
-      exists=true
-      break
+# Update window items: ensure items match aerospace state
+echo "Updating window items to match aerospace state..." >> "$log_file"
+
+# Get all current window items from sketchybar
+all_window_items=($(sketchybar --query bar 2>/dev/null | jq -r '.items[]? // empty | select(test("^window\\."))'))
+
+# Build map of window_id -> correct_workspace_id from aerospace
+declare -A window_workspace_map
+for sid in "${desired_workspace_ids[@]}"; do
+  for window_id in ${desired_state[$sid]}; do
+    if [[ -n "$window_id" ]]; then
+      window_workspace_map[$window_id]=$sid
     fi
   done
+done
 
-  if [[ $exists == false ]]; then
-    echo "Removing sketchybar workspace $sid" >> "$log_file"
+# Check each sketchybar item and fix if needed
+for item in "${all_window_items[@]}"; do
+  # Extract: window.SID.WINDOW_ID.APPNAME (appname may contain spaces)
+  # Split on first 3 dots to get SID, WINDOW_ID, and everything else as APPNAME
+  item_sid=$(echo "$item" | awk -F'.' '{print $2}')
+  item_window_id=$(echo "$item" | awk -F'.' '{print $3}')
+  # Get everything after the 3rd dot (handles spaces in appname)
+  item_appname=$(echo "$item" | sed 's/^[^.]*\.[^.]*\.[^.]*\.//')
 
-    # Remove all window items
-    local window_items=($(sketchybar --query bar 2>/dev/null | jq -r --arg sid "$sid" '.items[]? // empty | select(test("^window\\." + $sid + "\\."))'))
-    for item in "${window_items[@]}"; do
-      sketchy_remove_item "$item"
-    done
+  # Get correct workspace from aerospace
+  correct_sid="${window_workspace_map[$item_window_id]}"
 
-    # Remove workspace dividers
-    sketchy_remove_item "workspace.start.$sid"
-    sketchy_remove_item "workspace.end.$sid"
-    sketchy_remove_item "workspace.$sid"
+  if [[ -z "$correct_sid" ]]; then
+    # Window no longer exists in aerospace, remove from sketchybar
+    echo "  Removing orphaned item: $item (window $item_window_id not in aerospace)" >> "$log_file"
+    sketchy_remove_item "$item"
+  elif [[ "$item_sid" != "$correct_sid" ]]; then
+    # Item has wrong workspace ID, recreate it
+    echo "  Recreating $item with correct workspace $correct_sid" >> "$log_file"
+
+    # Get icon
+    icon="$($CONFIG_DIR/icons_apps.sh "$item_appname" 2>/dev/null || echo "")"
+
+    # Remove old item
+    sketchy_remove_item "$item"
+
+    # Create new item with correct workspace ID
+    correct_item="window.$correct_sid.$item_window_id.$item_appname"
+    local props=(
+      background.corner_radius=0
+      icon.font="$ICON_FONT:$ICON_FONTSIZE"
+      icon.width="$APP_WIDTH"
+    )
+
+    sketchy_add_item "$correct_item" left \
+      --set "$correct_item" "${props[@]}" \
+      icon="$icon" icon.color=$(sketchy_get_space_foreground_color false) \
+      click_script="aerospace focus --window-id $item_window_id"
+
+    # Position it
+    sketchybar --move "$correct_item" before "workspace.end.$correct_sid"
   fi
 done
+
+# Fix window highlighting: ensure only focused window is highlighted
+echo "Fixing window highlighting..." >> "$log_file"
+unfocused_color=$(sketchy_get_space_foreground_color false)
+focused_color=$(sketchy_get_space_foreground_color true)
+
+# Re-read all window items after updates
+all_window_items=($(sketchybar --query bar 2>/dev/null | jq -r '.items[]? // empty | select(test("^window\\."))'))
+
+for item in "${all_window_items[@]}"; do
+  # Extract window_id from item name: window.SID.WINDOW_ID.APPNAME
+  item_window_id=$(echo "$item" | awk -F'.' '{print $3}')
+
+  if [[ "$item_window_id" == "$new_focused_window_id" ]]; then
+    echo "  Highlighting $item" >> "$log_file"
+    sketchybar --set "$item" icon.color="$focused_color"
+  else
+    echo "  Unhighlighting $item" >> "$log_file"
+    sketchybar --set "$item" icon.color="$unfocused_color"
+  fi
+done
+
+# Update cache
+echo "$new_focused_window_id" > "$CACHE_DIR/highlighted.window_id"
 
 echo "Done" >> "$log_file"
