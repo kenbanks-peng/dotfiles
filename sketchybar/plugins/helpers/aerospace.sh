@@ -340,10 +340,6 @@ aerospace_remove_window_id() {
   # item ex:window.3.66286.WezTerm
   item=$(sketchy_get_item_by_window_id "$window_id")
   sketchy_remove_item "$item"
-
-  # Ensure contiguous workspace numbering after removing window
-  # This will also trigger Sketchybar sync
-  "$PLUGIN_DIR/helpers/ensure_contiguous_workspaces.sh"
 }
 
 

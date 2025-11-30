@@ -18,11 +18,6 @@ elif [ "$SENDER" = "aerospace_move_window_next" ]; then
 elif [ "$SENDER" = "aerospace_move_window_prev" ]; then
   aerospace_smart_move_window "prev"
 elif [ "$SENDER" = "aerospace_workspace_change" ]; then
-  # Handle forced sync from ensure_contiguous_workspaces.sh
-  if [[ "$FORCED" == "true" ]]; then
-    rebuild_workspaces
-    exit 0
-  fi
   if [[ "$FOCUS_CHANGE" != "true" ]]; then
     # aerospace exec_on_workspace_change fired
     aerospace_workspace_change "$FOCUSED_WORKSPACE" "$PREV_WORKSPACE"
