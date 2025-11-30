@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-# Smart window movement that maintains contiguous workspace numbering
-# - Multiple windows in current workspace: move focused window in direction
-# - Single window in current workspace: ripple-pull all windows from direction
-# - Edge case (single window at boundary): no action
+# Smart window movement using state-based approach:
+# 1. Read current state from aerospace
+# 2. Calculate desired end state in arrays
+# 3. Apply minimal changes to both aerospace and sketchybar
 
 # Source helpers for sketchybar management
 source "$HOME/Software/Public/dotfiles/sketchybar/plugins/helpers/sketchy.sh"
@@ -16,256 +16,307 @@ log_file="/tmp/smart_move_window.log"
 echo "=== $(date) ===" >> "$log_file"
 echo "Direction: $direction" >> "$log_file"
 
-# Get current state
-current=$(aerospace list-workspaces --focused)
-focused_window_id=$(aerospace list-windows --focused --format '%{window-id}')
-mapfile -t workspaces < <(aerospace list-workspaces --all | sort -n)
+# === STEP 1: READ CURRENT STATE ===
 
-echo "Current workspace: $current" >> "$log_file"
+current_sid=$(aerospace list-workspaces --focused)
+focused_window_id=$(aerospace list-windows --focused --format '%{window-id}')
+
+echo "Current workspace: $current_sid" >> "$log_file"
 echo "Focused window: $focused_window_id" >> "$log_file"
-echo "All workspaces: ${workspaces[*]}" >> "$log_file"
+
+# Build current state: array of workspaces, each with array of window_ids
+declare -A current_state  # workspace_id -> "window_id1 window_id2 ..."
+mapfile -t workspace_ids < <(aerospace list-workspaces --all | sort -n)
+
+for sid in "${workspace_ids[@]}"; do
+  mapfile -t windows < <(aerospace list-windows --workspace "$sid" --format '%{window-id}')
+  current_state[$sid]="${windows[*]}"
+done
+
+echo "Current state:" >> "$log_file"
+for sid in "${workspace_ids[@]}"; do
+  echo "  Workspace $sid: ${current_state[$sid]}" >> "$log_file"
+done
 
 # Find current workspace index
 current_index=-1
-for i in "${!workspaces[@]}"; do
-  if [[ "${workspaces[$i]}" == "$current" ]]; then
+for i in "${!workspace_ids[@]}"; do
+  if [[ "${workspace_ids[$i]}" == "$current_sid" ]]; then
     current_index=$i
     break
   fi
 done
 
 if [[ $current_index -eq -1 ]]; then
-  echo "ERROR: Could not find current workspace in list" >> "$log_file"
+  echo "ERROR: Could not find current workspace" >> "$log_file"
   exit 1
 fi
+
+# === STEP 2: CALCULATE DESIRED END STATE ===
 
 # Count windows in current workspace
-window_count=$(aerospace list-windows --workspace "$current" --format '%{window-id}' | wc -l | tr -d ' ')
+window_count=$(echo "${current_state[$current_sid]}" | wc -w | tr -d ' ')
 echo "Window count in current workspace: $window_count" >> "$log_file"
 
-# Determine target index based on direction
+# Determine if at edge
 if [[ "$direction" == "next" ]]; then
+  is_at_edge=$((current_index == ${#workspace_ids[@]} - 1))
   target_index=$((current_index + 1))
-  is_at_edge=$((current_index == ${#workspaces[@]} - 1))
 elif [[ "$direction" == "prev" ]]; then
-  target_index=$((current_index - 1))
   is_at_edge=$((current_index == 0))
-else
-  echo "ERROR: Invalid direction '$direction'" >> "$log_file"
-  exit 1
+  target_index=$((current_index - 1))
 fi
 
-echo "Current index: $current_index, Target index: $target_index, At edge: $is_at_edge" >> "$log_file"
+echo "At edge: $is_at_edge, Target index: $target_index" >> "$log_file"
 
-# === MAIN LOGIC ===
+# Calculate desired state
+declare -A desired_state
+declare -a desired_workspace_ids
+new_focused_sid="$current_sid"
+new_focused_window_id="$focused_window_id"
 
 if [[ $window_count -gt 1 ]]; then
-  # Multiple windows: move focused window in direction
-  echo "Multiple windows - moving focused window" >> "$log_file"
+  # === MULTIPLE WINDOWS: MOVE FOCUSED WINDOW ===
+  echo "Strategy: Move focused window" >> "$log_file"
 
   if [[ $is_at_edge -eq 1 ]]; then
-    # At edge: create new workspace
-    echo "At edge - creating new workspace" >> "$log_file"
+    # Create new workspace at edge
+    echo "Creating new workspace at edge" >> "$log_file"
 
     if [[ "$direction" == "next" ]]; then
-      # Moving right from last workspace
-      new_workspace=$((${workspaces[-1]} + 1))
-      if [[ $new_workspace -le 9 ]]; then
-        echo "Creating workspace $new_workspace" >> "$log_file"
-        aerospace move-node-to-workspace "$new_workspace" --window-id "$focused_window_id" </dev/null 2>> "$log_file"
-        aerospace workspace "$new_workspace" </dev/null 2>> "$log_file"
-        # Sketchybar will add the new workspace via yabai signals
+      # Add workspace at end
+      new_sid=$((workspace_ids[-1] + 1))
+      if [[ $new_sid -gt 9 ]]; then
+        echo "Cannot create workspace > 9, no changes" >> "$log_file"
+        # Copy current state as desired state
+        for sid in "${workspace_ids[@]}"; do
+          desired_state[$sid]="${current_state[$sid]}"
+        done
+        desired_workspace_ids=("${workspace_ids[@]}")
       else
-        echo "Cannot create workspace > 9" >> "$log_file"
+        # Remove focused window from current, add to new workspace
+        for sid in "${workspace_ids[@]}"; do
+          if [[ $sid -eq $current_sid ]]; then
+            # Remove focused window from current workspace
+            local windows=()
+            for wid in ${current_state[$sid]}; do
+              if [[ $wid != $focused_window_id ]]; then
+                windows+=("$wid")
+              fi
+            done
+            desired_state[$sid]="${windows[*]}"
+          else
+            desired_state[$sid]="${current_state[$sid]}"
+          fi
+        done
+        # Add new workspace with focused window
+        desired_state[$new_sid]="$focused_window_id"
+        desired_workspace_ids=("${workspace_ids[@]}" "$new_sid")
+        new_focused_sid="$new_sid"
       fi
     else
-      # Moving left from first workspace - use temporary workspace 0
-      echo "Moving to workspace 0 (will become 1 after renumber)" >> "$log_file"
-      aerospace move-node-to-workspace 0 --window-id "$focused_window_id" </dev/null 2>> "$log_file"
-
-      # Renumber: 0→1, 1→2, 2→3, etc.
-      renumber_workspaces_and_sketchybar
-
-      # Focus the new workspace 1
-      aerospace workspace 1 </dev/null 2>> "$log_file"
+      # Add workspace at beginning (use temp workspace 0, then renumber)
+      # Remove focused window from current workspace
+      for sid in "${workspace_ids[@]}"; do
+        if [[ $sid -eq $current_sid ]]; then
+          local windows=()
+          for wid in ${current_state[$sid]}; do
+            if [[ $wid != $focused_window_id ]]; then
+              windows+=("$wid")
+            fi
+          done
+          desired_state[$((sid + 1))]="${windows[*]}"
+        else
+          desired_state[$((sid + 1))]="${current_state[$sid]}"
+        fi
+      done
+      # Add new workspace 1 with focused window
+      desired_state[1]="$focused_window_id"
+      # Rebuild workspace ID list
+      desired_workspace_ids=()
+      for ((i=1; i<=${#workspace_ids[@]}+1; i++)); do
+        if [[ -n "${desired_state[$i]}" ]]; then
+          desired_workspace_ids+=("$i")
+        fi
+      done
+      new_focused_sid=1
     fi
   else
-    # Not at edge: move to existing adjacent workspace
-    target_workspace="${workspaces[$target_index]}"
-    echo "Moving to existing workspace $target_workspace" >> "$log_file"
-    aerospace move-node-to-workspace "$target_workspace" --window-id "$focused_window_id" </dev/null 2>> "$log_file"
-    aerospace focus --window-id "$focused_window_id" </dev/null 2>> "$log_file"
-    # Sketchybar window items move via yabai signals
+    # Move to existing adjacent workspace
+    target_sid="${workspace_ids[$target_index]}"
+    echo "Moving to existing workspace $target_sid" >> "$log_file"
+
+    for sid in "${workspace_ids[@]}"; do
+      if [[ $sid -eq $current_sid ]]; then
+        # Remove focused window from current
+        local windows=()
+        for wid in ${current_state[$sid]}; do
+          if [[ $wid != $focused_window_id ]]; then
+            windows+=("$wid")
+          fi
+        done
+        desired_state[$sid]="${windows[*]}"
+      elif [[ $sid -eq $target_sid ]]; then
+        # Add focused window to target
+        desired_state[$sid]="${current_state[$sid]} $focused_window_id"
+      else
+        desired_state[$sid]="${current_state[$sid]}"
+      fi
+    done
+    desired_workspace_ids=("${workspace_ids[@]}")
+    new_focused_sid="$target_sid"
   fi
 
 else
-  # Single window: ripple-pull windows from direction
-  echo "Single window - ripple pulling from direction" >> "$log_file"
+  # === SINGLE WINDOW: RIPPLE ===
+  echo "Strategy: Ripple" >> "$log_file"
 
   if [[ $is_at_edge -eq 1 ]]; then
-    # At edge with single window: no action
+    # No action at edge with single window
     echo "At edge with single window - no action" >> "$log_file"
+    for sid in "${workspace_ids[@]}"; do
+      desired_state[$sid]="${current_state[$sid]}"
+    done
+    desired_workspace_ids=("${workspace_ids[@]}")
   else
-    # Ripple: shift each workspace in the direction one space over
-    echo "Ripple: shifting workspaces in direction" >> "$log_file"
-
+    # Ripple: shift workspaces in direction
     if [[ "$direction" == "next" ]]; then
-      # Ripple right: Move windows from workspaces to the RIGHT, one space LEFT
-      # Start from the rightmost and work backwards to avoid conflicts
-      # Example: s1w1 s2wf s3w2 s4w3 -> s1w1,w2 s2wf s3w3
-      echo "Ripple right: shifting workspaces from right to left" >> "$log_file"
+      # Ripple right: workspaces to the right shift left
+      echo "Ripple right" >> "$log_file"
 
-      for ((i = ${#workspaces[@]} - 1; i >= target_index; i--)); do
-        source_workspace="${workspaces[$i]}"
-        dest_workspace="${workspaces[$((i - 1))]}"
-        echo "Moving all windows from workspace $source_workspace -> $dest_workspace" >> "$log_file"
-
-        mapfile -t windows_to_move < <(aerospace list-windows --workspace "$source_workspace" --format '%{window-id}')
-        for window_id in "${windows_to_move[@]}"; do
-          if [[ -n "$window_id" ]]; then
-            echo "  Moving window $window_id" >> "$log_file"
-            aerospace move-node-to-workspace "$dest_workspace" --window-id "$window_id" </dev/null 2>> "$log_file"
-          fi
-        done
-
-        # Remove the now-empty workspace from sketchybar
-        remove_sketchybar_workspace "$source_workspace"
+      for i in "${!workspace_ids[@]}"; do
+        sid="${workspace_ids[$i]}"
+        if [[ $i -lt $current_index ]]; then
+          # Workspaces before current: unchanged
+          desired_state[$sid]="${current_state[$sid]}"
+        elif [[ $i -eq $current_index ]]; then
+          # Current workspace: gets windows from next workspace
+          next_sid="${workspace_ids[$((i + 1))]}"
+          desired_state[$sid]="${current_state[$sid]} ${current_state[$next_sid]}"
+        elif [[ $i -gt $current_index ]] && [[ $i -lt $((${#workspace_ids[@]} - 1)) ]]; then
+          # Workspaces after current (except last): get windows from next
+          next_sid="${workspace_ids[$((i + 1))]}"
+          desired_state[$sid]="${current_state[$next_sid]}"
+        fi
+        # Last workspace is omitted (will be empty, removed)
       done
+
+      # New workspace list (last one removed)
+      desired_workspace_ids=("${workspace_ids[@]:0:${#workspace_ids[@]}-1}")
+
     else
-      # Ripple left: Move windows from workspaces to the LEFT, one space RIGHT
-      # Start from the leftmost and work forwards to avoid conflicts
-      # Example: s1w1 s2w2 s3wf s4w3 -> s1 s2w2,w1 s3wf s4w3
-      echo "Ripple left: shifting workspaces from left to right" >> "$log_file"
+      # Ripple left: workspaces to the left shift right
+      echo "Ripple left" >> "$log_file"
 
-      for ((i = 0; i <= target_index; i++)); do
-        source_workspace="${workspaces[$i]}"
-        dest_workspace="${workspaces[$((i + 1))]}"
-        echo "Moving all windows from workspace $source_workspace -> $dest_workspace" >> "$log_file"
-
-        mapfile -t windows_to_move < <(aerospace list-windows --workspace "$source_workspace" --format '%{window-id}')
-        for window_id in "${windows_to_move[@]}"; do
-          if [[ -n "$window_id" ]]; then
-            echo "  Moving window $window_id" >> "$log_file"
-            aerospace move-node-to-workspace "$dest_workspace" --window-id "$window_id" </dev/null 2>> "$log_file"
-          fi
-        done
-
-        # Remove the now-empty workspace from sketchybar
-        remove_sketchybar_workspace "$source_workspace"
+      for i in "${!workspace_ids[@]}"; do
+        sid="${workspace_ids[$i]}"
+        if [[ $i -gt $current_index ]]; then
+          # Workspaces after current: unchanged
+          desired_state[$sid]="${current_state[$sid]}"
+        elif [[ $i -eq $current_index ]]; then
+          # Current workspace: gets windows from previous workspace
+          prev_sid="${workspace_ids[$((i - 1))]}"
+          desired_state[$sid]="${current_state[$prev_sid]} ${current_state[$sid]}"
+        elif [[ $i -lt $current_index ]] && [[ $i -gt 0 ]]; then
+          # Workspaces before current (except first): get windows from previous
+          prev_sid="${workspace_ids[$((i - 1))]}"
+          desired_state[$sid]="${current_state[$prev_sid]}"
+        fi
+        # First workspace is omitted (will be empty, removed)
       done
+
+      # New workspace list (first one removed)
+      desired_workspace_ids=("${workspace_ids[@]:1}")
     fi
 
-    # After ripple, renumber aerospace and sketchybar to close gaps
-    renumber_workspaces_and_sketchybar
+    # Renumber to be contiguous starting from 1
+    declare -A renumbered_state
+    new_num=1
+    for sid in "${desired_workspace_ids[@]}"; do
+      renumbered_state[$new_num]="${desired_state[$sid]}"
+      if [[ $sid -eq $current_sid ]]; then
+        new_focused_sid=$new_num
+      fi
+      new_num=$((new_num + 1))
+    done
+    desired_state=()
+    for key in "${!renumbered_state[@]}"; do
+      desired_state[$key]="${renumbered_state[$key]}"
+    done
+    desired_workspace_ids=()
+    for ((i=1; i<$new_num; i++)); do
+      desired_workspace_ids+=("$i")
+    done
   fi
 fi
 
-echo "Done" >> "$log_file"
+echo "Desired state:" >> "$log_file"
+for sid in "${desired_workspace_ids[@]}"; do
+  echo "  Workspace $sid: ${desired_state[$sid]}" >> "$log_file"
+done
+echo "New focused workspace: $new_focused_sid" >> "$log_file"
 
-# === HELPER FUNCTIONS ===
+# === STEP 3: APPLY CHANGES ===
 
-remove_sketchybar_workspace() {
-  local sid="$1"
-  echo "Removing sketchybar workspace $sid" >> "$log_file"
+echo "Applying changes..." >> "$log_file"
 
-  # Remove all window items in this workspace
-  local window_items=($(sketchybar --query bar | jq -r --arg sid "$sid" '.items[] | select(test("^window\\." + $sid + "\\."))'))
-  for item in "${window_items[@]}"; do
-    echo "  Removing window item: $item" >> "$log_file"
-    sketchy_remove_item "$item"
-  done
-
-  # Remove workspace dividers and bracket
-  sketchy_remove_item "workspace.start.$sid"
-  sketchy_remove_item "workspace.end.$sid"
-  sketchy_remove_item "workspace.$sid"
-}
-
-renumber_workspaces_and_sketchybar() {
-  echo "Renumbering workspaces and sketchybar to ensure contiguity" >> "$log_file"
-
-  # Get all workspaces sorted
-  mapfile -t occupied < <(aerospace list-workspaces --all | sort -n)
-  echo "Workspaces before renumber: ${occupied[*]}" >> "$log_file"
-
-  # Check if already contiguous
-  is_contiguous=true
-  expected=1
-  for sid in "${occupied[@]}"; do
-    if [[ $sid -ne $expected ]]; then
-      is_contiguous=false
-      break
-    fi
-    expected=$((expected + 1))
-  done
-
-  if [[ "$is_contiguous" == "true" ]]; then
-    echo "Already contiguous" >> "$log_file"
-    return
-  fi
-
-  # Build renumbering map: old_sid -> new_sid
-  declare -A renumber_map
-  new_number=1
-  for sid in "${occupied[@]}"; do
-    renumber_map[$sid]=$new_number
-    echo "Renumber map: $sid -> $new_number" >> "$log_file"
-    new_number=$((new_number + 1))
-  done
-
-  # Renumber aerospace workspaces from low to high
-  for sid in "${occupied[@]}"; do
-    if [[ $sid -ne ${renumber_map[$sid]} ]]; then
-      echo "Renumbering aerospace workspace $sid -> ${renumber_map[$sid]}" >> "$log_file"
-
-      mapfile -t window_ids < <(aerospace list-windows --workspace "$sid" --format '%{window-id}')
-      for window_id in "${window_ids[@]}"; do
-        if [[ -n "$window_id" ]]; then
-          aerospace move-node-to-workspace "${renumber_map[$sid]}" --window-id "$window_id" </dev/null 2>> "$log_file"
+# Apply to aerospace
+for sid in "${desired_workspace_ids[@]}"; do
+  for window_id in ${desired_state[$sid]}; do
+    if [[ -n "$window_id" ]]; then
+      # Check if window needs to move
+      current_ws=""
+      for check_sid in "${workspace_ids[@]}"; do
+        if echo "${current_state[$check_sid]}" | grep -qw "$window_id"; then
+          current_ws="$check_sid"
+          break
         fi
       done
+
+      if [[ "$current_ws" != "$sid" ]]; then
+        echo "Moving window $window_id: $current_ws -> $sid" >> "$log_file"
+        aerospace move-node-to-workspace "$sid" --window-id "$window_id" </dev/null 2>> "$log_file"
+      fi
+    fi
+  done
+done
+
+# Focus the new workspace and window
+if [[ "$new_focused_sid" != "$current_sid" ]]; then
+  echo "Switching to workspace $new_focused_sid" >> "$log_file"
+  aerospace workspace "$new_focused_sid" </dev/null 2>> "$log_file"
+fi
+
+if [[ "$new_focused_window_id" != "$focused_window_id" ]] || [[ "$new_focused_sid" != "$current_sid" ]]; then
+  echo "Focusing window $new_focused_window_id" >> "$log_file"
+  aerospace focus --window-id "$new_focused_window_id" </dev/null 2>> "$log_file"
+fi
+
+# Apply to sketchybar
+# Remove workspaces that no longer exist
+for sid in "${workspace_ids[@]}"; do
+  exists=false
+  for desired_sid in "${desired_workspace_ids[@]}"; do
+    if [[ $sid -eq $desired_sid ]]; then
+      exists=true
+      break
     fi
   done
 
-  # Renumber sketchybar items
-  echo "Renumbering sketchybar items" >> "$log_file"
-  for old_sid in "${occupied[@]}"; do
-    new_sid="${renumber_map[$old_sid]}"
+  if [[ $exists == false ]]; then
+    echo "Removing sketchybar workspace $sid" >> "$log_file"
 
-    if [[ $old_sid -ne $new_sid ]]; then
-      echo "Renumbering sketchybar workspace $old_sid -> $new_sid" >> "$log_file"
+    # Remove all window items
+    local window_items=($(sketchybar --query bar 2>/dev/null | jq -r --arg sid "$sid" '.items[]? // empty | select(test("^window\\." + $sid + "\\."))'))
+    for item in "${window_items[@]}"; do
+      sketchy_remove_item "$item"
+    done
 
-      # Rename workspace dividers and bracket
-      rename_sketchybar_item "workspace.start.$old_sid" "workspace.start.$new_sid"
-      rename_sketchybar_item "workspace.end.$old_sid" "workspace.end.$new_sid"
-      rename_sketchybar_item "workspace.$old_sid" "workspace.$new_sid"
+    # Remove workspace dividers
+    sketchy_remove_item "workspace.start.$sid"
+    sketchy_remove_item "workspace.end.$sid"
+    sketchy_remove_item "workspace.$sid"
+  fi
+done
 
-      # Rename all window items in this workspace
-      local window_items=($(sketchybar --query bar | jq -r --arg sid "$old_sid" '.items[] | select(test("^window\\." + $sid + "\\."))'))
-      for old_item in "${window_items[@]}"; do
-        # Extract window_id and appname from old item: window.OLD_SID.WINDOW_ID.APPNAME
-        local window_id=$(echo "$old_item" | awk -F'.' '{print $3}')
-        local appname=$(echo "$old_item" | cut -d'.' -f4-)
-        local new_item="window.$new_sid.$window_id.$appname"
-        echo "  Renaming window item: $old_item -> $new_item" >> "$log_file"
-        rename_sketchybar_item "$old_item" "$new_item"
-      done
-    fi
-  done
-
-  echo "Renumbering complete" >> "$log_file"
-}
-
-rename_sketchybar_item() {
-  local old_name="$1"
-  local new_name="$2"
-
-  # Sketchybar doesn't have a rename command, so we need to:
-  # 1. Clone the item (copy all properties)
-  # 2. Remove the old item
-  # This is complex, so for now we'll just use --rename if available,
-  # or reconstruct via remove/add
-
-  # Simple approach: use sketchybar --rename (if supported)
-  sketchybar --rename "$old_name" "$new_name" 2>> "$log_file"
-}
+echo "Done" >> "$log_file"
