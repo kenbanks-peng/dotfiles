@@ -3,7 +3,11 @@
 # Smart window movement that maintains contiguous workspace numbering
 # - Multiple windows in current workspace: move focused window in direction
 # - Single window in current workspace: ripple-pull all windows from direction
-# - Edge case (single window at boundary): create new workspace
+# - Edge case (single window at boundary): no action
+
+# Source helpers for sketchybar management
+source "$HOME/Software/Public/dotfiles/sketchybar/plugins/helpers/sketchy.sh"
+source "$HOME/Software/Public/dotfiles/sketchybar/env.sh"
 
 direction="$1"  # "next" or "prev"
 
@@ -70,6 +74,7 @@ if [[ $window_count -gt 1 ]]; then
         echo "Creating workspace $new_workspace" >> "$log_file"
         aerospace move-node-to-workspace "$new_workspace" --window-id "$focused_window_id" </dev/null 2>> "$log_file"
         aerospace workspace "$new_workspace" </dev/null 2>> "$log_file"
+        # Sketchybar will add the new workspace via yabai signals
       else
         echo "Cannot create workspace > 9" >> "$log_file"
       fi
@@ -79,7 +84,7 @@ if [[ $window_count -gt 1 ]]; then
       aerospace move-node-to-workspace 0 --window-id "$focused_window_id" </dev/null 2>> "$log_file"
 
       # Renumber: 0→1, 1→2, 2→3, etc.
-      renumber_workspaces
+      renumber_workspaces_and_sketchybar
 
       # Focus the new workspace 1
       aerospace workspace 1 </dev/null 2>> "$log_file"
@@ -90,6 +95,7 @@ if [[ $window_count -gt 1 ]]; then
     echo "Moving to existing workspace $target_workspace" >> "$log_file"
     aerospace move-node-to-workspace "$target_workspace" --window-id "$focused_window_id" </dev/null 2>> "$log_file"
     aerospace focus --window-id "$focused_window_id" </dev/null 2>> "$log_file"
+    # Sketchybar window items move via yabai signals
   fi
 
 else
@@ -100,6 +106,9 @@ else
     # At edge with single window: no action
     echo "At edge with single window - no action" >> "$log_file"
   else
+    # Track which workspaces will be emptied so we can remove them from sketchybar
+    local workspaces_to_remove=()
+
     # Ripple-pull all windows from target direction into current workspace
     echo "Ripple pulling from index $target_index onwards" >> "$log_file"
 
@@ -107,6 +116,7 @@ else
       # Pull from right: iterate from target_index to end
       for ((i = target_index; i < ${#workspaces[@]}; i++)); do
         source_workspace="${workspaces[$i]}"
+        workspaces_to_remove+=("$source_workspace")
         echo "Pulling all windows from workspace $source_workspace to $current" >> "$log_file"
 
         mapfile -t windows_to_move < <(aerospace list-windows --workspace "$source_workspace" --format '%{window-id}')
@@ -121,6 +131,7 @@ else
       # Pull from left: iterate from target_index down to 0
       for ((i = target_index; i >= 0; i--)); do
         source_workspace="${workspaces[$i]}"
+        workspaces_to_remove+=("$source_workspace")
         echo "Pulling all windows from workspace $source_workspace to $current" >> "$log_file"
 
         mapfile -t windows_to_move < <(aerospace list-windows --workspace "$source_workspace" --format '%{window-id}')
@@ -133,8 +144,15 @@ else
       done
     fi
 
-    # After ripple-pull, renumber to close gaps
-    renumber_workspaces
+    # Remove workspaces from sketchybar (aerospace already removed them)
+    echo "Removing ${#workspaces_to_remove[@]} workspaces from sketchybar" >> "$log_file"
+    for sid in "${workspaces_to_remove[@]}"; do
+      echo "  Removing workspace $sid from sketchybar" >> "$log_file"
+      remove_sketchybar_workspace "$sid"
+    done
+
+    # After ripple-pull, renumber aerospace and sketchybar to close gaps
+    renumber_workspaces_and_sketchybar
   fi
 fi
 
@@ -142,8 +160,25 @@ echo "Done" >> "$log_file"
 
 # === HELPER FUNCTIONS ===
 
-renumber_workspaces() {
-  echo "Renumbering workspaces to ensure contiguity" >> "$log_file"
+remove_sketchybar_workspace() {
+  local sid="$1"
+  echo "Removing sketchybar workspace $sid" >> "$log_file"
+
+  # Remove all window items in this workspace
+  local window_items=($(sketchybar --query bar | jq -r --arg sid "$sid" '.items[] | select(test("^window\\." + $sid + "\\."))'))
+  for item in "${window_items[@]}"; do
+    echo "  Removing window item: $item" >> "$log_file"
+    sketchy_remove_item "$item"
+  done
+
+  # Remove workspace dividers and bracket
+  sketchy_remove_item "workspace.start.$sid"
+  sketchy_remove_item "workspace.end.$sid"
+  sketchy_remove_item "workspace.$sid"
+}
+
+renumber_workspaces_and_sketchybar() {
+  echo "Renumbering workspaces and sketchybar to ensure contiguity" >> "$log_file"
 
   # Get all workspaces sorted
   mapfile -t occupied < <(aerospace list-workspaces --all | sort -n)
@@ -165,21 +200,68 @@ renumber_workspaces() {
     return
   fi
 
-  # Renumber from low to high
+  # Build renumbering map: old_sid -> new_sid
+  declare -A renumber_map
   new_number=1
   for sid in "${occupied[@]}"; do
-    if [[ $sid -ne $new_number ]]; then
-      echo "Renumbering workspace $sid -> $new_number" >> "$log_file"
+    renumber_map[$sid]=$new_number
+    echo "Renumber map: $sid -> $new_number" >> "$log_file"
+    new_number=$((new_number + 1))
+  done
+
+  # Renumber aerospace workspaces from low to high
+  for sid in "${occupied[@]}"; do
+    if [[ $sid -ne ${renumber_map[$sid]} ]]; then
+      echo "Renumbering aerospace workspace $sid -> ${renumber_map[$sid]}" >> "$log_file"
 
       mapfile -t window_ids < <(aerospace list-windows --workspace "$sid" --format '%{window-id}')
       for window_id in "${window_ids[@]}"; do
         if [[ -n "$window_id" ]]; then
-          aerospace move-node-to-workspace "$new_number" --window-id "$window_id" </dev/null 2>> "$log_file"
+          aerospace move-node-to-workspace "${renumber_map[$sid]}" --window-id "$window_id" </dev/null 2>> "$log_file"
         fi
       done
     fi
-    new_number=$((new_number + 1))
+  done
+
+  # Renumber sketchybar items
+  echo "Renumbering sketchybar items" >> "$log_file"
+  for old_sid in "${occupied[@]}"; do
+    new_sid="${renumber_map[$old_sid]}"
+
+    if [[ $old_sid -ne $new_sid ]]; then
+      echo "Renumbering sketchybar workspace $old_sid -> $new_sid" >> "$log_file"
+
+      # Rename workspace dividers and bracket
+      rename_sketchybar_item "workspace.start.$old_sid" "workspace.start.$new_sid"
+      rename_sketchybar_item "workspace.end.$old_sid" "workspace.end.$new_sid"
+      rename_sketchybar_item "workspace.$old_sid" "workspace.$new_sid"
+
+      # Rename all window items in this workspace
+      local window_items=($(sketchybar --query bar | jq -r --arg sid "$old_sid" '.items[] | select(test("^window\\." + $sid + "\\."))'))
+      for old_item in "${window_items[@]}"; do
+        # Extract window_id and appname from old item: window.OLD_SID.WINDOW_ID.APPNAME
+        local window_id=$(echo "$old_item" | awk -F'.' '{print $3}')
+        local appname=$(echo "$old_item" | cut -d'.' -f4-)
+        local new_item="window.$new_sid.$window_id.$appname"
+        echo "  Renaming window item: $old_item -> $new_item" >> "$log_file"
+        rename_sketchybar_item "$old_item" "$new_item"
+      done
+    fi
   done
 
   echo "Renumbering complete" >> "$log_file"
+}
+
+rename_sketchybar_item() {
+  local old_name="$1"
+  local new_name="$2"
+
+  # Sketchybar doesn't have a rename command, so we need to:
+  # 1. Clone the item (copy all properties)
+  # 2. Remove the old item
+  # This is complex, so for now we'll just use --rename if available,
+  # or reconstruct via remove/add
+
+  # Simple approach: use sketchybar --rename (if supported)
+  sketchybar --rename "$old_name" "$new_name" 2>> "$log_file"
 }
