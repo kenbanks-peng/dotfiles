@@ -57,6 +57,11 @@ on-focus-changed = [
   'exec-and-forget sketchybar --trigger aerospace_workspace_change FOCUS_CHANGE=true',
 ]
 
+# Notify Sketchybar about workspace changes (creation, deletion, switching)
+exec-on-workspace-change = [
+  'exec-and-forget sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE PREV_WORKSPACE=$AEROSPACE_PREV_WORKSPACE'
+]
+
 
 # Possible values: (qwerty|dvorak)
 # See https://nikitabobko.github.io/AeroSpace/guide#key-mapping
