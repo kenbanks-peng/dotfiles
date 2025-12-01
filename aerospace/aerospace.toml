@@ -141,7 +141,7 @@ alt-down = [
 
 # prev/next occupied workspace
 alt-left = 'workspace --wrap-around prev'
-alt-right = 'workspace --wrap-around next'
+alt-right = 'exec-and-forget bash -c "CURRENT=$(aerospace list-workspaces --focused); NEXT=$(aerospace list-workspaces --all | grep -A1 \"^$CURRENT$\" | tail -1); if [ \"$CURRENT\" = \"$NEXT\" ]; then sketchybar --trigger aerospace_new_workspace; else aerospace workspace next; fi"'
 
 alt-shift-left = 'exec-and-forget sketchybar --trigger aerospace_move_window_prev'
 alt-shift-right = 'exec-and-forget sketchybar --trigger aerospace_move_window_next'
