@@ -62,3 +62,7 @@
 2025-11-26 22:33:56,552 - cctui - INFO - main:86 - Project path: /Users/kenbanks/Software/DevApps/cv-typst-2025
 2025-11-26 22:33:56,552 - cctui - INFO - main:87 - Config path: /Users/kenbanks/.config/claude
 2025-11-26 22:33:56,552 - cctui - INFO - main:102 - Configuration loaded successfully
+2025-12-02 10:15:04,259 - cctui - INFO - main:85 - Starting CCTUI application
+2025-12-02 10:15:04,259 - cctui - INFO - main:86 - Project path: /Users/kenbanks/Software/DevPlay/specify
+2025-12-02 10:15:04,259 - cctui - INFO - main:87 - Config path: /Users/kenbanks/.config/claude
+2025-12-02 10:15:04,260 - cctui - INFO - main:102 - Configuration loaded successfully
