@@ -141,7 +141,7 @@ alt-down = [
 
 # prev/next occupied workspace
 alt-left = 'workspace prev'
-alt-right = 'exec-and-forget /Users/kenbanks/Software/Public/dotfiles/sketchybar/scripts/next_workspace_or_new.sh'
+alt-right = 'exec-and-forget sketchybar --trigger aerospace_workspace_next'
 
 alt-shift-left = 'exec-and-forget sketchybar --trigger aerospace_move_window_prev'
 alt-shift-right = 'exec-and-forget sketchybar --trigger aerospace_move_window_next'
