@@ -97,16 +97,21 @@ sketchy_highlight_window_id() {
   local focused_color=$(sketchy_get_space_foreground_color true)
   local unfocused_color=$(sketchy_get_space_foreground_color false)
 
+  # Get current focused workspace
+  local current_workspace=$(aerospace list-workspaces --focused)
+
   # Get all window items from sketchybar
   local all_window_items
   mapfile -t all_window_items < <(sketchybar --query bar 2>/dev/null | jq -r '.items[]? // empty | select(test("^window\\."))' | sort)
 
-  # Set each window to correct color based on whether it's focused
+  # Set each window to correct color based on whether it's focused AND on current workspace
   for item in "${all_window_items[@]}"; do
-    # Extract window_id from item name: window.SID.WINDOW_ID.APPNAME
+    # Extract window_id and workspace from item name: window.SID.WINDOW_ID.APPNAME
+    local item_workspace=$(echo "$item" | awk -F'.' '{print $2}')
     local item_window_id=$(echo "$item" | awk -F'.' '{print $3}')
 
-    if [[ "$item_window_id" == "$focused_window_id" ]]; then
+    # Only highlight if this is the focused window AND it's on the current workspace
+    if [[ "$item_window_id" == "$focused_window_id" ]] && [[ "$item_workspace" == "$current_workspace" ]]; then
       sketchybar --set "$item" icon.color="$focused_color"
     else
       sketchybar --set "$item" icon.color="$unfocused_color"
