@@ -9,13 +9,13 @@ athas-editor 0.2.1
 atuin-desktop 0.2.4
 audacity 3.7.5
 boop 1.4.0
-claude-code 2.0.55
+claude-code 2.0.56
 cleanshot 4.8.4
 codex 0.63.0
 container 0.6.0
-cursor 2.1.42,2e353c5f5b30150ff7b874dee5a87660693d9de6
+cursor 2.1.46,ab326d0767c02fb9847b342c43ea58275c4b1685
 daisydisk 4.32
-deepchat 0.5.0
+deepchat 0.5.1
 espanso 2.3.0
 font-hasklug-nerd-font 3.4.0
 font-ia-writer-quattro latest
@@ -55,7 +55,7 @@ typeface 4.2.1,4763
 visual-studio-code 1.106.3
 vlc 3.0.21
 wezterm 20240203-110809,5046fc22
-yaak 2025.8.2
+yaak 2025.9.0
 zed 0.214.7
 zoom 6.6.11.70003
 
@@ -374,7 +374,7 @@ stow 2.4.1
 stylua 2.3.1
 svgo 4.0.0
 svt-av1 3.1.2
-syncthing 2.0.11
+syncthing 2.0.12
 tailspin 5.5.0
 tdd-guard 1.1.0
 tealdeer 1.8.1
@@ -439,7 +439,8 @@ nix:nodejs                                                   24.11.1 (symlink)  
 nix:ruby                                                     3.4.7 (symlink)    ~/.config/mise/mise.toml  latest
 nix:rustup                                                   1.28.2 (symlink)   ~/.config/mise/mise.toml  latest
 nix:uv                                                       0.9.9 (symlink)    ~/.config/mise/mise.toml  latest
-npm:@langwatch/better-agents                                 0.1.4-beta.0       ~/.config/mise/mise.toml  latest
+npm:@langwatch/better-agents                                 0.1.4-beta.0
+npm:@langwatch/better-agents                                 0.1.17             ~/.config/mise/mise.toml  latest
 npm:@opentui/core                                            0.1.54             ~/.config/mise/mise.toml  latest
 npm:@opentui/react                                           0.1.54             ~/.config/mise/mise.toml  latest
 npm:github-markdown-css                                      5.8.1              ~/.config/mise/mise.toml  latest
