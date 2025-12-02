@@ -810,6 +810,9 @@ aerospace_smart_move_window() {
     fi
   done
 
+  # Sync workspaces to create dividers and background bracket for new workspaces
+  sync_workspaces
+
   # Wait for aerospace focus event to trigger highlighting
   sleep 0.05  # Brief delay to let aerospace focus event complete
 }
