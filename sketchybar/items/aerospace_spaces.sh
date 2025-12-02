@@ -10,6 +10,7 @@ location="left"
 
 sketchybar --add event aerospace_workspace_change
 sketchybar --add event aerospace_new_workspace
+sketchybar --add event aerospace_workspace_next
 sketchybar --add event aerospace_move_window_next
 sketchybar --add event aerospace_move_window_prev
 sketchybar --add event yabai_window_created
