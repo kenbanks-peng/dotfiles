@@ -813,8 +813,9 @@ aerospace_smart_move_window() {
   # Sync workspaces to create dividers and background bracket for new workspaces
   sync_workspaces
 
-  # Wait for aerospace focus event to trigger highlighting
-  sleep 0.05  # Brief delay to let aerospace focus event complete
+  # Highlight the focused workspace and window after sync
+  sketchy_highlight_workspace "$new_focused_sid"
+  sketchy_highlight_window_id "$new_focused_window_id"
 }
 
 aerospace_workspace_next() {
