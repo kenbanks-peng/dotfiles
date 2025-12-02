@@ -814,3 +814,35 @@ aerospace_smart_move_window() {
   sleep 0.05  # Brief delay to let aerospace focus event complete
 }
 
+aerospace_workspace_next() {
+  # Get current workspace
+  local current_sid=$(aerospace list-workspaces --focused)
+
+  # Get all workspaces sorted
+  mapfile -t workspace_ids < <(aerospace list-workspaces --all | sort -n)
+
+  # Find current workspace index
+  local current_index=-1
+  for i in "${!workspace_ids[@]}"; do
+    if [[ "${workspace_ids[$i]}" == "$current_sid" ]]; then
+      current_index=$i
+      break
+    fi
+  done
+
+  if [[ $current_index -eq -1 ]]; then
+    return 1
+  fi
+
+  # Check if we're at the last workspace
+  if [[ $current_index -eq $((${#workspace_ids[@]} - 1)) ]]; then
+    # At the end, create new workspace
+    aerospace_create_new_workspace
+  else
+    # Not at the end, switch to next workspace
+    local next_index=$((current_index + 1))
+    local next_sid="${workspace_ids[$next_index]}"
+    aerospace workspace "$next_sid"
+  fi
+}
+

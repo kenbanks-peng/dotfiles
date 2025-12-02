@@ -13,6 +13,8 @@ if [ "$SENDER" = "forced" ]; then
   aerospace_focused_window_change
 elif [ "$SENDER" = "aerospace_new_workspace" ]; then
   aerospace_create_new_workspace
+elif [ "$SENDER" = "aerospace_workspace_next" ]; then
+  aerospace_workspace_next
 elif [ "$SENDER" = "aerospace_move_window_next" ]; then
   aerospace_smart_move_window "next"
 elif [ "$SENDER" = "aerospace_move_window_prev" ]; then
