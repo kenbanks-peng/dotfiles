@@ -33,6 +33,7 @@ props=(
   --subscribe space_listener \
   aerospace_workspace_change \
   aerospace_new_workspace \
+  aerospace_workspace_next \
   aerospace_move_window_next \
   aerospace_move_window_prev \
   yabai_window_created \
