@@ -895,6 +895,9 @@ aerospace_swap_workspace() {
   local current_windows=($(aerospace_window_ids_in_workspace "$current_sid"))
   local target_windows=($(aerospace_window_ids_in_workspace "$target_sid"))
 
+  # Query bar state once for existing items
+  local bar_items=$(sketchybar --query bar 2>/dev/null | jq -r '.items[]')
+
   # Move all windows from current to a temp workspace (use 99 as temp)
   local temp_ws=99
   for window_id in "${current_windows[@]}"; do
@@ -923,8 +926,14 @@ aerospace_swap_workspace() {
     aerospace focus --window-id "$focused_window_id" </dev/null 2>/dev/null
   fi
 
-  # Update sketchybar: rename window items to match new workspace assignments
-  mapfile -t all_window_items < <(sketchybar --query bar 2>/dev/null | jq -r '.items[]? // empty | select(test("^window\\."))' | sort)
+  # Build batched sketchybar commands for all updates
+  local batch_args=()
+
+  # Get all window items
+  mapfile -t all_window_items < <(echo "$bar_items" | grep "^window\." | sort)
+
+  # Collect items to remove and items to add
+  declare -A items_to_update  # old_item -> new_item
 
   for item in "${all_window_items[@]}"; do
     local item_sid=$(echo "$item" | awk -F'.' '{print $2}')
@@ -951,31 +960,55 @@ aerospace_swap_workspace() {
 
     # If we need to update this item
     if [[ -n "$new_sid" && "$item_sid" != "$new_sid" ]]; then
-      local icon="$($CONFIG_DIR/icons_apps.sh "$item_appname" 2>/dev/null || echo "")"
-      local item_color=$(sketchy_get_space_foreground_color false)
-
-      # Remove old item
-      sketchy_remove_item "$item"
-
-      # Create new item with correct workspace ID
       local correct_item="window.$new_sid.$item_window_id.$item_appname"
-      local props=(
-        background.corner_radius=0
-        icon.font="$ICON_FONT:$ICON_FONTSIZE"
-        icon.width="$APP_WIDTH"
-      )
-
-      sketchy_add_item "$correct_item" left \
-        --set "$correct_item" "${props[@]}" \
-        icon="$icon" icon.color="$item_color" \
-        click_script="aerospace focus --window-id $item_window_id"
-
-      # Position it
-      sketchybar --move "$correct_item" before "workspace.end.$new_sid"
+      items_to_update["$item"]="$correct_item:$item_window_id:$item_appname:$new_sid"
     fi
   done
 
-  # Rebuild to ensure correct ordering
-  rebuild_workspaces
+  # Build batch: remove old items, add new items, move them, then highlight
+  for old_item in "${!items_to_update[@]}"; do
+    batch_args+=(--remove "$old_item")
+  done
+
+  local icon_color=$(sketchy_get_space_foreground_color false)
+  local focused_color=$(sketchy_get_space_foreground_color true)
+
+  for old_item in "${!items_to_update[@]}"; do
+    IFS=':' read -r correct_item item_window_id item_appname new_sid <<< "${items_to_update[$old_item]}"
+    local icon="$($CONFIG_DIR/icons_apps.sh "$item_appname" 2>/dev/null || echo "")"
+
+    # Determine if this is the focused window
+    local this_icon_color="$icon_color"
+    if [[ "$item_window_id" == "$focused_window_id" ]]; then
+      this_icon_color="$focused_color"
+    fi
+
+    batch_args+=(
+      --add item "$correct_item" left
+      --set "$correct_item"
+        background.corner_radius=0
+        "icon.font=$ICON_FONT:$ICON_FONTSIZE"
+        "icon.width=$APP_WIDTH"
+        "icon=$icon"
+        "icon.color=$this_icon_color"
+        "click_script=aerospace focus --window-id $item_window_id"
+      --move "$correct_item" before "workspace.end.$new_sid"
+    )
+  done
+
+  # Add highlight commands for workspaces
+  local unfocused_bg=$(sketchy_get_space_background_color false)
+  local focused_bg=$(sketchy_get_space_background_color true)
+
+  # Unhighlight current_sid (no longer focused), highlight target_sid (now focused)
+  batch_args+=(
+    --set "workspace.$current_sid" "background.color=$unfocused_bg"
+    --set "workspace.$target_sid" "background.color=$focused_bg"
+  )
+
+  # Execute all sketchybar commands in a single batch
+  if [[ ${#batch_args[@]} -gt 0 ]]; then
+    sketchybar -m "${batch_args[@]}"
+  fi
 }
 
