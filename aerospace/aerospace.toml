@@ -146,6 +146,10 @@ alt-right = 'exec-and-forget sketchybar --trigger aerospace_workspace_next'
 alt-shift-left = 'exec-and-forget sketchybar --trigger aerospace_move_window_prev'
 alt-shift-right = 'exec-and-forget sketchybar --trigger aerospace_move_window_next'
 
+# swap workspaces
+cmd-left = 'exec-and-forget sketchybar --trigger aerospace_swap_workspace_left'
+cmd-right = 'exec-and-forget sketchybar --trigger aerospace_swap_workspace_right'
+
 alt-shift-up = 'move right'
 alt-shift-down = 'move left'
 

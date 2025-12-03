@@ -850,3 +850,128 @@ aerospace_workspace_next() {
   fi
 }
 
+# Swap focused workspace with adjacent workspace (left or right)
+# This swaps all windows between the two workspaces and updates sketchybar
+aerospace_swap_workspace() {
+  local direction="$1"  # "left" or "right"
+
+  # Get current workspace
+  local current_sid=$(aerospace list-workspaces --focused)
+
+  # Get all workspaces sorted
+  mapfile -t workspace_ids < <(aerospace list-workspaces --all | sort -n)
+
+  # Find current workspace index
+  local current_index=-1
+  for i in "${!workspace_ids[@]}"; do
+    if [[ "${workspace_ids[$i]}" == "$current_sid" ]]; then
+      current_index=$i
+      break
+    fi
+  done
+
+  if [[ $current_index -eq -1 ]]; then
+    return 1
+  fi
+
+  # Determine target workspace based on direction
+  local target_index
+  if [[ "$direction" == "left" ]]; then
+    target_index=$((current_index - 1))
+  else
+    target_index=$((current_index + 1))
+  fi
+
+  # Check bounds
+  if [[ $target_index -lt 0 ]] || [[ $target_index -ge ${#workspace_ids[@]} ]]; then
+    # No workspace to swap with in that direction
+    return 0
+  fi
+
+  local target_sid="${workspace_ids[$target_index]}"
+
+  # Get windows in each workspace
+  local current_windows=($(aerospace_window_ids_in_workspace "$current_sid"))
+  local target_windows=($(aerospace_window_ids_in_workspace "$target_sid"))
+
+  # Move all windows from current to a temp workspace (use 99 as temp)
+  local temp_ws=99
+  for window_id in "${current_windows[@]}"; do
+    if [[ -n "$window_id" ]]; then
+      aerospace move-node-to-workspace "$temp_ws" --window-id "$window_id" </dev/null 2>/dev/null
+    fi
+  done
+
+  # Move all windows from target to current
+  for window_id in "${target_windows[@]}"; do
+    if [[ -n "$window_id" ]]; then
+      aerospace move-node-to-workspace "$current_sid" --window-id "$window_id" </dev/null 2>/dev/null
+    fi
+  done
+
+  # Move all windows from temp to target
+  for window_id in "${current_windows[@]}"; do
+    if [[ -n "$window_id" ]]; then
+      aerospace move-node-to-workspace "$target_sid" --window-id "$window_id" </dev/null 2>/dev/null
+    fi
+  done
+
+  # Focus stays on current workspace (which now has target's windows)
+  aerospace workspace "$current_sid" </dev/null 2>/dev/null
+
+  # Update sketchybar: rename window items to match new workspace assignments
+  mapfile -t all_window_items < <(sketchybar --query bar 2>/dev/null | jq -r '.items[]? // empty | select(test("^window\\."))' | sort)
+
+  for item in "${all_window_items[@]}"; do
+    local item_sid=$(echo "$item" | awk -F'.' '{print $2}')
+    local item_window_id=$(echo "$item" | awk -F'.' '{print $3}')
+    local item_appname=$(echo "$item" | sed 's/^[^.]*\.[^.]*\.[^.]*\.//')
+
+    local new_sid=""
+    # Check if this window was in current workspace (now should be in target)
+    for wid in "${current_windows[@]}"; do
+      if [[ "$wid" == "$item_window_id" ]]; then
+        new_sid="$target_sid"
+        break
+      fi
+    done
+    # Check if this window was in target workspace (now should be in current)
+    if [[ -z "$new_sid" ]]; then
+      for wid in "${target_windows[@]}"; do
+        if [[ "$wid" == "$item_window_id" ]]; then
+          new_sid="$current_sid"
+          break
+        fi
+      done
+    fi
+
+    # If we need to update this item
+    if [[ -n "$new_sid" && "$item_sid" != "$new_sid" ]]; then
+      local icon="$($CONFIG_DIR/icons_apps.sh "$item_appname" 2>/dev/null || echo "")"
+      local item_color=$(sketchy_get_space_foreground_color false)
+
+      # Remove old item
+      sketchy_remove_item "$item"
+
+      # Create new item with correct workspace ID
+      local correct_item="window.$new_sid.$item_window_id.$item_appname"
+      local props=(
+        background.corner_radius=0
+        icon.font="$ICON_FONT:$ICON_FONTSIZE"
+        icon.width="$APP_WIDTH"
+      )
+
+      sketchy_add_item "$correct_item" left \
+        --set "$correct_item" "${props[@]}" \
+        icon="$icon" icon.color="$item_color" \
+        click_script="aerospace focus --window-id $item_window_id"
+
+      # Position it
+      sketchybar --move "$correct_item" before "workspace.end.$new_sid"
+    fi
+  done
+
+  # Rebuild to ensure correct ordering
+  rebuild_workspaces
+}
+

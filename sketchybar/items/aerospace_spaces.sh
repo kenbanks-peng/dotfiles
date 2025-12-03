@@ -13,6 +13,8 @@ sketchybar --add event aerospace_new_workspace
 sketchybar --add event aerospace_workspace_next
 sketchybar --add event aerospace_move_window_next
 sketchybar --add event aerospace_move_window_prev
+sketchybar --add event aerospace_swap_workspace_left
+sketchybar --add event aerospace_swap_workspace_right
 sketchybar --add event yabai_window_created
 sketchybar --add event yabai_window_destroyed
 sketchybar --add event yabai_window_minimized
@@ -36,6 +38,8 @@ props=(
   aerospace_workspace_next \
   aerospace_move_window_next \
   aerospace_move_window_prev \
+  aerospace_swap_workspace_left \
+  aerospace_swap_workspace_right \
   yabai_window_created \
   yabai_window_destroyed \
   yabai_window_minimized \

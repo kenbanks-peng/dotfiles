@@ -19,6 +19,10 @@ elif [ "$SENDER" = "aerospace_move_window_next" ]; then
   aerospace_smart_move_window "next"
 elif [ "$SENDER" = "aerospace_move_window_prev" ]; then
   aerospace_smart_move_window "prev"
+elif [ "$SENDER" = "aerospace_swap_workspace_left" ]; then
+  aerospace_swap_workspace "left"
+elif [ "$SENDER" = "aerospace_swap_workspace_right" ]; then
+  aerospace_swap_workspace "right"
 elif [ "$SENDER" = "aerospace_workspace_change" ]; then
   if [[ "$FOCUS_CHANGE" != "true" ]]; then
     # aerospace exec_on_workspace_change fired
