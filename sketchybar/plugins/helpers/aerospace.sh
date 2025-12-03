@@ -855,8 +855,9 @@ aerospace_workspace_next() {
 aerospace_swap_workspace() {
   local direction="$1"  # "left" or "right"
 
-  # Get current workspace
+  # Get current workspace and focused window
   local current_sid=$(aerospace list-workspaces --focused)
+  local focused_window_id=$(aerospace list-windows --focused --format '%{window-id}')
 
   # Get all workspaces sorted
   mapfile -t workspace_ids < <(aerospace list-workspaces --all | sort -n)
@@ -916,8 +917,11 @@ aerospace_swap_workspace() {
     fi
   done
 
-  # Focus stays on current workspace (which now has target's windows)
-  aerospace workspace "$current_sid" </dev/null 2>/dev/null
+  # Focus follows the originally focused window to its new workspace (target_sid)
+  aerospace workspace "$target_sid" </dev/null 2>/dev/null
+  if [[ -n "$focused_window_id" ]]; then
+    aerospace focus --window-id "$focused_window_id" </dev/null 2>/dev/null
+  fi
 
   # Update sketchybar: rename window items to match new workspace assignments
   mapfile -t all_window_items < <(sketchybar --query bar 2>/dev/null | jq -r '.items[]? // empty | select(test("^window\\."))' | sort)
