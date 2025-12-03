@@ -11,7 +11,7 @@ audacity 3.7.5
 boop 1.4.0
 claude-code 2.0.56
 cleanshot 4.8.5
-codex 0.63.0
+codex 0.64.0
 container 0.6.0
 cursor 2.1.46,ab326d0767c02fb9847b342c43ea58275c4b1685
 daisydisk 4.32
@@ -32,7 +32,7 @@ grandperspective 3.6
 hoppscotch 25.11.0-0
 karabiner-elements 15.7.0
 keyclu 0.30.2
-languagetool-desktop 2.9.1
+languagetool-desktop 2.9.3,rc3
 linear-linear 1.28.6,251002av7g3go28
 microsoft-auto-update 4.81.25111027
 microsoft-outlook 16.103.25113013
@@ -80,11 +80,11 @@ aws-c-mqtt 0.13.3
 aws-c-s3 0.11.2
 aws-c-sdkutils 0.2.4
 aws-checksums 0.2.7
-aws-crt-cpp 0.35.3
+aws-crt-cpp 0.35.4
 aws-sdk-cpp 1.11.690
 bandwhich 0.23.1
 bash 5.3.8
-bat 0.26.0
+bat 0.26.1
 bat-extras 2024.08.24
 biome 2.3.8
 borders 1.8.4
@@ -300,7 +300,7 @@ oh-my-posh 28.1.0
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 1.0.127
+opencode 1.0.128
 opencore-amr 0.1.6
 openexr 3.4.4
 openjdk 25.0.1
