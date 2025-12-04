@@ -7,11 +7,11 @@ anybar 0.2.3
 arc 1.123.0,71229
 athas-editor 0.2.1
 atuin-desktop 0.2.5
-audacity 3.7.5
+audacity 3.7.6
 boop 1.4.0
 claude-code 2.0.58
 cleanshot 4.8.6
-codex 0.64.0
+codex 0.65.0
 container 0.6.0
 cursor 2.1.47,2d3ce3499c15efd55b6b8538ea255eb7ba4266b2
 daisydisk 4.32
@@ -29,7 +29,7 @@ git-credential-manager 2.6.1
 google-chrome 143.0.7499.41
 google-drive 117.0.0
 grandperspective 3.6
-hoppscotch 25.11.0-0
+hoppscotch 25.11.1-0
 karabiner-elements 15.7.0
 keyclu 0.30.2
 languagetool-desktop 2.9.3,rc3
@@ -448,7 +448,7 @@ npm:md-to-pdf                                                5.2.5              
 npm:nuekit                                                   2.0.0-beta.2       ~/.config/mise/mise.toml  latest
 npm:vite                                                     7.2.6              ~/.config/mise/mise.toml  latest
 pipx:SuperClaude                                             4.1.9              ~/.config/mise/mise.toml  latest
-pipx:meson                                                   1.9.1              ~/.config/mise/mise.toml  latest
+pipx:meson                                                   1.9.2              ~/.config/mise/mise.toml  latest
 pipx:ninja                                                   1.13.0             ~/.config/mise/mise.toml  latest
 pipx:ruff                                                    0.14.8             ~/.config/mise/mise.toml  latest
 pipx:seagoat                                                 0.54.17            ~/.config/mise/mise.toml  latest
