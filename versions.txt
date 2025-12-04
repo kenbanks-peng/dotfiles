@@ -6,14 +6,14 @@ antigravity 1.11.9,4787439284912128
 anybar 0.2.3
 arc 1.123.0,71229
 athas-editor 0.2.1
-atuin-desktop 0.2.5
+atuin-desktop 0.2.6
 audacity 3.7.6
 boop 1.4.0
 claude-code 2.0.58
 cleanshot 4.8.6
 codex 0.65.0
 container 0.6.0
-cursor 2.1.47,2d3ce3499c15efd55b6b8538ea255eb7ba4266b2
+cursor 2.1.48,ce371ffbf5e240ca47f4b5f3f20efed084991120
 daisydisk 4.32
 deepchat 0.5.1
 espanso 2.3.0
