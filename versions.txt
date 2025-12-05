@@ -5,7 +5,6 @@ affinity 3.0.2,3912
 antigravity 1.11.9,4787439284912128
 anybar 0.2.3
 arc 1.123.0,71229
-athas-editor 0.2.1
 atuin-desktop 0.2.6
 audacity 3.7.6
 boop 1.4.0
