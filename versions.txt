@@ -9,6 +9,7 @@ athas-editor 0.2.1
 atuin-desktop 0.2.6
 audacity 3.7.6
 boop 1.4.0
+claude 0.14.10,fe3f5688c1c2a4b648d1bf6d9784d62ef9fc336a
 claude-code 2.0.58
 cleanshot 4.8.6
 codex 0.65.0
