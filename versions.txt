@@ -9,11 +9,11 @@ atuin-desktop 0.2.6
 audacity 3.7.6
 boop 1.4.0
 claude 0.14.10,fe3f5688c1c2a4b648d1bf6d9784d62ef9fc336a
-claude-code 2.0.60
+claude-code 2.0.61
 cleanshot 4.8.6
 codex 0.65.0
 container 0.6.0
-cursor 2.1.49,21a2ed198584d56a91c0b996d1a09c93f8538440
+cursor 2.1.50,56f0a83df8e9eb48585fcc4858a9440db4cc7771
 daisydisk 4.32
 deepchat 0.5.1
 espanso 2.3.0
@@ -118,7 +118,7 @@ dotenvx 1.51.1
 dua-cli 2.32.2
 duf 0.9.1
 dust 1.2.3
-dvc 3.64.1
+dvc 3.64.2
 espeak-ng 1.52.0
 fastfetch 2.56.0
 fd 10.3.0
@@ -189,7 +189,7 @@ jq 1.8.1
 jqp 0.8.0
 jrnl 4.2.1
 json-c 0.18
-just 1.43.1
+just 1.44.0
 lame 3.100
 lazydocker 0.24.2
 lazygit 0.57.0
@@ -223,7 +223,7 @@ libngtcp2 1.18.0
 libogg 1.3.6
 libomp 21.1.7
 libplacebo 7.351.0
-libpng 1.6.51
+libpng 1.6.53
 libraw 0.21.4
 librist 0.2.11_1
 librsvg 2.61.3_1
@@ -262,7 +262,7 @@ llvm 21.1.7
 lolcat 100.0.1
 lpeg 1.1.0
 lua 5.4.8
-luajit 2.1.1764593432
+luajit 2.1.1765007043
 luarocks 3.12.2
 lunchy-go 0.2.1
 luv 1.51.0-1
@@ -296,7 +296,7 @@ nspr 4.38.2
 nss 3.118.1
 numpy 2.3.5
 nushell 0.109.1
-oh-my-posh 28.1.0
+oh-my-posh 28.1.1
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
