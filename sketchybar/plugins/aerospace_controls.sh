@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 source "$CONFIG_DIR/env.sh"
-source "$CONFIG_DIR/helpers/yabai.sh"
+source "$CONFIG_DIR/plugins/helpers/yabai.sh"
 
 if [ "$SENDER" = "mouse.clicked" ]; then
   if [ "$NAME" = "layout.stack" ]; then
