@@ -210,4 +210,4 @@ type = "text"
 style = "plain"
 background = "transparent"
 foreground = "p:prompt"
-template = "{{ if .Env.SHLVL_RELATIVE }}{{ repeat (.Env.SHLVL_RELATIVE | int) '❯' }}{{ else }}{{ repeat .SHLVL '❯' }}{{ end }}"
+template = '{{ if .Env.SHLVL_RELATIVE }}{{ repeat (.Env.SHLVL_RELATIVE | int) "❯" }}{{ else }}{{ repeat .SHLVL "❯" }}{{ end }}'
