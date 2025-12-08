@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+# =============================================================================
+# DEPRECATED: This file contains yabai helper functions that are being phased out
+# in favor of aerospace-based alternatives. Use aerospace_get_* functions instead.
+# =============================================================================
+
 yabai_get_windows_in_space() {
   local sid="$1"
   local result=()
@@ -16,6 +21,7 @@ yabai_get_window_app_name() {
   yabai -m query --windows --window "$window_id" | jq -r '.app'
 }
 
+# DEPRECATED: Use aerospace_get_focused_window_id() instead
 yabai_get_focused_window_id() {
   local window_id=$(yabai -m query --windows | jq -r '.[] | select(.["has-focus"] == true) | .id')
   if [[ -z "${window_id// }" ]]; then
@@ -36,7 +42,8 @@ yabai_autofocus() {
   echo "$(yabai -m config focus_follows_mouse)"
 }
 
-# Check if a yabai window is a dialog/popup that should be excluded
+# DEPRECATED: No longer used - aerospace doesn't track dialogs/floating windows
+# so if a window appears in aerospace's list, it's a valid tiling window.
 # Returns 0 (true) if window is a dialog, 1 (false) if it's a normal window
 yabai_is_dialog() {
   local window_id="$1"
@@ -46,7 +53,7 @@ yabai_is_dialog() {
 
   if [[ -z "$window_info" ]]; then
     # if we can't get window info, the app was likely just destroyed
-    return 1  
+    return 1
   fi
 
   # Extract relevant properties

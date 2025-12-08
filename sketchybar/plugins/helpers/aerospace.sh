@@ -19,7 +19,8 @@ aerospace_all_windows() {
 # Usage: workspaces=$(aerospace_get_workspaces "$all_windows")
 aerospace_get_workspaces() {
   local json="$1"
-  echo "$json" | jq -r '[.[].workspace] | unique | sort_by(tonumber) | .[]'
+  # Filter out empty strings before sorting by number
+  echo "$json" | jq -r '[.[].workspace] | unique | map(select(. != "")) | sort_by(tonumber) | .[]'
 }
 
 # Extract focused workspace from all_windows JSON
@@ -35,12 +36,12 @@ aerospace_get_focused_workspace() {
   echo "$focused"
 }
 
-# Get window IDs in a specific workspace from all_windows JSON
-# Usage: window_ids=$(aerospace_get_windows_in_workspace "$all_windows" "$sid")
+# Get window IDs in a specific workspace from all_windows JSON (newline-separated)
+# Usage: while read -r wid; do ...; done < <(aerospace_get_windows_in_workspace "$all_windows" "$sid")
 aerospace_get_windows_in_workspace() {
   local json="$1"
   local sid="$2"
-  echo "$json" | jq -r --arg sid "$sid" '.[] | select(.workspace == $sid) | ."window-id"' | tr '\n' ' ' | sed 's/ $//'
+  echo "$json" | jq -r --arg sid "$sid" '.[] | select(.workspace == $sid) | ."window-id"'
 }
 
 # Get app name by window ID from all_windows JSON
@@ -66,18 +67,22 @@ aerospace_get_window_ids_for_app() {
 }
 
 # =============================================================================
-# Legacy Functions - Kept for backward compatibility during migration
+# Legacy Functions - DEPRECATED: Use new data accessor functions above
+# These make individual subprocess calls. Prefer fetching all_windows once
+# and using aerospace_get_* functions for better performance.
 # =============================================================================
 
+# DEPRECATED: Use aerospace_get_workspaces() with all_windows JSON
 aerospace_workspaces() {
   echo "$(aerospace list-workspaces --all)"
 }
 
+# DEPRECATED: Use aerospace_get_focused_workspace() with all_windows JSON
 aerospace_focused_workspace() {
   echo "$(aerospace list-workspaces --focused)"
 }
 
-# returns window_ids ex: 46356
+# DEPRECATED: Use aerospace_get_windows_in_workspace() with all_windows JSON
 aerospace_window_ids_in_workspace() {
   local sid="$1"
   local json=$(aerospace list-windows --workspace "$sid" --json --format %{monitor-id}%{workspace}%{app-bundle-id}%{window-id}%{app-name})
@@ -85,7 +90,7 @@ aerospace_window_ids_in_workspace() {
   echo "$filtered"
 }
 
-# returns appname ex: Cursor from window_id ex: 46356
+# DEPRECATED: Use aerospace_get_appname_by_windowid() with all_windows JSON
 aerospace_appname_from_window_id() {
   local window_id="$1"
   local json=$(aerospace list-windows --all --json --format '%{monitor-id}%{workspace}%{app-bundle-id}%{window-id}%{app-name}')
@@ -93,7 +98,7 @@ aerospace_appname_from_window_id() {
   echo "$filtered"
 }
 
-# returns window_ids ex: "46356 46357" for given app_name
+# DEPRECATED: Use aerospace_get_window_ids_for_app() with all_windows JSON
 aerospace_window_ids_for_app() {
   local app_name="$1"
   local json=$(aerospace list-windows --all --json --format '%{monitor-id}%{workspace}%{app-bundle-id}%{window-id}%{app-name}')
@@ -103,7 +108,15 @@ aerospace_window_ids_for_app() {
 
 remove_unmatched_items() {
   local sid="$1"
-  aerospace_window_ids=$(aerospace_window_ids_in_workspace "$sid")
+  local all_windows="$2"
+
+  # Use passed all_windows or fetch if not provided
+  if [[ -z "$all_windows" ]]; then
+    all_windows=$(aerospace_all_windows)
+  fi
+
+  # Convert newlines to spaces for unmatched_items comparison
+  aerospace_window_ids=$(aerospace_get_windows_in_workspace "$all_windows" "$sid" | tr '\n' ' ')
   sketchy_apps=$(sketchy_get_window_items_in_spaceid "$sid")
   apps_to_remove=$(unmatched_items "$aerospace_window_ids" "$sketchy_apps")
   if [[ -n "$apps_to_remove" ]]; then
@@ -113,32 +126,44 @@ remove_unmatched_items() {
 
 
 aerospace_workspace_change() {
-  # default window uses sid as window_id
   local sid="$1"
   local prev_sid="$2"
+  local all_windows="$3"
+
+  # Use passed all_windows or fetch if not provided
+  if [[ -z "$all_windows" ]]; then
+    all_windows=$(aerospace_all_windows)
+  fi
 
   # move sticky apps to current workspace
-  apptype_show_sticky_apps "$sid" "$prev_sid"
+  apptype_show_sticky_apps "$sid" "$prev_sid" "$all_windows"
 
   # keep prev workspace in sync
-  remove_unmatched_items "$prev_sid"
+  remove_unmatched_items "$prev_sid" "$all_windows"
 
   # keep current workspace in sync
-  aerospace_add_apps_in_spaceid "$sid"
+  aerospace_add_apps_in_spaceid "$sid" "$all_windows"
 
   # highlight workspace
   sketchy_highlight_workspace "$sid"
 
   # Sync workspaces after workspace change
-  sync_workspaces
+  sync_workspaces "$all_windows"
 }
 
 aerospace_focused_window_change() {
-  local window_id=$1  
-  local sid=$(aerospace_focused_workspace)
- 
-  if [ -z "$window_id" ]; then
-    window_id=$(yabai_get_focused_window_id)
+  local window_id="$1"
+  local all_windows="$2"
+
+  # Use passed all_windows or fetch if not provided
+  if [[ -z "$all_windows" ]]; then
+    all_windows=$(aerospace_all_windows)
+  fi
+
+  local sid=$(aerospace_get_focused_workspace "$all_windows")
+
+  if [[ -z "$window_id" ]]; then
+    window_id=$(aerospace_get_focused_window_id)
   fi
 
   sketchy_highlight_workspace "$sid"
@@ -150,8 +175,23 @@ aerospace_focused_window_change() {
 
 # Rebuild workspaces: intelligently update workspace order without unnecessary removals
 rebuild_workspaces() {
-  local occupied_workspaces=($(aerospace list-workspaces --all | sort -n))
-  local existing_workspaces=($(sketchybar --query bar | jq -r '.items[] | select(test("^workspace\\.start\\.\\d+$"))' | sed 's/workspace\.start\.//'))
+  local all_windows="$1"
+
+  # Use passed all_windows or fetch if not provided
+  if [[ -z "$all_windows" ]]; then
+    all_windows=$(aerospace_all_windows)
+  fi
+
+  # Get workspaces from JSON (build array portably)
+  local occupied_workspaces=()
+  while IFS= read -r ws; do
+    [[ -n "$ws" ]] && occupied_workspaces+=("$ws")
+  done < <(aerospace_get_workspaces "$all_windows")
+
+  local existing_workspaces=()
+  while IFS= read -r ws; do
+    [[ -n "$ws" ]] && existing_workspaces+=("$ws")
+  done < <(sketchybar --query bar | jq -r '.items[] | select(test("^workspace\\.start\\.\\d+$"))' | sed 's/workspace\.start\.//')
 
   # Step 1: Remove workspaces that no longer exist (but NOT window items - Step 3 will handle those)
   for sid in "${existing_workspaces[@]}"; do
@@ -217,15 +257,15 @@ rebuild_workspaces() {
   mapfile -t all_sketchy_items < <(sketchybar --query bar | jq -r '.items[] | select(test("^window\\."))' | sort)
 
   for sid in "${occupied_workspaces[@]}"; do
-    # Get aerospace's window list for this workspace
-    local aerospace_window_ids=($(aerospace_window_ids_in_workspace "$sid"))
-
     # Add/update windows and ensure correct order
     local prev_item="workspace.start.$sid"
-    for window_id in "${aerospace_window_ids[@]}"; do
-      local appname=$(aerospace_appname_from_window_id "$window_id")
 
-      if [ -z "$window_id" ] || [ -z "$appname" ]; then
+    # Iterate over window IDs using while-read
+    while IFS= read -r window_id; do
+      [[ -z "$window_id" ]] && continue
+      local appname=$(aerospace_get_appname_by_windowid "$all_windows" "$window_id")
+
+      if [[ -z "$window_id" ]] || [[ -z "$appname" ]]; then
         continue
       fi
 
@@ -255,14 +295,14 @@ rebuild_workspaces() {
 
         local icon="$($CONFIG_DIR/icons_apps.sh "$appname")"
         local icon_color="$(sketchy_get_space_foreground_color false)"
-        local props=(
+        local item_props=(
           background.corner_radius=0
           icon.font="$ICON_FONT:$ICON_FONTSIZE"
           icon.width="$APP_WIDTH"
         )
 
         sketchy_add_item "$correct_item" left \
-          --set "$correct_item" "${props[@]}" \
+          --set "$correct_item" "${item_props[@]}" \
           icon="$icon" icon.color="$icon_color" \
           click_script="aerospace focus --window-id $window_id"
         sketchybar --move "$correct_item" after "$prev_item"
@@ -270,25 +310,28 @@ rebuild_workspaces() {
         # Item doesn't exist - create it
         local icon="$($CONFIG_DIR/icons_apps.sh "$appname")"
         local icon_color="$(sketchy_get_space_foreground_color false)"
-        local props=(
+        local item_props=(
           background.corner_radius=0
           icon.font="$ICON_FONT:$ICON_FONTSIZE"
           icon.width="$APP_WIDTH"
         )
 
         sketchy_add_item "$correct_item" left \
-          --set "$correct_item" "${props[@]}" \
+          --set "$correct_item" "${item_props[@]}" \
           icon="$icon" icon.color="$icon_color" \
           click_script="aerospace focus --window-id $window_id"
         sketchybar --move "$correct_item" after "$prev_item"
       fi
 
       prev_item="$correct_item"
-    done
+    done < <(aerospace_get_windows_in_workspace "$all_windows" "$sid")
   done
 
   # Step 3.5: Remove any orphaned window items (windows that no longer exist in any workspace)
-  local all_aerospace_window_ids=($(aerospace list-windows --all --format '%{window-id}'))
+  # Extract all window IDs from all_windows JSON
+  local all_aerospace_window_ids
+  mapfile -t all_aerospace_window_ids < <(echo "$all_windows" | jq -r '.[].\"window-id\"')
+
   for item in "${all_sketchy_items[@]}"; do
     local item_window_id=$(echo "$item" | awk -F'.' '{print $3}')
     if ! printf '%s\n' "${all_aerospace_window_ids[@]}" | grep -q "^${item_window_id}$"; then
@@ -297,18 +340,28 @@ rebuild_workspaces() {
   done
 
   # Step 4: Highlight current workspace and focused window
-  local focused_sid=$(aerospace_focused_workspace)
+  local focused_sid=$(aerospace_get_focused_workspace "$all_windows")
   sketchy_highlight_workspace "$focused_sid"
 
-  local focused_window_id=$(yabai_get_focused_window_id)
-  if [ -n "$focused_window_id" ]; then
+  local focused_window_id=$(aerospace_get_focused_window_id)
+  if [[ -n "$focused_window_id" ]]; then
     sketchy_highlight_window_id "$focused_window_id"
   fi
 }
 
 # Sync workspaces: add workspace dividers for new workspaces, remove for empty ones
 sync_workspaces() {
-  local occupied_workspaces=($(aerospace list-workspaces --all | sort -n))
+  local all_windows="$1"
+
+  # Use passed all_windows or fetch if not provided
+  if [[ -z "$all_windows" ]]; then
+    all_windows=$(aerospace_all_windows)
+  fi
+
+  # Get workspaces from JSON
+  local occupied_workspaces
+  mapfile -t occupied_workspaces < <(aerospace_get_workspaces "$all_windows")
+
   local sketchy_workspaces=($(sketchybar --query bar | jq -r '.items[] | select(test("^workspace\\.start\\.\\d+$"))' | sed 's/workspace\.start\.//'))
 
   # Add missing workspaces
@@ -334,7 +387,7 @@ sync_workspaces() {
       # Look for the next higher workspace number that exists in sketchybar
       local position_found=false
       for next_sid in "${occupied_workspaces[@]}"; do
-        if [ "$next_sid" -gt "$sid" ]; then
+        if [[ "$next_sid" -gt "$sid" ]]; then
           # Check if this next workspace exists in sketchybar
           if printf '%s\n' "${sketchy_workspaces[@]}" | grep -q "^${next_sid}$"; then
             # Insert before this workspace
@@ -353,7 +406,7 @@ sync_workspaces() {
       done
 
       # If no higher workspace found, just add to left (will be at the end)
-      if [ "$position_found" = false ]; then
+      if [[ "$position_found" = false ]]; then
         sketchy_add_item "$start" left \
           --set "$start" "${props[@]}"
 
@@ -372,7 +425,7 @@ sync_workspaces() {
       fi
 
       # Populate the workspace with any missing apps
-      aerospace_add_apps_in_spaceid "$sid"
+      aerospace_add_apps_in_spaceid "$sid" "$all_windows"
     fi
   done
 
@@ -407,42 +460,52 @@ aerospace_remove_window_id() {
 
 
 aerospace_new_window_id() {
-  # ex: 46356
   local window_id="$1"
-  local sid=$(aerospace_focused_workspace)
+  local all_windows="$2"
+
+  # Use passed all_windows or fetch if not provided
+  if [[ -z "$all_windows" ]]; then
+    all_windows=$(aerospace_all_windows)
+  fi
+
+  local sid=$(aerospace_get_focused_workspace "$all_windows")
 
   # Skip if window_id is empty
-  if [ -z "$window_id" ]; then
+  if [[ -z "$window_id" ]]; then
     return
   fi
 
-  # ex: Cursor
-  appname=$(aerospace_appname_from_window_id "$window_id")
+  # Get appname from all_windows JSON
+  local appname=$(aerospace_get_appname_by_windowid "$all_windows" "$window_id")
 
   # Skip if appname is empty
-  if [ -z "$appname" ]; then
+  if [[ -z "$appname" ]]; then
     return
   fi
 
-  item="window.$sid.$window_id.$appname"
+  local item="window.$sid.$window_id.$appname"
 
-  icon="$($CONFIG_DIR/icons_apps.sh "$appname")"
-  icon_color="$(sketchy_get_space_foreground_color false)"
+  local icon="$($CONFIG_DIR/icons_apps.sh "$appname")"
+  local icon_color="$(sketchy_get_space_foreground_color false)"
 
-  props=(
+  local props=(
     background.corner_radius=0
     icon.font="$ICON_FONT:$ICON_FONTSIZE"
     icon.width="$APP_WIDTH"
   )
 
-  # Get aerospace's window ordering for this workspace (in DFS/visual order)
-  local aerospace_window_order=($(aerospace_window_ids_in_workspace "$sid"))
+  # Get aerospace's window ordering for this workspace from all_windows JSON
+  # Build array portably using while-read
+  local aerospace_window_order=()
+  while IFS= read -r wid; do
+    [[ -n "$wid" ]] && aerospace_window_order+=("$wid")
+  done < <(aerospace_get_windows_in_workspace "$all_windows" "$sid")
 
   # Find the position of this window in aerospace's ordering
   local position=-1
   local index=0
   for ordered_window_id in "${aerospace_window_order[@]}"; do
-    if [ "$ordered_window_id" = "$window_id" ]; then
+    if [[ "$ordered_window_id" = "$window_id" ]]; then
       position=$index
       break
     fi
@@ -456,7 +519,7 @@ aerospace_new_window_id() {
     click_script="aerospace focus --window-id $window_id"
 
   # Position it correctly based on aerospace's ordering
-  if [ $position -eq 0 ]; then
+  if [[ $position -eq 0 ]]; then
     # First window, move right after workspace.start
     sketchybar --move "$item" after "workspace.start.$sid"
   else
@@ -465,7 +528,7 @@ aerospace_new_window_id() {
     local prev_window_id="${aerospace_window_order[$prev_index]}"
     local prev_item=$(sketchy_get_item_by_window_id "$prev_window_id")
 
-    if [ -n "$prev_item" ]; then
+    if [[ -n "$prev_item" ]]; then
       # Insert after the previous window
       sketchybar --move "$item" after "$prev_item"
     else
@@ -477,11 +540,17 @@ aerospace_new_window_id() {
   sketchy_highlight_window_id "$window_id"
 
   # Sync workspaces after adding window
-  sync_workspaces
+  sync_workspaces "$all_windows"
 }
 
 aerospace_add_apps_in_spaceid() {
   local sid="$1"
+  local all_windows="$2"
+
+  # Use passed all_windows or fetch if not provided
+  if [[ -z "$all_windows" ]]; then
+    all_windows=$(aerospace_all_windows)
+  fi
 
   local props=(
     y_offset=1
@@ -490,51 +559,49 @@ aerospace_add_apps_in_spaceid() {
     icon.width="$APP_WIDTH"
   )
 
-  aerospace_window_ids=$(aerospace_window_ids_in_workspace "$sid")
+  local prev_item="workspace.start.$sid"
 
-  if [ -n "${aerospace_window_ids}" ]; then
-    # Read space-separated window_ids into an array and iterate
-    read -ra window_id_array <<< "$aerospace_window_ids"
-    local prev_item="workspace.start.$sid"
+  # Iterate over window IDs using while-read (portable across bash/zsh)
+  while IFS= read -r window_id; do
+    [[ -z "$window_id" ]] && continue
 
-    for window_id in "${window_id_array[@]}"; do
-      appname=$(aerospace_appname_from_window_id "$window_id")
+    # Get appname from all_windows JSON
+    local appname=$(aerospace_get_appname_by_windowid "$all_windows" "$window_id")
 
-      # Skip windows with empty window_id or appname
-      if [ -z "$window_id" ] || [ -z "$appname" ]; then
-        continue
-      fi
+    # Skip windows with empty appname
+    if [[ -z "$appname" ]]; then
+      continue
+    fi
 
-      # Skip excluded apps and dialogs
-      if ! apptype_allow_app "$appname" "$window_id"; then
-        continue
-      fi
+    # Skip excluded apps (no more dialog check - aerospace doesn't track dialogs)
+    if ! apptype_allow_app "$appname"; then
+      continue
+    fi
 
-      item="window.$sid.$window_id.$appname"
-      icon="$($CONFIG_DIR/icons_apps.sh "$appname")"
+    local item="window.$sid.$window_id.$appname"
+    local icon="$($CONFIG_DIR/icons_apps.sh "$appname")"
 
-      # Check if item already exists
-      local items=$(sketchybar --query bar | jq -r '.items[]')
-      if ! item_in_array "$item" "$items"; then
-        # New item - set all properties including icon.color
-        icon_color="$(sketchy_get_space_foreground_color false)"
-        sketchy_add_item "$item" left \
-          --set "$item" "${props[@]}" \
-          icon="$icon" icon.color="$icon_color" \
-          click_script="aerospace focus --window-id $window_id"
-      else
-        # Existing item - update properties but preserve icon.color (which might be highlighted)
-        sketchy_add_item "$item" left \
-          --set "$item" "${props[@]}" \
-          icon="$icon" \
-          click_script="aerospace focus --window-id $window_id"
-      fi
+    # Check if item already exists
+    local items=$(sketchybar --query bar | jq -r '.items[]')
+    if ! item_in_array "$item" "$items"; then
+      # New item - set all properties including icon.color
+      local icon_color="$(sketchy_get_space_foreground_color false)"
+      sketchy_add_item "$item" left \
+        --set "$item" "${props[@]}" \
+        icon="$icon" icon.color="$icon_color" \
+        click_script="aerospace focus --window-id $window_id"
+    else
+      # Existing item - update properties but preserve icon.color (which might be highlighted)
+      sketchy_add_item "$item" left \
+        --set "$item" "${props[@]}" \
+        icon="$icon" \
+        click_script="aerospace focus --window-id $window_id"
+    fi
 
-      # Position after the previous item to maintain aerospace's order
-      sketchybar --move "$item" after "$prev_item"
-      prev_item="$item"
-    done
-  fi
+    # Position after the previous item to maintain aerospace's order
+    sketchybar --move "$item" after "$prev_item"
+    prev_item="$item"
+  done < <(aerospace_get_windows_in_workspace "$all_windows" "$sid")
 }
 
 

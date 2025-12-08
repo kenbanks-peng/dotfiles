@@ -4,7 +4,8 @@
 item_in_array() {
   local item="$1"
   shift
-  if printf '%s\n' "$@" | rg -q "^$item$"; then
+  # Use -F for fixed string matching (no regex), -x for whole line match
+  if printf '%s\n' "$@" | rg -qFx "$item"; then
     return 0
   else
     return 1

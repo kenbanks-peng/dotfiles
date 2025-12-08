@@ -22,16 +22,16 @@ EXCLUDED_APPS=(
 
 # List of app names that should stick to the current workspace
 # These apps will be moved to the new workspace when switching
-# Sticky apps are likely also excluded apps, since they are hopefully outside of aerospace's window management. 
+# Sticky apps are likely also excluded apps, since they are hopefully outside of aerospace's window management.
 STICKY_APPS=(
   "Wispr Flow"
 )
 
 # Returns 0 (true) if app is allowed, 1 (false) if excluded
-# Usage: apptype_allow_app "AppName" [window_id]
+# Usage: apptype_allow_app "AppName"
+# Note: Dialog detection removed - aerospace doesn't track dialogs/floating windows
 apptype_allow_app() {
   local appname="$1"
-  local window_id="$2"
 
   # Check if app name is in excluded list
   for excluded in "${EXCLUDED_APPS[@]}"; do
@@ -40,37 +40,31 @@ apptype_allow_app() {
     fi
   done
 
-  # If window_id provided, check if it's a dialog
-  if [[ -n "$window_id" ]]; then
-    # Source yabai helpers if not already loaded
-    if ! declare -f yabai_is_dialog &>/dev/null; then
-      source "$PLUGIN_DIR/helpers/yabai.sh"
-    fi
-
-    if yabai_is_dialog "$window_id"; then
-      return 1  # Window is a dialog, exclude it
-    fi
-  fi
-
   return 0  # App is allowed
 }
 
 # Move sticky apps from previous workspace to current workspace
+# Usage: apptype_show_sticky_apps "$sid" "$prev_sid" "$all_windows"
 apptype_show_sticky_apps() {
   local sid="$1"
   local prev_sid="$2"
+  local all_windows="$3"
 
   # to avoid source loop
   source "$PLUGIN_DIR/helpers/aerospace.sh"
 
+  # Use passed all_windows or fetch if not provided
+  if [[ -z "$all_windows" ]]; then
+    all_windows=$(aerospace_all_windows)
+  fi
+
   for sticky_app in "${STICKY_APPS[@]}"; do
-    # Get window IDs for this sticky app across all workspaces
-    local window_ids=$(aerospace_window_ids_for_app "$sticky_app")
+    # Get window IDs for this sticky app from all_windows JSON
+    local window_ids=$(aerospace_get_window_ids_for_app "$all_windows" "$sticky_app")
 
     if [[ -n "$window_ids" ]]; then
       # Move each window of the sticky app to the current workspace
-      read -ra window_id_array <<< "$window_ids"
-      for window_id in "${window_id_array[@]}"; do
+      for window_id in $window_ids; do
         aerospace move-node-to-workspace --window-id "$window_id" "$sid"
       done
     fi

@@ -48,6 +48,10 @@ props=(
 
 # Initialize workspaces - only create dividers for currently occupied workspaces
 # (with persistent-workspaces=[], only occupied workspaces exist)
+
+# Fetch all windows ONCE for initialization
+all_windows=$(aerospace_all_windows)
+
 props=(
   background.padding_left=0
   background.padding_right=0
@@ -59,8 +63,11 @@ props=(
   label.drawing=off
   y_offset=0
 )
-workspaces=($(aerospace_workspaces | sort -n))
-for sid in "${workspaces[@]}"; do
+
+# Get workspaces from the cached JSON and iterate properly
+while IFS= read -r sid; do
+  [[ -z "$sid" ]] && continue
+
   start="workspace.start.$sid"
   end="workspace.end.$sid"
 
@@ -72,6 +79,6 @@ for sid in "${workspaces[@]}"; do
 
   sketchy_add_workspace "$sid"
 
-  # Add apps to this workspace immediately
-  aerospace_add_apps_in_spaceid "$sid"
-done
+  # Add apps to this workspace using cached all_windows
+  aerospace_add_apps_in_spaceid "$sid" "$all_windows"
+done < <(aerospace_get_workspaces "$all_windows")
