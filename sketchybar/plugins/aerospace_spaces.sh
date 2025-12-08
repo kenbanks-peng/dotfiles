@@ -33,6 +33,9 @@ if ! acquire_lock; then
   exit 0
 fi
 
+# Initialize bar cache for this event (reduces sketchybar queries)
+export SKETCHY_BAR_CACHE=$(sketchy_get_bar_items)
+
 if [ "$SENDER" = "forced" ]; then
   # Fetch all data ONCE
   all_windows=$(aerospace_all_windows)

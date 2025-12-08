@@ -1,7 +1,18 @@
 #!/usr/bin/env bash
 
 source "$CONFIG_DIR/env.sh"
-source "$PLUGIN_DIR/helpers/yabai.sh"
+
+# Toggle yabai focus_follows_mouse setting
+# Returns: "disabled", "autofocus", or "autoraise"
+_yabai_autofocus() {
+  local setting=$(yabai -m config focus_follows_mouse)
+  if [ "$setting" != "disabled" ]; then
+    yabai -m config focus_follows_mouse off
+  else
+    yabai -m config focus_follows_mouse autofocus
+  fi
+  echo "$(yabai -m config focus_follows_mouse)"
+}
 
 if [ "$SENDER" = "mouse.clicked" ]; then
   if [ "$NAME" = "layout.stack" ]; then
@@ -11,7 +22,7 @@ if [ "$SENDER" = "mouse.clicked" ]; then
   elif [ "$NAME" = "layout.float" ]; then
     aerospace layout floating tiling
   elif [ "$NAME" = "layout.auto_focus" ]; then
-    if [ $(yabai_autofocus) = "disabled" ]; then
+    if [ $(_yabai_autofocus) = "disabled" ]; then
       sketchybar --set layout.auto_focus icon.color=$OFF
     else
       sketchybar --set layout.auto_focus icon.color=$ON

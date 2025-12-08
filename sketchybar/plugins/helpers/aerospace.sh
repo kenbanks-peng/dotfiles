@@ -68,26 +68,6 @@ aerospace_get_window_ids_for_app() {
   echo "$json" | jq -r --arg app "$app_name" '.[] | select(."app-name" == $app) | ."window-id"' | tr '\n' ' ' | sed 's/ $//'
 }
 
-# =============================================================================
-# Legacy Functions - DEPRECATED: Use new data accessor functions above
-# These make individual subprocess calls. Prefer fetching all_windows once
-# and using aerospace_get_* functions for better performance.
-# =============================================================================
-
-# DEPRECATED: Use aerospace_get_focused_workspace() with all_windows JSON
-# Still used by aerospace_remove_window_id()
-aerospace_focused_workspace() {
-  echo "$(aerospace list-workspaces --focused)"
-}
-
-# DEPRECATED: Use aerospace_get_windows_in_workspace() with all_windows JSON
-# Still used by aerospace_swap_workspace()
-aerospace_window_ids_in_workspace() {
-  local sid="$1"
-  local json=$(aerospace list-windows --workspace "$sid" --json --format %{monitor-id}%{workspace}%{app-bundle-id}%{window-id}%{app-name})
-  local filtered=$(echo "$json" | jq -r '.[] | ."window-id"' | jq -s -r 'join(" ")')
-  echo "$filtered"
-}
 
 remove_unmatched_items() {
   local sid="$1"
@@ -169,9 +149,10 @@ sync_workspaces() {
   done < <(aerospace_get_workspaces "$all_windows")
 
   local sketchy_workspaces=()
+  local bar_items=$(_sketchy_cached_bar_items)
   while IFS= read -r sw; do
     [[ -n "$sw" ]] && sketchy_workspaces+=("$sw")
-  done < <(sketchybar --query bar | jq -r '.items[] | select(test("^workspace\\.start\\.\\d+$"))' | sed 's/workspace\.start\.//')
+  done < <(echo "$bar_items" | grep "^workspace\\.start\\.[0-9]*$" | sed 's/workspace\.start\.//')
 
   # Add missing workspaces
   for sid in "${occupied_workspaces[@]}"; do
@@ -180,17 +161,11 @@ sync_workspaces() {
       local start="workspace.start.$sid"
       local end="workspace.end.$sid"
 
-      local props=(
-        background.padding_left=0
-        background.padding_right=0
-        background.height=$BACKGROUND_HEIGHT
-        background.color=$BAR
-        background.corner_radius=0
-        width=$WORKSPACE_DIVIDER_WIDTH
-        icon.drawing=off
-        label.drawing=off
-        y_offset=0
-      )
+      # Use centralized props from env.sh
+      local props=()
+      while IFS= read -r line; do
+        [[ -n "$line" ]] && props+=("$line")
+      done < <(get_workspace_divider_props)
 
       # Find the correct position to insert this workspace
       # Look for the next higher workspace number that exists in sketchybar
@@ -226,7 +201,7 @@ sync_workspaces() {
       sketchy_add_workspace "$sid"
 
       # Move any existing window items for this workspace to correct position
-      local existing_windows=$(sketchybar --query bar | jq -r --arg sid "$sid" '.items[] | select(test("^window\\." + $sid + "\\."))')
+      local existing_windows=$(echo "$bar_items" | grep "^window\\.${sid}\\.")
       if [[ -n "$existing_windows" ]]; then
         while IFS= read -r item; do
           sketchybar --move "$item" before "workspace.end.$sid"
@@ -242,7 +217,7 @@ sync_workspaces() {
   for sid in "${sketchy_workspaces[@]}"; do
     if ! printf '%s\n' "${occupied_workspaces[@]}" | grep -q "^${sid}$"; then
       # Remove all window items in this workspace first
-      local window_items=$(sketchybar --query bar | jq -r --arg sid "$sid" '.items[] | select(test("^window\\." + $sid + "\\."))')
+      local window_items=$(echo "$bar_items" | grep "^window\\.${sid}\\.")
       if [[ -n "$window_items" ]]; then
         while IFS= read -r item; do
           sketchy_remove_item "$item"
@@ -261,9 +236,8 @@ sync_workspaces() {
 aerospace_remove_window_id() {
   # ex: 46356
   local window_id="$1"
-  local sid=$(aerospace_focused_workspace)
   # item ex:window.3.66286.WezTerm
-  item=$(sketchy_get_item_by_window_id "$window_id")
+  local item=$(sketchy_get_item_by_window_id "$window_id")
   sketchy_remove_item "$item"
 }
 
@@ -297,11 +271,11 @@ aerospace_new_window_id() {
   local icon="$($CONFIG_DIR/icons_apps.sh "$appname")"
   local icon_color="$(sketchy_get_space_foreground_color false)"
 
-  local props=(
-    background.corner_radius=0
-    icon.font="$ICON_FONT:$ICON_FONTSIZE"
-    icon.width="$APP_WIDTH"
-  )
+  # Use centralized props from env.sh
+  local props=()
+  while IFS= read -r line; do
+    [[ -n "$line" ]] && props+=("$line")
+  done < <(get_window_item_props)
 
   # Get aerospace's window ordering for this workspace from all_windows JSON
   # Build array portably using while-read
@@ -361,14 +335,17 @@ aerospace_add_apps_in_spaceid() {
     all_windows=$(aerospace_all_windows)
   fi
 
-  local props=(
-    y_offset=1
-    background.corner_radius=0
-    icon.font="$ICON_FONT:$ICON_FONTSIZE"
-    icon.width="$APP_WIDTH"
-  )
+  # Use centralized props from env.sh, with y_offset override
+  local props=()
+  while IFS= read -r line; do
+    [[ -n "$line" ]] && props+=("$line")
+  done < <(get_window_item_props)
+  props+=("y_offset=1")
 
   local prev_item="workspace.start.$sid"
+
+  # Cache bar items once for this function (avoid querying inside loop)
+  local bar_items=$(_sketchy_cached_bar_items)
 
   # Iterate over window IDs using while-read (portable across bash/zsh)
   while IFS= read -r window_id; do
@@ -390,9 +367,8 @@ aerospace_add_apps_in_spaceid() {
     local item="window.$sid.$window_id.$appname"
     local icon="$($CONFIG_DIR/icons_apps.sh "$appname")"
 
-    # Check if item already exists
-    local items=$(sketchybar --query bar | jq -r '.items[]')
-    if ! item_in_array "$item" "$items"; then
+    # Check if item already exists (using cached bar items)
+    if ! item_in_array "$item" "$bar_items"; then
       # New item - set all properties including icon.color
       local icon_color="$(sketchy_get_space_foreground_color false)"
       sketchy_add_item "$item" left \
@@ -701,11 +677,12 @@ aerospace_smart_move_window() {
 
   # Update window items: ensure items match aerospace state
 
-  # Get all current window items from sketchybar (build array portably)
+  # Get all current window items from cache (build array portably)
+  local bar_items=$(_sketchy_cached_bar_items)
   local all_window_items=()
   while IFS= read -r wi; do
     [[ -n "$wi" ]] && all_window_items+=("$wi")
-  done < <(sketchybar --query bar 2>/dev/null | jq -r '.items[]? // empty | select(test("^window\\."))' | sort)
+  done < <(echo "$bar_items" | grep "^window\\." | sort)
 
   # Build map of window_id -> correct_workspace_id from aerospace
   declare -A window_workspace_map
@@ -742,11 +719,10 @@ aerospace_smart_move_window() {
 
       # Create new item with correct workspace ID
       local correct_item="window.$correct_sid.$item_window_id.$item_appname"
-      local props=(
-        background.corner_radius=0
-        icon.font="$ICON_FONT:$ICON_FONTSIZE"
-        icon.width="$APP_WIDTH"
-      )
+      local props=()
+      while IFS= read -r line; do
+        [[ -n "$line" ]] && props+=("$line")
+      done < <(get_window_item_props)
 
       sketchy_add_item "$correct_item" left \
         --set "$correct_item" "${props[@]}" \
@@ -806,15 +782,18 @@ aerospace_workspace_next() {
 aerospace_swap_workspace() {
   local direction="$1"  # "left" or "right"
 
+  # Fetch all window data once
+  local all_windows=$(aerospace_all_windows)
+
   # Get current workspace and focused window
-  local current_sid=$(aerospace list-workspaces --focused)
-  local focused_window_id=$(aerospace list-windows --focused --format '%{window-id}')
+  local current_sid=$(aerospace_get_focused_workspace "$all_windows")
+  local focused_window_id=$(aerospace_get_focused_window_id)
 
   # Get all workspaces sorted (build array portably)
   local workspace_ids=()
   while IFS= read -r ws; do
     [[ -n "$ws" ]] && workspace_ids+=("$ws")
-  done < <(aerospace list-workspaces --all | sort -n)
+  done < <(aerospace_get_workspaces "$all_windows")
 
   # Find current workspace index
   local current_index=-1
@@ -845,12 +824,19 @@ aerospace_swap_workspace() {
 
   local target_sid="${workspace_ids[$target_index]}"
 
-  # Get windows in each workspace
-  local current_windows=($(aerospace_window_ids_in_workspace "$current_sid"))
-  local target_windows=($(aerospace_window_ids_in_workspace "$target_sid"))
+  # Get windows in each workspace using cached all_windows
+  local current_windows=()
+  while IFS= read -r wid; do
+    [[ -n "$wid" ]] && current_windows+=("$wid")
+  done < <(aerospace_get_windows_in_workspace "$all_windows" "$current_sid")
 
-  # Query bar state once for existing items
-  local bar_items=$(sketchybar --query bar 2>/dev/null | jq -r '.items[]')
+  local target_windows=()
+  while IFS= read -r wid; do
+    [[ -n "$wid" ]] && target_windows+=("$wid")
+  done < <(aerospace_get_windows_in_workspace "$all_windows" "$target_sid")
+
+  # Use cached bar state
+  local bar_items=$(_sketchy_cached_bar_items)
 
   # Move all windows from current to a temp workspace (use 99 as temp)
   local temp_ws=99

@@ -3,39 +3,40 @@
 source "$CONFIG_DIR/plugins/helpers/util.sh"
 
 # =============================================================================
-# Bar State Cache - fetch once per event, pass to functions
+# Bar State Cache
 # =============================================================================
+# Use SKETCHY_BAR_CACHE to avoid repeated sketchybar --query calls.
+# Set at event entry: export SKETCHY_BAR_CACHE=$(sketchy_get_bar_items)
+# Clear after modifications: unset SKETCHY_BAR_CACHE
+# Functions automatically use cache if available.
 
-# Fetch bar items list (call once per event, pass result to functions)
-# Usage: bar_items=$(sketchy_get_bar_items)
+# Fetch bar items list
 sketchy_get_bar_items() {
   sketchybar --query bar 2>/dev/null | jq -r '.items[]'
 }
 
+# Get bar items, using cache if available
+_sketchy_cached_bar_items() {
+  if [[ -n "${SKETCHY_BAR_CACHE:-}" ]]; then
+    echo "$SKETCHY_BAR_CACHE"
+  else
+    sketchy_get_bar_items
+  fi
+}
+
+# Invalidate cache (call after add/remove operations)
+sketchy_invalidate_cache() {
+  unset SKETCHY_BAR_CACHE
+}
+
 # add item only if not exists, but always apply --set properties
-# Usage: sketchy_add_item "item_name" "location" [--set ...] [bar_items]
-# The last argument can be cached bar_items to avoid re-querying
 sketchy_add_item() {
   local item="$1"
+  local items=$(_sketchy_cached_bar_items)
   item=${item// /_}
-
-  # Check if last argument looks like bar items (contains newlines or is multi-word)
-  local args=("$@")
-  local last_idx=$((${#args[@]} - 1))
-  local last_arg="${args[$last_idx]}"
-  local items
-
-  # Heuristic: if last arg contains a sketchybar item pattern, it's cached bar_items
-  if [[ "$last_arg" =~ ^[a-zA-Z_] ]] && [[ "$last_arg" == *$'\n'* || "$last_arg" == *"workspace."* || "$last_arg" == *"window."* ]]; then
-    items="$last_arg"
-    # Remove last arg from the array for sketchybar command
-    unset 'args[$last_idx]'
-  else
-    items=$(sketchy_get_bar_items)
-  fi
-
   if ! item_in_array "$item" "$items"; then
     sketchybar --add item "$@" 2>/dev/null
+    sketchy_invalidate_cache
   else
     # Item exists, extract and apply --set properties if present
     local set_flag=false
@@ -63,22 +64,25 @@ sketchy_remove_item() {
     return 0
   fi
 
-  local items=$(sketchybar --query bar 2>/dev/null | jq -r '.items[]')
+  local items=$(_sketchy_cached_bar_items)
   if item_in_array "$item" "$items"; then
     sketchybar --remove "$@" 2>/dev/null
+    sketchy_invalidate_cache
   fi
 }
 
 sketchy_get_window_items_in_spaceid() {
   local sid=$1
-  echo "$(sketchybar --query bar | jq -r --arg sid "$sid" '.items[] | select(test("^window\\." + $sid + "\\."))')"
+  local items=$(_sketchy_cached_bar_items)
+  echo "$items" | grep "^window\\.${sid}\\." || true
 }
 
 # returns item ex: window.3.66286.WezTerm
 sketchy_get_item_by_window_id() {
   # ex: 46356
   local window_id="$1"
-  echo "$(sketchybar --query bar | jq -r --arg window_id "$window_id" '.items[] | select(test("^window\\.\\d+\\." + $window_id + "\\..+$"))')"
+  local items=$(_sketchy_cached_bar_items)
+  echo "$items" | grep "^window\\.[0-9]*\\.${window_id}\\." || true
 }
 
 sketchy_get_space_by_item() {
@@ -133,11 +137,15 @@ sketchy_highlight_window_id() {
   # Get current focused workspace
   local current_workspace=$(aerospace list-workspaces --focused)
 
-  # Get all window items from sketchybar
-  local all_window_items
-  mapfile -t all_window_items < <(sketchybar --query bar 2>/dev/null | jq -r '.items[]? // empty | select(test("^window\\."))' | sort)
+  # Get all window items from cache
+  local items=$(_sketchy_cached_bar_items)
+  local all_window_items=()
+  while IFS= read -r item; do
+    [[ -n "$item" ]] && all_window_items+=("$item")
+  done < <(echo "$items" | grep "^window\\." | sort)
 
-  # Set each window to correct color based on whether it's focused AND on current workspace
+  # Build batch command for all updates
+  local batch_args=()
   for item in "${all_window_items[@]}"; do
     # Extract window_id and workspace from item name: window.SID.WINDOW_ID.APPNAME
     local item_workspace=$(echo "$item" | awk -F'.' '{print $2}')
@@ -145,11 +153,16 @@ sketchy_highlight_window_id() {
 
     # Only highlight if this is the focused window AND it's on the current workspace
     if [[ "$item_window_id" == "$focused_window_id" ]] && [[ "$item_workspace" == "$current_workspace" ]]; then
-      sketchybar --set "$item" icon.color="$focused_color"
+      batch_args+=(--set "$item" icon.color="$focused_color")
     else
-      sketchybar --set "$item" icon.color="$unfocused_color"
+      batch_args+=(--set "$item" icon.color="$unfocused_color")
     fi
   done
+
+  # Execute all updates in single batch call
+  if [[ ${#batch_args[@]} -gt 0 ]]; then
+    sketchybar "${batch_args[@]}"
+  fi
 
   # Update cache
   echo "$focused_window_id" >"$CACHE_DIR/highlighted.window_id"

@@ -27,3 +27,29 @@ export ITEM_HEIGHT=24
 export BACKGROUND_HEIGHT=30
 export APP_WIDTH=16
 export WORKSPACE_DIVIDER_WIDTH=4
+
+# =============================================================================
+# Centralized Style Properties - avoid duplication across scripts
+# =============================================================================
+
+# Workspace divider style (used in items/aerospace_spaces.sh and sync_workspaces)
+# Usage: sketchybar --set "$item" "${WORKSPACE_DIVIDER_PROPS[@]}"
+get_workspace_divider_props() {
+  echo "background.padding_left=0"
+  echo "background.padding_right=0"
+  echo "background.height=$BACKGROUND_HEIGHT"
+  echo "background.color=$BAR"
+  echo "background.corner_radius=0"
+  echo "width=$WORKSPACE_DIVIDER_WIDTH"
+  echo "icon.drawing=off"
+  echo "label.drawing=off"
+  echo "y_offset=0"
+}
+
+# Window item style (used in aerospace_new_window_id, aerospace_add_apps_in_spaceid, etc)
+# Usage: sketchybar --set "$item" "${WINDOW_ITEM_PROPS[@]}"
+get_window_item_props() {
+  echo "background.corner_radius=0"
+  echo "icon.font=$ICON_FONT:$ICON_FONTSIZE"
+  echo "icon.width=$APP_WIDTH"
+}

@@ -52,17 +52,11 @@ props=(
 # Fetch all windows ONCE for initialization
 all_windows=$(aerospace_all_windows)
 
-props=(
-  background.padding_left=0
-  background.padding_right=0
-  background.height=$BACKGROUND_HEIGHT
-  background.color=$BAR
-  background.corner_radius=0
-  width=$WORKSPACE_DIVIDER_WIDTH
-  icon.drawing=off
-  label.drawing=off
-  y_offset=0
-)
+# Use centralized props from env.sh
+props=()
+while IFS= read -r line; do
+  [[ -n "$line" ]] && props+=("$line")
+done < <(get_workspace_divider_props)
 
 # Get workspaces from the cached JSON and iterate properly
 while IFS= read -r sid; do
