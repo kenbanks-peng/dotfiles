@@ -33,7 +33,6 @@ sketchy_invalidate_cache() {
 sketchy_add_item() {
   local item="$1"
   local items=$(_sketchy_cached_bar_items)
-  item=${item// /_}
   if ! item_in_array "$item" "$items"; then
     sketchybar --add item "$@" 2>/dev/null
     sketchy_invalidate_cache
