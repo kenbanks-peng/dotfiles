@@ -445,18 +445,11 @@ aerospace_new_window_id() {
 
 aerospace_add_apps_in_spaceid() {
   local sid="$1"
-  local all_windows="$2"
-
-  # Use passed all_windows or fetch if not provided
-  if [[ -z "$all_windows" ]]; then
-    all_windows=$(aerospace_all_windows)
-  fi
+  local all_windows=$(aerospace_ensure_all_windows "$2")
 
   # Use centralized props from env.sh, with y_offset override
   local props=()
-  while IFS= read -r line; do
-    [[ -n "$line" ]] && props+=("$line")
-  done < <(get_window_item_props)
+  props_to_array get_window_item_props props
   props+=("y_offset=1")
 
   local prev_item="workspace.start.$sid"
@@ -790,12 +783,10 @@ aerospace_smart_move_window() {
 
   # Update window items: ensure items match aerospace state
 
-  # Get all current window items from cache (build array portably)
+  # Get all current window items from cache
   local bar_items=$(_sketchy_cached_bar_items)
   local all_window_items=()
-  while IFS= read -r wi; do
-    [[ -n "$wi" ]] && all_window_items+=("$wi")
-  done < <(echo "$bar_items" | grep "^window\\." | sort)
+  sketchy_get_window_items_array all_window_items "$bar_items"
 
   # Build map of window_id -> correct_workspace_id from aerospace
   declare -A window_workspace_map
@@ -809,12 +800,8 @@ aerospace_smart_move_window() {
 
   # Check each sketchybar item and fix if needed
   for item in "${all_window_items[@]}"; do
-    # Extract: window.SID.WINDOW_ID.APPNAME (appname may contain spaces)
-    # Split on first 3 dots to get SID, WINDOW_ID, and everything else as APPNAME
-    local item_sid=$(echo "$item" | awk -F'.' '{print $2}')
-    local item_window_id=$(echo "$item" | awk -F'.' '{print $3}')
-    # Get everything after the 3rd dot (handles spaces in appname)
-    local item_appname=$(echo "$item" | sed 's/^[^.]*\.[^.]*\.[^.]*\.//')
+    local item_sid item_window_id item_appname
+    parse_window_item "$item" item_sid item_window_id item_appname
 
     # Get correct workspace from aerospace
     local correct_sid="${window_workspace_map[$item_window_id]}"
@@ -824,7 +811,6 @@ aerospace_smart_move_window() {
       sketchy_remove_item "$item"
     elif [[ "$item_sid" != "$correct_sid" ]]; then
       # Item has wrong workspace ID, recreate it
-      local icon="$($CONFIG_DIR/icons_apps.sh "$item_appname" 2>/dev/null || echo "")"
       local item_color=$(sketchy_get_space_color foreground false)
 
       # Remove old item
@@ -832,18 +818,8 @@ aerospace_smart_move_window() {
 
       # Create new item with correct workspace ID
       local correct_item="window.$correct_sid.$item_window_id.$item_appname"
-      local props=()
-      while IFS= read -r line; do
-        [[ -n "$line" ]] && props+=("$line")
-      done < <(get_window_item_props)
-
-      sketchy_add_item "$correct_item" left \
-        --set "$correct_item" "${props[@]}" \
-        icon="$icon" icon.color="$item_color" \
-        click_script="aerospace focus --window-id $item_window_id"
-
-      # Position it
-      sketchybar --move "$correct_item" before "workspace.end.$correct_sid"
+      aerospace_create_window_item "$correct_item" "$item_window_id" "$item_appname" "$item_color" \
+        --move-before "workspace.end.$correct_sid"
     fi
   done
 
@@ -939,19 +915,16 @@ aerospace_swap_workspace() {
   # Build batched sketchybar commands for all updates
   local batch_args=()
 
-  # Get all window items (build array portably)
+  # Get all window items
   local all_window_items=()
-  while IFS= read -r wi; do
-    [[ -n "$wi" ]] && all_window_items+=("$wi")
-  done < <(echo "$bar_items" | grep "^window\." | sort)
+  sketchy_get_window_items_array all_window_items "$bar_items"
 
   # Collect items to remove and items to add
   declare -A items_to_update  # old_item -> new_item
 
   for item in "${all_window_items[@]}"; do
-    local item_sid=$(echo "$item" | awk -F'.' '{print $2}')
-    local item_window_id=$(echo "$item" | awk -F'.' '{print $3}')
-    local item_appname=$(echo "$item" | sed 's/^[^.]*\.[^.]*\.[^.]*\.//')
+    local item_sid item_window_id item_appname
+    parse_window_item "$item" item_sid item_window_id item_appname
 
     local new_sid=""
     # Check if this window was in current workspace (now should be in target)
