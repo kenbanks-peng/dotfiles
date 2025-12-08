@@ -82,6 +82,18 @@ sketchy_get_window_items_in_spaceid() {
   sketchy_filter_window_items "$items" "${sid}\\."
 }
 
+# Get all window items as an array (sorted)
+# Usage: sketchy_get_window_items_array arr
+#        for item in "${arr[@]}"; do ...; done
+sketchy_get_window_items_array() {
+  local -n _arr="$1"
+  local bar_items="${2:-$(_sketchy_cached_bar_items)}"
+
+  while IFS= read -r item; do
+    [[ -n "$item" ]] && _arr+=("$item")
+  done < <(echo "$bar_items" | grep "^window\\." | sort)
+}
+
 # returns item ex: window.3.66286.WezTerm
 sketchy_get_item_by_window_id() {
   # ex: 46356

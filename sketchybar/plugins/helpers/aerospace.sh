@@ -15,6 +15,98 @@ aerospace_all_windows() {
   aerospace list-windows --all --json --format "%{window-id}%{app-name}%{workspace}%{workspace-is-focused}"
 }
 
+# Ensure all_windows is populated - returns passed value or fetches fresh
+# Usage: all_windows=$(aerospace_ensure_all_windows "$all_windows")
+aerospace_ensure_all_windows() {
+  local all_windows="$1"
+  if [[ -n "$all_windows" ]]; then
+    echo "$all_windows"
+  else
+    aerospace_all_windows
+  fi
+}
+
+# Read props from a getter function into an array
+# Usage: local props=($(props_to_array get_window_item_props))
+# Or for explicit control:
+#   local props=()
+#   props_to_array get_window_item_props props
+props_to_array() {
+  local getter="$1"
+  local -n arr="${2:-_props_tmp}"  # Use nameref if array name provided
+
+  if [[ -z "$2" ]]; then
+    # No array provided, just output for $() capture
+    $getter
+  else
+    # Array name provided, populate it directly
+    while IFS= read -r line; do
+      [[ -n "$line" ]] && arr+=("$line")
+    done < <($getter)
+  fi
+}
+
+# Parse window item name into components
+# Usage: parse_window_item "$item" sid wid appname
+# Sets variables: sid, wid, appname
+parse_window_item() {
+  local item="$1"
+  local -n _sid="$2"
+  local -n _wid="$3"
+  local -n _appname="$4"
+
+  _sid=$(echo "$item" | awk -F'.' '{print $2}')
+  _wid=$(echo "$item" | awk -F'.' '{print $3}')
+  _appname=$(echo "$item" | sed 's/^[^.]*\.[^.]*\.[^.]*\.//')
+}
+
+# Create or update a window item in sketchybar
+# Usage: aerospace_create_window_item "$item" "$window_id" "$appname" "$icon_color" [--move-after "$ref_item"]
+aerospace_create_window_item() {
+  local item="$1"
+  local window_id="$2"
+  local appname="$3"
+  local icon_color="$4"
+  local move_ref=""
+  local move_pos=""
+
+  # Parse optional --move-after or --move-before
+  shift 4
+  while [[ $# -gt 0 ]]; do
+    case "$1" in
+      --move-after)
+        move_pos="after"
+        move_ref="$2"
+        shift 2
+        ;;
+      --move-before)
+        move_pos="before"
+        move_ref="$2"
+        shift 2
+        ;;
+      *)
+        shift
+        ;;
+    esac
+  done
+
+  local icon="$($CONFIG_DIR/icons_apps.sh "$appname" 2>/dev/null || echo "")"
+
+  # Get props
+  local props=()
+  props_to_array get_window_item_props props
+
+  sketchy_add_item "$item" left \
+    --set "$item" "${props[@]}" \
+    icon="$icon" icon.color="$icon_color" \
+    click_script="aerospace focus --window-id $window_id"
+
+  # Move if requested
+  if [[ -n "$move_ref" && -n "$move_pos" ]]; then
+    sketchybar --move "$item" "$move_pos" "$move_ref"
+  fi
+}
+
 # Returns JSON array of all workspaces
 # Usage: workspaces_json=$(aerospace_list_workspaces_json)
 # Output: [{"workspace": "1"}, {"workspace": "2"}, ...]
@@ -156,12 +248,7 @@ aerospace_get_window_ids_for_app() {
 
 remove_unmatched_items() {
   local sid="$1"
-  local all_windows="$2"
-
-  # Use passed all_windows or fetch if not provided
-  if [[ -z "$all_windows" ]]; then
-    all_windows=$(aerospace_all_windows)
-  fi
+  local all_windows=$(aerospace_ensure_all_windows "$2")
 
   # Convert newlines to spaces for unmatched_items comparison
   aerospace_window_ids=$(aerospace_get_windows_in_workspace "$all_windows" "$sid" | tr '\n' ' ')
@@ -176,12 +263,7 @@ remove_unmatched_items() {
 aerospace_workspace_change() {
   local sid="$1"
   local prev_sid="$2"
-  local all_windows="$3"
-
-  # Use passed all_windows or fetch if not provided
-  if [[ -z "$all_windows" ]]; then
-    all_windows=$(aerospace_all_windows)
-  fi
+  local all_windows=$(aerospace_ensure_all_windows "$3")
 
   # move sticky apps to current workspace
   apptype_show_sticky_apps "$sid" "$prev_sid" "$all_windows"
@@ -201,12 +283,7 @@ aerospace_workspace_change() {
 
 aerospace_focused_window_change() {
   local window_id="$1"
-  local all_windows="$2"
-
-  # Use passed all_windows or fetch if not provided
-  if [[ -z "$all_windows" ]]; then
-    all_windows=$(aerospace_all_windows)
-  fi
+  local all_windows=$(aerospace_ensure_all_windows "$2")
 
   local sid=$(aerospace_get_focused_workspace "$all_windows")
 
@@ -220,12 +297,7 @@ aerospace_focused_window_change() {
 
 # Sync workspaces: add workspace dividers for new workspaces, remove for empty ones
 sync_workspaces() {
-  local all_windows="$1"
-
-  # Use passed all_windows or fetch if not provided
-  if [[ -z "$all_windows" ]]; then
-    all_windows=$(aerospace_all_windows)
-  fi
+  local all_windows=$(aerospace_ensure_all_windows "$1")
 
   local bar_items=$(_sketchy_cached_bar_items)
 
@@ -238,9 +310,7 @@ sync_workspaces() {
 
     # Use centralized props from env.sh
     local props=()
-    while IFS= read -r line; do
-      [[ -n "$line" ]] && props+=("$line")
-    done < <(get_workspace_divider_props)
+    props_to_array get_workspace_divider_props props
 
     # Find the correct position to insert this workspace
     local next_sid=$(aerospace_next_existing_workspace "$sid" "$all_windows" "$bar_items")
@@ -308,12 +378,7 @@ aerospace_remove_window_id() {
 
 aerospace_new_window_id() {
   local window_id="$1"
-  local all_windows="$2"
-
-  # Use passed all_windows or fetch if not provided
-  if [[ -z "$all_windows" ]]; then
-    all_windows=$(aerospace_all_windows)
-  fi
+  local all_windows=$(aerospace_ensure_all_windows "$2")
 
   local sid=$(aerospace_get_focused_workspace "$all_windows")
 
@@ -331,18 +396,9 @@ aerospace_new_window_id() {
   fi
 
   local item="window.$sid.$window_id.$appname"
-
-  local icon="$($CONFIG_DIR/icons_apps.sh "$appname")"
   local icon_color="$(sketchy_get_space_color foreground false)"
 
-  # Use centralized props from env.sh
-  local props=()
-  while IFS= read -r line; do
-    [[ -n "$line" ]] && props+=("$line")
-  done < <(get_window_item_props)
-
   # Get aerospace's window ordering for this workspace from all_windows JSON
-  # Build array portably using while-read
   local aerospace_window_order=()
   while IFS= read -r wid; do
     [[ -n "$wid" ]] && aerospace_window_order+=("$wid")
@@ -359,30 +415,27 @@ aerospace_new_window_id() {
     index=$((index + 1))
   done
 
-  # Add the item
-  sketchy_add_item "$item" left \
-    --set "$item" "${props[@]}" \
-    icon="$icon" icon.color="$icon_color" \
-    click_script="aerospace focus --window-id $window_id"
-
-  # Position it correctly based on aerospace's ordering
+  # Determine position reference for item creation
+  local move_ref move_pos
   if [[ $position -eq 0 ]]; then
-    # First window, move right after workspace.start
-    sketchybar --move "$item" after "workspace.start.$sid"
+    move_ref="workspace.start.$sid"
+    move_pos="--move-after"
   else
-    # Find the window that should be before this one
     local prev_index=$((position - 1))
     local prev_window_id="${aerospace_window_order[$prev_index]}"
     local prev_item=$(sketchy_get_item_by_window_id "$prev_window_id")
 
     if [[ -n "$prev_item" ]]; then
-      # Insert after the previous window
-      sketchybar --move "$item" after "$prev_item"
+      move_ref="$prev_item"
+      move_pos="--move-after"
     else
-      # Fallback: insert before workspace.end
-      sketchybar --move "$item" before "workspace.end.$sid"
+      move_ref="workspace.end.$sid"
+      move_pos="--move-before"
     fi
   fi
+
+  # Create the item with position
+  aerospace_create_window_item "$item" "$window_id" "$appname" "$icon_color" $move_pos "$move_ref"
 
   sketchy_highlight_window_id "$window_id"
 
