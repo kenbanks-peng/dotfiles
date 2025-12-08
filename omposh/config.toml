@@ -101,7 +101,6 @@ trailing_diamond = ''
 background = 'p:language'
 foreground = 'p:language-foreground'
 template = '  {{ .Full }} '
-properties = { display_mode = 'context' }
 
 [[blocks.segments]]
 type = 'go'
@@ -111,7 +110,6 @@ trailing_diamond = ''
 background = 'p:language'
 foreground = 'p:language-foreground'
 template = ' go {{ .Full }} '
-properties = { display_mode = 'context' }
 
 [[blocks.segments]]
 type = 'lua'
@@ -121,7 +119,6 @@ trailing_diamond = ''
 background = 'p:language'
 foreground = 'p:language-foreground'
 template = '  {{ .Full }} '
-properties = { display_mode = 'context' }
 
 [[blocks.segments]]
 type = 'zig'
@@ -131,7 +128,6 @@ trailing_diamond = ''
 background = 'p:language'
 foreground = 'p:language-foreground'
 template = '  {{ .Full }} '
-properties = { display_mode = 'context' }
 
 [[blocks.segments]]
 type = 'rust'
@@ -141,7 +137,6 @@ trailing_diamond = ''
 background = 'p:language'
 foreground = 'p:language-foreground'
 template = '  {{ .Full }} '
-properties = { display_mode = 'context' }
 
 # javascript: deno, svelte, react, node
 [[blocks.segments]]
