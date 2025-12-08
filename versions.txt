@@ -446,7 +446,7 @@ npm:@opentui/react                                           0.1.57             
 npm:github-markdown-css                                      5.8.1              ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                                                5.2.5              ~/.config/mise/mise.toml  latest
 npm:nuekit                                                   2.0.0-beta.2       ~/.config/mise/mise.toml  latest
-npm:vite                                                     7.2.6              ~/.config/mise/mise.toml  latest
+npm:vite                                                     7.2.7              ~/.config/mise/mise.toml  latest
 pipx:SuperClaude                                             4.1.9              ~/.config/mise/mise.toml  latest
 pipx:meson                                                   1.9.2              ~/.config/mise/mise.toml  latest
 pipx:ninja                                                   1.13.0             ~/.config/mise/mise.toml  latest
