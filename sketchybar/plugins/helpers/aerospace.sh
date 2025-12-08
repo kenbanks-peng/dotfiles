@@ -228,8 +228,10 @@ rebuild_workspaces() {
       sketchybar --move "$end" after "$start"
 
       # Move all window items for this workspace to correct position
-      local window_items
-      mapfile -t window_items < <(sketchybar --query bar | jq -r --arg sid "$sid" '.items[] | select(test("^window\\." + $sid + "\\."))' | sort)
+      local window_items=()
+      while IFS= read -r wi; do
+        [[ -n "$wi" ]] && window_items+=("$wi")
+      done < <(sketchybar --query bar | jq -r --arg sid "$sid" '.items[] | select(test("^window\\." + $sid + "\\."))' | sort)
       local prev_item="$start"
       for item in "${window_items[@]}"; do
         sketchybar --move "$item" after "$prev_item"
@@ -253,8 +255,10 @@ rebuild_workspaces() {
 
   # Step 3: Update window items to match aerospace's current state
   # First, get ALL window items across all workspaces
-  local all_sketchy_items
-  mapfile -t all_sketchy_items < <(sketchybar --query bar | jq -r '.items[] | select(test("^window\\."))' | sort)
+  local all_sketchy_items=()
+  while IFS= read -r si; do
+    [[ -n "$si" ]] && all_sketchy_items+=("$si")
+  done < <(sketchybar --query bar | jq -r '.items[] | select(test("^window\\."))' | sort)
 
   for sid in "${occupied_workspaces[@]}"; do
     # Add/update windows and ensure correct order
@@ -329,8 +333,10 @@ rebuild_workspaces() {
 
   # Step 3.5: Remove any orphaned window items (windows that no longer exist in any workspace)
   # Extract all window IDs from all_windows JSON
-  local all_aerospace_window_ids
-  mapfile -t all_aerospace_window_ids < <(echo "$all_windows" | jq -r '.[].\"window-id\"')
+  local all_aerospace_window_ids=()
+  while IFS= read -r wid; do
+    [[ -n "$wid" ]] && all_aerospace_window_ids+=("$wid")
+  done < <(echo "$all_windows" | jq -r '.[]."window-id"')
 
   for item in "${all_sketchy_items[@]}"; do
     local item_window_id=$(echo "$item" | awk -F'.' '{print $3}')
@@ -358,11 +364,16 @@ sync_workspaces() {
     all_windows=$(aerospace_all_windows)
   fi
 
-  # Get workspaces from JSON
-  local occupied_workspaces
-  mapfile -t occupied_workspaces < <(aerospace_get_workspaces "$all_windows")
+  # Get workspaces from JSON (build array portably)
+  local occupied_workspaces=()
+  while IFS= read -r ws; do
+    [[ -n "$ws" ]] && occupied_workspaces+=("$ws")
+  done < <(aerospace_get_workspaces "$all_windows")
 
-  local sketchy_workspaces=($(sketchybar --query bar | jq -r '.items[] | select(test("^workspace\\.start\\.\\d+$"))' | sed 's/workspace\.start\.//'))
+  local sketchy_workspaces=()
+  while IFS= read -r sw; do
+    [[ -n "$sw" ]] && sketchy_workspaces+=("$sw")
+  done < <(sketchybar --query bar | jq -r '.items[] | select(test("^workspace\\.start\\.\\d+$"))' | sed 's/workspace\.start\.//')
 
   # Add missing workspaces
   for sid in "${occupied_workspaces[@]}"; do
@@ -645,10 +656,16 @@ aerospace_smart_move_window() {
 
   # Build current state: array of workspaces, each with array of window_ids
   declare -A current_state  # workspace_id -> "window_id1 window_id2 ..."
-  mapfile -t workspace_ids < <(aerospace list-workspaces --all | sort -n)
+  local workspace_ids=()
+  while IFS= read -r ws; do
+    [[ -n "$ws" ]] && workspace_ids+=("$ws")
+  done < <(aerospace list-workspaces --all | sort -n)
 
   for sid in "${workspace_ids[@]}"; do
-    mapfile -t windows < <(aerospace list-windows --workspace "$sid" --format '%{window-id}')
+    local windows=()
+    while IFS= read -r w; do
+      [[ -n "$w" ]] && windows+=("$w")
+    done < <(aerospace list-windows --workspace "$sid" --format '%{window-id}')
     current_state[$sid]="${windows[*]}"
   done
 
@@ -886,8 +903,11 @@ aerospace_smart_move_window() {
 
   # Update window items: ensure items match aerospace state
 
-  # Get all current window items from sketchybar (use mapfile to handle spaces in appnames)
-  mapfile -t all_window_items < <(sketchybar --query bar 2>/dev/null | jq -r '.items[]? // empty | select(test("^window\\."))' | sort)
+  # Get all current window items from sketchybar (build array portably)
+  local all_window_items=()
+  while IFS= read -r wi; do
+    [[ -n "$wi" ]] && all_window_items+=("$wi")
+  done < <(sketchybar --query bar 2>/dev/null | jq -r '.items[]? // empty | select(test("^window\\."))' | sort)
 
   # Build map of window_id -> correct_workspace_id from aerospace
   declare -A window_workspace_map
@@ -952,8 +972,11 @@ aerospace_workspace_next() {
   # Get current workspace
   local current_sid=$(aerospace list-workspaces --focused)
 
-  # Get all workspaces sorted
-  mapfile -t workspace_ids < <(aerospace list-workspaces --all | sort -n)
+  # Get all workspaces sorted (build array portably)
+  local workspace_ids=()
+  while IFS= read -r ws; do
+    [[ -n "$ws" ]] && workspace_ids+=("$ws")
+  done < <(aerospace list-workspaces --all | sort -n)
 
   # Find current workspace index
   local current_index=-1
@@ -989,8 +1012,11 @@ aerospace_swap_workspace() {
   local current_sid=$(aerospace list-workspaces --focused)
   local focused_window_id=$(aerospace list-windows --focused --format '%{window-id}')
 
-  # Get all workspaces sorted
-  mapfile -t workspace_ids < <(aerospace list-workspaces --all | sort -n)
+  # Get all workspaces sorted (build array portably)
+  local workspace_ids=()
+  while IFS= read -r ws; do
+    [[ -n "$ws" ]] && workspace_ids+=("$ws")
+  done < <(aerospace list-workspaces --all | sort -n)
 
   # Find current workspace index
   local current_index=-1
@@ -1059,8 +1085,11 @@ aerospace_swap_workspace() {
   # Build batched sketchybar commands for all updates
   local batch_args=()
 
-  # Get all window items
-  mapfile -t all_window_items < <(echo "$bar_items" | grep "^window\." | sort)
+  # Get all window items (build array portably)
+  local all_window_items=()
+  while IFS= read -r wi; do
+    [[ -n "$wi" ]] && all_window_items+=("$wi")
+  done < <(echo "$bar_items" | grep "^window\." | sort)
 
   # Collect items to remove and items to add
   declare -A items_to_update  # old_item -> new_item
