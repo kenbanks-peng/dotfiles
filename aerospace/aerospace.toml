@@ -224,9 +224,5 @@ alt-t = 'exec-and-forget open /Applications/Ghostty.app'            # Terminal
 # run = ['layout floating', 'move-node-to-workspace S']
 
 # Notify Sketchybar when new windows are detected
-[[on-window-detected]]
-run = ['exec-and-forget sketchybar --trigger aerospace_workspace_change']
-
-[[on-window-detected]]
-if.app-id = 'com.leomehlig.today' # Structured App
-run = ['layout floating']
+# [[on-window-detected]]
+# run = ['exec-and-forget sketchybar --trigger aerospace_workspace_change']
