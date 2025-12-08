@@ -5,10 +5,10 @@ source "$CONFIG_DIR/plugins/helpers/util.sh"
 # add item only if not exists, but always apply --set properties
 sketchy_add_item() {
   local item="$1"
-  local items=$(sketchybar --query bar | jq -r '.items[]')
+  local items=$(sketchybar --query bar 2>/dev/null | jq -r '.items[]')
   item=${item// /_}
   if ! item_in_array "$item" "$items"; then
-    sketchybar --add item "$@"
+    sketchybar --add item "$@" 2>/dev/null
   else
     # Item exists, extract and apply --set properties if present
     local set_flag=false
@@ -22,7 +22,7 @@ sketchy_add_item() {
       fi
     done
     if [ "${#set_args[@]}" -gt 0 ]; then
-      sketchybar "${set_args[@]}"
+      sketchybar "${set_args[@]}" 2>/dev/null
     fi
   fi
 }
@@ -30,9 +30,15 @@ sketchy_add_item() {
 # remove item only if exists
 sketchy_remove_item() {
   local item="$1"
-  local items=$(sketchybar --query bar | jq -r '.items[]')
+
+  # Handle empty item name gracefully
+  if [[ -z "$item" ]]; then
+    return 0
+  fi
+
+  local items=$(sketchybar --query bar 2>/dev/null | jq -r '.items[]')
   if item_in_array "$item" "$items"; then
-    sketchybar --remove "$@"
+    sketchybar --remove "$@" 2>/dev/null
   fi
 }
 

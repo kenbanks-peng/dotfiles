@@ -4,6 +4,35 @@ source "$CONFIG_DIR/env.sh"
 source "$PLUGIN_DIR/helpers/aerospace.sh"
 source "$PLUGIN_DIR/helpers/sketchy.sh"
 
+# Event deduplication: prevent concurrent event processing
+LOCK_FILE="$CACHE_DIR/aerospace_event.lock"
+LOCK_TIMEOUT=5
+
+acquire_lock() {
+  local timeout="$LOCK_TIMEOUT"
+  while [[ $timeout -gt 0 ]]; do
+    if mkdir "$LOCK_FILE" 2>/dev/null; then
+      return 0
+    fi
+    sleep 0.1
+    timeout=$((timeout - 1))
+  done
+  return 1
+}
+
+release_lock() {
+  rmdir "$LOCK_FILE" 2>/dev/null
+}
+
+# Ensure lock is released on exit
+trap release_lock EXIT
+
+# Acquire lock before processing any event
+if ! acquire_lock; then
+  # Another instance is running, skip this event
+  exit 0
+fi
+
 if [ "$SENDER" = "forced" ]; then
   # Fetch all data ONCE
   all_windows=$(aerospace_all_windows)
