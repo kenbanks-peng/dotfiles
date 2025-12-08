@@ -81,20 +81,20 @@ elif [ "$SENDER" = "aerospace_workspace_change" ]; then
     aerospace_focused_window_change "$focused_window_id" "$all_windows"
   fi
 
-elif [ "$SENDER" = "yabai_window_created" ] || [ "$SENDER" = "yabai_window_deminimized" ]; then
-  # Yabai events as hints - refresh aerospace state
-  all_windows=$(aerospace_all_windows)
-  window_id="$ID"
+# elif [ "$SENDER" = "yabai_window_created" ] || [ "$SENDER" = "yabai_window_deminimized" ]; then
+#   # Yabai events as hints - refresh aerospace state
+#   all_windows=$(aerospace_all_windows)
+#   window_id="$ID"
 
-  # Validate window exists in aerospace
-  appname=$(aerospace_get_appname_by_windowid "$all_windows" "$window_id")
-  if [[ -n "$appname" ]] && apptype_allow_app "$appname"; then
-    aerospace_new_window_id "$window_id" "$all_windows"
-  fi
+#   # Validate window exists in aerospace
+#   appname=$(aerospace_get_appname_by_windowid "$all_windows" "$window_id")
+#   if [[ -n "$appname" ]] && apptype_allow_app "$appname"; then
+#     aerospace_new_window_id "$window_id" "$all_windows"
+#   fi
 
-elif [ "$SENDER" = "yabai_window_destroyed" ] || [ "$SENDER" = "yabai_window_minimized" ]; then
-  window_id="$ID"
-  # Get app name before removal for filtering check
-  # Note: window may already be gone from aerospace, so just remove the sketchybar item
-  aerospace_remove_window_id "$window_id"
+# elif [ "$SENDER" = "yabai_window_destroyed" ] || [ "$SENDER" = "yabai_window_minimized" ]; then
+#   window_id="$ID"
+#   # Get app name before removal for filtering check
+#   # Note: window may already be gone from aerospace, so just remove the sketchybar item
+#   aerospace_remove_window_id "$window_id"
 fi
