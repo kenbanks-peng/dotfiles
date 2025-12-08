@@ -2,11 +2,38 @@
 
 source "$CONFIG_DIR/plugins/helpers/util.sh"
 
+# =============================================================================
+# Bar State Cache - fetch once per event, pass to functions
+# =============================================================================
+
+# Fetch bar items list (call once per event, pass result to functions)
+# Usage: bar_items=$(sketchy_get_bar_items)
+sketchy_get_bar_items() {
+  sketchybar --query bar 2>/dev/null | jq -r '.items[]'
+}
+
 # add item only if not exists, but always apply --set properties
+# Usage: sketchy_add_item "item_name" "location" [--set ...] [bar_items]
+# The last argument can be cached bar_items to avoid re-querying
 sketchy_add_item() {
   local item="$1"
-  local items=$(sketchybar --query bar 2>/dev/null | jq -r '.items[]')
   item=${item// /_}
+
+  # Check if last argument looks like bar items (contains newlines or is multi-word)
+  local args=("$@")
+  local last_idx=$((${#args[@]} - 1))
+  local last_arg="${args[$last_idx]}"
+  local items
+
+  # Heuristic: if last arg contains a sketchybar item pattern, it's cached bar_items
+  if [[ "$last_arg" =~ ^[a-zA-Z_] ]] && [[ "$last_arg" == *$'\n'* || "$last_arg" == *"workspace."* || "$last_arg" == *"window."* ]]; then
+    items="$last_arg"
+    # Remove last arg from the array for sketchybar command
+    unset 'args[$last_idx]'
+  else
+    items=$(sketchy_get_bar_items)
+  fi
+
   if ! item_in_array "$item" "$items"; then
     sketchybar --add item "$@" 2>/dev/null
   else
