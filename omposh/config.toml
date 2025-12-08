@@ -3,50 +3,31 @@ version = 3
 final_space = true
 
 [palette]
-  # Base colors
-  # red = "#a90000"    # oklch(45% 0.200 30)
-  # gold = "#a17a00"   # oklch(60% 0.200 90) - lighter
-  # green = "#006b1d"  # oklch(45% 0.200 150)
-  # teal = "#005b95"   # oklch(45% 0.200 240)
-  # blue = "#2f40c2"   # oklch(45% 0.200 270)
-  # purple = "#6928b0" # oklch(45% 0.200 300)
-  # pink = "#8c0888"   # oklch(45% 0.200 330)
-  # orange = "#f55c1b" # fallback
-  # base = "#1e1e2e"
-  # Foreground colors
-  # on_red = "#f4e4e5"
-  # on_gold = "#ede9e5"
-  # on_green = "#e5ece6"
-  # on_teal = "#e5eaf0"
-  # on_blue = "#e5e6f2"
-  # on_purple = "#e8e3ee"
-  # on_pink = "#ebe2eb"
-
-  shell = "#005b95"
-  shell-foreground = "#e5eaf0"
-  root = "#a90000"
-  root-foreground = "#f4e4e5"
-  jobs = "#006b1d"
-  jobs-foreground = "#e5ece6"
-  directory = "#2f40c2"
-  directory-foreground = "#e5e6f2"
-  language = "#005b95"
-  language-foreground = "#e5eaf0"
-  git = "#006b1d"
-  git-foreground = "#e5ece6"
-  git-modified = "#a17a00"
-  git-diverged = "#8c0888"
-  git-ahead = "#8c0888"
-  git-behind = "#8c0888"
-  status = "#005b95"
-  status-foreground = "#e5eaf0"
-  status-error = "#a90000"
-  exectime-foreground = "#e5eaf0"
-  error = "#a90000"
-  error-foreground = "#f4e4e5"
-  prompt = "#f55c1b"
-  secondary = "#a90000"
-  secondary-accent = "#a17a00"
+shell = "#005b95"
+shell-foreground = "#e5eaf0"
+root = "#a90000"
+root-foreground = "#f4e4e5"
+jobs = "#006b1d"
+jobs-foreground = "#e5ece6"
+directory = "#2f40c2"
+directory-foreground = "#e5e6f2"
+language = "#005b95"
+language-foreground = "#e5eaf0"
+git = "#006b1d"
+git-foreground = "#e5ece6"
+git-modified = "#a17a00"
+git-diverged = "#8c0888"
+git-ahead = "#8c0888"
+git-behind = "#8c0888"
+status = "#005b95"
+status-foreground = "#e5eaf0"
+status-error = "#a90000"
+exectime-foreground = "#e5eaf0"
+error = "#a90000"
+error-foreground = "#f4e4e5"
+prompt = "#f55c1b"
+secondary = "#a90000"
+secondary-accent = "#a17a00"
 
 # [transient_prompt]
 #   template = '<p:teal,transparent></><p:on_teal,p:teal>   </><p:teal,transparent></> '
@@ -55,205 +36,205 @@ final_space = true
 #   newline = true
 
 [secondary_prompt]
-  template = '<p:secondary,transparent></><,p:secondary-accent> > </><p:secondary-accent,transparent></> '
-  foreground = 'p:secondary'
-  background = 'transparent'
+template = '<p:secondary,transparent></><,p:secondary-accent> > </><p:secondary-accent,transparent></> '
+foreground = 'p:secondary'
+background = 'transparent'
 
 [[blocks]]
-  type = 'prompt'
-  alignment = 'left'
-  newline = true
+type = 'prompt'
+alignment = 'left'
+newline = true
 
-  ######### SHELL #########
+######### SHELL #########
 
-  [[blocks.segments]]
-    type = 'shell'
-    style = 'diamond'
-    leading_diamond = ''
-    trailing_diamond = ''
-    background = 'p:shell'
-    foreground = 'p:shell-foreground'
-    templates = [
-      '{{ if eq .Name "zsh" }}  {{ end }}',
-      '{{ if eq .Name "bash" }}  {{ end }}',
-      '{{ if eq .Name "fish" }}   {{ end }}',
-      '{{ if eq .Name "nu" }} 󰫻󰬂 {{ end }}',
-    ]
-    templates_logic = 'first_match'
+[[blocks.segments]]
+type = 'shell'
+style = 'diamond'
+leading_diamond = ''
+trailing_diamond = ''
+background = 'p:shell'
+foreground = 'p:shell-foreground'
+templates = [
+  '{{ if eq .Name "zsh" }}  {{ end }}',
+  '{{ if eq .Name "bash" }}  {{ end }}',
+  '{{ if eq .Name "fish" }}   {{ end }}',
+  '{{ if eq .Name "nu" }} 󰫻󰬂 {{ end }}',
+]
+templates_logic = 'first_match'
 
-    [[blocks.segments]]
-    type = 'root'
-    style = 'diamond'
-    leading_diamond = ''
-    trailing_diamond = ''
-    foreground = 'p:root-foreground'
-    background = 'p:root'
-    template = '  '
+[[blocks.segments]]
+type = 'root'
+style = 'diamond'
+leading_diamond = ''
+trailing_diamond = ''
+foreground = 'p:root-foreground'
+background = 'p:root'
+template = '  '
 
-    [[blocks.segments]]
-      type = 'text'
-      style = 'diamond'
-      leading_diamond = ''
-      trailing_diamond = ''
-      background = 'p:jobs'
-      foreground = 'p:jobs-foreground'
-      template = ' {{ .Env.JOBCOUNT }} '
+[[blocks.segments]]
+type = 'text'
+style = 'diamond'
+leading_diamond = ''
+trailing_diamond = ''
+background = 'p:jobs'
+foreground = 'p:jobs-foreground'
+template = ' {{ .Env.JOBCOUNT }} '
 
-  ######### DIRECTORY #########
+######### DIRECTORY #########
 
-  [[blocks.segments]]
-    type = 'text'
-    style = 'diamond'
-    leading_diamond = ''
-    trailing_diamond = ''
-    background = 'p:directory'
-    foreground = 'p:directory-foreground'
-    template = ' {{ .Env.DIRPATH }} '
+[[blocks.segments]]
+type = 'text'
+style = 'diamond'
+leading_diamond = ''
+trailing_diamond = ''
+background = 'p:directory'
+foreground = 'p:directory-foreground'
+template = ' {{ .Env.DIRPATH }} '
 
-  ######### LANGUAGES #########
+######### LANGUAGES #########
 
-  [[blocks.segments]]
-    type = 'python'
-    style = 'diamond'
-    leading_diamond = ''
-    trailing_diamond = ''
-    background = 'p:language'
-    foreground = 'p:language-foreground'
-    template = '  {{ .Full }} '
+[[blocks.segments]]
+type = 'python'
+style = 'diamond'
+leading_diamond = ''
+trailing_diamond = ''
+background = 'p:language'
+foreground = 'p:language-foreground'
+template = '  {{ .Full }} '
 
-    [blocks.segments.properties]
-      display_mode = 'context'
+[blocks.segments.properties]
+display_mode = 'context'
 
-  [[blocks.segments]]
-    type = 'go'
-    style = 'diamond'
-    leading_diamond = ''
-    trailing_diamond = ''
-    background = 'p:language'
-    foreground = 'p:language-foreground'
-    template = ' go {{ .Full }} '
+[[blocks.segments]]
+type = 'go'
+style = 'diamond'
+leading_diamond = ''
+trailing_diamond = ''
+background = 'p:language'
+foreground = 'p:language-foreground'
+template = ' go {{ .Full }} '
 
-    [blocks.segments.properties]
-      display_mode = 'context'
+[blocks.segments.properties]
+display_mode = 'context'
 
-  [[blocks.segments]]
-    type = 'lua'
-    style = 'diamond'
-    leading_diamond = ''
-    trailing_diamond = ''
-    background = 'p:language'
-    foreground = 'p:language-foreground'
-    template = '  {{ .Full }} '
+[[blocks.segments]]
+type = 'lua'
+style = 'diamond'
+leading_diamond = ''
+trailing_diamond = ''
+background = 'p:language'
+foreground = 'p:language-foreground'
+template = '  {{ .Full }} '
 
-    [blocks.segments.properties]
-      display_mode = 'context'
+[blocks.segments.properties]
+display_mode = 'context'
 
-  [[blocks.segments]]
-    type = 'zig'
-    style = 'diamond'
-    leading_diamond = ''
-    trailing_diamond = ''
-    background = 'p:language'
-    foreground = 'p:language-foreground'
-    template = '  {{ .Full }} '
+[[blocks.segments]]
+type = 'zig'
+style = 'diamond'
+leading_diamond = ''
+trailing_diamond = ''
+background = 'p:language'
+foreground = 'p:language-foreground'
+template = '  {{ .Full }} '
 
-    [blocks.segments.properties]
-      display_mode = 'context'
+[blocks.segments.properties]
+display_mode = 'context'
 
-  [[blocks.segments]]
-    type = 'rust'
-    style = 'diamond'
-    leading_diamond = ''
-    trailing_diamond = ''
-    background = 'p:language'
-    foreground = 'p:language-foreground'
-    template = '  {{ .Full }} '
+[[blocks.segments]]
+type = 'rust'
+style = 'diamond'
+leading_diamond = ''
+trailing_diamond = ''
+background = 'p:language'
+foreground = 'p:language-foreground'
+template = '  {{ .Full }} '
 
-    [blocks.segments.properties]
-      display_mode = 'context'
+[blocks.segments.properties]
+display_mode = 'context'
 
-  # javascript: deno, svelte, react, node
-  [[blocks.segments]]
-    type = 'text'
-    style = 'diamond'
-    leading_diamond = ''
-    trailing_diamond = ''
-    background = 'p:language'
-    foreground = 'p:language-foreground'
-    template = ' {{ .Env.JSENV }} '
+# javascript: deno, svelte, react, node
+[[blocks.segments]]
+type = 'text'
+style = 'diamond'
+leading_diamond = ''
+trailing_diamond = ''
+background = 'p:language'
+foreground = 'p:language-foreground'
+template = ' {{ .Env.JSENV }} '
 
-  ######### GIT #########
+######### GIT #########
 
-  [[blocks.segments]]
-    type = 'git'
-    style = 'diamond'
-    leading_diamond = ''
-    trailing_diamond = ''
-    background = 'p:git'
-    foreground = 'p:git-foreground'
-    template = ' {{ if .UpstreamURL }}{{ url .UpstreamIcon .UpstreamURL }} {{ end }}{{ .HEAD }}{{ if .Working.Changed }} 󱩽{{ end }}{{ if gt .Ahead 0 }} {{ .Ahead }}{{ end }}{{ if gt .Behind 0 }} {{ .Behind }}{{ end }}{{ if and (not .Working.Changed) (eq .Ahead 0) (eq .Behind 0) }} {{ end }} '
-    background_templates = [
-      '{{ if or .Working.Changed .Staging.Changed }}p:git-modified{{ end }}',
-      '{{ if or (gt .Ahead 0) (gt .Behind 0) }}p:git-diverged{{ end }}',
-    ]
+[[blocks.segments]]
+type = 'git'
+style = 'diamond'
+leading_diamond = ''
+trailing_diamond = ''
+background = 'p:git'
+foreground = 'p:git-foreground'
+template = ' {{ if .UpstreamURL }}{{ url .UpstreamIcon .UpstreamURL }} {{ end }}{{ .HEAD }}{{ if .Working.Changed }} 󱩽{{ end }}{{ if gt .Ahead 0 }} {{ .Ahead }}{{ end }}{{ if gt .Behind 0 }} {{ .Behind }}{{ end }}{{ if and (not .Working.Changed) (eq .Ahead 0) (eq .Behind 0) }} {{ end }} '
+background_templates = [
+  '{{ if or .Working.Changed .Staging.Changed }}p:git-modified{{ end }}',
+  '{{ if or (gt .Ahead 0) (gt .Behind 0) }}p:git-diverged{{ end }}',
+]
 
-    [blocks.segments.properties]
-      branch_template = '{{ trunc 25 .Branch }}'
-      fetch_status = true
-      fetch_upstream_icon = true
+[blocks.segments.properties]
+branch_template = '{{ trunc 25 .Branch }}'
+fetch_status = true
+fetch_upstream_icon = true
 
-  ######### STATUS ENDCAP #########
+######### STATUS ENDCAP #########
 
-  [[blocks.segments]]
-    type = 'status'
-    style = 'accordion'
-    leading_powerline_symbol = '<transparent,background></>'
-    powerline_symbol = ''
-    background = 'p:status'
-    foreground = 'p:status-foreground'
-    template = '    '
+[[blocks.segments]]
+type = 'status'
+style = 'accordion'
+leading_powerline_symbol = '<transparent,background></>'
+powerline_symbol = ''
+background = 'p:status'
+foreground = 'p:status-foreground'
+template = '    '
 
-    background_templates = ['{{ if gt .Code 0 }}p:status-error{{ end }}']
+background_templates = ['{{ if gt .Code 0 }}p:status-error{{ end }}']
 
-    [blocks.segments.properties]
-      always_enabled = true
+[blocks.segments.properties]
+always_enabled = true
 
 [[blocks]]
-  type = 'prompt'
-  alignment = 'right'
+type = 'prompt'
+alignment = 'right'
 
-  [[blocks.segments]]
-    type = "executiontime"
-    style = "plain"
-    foreground = "p:exectime-foreground"
-    background = "tranparent"
-    template = "󰄉 {{ .FormattedMs }} "
+[[blocks.segments]]
+type = "executiontime"
+style = "plain"
+foreground = "p:exectime-foreground"
+background = "tranparent"
+template = "󰄉 {{ .FormattedMs }} "
 
-    [blocks.segments.properties]
-      threshold = 500
-      style = "austin"
-      always_enabled = false
+[blocks.segments.properties]
+threshold = 500
+style = "austin"
+always_enabled = false
 
-  [[blocks.segments]]
-    type = "text"
-    style = "diamond"
-    leading_diamond = ''
-    trailing_diamond = ''
-    foreground = "p:error-foreground"
-    background = "p:error"
-    template = "{{if .Segments.Status.Error }}{{ .Segments.Status.String }}{{ end }}"
+[[blocks.segments]]
+type = "text"
+style = "diamond"
+leading_diamond = ''
+trailing_diamond = ''
+foreground = "p:error-foreground"
+background = "p:error"
+template = "{{if .Segments.Status.Error }}{{ .Segments.Status.String }}{{ end }}"
 
 
 ######### NEW_LINE - SHELL LEVEL PROMPT #########
 
 [[blocks]]
-  type = 'prompt'
-  alignment = 'left'
-  newline = true
+type = 'prompt'
+alignment = 'left'
+newline = true
 
-  [[blocks.segments]]
-    type = 'text'
-    style = 'plain'
-    background = 'transparent'
-    foreground = 'p:prompt'
-    template = '{{ if .Env.SHLVL_RELATIVE }}{{ repeat (.Env.SHLVL_RELATIVE | int) "❯" }}{{ else }}{{ repeat .SHLVL "❯" }}{{ end }}'
+[[blocks.segments]]
+type = 'text'
+style = 'plain'
+background = 'transparent'
+foreground = 'p:prompt'
+template = '{{ if .Env.SHLVL_RELATIVE }}{{ repeat (.Env.SHLVL_RELATIVE | int) "❯" }}{{ else }}{{ repeat .SHLVL "❯" }}{{ end }}'
