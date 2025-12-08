@@ -49,6 +49,8 @@ aerospace_get_windows_in_workspace() {
 aerospace_get_appname_by_windowid() {
   local json="$1"
   local window_id="$2"
+  # Return empty if window_id is empty (prevents jq tonumber error)
+  [[ -z "$window_id" ]] && return
   echo "$json" | jq -r --arg wid "$window_id" '.[] | select(."window-id" == ($wid | tonumber)) | ."app-name"'
 }
 
@@ -93,6 +95,8 @@ aerospace_window_ids_in_workspace() {
 # DEPRECATED: Use aerospace_get_appname_by_windowid() with all_windows JSON
 aerospace_appname_from_window_id() {
   local window_id="$1"
+  # Return empty if window_id is empty (prevents jq tonumber error)
+  [[ -z "$window_id" ]] && return
   local json=$(aerospace list-windows --all --json --format '%{monitor-id}%{workspace}%{app-bundle-id}%{window-id}%{app-name}')
   local filtered=$(echo "$json" | jq -r --arg window_id "$window_id" '.[] | select(."window-id" == ($window_id | tonumber)) | ."app-name"')
   echo "$filtered"
