@@ -55,7 +55,7 @@ typeface 4.2.1,4763
 visual-studio-code 1.106.3
 vlc 3.0.21
 wezterm 20240203-110809,5046fc22
-yaak 2025.9.0
+yaak 2025.9.1
 zed 0.215.3
 zoom 6.6.11.70003
 
@@ -338,7 +338,7 @@ pygit2 1.19.0
 python@3.13 3.13.11
 python@3.14 3.14.2
 qrencode 4.1.1
-qsv 10.0.0
+qsv 11.0.2
 rav1e 0.8.1
 rclone 1.72.0
 re2 20251105
@@ -448,7 +448,7 @@ npm:md-to-pdf                                                5.2.5              
 npm:nuekit                                                   2.0.0-beta.2       ~/.config/mise/mise.toml  latest
 npm:vite                                                     7.2.7              ~/.config/mise/mise.toml  latest
 pipx:SuperClaude                                             4.1.9              ~/.config/mise/mise.toml  latest
-pipx:meson                                                   1.9.2              ~/.config/mise/mise.toml  latest
+pipx:meson                                                   1.10.0             ~/.config/mise/mise.toml  latest
 pipx:ninja                                                   1.13.0             ~/.config/mise/mise.toml  latest
 pipx:ruff                                                    0.14.8             ~/.config/mise/mise.toml  latest
 pipx:seagoat                                                 0.54.17            ~/.config/mise/mise.toml  latest
