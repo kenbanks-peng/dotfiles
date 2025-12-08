@@ -101,9 +101,7 @@ trailing_diamond = ''
 background = 'p:language'
 foreground = 'p:language-foreground'
 template = '  {{ .Full }} '
-
-[blocks.segments.properties]
-display_mode = 'context'
+properties = { display_mode = 'context' }
 
 [[blocks.segments]]
 type = 'go'
@@ -113,9 +111,7 @@ trailing_diamond = ''
 background = 'p:language'
 foreground = 'p:language-foreground'
 template = ' go {{ .Full }} '
-
-[blocks.segments.properties]
-display_mode = 'context'
+properties = { display_mode = 'context' }
 
 [[blocks.segments]]
 type = 'lua'
@@ -125,9 +121,7 @@ trailing_diamond = ''
 background = 'p:language'
 foreground = 'p:language-foreground'
 template = '  {{ .Full }} '
-
-[blocks.segments.properties]
-display_mode = 'context'
+properties = { display_mode = 'context' }
 
 [[blocks.segments]]
 type = 'zig'
@@ -137,9 +131,7 @@ trailing_diamond = ''
 background = 'p:language'
 foreground = 'p:language-foreground'
 template = '  {{ .Full }} '
-
-[blocks.segments.properties]
-display_mode = 'context'
+properties = { display_mode = 'context' }
 
 [[blocks.segments]]
 type = 'rust'
@@ -149,9 +141,7 @@ trailing_diamond = ''
 background = 'p:language'
 foreground = 'p:language-foreground'
 template = '  {{ .Full }} '
-
-[blocks.segments.properties]
-display_mode = 'context'
+properties = { display_mode = 'context' }
 
 # javascript: deno, svelte, react, node
 [[blocks.segments]]
@@ -177,11 +167,7 @@ background_templates = [
   '{{ if or .Working.Changed .Staging.Changed }}p:git-modified{{ end }}',
   '{{ if or (gt .Ahead 0) (gt .Behind 0) }}p:git-diverged{{ end }}',
 ]
-
-[blocks.segments.properties]
-branch_template = '{{ trunc 25 .Branch }}'
-fetch_status = true
-fetch_upstream_icon = true
+properties = { branch_template = '{{ trunc 25 .Branch }}', fetch_status = true, fetch_upstream_icon = true }
 
 ######### STATUS ENDCAP #########
 
@@ -193,11 +179,8 @@ powerline_symbol = ''
 background = 'p:status'
 foreground = 'p:status-foreground'
 template = '    '
-
 background_templates = ['{{ if gt .Code 0 }}p:status-error{{ end }}']
-
-[blocks.segments.properties]
-always_enabled = true
+properties = { always_enabled = true }
 
 [[blocks]]
 type = 'prompt'
@@ -209,11 +192,7 @@ style = "plain"
 foreground = "p:exectime-foreground"
 background = "tranparent"
 template = "󰄉 {{ .FormattedMs }} "
-
-[blocks.segments.properties]
-threshold = 500
-style = "austin"
-always_enabled = false
+properties = { threshold = 500, style = "austin", always_enabled = false }
 
 [[blocks.segments]]
 type = "text"
