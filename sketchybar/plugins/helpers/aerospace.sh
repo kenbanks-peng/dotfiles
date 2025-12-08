@@ -333,7 +333,7 @@ aerospace_new_window_id() {
   local item="window.$sid.$window_id.$appname"
 
   local icon="$($CONFIG_DIR/icons_apps.sh "$appname")"
-  local icon_color="$(sketchy_get_space_foreground_color false)"
+  local icon_color="$(sketchy_get_space_color foreground false)"
 
   # Use centralized props from env.sh
   local props=()
@@ -434,7 +434,7 @@ aerospace_add_apps_in_spaceid() {
     # Check if item already exists (using cached bar items)
     if ! item_in_array "$item" "$bar_items"; then
       # New item - set all properties including icon.color
-      local icon_color="$(sketchy_get_space_foreground_color false)"
+      local icon_color="$(sketchy_get_space_color foreground false)"
       sketchy_add_item "$item" left \
         --set "$item" "${props[@]}" \
         icon="$icon" icon.color="$icon_color" \
@@ -772,7 +772,7 @@ aerospace_smart_move_window() {
     elif [[ "$item_sid" != "$correct_sid" ]]; then
       # Item has wrong workspace ID, recreate it
       local icon="$($CONFIG_DIR/icons_apps.sh "$item_appname" 2>/dev/null || echo "")"
-      local item_color=$(sketchy_get_space_foreground_color false)
+      local item_color=$(sketchy_get_space_color foreground false)
 
       # Remove old item
       sketchy_remove_item "$item"
@@ -930,8 +930,8 @@ aerospace_swap_workspace() {
     batch_args+=(--remove "$old_item")
   done
 
-  local icon_color=$(sketchy_get_space_foreground_color false)
-  local focused_color=$(sketchy_get_space_foreground_color true)
+  local icon_color=$(sketchy_get_space_color foreground false)
+  local focused_color=$(sketchy_get_space_color foreground true)
 
   for old_item in "${!items_to_update[@]}"; do
     IFS=':' read -r correct_item item_window_id item_appname new_sid <<< "${items_to_update[$old_item]}"
@@ -957,8 +957,8 @@ aerospace_swap_workspace() {
   done
 
   # Add highlight commands for workspaces
-  local unfocused_bg=$(sketchy_get_space_background_color false)
-  local focused_bg=$(sketchy_get_space_background_color true)
+  local unfocused_bg=$(sketchy_get_space_color background false)
+  local focused_bg=$(sketchy_get_space_color background true)
 
   # Unhighlight current_sid (no longer focused), highlight target_sid (now focused)
   batch_args+=(
