@@ -5,9 +5,69 @@ source "$CONFIG_DIR/plugins/helpers/util.sh"
 source "$CONFIG_DIR/plugins/helpers/app_type.sh"
 source "$CONFIG_DIR/env.sh"
 
-aerospace_all_windows(){
-  local json=$(aerospace list-windows --all --json --format "%{window-id}%{app-name}%{workspace}%{workspace-is-focused}")
+# =============================================================================
+# Core Data Functions - Fetch once per event, pass data to helpers
+# =============================================================================
+
+# Returns JSON array of all windows with metadata
+# Usage: all_windows=$(aerospace_all_windows)
+aerospace_all_windows() {
+  aerospace list-windows --all --json --format "%{window-id}%{app-name}%{workspace}%{workspace-is-focused}"
 }
+
+# Extract unique workspace IDs from all_windows JSON
+# Usage: workspaces=$(aerospace_get_workspaces "$all_windows")
+aerospace_get_workspaces() {
+  local json="$1"
+  echo "$json" | jq -r '[.[].workspace] | unique | sort_by(tonumber) | .[]'
+}
+
+# Extract focused workspace from all_windows JSON
+# Usage: focused_sid=$(aerospace_get_focused_workspace "$all_windows")
+aerospace_get_focused_workspace() {
+  local json="$1"
+  # Get workspace where workspace-is-focused is true
+  local focused=$(echo "$json" | jq -r '.[] | select(."workspace-is-focused" == true) | .workspace' | head -1)
+  if [[ -z "$focused" ]]; then
+    # Fallback to aerospace command if no windows have focus info
+    focused=$(aerospace list-workspaces --focused)
+  fi
+  echo "$focused"
+}
+
+# Get window IDs in a specific workspace from all_windows JSON
+# Usage: window_ids=$(aerospace_get_windows_in_workspace "$all_windows" "$sid")
+aerospace_get_windows_in_workspace() {
+  local json="$1"
+  local sid="$2"
+  echo "$json" | jq -r --arg sid "$sid" '.[] | select(.workspace == $sid) | ."window-id"' | tr '\n' ' ' | sed 's/ $//'
+}
+
+# Get app name by window ID from all_windows JSON
+# Usage: appname=$(aerospace_get_appname_by_windowid "$all_windows" "$window_id")
+aerospace_get_appname_by_windowid() {
+  local json="$1"
+  local window_id="$2"
+  echo "$json" | jq -r --arg wid "$window_id" '.[] | select(."window-id" == ($wid | tonumber)) | ."app-name"'
+}
+
+# Get focused window ID using aerospace (no yabai dependency)
+# Usage: focused_window_id=$(aerospace_get_focused_window_id)
+aerospace_get_focused_window_id() {
+  aerospace list-windows --focused --format '%{window-id}' 2>/dev/null | head -1
+}
+
+# Get window IDs for a specific app from all_windows JSON
+# Usage: window_ids=$(aerospace_get_window_ids_for_app "$all_windows" "$app_name")
+aerospace_get_window_ids_for_app() {
+  local json="$1"
+  local app_name="$2"
+  echo "$json" | jq -r --arg app "$app_name" '.[] | select(."app-name" == $app) | ."window-id"' | tr '\n' ' ' | sed 's/ $//'
+}
+
+# =============================================================================
+# Legacy Functions - Kept for backward compatibility during migration
+# =============================================================================
 
 aerospace_workspaces() {
   echo "$(aerospace list-workspaces --all)"
