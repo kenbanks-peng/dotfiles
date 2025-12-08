@@ -15,6 +15,91 @@ aerospace_all_windows() {
   aerospace list-windows --all --json --format "%{window-id}%{app-name}%{workspace}%{workspace-is-focused}"
 }
 
+# Returns JSON array of all workspaces
+# Usage: workspaces_json=$(aerospace_list_workspaces_json)
+# Output: [{"workspace": "1"}, {"workspace": "2"}, ...]
+aerospace_list_workspaces_json() {
+  aerospace list-workspaces --all --json
+}
+
+# Get sorted workspace IDs from JSON (returns newline-separated list)
+# Usage: while read -r sid; do ...; done < <(aerospace_get_workspace_ids_sorted "$workspaces_json")
+# Or from all_windows: aerospace_get_workspace_ids_sorted "$(aerospace_list_workspaces_json)"
+aerospace_get_workspace_ids_sorted() {
+  local json="$1"
+  echo "$json" | jq -r '[.[].workspace] | map(select(. != "")) | sort_by(tonumber) | .[]'
+}
+
+# Find next/prev workspace ID given current workspace
+# Usage: next_sid=$(aerospace_adjacent_workspace "$workspaces_json" "$current_sid" "next")
+# Returns empty string if at boundary
+aerospace_adjacent_workspace() {
+  local json="$1"
+  local current_sid="$2"
+  local direction="$3"  # "next" or "prev"
+
+  echo "$json" | jq -r --arg sid "$current_sid" --arg dir "$direction" '
+    [.[].workspace] | map(select(. != "")) | sort_by(tonumber) |
+    (to_entries | map(select(.value == $sid)) | .[0].key) as $idx |
+    if $idx == null then ""
+    elif $dir == "next" then .[$idx + 1] // ""
+    else (if $idx > 0 then .[$idx - 1] else "" end)
+    end
+  '
+}
+
+# Get workspaces to add (in aerospace but not in sketchybar)
+# Usage: while read -r sid; do ...; done < <(aerospace_workspaces_to_add "$all_windows" "$bar_items")
+aerospace_workspaces_to_add() {
+  local all_windows="$1"
+  local bar_items="$2"
+
+  local aerospace_ws=$(aerospace_get_workspaces "$all_windows")
+  local sketchy_ws=$(echo "$bar_items" | grep "^workspace\\.start\\.[0-9]*$" | sed 's/workspace\.start\.//')
+
+  # Use jq to compute set difference: aerospace - sketchy
+  jq -rn --arg aero "$aerospace_ws" --arg sketchy "$sketchy_ws" '
+    ($aero | split("\n") | map(select(. != ""))) as $a |
+    ($sketchy | split("\n") | map(select(. != ""))) as $s |
+    ($a - $s) | sort_by(tonumber) | .[]
+  '
+}
+
+# Get workspaces to remove (in sketchybar but not in aerospace)
+# Usage: while read -r sid; do ...; done < <(aerospace_workspaces_to_remove "$all_windows" "$bar_items")
+aerospace_workspaces_to_remove() {
+  local all_windows="$1"
+  local bar_items="$2"
+
+  local aerospace_ws=$(aerospace_get_workspaces "$all_windows")
+  local sketchy_ws=$(echo "$bar_items" | grep "^workspace\\.start\\.[0-9]*$" | sed 's/workspace\.start\.//')
+
+  # Use jq to compute set difference: sketchy - aerospace
+  jq -rn --arg aero "$aerospace_ws" --arg sketchy "$sketchy_ws" '
+    ($aero | split("\n") | map(select(. != ""))) as $a |
+    ($sketchy | split("\n") | map(select(. != ""))) as $s |
+    ($s - $a) | sort_by(tonumber) | .[]
+  '
+}
+
+# Find the next higher workspace that exists in sketchybar (for positioning)
+# Usage: next=$(aerospace_next_existing_workspace "$sid" "$all_windows" "$bar_items")
+aerospace_next_existing_workspace() {
+  local sid="$1"
+  local all_windows="$2"
+  local bar_items="$3"
+
+  local aerospace_ws=$(aerospace_get_workspaces "$all_windows")
+  local sketchy_ws=$(echo "$bar_items" | grep "^workspace\\.start\\.[0-9]*$" | sed 's/workspace\.start\.//')
+
+  jq -rn --arg sid "$sid" --arg aero "$aerospace_ws" --arg sketchy "$sketchy_ws" '
+    ($aero | split("\n") | map(select(. != "")) | sort_by(tonumber)) as $a |
+    ($sketchy | split("\n") | map(select(. != ""))) as $s |
+    [$a[] | select((. | tonumber) > ($sid | tonumber)) | select(. as $w | $s | index($w))] |
+    first // ""
+  '
+}
+
 # Extract unique workspace IDs from all_windows JSON
 # Usage: workspaces=$(aerospace_get_workspaces "$all_windows")
 aerospace_get_workspaces() {
@@ -142,94 +227,73 @@ sync_workspaces() {
     all_windows=$(aerospace_all_windows)
   fi
 
-  # Get workspaces from JSON (build array portably)
-  local occupied_workspaces=()
-  while IFS= read -r ws; do
-    [[ -n "$ws" ]] && occupied_workspaces+=("$ws")
-  done < <(aerospace_get_workspaces "$all_windows")
-
-  local sketchy_workspaces=()
   local bar_items=$(_sketchy_cached_bar_items)
-  while IFS= read -r sw; do
-    [[ -n "$sw" ]] && sketchy_workspaces+=("$sw")
-  done < <(echo "$bar_items" | grep "^workspace\\.start\\.[0-9]*$" | sed 's/workspace\.start\.//')
 
-  # Add missing workspaces
-  for sid in "${occupied_workspaces[@]}"; do
-    if ! printf '%s\n' "${sketchy_workspaces[@]}" | grep -q "^${sid}$"; then
-      # Workspace doesn't exist in sketchybar, add it
-      local start="workspace.start.$sid"
-      local end="workspace.end.$sid"
+  # Add missing workspaces (in aerospace but not in sketchybar)
+  while IFS= read -r sid; do
+    [[ -z "$sid" ]] && continue
 
-      # Use centralized props from env.sh
-      local props=()
-      while IFS= read -r line; do
-        [[ -n "$line" ]] && props+=("$line")
-      done < <(get_workspace_divider_props)
+    local start="workspace.start.$sid"
+    local end="workspace.end.$sid"
 
-      # Find the correct position to insert this workspace
-      # Look for the next higher workspace number that exists in sketchybar
-      local position_found=false
-      for next_sid in "${occupied_workspaces[@]}"; do
-        if [[ "$next_sid" -gt "$sid" ]]; then
-          # Check if this next workspace exists in sketchybar
-          if printf '%s\n' "${sketchy_workspaces[@]}" | grep -q "^${next_sid}$"; then
-            # Insert before this workspace
-            sketchy_add_item "$start" left \
-              --set "$start" "${props[@]}"
-            sketchybar --move "$start" before "workspace.start.$next_sid"
+    # Use centralized props from env.sh
+    local props=()
+    while IFS= read -r line; do
+      [[ -n "$line" ]] && props+=("$line")
+    done < <(get_workspace_divider_props)
 
-            sketchy_add_item "$end" left \
-              --set "$end" "${props[@]}"
-            sketchybar --move "$end" after "$start"
+    # Find the correct position to insert this workspace
+    local next_sid=$(aerospace_next_existing_workspace "$sid" "$all_windows" "$bar_items")
 
-            position_found=true
-            break
-          fi
-        fi
-      done
+    if [[ -n "$next_sid" ]]; then
+      # Insert before this workspace
+      sketchy_add_item "$start" left \
+        --set "$start" "${props[@]}"
+      sketchybar --move "$start" before "workspace.start.$next_sid"
 
-      # If no higher workspace found, just add to left (will be at the end)
-      if [[ "$position_found" = false ]]; then
-        sketchy_add_item "$start" left \
-          --set "$start" "${props[@]}"
+      sketchy_add_item "$end" left \
+        --set "$end" "${props[@]}"
+      sketchybar --move "$end" after "$start"
+    else
+      # No higher workspace found, just add to left (will be at the end)
+      sketchy_add_item "$start" left \
+        --set "$start" "${props[@]}"
 
-        sketchy_add_item "$end" left \
-          --set "$end" "${props[@]}"
-      fi
-
-      sketchy_add_workspace "$sid"
-
-      # Move any existing window items for this workspace to correct position
-      local existing_windows=$(echo "$bar_items" | grep "^window\\.${sid}\\.")
-      if [[ -n "$existing_windows" ]]; then
-        while IFS= read -r item; do
-          sketchybar --move "$item" before "workspace.end.$sid"
-        done <<< "$existing_windows"
-      fi
-
-      # Populate the workspace with any missing apps
-      aerospace_add_apps_in_spaceid "$sid" "$all_windows"
+      sketchy_add_item "$end" left \
+        --set "$end" "${props[@]}"
     fi
-  done
+
+    sketchy_add_workspace "$sid"
+
+    # Move any existing window items for this workspace to correct position
+    local existing_windows=$(echo "$bar_items" | grep "^window\\.${sid}\\.")
+    if [[ -n "$existing_windows" ]]; then
+      while IFS= read -r item; do
+        sketchybar --move "$item" before "workspace.end.$sid"
+      done <<< "$existing_windows"
+    fi
+
+    # Populate the workspace with any missing apps
+    aerospace_add_apps_in_spaceid "$sid" "$all_windows"
+  done < <(aerospace_workspaces_to_add "$all_windows" "$bar_items")
 
   # Remove workspaces that don't exist in AeroSpace
-  for sid in "${sketchy_workspaces[@]}"; do
-    if ! printf '%s\n' "${occupied_workspaces[@]}" | grep -q "^${sid}$"; then
-      # Remove all window items in this workspace first
-      local window_items=$(echo "$bar_items" | grep "^window\\.${sid}\\.")
-      if [[ -n "$window_items" ]]; then
-        while IFS= read -r item; do
-          sketchy_remove_item "$item"
-        done <<< "$window_items"
-      fi
+  while IFS= read -r sid; do
+    [[ -z "$sid" ]] && continue
 
-      # Then remove workspace dividers and bracket
-      sketchy_remove_item "workspace.start.$sid"
-      sketchy_remove_item "workspace.end.$sid"
-      sketchy_remove_item "workspace.$sid"
+    # Remove all window items in this workspace first
+    local window_items=$(echo "$bar_items" | grep "^window\\.${sid}\\.")
+    if [[ -n "$window_items" ]]; then
+      while IFS= read -r item; do
+        sketchy_remove_item "$item"
+      done <<< "$window_items"
     fi
-  done
+
+    # Then remove workspace dividers and bracket
+    sketchy_remove_item "workspace.start.$sid"
+    sketchy_remove_item "workspace.end.$sid"
+    sketchy_remove_item "workspace.$sid"
+  done < <(aerospace_workspaces_to_remove "$all_windows" "$bar_items")
 }
 
 
@@ -393,26 +457,24 @@ aerospace_add_apps_in_spaceid() {
 # Create a new workspace after the last occupied one and switch to it
 # Migrated from scripts/new_workspace.sh
 aerospace_create_new_workspace() {
-  # Get all occupied workspaces sorted numerically
-  local occupied=($(aerospace list-workspaces --all | sort -n))
+  local workspaces_json=$(aerospace_list_workspaces_json)
 
-  if [[ ${#occupied[@]} -eq 0 ]]; then
-    # No workspaces, go to 1
+  # Get the last (highest) occupied workspace using jq
+  local last_workspace=$(echo "$workspaces_json" | jq -r '
+    [.[].workspace] | map(select(. != "")) | sort_by(tonumber) | last // empty
+  ')
+
+  if [[ -z "$last_workspace" ]]; then
     aerospace workspace 1
     return 0
   fi
 
-  # Get the last (highest) occupied workspace
-  local last_workspace="${occupied[-1]}"
-
-  # Calculate next workspace
   local next_workspace=$((last_workspace + 1))
 
   # Cap at 9 (max workspace in aerospace config)
   if [[ $next_workspace -le 9 ]]; then
     aerospace workspace "$next_workspace"
   else
-    # Already at max, just go to workspace 9
     aerospace workspace 9
   fi
 }
@@ -428,31 +490,29 @@ aerospace_smart_move_window() {
   local current_sid=$(aerospace list-workspaces --focused)
   local focused_window_id=$(aerospace list-windows --focused --format '%{window-id}')
 
-  # Build current state: array of workspaces, each with array of window_ids
-  declare -A current_state  # workspace_id -> "window_id1 window_id2 ..."
+  # Fetch all data as JSON once
+  local all_windows=$(aerospace_all_windows)
+  local workspaces_json=$(aerospace_list_workspaces_json)
+
+  # Build workspace_ids array from JSON
   local workspace_ids=()
   while IFS= read -r ws; do
     [[ -n "$ws" ]] && workspace_ids+=("$ws")
-  done < <(aerospace list-workspaces --all | sort -n)
+  done < <(aerospace_get_workspace_ids_sorted "$workspaces_json")
 
+  # Build current state: workspace_id -> "window_id1 window_id2 ..."
+  declare -A current_state
   for sid in "${workspace_ids[@]}"; do
-    local windows=()
-    while IFS= read -r w; do
-      [[ -n "$w" ]] && windows+=("$w")
-    done < <(aerospace list-windows --workspace "$sid" --format '%{window-id}')
-    current_state[$sid]="${windows[*]}"
+    current_state[$sid]=$(aerospace_get_windows_in_workspace "$all_windows" "$sid" | tr '\n' ' ' | sed 's/ $//')
   done
 
-  # Find current workspace index
-  local current_index=-1
-  for i in "${!workspace_ids[@]}"; do
-    if [[ "${workspace_ids[$i]}" == "$current_sid" ]]; then
-      current_index=$i
-      break
-    fi
-  done
+  # Find current workspace index using jq
+  local current_index=$(echo "$workspaces_json" | jq -r --arg sid "$current_sid" '
+    [.[].workspace] | map(select(. != "")) | sort_by(tonumber) |
+    to_entries | map(select(.value == $sid)) | .[0].key // -1
+  ')
 
-  if [[ $current_index -eq -1 ]]; then
+  if [[ "$current_index" -eq -1 ]]; then
     return 1
   fi
 
@@ -743,36 +803,15 @@ aerospace_smart_move_window() {
 }
 
 aerospace_workspace_next() {
-  # Get current workspace
   local current_sid=$(aerospace list-workspaces --focused)
+  local workspaces_json=$(aerospace_list_workspaces_json)
 
-  # Get all workspaces sorted (build array portably)
-  local workspace_ids=()
-  while IFS= read -r ws; do
-    [[ -n "$ws" ]] && workspace_ids+=("$ws")
-  done < <(aerospace list-workspaces --all | sort -n)
+  local next_sid=$(aerospace_adjacent_workspace "$workspaces_json" "$current_sid" "next")
 
-  # Find current workspace index
-  local current_index=-1
-  for i in "${!workspace_ids[@]}"; do
-    if [[ "${workspace_ids[$i]}" == "$current_sid" ]]; then
-      current_index=$i
-      break
-    fi
-  done
-
-  if [[ $current_index -eq -1 ]]; then
-    return 1
-  fi
-
-  # Check if we're at the last workspace
-  if [[ $current_index -eq $((${#workspace_ids[@]} - 1)) ]]; then
+  if [[ -z "$next_sid" ]]; then
     # At the end, create new workspace
     aerospace_create_new_workspace
   else
-    # Not at the end, switch to next workspace
-    local next_index=$((current_index + 1))
-    local next_sid="${workspace_ids[$next_index]}"
     aerospace workspace "$next_sid"
   fi
 }
@@ -789,40 +828,18 @@ aerospace_swap_workspace() {
   local current_sid=$(aerospace_get_focused_workspace "$all_windows")
   local focused_window_id=$(aerospace_get_focused_window_id)
 
-  # Get all workspaces sorted (build array portably)
-  local workspace_ids=()
-  while IFS= read -r ws; do
-    [[ -n "$ws" ]] && workspace_ids+=("$ws")
-  done < <(aerospace_get_workspaces "$all_windows")
+  # Map direction to adjacent_workspace direction ("left" -> "prev", "right" -> "next")
+  local adj_direction="next"
+  [[ "$direction" == "left" ]] && adj_direction="prev"
 
-  # Find current workspace index
-  local current_index=-1
-  for i in "${!workspace_ids[@]}"; do
-    if [[ "${workspace_ids[$i]}" == "$current_sid" ]]; then
-      current_index=$i
-      break
-    fi
-  done
+  # Get workspaces as JSON for the helper
+  local workspaces_json=$(echo "$all_windows" | jq '[{workspace: .[].workspace}] | unique')
+  local target_sid=$(aerospace_adjacent_workspace "$workspaces_json" "$current_sid" "$adj_direction")
 
-  if [[ $current_index -eq -1 ]]; then
-    return 1
-  fi
-
-  # Determine target workspace based on direction
-  local target_index
-  if [[ "$direction" == "left" ]]; then
-    target_index=$((current_index - 1))
-  else
-    target_index=$((current_index + 1))
-  fi
-
-  # Check bounds
-  if [[ $target_index -lt 0 ]] || [[ $target_index -ge ${#workspace_ids[@]} ]]; then
-    # No workspace to swap with in that direction
+  # No workspace to swap with in that direction
+  if [[ -z "$target_sid" ]]; then
     return 0
   fi
-
-  local target_sid="${workspace_ids[$target_index]}"
 
   # Get windows in each workspace using cached all_windows
   local current_windows=()
