@@ -5,6 +5,9 @@ source "$CONFIG_DIR/plugins/helpers/util.sh"
 source "$CONFIG_DIR/plugins/helpers/app_type.sh"
 source "$CONFIG_DIR/env.sh"
 
+aerospace_windows(){
+  local json=$(aerospace list-windows --all --json --format "%{window-id}%{app-name}%{workspace}%{workspace-is-focused}")
+}
 
 aerospace_workspaces() {
   echo "$(aerospace list-workspaces --all)"
