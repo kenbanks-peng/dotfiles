@@ -5,13 +5,13 @@ affinity 3.0.2,3912
 antigravity 1.11.14,5763785964257280
 anybar 0.2.3
 arc 1.124.0,71787
-atuin-desktop 0.2.6
+atuin-desktop 0.2.8
 audacity 3.7.6
 boop 1.4.0
 claude 0.14.10,fe3f5688c1c2a4b648d1bf6d9784d62ef9fc336a
-claude-code 2.0.61
+claude-code 2.0.62
 cleanshot 4.8.6
-codex 0.65.0
+codex 0.66.0
 container 0.6.0
 cursor 2.1.50,56f0a83df8e9eb48585fcc4858a9440db4cc7771
 daisydisk 4.32
@@ -68,7 +68,7 @@ aribb24 1.0.4
 asciinema 3.0.1
 ast-grep 0.40.0
 autoconf 2.72
-aws-c-auth 0.9.3
+aws-c-auth 0.9.4
 aws-c-cal 0.9.13
 aws-c-common 0.12.6
 aws-c-compression 0.3.1
@@ -89,7 +89,7 @@ biome 2.3.8
 borders 1.8.4
 brotli 1.2.0
 btop 1.4.5
-c-ares 1.34.5
+c-ares 1.34.6
 ca-certificates 2025-12-02
 caddy 2.10.2
 cairo 1.18.4
@@ -146,7 +146,7 @@ git-filter-repo 2.47.0
 gitleaks 8.30.0
 gitui 0.27.0
 glances 4.4.1_1
-glib 2.86.2
+glib 2.86.3
 glow 2.1.1
 gmp 6.3.0
 gnu-getopt 2.41.2
@@ -440,8 +440,8 @@ nix:rustup                                                   1.28.2 (symlink)   
 nix:uv                                                       0.9.9 (symlink)    ~/.config/mise/mise.toml  latest
 npm:@langwatch/better-agents                                 0.1.4-beta.0
 npm:@langwatch/better-agents                                 0.1.19             ~/.config/mise/mise.toml  latest
-npm:@opentui/core                                            0.1.57             ~/.config/mise/mise.toml  latest
-npm:@opentui/react                                           0.1.57             ~/.config/mise/mise.toml  latest
+npm:@opentui/core                                            0.1.59             ~/.config/mise/mise.toml  latest
+npm:@opentui/react                                           0.1.59             ~/.config/mise/mise.toml  latest
 npm:github-markdown-css                                      5.8.1              ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                                                5.2.5              ~/.config/mise/mise.toml  latest
 npm:nuekit                                                   2.0.0-beta.2       ~/.config/mise/mise.toml  latest
