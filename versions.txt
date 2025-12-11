@@ -52,7 +52,6 @@ symboliclinker 2.2
 syntax-highlight 2.1.27
 transmission 4.0.6
 typeface 4.2.1,4763
-visual-studio-code 1.107.0
 vlc 3.0.21
 wezterm 20240203-110809,5046fc22
 yaak 2025.9.1
