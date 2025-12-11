@@ -75,7 +75,7 @@ aws-c-common 0.12.6
 aws-c-compression 0.3.1
 aws-c-event-stream 0.5.7
 aws-c-http 0.10.7
-aws-c-io 0.23.3
+aws-c-io 0.23.4
 aws-c-mqtt 0.13.3
 aws-c-s3 0.11.3
 aws-c-sdkutils 0.2.4
@@ -111,7 +111,7 @@ curlie 1.8.2
 d2 0.7.1
 dav1d 1.5.2
 dblab 0.34.2
-deno 2.5.6
+deno 2.6.0
 direnv 2.37.1
 doppler 3.75.1
 dotenvx 1.51.1
@@ -129,7 +129,7 @@ flock 0.4.0
 fontconfig 2.17.1
 freetype 2.14.1_1
 frei0r 2.5.1
-fresh-editor 0.1.29
+fresh-editor 0.1.32
 fribidi 1.0.16
 fx 39.2.0
 fzf 0.67.0
