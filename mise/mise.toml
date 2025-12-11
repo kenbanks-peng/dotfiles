@@ -4,7 +4,6 @@
 "pipx:ruff" = "latest"
 "go:golang.org/x/tools/gopls" = "latest"
 "go:honnef.co/go/tools/cmd/staticcheck" = "latest"
-"go:github.com/wailsapp/wails/v2/cmd/wails" = "latest"
 "cargo:cargo-cache" = "latest"
 "pipx:meson" = "latest"
 "pipx:ninja" = "latest"
@@ -26,6 +25,7 @@
 "nix:nodejs" = "latest"
 "nix:rustup" = "latest"
 "npm:@langwatch/better-agents" = "latest"
+"go:github.com/wailsapp/wails/v3/cmd/wails3" = "latest"
 
 [settings]
 experimental = true
