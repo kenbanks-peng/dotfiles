@@ -19,11 +19,6 @@
 "go:github.com/h0rv/d2-mcp" = "latest"
 "npm:@opentui/core" = "latest"
 "npm:@opentui/react" = "latest"
-"nix:bun" = "latest"
-"nix:ruby" = "latest"
-"nix:uv" = "latest"
-"nix:nodejs" = "latest"
-"nix:rustup" = "latest"
 "npm:@langwatch/better-agents" = "latest"
 "go:github.com/wailsapp/wails/v3/cmd/wails3" = "latest"
 
