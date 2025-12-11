@@ -21,6 +21,9 @@
 "npm:@opentui/react" = "latest"
 "npm:@langwatch/better-agents" = "latest"
 "go:github.com/wailsapp/wails/v3/cmd/wails3" = "latest"
+"nix:rustup" = "latest"
+"nix:uv" = "latest"
+"nix:bun" = "latest"
 
 [settings]
 experimental = true
