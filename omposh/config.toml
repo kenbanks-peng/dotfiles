@@ -148,6 +148,28 @@ background = 'p:language'
 foreground = 'p:language-foreground'
 template = ' {{ .Env.JSENV }} '
 
+######### DOCKER #########
+
+[[blocks.segments]]
+type = 'docker'
+style = 'diamond'
+leading_diamond = ''
+trailing_diamond = ''
+background = 'p:language'
+foreground = 'p:language-foreground'
+template = ' \uf308 {{ .Context }} '
+
+######### AWS #########
+
+[[blocks.segments]]
+type = 'aws'
+style = 'diamond'
+leading_diamond = ''
+trailing_diamond = ''
+background = 'p:language'
+foreground = 'p:language-foreground'
+template = ' \uf270 {{ .Profile }}{{ if .Region }} @ {{ .Region }}{{ end }} '
+
 ######### GIT #########
 
 [[blocks.segments]]
