@@ -1,6 +1,0 @@
-version: '3.8'
-
-services:
-  test:
-    image: alpine:latest
-    command: echo "Hello from docker-compose"

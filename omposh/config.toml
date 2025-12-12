@@ -158,6 +158,7 @@ trailing_diamond = ''
 background = 'p:language'
 foreground = 'p:language-foreground'
 template = '  '
+options = { display_mode = 'files' }
 
 ######### GIT #########
 
