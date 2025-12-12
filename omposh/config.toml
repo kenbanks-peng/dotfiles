@@ -96,15 +96,6 @@ template = ' {{ .Env.DIRPATH }} '
 ######### LANGUAGES #########
 
 [[blocks.segments]]
-type = 'python'
-style = 'diamond'
-leading_diamond = ''
-trailing_diamond = ''
-background = 'p:language'
-foreground = 'p:language-foreground'
-template = '  {{ .Full }} '
-
-[[blocks.segments]]
 type = 'go'
 style = 'diamond'
 leading_diamond = ''
