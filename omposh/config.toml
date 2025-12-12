@@ -179,14 +179,6 @@ background_templates = [
 ]
 options = { branch_template = '{{ trunc 25 .Branch }}', fetch_status = true, fetch_upstream_icon = true }
 
-######### BUN #########
-
-[[blocks.segments]]
-type = "bun"
-style = "plain"
-foreground = "#3C82F6"
-template = "  {{ .Full }} "
-
 ######### STATUS ENDCAP #########
 
 [[blocks.segments]]
@@ -196,7 +188,7 @@ leading_powerline_symbol = '<transparent,background></>'
 powerline_symbol = ''
 background = 'p:status'
 foreground = 'p:status-foreground'
-template = '    '
+template = '   '
 background_templates = ['{{ if gt .Code 0 }}p:status-error{{ end }}']
 options = { always_enabled = true }
 
