@@ -9,11 +9,11 @@ atuin-desktop 0.2.11
 audacity 3.7.7
 boop 1.4.0
 claude 0.14.10,fe3f5688c1c2a4b648d1bf6d9784d62ef9fc336a
-claude-code 2.0.65
+claude-code 2.0.67
 cleanshot 4.8.6
 codex 0.71.0
 container 0.6.0
-cursor 2.2.17,cf858ca030e9c9a99ea444ec6efcbcfc40bfda75
+cursor 2.2.20,b3573281c4775bfc6bba466bf6563d3d498d1074
 daisydisk 4.32
 deepchat 0.5.1
 espanso 2.3.0
@@ -73,7 +73,7 @@ aws-c-auth 0.9.4
 aws-c-cal 0.9.13
 aws-c-common 0.12.6
 aws-c-compression 0.3.1
-aws-c-event-stream 0.5.8
+aws-c-event-stream 0.5.9
 aws-c-http 0.10.7
 aws-c-io 0.24.0
 aws-c-mqtt 0.13.3
@@ -129,7 +129,7 @@ flock 0.4.0
 fontconfig 2.17.1
 freetype 2.14.1_1
 frei0r 2.5.1
-fresh-editor 0.1.39
+fresh-editor 0.1.43
 fribidi 1.0.16
 fx 39.2.0
 fzf 0.67.0
@@ -141,7 +141,7 @@ gemini-cli 0.20.0
 gettext 0.26_1
 gh 2.83.2
 giflib 5.2.2
-git 2.52.0
+git 2.52.0_1
 git-bug 0.10.1
 git-delta 0.18.2_3
 git-filter-repo 2.47.0
@@ -184,7 +184,7 @@ jc 1.25.6
 jid 0.7.6
 jj 0.36.0
 jnv 0.6.1
-jpeg-turbo 3.1.2
+jpeg-turbo 3.1.3
 jpeg-xl 0.11.1_3
 jq 1.8.1
 jqp 0.8.0
@@ -263,7 +263,7 @@ llvm 21.1.7
 lolcat 100.0.1
 lpeg 1.1.0
 lua 5.4.8
-luajit 2.1.1765007043
+luajit 2.1.1765228720
 luarocks 3.12.2
 lunchy-go 0.2.1
 luv 1.51.0-1
@@ -297,7 +297,7 @@ nspr 4.38.2
 nss 3.119.1
 numpy 2.3.5
 nushell 0.109.1
-oh-my-posh 28.2.0
+oh-my-posh 28.2.1
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
@@ -343,8 +343,8 @@ qsv 11.0.2
 rav1e 0.8.1
 rclone 1.72.1
 re2 20251105
-readline 8.3.1
-repomix 1.10.0
+readline 8.3.3
+repomix 1.10.1
 resvg 0.45.1
 rich-cli 1.8.1_1
 ripgrep 15.1.0
@@ -398,8 +398,8 @@ utf8proc 2.11.2
 uvwasi 0.0.23
 vapoursynth 73
 vivid 0.10.1
-vulkan-headers 1.4.328.1
-vulkan-loader 1.4.328.1
+vulkan-headers 1.4.335.0
+vulkan-loader 1.4.335.0
 wallpaper 2.3.3
 watchexec 2.3.2
 webp 1.6.0
@@ -436,7 +436,7 @@ go:github.com/nizos/tdd-guard/reporters/go/cmd/tdd-guard-go  v0.2.1             
 go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.42
 go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.43
 go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.44     ~/.config/mise/mise.toml  latest
-go:golang.org/x/tools/gopls                                  0.20.0             ~/.config/mise/mise.toml  latest
+go:golang.org/x/tools/gopls                                  0.21.0             ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck                        0.7.0-0.dev        ~/.config/mise/mise.toml  latest
 nix:bun                                                      1.3.3 (symlink)    ~/.config/mise/mise.toml  latest
 nix:nodejs                                                   24.11.1 (symlink)  ~/.config/mise/mise.toml  24
