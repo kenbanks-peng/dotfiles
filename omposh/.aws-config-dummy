@@ -1,9 +1,0 @@
-# Dummy AWS config marker
-# The AWS segment typically looks for:
-# - AWS_PROFILE environment variable
-# - AWS_REGION environment variable
-# - ~/.aws/config and ~/.aws/credentials files
-
-# To test the AWS segment, try:
-# export AWS_PROFILE=dev
-# export AWS_REGION=us-east-1
