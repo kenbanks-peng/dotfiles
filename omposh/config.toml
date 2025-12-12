@@ -149,7 +149,18 @@ leading_diamond = ''
 trailing_diamond = ''
 background = 'p:language'
 foreground = 'p:language-foreground'
-template = ' {{ .Env.JSENV }} '
+template = ' {{ .Env.JS_SEGMENT }} '
+
+# python: icon by files, version if in venv
+# using shell function set_poshcontext()
+[[blocks.segments]]
+type = 'text'
+style = 'diamond'
+leading_diamond = ''
+trailing_diamond = ''
+background = 'p:language'
+foreground = 'p:language-foreground'
+template = ' {{ .Env.PYTHON_SEGMENT }} '
 
 ######### DOCKER #########
 
