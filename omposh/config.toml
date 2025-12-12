@@ -30,9 +30,9 @@ secondary = '#a90000'
 secondary-accent = '#a17a00'
 
 # [transient_prompt]
-#   template = "<p:teal,transparent></><p:on_teal,p:teal>   </><p:teal,transparent></> "
-#   foreground = "p:teal"
-#   background = "transparent"
+#   template = '<p:teal,transparent></><p:on_teal,p:teal>   </><p:teal,transparent></> '
+#   foreground = 'p:teal'
+#   background = 'transparent'
 #   newline = true
 
 [secondary_prompt]
@@ -55,10 +55,10 @@ trailing_diamond = ''
 background = 'p:shell'
 foreground = 'p:shell-foreground'
 templates = [
-  "{{ if eq .Name 'zsh' }}  {{ end }}",
-  "{{ if eq .Name 'bash' }}  {{ end }}",
-  "{{ if eq .Name 'fish' }}   {{ end }}",
-  "{{ if eq .Name 'nu' }} 󰫻󰬂 {{ end }}",
+  '{{ if eq .Name "zsh" }}  {{ end }}',
+  '{{ if eq .Name "bash" }}  {{ end }}',
+  '{{ if eq .Name "fish" }}   {{ end }}',
+  '{{ if eq .Name "nu" }} 󰫻󰬂 {{ end }}',
 ]
 templates_logic = 'first_match'
 
@@ -182,22 +182,23 @@ type = 'prompt'
 alignment = 'right'
 
 [[blocks.segments]]
-template = '󰄉 {{ .FormattedMs }} '
-foreground = 'p:exectime-foreground'
 type = 'executiontime'
 style = 'plain'
-
-[blocks.segments.options]
-threshold = 1000
+foreground = 'p:exectime-foreground'
+template = '󰄉 {{ .FormattedMs }} '
+options = { threshold = 1000 }
 
 [[blocks.segments]]
-leading_diamond = ''
-trailing_diamond = ''
-template = '{{if .Segments.Status.Error }}{{ .Segments.Status.String }}{{ end }}'
-foreground = 'p:error-foreground'
-background = 'p:error'
 type = 'text'
 style = 'diamond'
+leading_diamond = ''
+trailing_diamond = ''
+foreground = 'p:error-foreground'
+background = 'p:error'
+template = '{{if .Segments.Status.Error }}{{ .Segments.Status.String }}{{ end }}'
+
+
+######### NEW_LINE - SHELL LEVEL PROMPT #########
 
 [[blocks]]
 type = 'prompt'
@@ -205,8 +206,8 @@ alignment = 'left'
 newline = true
 
 [[blocks.segments]]
-template = '{{ if .Env.SHLVL_RELATIVE }}{{ repeat (.Env.SHLVL_RELATIVE | int) "❯" }}{{ else }}{{ repeat .SHLVL "❯" }}{{ end }}'
-foreground = 'p:prompt'
-background = 'transparent'
 type = 'text'
 style = 'plain'
+background = 'transparent'
+foreground = 'p:prompt'
+template = '{{ if .Env.SHLVL_RELATIVE }}{{ repeat (.Env.SHLVL_RELATIVE | int) "❯" }}{{ else }}{{ repeat .SHLVL "❯" }}{{ end }}'
