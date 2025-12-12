@@ -71,6 +71,7 @@ foreground = 'p:root-foreground'
 background = 'p:root'
 template = '  '
 
+# using shell function set_poshcontext()
 [[blocks.segments]]
 type = 'text'
 style = 'diamond'
@@ -82,6 +83,7 @@ template = ' {{ .Env.JOBCOUNT }} '
 
 ######### DIRECTORY #########
 
+# using shell function set_poshcontext()
 [[blocks.segments]]
 type = 'text'
 style = 'diamond'
@@ -139,6 +141,7 @@ foreground = 'p:language-foreground'
 template = '  {{ .Full }} '
 
 # javascript: deno, svelte, react, node
+# using shell function set_poshcontext()
 [[blocks.segments]]
 type = 'text'
 style = 'diamond'
@@ -175,6 +178,14 @@ background_templates = [
   '{{ if or (gt .Ahead 0) (gt .Behind 0) }}p:git-diverged{{ end }}',
 ]
 options = { branch_template = '{{ trunc 25 .Branch }}', fetch_status = true, fetch_upstream_icon = true }
+
+######### BUN #########
+
+[[blocks.segments]]
+type = "bun"
+style = "plain"
+foreground = "#3C82F6"
+template = "  {{ .Full }} "
 
 ######### STATUS ENDCAP #########
 
@@ -217,6 +228,7 @@ type = 'prompt'
 alignment = 'left'
 newline = true
 
+# using shell function set_poshcontext()
 [[blocks.segments]]
 type = 'text'
 style = 'plain'
