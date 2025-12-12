@@ -62,6 +62,8 @@ templates = [
 ]
 templates_logic = 'first_match'
 
+######### ROOT #########
+
 [[blocks.segments]]
 type = 'root'
 style = 'diamond'
@@ -70,6 +72,8 @@ trailing_diamond = ''
 foreground = 'p:root-foreground'
 background = 'p:root'
 template = '  '
+
+######### JOBS #########
 
 # using shell function set_poshcontext()
 [[blocks.segments]]
@@ -80,6 +84,17 @@ trailing_diamond = ''
 background = 'p:jobs'
 foreground = 'p:jobs-foreground'
 template = ' {{ .Env.JOBCOUNT }} '
+
+######### SSH #########
+
+[[blocks.segments]]
+type = "session"
+style = "diamond"
+leading_diamond = ""
+trailing_diamond = ""
+background = 'p:jobs'
+foreground = 'p:jobs-foreground'
+template = "{{ if .SSHSession }} {{ end }}{{ .UserName }}"
 
 ######### DIRECTORY #########
 
