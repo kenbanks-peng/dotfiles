@@ -157,7 +157,7 @@ leading_diamond = ''
 trailing_diamond = ''
 background = 'p:language'
 foreground = 'p:language-foreground'
-template = ' \uf308 {{ .Context }} '
+template = '  '
 
 ######### GIT #########
 
