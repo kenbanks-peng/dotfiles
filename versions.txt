@@ -11,7 +11,7 @@ boop 1.4.0
 claude 0.14.10,fe3f5688c1c2a4b648d1bf6d9784d62ef9fc336a
 claude-code 2.0.67
 cleanshot 4.8.6
-codex 0.71.0
+codex 0.72.0
 container 0.6.0
 cursor 2.2.20,b3573281c4775bfc6bba466bf6563d3d498d1074
 daisydisk 4.32
@@ -34,7 +34,7 @@ karabiner-elements 15.7.0
 keyclu 0.30.2
 languagetool-desktop 2.9.4
 linear-linear 1.28.6,251002av7g3go28
-microsoft-auto-update 4.81.25111027
+microsoft-auto-update 4.81.25121042
 microsoft-outlook 16.103.25120717
 obsidian 1.10.6
 omnifocus 4.8.6
@@ -114,7 +114,7 @@ dblab 0.34.2
 deno 2.6.0
 direnv 2.37.1
 doppler 3.75.1
-dotenvx 1.51.1
+dotenvx 1.51.2
 dua-cli 2.32.2
 duf 0.9.1
 dust 1.2.3
@@ -137,7 +137,7 @@ gawk 5.3.1
 gcc 15.2.0
 gd 2.3.3_6
 gdk-pixbuf 2.44.4
-gemini-cli 0.20.0
+gemini-cli 0.20.2
 gettext 0.26_1
 gh 2.83.2
 giflib 5.2.2
@@ -297,11 +297,11 @@ nspr 4.38.2
 nss 3.119.1
 numpy 2.3.5
 nushell 0.109.1
-oh-my-posh 28.2.1
+oh-my-posh 28.2.2
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 1.0.150
+opencode 1.0.152
 opencore-amr 0.1.6
 openexr 3.4.4
 openjdk 25.0.1
@@ -390,7 +390,7 @@ tree-sitter 0.26.2
 tree-sitter@0.25 0.25.10
 ttyd 1.7.7_6
 turso 0.3.2
-typst 0.14.1
+typst 0.14.2
 uchardet 0.0.8
 unbound 1.24.2
 unibilium 2.1.2
@@ -435,7 +435,8 @@ go:github.com/melkeydev/go-blueprint                         0.10.11            
 go:github.com/nizos/tdd-guard/reporters/go/cmd/tdd-guard-go  v0.2.1             ~/.config/mise/mise.toml  v0.2.1
 go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.42
 go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.43
-go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.44     ~/.config/mise/mise.toml  latest
+go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.44
+go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.45     ~/.config/mise/mise.toml  latest
 go:golang.org/x/tools/gopls                                  0.21.0             ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck                        0.7.0-0.dev        ~/.config/mise/mise.toml  latest
 nix:bun                                                      1.3.3 (symlink)    ~/.config/mise/mise.toml  latest
