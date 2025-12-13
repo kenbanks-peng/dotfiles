@@ -55,7 +55,7 @@ typeface 4.2.1,4763
 visual-studio-code 1.107.0
 vlc 3.0.21
 wezterm 20240203-110809,5046fc22
-yaak 2025.9.1
+yaak 2025.9.3
 zed 0.216.1
 zoom 6.6.11.70003
 
@@ -357,7 +357,7 @@ sevenzip 25.01
 shaderc 2025.5
 shared-mime-info 2.4_1
 shellcheck 0.11.0
-simdjson 4.2.2
+simdjson 4.2.3
 sk 0.20.5
 sketchybar 2.23.0
 snappy 1.2.2
@@ -386,7 +386,7 @@ thrift 0.22.0
 tmux 3.6a
 tokei 13.0.0
 tree 2.2.1
-tree-sitter 0.26.2
+tree-sitter 0.26.3
 tree-sitter@0.25 0.25.10
 ttyd 1.7.7_6
 turso 0.3.2
@@ -414,7 +414,7 @@ xz 5.8.1
 yabai 7.1.16
 yazi 25.5.31
 yq 4.49.2
-yt-dlp 2025.11.12_1
+yt-dlp 2025.12.8
 yyjson 0.12.0
 z3 4.15.4
 zellij 0.43.1
