@@ -301,7 +301,7 @@ oh-my-posh 28.2.2
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 1.0.152
+opencode 1.0.153
 opencore-amr 0.1.6
 openexr 3.4.4
 openjdk 25.0.1
