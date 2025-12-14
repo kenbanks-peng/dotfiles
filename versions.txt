@@ -9,7 +9,7 @@ atuin-desktop 0.2.11
 audacity 3.7.7
 boop 1.4.0
 claude 0.14.10,fe3f5688c1c2a4b648d1bf6d9784d62ef9fc336a
-claude-code 2.0.67
+claude-code 2.0.69
 cleanshot 4.8.6
 codex 0.72.0
 container 0.6.0
@@ -64,7 +64,7 @@ BREW FORMULAS
 abseil 20250814.1
 age 1.2.1
 aom 3.13.1
-apache-arrow 22.0.0
+apache-arrow 22.0.0_1
 aribb24 1.0.4
 asciinema 3.0.1
 ast-grep 0.40.1
@@ -129,7 +129,7 @@ flock 0.4.0
 fontconfig 2.17.1
 freetype 2.14.1_1
 frei0r 2.5.1
-fresh-editor 0.1.43
+fresh-editor 0.1.44
 fribidi 1.0.16
 fx 39.2.0
 fzf 0.67.0
@@ -164,7 +164,7 @@ gping 1.20.1
 graphite2 1.3.14
 graphviz 14.1.0
 grex 1.4.6
-grpc 1.76.0_1
+grpc 1.76.0_2
 gts 0.7.6_3
 harfbuzz 12.2.0_1
 hexyl 0.16.0
@@ -330,7 +330,7 @@ poppler 25.12.0
 portal 1.2.3
 posting 2.9.2
 procs 0.14.10
-protobuf 33.1
+protobuf 33.2
 pstree 2.40
 pv 1.10.2
 pycparser 2.23_1
@@ -436,7 +436,8 @@ go:github.com/nizos/tdd-guard/reporters/go/cmd/tdd-guard-go  v0.2.1             
 go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.42
 go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.43
 go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.44
-go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.45     ~/.config/mise/mise.toml  latest
+go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.45
+go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.46     ~/.config/mise/mise.toml  latest
 go:golang.org/x/tools/gopls                                  0.21.0             ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck                        0.7.0-0.dev        ~/.config/mise/mise.toml  latest
 nix:bun                                                      1.3.3 (symlink)    ~/.config/mise/mise.toml  latest
