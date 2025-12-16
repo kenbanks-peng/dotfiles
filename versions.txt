@@ -9,9 +9,9 @@ atuin-desktop 0.2.11
 audacity 3.7.7
 boop 1.4.0
 claude 0.14.10,fe3f5688c1c2a4b648d1bf6d9784d62ef9fc336a
-claude-code 2.0.69
+claude-code 2.0.70
 cleanshot 4.8.6
-codex 0.72.0
+codex 0.73.0
 container 0.6.0
 cursor 2.2.20,b3573281c4775bfc6bba466bf6563d3d498d1074
 daisydisk 4.32
@@ -32,13 +32,13 @@ grandperspective 3.6
 iterm2 3.6.6
 karabiner-elements 15.7.0
 keyclu 0.30.2
-languagetool-desktop 2.9.4
+languagetool-desktop 2.9.5
 linear-linear 1.28.6,251002av7g3go28
 microsoft-auto-update 4.81.25121042
 microsoft-outlook 16.103.25120717
 obsidian 1.10.6
 omnifocus 4.8.6
-onyx 4.9.2
+onyx 4.9.3
 opcode 0.2.0
 orbstack 2.0.5,19905
 pdf-pals 1.9.0
@@ -51,13 +51,13 @@ skim 1.7.11
 symboliclinker 2.2
 syntax-highlight 2.1.27
 transmission 4.0.6
-typeface 4.2.1,4763
+typeface 4.2.2,4839
 visual-studio-code 1.107.0
 vlc 3.0.21
 wezterm 20240203-110809,5046fc22
 yaak 2025.9.3
 zed 0.216.1
-zoom 6.6.11.70003
+zoom 6.7.0.71075
 
 BREW FORMULAS
 -------------
@@ -67,7 +67,7 @@ aom 3.13.1
 apache-arrow 22.0.0_1
 aribb24 1.0.4
 asciinema 3.0.1
-ast-grep 0.40.2
+ast-grep 0.40.3
 autoconf 2.72
 aws-c-auth 0.9.4
 aws-c-cal 0.9.13
@@ -79,14 +79,14 @@ aws-c-io 0.24.0
 aws-c-mqtt 0.13.3
 aws-c-s3 0.11.3
 aws-c-sdkutils 0.2.4
-aws-checksums 0.2.7
+aws-checksums 0.2.8
 aws-crt-cpp 0.36.0
 aws-sdk-cpp 1.11.705
 bandwhich 0.23.1
 bash 5.3.9
 bat 0.26.1
 bat-extras 2024.08.24
-biome 2.3.8
+biome 2.3.9
 borders 1.8.4
 brotli 1.2.0
 btop 1.4.5
@@ -151,7 +151,7 @@ glances 4.4.1_1
 glib 2.86.3
 glow 2.1.1
 gmp 6.3.0
-gnu-getopt 2.41.2
+gnu-getopt 2.41.3
 gnu-sed 4.9
 gnupg 2.4.8
 gnutls 3.8.11
@@ -175,7 +175,7 @@ hurl 7.1.0
 hyperfine 1.20.0
 icu4c@77 77.1_1
 icu4c@78 78.1
-imagemagick 7.1.2-10
+imagemagick 7.1.2-11
 imath 3.2.2
 imgcat 1.0.22
 isl 0.27
@@ -297,11 +297,11 @@ nspr 4.38.2
 nss 3.119.1
 numpy 2.3.5
 nushell 0.109.1
-oh-my-posh 28.2.2
+oh-my-posh 28.3.0
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 1.0.153
+opencode 1.0.162
 opencore-amr 0.1.6
 openexr 3.4.4
 openjdk 25.0.1
@@ -332,7 +332,7 @@ posting 2.9.2
 procs 0.14.10
 protobuf 33.2
 pstree 2.40
-pv 1.10.2
+pv 1.10.3
 pycparser 2.23_1
 pydantic 2.12.5
 pygit2 1.19.0
@@ -362,7 +362,7 @@ sk 0.20.5
 sketchybar 2.23.0
 snappy 1.2.2
 sniffnet 1.4.2
-snyk-cli 1.1301.1
+snyk-cli 1.1301.2
 sox 14.4.2_6
 spark 1.0.1
 speex 1.2.1
@@ -438,7 +438,8 @@ go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.43
 go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.44
 go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.45
 go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.46
-go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.47     ~/.config/mise/mise.toml  latest
+go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.47
+go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.48     ~/.config/mise/mise.toml  latest
 go:golang.org/x/tools/gopls                                  0.21.0             ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck                        0.7.0-0.dev        ~/.config/mise/mise.toml  latest
 nix:bun                                                      1.3.3 (symlink)    ~/.config/mise/mise.toml  latest
@@ -452,7 +453,7 @@ npm:@opentui/react                                           0.1.60             
 npm:github-markdown-css                                      5.8.1              ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                                                5.2.5              ~/.config/mise/mise.toml  latest
 npm:nuekit                                                   2.0.0-beta.2       ~/.config/mise/mise.toml  latest
-npm:vite                                                     7.2.7              ~/.config/mise/mise.toml  latest
+npm:vite                                                     7.3.0              ~/.config/mise/mise.toml  latest
 pipx:SuperClaude                                             4.1.9              ~/.config/mise/mise.toml  latest
 pipx:meson                                                   1.10.0             ~/.config/mise/mise.toml  latest
 pipx:ninja                                                   1.13.0             ~/.config/mise/mise.toml  latest
