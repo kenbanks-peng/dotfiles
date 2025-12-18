@@ -2,14 +2,14 @@ BREW CASKS
 ----------
 aerospace 0.20.0-Beta
 affinity 3.0.2,3912
-antigravity 1.11.17,6639170008514560
+antigravity 1.12.4,5388582906101760
 anybar 0.2.3
 arc 1.125.1,72271
 atuin-desktop 0.2.11
 audacity 3.7.7
 boop 1.4.0
 claude 0.14.10,fe3f5688c1c2a4b648d1bf6d9784d62ef9fc336a
-claude-code 2.0.70
+claude-code 2.0.72
 cleanshot 4.8.6
 codex 0.73.0
 container 0.6.0
@@ -26,7 +26,7 @@ font-symbols-only-nerd-font 3.4.0
 font-tex-gyre-termes 2.004
 ghostty 1.2.3
 git-credential-manager 2.6.1
-google-chrome 143.0.7499.110
+google-chrome 143.0.7499.147
 google-drive 118.0.1
 grandperspective 3.6
 iterm2 3.6.6
@@ -35,7 +35,7 @@ keyclu 0.30.2
 languagetool-desktop 2.9.5
 linear-linear 1.28.6,251002av7g3go28
 microsoft-auto-update 4.81.25121042
-microsoft-outlook 16.103.25120717
+microsoft-outlook 16.104.25121423
 obsidian 1.10.6
 omnifocus 4.8.6
 onyx 4.9.3
@@ -43,7 +43,7 @@ opcode 0.2.0
 orbstack 2.0.5,19905
 pdf-pals 1.9.0
 quarto 1.8.26
-raycast 1.103.10
+raycast 1.104.0
 screen-studio 3.5.1-4051
 sf-symbols 7.0,115
 sip-app 4.1.1
@@ -52,11 +52,11 @@ symboliclinker 2.2
 syntax-highlight 2.1.27
 transmission 4.0.6
 typeface 4.2.2,4839
-visual-studio-code 1.107.0
+visual-studio-code 1.107.1
 vlc 3.0.21
 wezterm 20240203-110809,5046fc22
 yaak 2025.9.3
-zed 0.216.1
+zed 0.217.2
 zoom 6.7.0.71075
 
 BREW FORMULAS
@@ -80,13 +80,13 @@ aws-c-mqtt 0.13.3
 aws-c-s3 0.11.3
 aws-c-sdkutils 0.2.4
 aws-checksums 0.2.8
-aws-crt-cpp 0.36.0
+aws-crt-cpp 0.36.1
 aws-sdk-cpp 1.11.705
 bandwhich 0.23.1
 bash 5.3.9
 bat 0.26.1
 bat-extras 2024.08.24
-biome 2.3.9
+biome 2.3.10
 borders 1.8.4
 brotli 1.2.0
 btop 1.4.5
@@ -118,7 +118,7 @@ dotenvx 1.51.2
 dua-cli 2.32.2
 duf 0.9.1
 dust 1.2.3
-dvc 3.64.2
+dvc 3.64.2_1
 espeak-ng 1.52.0
 fastfetch 2.56.0
 fd 10.3.0
@@ -129,7 +129,7 @@ flock 0.4.0
 fontconfig 2.17.1
 freetype 2.14.1_1
 frei0r 2.5.1
-fresh-editor 0.1.44
+fresh-editor 0.1.52
 fribidi 1.0.16
 fx 39.2.0
 fzf 0.67.0
@@ -137,7 +137,7 @@ gawk 5.3.1
 gcc 15.2.0
 gd 2.3.3_6
 gdk-pixbuf 2.44.4
-gemini-cli 0.20.2
+gemini-cli 0.21.1
 gettext 0.26_1
 gh 2.83.2
 giflib 5.2.2
@@ -162,7 +162,7 @@ gpgme 2.0.1
 gpgmepp 2.0.0
 gping 1.20.1
 graphite2 1.3.14
-graphviz 14.1.0
+graphviz 14.1.1
 grex 1.4.6
 grpc 1.76.0_2
 gts 0.7.6_3
@@ -222,7 +222,7 @@ libnghttp2 1.68.0
 libnghttp3 1.13.1
 libngtcp2 1.18.0
 libogg 1.3.6
-libomp 21.1.7
+libomp 21.1.8
 libplacebo 7.351.0
 libpng 1.6.53
 libraw 0.21.4
@@ -259,7 +259,7 @@ libyaml 0.2.5
 libzip 1.11.4
 lima 2.0.2
 little-cms2 2.17
-llvm 21.1.7
+llvm 21.1.8
 lolcat 100.0.1
 lpeg 1.1.0
 lua 5.4.8
@@ -301,14 +301,14 @@ oh-my-posh 28.3.0
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 1.0.162
+opencode 1.0.166
 opencore-amr 0.1.6
 openexr 3.4.4
 openjdk 25.0.1
 openjpeg 2.5.4
 openjph 0.25.3
 openssl@3 3.6.0
-opus 1.5.2
+opus 1.6
 opusfile 0.12_1
 ov 0.50.2
 p11-kit 0.25.10
@@ -344,7 +344,7 @@ rav1e 0.8.1
 rclone 1.72.1
 re2 20251105
 readline 8.3.3
-repomix 1.10.1
+repomix 1.10.2
 resvg 0.45.1
 rich-cli 1.8.1_1
 ripgrep 15.1.0
@@ -407,10 +407,10 @@ wget 1.25.0
 wgo 0.6.2
 x264 r3222
 x265 4.1
-xh 0.25.0
+xh 0.25.3
 xorgproto 2024.1
 xvid 1.3.7
-xz 5.8.1
+xz 5.8.2
 yabai 7.1.16
 yazi 25.5.31
 yq 4.50.1
@@ -439,7 +439,8 @@ go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.44
 go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.45
 go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.46
 go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.47
-go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.48     ~/.config/mise/mise.toml  latest
+go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.48
+go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.49     ~/.config/mise/mise.toml  latest
 go:golang.org/x/tools/gopls                                  0.21.0             ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck                        0.7.0-0.dev        ~/.config/mise/mise.toml  latest
 nix:bun                                                      1.3.3 (symlink)    ~/.config/mise/mise.toml  latest
@@ -448,8 +449,8 @@ nix:ruby                                                     3.4.7 (symlink)    
 nix:rustup                                                   1.28.2 (symlink)   ~/.config/mise/mise.toml  latest
 nix:uv                                                       0.9.15 (symlink)   ~/.config/mise/mise.toml  latest
 npm:@langwatch/better-agents                                 0.1.20             ~/.config/mise/mise.toml  latest
-npm:@opentui/core                                            0.1.60             ~/.config/mise/mise.toml  latest
-npm:@opentui/react                                           0.1.60             ~/.config/mise/mise.toml  latest
+npm:@opentui/core                                            0.1.61             ~/.config/mise/mise.toml  latest
+npm:@opentui/react                                           0.1.61             ~/.config/mise/mise.toml  latest
 npm:github-markdown-css                                      5.8.1              ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                                                5.2.5              ~/.config/mise/mise.toml  latest
 npm:nuekit                                                   2.0.0-beta.2       ~/.config/mise/mise.toml  latest
