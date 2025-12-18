@@ -13,7 +13,7 @@ claude-code 2.0.72
 cleanshot 4.8.6
 codex 0.73.0
 container 0.6.0
-cursor 2.2.20,b3573281c4775bfc6bba466bf6563d3d498d1074
+cursor 2.2.36,55c9bc11e99cedd1fb93fbb7996abf779c58315f
 daisydisk 4.32
 deepchat 0.5.1
 espanso 2.3.0
@@ -43,7 +43,7 @@ opcode 0.2.0
 orbstack 2.0.5,19905
 pdf-pals 1.9.0
 quarto 1.8.26
-raycast 1.104.0
+raycast 1.104.1
 screen-studio 3.5.1-4051
 sf-symbols 7.0,115
 sip-app 4.1.1
@@ -111,7 +111,7 @@ curlie 1.8.2
 d2 0.7.1
 dav1d 1.5.2
 dblab 0.34.2
-deno 2.6.0
+deno 2.6.1
 direnv 2.37.1
 doppler 3.75.1
 dotenvx 1.51.2
@@ -120,7 +120,7 @@ duf 0.9.1
 dust 1.2.3
 dvc 3.64.2_1
 espeak-ng 1.52.0
-fastfetch 2.56.0
+fastfetch 2.56.1
 fd 10.3.0
 ffmpeg 8.0.1
 figlet 2.2.5
@@ -137,7 +137,7 @@ gawk 5.3.1
 gcc 15.2.0
 gd 2.3.3_6
 gdk-pixbuf 2.44.4
-gemini-cli 0.21.1
+gemini-cli 0.21.2
 gettext 0.26_1
 gh 2.83.2
 giflib 5.2.2
@@ -297,11 +297,11 @@ nspr 4.38.2
 nss 3.119.1
 numpy 2.3.5
 nushell 0.109.1
-oh-my-posh 28.3.0
+oh-my-posh 28.3.1
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 1.0.166
+opencode 1.0.167
 opencore-amr 0.1.6
 openexr 3.4.4
 openjdk 25.0.1
@@ -357,7 +357,7 @@ sevenzip 25.01
 shaderc 2025.5
 shared-mime-info 2.4_1
 shellcheck 0.11.0
-simdjson 4.2.3
+simdjson 4.2.4
 sk 0.20.5
 sketchybar 2.23.0
 snappy 1.2.2
