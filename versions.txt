@@ -9,7 +9,7 @@ atuin-desktop 0.2.11
 audacity 3.7.7
 boop 1.4.0
 claude 0.14.10,fe3f5688c1c2a4b648d1bf6d9784d62ef9fc336a
-claude-code 2.0.72
+claude-code 2.0.73
 cleanshot 4.8.6
 codex 0.75.0
 container 0.6.0
@@ -26,7 +26,7 @@ font-symbols-only-nerd-font 3.4.0
 font-tex-gyre-termes 2.004
 ghostty 1.2.3
 git-credential-manager 2.6.1
-google-chrome 143.0.7499.147
+google-chrome 143.0.7499.170
 google-drive 118.0.1
 grandperspective 3.6
 iterm2 3.6.6
@@ -137,7 +137,7 @@ gawk 5.3.1
 gcc 15.2.0
 gd 2.3.3_6
 gdk-pixbuf 2.44.4
-gemini-cli 0.21.2
+gemini-cli 0.21.3
 gettext 0.26_1
 gh 2.83.2
 giflib 5.2.2
@@ -301,7 +301,7 @@ oh-my-posh 28.3.1
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 1.0.168
+opencode 1.0.170
 opencore-amr 0.1.6
 openexr 3.4.4
 openjdk 25.0.1
@@ -449,8 +449,8 @@ nix:ruby                                                     3.4.7 (symlink)    
 nix:rustup                                                   1.28.2 (symlink)   ~/.config/mise/mise.toml  latest
 nix:uv                                                       0.9.15 (symlink)   ~/.config/mise/mise.toml  latest
 npm:@langwatch/better-agents                                 0.1.20             ~/.config/mise/mise.toml  latest
-npm:@opentui/core                                            0.1.61             ~/.config/mise/mise.toml  latest
-npm:@opentui/react                                           0.1.61             ~/.config/mise/mise.toml  latest
+npm:@opentui/core                                            0.1.62             ~/.config/mise/mise.toml  latest
+npm:@opentui/react                                           0.1.62             ~/.config/mise/mise.toml  latest
 npm:github-markdown-css                                      5.8.1              ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                                                5.2.5              ~/.config/mise/mise.toml  latest
 npm:nuekit                                                   2.0.0-beta.2       ~/.config/mise/mise.toml  latest
