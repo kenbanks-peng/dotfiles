@@ -4,14 +4,14 @@ aerospace 0.20.0-Beta
 affinity 3.0.2,3912
 antigravity 1.12.4,5388582906101760
 anybar 0.2.3
-arc 1.125.1,72271
+arc 1.126.0,72533
 atuin-desktop 0.2.11
 audacity 3.7.7
 boop 1.4.0
 claude 0.14.10,fe3f5688c1c2a4b648d1bf6d9784d62ef9fc336a
 claude-code 2.0.72
 cleanshot 4.8.6
-codex 0.73.0
+codex 0.75.0
 container 0.6.0
 cursor 2.2.36,55c9bc11e99cedd1fb93fbb7996abf779c58315f
 daisydisk 4.32
@@ -56,7 +56,7 @@ visual-studio-code 1.107.1
 vlc 3.0.21
 wezterm 20240203-110809,5046fc22
 yaak 2025.9.3
-zed 0.217.2
+zed 0.217.3
 zoom 6.7.0.71075
 
 BREW FORMULAS
@@ -129,7 +129,7 @@ flock 0.4.0
 fontconfig 2.17.1
 freetype 2.14.1_1
 frei0r 2.5.1
-fresh-editor 0.1.52
+fresh-editor 0.1.55
 fribidi 1.0.16
 fx 39.2.0
 fzf 0.67.0
@@ -155,7 +155,7 @@ gnu-getopt 2.41.3
 gnu-sed 4.9
 gnupg 2.4.8
 gnutls 3.8.11
-go-task 3.45.5
+go-task 3.46.2
 gobang 0.1.0-alpha.5
 gpg-tui 0.11.1_1
 gpgme 2.0.1
@@ -301,7 +301,7 @@ oh-my-posh 28.3.1
 onefetch 2.25.0
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 1.0.167
+opencode 1.0.168
 opencore-amr 0.1.6
 openexr 3.4.4
 openjdk 25.0.1
@@ -458,7 +458,7 @@ npm:vite                                                     7.3.0              
 pipx:SuperClaude                                             4.1.9              ~/.config/mise/mise.toml  latest
 pipx:meson                                                   1.10.0             ~/.config/mise/mise.toml  latest
 pipx:ninja                                                   1.13.0             ~/.config/mise/mise.toml  latest
-pipx:ruff                                                    0.14.9             ~/.config/mise/mise.toml  latest
+pipx:ruff                                                    0.14.10            ~/.config/mise/mise.toml  latest
 pipx:seagoat                                                 0.54.17            ~/.config/mise/mise.toml  latest
 
 RUSTUP/CARGO
