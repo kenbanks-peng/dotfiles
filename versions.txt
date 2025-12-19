@@ -13,7 +13,7 @@ claude-code 2.0.73
 cleanshot 4.8.6
 codex 0.75.0
 container 0.6.0
-cursor 2.2.36,55c9bc11e99cedd1fb93fbb7996abf779c58315f
+cursor 2.2.43,32cfbe848b35d9eb320980195985450f244b303d
 daisydisk 4.32
 deepchat 0.5.1
 espanso 2.3.0
@@ -34,6 +34,7 @@ karabiner-elements 15.7.0
 keyclu 0.30.2
 languagetool-desktop 2.9.5
 linear-linear 1.28.6,251002av7g3go28
+lunatask 2.1.17
 microsoft-auto-update 4.81.25121042
 microsoft-outlook 16.104.25121423
 obsidian 1.10.6
