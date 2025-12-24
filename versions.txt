@@ -2,20 +2,20 @@ BREW CASKS
 ----------
 aerospace 0.20.0-Beta
 affinity 3.0.2,3912
-antigravity 1.12.4,5388582906101760
+antigravity 1.13.3,4533425205018624
 anybar 0.2.3
-arc 1.126.0,72533
+arc 1.126.1,72660
 atuin-desktop 0.2.11
 audacity 3.7.7
 boop 1.4.0
 claude 0.14.10,fe3f5688c1c2a4b648d1bf6d9784d62ef9fc336a
-claude-code 2.0.73
-cleanshot 4.8.6
-codex 0.75.0
+claude-code 2.0.76
+cleanshot 4.8.7
+codex 0.77.0
 container 0.6.0
 cursor 2.2.43,32cfbe848b35d9eb320980195985450f244b303d
 daisydisk 4.32
-deepchat 0.5.1
+deepchat 0.5.3
 espanso 2.3.0
 font-hasklug-nerd-font 3.4.0
 font-ia-writer-quattro latest
@@ -28,13 +28,14 @@ ghostty 1.2.3
 git-credential-manager 2.6.1
 google-chrome 143.0.7499.170
 google-drive 118.0.1
-grandperspective 3.6
+grandperspective 3.6.1
+helium-browser 0.7.7.1
 iterm2 3.6.6
 karabiner-elements 15.7.0
 keyclu 0.30.2
 languagetool-desktop 2.9.5
 linear-linear 1.28.6,251002av7g3go28
-lunatask 2.1.17
+lunatask 2.1.19
 microsoft-auto-update 4.81.25121042
 microsoft-outlook 16.104.25121423
 obsidian 1.10.6
@@ -75,8 +76,8 @@ aws-c-cal 0.9.13
 aws-c-common 0.12.6
 aws-c-compression 0.3.1
 aws-c-event-stream 0.5.9
-aws-c-http 0.10.7
-aws-c-io 0.24.0
+aws-c-http 0.10.8
+aws-c-io 0.24.2
 aws-c-mqtt 0.13.3
 aws-c-s3 0.11.3
 aws-c-sdkutils 0.2.4
@@ -112,14 +113,14 @@ curlie 1.8.2
 d2 0.7.1
 dav1d 1.5.2
 dblab 0.34.2
-deno 2.6.1
+deno 2.6.3
 direnv 2.37.1
 doppler 3.75.1
 dotenvx 1.51.2
 dua-cli 2.32.2
 duf 0.9.1
 dust 1.2.3
-dvc 3.64.2_1
+dvc 3.65.0
 espeak-ng 1.52.0
 fastfetch 2.56.1
 fd 10.3.0
@@ -130,7 +131,7 @@ flock 0.4.0
 fontconfig 2.17.1
 freetype 2.14.1_1
 frei0r 2.5.1
-fresh-editor 0.1.55
+fresh-editor 0.1.59
 fribidi 1.0.16
 fx 39.2.0
 fzf 0.67.0
@@ -138,7 +139,7 @@ gawk 5.3.1
 gcc 15.2.0
 gd 2.3.3_6
 gdk-pixbuf 2.44.4
-gemini-cli 0.21.3
+gemini-cli 0.22.2
 gettext 0.26_1
 gh 2.83.2
 giflib 5.2.2
@@ -156,7 +157,7 @@ gnu-getopt 2.41.3
 gnu-sed 4.9
 gnupg 2.4.8
 gnutls 3.8.11
-go-task 3.46.2
+go-task 3.46.3
 gobang 0.1.0-alpha.5
 gpg-tui 0.11.1_1
 gpgme 2.0.1
@@ -179,6 +180,7 @@ icu4c@78 78.1
 imagemagick 7.1.2-11
 imath 3.2.2
 imgcat 1.0.22
+iproute2mac 1.6.0
 isl 0.27
 jasper 4.2.8
 jc 1.25.6
@@ -193,11 +195,11 @@ jrnl 4.2.1
 json-c 0.18
 just 1.45.0
 lame 3.100
-lazydocker 0.24.2
+lazydocker 0.24.3
 lazygit 0.57.0
 lazyjj 0.6.1
 lazyjournal 0.8.2
-lazysql 0.4.3
+lazysql 0.4.5
 leptonica 1.86.0
 lf 40
 libarchive 3.8.4
@@ -220,13 +222,13 @@ liblqr 0.4.3
 libmicrohttpd 1.0.2
 libmpc 1.3.1
 libnghttp2 1.68.0
-libnghttp3 1.13.1
-libngtcp2 1.18.0
+libnghttp3 1.14.0
+libngtcp2 1.19.0
 libogg 1.3.6
 libomp 21.1.8
 libplacebo 7.351.0
 libpng 1.6.53
-libraw 0.21.4
+libraw 0.21.5
 librist 0.2.11_1
 librsvg 2.61.3_1
 libsamplerate 0.2.2
@@ -282,8 +284,8 @@ micro 2.0.14
 molten-vk 1.4.0
 mpdecimal 4.0.1
 mpfr 4.2.2
-mpg123 1.33.3
-mpv 0.40.0_5
+mpg123 1.33.4
+mpv 0.41.0
 mujs 1.3.8
 navi 2.24.0
 ncdu 2.9.2
@@ -296,18 +298,18 @@ node 25.2.1
 npth 1.8
 nspr 4.38.2
 nss 3.119.1
-numpy 2.3.5
+numpy 2.4.0
 nushell 0.109.1
-oh-my-posh 28.3.1
-onefetch 2.25.0
+oh-my-posh 28.5.1
+onefetch 2.26.1
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 1.0.170
+opencode 1.0.194
 opencore-amr 0.1.6
-openexr 3.4.4
+openexr 3.4.4_1
 openjdk 25.0.1
 openjpeg 2.5.4
-openjph 0.25.3
+openjph 0.26.0
 openssl@3 3.6.0
 opus 1.6
 opusfile 0.12_1
@@ -345,7 +347,7 @@ rav1e 0.8.1
 rclone 1.72.1
 re2 20251105
 readline 8.3.3
-repomix 1.10.2
+repomix 1.11.0
 resvg 0.45.1
 rich-cli 1.8.1_1
 ripgrep 15.1.0
@@ -409,7 +411,7 @@ wgo 0.6.2
 x264 r3222
 x265 4.1
 xh 0.25.3
-xorgproto 2024.1
+xorgproto 2025.1
 xvid 1.3.7
 xz 5.8.2
 yabai 7.1.16
@@ -441,7 +443,8 @@ go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.45
 go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.46
 go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.47
 go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.48
-go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.49     ~/.config/mise/mise.toml  latest
+go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.49
+go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.51     ~/.config/mise/mise.toml  latest
 go:golang.org/x/tools/gopls                                  0.21.0             ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck                        0.7.0-0.dev        ~/.config/mise/mise.toml  latest
 nix:bun                                                      1.3.3 (symlink)    ~/.config/mise/mise.toml  latest
@@ -450,8 +453,8 @@ nix:ruby                                                     3.4.7 (symlink)    
 nix:rustup                                                   1.28.2 (symlink)   ~/.config/mise/mise.toml  latest
 nix:uv                                                       0.9.15 (symlink)   ~/.config/mise/mise.toml  latest
 npm:@langwatch/better-agents                                 0.1.20             ~/.config/mise/mise.toml  latest
-npm:@opentui/core                                            0.1.62             ~/.config/mise/mise.toml  latest
-npm:@opentui/react                                           0.1.62             ~/.config/mise/mise.toml  latest
+npm:@opentui/core                                            0.1.63             ~/.config/mise/mise.toml  latest
+npm:@opentui/react                                           0.1.63             ~/.config/mise/mise.toml  latest
 npm:github-markdown-css                                      5.8.1              ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                                                5.2.5              ~/.config/mise/mise.toml  latest
 npm:nuekit                                                   2.0.0-beta.2       ~/.config/mise/mise.toml  latest
