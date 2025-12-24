@@ -101,7 +101,7 @@ brew "makensis"
 brew "mcfly"
 brew "melody"
 brew "micro"
-brew "mpv"
+brew "mpv", link: false
 brew "navi"
 brew "ncdu"
 brew "neovim"
