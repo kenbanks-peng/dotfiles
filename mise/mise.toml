@@ -15,8 +15,6 @@
 "npm:vite" = "latest"
 "go:github.com/nizos/tdd-guard/reporters/go/cmd/tdd-guard-go" = "v0.2.1"
 "go:github.com/jfeliu007/goplantuml/cmd/goplantuml" = "latest"
-"go:github.com/melkeydev/go-blueprint" = "latest"
-"go:github.com/h0rv/d2-mcp" = "latest"
 "npm:@opentui/core" = "latest"
 "npm:@opentui/react" = "latest"
 "npm:@langwatch/better-agents" = "latest"
@@ -26,6 +24,9 @@
 "nix:ruby" = "latest"
 "nix:rustup" = "latest"
 "nix:uv" = "latest"
+"github:AndyMik90/Auto-Claude" = "latest"
+"github:melkeydev/go-blueprint" = "latest"
+"github:h0rv/d2-mcp" = "latest"
 
 [settings]
 experimental = true
