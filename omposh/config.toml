@@ -94,7 +94,7 @@ leading_diamond = ""
 trailing_diamond = ""
 background = 'p:jobs'
 foreground = 'p:jobs-foreground'
-template = "{{ if .SSHSession }} {{ end }}{{ .UserName }}"
+template = "{{ if .SSHSession }} {{ end }} ssh "
 
 ######### DIRECTORY #########
 
