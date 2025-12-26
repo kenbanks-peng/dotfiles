@@ -1,0 +1,6 @@
+{
+  "statusLine": {
+    "type": "command",
+    "command": "input=$(cat); model=$(echo \"$input\" | jq -r '.model.display_name'); used=$(echo \"$input\" | jq -r '.context_window.current_usage.input_tokens + .context_window.current_usage.output_tokens + .context_window.current_usage.cache_creation_input_tokens'); total=$(echo \"$input\" | jq -r '.context_window.context_window_size'); pct=$((used * 100 / total)); filled=$((pct / 5)); empty=$((20 - filled)); bar=\"\"; for ((i=0; i<filled; i++)); do bar+=\"█\"; done; for ((i=0; i<empty; i++)); do bar+=\"░\"; done; printf \"%s │ %s %d%%\" \"$model\" \"$bar\" \"$pct\""
+  }
+}
