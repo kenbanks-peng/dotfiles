@@ -1,0 +1,31 @@
+{
+    "session_id": "b43c8527-3e3b-4da0-982a-0a5c336a9856",
+    "transcript_path": "/Users/kenbanks/.claude/projects/-Users-kenbanks--claude/b43c8527-3e3b-4da0-982a-0a5c336a9856.jsonl",
+    "cwd": "/Users/kenbanks/.claude",
+    "model": {
+        "id": "claude-opus-4-5-20251101",
+        "display_name": "Opus 4.5"
+    },
+    "workspace": {
+        "current_dir": "/Users/kenbanks/.claude",
+        "project_dir": "/Users/kenbanks/.claude"
+    },
+    "version": "2.0.76",
+    "output_style": {
+        "name": "default"
+    },
+    "cost": {
+        "total_cost_usd": 0,
+        "total_duration_ms": 1554,
+        "total_api_duration_ms": 0,
+        "total_lines_added": 0,
+        "total_lines_removed": 0
+    },
+    "context_window": {
+        "total_input_tokens": 0,
+        "total_output_tokens": 0,
+        "context_window_size": 200000,
+        "current_usage": null
+    },
+    "exceeds_200k_tokens": false
+}
