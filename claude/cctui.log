@@ -70,3 +70,11 @@
 2025-12-02 12:16:07,103 - cctui - INFO - main:86 - Project path: /Users/kenbanks/Software/Public/dotfiles/sketchybar
 2025-12-02 12:16:07,103 - cctui - INFO - main:87 - Config path: /Users/kenbanks/.config/claude
 2025-12-02 12:16:07,104 - cctui - INFO - main:102 - Configuration loaded successfully
+2025-12-25 19:40:52,870 - cctui - INFO - main:85 - Starting CCTUI application
+2025-12-25 19:40:52,870 - cctui - INFO - main:86 - Project path: /Users/kenbanks/Software/DevBox/typescript/tui
+2025-12-25 19:40:52,870 - cctui - INFO - main:87 - Config path: /Users/kenbanks/.config/claude
+2025-12-25 19:40:52,871 - cctui - INFO - main:102 - Configuration loaded successfully
+2025-12-25 19:43:23,347 - cctui - INFO - main:85 - Starting CCTUI application
+2025-12-25 19:43:23,347 - cctui - INFO - main:86 - Project path: /Users/kenbanks/Software/DevBox/typescript/tui
+2025-12-25 19:43:23,347 - cctui - INFO - main:87 - Config path: /Users/kenbanks/.config/claude
+2025-12-25 19:43:23,348 - cctui - INFO - main:102 - Configuration loaded successfully
