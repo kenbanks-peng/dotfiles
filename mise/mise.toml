@@ -23,7 +23,6 @@
 "nix:ruby" = "latest"
 "nix:rustup" = "latest"
 "nix:uv" = "latest"
-"github:AndyMik90/Auto-Claude" = "latest"
 "github:melkeydev/go-blueprint" = "latest"
 "github:h0rv/d2-mcp" = "latest"
 
