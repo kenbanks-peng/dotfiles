@@ -13,7 +13,7 @@ claude-code 2.0.76
 cleanshot 4.8.7
 codex 0.77.0
 container 0.6.0
-cursor 2.2.43,32cfbe848b35d9eb320980195985450f244b303d
+cursor 2.2.44,20adc1003928b0f1b99305dbaf845656ff81f5d4
 daisydisk 4.32
 deepchat 0.5.3
 espanso 2.3.0
@@ -139,7 +139,7 @@ gawk 5.3.1
 gcc 15.2.0
 gd 2.3.3_6
 gdk-pixbuf 2.44.4
-gemini-cli 0.22.2
+gemini-cli 0.22.4
 gettext 0.26_1
 gh 2.83.2
 giflib 5.2.2
@@ -281,6 +281,7 @@ mbedtls@3 3.6.5
 mcfly 0.9.4
 melody 0.20.0
 micro 2.0.14
+mole 1.14.7
 molten-vk 1.4.0
 mpdecimal 4.0.1
 mpfr 4.2.2
@@ -432,27 +433,18 @@ MISE PACKAGES
 cargo:cargo-cache                                            0.8.3              ~/.config/mise/mise.toml  latest
 cargo:cargo-update                                           18.0.0             ~/.config/mise/mise.toml  latest
 cargo:sbyte                                                  0.3.3              ~/.config/mise/mise.toml  latest
-go:github.com/h0rv/d2-mcp                                    latest             ~/.config/mise/mise.toml  latest
-go:github.com/jfeliu007/goplantuml/cmd/goplantuml            1.6.3              ~/.config/mise/mise.toml  latest
-go:github.com/melkeydev/go-blueprint                         0.10.11            ~/.config/mise/mise.toml  latest
+github:h0rv/d2-mcp                                           1.1.0              ~/.config/mise/mise.toml  latest
+github:melkeydev/go-blueprint                                0.10.11            ~/.config/mise/mise.toml  latest
 go:github.com/nizos/tdd-guard/reporters/go/cmd/tdd-guard-go  v0.2.1             ~/.config/mise/mise.toml  v0.2.1
-go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.42
-go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.43
-go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.44
-go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.45
-go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.46
-go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.47
-go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.48
-go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.49
-go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.51
-go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.52     ~/.config/mise/mise.toml  latest
+go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.52
+go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.53     ~/.config/mise/mise.toml  latest
 go:golang.org/x/tools/gopls                                  0.21.0             ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck                        0.7.0-0.dev        ~/.config/mise/mise.toml  latest
-nix:bun                                                      1.3.3 (symlink)    ~/.config/mise/mise.toml  latest
-nix:nodejs                                                   24.11.1 (symlink)  ~/.config/mise/mise.toml  24
-nix:ruby                                                     3.4.7 (symlink)    ~/.config/mise/mise.toml  latest
+nix:bun                                                      1.3.5 (symlink)    ~/.config/mise/mise.toml  latest
+nix:nodejs                                                   24.12.0 (symlink)  ~/.config/mise/mise.toml  24
+nix:ruby                                                     3.4.8 (symlink)    ~/.config/mise/mise.toml  latest
 nix:rustup                                                   1.28.2 (symlink)   ~/.config/mise/mise.toml  latest
-nix:uv                                                       0.9.15 (symlink)   ~/.config/mise/mise.toml  latest
+nix:uv                                                       0.9.18 (symlink)   ~/.config/mise/mise.toml  latest
 npm:@langwatch/better-agents                                 0.1.20             ~/.config/mise/mise.toml  latest
 npm:@opentui/core                                            0.1.63             ~/.config/mise/mise.toml  latest
 npm:@opentui/react                                           0.1.63             ~/.config/mise/mise.toml  latest
@@ -468,19 +460,7 @@ pipx:seagoat                                                 0.54.17            
 
 RUSTUP/CARGO
 ------------
-Default host: aarch64-apple-darwin
-rustup home:  /Users/kenbanks/Software/rustup
-
-installed toolchains
---------------------
-1.90.0-aarch64-apple-darwin (active, default)
-
-active toolchain
-----------------
-name: 1.90.0-aarch64-apple-darwin
-active because: it's the default toolchain
-installed targets:
-  aarch64-apple-darwin
+No rustup found
 
 UV TOOLS
 --------
