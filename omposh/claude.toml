@@ -3,14 +3,8 @@ version = 4
 final_space = true
 
 [palette]
-shell = '#005b95'
-shell-foreground = '#e5eaf0'
-root = '#a90000'
-root-foreground = '#f4e4e5'
-jobs = '#006b1d'
-jobs-foreground = '#e5ece6'
-directory = '#2f40c2'
-directory-foreground = '#e5e6f2'
+directory = '#006b1d'
+directory-foreground = '#e5ece6'
 language = '#005b95'
 language-foreground = '#e5eaf0'
 git = '#006b1d'
@@ -19,19 +13,13 @@ git-modified = '#a17a00'
 git-diverged = '#8c0888'
 git-ahead = '#8c0888'
 git-behind = '#8c0888'
-status = '#005b95'
-status-foreground = '#e5eaf0'
-status-error = '#a90000'
-exectime-foreground = '#e5eaf0'
-error = '#a90000'
-error-foreground = '#f4e4e5'
-prompt = '#f55c1b'
-secondary = '#a90000'
-secondary-accent = '#a17a00'
-model = '#2f40c2'
-model-foreground = '#e5e6f2'
-context = '#2f40c2'
+model = '#005b95'
+model-foreground = '#e5eaf0'
+context-green = '#006b1d'
+context-yellow = '#a17a00'
+context-orange = '#f55c1b'
 context-foreground = '#e5e6f2'
+
 
 [[blocks]]
 type = 'prompt'
@@ -41,24 +29,13 @@ newline = true
 ######## STARTING CAP ########
 
 [[blocks.segments]]
-type = "text"
+type = "path"
 style = "diamond"
 leading_diamond = ''
 trailing_diamond = ''
-background = 'p:shell'
-foreground = 'p:shell-foreground'
-template = 'ㅤ'
-
-######### CLAUDE MODEL #########
-
-[[blocks.segments]]
-type = "claude"
-style = "diamond"
-leading_diamond = ''
-trailing_diamond = ''
-background = 'p:model'
-foreground = 'p:model-foreground'
-template = " {{ .Model.DisplayName }} "
+background = 'p:directory'
+foreground = 'p:directory-foreground'
+options.style = 'folder'
 
 ######### LANGUAGES #########
 
@@ -148,6 +125,16 @@ background_templates = [
 ]
 options = { branch_template = '{{ trunc 25 .Branch }}', fetch_status = true, fetch_upstream_icon = true }
 
+######### CLAUDE MODEL #########
+
+[[blocks.segments]]
+type = "claude"
+style = "diamond"
+leading_diamond = ''
+trailing_diamond = ''
+background = 'p:model'
+foreground = 'p:model-foreground'
+template = " {{ .Model.DisplayName }} "
 
 ######### CLAUDE CONTEXT #########
 
@@ -155,20 +142,12 @@ options = { branch_template = '{{ trunc 25 .Branch }}', fetch_status = true, fet
 type = "claude"
 style = "diamond"
 leading_diamond = ''
-trailing_diamond = ''
-background = 'p:context'
+trailing_diamond = ''
+background = 'p:context-green'
 foreground = 'p:context-foreground'
 template = " {{ .TokenUsagePercent.String }}% "
-
-######### STATUS ENDCAP #########
-
-[[blocks.segments]]
-type = 'status'
-style = 'accordion'
-leading_powerline_symbol = '<transparent,background></>'
-powerline_symbol = ''
-background = 'p:status'
-foreground = 'p:status-foreground'
-template = '   '
-background_templates = ['{{ if gt .Code 0 }}p:status-error{{ end }}']
-options = { always_enabled = true }
+background_templates = [
+  '{{ if lt .TokenUsagePercent.Value 50.0 }}p:context-green{{ end }}',
+  '{{ if and (ge .TokenUsagePercent.Value 50.0) (lt .TokenUsagePercent.Value 75.0) }}p:context-yellow{{ end }}',
+  '{{ if ge .TokenUsagePercent.Value 75.0 }}p:context-orange{{ end }}',
+]
