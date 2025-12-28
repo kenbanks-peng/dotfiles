@@ -45,6 +45,15 @@ type = 'prompt'
 alignment = 'left'
 newline = true
 
+[[blocks.segments]]
+type = "claude"
+style = "diamond"
+leading_diamond = ""
+trailing_diamond = ""
+foreground = "#FFFFFF"
+background = "#FF6B35"
+template = " 󰯉 {{ .Model.DisplayName }}  {{ .TokenUsagePercent.Gauge }} "
+
 ######### SHELL #########
 
 [[blocks.segments]]
