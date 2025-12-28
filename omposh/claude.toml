@@ -34,30 +34,6 @@ type = 'prompt'
 alignment = 'left'
 newline = true
 
-######### CLAUDE #########
-
-[[blocks.segments]]
-type = "claude"
-style = "diamond"
-leading_diamond = ''
-trailing_diamond = ''
-background = 'p:shell'
-foreground = 'p:shell-foreground'
-template = " {{ .Model.DisplayName }} {{ .Workspace }}"
-
-######### DIRECTORY #########
-
-[[blocks.segments]]
-type = 'path'
-style = 'diamond'
-leading_diamond = ''
-trailing_diamond = ''
-background = 'p:directory'
-foreground = 'p:directory-foreground'
-options.home_icon = ''
-options.folder_icon = ''
-options.style = 'folder'
-
 
 ######### LANGUAGES #########
 
@@ -146,6 +122,18 @@ background_templates = [
   '{{ if or (gt .Ahead 0) (gt .Behind 0) }}p:git-diverged{{ end }}',
 ]
 options = { branch_template = '{{ trunc 25 .Branch }}', fetch_status = true, fetch_upstream_icon = true }
+
+
+######### CLAUDE #########
+
+[[blocks.segments]]
+type = "claude"
+style = "diamond"
+leading_diamond = ''
+trailing_diamond = ''
+background = 'p:shell'
+foreground = 'p:shell-foreground'
+template = " {{ .Model.DisplayName }} │ {{ .TokenUsagePercent.String }}% "
 
 ######### STATUS ENDCAP #########
 
