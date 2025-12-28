@@ -281,7 +281,7 @@ mbedtls@3 3.6.5
 mcfly 0.9.4
 melody 0.20.0
 micro 2.0.14
-mole 1.14.7
+mole 1.15.0
 molten-vk 1.4.0
 mpdecimal 4.0.1
 mpfr 4.2.2
