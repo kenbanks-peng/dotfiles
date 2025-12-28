@@ -28,12 +28,37 @@ error-foreground = '#f4e4e5'
 prompt = '#f55c1b'
 secondary = '#a90000'
 secondary-accent = '#a17a00'
+model = '#2f40c2'
+model-foreground = '#e5e6f2'
+context = '#2f40c2'
+context-foreground = '#e5e6f2'
 
 [[blocks]]
 type = 'prompt'
 alignment = 'left'
 newline = true
 
+######## STARTING CAP ########
+
+[[blocks.segments]]
+type = "text"
+style = "diamond"
+leading_diamond = ''
+trailing_diamond = ''
+background = 'p:shell'
+foreground = 'p:shell-foreground'
+template = 'ㅤ'
+
+######### CLAUDE MODEL #########
+
+[[blocks.segments]]
+type = "claude"
+style = "diamond"
+leading_diamond = ''
+trailing_diamond = ''
+background = 'p:model'
+foreground = 'p:model-foreground'
+template = " {{ .Model.DisplayName }} "
 
 ######### LANGUAGES #########
 
@@ -124,16 +149,16 @@ background_templates = [
 options = { branch_template = '{{ trunc 25 .Branch }}', fetch_status = true, fetch_upstream_icon = true }
 
 
-######### CLAUDE #########
+######### CLAUDE CONTEXT #########
 
 [[blocks.segments]]
 type = "claude"
 style = "diamond"
-leading_diamond = ''
+leading_diamond = ''
 trailing_diamond = ''
-background = 'p:shell'
-foreground = 'p:shell-foreground'
-template = " {{ .Model.DisplayName }} │ {{ .TokenUsagePercent.String }}% "
+background = 'p:context'
+foreground = 'p:context-foreground'
+template = " {{ .TokenUsagePercent.String }}% "
 
 ######### STATUS ENDCAP #########
 
