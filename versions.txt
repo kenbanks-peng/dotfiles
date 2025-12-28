@@ -459,7 +459,19 @@ pipx:seagoat                                                 0.54.17            
 
 RUSTUP/CARGO
 ------------
-No rustup found
+Default host: aarch64-apple-darwin
+rustup home:  /Users/kenbanks/Software/rustup
+
+installed toolchains
+--------------------
+1.90.0-aarch64-apple-darwin (active, default)
+
+active toolchain
+----------------
+name: 1.90.0-aarch64-apple-darwin
+active because: it's the default toolchain
+installed targets:
+  aarch64-apple-darwin
 
 UV TOOLS
 --------
