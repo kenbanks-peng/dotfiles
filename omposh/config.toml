@@ -52,7 +52,7 @@ leading_diamond = ""
 trailing_diamond = ""
 foreground = "#FFFFFF"
 background = "#FF6B35"
-template = " 󰯉 {{ .Model.DisplayName }}  {{ .TokenUsagePercent.Gauge }} "
+template = " 󰯉 {{ .Model.DisplayName }} aa {{ .TokenUsagePercent.Gauge }} "
 
 ######### SHELL #########
 
