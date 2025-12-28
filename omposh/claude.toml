@@ -3,8 +3,8 @@ version = 4
 final_space = true
 
 [palette]
-directory = '#006b1d'
-directory-foreground = '#e5ece6'
+directory = '#2f40c2'
+directory-foreground = '#e5e6f2'
 language = '#005b95'
 language-foreground = '#e5eaf0'
 git = '#006b1d'
