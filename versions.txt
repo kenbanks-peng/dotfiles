@@ -64,7 +64,7 @@ zoom 6.7.0.71075
 BREW FORMULAS
 -------------
 abseil 20250814.1
-age 1.2.1
+age 1.3.0
 aom 3.13.1
 apache-arrow 22.0.0_1
 aribb24 1.0.4
@@ -131,7 +131,7 @@ flock 0.4.0
 fontconfig 2.17.1
 freetype 2.14.1_1
 frei0r 2.5.1
-fresh-editor 0.1.64
+fresh-editor 0.1.65
 fribidi 1.0.16
 fx 39.2.0
 fzf 0.67.0
@@ -301,11 +301,11 @@ nspr 4.38.2
 nss 3.119.1
 numpy 2.4.0
 nushell 0.109.1
-oh-my-posh 28.5.1
+oh-my-posh 28.6.0
 onefetch 2.26.1
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 1.0.203
+opencode 1.0.204
 opencore-amr 0.1.6
 openexr 3.4.4_1
 openjdk 25.0.1
@@ -384,7 +384,7 @@ tailspin 5.5.0
 tdd-guard 1.1.0
 tealdeer 1.8.1
 terminal-notifier 2.0.0
-tesseract 5.5.1_1
+tesseract 5.5.2
 theora 1.2.0
 thrift 0.22.0
 tmux 3.6a
@@ -436,7 +436,6 @@ cargo:sbyte                                                  0.3.3              
 github:h0rv/d2-mcp                                           1.1.0              ~/.config/mise/mise.toml  latest
 github:melkeydev/go-blueprint                                0.10.11            ~/.config/mise/mise.toml  latest
 go:github.com/nizos/tdd-guard/reporters/go/cmd/tdd-guard-go  v0.2.1             ~/.config/mise/mise.toml  v0.2.1
-go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.52
 go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.53     ~/.config/mise/mise.toml  latest
 go:golang.org/x/tools/gopls                                  0.21.0             ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck                        0.7.0-0.dev        ~/.config/mise/mise.toml  latest
