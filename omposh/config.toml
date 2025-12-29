@@ -137,14 +137,14 @@ background = 'p:language'
 foreground = 'p:language-foreground'
 template = '  {{ .Full }} '
 
-[[blocks.segments]]
-type = 'rust'
-style = 'diamond'
-leading_diamond = ''
-trailing_diamond = ''
-background = 'p:language'
-foreground = 'p:language-foreground'
-template = '  {{ .Full }} '
+# [[blocks.segments]]
+# type = 'rust'
+# style = 'diamond'
+# leading_diamond = ''
+# trailing_diamond = ''
+# background = 'p:language'
+# foreground = 'p:language-foreground'
+# template = '  {{ .Full }} '
 
 # javascript: deno, svelte, react, node
 # using shell function set_poshcontext()
