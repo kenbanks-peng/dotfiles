@@ -64,7 +64,7 @@ zoom 6.7.0.71075
 BREW FORMULAS
 -------------
 abseil 20250814.1
-age 1.3.0
+age 1.3.1
 aom 3.13.1
 apache-arrow 22.0.0_1
 aribb24 1.0.4
@@ -177,7 +177,7 @@ hurl 7.1.0
 hyperfine 1.20.0
 icu4c@77 77.1_1
 icu4c@78 78.1
-imagemagick 7.1.2-11
+imagemagick 7.1.2-12
 imath 3.2.2
 imgcat 1.0.22
 iproute2mac 1.6.0
@@ -281,7 +281,7 @@ mbedtls@3 3.6.5
 mcfly 0.9.4
 melody 0.20.0
 micro 2.0.14
-mole 1.15.0
+mole 1.15.5
 molten-vk 1.4.0
 mpdecimal 4.0.1
 mpfr 4.2.2
@@ -301,11 +301,11 @@ nspr 4.38.2
 nss 3.119.1
 numpy 2.4.0
 nushell 0.109.1
-oh-my-posh 28.6.0
+oh-my-posh 28.7.0
 onefetch 2.26.1
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 1.0.204
+opencode 1.0.207
 opencore-amr 0.1.6
 openexr 3.4.4_1
 openjdk 25.0.1
@@ -370,7 +370,7 @@ snyk-cli 1.1301.2
 sox 14.4.2_6
 spark 1.0.1
 speex 1.2.1
-sq 0.48.5
+sq 0.48.10
 sqlc 1.30.0
 sqlite 3.51.1
 srt 1.5.4
@@ -436,7 +436,8 @@ cargo:sbyte                                                  0.3.3              
 github:h0rv/d2-mcp                                           1.1.0              ~/.config/mise/mise.toml  latest
 github:melkeydev/go-blueprint                                0.10.11            ~/.config/mise/mise.toml  latest
 go:github.com/nizos/tdd-guard/reporters/go/cmd/tdd-guard-go  v0.2.1             ~/.config/mise/mise.toml  v0.2.1
-go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.53     ~/.config/mise/mise.toml  latest
+go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.53
+go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.54     ~/.config/mise/mise.toml  latest
 go:golang.org/x/tools/gopls                                  0.21.0             ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck                        0.7.0-0.dev        ~/.config/mise/mise.toml  latest
 nix:bun                                                      1.3.5 (symlink)    ~/.config/mise/mise.toml  latest
@@ -445,8 +446,8 @@ nix:ruby                                                     3.4.8 (symlink)    
 nix:rustup                                                   1.28.2 (symlink)   ~/.config/mise/mise.toml  latest
 nix:uv                                                       0.9.18 (symlink)   ~/.config/mise/mise.toml  latest
 npm:@langwatch/better-agents                                 0.1.20             ~/.config/mise/mise.toml  latest
-npm:@opentui/core                                            0.1.63             ~/.config/mise/mise.toml  latest
-npm:@opentui/react                                           0.1.63             ~/.config/mise/mise.toml  latest
+npm:@opentui/core                                            0.1.65             ~/.config/mise/mise.toml  latest
+npm:@opentui/react                                           0.1.65             ~/.config/mise/mise.toml  latest
 npm:github-markdown-css                                      5.8.1              ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                                                5.2.5              ~/.config/mise/mise.toml  latest
 npm:nuekit                                                   2.0.0-beta.2       ~/.config/mise/mise.toml  latest
