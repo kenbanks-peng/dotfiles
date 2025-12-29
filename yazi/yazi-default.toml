@@ -3,14 +3,14 @@
 "$schema" = "https://yazi-rs.github.io/schemas/yazi.json"
 
 [mgr]
-ratio = [3, 3, 6]
+ratio = [1, 4, 3]
 sort_by = "alphabetical"
 sort_sensitive = false
 sort_reverse = false
 sort_dir_first = true
 sort_translit = false
 linemode = "none"
-show_hidden = true
+show_hidden = false
 show_symlink = true
 scrolloff = 5
 mouse_events = ["click", "scroll"]
@@ -29,18 +29,36 @@ ueberzug_scale = 1
 ueberzug_offset = [0, 0, 0, 0]
 
 [opener]
-edit = [{ run = 'nvim "$@"', desc = "Edit", block = true, for = "macos" }]
-open = [{ run = 'open "$@"', desc = "Open", for = "macos" }]
-reveal = [
-	{ run = 'open -R "$1"', desc = "Reveal", for = "macos" },
-	{ run = '''clear; exiftool "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show EXIF", for = "unix" },
-]
-extract = [
-	{ run = 'ya pub extract --list "$@"', desc = "Extract here", for = "unix" },
+edit = [
+	{ run = "${EDITOR:-vi} %s", desc = "$EDITOR", for = "unix", block = true },
+	{ run = "code %s", desc = "code", for = "windows", orphan = true },
+	{ run = "code -w %s", desc = "code (block)", for = "windows", block = true },
 ]
 play = [
-	{ run = 'mpv --force-window "$@"', orphan = true, for = "unix" },
-	{ run = '''mediainfo "$1"; echo "Press enter to exit"; read _''', block = true, desc = "Show media info", for = "unix" },
+	{ run = "xdg-open %s1", desc = "Play", for = "linux" },
+	{ run = "open %s", desc = "Play", for = "macos" },
+	{ run = 'start "" %s1', orphan = true, desc = "Play", for = "windows" },
+	{ run = "termux-open %s1", desc = "Play", for = "android" },
+	{ run = "mediainfo %s1; echo 'Press enter to exit'; read _", block = true, desc = "Show media info", for = "unix" },
+	{ run = "mediainfo %s1 & pause", block = true, desc = "Show media info", for = "windows" },
+]
+open = [
+	{ run = "xdg-open %s1", desc = "Open", for = "linux" },
+	{ run = "open %s", desc = "Open", for = "macos" },
+	{ run = 'start "" %s1', desc = "Open", for = "windows", orphan = true },
+	{ run = "termux-open %s1", desc = "Open", for = "android" },
+]
+reveal = [
+	{ run = "xdg-open %d1", desc = "Reveal", for = "linux" },
+	{ run = "open -R %s1", desc = "Reveal", for = "macos" },
+	{ run = "explorer /select,%s1", desc = "Reveal", for = "windows", orphan = true },
+	{ run = "termux-open %d1", desc = "Reveal", for = "android" },
+	{ run = "clear; exiftool %s1; echo 'Press enter to exit'; read _", desc = "Show EXIF", for = "unix", block = true },
+]
+extract = [{ run = "ya pub extract --list %s", desc = "Extract here" }]
+download = [
+	{ run = "ya emit download --open %S", desc = "Download and open" },
+	{ run = "ya emit download %S", desc = "Download" },
 ]
 
 [open]
@@ -85,6 +103,8 @@ rules = [
 		"edit",
 		"reveal",
 	] },
+	# Virtual file system
+	{ mime = "vfs/{absent,stale}", use = "download" },
 	# Fallback
 	{ url = "*", use = [
 		"open",
@@ -96,8 +116,8 @@ rules = [
 micro_workers = 10
 macro_workers = 10
 bizarre_retry = 3
-image_alloc = 536870912    # 512MB
-image_bound = [5000, 5000]
+image_alloc = 536870912      # 512MB
+image_bound = [10000, 10000]
 suppress_preload = false
 
 [plugin]
@@ -118,6 +138,10 @@ spotters = [
 	{ mime = "image/*", run = "image" },
 	# Video
 	{ mime = "video/*", run = "video" },
+	# Virtual file system
+	{ mime = "vfs/*", run = "vfs" },
+	# Error
+	{ mime = "null/*", run = "null" },
 	# Fallback
 	{ url = "*", run = "file" },
 ]
@@ -162,14 +186,12 @@ previewers = [
 	{ mime = "application/ms-opentype", run = "font" },
 	# Empty file
 	{ mime = "inode/empty", run = "empty" },
+	# Virtual file system
+	{ mime = "vfs/*", run = "vfs" },
+	# Error
+	{ mime = "null/*", run = "null" },
 	# Fallback
 	{ url = "*", run = "file" },
-]
-
-prepend_previewers = [
-	{ url = "*.md", run = 'piper -- CLICOLOR_FORCE=1 glow -w=$w -s=dark "$1"' },
-	{ url = "*.csv", run = 'piper -- bat -p --color=always "$1"' },
-	{ url = "*/", run = 'piper -- pls "$1"' },
 ]
 
 [input]
@@ -223,13 +245,13 @@ delete_offset = [0, 0, 70, 20]
 
 # overwrite
 overwrite_title = "Overwrite file?"
-overwrite_content = "Will overwrite the following file:"
+overwrite_body = "Will overwrite the following file:"
 overwrite_origin = "center"
 overwrite_offset = [0, 0, 50, 15]
 
 # quit
 quit_title = "Quit?"
-quit_content = "The following tasks are still running, are you sure you want to quit?"
+quit_body = "The following tasks are still running, are you sure you want to quit?"
 quit_origin = "center"
 quit_offset = [0, 0, 50, 15]
 
