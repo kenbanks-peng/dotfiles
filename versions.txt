@@ -91,7 +91,7 @@ bat-extras 2024.08.24
 biome 2.3.10
 borders 1.8.4
 brotli 1.2.0
-btop 1.4.5
+btop 1.4.6
 c-ares 1.34.6
 ca-certificates 2025-12-02
 caddy 2.10.2
@@ -116,7 +116,7 @@ dblab 0.34.2
 deno 2.6.3
 direnv 2.37.1
 doppler 3.75.1
-dotenvx 1.51.2
+dotenvx 1.51.4
 dua-cli 2.32.2
 duf 0.9.1
 dust 1.2.3
@@ -218,7 +218,7 @@ libgpg-error 1.58
 libheif 1.20.2
 libidn2 2.3.8
 libksba 1.6.7
-liblinear 2.49
+liblinear 2.50
 liblqr 0.4.3
 libmicrohttpd 1.0.2
 libmpc 1.3.1
@@ -306,7 +306,7 @@ oh-my-posh 28.7.0
 onefetch 2.26.1
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 1.0.207
+opencode 1.0.209
 opencore-amr 0.1.6
 openexr 3.4.4_1
 openjdk 25.0.1
@@ -340,7 +340,7 @@ pstree 2.40
 pv 1.10.3
 pycparser 2.23_1
 pydantic 2.12.5
-pygit2 1.19.0
+pygit2 1.19.1
 python@3.13 3.13.11
 python@3.14 3.14.2
 qrencode 4.1.1
@@ -447,8 +447,8 @@ nix:ruby                                                     3.4.8 (symlink)    
 nix:rustup                                                   1.28.2 (symlink)   ~/.config/mise/mise.toml  latest
 nix:uv                                                       0.9.18 (symlink)   ~/.config/mise/mise.toml  latest
 npm:@langwatch/better-agents                                 0.1.20             ~/.config/mise/mise.toml  latest
-npm:@opentui/core                                            0.1.65             ~/.config/mise/mise.toml  latest
-npm:@opentui/react                                           0.1.65             ~/.config/mise/mise.toml  latest
+npm:@opentui/core                                            0.1.66             ~/.config/mise/mise.toml  latest
+npm:@opentui/react                                           0.1.66             ~/.config/mise/mise.toml  latest
 npm:github-markdown-css                                      5.8.1              ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                                                5.2.5              ~/.config/mise/mise.toml  latest
 npm:nuekit                                                   2.0.0-beta.2       ~/.config/mise/mise.toml  latest
