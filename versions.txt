@@ -59,7 +59,7 @@ vlc 3.0.21
 wezterm 20240203-110809,5046fc22
 yaak 2025.9.3
 zed 0.217.3
-zoom 6.7.0.71075
+zoom 6.7.2.72191
 
 BREW FORMULAS
 -------------
@@ -131,7 +131,7 @@ flock 0.4.0
 fontconfig 2.17.1
 freetype 2.14.1_1
 frei0r 2.5.1
-fresh-editor 0.1.65
+fresh-editor 0.1.67
 fribidi 1.0.16
 fx 39.2.0
 fzf 0.67.0
@@ -282,7 +282,7 @@ mbedtls@3 3.6.5
 mcfly 0.9.4
 melody 0.20.0
 micro 2.0.14
-mole 1.16.1
+mole 1.17.0
 molten-vk 1.4.0
 mpdecimal 4.0.1
 mpfr 4.2.2
@@ -302,11 +302,11 @@ nspr 4.38.2
 nss 3.119.1
 numpy 2.4.0
 nushell 0.109.1
-oh-my-posh 28.7.0
+oh-my-posh 28.8.0
 onefetch 2.26.1
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 1.0.209
+opencode 1.0.212
 opencore-amr 0.1.6
 openexr 3.4.4_1
 openjdk 25.0.1
@@ -447,8 +447,8 @@ nix:ruby                                                     3.4.8 (symlink)    
 nix:rustup                                                   1.28.2 (symlink)   ~/.config/mise/mise.toml  latest
 nix:uv                                                       0.9.18 (symlink)   ~/.config/mise/mise.toml  latest
 npm:@langwatch/better-agents                                 0.1.20             ~/.config/mise/mise.toml  latest
-npm:@opentui/core                                            0.1.66             ~/.config/mise/mise.toml  latest
-npm:@opentui/react                                           0.1.66             ~/.config/mise/mise.toml  latest
+npm:@opentui/core                                            0.1.67             ~/.config/mise/mise.toml  latest
+npm:@opentui/react                                           0.1.67             ~/.config/mise/mise.toml  latest
 npm:github-markdown-css                                      5.8.1              ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                                                5.2.5              ~/.config/mise/mise.toml  latest
 npm:nuekit                                                   2.0.0-beta.2       ~/.config/mise/mise.toml  latest
