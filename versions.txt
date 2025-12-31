@@ -48,7 +48,7 @@ quarto 1.8.26
 raycast 1.104.1
 screen-studio 3.5.1-4051
 sf-symbols 7.0,115
-sip-app 4.1.1
+sip-app 4.1.2
 skim 1.7.11
 symboliclinker 2.2
 syntax-highlight 2.1.27
@@ -83,7 +83,7 @@ aws-c-s3 0.11.3
 aws-c-sdkutils 0.2.4
 aws-checksums 0.2.8
 aws-crt-cpp 0.36.1
-aws-sdk-cpp 1.11.705
+aws-sdk-cpp 1.11.720
 bandwhich 0.23.1
 bash 5.3.9
 bat 0.26.1
@@ -139,7 +139,7 @@ gawk 5.3.1
 gcc 15.2.0
 gd 2.3.3_6
 gdk-pixbuf 2.44.4
-gemini-cli 0.22.4
+gemini-cli 0.22.5
 gettext 0.26_1
 gh 2.83.2
 giflib 5.2.2
@@ -155,7 +155,7 @@ glow 2.1.1
 gmp 6.3.0
 gnu-getopt 2.41.3
 gnu-sed 4.9
-gnupg 2.4.8
+gnupg 2.4.9
 gnutls 3.8.11
 go 1.25.5
 go-task 3.46.4
@@ -215,7 +215,7 @@ libevent 2.1.12_1
 libgcrypt 1.11.2
 libgit2 1.9.2
 libgpg-error 1.58
-libheif 1.20.2
+libheif 1.21.0
 libidn2 2.3.8
 libksba 1.6.7
 liblinear 2.50
@@ -281,7 +281,7 @@ mbedtls 4.0.0
 mbedtls@3 3.6.5
 mcfly 0.9.4
 melody 0.20.0
-micro 2.0.14
+micro 2.0.15
 mole 1.17.0
 molten-vk 1.4.0
 mpdecimal 4.0.1
@@ -302,11 +302,11 @@ nspr 4.38.2
 nss 3.119.1
 numpy 2.4.0
 nushell 0.109.1
-oh-my-posh 28.8.0
+oh-my-posh 28.9.0
 onefetch 2.26.1
 oniguruma 6.9.10
 openblas 0.3.30
-opencode 1.0.212
+opencode 1.0.219
 opencore-amr 0.1.6
 openexr 3.4.4_1
 openjdk 25.0.1
@@ -389,7 +389,7 @@ tesseract 5.5.2
 theora 1.2.0
 thrift 0.22.0
 tmux 3.6a
-tokei 13.0.0
+tokei 14.0.0
 tree 2.2.1
 tree-sitter 0.26.3
 tree-sitter@0.25 0.25.10
@@ -399,7 +399,7 @@ typst 0.14.2
 uchardet 0.0.8
 unbound 1.24.2
 unibilium 2.1.2
-utf8proc 2.11.2
+utf8proc 2.11.3
 uvwasi 0.0.23
 vapoursynth 73
 vivid 0.10.1
