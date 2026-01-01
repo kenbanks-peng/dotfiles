@@ -40,7 +40,6 @@ microsoft-auto-update 4.81.25121042
 microsoft-outlook 16.104.25121423
 obsidian 1.10.6
 omnifocus 4.8.6
-onyx 4.9.4
 opcode 0.2.0
 orbstack 2.0.5,19905
 pdf-pals 1.9.0
