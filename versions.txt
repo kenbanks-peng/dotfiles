@@ -110,7 +110,7 @@ cryptography 46.0.3
 csvtk 0.36.0
 curlie 1.8.2
 d2 0.7.1
-dav1d 1.5.2
+dav1d 1.5.3
 dblab 0.34.2
 deno 2.6.3
 direnv 2.37.1
