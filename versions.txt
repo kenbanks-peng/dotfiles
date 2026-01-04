@@ -14,7 +14,7 @@ cleanshot 4.8.7
 codex 0.77.0
 container 0.6.0
 cursor 2.2.44,20adc1003928b0f1b99305dbaf845656ff81f5d4
-daisydisk 4.32
+daisydisk 4.33
 deepchat 0.5.3
 espanso 2.3.0
 font-hasklug-nerd-font 3.4.0
@@ -29,12 +29,13 @@ git-credential-manager 2.6.1
 google-chrome 143.0.7499.170
 google-drive 118.0.1
 grandperspective 3.6.1
-helium-browser 0.7.7.1
+helium-browser 0.7.9.1
 iterm2 3.6.6
 karabiner-elements 15.7.0
 keyclu 0.30.2
 languagetool-desktop 2.9.5
 linear-linear 1.28.6,251002av7g3go28
+logos 47.0.0.0332
 lunatask 2.1.19
 microsoft-auto-update 4.81.25121042
 microsoft-outlook 16.104.25121423
@@ -87,7 +88,7 @@ bandwhich 0.23.1
 bash 5.3.9
 bat 0.26.1
 bat-extras 2024.08.24
-biome 2.3.10
+biome 2.3.11
 borders 1.8.4
 brotli 1.2.0
 btop 1.4.6
@@ -130,7 +131,7 @@ flock 0.4.0
 fontconfig 2.17.1
 freetype 2.14.1_1
 frei0r 2.5.1
-fresh-editor 0.1.67
+fresh-editor 0.1.69
 fribidi 1.0.16
 fx 39.2.0
 fzf 0.67.0
@@ -156,7 +157,6 @@ gnu-getopt 2.41.3
 gnu-sed 4.9
 gnupg 2.4.9
 gnutls 3.8.11
-go 1.25.5
 go-task 3.46.4
 gobang 0.1.0-alpha.5
 gpg-tui 0.11.1_1
@@ -193,13 +193,13 @@ jq 1.8.1
 jqp 0.8.0
 jrnl 4.2.1
 json-c 0.18
-just 1.45.0
+just 1.46.0
 lame 3.100
 lazydocker 0.24.3
-lazygit 0.57.0
+lazygit 0.58.0
 lazyjj 0.6.1
 lazyjournal 0.8.3
-lazysql 0.4.5
+lazysql 0.4.6
 leptonica 1.87.0
 lf 40
 libarchive 3.8.4
@@ -281,7 +281,7 @@ mbedtls@3 3.6.5
 mcfly 0.9.4
 melody 0.20.0
 micro 2.0.15
-mole 1.17.0
+mole 1.18.0
 molten-vk 1.4.0
 mpdecimal 4.0.1
 mpfr 4.2.2
@@ -301,7 +301,7 @@ nspr 4.38.2
 nss 3.119.1
 numpy 2.4.0
 nushell 0.109.1
-oh-my-posh 28.9.0
+oh-my-posh 28.10.0
 onefetch 2.26.1
 oniguruma 6.9.10
 openblas 0.3.30
@@ -438,7 +438,8 @@ github:melkeydev/go-blueprint                                0.10.11            
 go:github.com/nizos/tdd-guard/reporters/go/cmd/tdd-guard-go  v0.2.1             ~/.config/mise/mise.toml  v0.2.1
 go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.53
 go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.54
-go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.55     ~/.config/mise/mise.toml  latest
+go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.55
+go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.56     ~/.config/mise/mise.toml  latest
 go:golang.org/x/tools/gopls                                  0.21.0             ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck                        0.7.0-0.dev        ~/.config/mise/mise.toml  latest
 nix:bun                                                      1.3.5 (symlink)    ~/.config/mise/mise.toml  latest
@@ -447,8 +448,8 @@ nix:ruby                                                     3.4.8 (symlink)    
 nix:rustup                                                   1.28.2 (symlink)   ~/.config/mise/mise.toml  latest
 nix:uv                                                       0.9.18 (symlink)   ~/.config/mise/mise.toml  latest
 npm:@langwatch/better-agents                                 0.1.20             ~/.config/mise/mise.toml  latest
-npm:@opentui/core                                            0.1.67             ~/.config/mise/mise.toml  latest
-npm:@opentui/react                                           0.1.67             ~/.config/mise/mise.toml  latest
+npm:@opentui/core                                            0.1.68             ~/.config/mise/mise.toml  latest
+npm:@opentui/react                                           0.1.68             ~/.config/mise/mise.toml  latest
 npm:github-markdown-css                                      5.8.1              ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                                                5.2.5              ~/.config/mise/mise.toml  latest
 npm:nuekit                                                   2.0.0-beta.2       ~/.config/mise/mise.toml  latest
