@@ -14,7 +14,7 @@ cleanshot 4.8.7
 codex 0.77.0
 container 0.6.0
 cursor 2.2.44,20adc1003928b0f1b99305dbaf845656ff81f5d4
-daisydisk 4.33
+daisydisk 4.33.1
 deepchat 0.5.3
 espanso 2.3.0
 font-hasklug-nerd-font 3.4.0
@@ -70,7 +70,7 @@ aom 3.13.1
 apache-arrow 22.0.0_1
 aribb24 1.0.4
 asciinema 3.0.1
-ast-grep 0.40.3
+ast-grep 0.40.4
 autoconf 2.72
 aws-c-auth 0.9.4
 aws-c-cal 0.9.13
@@ -282,7 +282,7 @@ mbedtls@3 3.6.5
 mcfly 0.9.4
 melody 0.20.0
 micro 2.0.15
-mole 1.18.0
+mole 1.19.0
 molten-vk 1.4.0
 mpdecimal 4.0.1
 mpfr 4.2.2
@@ -440,7 +440,8 @@ go:github.com/nizos/tdd-guard/reporters/go/cmd/tdd-guard-go  v0.2.1             
 go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.53
 go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.54
 go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.55
-go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.56     ~/.config/mise/mise.toml  latest
+go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.56
+go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.57     ~/.config/mise/mise.toml  latest
 go:golang.org/x/tools/gopls                                  0.21.0             ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck                        0.7.0-0.dev        ~/.config/mise/mise.toml  latest
 nix:bun                                                      1.3.5 (symlink)    ~/.config/mise/mise.toml  latest
