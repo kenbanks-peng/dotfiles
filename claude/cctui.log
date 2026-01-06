@@ -78,3 +78,7 @@
 2025-12-25 19:43:23,347 - cctui - INFO - main:86 - Project path: /Users/kenbanks/Software/DevBox/typescript/tui
 2025-12-25 19:43:23,347 - cctui - INFO - main:87 - Config path: /Users/kenbanks/.config/claude
 2025-12-25 19:43:23,348 - cctui - INFO - main:102 - Configuration loaded successfully
+2026-01-06 10:23:58,181 - cctui - INFO - main:85 - Starting CCTUI application
+2026-01-06 10:23:58,181 - cctui - INFO - main:86 - Project path: /Users/kenbanks/Software/DevApps/cctui
+2026-01-06 10:23:58,181 - cctui - INFO - main:87 - Config path: /Users/kenbanks/.config/claude
+2026-01-06 10:23:58,182 - cctui - INFO - main:102 - Configuration loaded successfully
