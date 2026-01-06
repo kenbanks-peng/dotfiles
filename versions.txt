@@ -8,7 +8,7 @@ arc 1.126.1,72660
 atuin-desktop 0.2.11
 audacity 3.7.7
 boop 1.4.0
-claude 0.14.10,fe3f5688c1c2a4b648d1bf6d9784d62ef9fc336a
+claude 1.0.2768,21341c944a9d74880b52a77c4f1522f47f52d0da
 claude-code 2.0.76
 cleanshot 4.8.7
 codex 0.77.0
@@ -42,6 +42,7 @@ microsoft-outlook 16.104.25121423
 obsidian 1.10.6
 omnifocus 4.8.6
 opcode 0.2.0
+opencode-desktop 1.1.3
 orbstack 2.0.5,19905
 pdf-pals 1.9.0
 quarto 1.8.26
@@ -59,7 +60,7 @@ visual-studio-code 1.107.1
 vlc 3.0.21
 wezterm 20240203-110809,5046fc22
 yaak 2025.9.3
-zed 0.217.3
+zed 0.217.4
 zoom 6.7.2.72191
 
 BREW FORMULAS
@@ -72,7 +73,7 @@ aribb24 1.0.4
 asciinema 3.0.1
 ast-grep 0.40.4
 autoconf 2.72
-aws-c-auth 0.9.4
+aws-c-auth 0.9.5
 aws-c-cal 0.9.13
 aws-c-common 0.12.6
 aws-c-compression 0.3.1
@@ -114,14 +115,14 @@ curlie 1.8.2
 d2 0.7.1
 dav1d 1.5.3
 dblab 0.34.2
-deno 2.6.3
+deno 2.6.4
 direnv 2.37.1
 doppler 3.75.1
 dotenvx 1.51.4
-dua-cli 2.32.2
+dua-cli 2.33.0
 duf 0.9.1
 dust 1.2.3
-dvc 3.65.0
+dvc 3.65.0_1
 espeak-ng 1.52.0
 fastfetch 2.56.1
 fd 10.3.0
@@ -132,7 +133,7 @@ flock 0.4.0
 fontconfig 2.17.1
 freetype 2.14.1_1
 frei0r 2.5.1
-fresh-editor 0.1.70
+fresh-editor 0.1.71
 fribidi 1.0.16
 fx 39.2.0
 fzf 0.67.0
@@ -450,8 +451,8 @@ nix:ruby                                                     3.4.8 (symlink)    
 nix:rustup                                                   1.28.2 (symlink)   ~/.config/mise/mise.toml  latest
 nix:uv                                                       0.9.18 (symlink)   ~/.config/mise/mise.toml  latest
 npm:@langwatch/better-agents                                 0.1.20             ~/.config/mise/mise.toml  latest
-npm:@opentui/core                                            0.1.68             ~/.config/mise/mise.toml  latest
-npm:@opentui/react                                           0.1.68             ~/.config/mise/mise.toml  latest
+npm:@opentui/core                                            0.1.69             ~/.config/mise/mise.toml  latest
+npm:@opentui/react                                           0.1.69             ~/.config/mise/mise.toml  latest
 npm:github-markdown-css                                      5.8.1              ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                                                5.2.5              ~/.config/mise/mise.toml  latest
 npm:nuekit                                                   2.0.0-beta.2       ~/.config/mise/mise.toml  latest
