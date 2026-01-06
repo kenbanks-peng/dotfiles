@@ -25,6 +25,7 @@
 "github:melkeydev/go-blueprint" = "latest"
 "github:h0rv/d2-mcp" = "latest"
 "nix:rustup" = "latest"
+"npm:@mixedbread/mgrep" = "latest"
 
 [settings]
 experimental = true
