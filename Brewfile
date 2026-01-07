@@ -45,7 +45,7 @@ brew "doppler"
 brew "dua-cli"
 brew "duf"
 brew "dust"
-brew "dvc"
+brew "dvc", link: false
 brew "espeak-ng"
 brew "fastfetch"
 brew "fd"
