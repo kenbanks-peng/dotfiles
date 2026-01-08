@@ -4,7 +4,7 @@ aerospace 0.20.2-Beta
 affinity 3.0.2,3912
 antigravity 1.13.3,4533425205018624
 anybar 0.2.3
-arc 1.126.1,72660
+arc 1.129.0,73083
 atuin-desktop 0.2.11
 audacity 3.7.7
 boop 1.4.0
@@ -56,7 +56,7 @@ symboliclinker 2.2
 syntax-highlight 2.1.27
 transmission 4.0.6
 typeface 4.2.2,4839
-visual-studio-code 1.107.1
+visual-studio-code 1.108.0
 vlc 3.0.23
 wezterm 20240203-110809,5046fc22
 yaak 2025.9.3
@@ -461,7 +461,7 @@ npm:vite                                                     7.3.1              
 pipx:SuperClaude                                             4.1.9              ~/.config/mise/mise.toml  latest
 pipx:meson                                                   1.10.0             ~/.config/mise/mise.toml  latest
 pipx:ninja                                                   1.13.0             ~/.config/mise/mise.toml  latest
-pipx:ruff                                                    0.14.10            ~/.config/mise/mise.toml  latest
+pipx:ruff                                                    0.14.11            ~/.config/mise/mise.toml  latest
 pipx:seagoat                                                 0.54.17            ~/.config/mise/mise.toml  latest
 
 RUSTUP/CARGO
