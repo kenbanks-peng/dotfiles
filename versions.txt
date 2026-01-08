@@ -61,6 +61,7 @@ vlc 3.0.23
 wezterm 20240203-110809,5046fc22
 yaak 2025.9.3
 zed 0.218.6
+zen 1.17.15b
 zoom 6.7.2.72191
 
 BREW FORMULAS
