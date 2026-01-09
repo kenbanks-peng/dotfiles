@@ -28,7 +28,6 @@ git-credential-manager 2.6.1
 google-chrome 143.0.7499.193
 google-drive 119.0.2
 grandperspective 3.6.1
-iterm2 3.6.6
 karabiner-elements 15.7.0
 keyclu 0.30.2
 languagetool-desktop 2.9.5
