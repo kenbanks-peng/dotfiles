@@ -4,7 +4,6 @@ aerospace 0.20.2-Beta
 affinity 3.0.2,3912
 antigravity 1.13.3,4533425205018624
 anybar 0.2.3
-atuin-desktop 0.2.11
 audacity 3.7.7
 boop 1.4.0
 claude 1.0.2768,21341c944a9d74880b52a77c4f1522f47f52d0da
