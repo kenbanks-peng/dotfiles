@@ -52,7 +52,6 @@ skim 1.7.12
 superwhisper 2.8.0
 symboliclinker 2.2
 syntax-highlight 2.1.27
-transmission 4.0.6
 typeface 4.2.2,4839
 visual-studio-code 1.108.0
 vlc 3.0.23
