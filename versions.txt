@@ -14,7 +14,6 @@ codex 0.79.0
 container 0.6.0
 cursor 2.3.29,4ca9b38c6c97d4243bf0c61e51426667cb964bdc
 daisydisk 4.33.1
-deepchat 0.5.3
 espanso 2.3.0
 font-hasklug-nerd-font 3.4.0
 font-ia-writer-quattro latest
