@@ -38,6 +38,7 @@ omnifocus 4.8.6
 opcode 0.2.0
 opencode-desktop 1.1.8
 orbstack 2.0.5,19905
+orion 1.0.2,141
 pdf-pals 1.9.0
 quarto 1.8.26
 raycast 1.104.1
@@ -448,8 +449,8 @@ nix:rustup                                                   1.28.2 (symlink)   
 nix:uv                                                       0.9.18 (symlink)   ~/.config/mise/mise.toml  latest
 npm:@langwatch/better-agents                                 0.1.20             ~/.config/mise/mise.toml  latest
 npm:@mixedbread/mgrep                                        0.1.8              ~/.config/mise/mise.toml  latest
-npm:@opentui/core                                            0.1.70             ~/.config/mise/mise.toml  latest
-npm:@opentui/react                                           0.1.70             ~/.config/mise/mise.toml  latest
+npm:@opentui/core                                            0.1.72             ~/.config/mise/mise.toml  latest
+npm:@opentui/react                                           0.1.72             ~/.config/mise/mise.toml  latest
 npm:github-markdown-css                                      5.8.1              ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                                                5.2.5              ~/.config/mise/mise.toml  latest
 npm:nuekit                                                   2.0.0-beta.2       ~/.config/mise/mise.toml  latest
