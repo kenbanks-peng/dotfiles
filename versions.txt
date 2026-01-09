@@ -36,7 +36,7 @@ microsoft-outlook 16.104.26010228
 obsidian 1.10.6
 omnifocus 4.8.6
 opcode 0.2.0
-opencode-desktop 1.1.7
+opencode-desktop 1.1.8
 orbstack 2.0.5,19905
 pdf-pals 1.9.0
 quarto 1.8.26
@@ -83,6 +83,7 @@ bandwhich 0.23.1
 bash 5.3.9
 bat 0.26.1
 bat-extras 2024.08.24
+bbrew 2.2.1
 biome 2.3.11
 borders 1.8.4
 brotli 1.2.0
@@ -114,8 +115,8 @@ doppler 3.75.1
 dotenvx 1.51.4
 dua-cli 2.33.0
 duf 0.9.1
-dust 1.2.3
-dvc 3.66.0
+dust 1.2.4
+dvc 3.66.1
 espeak-ng 1.52.0
 fastfetch 2.56.1
 fd 10.3.0
@@ -126,7 +127,7 @@ flock 0.4.0
 fontconfig 2.17.1
 freetype 2.14.1_1
 frei0r 2.5.1
-fresh-editor 0.1.74
+fresh-editor 0.1.75
 fribidi 1.0.16
 fx 39.2.0
 fzf 0.67.0
@@ -144,7 +145,7 @@ git-delta 0.18.2_3
 git-filter-repo 2.47.0
 gitleaks 8.30.0
 gitui 0.28.0
-glances 4.4.1_1
+glances 4.4.1_2
 glib 2.86.3
 glow 2.1.1
 gmp 6.3.0
@@ -233,7 +234,7 @@ libsoxr 0.1.3
 libsql 0.24.32
 libssh 0.11.3
 libssh2 1.11.1
-libtasn1 4.20.0
+libtasn1 4.21.0
 libtiff 4.7.1
 libtool 2.5.4
 libudfread 1.2.0
@@ -296,7 +297,7 @@ nspr 4.38.2
 nss 3.120
 numpy 2.4.0
 nushell 0.109.1
-oh-my-posh 29.0.1
+oh-my-posh 29.0.2
 onefetch 2.26.1
 oniguruma 6.9.10
 openblas 0.3.30
@@ -325,7 +326,7 @@ pinentry-touchid 0.0.3
 pixman 0.46.4
 pkgconf 2.5.1
 plantuml 1.2025.10
-poppler 25.12.0
+poppler 26.01.0
 portal 1.2.3
 posting 2.9.2
 procs 0.14.10
@@ -378,6 +379,7 @@ syncthing 2.0.13
 tailspin 5.5.0
 tdd-guard 1.1.0
 tealdeer 1.8.1
+television 0.14.4
 terminal-notifier 2.0.0
 tesseract 5.5.2
 theora 1.2.0
@@ -435,7 +437,8 @@ go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.53
 go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.54
 go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.55
 go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.56
-go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.57     ~/.config/mise/mise.toml  latest
+go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.57
+go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.58     ~/.config/mise/mise.toml  latest
 go:golang.org/x/tools/gopls                                  0.21.0             ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck                        0.7.0-0.dev        ~/.config/mise/mise.toml  latest
 nix:bun                                                      1.3.5 (symlink)    ~/.config/mise/mise.toml  latest
