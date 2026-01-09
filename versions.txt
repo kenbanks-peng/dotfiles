@@ -34,7 +34,6 @@ keyclu 0.30.2
 languagetool-desktop 2.9.5
 linear-linear 1.28.6,251002av7g3go28
 logos 47.1.0.0009
-lunatask 2.1.19
 microsoft-auto-update 4.81.25121042
 microsoft-outlook 16.104.26010228
 obsidian 1.10.6
