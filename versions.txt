@@ -7,7 +7,7 @@ anybar 0.2.3
 audacity 3.7.7
 boop 1.4.0
 claude 1.0.2768,21341c944a9d74880b52a77c4f1522f47f52d0da
-claude-code 2.1.1
+claude-code 2.1.2
 cleanshot 4.8.7
 codex 0.79.0
 container 0.6.0
@@ -293,7 +293,7 @@ nmap 7.98
 node 25.2.1
 npth 1.8
 nspr 4.38.2
-nss 3.119.1
+nss 3.120
 numpy 2.4.0
 nushell 0.109.1
 oh-my-posh 29.0.1
