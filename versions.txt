@@ -7,11 +7,11 @@ anybar 0.2.3
 audacity 3.7.7
 boop 1.4.0
 claude 1.0.2768,21341c944a9d74880b52a77c4f1522f47f52d0da
-claude-code 2.1.3
+claude-code 2.1.4
 cleanshot 4.8.7
 codex 0.80.0
 container 0.6.0
-cursor 2.3.29,4ca9b38c6c97d4243bf0c61e51426667cb964bdc
+cursor 2.3.34,643ba67cd252e2888e296dd0cf34a0c5d7625b96
 daisydisk 4.33.2
 espanso 2.3.0
 font-hasklug-nerd-font 3.4.0
@@ -134,7 +134,6 @@ fx 39.2.0
 fzf 0.67.0
 gawk 5.3.1
 gcc 15.2.0
-gd 2.3.3_6
 gdk-pixbuf 2.44.4
 gemini-cli 0.23.0
 gettext 0.26_1
@@ -161,10 +160,8 @@ gpgme 2.0.1
 gpgmepp 2.0.0
 gping 1.20.1
 graphite2 1.3.14
-graphviz 14.1.1
 grex 1.4.6
 grpc 1.76.0_2
-gts 0.7.6_3
 harfbuzz 12.3.0
 hexyl 0.16.0
 highway 1.3.0
@@ -202,7 +199,6 @@ lf 40
 libarchive 3.8.5
 libass 0.17.4
 libassuan 3.0.2
-libavif 1.3.0
 libb2 0.98.1
 libbluray 1.4.0_1
 libde265 1.0.16
@@ -289,7 +285,6 @@ navi 2.24.0
 ncdu 2.9.2
 ncurses 6.6
 neovim 0.11.5_1
-netpbm 11.02.19_1
 nettle 3.10.2
 nmap 7.98
 node 25.2.1
@@ -305,7 +300,6 @@ openblas 0.3.30
 opencode 1.1.10
 opencore-amr 0.1.6
 openexr 3.4.4_1
-openjdk 25.0.1
 openjpeg 2.5.4
 openjph 0.26.0
 openssl@3 3.6.0
@@ -326,7 +320,6 @@ pinentry-mac 1.3.1.1
 pinentry-touchid 0.0.3
 pixman 0.46.4
 pkgconf 2.5.1
-plantuml 1.2026.0
 poppler 26.01.0
 portal 1.2.3
 posting 2.9.2
@@ -380,7 +373,7 @@ syncthing 2.0.13
 tailspin 5.5.0
 tdd-guard 1.1.0
 tealdeer 1.8.1
-television 0.14.4
+television 0.14.5
 terminal-notifier 2.0.0
 tesseract 5.5.2
 theora 1.2.0
@@ -439,7 +432,8 @@ go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.54
 go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.55
 go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.56
 go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.57
-go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.58     ~/.config/mise/mise.toml  latest
+go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.58
+go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.59     ~/.config/mise/mise.toml  latest
 go:golang.org/x/tools/gopls                                  0.21.0             ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck                        0.7.0-0.dev        ~/.config/mise/mise.toml  latest
 nix:bun                                                      1.3.5 (symlink)    ~/.config/mise/mise.toml  latest
