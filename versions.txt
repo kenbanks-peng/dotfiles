@@ -59,10 +59,10 @@ zoom 6.7.2.72191
 
 BREW FORMULAS
 -------------
-abseil 20250814.1
+abseil 20260107.0
 age 1.3.1
 aom 3.13.1
-apache-arrow 22.0.0_1
+apache-arrow 22.0.0_2
 aribb24 1.0.4
 asciinema 3.0.1
 ast-grep 0.40.5
@@ -161,7 +161,7 @@ gpgmepp 2.0.0
 gping 1.20.1
 graphite2 1.3.14
 grex 1.4.6
-grpc 1.76.0_2
+grpc 1.76.0_3
 harfbuzz 12.3.0
 hexyl 0.16.0
 highway 1.3.0
@@ -324,7 +324,7 @@ poppler 26.01.0
 portal 1.2.3
 posting 2.9.2
 procs 0.14.10
-protobuf 33.2
+protobuf 33.3
 pstree 2.40
 pv 1.10.3
 pycparser 2.23_1
@@ -336,7 +336,7 @@ qrencode 4.1.1
 qsv 13.0.0
 rav1e 0.8.1
 rclone 1.72.1
-re2 20251105
+re2 20251105_1
 readline 8.3.3
 repomix 1.11.0
 resvg 0.46.0
