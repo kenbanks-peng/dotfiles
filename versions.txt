@@ -36,7 +36,7 @@ microsoft-outlook 16.104.26010228
 obsidian 1.10.6
 omnifocus 4.8.6
 opcode 0.2.0
-opencode-desktop 1.1.12
+opencode-desktop 1.1.13
 orbstack 2.0.5,19905
 orion 1.0.2,141
 pdf-pals 1.9.0
@@ -339,8 +339,8 @@ rclone 1.72.1
 re2 20251105
 readline 8.3.3
 repomix 1.11.0
-resvg 0.45.1
-rich-cli 1.8.1_1
+resvg 0.46.0
+rich-cli 1.8.1_2
 ripgrep 15.1.0
 rubberband 4.0.0
 rustscan 2.4.1
@@ -409,7 +409,7 @@ xz 5.8.2
 yabai 7.1.16
 yazi 26.1.4
 yq 4.50.1
-yt-dlp 2025.12.8
+yt-dlp 2025.12.8_1
 yyjson 0.12.0
 z3 4.15.4
 zellij 0.43.1
