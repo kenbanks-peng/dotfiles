@@ -7,7 +7,7 @@ anybar 0.2.3
 audacity 3.7.7
 boop 1.4.0
 claude 1.0.2768,21341c944a9d74880b52a77c4f1522f47f52d0da
-claude-code 2.1.4
+claude-code 2.1.5
 cleanshot 4.8.7
 codex 0.80.0
 container 0.6.0
@@ -36,7 +36,7 @@ microsoft-outlook 16.104.26010228
 obsidian 1.10.6
 omnifocus 4.8.6
 opcode 0.2.0
-opencode-desktop 1.1.13
+opencode-desktop 1.1.14
 orbstack 2.0.5,19905
 orion 1.0.2,141
 pdf-pals 1.9.0
@@ -119,7 +119,7 @@ duf 0.9.1
 dust 1.2.4
 dvc 3.66.1
 espeak-ng 1.52.0
-fastfetch 2.56.1
+fastfetch 2.57.0
 fd 10.3.0
 ffmpeg 8.0.1
 figlet 2.2.5
@@ -128,7 +128,7 @@ flock 0.4.0
 fontconfig 2.17.1
 freetype 2.14.1_1
 frei0r 2.5.1
-fresh-editor 0.1.75
+fresh-editor 0.1.76
 fribidi 1.0.16
 fx 39.2.0
 fzf 0.67.0
