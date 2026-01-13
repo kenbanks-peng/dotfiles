@@ -31,7 +31,7 @@ newline = true
 [[blocks.segments]]
 type = "path"
 style = "diamond"
-leading_diamond = ''
+leading_diamond = ''
 trailing_diamond = ''
 background = 'p:directory'
 foreground = 'p:directory-foreground'
@@ -142,7 +142,7 @@ template = " {{ .Model.DisplayName }} "
 type = "claude"
 style = "diamond"
 leading_diamond = ''
-trailing_diamond = ''
+trailing_diamond = ''
 background = 'p:context-green'
 foreground = 'p:context-foreground'
 template = " {{ .TokenUsagePercent.String }}% "
