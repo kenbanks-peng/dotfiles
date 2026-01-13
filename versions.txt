@@ -7,7 +7,7 @@ anybar 0.2.3
 audacity 3.7.7
 boop 1.4.0
 claude 1.0.3218,8679c9141fe246eb88af18130504c064d14b9004
-claude-code 2.1.5
+claude-code 2.1.6
 cleanshot 4.8.7
 codex 0.80.0
 container 0.6.0
@@ -36,7 +36,7 @@ microsoft-outlook 16.104.26010228
 obsidian 1.11.4
 omnifocus 4.8.6
 opcode 0.2.0
-opencode-desktop 1.1.15
+opencode-desktop 1.1.16
 orbstack 2.0.5,19905
 orion 1.0.2,141
 pdf-pals 1.9.0
@@ -53,7 +53,7 @@ typeface 4.2.2,4839
 visual-studio-code 1.108.0
 vlc 3.0.23
 yaak 2025.9.3
-zed 0.218.6
+zed 0.218.7
 zen 1.17.15b
 zoom 6.7.2.72191
 
@@ -333,7 +333,7 @@ pygit2 1.19.1
 python@3.13 3.13.11
 python@3.14 3.14.2
 qrencode 4.1.1
-qsv 13.0.0
+qsv 14.0.0
 rav1e 0.8.1
 rclone 1.72.1
 re2 20251105_1
