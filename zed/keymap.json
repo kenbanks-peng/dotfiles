@@ -59,24 +59,38 @@
     },
   },
   {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-left": "project_panel::ToggleFocus",
+      "ctrl-right": "project_panel::ToggleFocus",
+    },
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-left": "project_panel::ToggleFocus",
+      "ctrl-right": "project_panel::ToggleFocus",
+    },
+  },
+  {
     "context": "ProjectPanel",
     "bindings": {
-      "ctrl-]": "outline_panel::ToggleFocus",
-      "ctrl-[": "git_panel::ToggleFocus",
+      "ctrl-left": "outline_panel::ToggleFocus",
+      "ctrl-right": "git_panel::ToggleFocus",
     },
   },
   {
     "context": "GitPanel",
     "bindings": {
-      "ctrl-]": "project_panel::ToggleFocus",
-      "ctrl-[": "outline_panel::ToggleFocus",
+      "ctrl-left": "project_panel::ToggleFocus",
+      "ctrl-right": "outline_panel::ToggleFocus",
     },
   },
   {
     "context": "OutlinePanel",
     "bindings": {
-      "ctrl-]": "project_panel::ToggleFocus",
-      "ctrl-[": "git_panel::ToggleFocus",
+      "ctrl-right": "project_panel::ToggleFocus",
+      "ctrl-left": "git_panel::ToggleFocus",
     },
   },
 ]
