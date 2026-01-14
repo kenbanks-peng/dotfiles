@@ -32,7 +32,6 @@ languagetool-desktop 2.9.5
 linear-linear 1.28.6,251002av7g3go28
 logos 47.2.0.0002
 microsoft-auto-update 4.81.25121042
-microsoft-outlook 16.105.26011018
 obsidian 1.11.4
 omnifocus 4.8.6
 opcode 0.2.0
@@ -121,7 +120,7 @@ dvc 3.66.1_1
 espeak-ng 1.52.0
 fastfetch 2.57.1
 fd 10.3.0
-ffmpeg 8.0.1
+ffmpeg 8.0.1_1
 figlet 2.2.5
 flac 1.5.0
 flock 0.4.0
@@ -269,7 +268,6 @@ m4 1.4.20
 macmon 0.6.1
 mad 0.15.1b
 makensis 3.11
-mbedtls 4.0.0
 mbedtls@3 3.6.5
 mcfly 0.9.4
 melody 0.20.0
