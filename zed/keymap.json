@@ -59,10 +59,10 @@
     },
   },
   {
-    "context": "Editor",
+    "context": "Workspace",
     "bindings": {
-      "ctrl-left": "project_panel::ToggleFocus",
-      "ctrl-right": "project_panel::ToggleFocus",
+      "ctrl-left": "workspace::ActivatePaneLeft",
+      "ctrl-right": "workspace::ActivatePaneRight",
     },
   },
   {
