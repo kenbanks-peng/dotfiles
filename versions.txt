@@ -6,6 +6,7 @@ antigravity 1.14.2,6046590149459968
 anybar 0.2.3
 audacity 3.7.7
 boop 1.4.0
+claude 1.0.3218,8679c9141fe246eb88af18130504c064d14b9004
 claude-code 2.1.7
 cleanshot 4.8.7
 codex 0.84.0
@@ -34,7 +35,7 @@ microsoft-auto-update 4.81.25121042
 obsidian 1.11.4
 omnifocus 4.8.6
 opcode 0.2.0
-opencode-desktop 1.1.20
+opencode-desktop 1.1.21
 orbstack 2.0.5,19905
 orion 1.0.2,141
 pdf-pals 1.9.0
@@ -73,10 +74,10 @@ aws-c-event-stream 0.5.9
 aws-c-http 0.10.9
 aws-c-io 0.26.0
 aws-c-mqtt 0.13.3
-aws-c-s3 0.11.4
+aws-c-s3 0.11.5
 aws-c-sdkutils 0.2.4
 aws-checksums 0.2.8
-aws-crt-cpp 0.37.0
+aws-crt-cpp 0.37.1
 aws-sdk-cpp 1.11.720
 bandwhich 0.23.1
 bash 5.3.9
@@ -442,8 +443,8 @@ nix:rustup                                                   1.28.2 (symlink)   
 nix:uv                                                       0.9.18 (symlink)   ~/.config/mise/mise.toml  latest
 npm:@langwatch/better-agents                                 0.1.20             ~/.config/mise/mise.toml  latest
 npm:@mixedbread/mgrep                                        0.1.8              ~/.config/mise/mise.toml  latest
-npm:@opentui/core                                            0.1.72             ~/.config/mise/mise.toml  latest
-npm:@opentui/react                                           0.1.72             ~/.config/mise/mise.toml  latest
+npm:@opentui/core                                            0.1.73             ~/.config/mise/mise.toml  latest
+npm:@opentui/react                                           0.1.73             ~/.config/mise/mise.toml  latest
 npm:github-markdown-css                                      5.8.1              ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                                                5.2.5              ~/.config/mise/mise.toml  latest
 npm:nuekit                                                   2.0.0-beta.2       ~/.config/mise/mise.toml  latest
@@ -451,7 +452,7 @@ npm:vite                                                     7.3.1              
 pipx:SuperClaude                                             4.1.9              ~/.config/mise/mise.toml  latest
 pipx:meson                                                   1.10.0             ~/.config/mise/mise.toml  latest
 pipx:ninja                                                   1.13.0             ~/.config/mise/mise.toml  latest
-pipx:ruff                                                    0.14.11            ~/.config/mise/mise.toml  latest
+pipx:ruff                                                    0.14.12            ~/.config/mise/mise.toml  latest
 pipx:seagoat                                                 0.54.17            ~/.config/mise/mise.toml  latest
 
 RUSTUP/CARGO
