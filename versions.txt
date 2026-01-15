@@ -6,7 +6,6 @@ antigravity 1.14.2,6046590149459968
 anybar 0.2.3
 audacity 3.7.7
 boop 1.4.0
-claude 1.0.3218,8679c9141fe246eb88af18130504c064d14b9004
 claude-code 2.1.7
 cleanshot 4.8.7
 codex 0.84.0
