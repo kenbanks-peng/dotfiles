@@ -9,7 +9,7 @@ boop 1.4.0
 claude 1.0.3218,8679c9141fe246eb88af18130504c064d14b9004
 claude-code 2.1.7
 cleanshot 4.8.7
-codex 0.84.0
+codex 0.85.0
 container 0.6.0
 cursor 2.3.35,cf8353edc265f5e46b798bfb276861d0bf3bf129
 daisydisk 4.33.2
@@ -108,7 +108,7 @@ curlie 1.8.2
 d2 0.7.1
 dav1d 1.5.3
 dblab 0.34.2
-deno 2.6.4
+deno 2.6.5
 direnv 2.37.1
 doppler 3.75.1
 dotenvx 1.51.4
