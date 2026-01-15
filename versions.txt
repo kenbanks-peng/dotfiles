@@ -35,7 +35,6 @@ microsoft-auto-update 4.81.25121042
 obsidian 1.11.4
 omnifocus 4.8.6
 opcode 0.2.0
-opencode-desktop 1.1.21
 orbstack 2.0.5,19905
 orion 1.0.2,141
 pdf-pals 1.9.0
