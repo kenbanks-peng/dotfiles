@@ -9,7 +9,7 @@ boop 1.4.0
 claude 1.0.3218,8679c9141fe246eb88af18130504c064d14b9004
 claude-code 2.1.7
 cleanshot 4.8.7
-codex 0.80.0
+codex 0.84.0
 container 0.6.0
 cursor 2.3.35,cf8353edc265f5e46b798bfb276861d0bf3bf129
 daisydisk 4.33.2
@@ -35,7 +35,7 @@ microsoft-auto-update 4.81.25121042
 obsidian 1.11.4
 omnifocus 4.8.6
 opcode 0.2.0
-opencode-desktop 1.1.19
+opencode-desktop 1.1.20
 orbstack 2.0.5,19905
 orion 1.0.2,141
 pdf-pals 1.9.0
@@ -49,10 +49,10 @@ superwhisper 2.8.0
 symboliclinker 2.2
 syntax-highlight 2.1.27
 typeface 4.2.3,4845
-visual-studio-code 1.108.0
+visual-studio-code 1.108.1
 vlc 3.0.23
 yaak 2025.9.3
-zed 0.218.7
+zed 0.219.4
 zen 1.17.15b
 zoom 6.7.2.72191
 
@@ -136,7 +136,7 @@ gcc 15.2.0
 gdk-pixbuf 2.44.4
 gemini-cli 0.24.0
 gettext 0.26_1
-gh 2.83.2
+gh 2.85.0
 giflib 5.2.2
 git 2.52.0_1
 git-bug 0.10.1
@@ -285,7 +285,7 @@ ncurses 6.6
 neovim 0.11.5_1
 nettle 3.10.2
 nmap 7.98
-node 25.2.1
+node 25.3.0
 npth 1.8
 nspr 4.38.2
 nss 3.120
@@ -336,7 +336,7 @@ rav1e 0.8.1
 rclone 1.72.1
 re2 20251105_1
 readline 8.3.3
-repomix 1.11.0
+repomix 1.11.1
 resvg 0.46.0
 rich-cli 1.8.1_2
 ripgrep 15.1.0
@@ -382,7 +382,7 @@ tree 2.2.1
 tree-sitter 0.26.3
 tree-sitter@0.25 0.25.10
 ttyd 1.7.7_6
-turso 0.3.2
+turso 0.4.3
 typst 0.14.2
 uchardet 0.0.8
 unbound 1.24.2
@@ -437,6 +437,7 @@ go:golang.org/x/tools/gopls                                  0.21.0             
 go:honnef.co/go/tools/cmd/staticcheck                        0.7.0-0.dev        ~/.config/mise/mise.toml  latest
 nix:bun                                                      1.3.5 (symlink)    ~/.config/mise/mise.toml  latest
 nix:nodejs                                                   24.12.0 (symlink)  ~/.config/mise/mise.toml  24
+nix:nodejs                                                   25.2.1
 nix:ruby                                                     3.4.8 (symlink)    ~/.config/mise/mise.toml  latest
 nix:rustup                                                   1.28.2 (symlink)   ~/.config/mise/mise.toml  latest
 nix:uv                                                       0.9.18 (symlink)   ~/.config/mise/mise.toml  latest
