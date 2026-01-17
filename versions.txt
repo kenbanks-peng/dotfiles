@@ -6,7 +6,7 @@ antigravity 1.14.2,6046590149459968
 anybar 0.2.3
 audacity 3.7.7
 boop 1.4.0
-claude 1.1.280,3478247a3718c7070905d2d43416a99816d3e2ca
+claude 1.1.351,648bf5d398e0cfa0a1bb1f8d93c80bb638c85bd2
 claude-code 2.1.9
 cleanshot 4.8.7
 codex 0.87.0
@@ -271,7 +271,7 @@ mbedtls@3 3.6.5
 mcfly 0.9.4
 melody 0.20.0
 micro 2.0.15
-mole 1.21.0
+mole 1.22.0
 molten-vk 1.4.0
 mpdecimal 4.0.1
 mpfr 4.2.2
