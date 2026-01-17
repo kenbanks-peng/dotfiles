@@ -6,12 +6,12 @@ antigravity 1.14.2,6046590149459968
 anybar 0.2.3
 audacity 3.7.7
 boop 1.4.0
-claude 1.0.3218,8679c9141fe246eb88af18130504c064d14b9004
-claude-code 2.1.7
+claude 1.1.280,3478247a3718c7070905d2d43416a99816d3e2ca
+claude-code 2.1.9
 cleanshot 4.8.7
-codex 0.85.0
+codex 0.87.0
 container 0.6.0
-cursor 2.3.35,cf8353edc265f5e46b798bfb276861d0bf3bf129
+cursor 2.3.41,2ca326e0d1ce10956aea33d54c0e2d8c13c58a32
 daisydisk 4.33.2
 espanso 2.3.0
 font-hasklug-nerd-font 3.4.0
@@ -25,10 +25,10 @@ ghostty 1.2.3
 git-credential-manager 2.6.1
 google-chrome 144.0.7559.60
 google-drive 119.0.2
-grandperspective 3.6.1
+grandperspective 3.6.2
 karabiner-elements 15.7.0
 keyclu 0.31
-languagetool-desktop 2.9.5
+languagetool-desktop 2.10.0
 linear-linear 1.28.6,251002av7g3go28
 logos 47.2.0.0002
 microsoft-auto-update 4.81.25121042
@@ -38,7 +38,7 @@ opcode 0.2.0
 orbstack 2.0.5,19905
 orion 1.0.2,141
 pdf-pals 1.9.0
-quarto 1.8.26
+quarto 1.8.27
 raycast 1.104.1
 screen-studio 3.5.1-4051
 sf-symbols 7.1,116
@@ -60,7 +60,7 @@ BREW FORMULAS
 abseil 20260107.0
 age 1.3.1
 aom 3.13.1
-apache-arrow 22.0.0_2
+apache-arrow 22.0.0_3
 aribb24 1.0.4
 asciinema 3.1.0
 ast-grep 0.40.5
@@ -159,7 +159,7 @@ gpgmepp 2.0.0
 gping 1.20.1
 graphite2 1.3.14
 grex 1.4.6
-grpc 1.76.0_3
+grpc 1.76.0_4
 harfbuzz 12.3.0
 hexyl 0.16.0
 highway 1.3.0
@@ -169,7 +169,7 @@ hurl 7.1.0
 hyperfine 1.20.0
 icu4c@77 77.1_1
 icu4c@78 78.2
-imagemagick 7.1.2-12
+imagemagick 7.1.2-12_1
 imath 3.2.2
 imgcat 1.0.22
 iproute2mac 1.6.0
@@ -205,7 +205,7 @@ libevent 2.1.12_1
 libgcrypt 1.11.2
 libgit2 1.9.2
 libgpg-error 1.58
-libheif 1.21.1
+libheif 1.21.2
 libidn2 2.3.8
 libksba 1.6.7
 liblinear 2.50
@@ -219,7 +219,7 @@ libogg 1.3.6
 libomp 21.1.8
 libplacebo 7.351.0
 libpng 1.6.54
-libraw 0.21.5
+libraw 0.22.0
 librist 0.2.11_1
 librsvg 2.61.3_1
 libsamplerate 0.2.2
@@ -293,14 +293,14 @@ nushell 0.109.1
 oh-my-posh 29.0.2
 onefetch 2.26.1
 oniguruma 6.9.10
-openblas 0.3.30
+openblas 0.3.31
 opencode 1.1.20
 opencore-amr 0.1.6
 openexr 3.4.4_1
 openjpeg 2.5.4
 openjph 0.26.0
 openssl@3 3.6.0
-opus 1.6
+opus 1.6.1
 opusfile 0.12_1
 ov 0.50.2
 p11-kit 0.25.10
@@ -321,7 +321,7 @@ poppler 26.01.0
 portal 1.2.3
 posting 2.9.2
 procs 0.14.10
-protobuf 33.3
+protobuf 33.4
 pstree 2.40
 pv 1.10.3
 pycparser 2.23_1
@@ -418,12 +418,12 @@ zstd 1.5.7
 
 MISE PACKAGES
 -------------
-cargo:cargo-cache                                            0.8.3              ~/.config/mise/mise.toml  latest
-cargo:cargo-update                                           18.0.0             ~/.config/mise/mise.toml  latest
-cargo:sbyte                                                  0.3.3              ~/.config/mise/mise.toml  latest
-github:h0rv/d2-mcp                                           1.1.0              ~/.config/mise/mise.toml  latest
-github:melkeydev/go-blueprint                                0.10.11            ~/.config/mise/mise.toml  latest
-go:github.com/nizos/tdd-guard/reporters/go/cmd/tdd-guard-go  v0.2.1             ~/.config/mise/mise.toml  v0.2.1
+cargo:cargo-cache                                            0.8.3             ~/.config/mise/mise.toml  latest
+cargo:cargo-update                                           18.0.0            ~/.config/mise/mise.toml  latest
+cargo:sbyte                                                  0.3.3             ~/.config/mise/mise.toml  latest
+github:h0rv/d2-mcp                                           1.1.0             ~/.config/mise/mise.toml  latest
+github:melkeydev/go-blueprint                                0.10.11           ~/.config/mise/mise.toml  latest
+go:github.com/nizos/tdd-guard/reporters/go/cmd/tdd-guard-go  v0.2.1            ~/.config/mise/mise.toml  v0.2.1
 go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.53
 go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.54
 go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.55
@@ -431,28 +431,28 @@ go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.56
 go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.57
 go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.58
 go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.59
-go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.60     ~/.config/mise/mise.toml  latest
-go:golang.org/x/tools/gopls                                  0.21.0             ~/.config/mise/mise.toml  latest
-go:honnef.co/go/tools/cmd/staticcheck                        0.7.0-0.dev        ~/.config/mise/mise.toml  latest
-nix:bun                                                      1.3.5 (symlink)    ~/.config/mise/mise.toml  latest
-nix:nodejs                                                   24.12.0 (symlink)  ~/.config/mise/mise.toml  24
+go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.60    ~/.config/mise/mise.toml  latest
+go:golang.org/x/tools/gopls                                  0.21.0            ~/.config/mise/mise.toml  latest
+go:honnef.co/go/tools/cmd/staticcheck                        0.7.0-0.dev       ~/.config/mise/mise.toml  latest
+nix:bun                                                      1.3.6 (symlink)   ~/.config/mise/mise.toml  latest
 nix:nodejs                                                   25.2.1
-nix:ruby                                                     3.4.8 (symlink)    ~/.config/mise/mise.toml  latest
-nix:rustup                                                   1.28.2 (symlink)   ~/.config/mise/mise.toml  latest
-nix:uv                                                       0.9.18 (symlink)   ~/.config/mise/mise.toml  latest
-npm:@langwatch/better-agents                                 0.1.20             ~/.config/mise/mise.toml  latest
-npm:@mixedbread/mgrep                                        0.1.8              ~/.config/mise/mise.toml  latest
-npm:@opentui/core                                            0.1.73             ~/.config/mise/mise.toml  latest
-npm:@opentui/react                                           0.1.73             ~/.config/mise/mise.toml  latest
-npm:github-markdown-css                                      5.8.1              ~/.config/mise/mise.toml  latest
-npm:md-to-pdf                                                5.2.5              ~/.config/mise/mise.toml  latest
-npm:nuekit                                                   2.0.0-beta.2       ~/.config/mise/mise.toml  latest
-npm:vite                                                     7.3.1              ~/.config/mise/mise.toml  latest
-pipx:SuperClaude                                             4.1.9              ~/.config/mise/mise.toml  latest
-pipx:meson                                                   1.10.0             ~/.config/mise/mise.toml  latest
-pipx:ninja                                                   1.13.0             ~/.config/mise/mise.toml  latest
-pipx:ruff                                                    0.14.12            ~/.config/mise/mise.toml  latest
-pipx:seagoat                                                 0.54.17            ~/.config/mise/mise.toml  latest
+nix:nodejs                                                   25.3.0 (symlink)  ~/.config/mise/mise.toml  25
+nix:ruby                                                     4.0.0 (symlink)   ~/.config/mise/mise.toml  latest
+nix:rustup                                                   1.28.2 (symlink)  ~/.config/mise/mise.toml  latest
+nix:uv                                                       0.9.24 (symlink)  ~/.config/mise/mise.toml  latest
+npm:@langwatch/better-agents                                 0.1.20            ~/.config/mise/mise.toml  latest
+npm:@mixedbread/mgrep                                        0.1.8             ~/.config/mise/mise.toml  latest
+npm:@opentui/core                                            0.1.74            ~/.config/mise/mise.toml  latest
+npm:@opentui/react                                           0.1.74            ~/.config/mise/mise.toml  latest
+npm:github-markdown-css                                      5.8.1             ~/.config/mise/mise.toml  latest
+npm:md-to-pdf                                                5.2.5             ~/.config/mise/mise.toml  latest
+npm:nuekit                                                   2.0.0-beta.2      ~/.config/mise/mise.toml  latest
+npm:vite                                                     7.3.1             ~/.config/mise/mise.toml  latest
+pipx:SuperClaude                                             4.1.9             ~/.config/mise/mise.toml  latest
+pipx:meson                                                   1.10.0            ~/.config/mise/mise.toml  latest
+pipx:ninja                                                   1.13.0            ~/.config/mise/mise.toml  latest
+pipx:ruff                                                    0.14.13           ~/.config/mise/mise.toml  latest
+pipx:seagoat                                                 0.54.17           ~/.config/mise/mise.toml  latest
 
 RUSTUP/CARGO
 ------------
