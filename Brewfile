@@ -51,7 +51,7 @@ brew "dvc"
 brew "espeak-ng"
 brew "fastfetch"
 brew "fd"
-brew "ffmpeg", link: false
+brew "ffmpeg"
 brew "figlet"
 brew "flock"
 brew "fresh-editor"
