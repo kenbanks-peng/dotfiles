@@ -6,7 +6,7 @@ antigravity 1.14.2,6046590149459968
 anybar 0.2.3
 audacity 3.7.7
 boop 1.4.0
-claude 1.1.351,648bf5d398e0cfa0a1bb1f8d93c80bb638c85bd2
+claude 1.1.381,c2a39e9c82f5a4d51f511f53f532afd276312731
 claude-code 2.1.12
 cleanshot 4.8.7
 codex 0.87.0
@@ -27,7 +27,7 @@ google-chrome 144.0.7559.60
 google-drive 119.0.2
 grandperspective 3.6.2
 iina 1.4.1,160
-karabiner-elements 15.7.0
+karabiner-elements 15.8.0
 keyclu 0.31
 languagetool-desktop 2.10.0
 linear-linear 1.28.6,251002av7g3go28
@@ -121,7 +121,7 @@ dvc 3.66.1_2
 espeak-ng 1.52.0
 fastfetch 2.57.1
 fd 10.3.0
-ffmpeg 8.0.1_1
+ffmpeg 8.0.1_1.reinstall 8.0.1_1
 figlet 2.2.5
 flac 1.5.0
 flock 0.4.0
@@ -134,7 +134,6 @@ fx 39.2.0
 fzf 0.67.0
 gawk 5.3.1
 gcc 15.2.0
-gdk-pixbuf 2.44.4
 gemini-cli 0.24.0
 gettext 0.26_1
 gh 2.85.0
@@ -171,12 +170,11 @@ hurl 7.1.0
 hyperfine 1.20.0
 icu4c@77 77.1_1
 icu4c@78 78.2
-imagemagick 7.1.2-12_1
+imagemagick 7.1.2-12_2
 imath 3.2.2
 imgcat 1.0.22
 iproute2mac 1.6.0
 isl 0.27
-jasper 4.2.8
 jc 1.25.6
 jid 0.7.6
 jj 0.37.0
@@ -211,19 +209,15 @@ libheif 1.21.2
 libidn2 2.3.8
 libksba 1.6.7
 liblinear 2.50
-liblqr 0.4.3
 libmicrohttpd 1.0.2
 libmpc 1.3.1
 libnghttp2 1.68.0
 libnghttp3 1.14.0
 libngtcp2 1.19.0
 libogg 1.3.6
-libomp 21.1.8
 libplacebo 7.351.0
 libpng 1.6.54
-libraw 0.22.0
 librist 0.2.11_1
-librsvg 2.61.3_1
 libsamplerate 0.2.2
 libsndfile 1.2.2_1
 libsodium 1.0.21
@@ -235,7 +229,6 @@ libtasn1 4.21.0
 libtiff 4.7.1
 libtool 2.5.4
 libudfread 1.2.0
-libultrahdr 1.4.0
 libunibreak 6.1
 libunistring 1.4.1
 libusb 1.0.29
@@ -252,7 +245,6 @@ libxdmcp 1.1.5
 libxext 1.3.6
 libxrender 0.9.12
 libyaml 0.2.5
-libzip 1.11.4
 lima 2.0.3
 little-cms2 2.17
 llvm 21.1.8
@@ -291,7 +283,7 @@ npth 1.8
 nspr 4.38.2
 nss 3.120
 numpy 2.4.1
-nushell 0.109.1
+nushell 0.110.0
 oh-my-posh 29.0.2
 onefetch 2.26.1
 oniguruma 6.9.10
@@ -305,7 +297,7 @@ openssl@3 3.6.0
 opus 1.6.1
 opusfile 0.12_1
 ov 0.50.2
-p11-kit 0.25.10
+p11-kit 0.26.0
 pandoc 3.8.3
 pango 1.57.0_1
 pass 1.7.4
@@ -450,8 +442,8 @@ npm:github-markdown-css                                      5.8.1             ~
 npm:md-to-pdf                                                5.2.5             ~/.config/mise/mise.toml  latest
 npm:nuekit                                                   2.0.0-beta.2      ~/.config/mise/mise.toml  latest
 npm:vite                                                     7.3.1             ~/.config/mise/mise.toml  latest
-pipx:SuperClaude                                             4.1.9             ~/.config/mise/mise.toml  latest
-pipx:meson                                                   1.10.0            ~/.config/mise/mise.toml  latest
+pipx:SuperClaude                                             4.2.0             ~/.config/mise/mise.toml  latest
+pipx:meson                                                   1.10.1            ~/.config/mise/mise.toml  latest
 pipx:ninja                                                   1.13.0            ~/.config/mise/mise.toml  latest
 pipx:ruff                                                    0.14.13           ~/.config/mise/mise.toml  latest
 pipx:seagoat                                                 0.54.17           ~/.config/mise/mise.toml  latest
