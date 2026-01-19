@@ -128,7 +128,7 @@ flock 0.4.0
 fontconfig 2.17.1
 freetype 2.14.1_1
 frei0r 2.5.1
-fresh-editor 0.1.81
+fresh-editor 0.1.83
 fribidi 1.0.16
 fx 39.2.0
 fzf 0.67.0
@@ -343,7 +343,7 @@ shaderc 2025.5
 shared-mime-info 2.4_1
 shellcheck 0.11.0
 simdjson 4.2.4
-sk 1.0.1
+sk 1.1.0
 sketchybar 2.23.0
 snappy 1.2.2
 sniffnet 1.4.2
