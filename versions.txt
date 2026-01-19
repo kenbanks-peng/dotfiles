@@ -27,7 +27,7 @@ google-chrome 144.0.7559.60
 google-drive 119.0.2
 grandperspective 3.6.2
 iina 1.4.1,160
-karabiner-elements 15.8.0
+karabiner-elements 15.9.0
 keyclu 0.31
 languagetool-desktop 2.10.0
 linear-linear 1.28.6,251002av7g3go28
@@ -42,7 +42,7 @@ orion 1.0.3,142
 pdf-pals 1.9.0
 quarto 1.8.27
 raycast 1.104.1
-screen-studio 3.5.1-4051
+screen-studio 3.5.2-4162
 sf-symbols 7.1,116
 sip-app 4.1.2
 skim 1.7.12
@@ -134,7 +134,7 @@ fx 39.2.0
 fzf 0.67.0
 gawk 5.3.1
 gcc 15.2.0
-gemini-cli 0.24.0
+gemini-cli 0.24.4
 gettext 0.26_1
 gh 2.85.0
 giflib 5.2.2
@@ -254,7 +254,7 @@ lua 5.4.8
 luajit 2.1.1767980792
 luarocks 3.12.2
 lunchy-go 0.2.1
-luv 1.51.0-1
+luv 1.51.0-2
 lz4 1.10.0
 lzo 2.10
 m4 1.4.20
@@ -343,7 +343,7 @@ shaderc 2025.5
 shared-mime-info 2.4_1
 shellcheck 0.11.0
 simdjson 4.2.4
-sk 0.20.5
+sk 1.0.1
 sketchybar 2.23.0
 snappy 1.2.2
 sniffnet 1.4.2
@@ -351,7 +351,7 @@ snyk-cli 1.1302.0
 sox 14.4.2_6
 spark 1.0.1
 speex 1.2.1
-sq 0.48.10
+sq 0.48.11
 sqlc 1.30.0
 sqlite 3.51.2
 srt 1.5.4
