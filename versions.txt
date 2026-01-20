@@ -343,7 +343,7 @@ shaderc 2025.5
 shared-mime-info 2.4_1
 shellcheck 0.11.0
 simdjson 4.2.4
-sk 1.1.0
+sk 1.1.1
 sketchybar 2.23.0
 snappy 1.2.2
 sniffnet 1.4.2
@@ -451,7 +451,7 @@ pipx:seagoat                                                 0.54.17           ~
 RUSTUP/CARGO
 ------------
 Default host: aarch64-apple-darwin
-rustup home:  /Users/kenbanks/Software/rustup
+rustup home:  /Users/kenbanks/Software/ToolChain/rustup
 
 installed toolchains
 --------------------
