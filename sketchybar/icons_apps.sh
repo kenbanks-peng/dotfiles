@@ -39,1164 +39,1163 @@ function app_icons() {
          ;;
 
     # from https://github.com/kvndrsslr/sketchybar-app-font
-
     ### START-OF-ICON-MAP
-   "Live")
+    "Live")
         icon_result=":ableton:"
         ;;
-   "Acrobat")
+    "Acrobat")
         icon_result=":acrobat:"
         ;;
-   "Activity Monitor" | "Aktivitätsanzeige")
+    "Activity Monitor" | "Aktivitätsanzeige")
         icon_result=":activity_monitor:"
         ;;
-   "Actual")
+    "Actual")
         icon_result=":actual:"
         ;;
-   "Adobe Bridge"*)
+    "Adobe Bridge"*)
         icon_result=":adobe_bridge:"
         ;;
-   "AFFiNE")
+    "AFFiNE")
         icon_result=":affine:"
         ;;
-   "Affinity Designer")
+    "Affinity Designer")
         icon_result=":affinity_designer:"
         ;;
-   "Affinity Designer 2")
+    "Affinity Designer 2")
         icon_result=":affinity_designer_2:"
         ;;
-   "Affinity Photo")
+    "Affinity Photo")
         icon_result=":affinity_photo:"
         ;;
-   "Affinity Photo 2")
+    "Affinity Photo 2")
         icon_result=":affinity_photo_2:"
         ;;
-   "Affinity Publisher")
+    "Affinity Publisher")
         icon_result=":affinity_publisher:"
         ;;
-   "Affinity Publisher 2")
+    "Affinity Publisher 2")
         icon_result=":affinity_publisher_2:"
         ;;
-   "Airmail")
+    "Airmail")
         icon_result=":airmail:"
         ;;
-   "AirPort Utility")
+    "AirPort Utility")
         icon_result=":airport_utility:"
         ;;
-   "Alacritty")
+    "Alacritty")
         icon_result=":alacritty:"
         ;;
-   "Alfred")
+    "Alfred")
         icon_result=":alfred:"
         ;;
-   "AltTab")
+    "AltTab")
         icon_result=":alttab:"
         ;;
-   "AmneziaVPN")
+    "AmneziaVPN")
         icon_result=":amnezia_vpn:"
         ;;
-   "Android Messages")
+    "Android Messages")
         icon_result=":android_messages:"
         ;;
-   "Android Studio")
+    "Android Studio")
         icon_result=":android_studio:"
         ;;
-   "Anki")
+    "Anki")
         icon_result=":anki:"
         ;;
-   "Anytype")
+    "Anytype")
         icon_result=":anytype:"
         ;;
-   "Apifox")
+    "Apifox")
         icon_result=":apifox:"
         ;;
-   "App Eraser")
+    "App Eraser")
         icon_result=":app_eraser:"
         ;;
-   "App Store")
+    "App Store")
         icon_result=":app_store:"
         ;;
-   "Books" | "Apple Books")
+    "Books" | "Apple Books")
         icon_result=":apple_books:"
         ;;
-   "Arc")
+    "Arc")
         icon_result=":arc:"
         ;;
-   "Arduino" | "Arduino IDE")
+    "Arduino" | "Arduino IDE")
         icon_result=":arduino:"
         ;;
-   "Atom")
+    "Atom")
         icon_result=":atom:"
         ;;
-   "Audacity")
+    "Audacity")
         icon_result=":audacity:"
         ;;
-   "Automator")
+    "Automator")
         icon_result=":automator:"
         ;;
-   "balenaEtcher")
+    "balenaEtcher")
         icon_result=":balena_etcher:"
         ;;
-   "Bambu Studio")
+    "Bambu Studio")
         icon_result=":bambu_studio:"
         ;;
-   "MoneyMoney")
+    "MoneyMoney")
         icon_result=":bank:"
         ;;
-   "Battle.net")
+    "Battle.net")
         icon_result=":battle_net:"
         ;;
-   "Bazecor")
+    "Bazecor")
         icon_result=":bazecor:"
         ;;
-   "Bear")
+    "Bear")
         icon_result=":bear:"
         ;;
-   "Beeper" | "Beeper Desktop")
+    "Beeper" | "Beeper Desktop")
         icon_result=":beeper:"
         ;;
-   "BetterTouchTool")
+    "BetterTouchTool")
         icon_result=":bettertouchtool:"
         ;;
-   "Bilibili" | "哔哩哔哩")
+    "Bilibili" | "哔哩哔哩")
         icon_result=":bilibili:"
         ;;
-   "Bitwarden")
+    "Bitwarden")
         icon_result=":bit_warden:"
         ;;
-   "Blender")
+    "Blender")
         icon_result=":blender:"
         ;;
-   "Blitzit")
+    "Blitzit")
         icon_result=":blitzit:"
         ;;
-   "Bluetooth File Exchange")
+    "Bluetooth File Exchange")
         icon_result=":bluetooth_file_exchange:"
         ;;
-   "BluOS Controller")
+    "BluOS Controller")
         icon_result=":bluos_controller:"
         ;;
-   "Books" | "Calibre" | "Bücher")
+    "Books" | "Calibre" | "Bücher")
         icon_result=":book:"
         ;;
-   "Brain.fm")
+    "Brain.fm")
         icon_result=":brainfm:"
         ;;
-   "Brave Browser")
+    "Brave Browser")
         icon_result=":brave_browser:"
         ;;
-   "Broadcasts")
+    "Broadcasts")
         icon_result=":broadcasts:"
         ;;
-   "Bruno")
+    "Bruno")
         icon_result=":bruno:"
         ;;
-   "Burp Suite"*)
+    "Burp Suite"*)
         icon_result=":burp_suite:"
         ;;
-   "BusyCal")
+    "BusyCal")
         icon_result=":busycal:"
         ;;
-   "Calculator" | "Calculette" | "Rechner")
+    "Calculator" | "Calculette" | "Rechner")
         icon_result=":calculator:"
         ;;
-   "Calendar" | "日历" | "Fantastical" | "Cron" | "Amie" | "Calendrier" | "カレンダー" | "Notion Calendar" | "Kalender")
+    "Calendar" | "日历" | "Fantastical" | "Cron" | "Amie" | "Calendrier" | "カレンダー" | "Notion Calendar" | "Kalender")
         icon_result=":calendar:"
         ;;
-   "calibre")
+    "calibre")
         icon_result=":calibre:"
         ;;
-   "Capacities")
+    "Capacities")
         icon_result=":capacities:"
         ;;
-   "Caprine")
+    "Caprine")
         icon_result=":caprine:"
         ;;
-   "Amazon Chime")
+    "Amazon Chime")
         icon_result=":chime:"
         ;;
-   "Choosy")
+    "Choosy")
         icon_result=":choosy:"
         ;;
-   "Cisco AnyConnect Secure Mobility Client" | "Cisco Secure Client")
+    "Cisco AnyConnect Secure Mobility Client" | "Cisco Secure Client")
         icon_result=":cisco_anyconnect:"
         ;;
-   "Citrix Workspace" | "Citrix Viewer")
+    "Citrix Workspace" | "Citrix Viewer")
         icon_result=":citrix:"
         ;;
-   "ClassIn")
+    "ClassIn")
         icon_result=":classin:"
         ;;
-   "Claude")
+    "Claude")
         icon_result=":claude:"
         ;;
-   "ClickUp")
+    "ClickUp")
         icon_result=":click_up:"
         ;;
-   "Clock")
+    "Clock")
         icon_result=":clock:"
         ;;
-   "coconutBattery")
+    "coconutBattery")
         icon_result=":coconut_battery:"
         ;;
-   "Code" | "Code - Insiders")
+    "Code" | "Code - Insiders")
         icon_result=":code:"
         ;;
-   "Cold Turkey Blocker")
+    "Cold Turkey Blocker")
         icon_result=":cold_turkey_blocker:"
         ;;
-   "Color Picker" | "数码测色计")
+    "Color Picker" | "数码测色计")
         icon_result=":color_picker:"
         ;;
-   "Comet")
+    "Comet")
         icon_result=":comet:"
         ;;
-   "Copilot")
+    "Copilot")
         icon_result=":copilot:"
         ;;
-   "CotEditor")
+    "CotEditor")
         icon_result=":coteditor:"
         ;;
-   "Craft")
+    "Craft")
         icon_result=":craft:"
         ;;
-   "Creative Cloud")
+    "Creative Cloud")
         icon_result=":creative_cloud:"
         ;;
-   "Cursor")
+    "Cursor")
         icon_result=":cursor:"
         ;;
-   "Cursor"*)
+    "Cursor"*)
         icon_result=":cursor_ide:"
         ;;
-   "Cypress")
+    "Cypress")
         icon_result=":cypress:"
         ;;
-   "Dash")
+    "Dash")
         icon_result=":dash:"
         ;;
-   "DataGrip")
+    "DataGrip")
         icon_result=":datagrip:"
         ;;
-   "DataSpell")
+    "DataSpell")
         icon_result=":dataspell:"
         ;;
-   "DaVinci Resolve")
+    "DaVinci Resolve")
         icon_result=":davinciresolve:"
         ;;
-   "DBeaver")
+    "DBeaver")
         icon_result=":dbeaver:"
         ;;
-   "DeepSeek")
+    "DeepSeek")
         icon_result=":deepseek:"
         ;;
-   "Deezer")
+    "Deezer")
         icon_result=":deezer:"
         ;;
-   "Default")
+    "Default")
         icon_result=":default:"
         ;;
-   "deno")
+    "deno")
         icon_result=":deno:"
         ;;
-   "CleanMyMac X")
+    "CleanMyMac X")
         icon_result=":desktop:"
         ;;
-   "DEVONthink 3")
+    "DEVONthink 3")
         icon_result=":devonthink3:"
         ;;
-   "Dexcom")
+    "Dexcom")
         icon_result=":dexcom:"
         ;;
-   "Dia")
+    "Dia")
         icon_result=":dia:"
         ;;
-   "DingTalk" | "钉钉" | "阿里钉")
+    "DingTalk" | "钉钉" | "阿里钉")
         icon_result=":dingtalk:"
         ;;
-   "Discord" | "Discord Canary" | "Discord PTB")
+    "Discord" | "Discord Canary" | "Discord PTB")
         icon_result=":discord:"
         ;;
-   "Docker" | "Docker Desktop")
+    "Docker" | "Docker Desktop")
         icon_result=":docker:"
         ;;
-   "GrandTotal" | "Receipts")
+    "GrandTotal" | "Receipts")
         icon_result=":dollar:"
         ;;
-   "Double Commander")
+    "Double Commander")
         icon_result=":doublecmd:"
         ;;
-   "Downie 4")
+    "Downie 4")
         icon_result=":downie:"
         ;;
-   "Drafts")
+    "Drafts")
         icon_result=":drafts:"
         ;;
-   "draw.io")
+    "draw.io")
         icon_result=":draw_io:"
         ;;
-   "Dropbox")
+    "Dropbox")
         icon_result=":dropbox:"
         ;;
-   "Eagle")
+    "Eagle")
         icon_result=":eagle:"
         ;;
-   "Element")
+    "Element")
         icon_result=":element:"
         ;;
-   "Emacs")
+    "Emacs")
         icon_result=":emacs:"
         ;;
-   "EuDic")
+    "EuDic")
         icon_result=":eudic:"
         ;;
-   "Evernote Legacy")
+    "Evernote Legacy")
         icon_result=":evernote_legacy:"
         ;;
-   "FaceTime" | "FaceTime 通话")
+    "FaceTime" | "FaceTime 通话")
         icon_result=":face_time:"
         ;;
-   "Feishu")
+    "Feishu")
         icon_result=":feishu:"
         ;;
-   "Figma")
+    "Figma")
         icon_result=":figma:"
         ;;
-   "Final Cut Pro")
+    "Final Cut Pro")
         icon_result=":final_cut_pro:"
         ;;
-   "Find My")
+    "Find My")
         icon_result=":find_my:"
         ;;
-   "Finder" | "访达")
+    "Finder" | "访达")
         icon_result=":finder:"
         ;;
-   "Firefox")
+    "Firefox")
         icon_result=":firefox:"
         ;;
-   "Firefox Developer Edition" | "Firefox Nightly")
+    "Firefox Developer Edition" | "Firefox Nightly")
         icon_result=":firefox_developer_edition:"
         ;;
-   "FL Studio")
+    "FL Studio")
         icon_result=":flstudio:"
         ;;
-   "Folx")
+    "Folx")
         icon_result=":folx:"
         ;;
-   "Fork")
+    "Fork")
         icon_result=":fork:"
         ;;
-   "ForkLift")
+    "ForkLift")
         icon_result=":forklift:"
         ;;
-   "Foxit PDF Reader")
+    "Foxit PDF Reader")
         icon_result=":foxit_reader:"
         ;;
-   "FreeCAD")
+    "FreeCAD")
         icon_result=":freecad:"
         ;;
-   "Freeform")
+    "Freeform")
         icon_result=":freeform:"
         ;;
-   "FreeTube")
+    "FreeTube")
         icon_result=":freetube:"
         ;;
-   "FSNotes")
+    "FSNotes")
         icon_result=":fsnotes:"
         ;;
-   "Fusion")
+    "Fusion")
         icon_result=":fusion:"
         ;;
-   "Games")
+    "Games")
         icon_result=":games:"
         ;;
-   "System Preferences" | "System Settings" | "系统设置" | "Réglages Système" | "システム設定" | "Systemeinstellungen" | "System­einstellungen")
+    "System Preferences" | "System Settings" | "系统设置" | "Réglages Système" | "システム設定" | "Systemeinstellungen" | "System­einstellungen")
         icon_result=":gear:"
         ;;
-   "Gemini" | "Google Gemini")
+    "Gemini" | "Google Gemini")
         icon_result=":gemini:"
         ;;
-   "Ghostty")
+    "Ghostty")
         icon_result=":ghostty:"
         ;;
-   "GIMP")
+    "GIMP")
         icon_result=":gimp:"
         ;;
-   "GitHub Desktop")
+    "GitHub Desktop")
         icon_result=":git_hub:"
         ;;
-   "Godot")
+    "Godot")
         icon_result=":godot:"
         ;;
-   "GoLand")
+    "GoLand")
         icon_result=":goland:"
         ;;
-   "GoodLinks")
+    "GoodLinks")
         icon_result=":goodlinks:"
         ;;
-   "Goodnotes")
+    "Goodnotes")
         icon_result=":goodnotes:"
         ;;
-   "Google Chat")
+    "Google Chat")
         icon_result=":google_chat:"
         ;;
-   "Chromium" | "Google Chrome" | "Google Chrome Canary")
+    "Chromium" | "Google Chrome" | "Google Chrome Canary")
         icon_result=":google_chrome:"
         ;;
-   "Grammarly Editor")
+    "Grammarly Editor")
         icon_result=":grammarly:"
         ;;
-   "Granola")
+    "Granola")
         icon_result=":granola:"
         ;;
-   "Grayjay")
+    "Grayjay")
         icon_result=":grayjay:"
         ;;
-   "Hammerspoon")
+    "Hammerspoon")
         icon_result=":hammerspoon:"
         ;;
-   "Hazel")
+    "Hazel")
         icon_result=":hazel:"
         ;;
-   "Helium")
+    "Helium")
         icon_result=":helium:"
         ;;
-   "Home")
+    "Home")
         icon_result=":home:"
         ;;
-   "Home Assistant")
+    "Home Assistant")
         icon_result=":home_assistant:"
         ;;
-   "Hyper")
+    "Hyper")
         icon_result=":hyper:"
         ;;
-   "IntelliJ IDEA")
+    "IntelliJ IDEA")
         icon_result=":idea:"
         ;;
-   "IINA")
+    "IINA")
         icon_result=":iina:"
         ;;
-   "Adobe Illustrator"* | "Illustrator")
+    "Adobe Illustrator"* | "Illustrator")
         icon_result=":illustrator:"
         ;;
-   "Image Playground")
+    "Image Playground")
         icon_result=":image_playground:"
         ;;
-   "Adobe InDesign"* | "InDesign")
+    "Adobe InDesign"* | "InDesign")
         icon_result=":indesign:"
         ;;
-   "Infuse")
+    "Infuse")
         icon_result=":infuse:"
         ;;
-   "Inkdrop")
+    "Inkdrop")
         icon_result=":inkdrop:"
         ;;
-   "Inkscape")
+    "Inkscape")
         icon_result=":inkscape:"
         ;;
-   "Insomnia")
+    "Insomnia")
         icon_result=":insomnia:"
         ;;
-   "Instapaper")
+    "Instapaper")
         icon_result=":instapaper:"
         ;;
-   "iPhone Mirroring")
+    "iPhone Mirroring")
         icon_result=":iphone_mirroring:"
         ;;
-   "Iris")
+    "Iris")
         icon_result=":iris:"
         ;;
-   "iTerm" | "iTerm2")
+    "iTerm" | "iTerm2")
         icon_result=":iterm:"
         ;;
-   "Jane Reader")
+    "Jane Reader")
         icon_result=":jane_reader:"
         ;;
-   "Jellyfin Media Player")
+    "Jellyfin Media Player")
         icon_result=":jellyfin:"
         ;;
-   "JetBrains Gateway")
+    "JetBrains Gateway")
         icon_result=":jetbrains_gateway:"
         ;;
-   "JetBrains Toolbox")
+    "JetBrains Toolbox")
         icon_result=":jetbrains_toolbox:"
         ;;
-   "Joplin")
+    "Joplin")
         icon_result=":joplin:"
         ;;
-   "Journal")
+    "Journal")
         icon_result=":journal:"
         ;;
-   "카카오톡" | "KakaoTalk")
+    "카카오톡" | "KakaoTalk")
         icon_result=":kakaotalk:"
         ;;
-   "Kakoune")
+    "Kakoune")
         icon_result=":kakoune:"
         ;;
-   "Karabiner-Elements Settings")
+    "Karabiner-Elements Settings")
         icon_result=":karabiner_elements:"
         ;;
-   "Karabiner-EventViewer")
+    "Karabiner-EventViewer")
         icon_result=":karabiner_elements_event_viewer:"
         ;;
-   "KeePassXC")
+    "KeePassXC")
         icon_result=":kee_pass_x_c:"
         ;;
-   "Keyboard Maestro")
+    "Keyboard Maestro")
         icon_result=":keyboard_maestro:"
         ;;
-   "Keynote" | "Keynote 讲演")
+    "Keynote" | "Keynote 讲演")
         icon_result=":keynote:"
         ;;
-   "KiCad")
+    "KiCad")
         icon_result=":kicad:"
         ;;
-   "Kiro")
+    "Kiro")
         icon_result=":kiro:"
         ;;
-   "kitty")
+    "kitty")
         icon_result=":kitty:"
         ;;
-   "Kodi")
+    "Kodi")
         icon_result=":kodi:"
         ;;
-   "LanguageTool for Desktop")
+    "LanguageTool for Desktop")
         icon_result=":languagetool_for_desktop:"
         ;;
-   "League of Legends")
+    "League of Legends")
         icon_result=":league_of_legends:"
         ;;
-   "LibreWolf")
+    "LibreWolf")
         icon_result=":libre_wolf:"
         ;;
-   "LibreOffice")
+    "LibreOffice")
         icon_result=":libreoffice:"
         ;;
-   "Adobe Lightroom")
+    "Adobe Lightroom")
         icon_result=":lightroom:"
         ;;
-   "Lightroom Classic")
+    "Lightroom Classic")
         icon_result=":lightroomclassic:"
         ;;
-   "LINE")
+    "LINE")
         icon_result=":line:"
         ;;
-   "Linear")
+    "Linear")
         icon_result=":linear:"
         ;;
-   "LM Studio")
+    "LM Studio")
         icon_result=":lm_studio:"
         ;;
-   "LocalSend")
+    "LocalSend")
         icon_result=":localsend:"
         ;;
-   "Logic Pro")
+    "Logic Pro")
         icon_result=":logicpro:"
         ;;
-   "Logseq")
+    "Logseq")
         icon_result=":logseq:"
         ;;
-   "Maccy")
+    "Maccy")
         icon_result=":maccy_clip:"
         ;;
-   "MacPass")
+    "MacPass")
         icon_result=":macpass:"
         ;;
-   "Canary Mail" | "HEY" | "Mail" | "Mailspring" | "MailMate" | "Superhuman" | "Spark" | "Spark Mail" | "邮件" | "メール")
+    "Canary Mail" | "HEY" | "Mail" | "Mailspring" | "MailMate" | "Superhuman" | "Spark" | "Spark Mail" | "邮件" | "メール")
         icon_result=":mail:"
         ;;
-   "MAMP" | "MAMP PRO")
+    "MAMP" | "MAMP PRO")
         icon_result=":mamp:"
         ;;
-   "Maps" | "Google Maps" | "マップ" | "Karten")
+    "Maps" | "Google Maps" | "マップ" | "Karten")
         icon_result=":maps:"
         ;;
-   "Marked 2")
+    "Marked 2")
         icon_result=":marked_2:"
         ;;
-   "Marta")
+    "Marta")
         icon_result=":marta:"
         ;;
-   "Matlab" | "MATLAB" |"MATLABWindow" | "MATLAB_R2024b" | "MATLAB_R2024a" | "MATLAB_R2023b" | "MATLAB_R2023a" | "MATLAB_R2022b" | "MATLAB_R2022a" | "MATLAB_R2021b" | "MATLAB_R2021a")
+    "Matlab" | "MATLAB" |"MATLABWindow" | "MATLAB_R2024b" | "MATLAB_R2024a" | "MATLAB_R2023b" | "MATLAB_R2023a" | "MATLAB_R2022b" | "MATLAB_R2022a" | "MATLAB_R2021b" | "MATLAB_R2021a")
         icon_result=":matlab:"
         ;;
-   "Mattermost")
+    "Mattermost")
         icon_result=":mattermost:"
         ;;
-   "Google Meet")
+    "Google Meet")
         icon_result=":meet:"
         ;;
-   "Messages" | "信息" | "Nachrichten" | "メッセージ")
+    "Messages" | "信息" | "Nachrichten" | "メッセージ")
         icon_result=":messages:"
         ;;
-   "Messenger")
+    "Messenger")
         icon_result=":messenger:"
         ;;
-   "Microsoft Edge")
+    "Microsoft Edge")
         icon_result=":microsoft_edge:"
         ;;
-   "Microsoft Excel")
+    "Microsoft Excel")
         icon_result=":microsoft_excel:"
         ;;
-   "Microsoft Outlook")
+    "Microsoft Outlook")
         icon_result=":microsoft_outlook:"
         ;;
-   "Microsoft PowerPoint")
+    "Microsoft PowerPoint")
         icon_result=":microsoft_power_point:"
         ;;
-   "Microsoft Remote Desktop")
+    "Microsoft Remote Desktop")
         icon_result=":microsoft_remote_desktop:"
         ;;
-   "Microsoft Teams" | "Microsoft Teams (work or school)")
+    "Microsoft Teams" | "Microsoft Teams (work or school)")
         icon_result=":microsoft_teams:"
         ;;
-   "Microsoft Word")
+    "Microsoft Word")
         icon_result=":microsoft_word:"
         ;;
-   "Mimestream")
+    "Mimestream")
         icon_result=":mimestream:"
         ;;
-   "Min")
+    "Min")
         icon_result=":min_browser:"
         ;;
-   "Miro")
+    "Miro")
         icon_result=":miro:"
         ;;
-   "MongoDB Compass"*)
+    "MongoDB Compass"*)
         icon_result=":mongodb:"
         ;;
-   "Moonlight")
+    "Moonlight")
         icon_result=":moonlight:"
         ;;
-   "Movist Pro")
+    "Movist Pro")
         icon_result=":movist_pro:"
         ;;
-   "mpv")
+    "mpv")
         icon_result=":mpv:"
         ;;
-   "Mullvad Browser")
+    "Mullvad Browser")
         icon_result=":mullvad_browser:"
         ;;
-   "Music" | "音乐" | "Musique" | "ミュージック" | "Musik" | "Chromatix")
+    "Music" | "音乐" | "Musique" | "ミュージック" | "Musik" | "Chromatix")
         icon_result=":music:"
         ;;
-   "Navicat Premium")
+    "Navicat Premium")
         icon_result=":navicat:"
         ;;
-   "Neovide" | "neovide")
+    "Neovide" | "neovide")
         icon_result=":neovide:"
         ;;
-   "Neovim" | "neovim" | "nvim")
+    "Neovim" | "neovim" | "nvim")
         icon_result=":neovim:"
         ;;
-   "网易云音乐" | "NetEaseMusic")
+    "网易云音乐" | "NetEaseMusic")
         icon_result=":netease_music:"
         ;;
-   "Netflix")
+    "Netflix")
         icon_result=":netflix:"
         ;;
-   "NetNewsWire")
+    "NetNewsWire")
         icon_result=":netnewswire:"
         ;;
-   "News")
+    "News")
         icon_result=":news:"
         ;;
-   "Nextcloud")
+    "Nextcloud")
         icon_result=":nextcloud:"
         ;;
-   "Nicotine+")
+    "Nicotine+")
         icon_result=":nicotine_plus:"
         ;;
-   "Nimble Commander" | "NimbleCommander-Unsigned")
+    "Nimble Commander" | "NimbleCommander-Unsigned")
         icon_result=":nimble_commander:"
         ;;
-   "Noodl" | "Noodl Editor")
+    "Noodl" | "Noodl Editor")
         icon_result=":noodl:"
         ;;
-   "NordVPN")
+    "NordVPN")
         icon_result=":nord_vpn:"
         ;;
-   "Notability")
+    "Notability")
         icon_result=":notability:"
         ;;
-   "Notes" | "备忘录" | "メモ" | "Notizen")
+    "Notes" | "备忘录" | "メモ" | "Notizen")
         icon_result=":notes:"
         ;;
-   "Notion")
+    "Notion")
         icon_result=":notion:"
         ;;
-   "Notion Mail")
+    "Notion Mail")
         icon_result=":notion_mail:"
         ;;
-   "Nova")
+    "Nova")
         icon_result=":nova:"
         ;;
-   "Numbers" | "Numbers 表格")
+    "Numbers" | "Numbers 表格")
         icon_result=":numbers:"
         ;;
-   "nvALT")
+    "nvALT")
         icon_result=":nvalt:"
         ;;
-   "Nvidia GeForce Now" | "GeForceNOW")
+    "Nvidia GeForce Now" | "GeForceNOW")
         icon_result=":nvidia_geforce_now:"
         ;;
-   "Obsidian")
+    "Obsidian")
         icon_result=":obsidian:"
         ;;
-   "OBS")
+    "OBS")
         icon_result=":obsstudio:"
         ;;
-   "OmniFocus")
+    "OmniFocus")
         icon_result=":omni_focus:"
         ;;
-   "1Password")
+    "1Password")
         icon_result=":one_password:"
         ;;
-   "Open Video Downloader")
+    "Open Video Downloader")
         icon_result=":open_video_downloader:"
         ;;
-   "ChatGPT")
+    "ChatGPT")
         icon_result=":openai:"
         ;;
-   "OpenAI Translator")
+    "OpenAI Translator")
         icon_result=":openai_translator:"
         ;;
-   "OpenVPN Connect")
+    "OpenVPN Connect")
         icon_result=":openvpn_connect:"
         ;;
-   "Opera")
+    "Opera")
         icon_result=":opera:"
         ;;
-   "OrbStack")
+    "OrbStack")
         icon_result=":orbstack:"
         ;;
-   "OrcaSlicer")
+    "OrcaSlicer")
         icon_result=":orcaslicer:"
         ;;
-   "Orion" | "Orion RC")
+    "Orion" | "Orion RC")
         icon_result=":orion:"
         ;;
-   "Overcast")
+    "Overcast")
         icon_result=":overcast:"
         ;;
-   "Overleaf" | "ShareLaTeX")
+    "Overleaf" | "ShareLaTeX")
         icon_result=":overleaf:"
         ;;
-   "Pages" | "Pages 文稿")
+    "Pages" | "Pages 文稿")
         icon_result=":pages:"
         ;;
-   "Parallels Desktop")
+    "Parallels Desktop")
         icon_result=":parallels:"
         ;;
-   "Parcel")
+    "Parcel")
         icon_result=":parcel:"
         ;;
-   "Parsec")
+    "Parsec")
         icon_result=":parsec:"
         ;;
-   "Passepartout")
+    "Passepartout")
         icon_result=":passepartout:"
         ;;
-   "Passwords" | "Passwörter")
+    "Passwords" | "Passwörter")
         icon_result=":passwords:"
         ;;
-   "PDF Expert")
+    "PDF Expert")
         icon_result=":pdf_expert:"
         ;;
-   "Pearcleaner")
+    "Pearcleaner")
         icon_result=":pearcleaner:"
         ;;
-   "Perplexity" | "Perplexity AI")
+    "Perplexity" | "Perplexity AI")
         icon_result=":perplexity:"
         ;;
-   "Phoenix Slides")
+    "Phoenix Slides")
         icon_result=":phoenix_slides:"
         ;;
-   "Phone")
+    "Phone")
         icon_result=":phone:"
         ;;
-   "Photos" | "Fotos")
+    "Photos" | "Fotos")
         icon_result=":photos:"
         ;;
-   "Adobe Photoshop"*)
+    "Adobe Photoshop"*)
         icon_result=":photoshop:"
         ;;
-   "PhpStorm")
+    "PhpStorm")
         icon_result=":php_storm:"
         ;;
-   "Pi-hole Remote")
+    "Pi-hole Remote")
         icon_result=":pihole:"
         ;;
-   "Pine")
+    "Pine")
         icon_result=":pine:"
         ;;
-   "Pixelmator Pro")
+    "Pixelmator Pro")
         icon_result=":pixelmator_pro:"
         ;;
-   "Play")
+    "Play")
         icon_result=":play:"
         ;;
-   "Plex")
+    "Plex")
         icon_result=":plex:"
         ;;
-   "Plexamp")
+    "Plexamp")
         icon_result=":plexamp:"
         ;;
-   "Podcasts" | "播客")
+    "Podcasts" | "播客")
         icon_result=":podcasts:"
         ;;
-   "PomoDone App")
+    "PomoDone App")
         icon_result=":pomodone:"
         ;;
-   "Postman")
+    "Postman")
         icon_result=":postman:"
         ;;
-   "Premiere" | "Adobe Premiere" | "Adobe Premiere Pro 2024")
+    "Premiere" | "Adobe Premiere" | "Adobe Premiere Pro 2024")
         icon_result=":premiere:"
         ;;
-   "Preview" | "预览" | "Skim" | "zathura" | "Aperçu" | "プレビュー" | "Vorschau")
+    "Preview" | "预览" | "Skim" | "zathura" | "Aperçu" | "プレビュー" | "Vorschau")
         icon_result=":preview:"
         ;;
-   "Proton Mail" | "Proton Mail Bridge")
+    "Proton Mail" | "Proton Mail Bridge")
         icon_result=":proton_mail:"
         ;;
-   "Proton VPN" | "ProtonVPN")
+    "Proton VPN" | "ProtonVPN")
         icon_result=":proton_vpn:"
         ;;
-   "PrusaSlicer" | "SuperSlicer")
+    "PrusaSlicer" | "SuperSlicer")
         icon_result=":prusaslicer:"
         ;;
-   "PyCharm")
+    "PyCharm")
         icon_result=":pycharm:"
         ;;
-   "qBittorrent")
+    "qBittorrent")
         icon_result=":qbittorrent:"
         ;;
-   "QLMarkdown")
+    "QLMarkdown")
         icon_result=":qlmarkdown:"
         ;;
-   "QQ")
+    "QQ")
         icon_result=":qq:"
         ;;
-   "QQ音乐" | "QQMusic")
+    "QQ音乐" | "QQMusic")
         icon_result=":qqmusic:"
         ;;
-   "Quantumult X")
+    "Quantumult X")
         icon_result=":quantumult_x:"
         ;;
-   "QuickTime Player")
+    "QuickTime Player")
         icon_result=":quicktime:"
         ;;
-   "Quip")
+    "Quip")
         icon_result=":quip:"
         ;;
-   "qutebrowser")
+    "qutebrowser")
         icon_result=":qute_browser:"
         ;;
-   "Raindrop.io")
+    "Raindrop.io")
         icon_result=":raindrop_io:"
         ;;
-   "Raspberry Pi Imager" | "Raspberry Pi Connect")
+    "Raspberry Pi Imager" | "Raspberry Pi Connect")
         icon_result=":raspberry_pi:"
         ;;
-   "Raycast")
+    "Raycast")
         icon_result=":raycast:"
         ;;
-   "Reeder")
+    "Reeder")
         icon_result=":reeder5:"
         ;;
-   "rekordbox")
+    "rekordbox")
         icon_result=":rekordbox:"
         ;;
-   "Remind Faster")
+    "Remind Faster")
         icon_result=":remind_me_faster:"
         ;;
-   "Reminders" | "提醒事项" | "Rappels" | "リマインダー" | "Erinnerungen")
+    "Reminders" | "提醒事项" | "Rappels" | "リマインダー" | "Erinnerungen")
         icon_result=":reminders:"
         ;;
-   "Replit")
+    "Replit")
         icon_result=":replit:"
         ;;
-   "Repo Prompt")
+    "Repo Prompt")
         icon_result=":repo_prompt:"
         ;;
-   "Rider" | "JetBrains Rider")
+    "Rider" | "JetBrains Rider")
         icon_result=":rider:"
         ;;
-   "Rio")
+    "Rio")
         icon_result=":rio:"
         ;;
-   "Royal TSX")
+    "Royal TSX")
         icon_result=":royaltsx:"
         ;;
-   "RustDesk")
+    "RustDesk")
         icon_result=":rustdesk:"
         ;;
-   "Safari" | "Safari浏览器" | "Safari Technology Preview")
+    "Safari" | "Safari浏览器" | "Safari Technology Preview")
         icon_result=":safari:"
         ;;
-   "Scribus")
+    "Scribus")
         icon_result=":scribus:"
         ;;
-   "Seafile")
+    "Seafile")
         icon_result=":seafile:"
         ;;
-   "Sequel Ace")
+    "Sequel Ace")
         icon_result=":sequel_ace:"
         ;;
-   "Sequel Pro")
+    "Sequel Pro")
         icon_result=":sequel_pro:"
         ;;
-   "Session")
+    "Session")
         icon_result=":session:"
         ;;
-   "Setapp")
+    "Setapp")
         icon_result=":setapp:"
         ;;
-   "SF Symbols" | "SF Symbole" | "SF-Symbole")
+    "SF Symbols" | "SF Symbole" | "SF-Symbole")
         icon_result=":sf_symbols:"
         ;;
-   "Shortcuts")
+    "Shortcuts")
         icon_result=":shortcuts:"
         ;;
-   "Signal")
+    "Signal")
         icon_result=":signal:"
         ;;
-   "sioyek")
+    "sioyek")
         icon_result=":sioyek:"
         ;;
-   "Sketch")
+    "Sketch")
         icon_result=":sketch:"
         ;;
-   "Skype")
+    "Skype")
         icon_result=":skype:"
         ;;
-   "Slack")
+    "Slack")
         icon_result=":slack:"
         ;;
-   "SnippetsLab")
+    "SnippetsLab")
         icon_result=":snippetslab:"
         ;;
-   "solidtime")
+    "solidtime")
         icon_result=":solidtime:"
         ;;
-   "Spark Desktop")
+    "Spark Desktop")
         icon_result=":spark:"
         ;;
-   "Spotify")
+    "Spotify")
         icon_result=":spotify:"
         ;;
-   "Spotlight")
+    "Spotlight")
         icon_result=":spotlight:"
         ;;
-   "Steam" | "Steam Helper")
+    "Steam" | "Steam Helper")
         icon_result=":steam:"
         ;;
-   "Studio 3T")
+    "Studio 3T")
         icon_result=":studio_3t:"
         ;;
-   "Sublime Merge")
+    "Sublime Merge")
         icon_result=":sublime_merge:"
         ;;
-   "Sublime Text")
+    "Sublime Text")
         icon_result=":sublime_text:"
         ;;
-   "Summoners War")
+    "Summoners War")
         icon_result=":summoners_war:"
         ;;
-   "superProductivity")
+    "superProductivity")
         icon_result=":superproductivity:"
         ;;
-   "Surfshark")
+    "Surfshark")
         icon_result=":surfshark:"
         ;;
-   "Swift Playground")
+    "Swift Playground")
         icon_result=":swift_playground:"
         ;;
-   "T3 Chat")
+    "T3 Chat")
         icon_result=":t3chat:"
         ;;
-   "Tabby")
+    "Tabby")
         icon_result=":tabby:"
         ;;
-   "TablePlus")
+    "TablePlus")
         icon_result=":tableplus:"
         ;;
-   "Tana")
+    "Tana")
         icon_result=":tana:"
         ;;
-   "TeamSpeak 3")
+    "TeamSpeak 3")
         icon_result=":team_speak:"
         ;;
-   "Telegram")
+    "Telegram")
         icon_result=":telegram:"
         ;;
-   "Terminal" | "终端" | "ターミナル")
+    "Terminal" | "终端" | "ターミナル")
         icon_result=":terminal:"
         ;;
-   "Termius")
+    "Termius")
         icon_result=":termius:"
         ;;
-   "Typora")
+    "Typora")
         icon_result=":text:"
         ;;
-   "TextEdit")
+    "TextEdit")
         icon_result=":textedit:"
         ;;
-   "Microsoft To Do" | "Things")
+    "Microsoft To Do" | "Things")
         icon_result=":things:"
         ;;
-   "Thunderbird" | "Thunderbird Daily")
+    "Thunderbird" | "Thunderbird Daily")
         icon_result=":thunderbird:"
         ;;
-   "TickTick")
+    "TickTick")
         icon_result=":tick_tick:"
         ;;
-   "TIDAL")
+    "TIDAL")
         icon_result=":tidal:"
         ;;
-   "Timery")
+    "Timery")
         icon_result=":timery:"
         ;;
-   "Tiny RDM")
+    "Tiny RDM")
         icon_result=":tinyrdm:"
         ;;
-   "Tips")
+    "Tips")
         icon_result=":tips:"
         ;;
-   "Todoist")
+    "Todoist")
         icon_result=":todoist:"
         ;;
-   "Toggl Track")
+    "Toggl Track")
         icon_result=":toggl_track:"
         ;;
-   "Tor Browser")
+    "Tor Browser")
         icon_result=":tor_browser:"
         ;;
-   "Tot")
+    "Tot")
         icon_result=":tot:"
         ;;
-   "Tower")
+    "Tower")
         icon_result=":tower:"
         ;;
-   "TradingView")
+    "TradingView")
         icon_result=":trading_view:"
         ;;
-   "Transmit")
+    "Transmit")
         icon_result=":transmit:"
         ;;
-   "Trello")
+    "Trello")
         icon_result=":trello:"
         ;;
-   "TV")
+    "TV")
         icon_result=":tv:"
         ;;
-   "Twingate")
+    "Twingate")
         icon_result=":twingate:"
         ;;
-   "Tweetbot" | "Twitter")
+    "Tweetbot" | "Twitter")
         icon_result=":twitter:"
         ;;
-   "UTM")
+    "UTM")
         icon_result=":utm:"
         ;;
-   "VeraCrypt")
+    "VeraCrypt")
         icon_result=":veracrypt:"
         ;;
-   "MacVim" | "Vim" | "VimR")
+    "MacVim" | "Vim" | "VimR")
         icon_result=":vim:"
         ;;
-   "Vivaldi")
+    "Vivaldi")
         icon_result=":vivaldi:"
         ;;
-   "VLC")
+    "VLC")
         icon_result=":vlc:"
         ;;
-   "VMware Fusion")
+    "VMware Fusion")
         icon_result=":vmware_fusion:"
         ;;
-   "Voice Memos")
+    "Voice Memos")
         icon_result=":voice_memos:"
         ;;
-   "Vorta")
+    "Vorta")
         icon_result=":vorta:"
         ;;
-   "VSCodium")
+    "VSCodium")
         icon_result=":vscodium:"
         ;;
-   "Warp")
+    "Warp")
         icon_result=":warp:"
         ;;
-   "Weather" | "Wetter")
+    "Weather" | "Wetter")
         icon_result=":weather:"
         ;;
-   "WebStorm")
+    "WebStorm")
         icon_result=":web_storm:"
         ;;
-   "Webull Desktop")
+    "Webull Desktop")
         icon_result=":webull:"
         ;;
-   "微信" | "WeChat")
+    "微信" | "WeChat")
         icon_result=":wechat:"
         ;;
-   "企业微信" | "WeCom")
+    "企业微信" | "WeCom")
         icon_result=":wecom:"
         ;;
-   "WezTerm" | "wezterm-gui")
+    "WezTerm" | "wezterm-gui")
         icon_result=":wezterm:"
         ;;
-   "WhatsApp" | "‎WhatsApp")
+    "WhatsApp" | "‎WhatsApp")
         icon_result=":whats_app:"
         ;;
-   "Windows App")
+    "Windows App")
         icon_result=":windows_app:"
         ;;
-   "WireGuard")
+    "WireGuard")
         icon_result=":wireguard:"
         ;;
-   "Xcode")
+    "Xcode")
         icon_result=":xcode:"
         ;;
-   "Yandex Browser"  | "Yandex Browser" | "Yandex")
+    "Yandex Browser"  | "Yandex Browser" | "Yandex")
         icon_result=":yandex_bower:"
         ;;
-   "Yandex Music")
+    "Yandex Music")
         icon_result=":yandex_music:"
         ;;
-   "Yazi" | "yazi")
+    "Yazi" | "yazi")
         icon_result=":yazi:"
         ;;
-   "YouTube")
+    "YouTube")
         icon_result=":youtube:"
         ;;
-   "YouTube Music")
+    "YouTube Music")
         icon_result=":youtube_music:"
         ;;
-   "Yuque" | "语雀")
+    "Yuque" | "语雀")
         icon_result=":yuque:"
         ;;
-   "Zed")
+    "Zed")
         icon_result=":zed:"
         ;;
-   "Zen" | "Zen Browser")
+    "Zen" | "Zen Browser")
         icon_result=":zen_browser:"
         ;;
-   "Zeplin")
+    "Zeplin")
         icon_result=":zeplin:"
         ;;
-   "zoom.us")
+    "zoom.us")
         icon_result=":zoom:"
         ;;
-   "Zotero")
+    "Zotero")
         icon_result=":zotero:"
         ;;
-   "Zulip")
+    "Zulip")
         icon_result=":zulip:"
         ;;
     *)
         icon_result=":default:"
         ;;
-    esac
+  esac
 }
 ### END-OF-ICON-MAP
 
