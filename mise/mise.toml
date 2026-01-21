@@ -16,7 +16,6 @@
 "go:github.com/nizos/tdd-guard/reporters/go/cmd/tdd-guard-go" = "v0.2.1"
 "npm:@opentui/core" = "latest"
 "npm:@opentui/react" = "latest"
-"npm:@langwatch/better-agents" = "latest"
 "go:github.com/wailsapp/wails/v3/cmd/wails3" = "latest"
 "nix:nodejs" = "25"
 "nix:bun" = "latest"
