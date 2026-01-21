@@ -39,6 +39,7 @@ function app_icons() {
          ;;
 
     # from https://github.com/kvndrsslr/sketchybar-app-font
+
     ### START-OF-ICON-MAP
     "Live")
         icon_result=":ableton:"
