@@ -41,7 +41,7 @@ orbstack 2.0.5,19905
 orion 1.0.3,142
 pdf-pals 1.9.0
 quarto 1.8.27
-raycast 1.104.1
+raycast 1.104.2
 screen-studio 3.5.2-4162
 sf-symbols 7.1,116
 sip-app 4.1.2
@@ -119,7 +119,7 @@ duf 0.9.1
 dust 1.2.4
 dvc 3.66.1_2
 espeak-ng 1.52.0
-fastfetch 2.57.1
+fastfetch 2.58.0
 fd 10.3.0
 ffmpeg 8.0.1_1.reinstall 8.0.1_1
 figlet 2.2.5
@@ -128,13 +128,13 @@ flock 0.4.0
 fontconfig 2.17.1
 freetype 2.14.1_1
 frei0r 2.5.1
-fresh-editor 0.1.83
+fresh-editor 0.1.86
 fribidi 1.0.16
 fx 39.2.0
 fzf 0.67.0
 gawk 5.3.1
 gcc 15.2.0
-gemini-cli 0.24.5
+gemini-cli 0.25.0
 gettext 0.26_1
 gh 2.85.0
 giflib 5.2.2
@@ -212,7 +212,7 @@ liblinear 2.50
 libmicrohttpd 1.0.2
 libmpc 1.3.1
 libnghttp2 1.68.0
-libnghttp3 1.14.0
+libnghttp3 1.15.0
 libngtcp2 1.20.0
 libogg 1.3.6
 libplacebo 7.351.0
@@ -278,7 +278,7 @@ ncurses 6.6
 neovim 0.11.5_1
 nettle 3.10.2
 nmap 7.98
-node 25.3.0
+node 25.4.0
 npth 1.8
 nspr 4.38.2
 nss 3.120
@@ -431,12 +431,12 @@ go:golang.org/x/tools/gopls                                  0.21.0            ~
 go:honnef.co/go/tools/cmd/staticcheck                        0.7.0-0.dev       ~/.config/mise/mise.toml  latest
 nix:bun                                                      1.3.6 (symlink)   ~/.config/mise/mise.toml  latest
 nix:nodejs                                                   25.2.1
-nix:nodejs                                                   25.3.0 (symlink)  ~/.config/mise/mise.toml  25
-nix:ruby                                                     4.0.0 (symlink)   ~/.config/mise/mise.toml  latest
+nix:nodejs                                                   25.4.0 (symlink)  ~/.config/mise/mise.toml  25
+nix:ruby                                                     4.0.1 (symlink)   ~/.config/mise/mise.toml  latest
 nix:rustup                                                   1.28.2 (symlink)  ~/.config/mise/mise.toml  latest
-nix:uv                                                       0.9.24 (symlink)  ~/.config/mise/mise.toml  latest
+nix:uv                                                       0.9.26 (symlink)  ~/.config/mise/mise.toml  latest
 npm:@langwatch/better-agents                                 0.1.20            ~/.config/mise/mise.toml  latest
-npm:@mixedbread/mgrep                                        0.1.8             ~/.config/mise/mise.toml  latest
+npm:@mixedbread/mgrep                                        0.1.9             ~/.config/mise/mise.toml  latest
 npm:@opentui/core                                            0.1.74            ~/.config/mise/mise.toml  latest
 npm:@opentui/react                                           0.1.74            ~/.config/mise/mise.toml  latest
 npm:github-markdown-css                                      5.8.1             ~/.config/mise/mise.toml  latest
