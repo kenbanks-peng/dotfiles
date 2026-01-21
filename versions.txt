@@ -7,7 +7,7 @@ anybar 0.2.3
 audacity 3.7.7
 boop 1.4.0
 claude 1.1.381,c2a39e9c82f5a4d51f511f53f532afd276312731
-claude-code 2.1.12
+claude-code 2.1.14
 cleanshot 4.8.7
 codex 0.87.0
 container 0.6.0
@@ -23,7 +23,7 @@ font-symbols-only-nerd-font 3.4.0
 font-tex-gyre-termes 2.004
 ghostty 1.2.3
 git-credential-manager 2.6.1
-google-chrome 144.0.7559.60
+google-chrome 144.0.7559.97
 google-drive 119.0.2
 grandperspective 3.6.2
 iina 1.4.1,160
@@ -35,7 +35,7 @@ logos 47.2.0.0002
 microsoft-auto-update 4.81.25121042
 obsidian 1.11.5
 omnifocus 4.8.6
-onedrive 25.222.1112.0002
+onedrive 25.238.1204.0001
 opcode 0.2.0
 orbstack 2.0.5,19905
 orion 1.0.3,142
