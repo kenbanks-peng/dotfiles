@@ -7,9 +7,9 @@ anybar 0.2.3
 audacity 3.7.7
 boop 1.4.0
 claude 1.1.381,c2a39e9c82f5a4d51f511f53f532afd276312731
-claude-code 2.1.14
+claude-code 2.1.15
 cleanshot 4.8.7
-codex 0.87.0
+codex 0.88.0
 container 0.6.0
 cursor 2.3.41,2ca326e0d1ce10956aea33d54c0e2d8c13c58a32
 daisydisk 4.33.2
@@ -30,7 +30,7 @@ iina 1.4.1,160
 karabiner-elements 15.9.0
 keyclu 0.31
 languagetool-desktop 2.10.0
-linear-linear 1.28.6,251002av7g3go28
+linear-linear 1.28.7,260121aah8dqpp9
 logos 47.2.0.0002
 microsoft-auto-update 4.81.25121042
 obsidian 1.11.5
@@ -52,8 +52,8 @@ syntax-highlight 2.1.27
 typeface 4.2.3,4845
 visual-studio-code 1.108.1
 vlc 3.0.23
-yaak 2025.9.3
-zed 0.219.5
+yaak 2026.1.0
+zed 0.220.2
 zen 1.17.15b
 zoom 6.7.2.72191
 
@@ -128,7 +128,7 @@ flock 0.4.0
 fontconfig 2.17.1
 freetype 2.14.1_1
 frei0r 2.5.1
-fresh-editor 0.1.86
+fresh-editor 0.1.87
 fribidi 1.0.16
 fx 39.2.0
 fzf 0.67.0
@@ -136,7 +136,7 @@ gawk 5.3.1
 gcc 15.2.0
 gemini-cli 0.25.0
 gettext 0.26_1
-gh 2.85.0
+gh 2.86.0
 giflib 5.2.2
 git 2.52.0_1
 git-bug 0.10.1
@@ -288,7 +288,7 @@ oh-my-posh 29.0.2
 onefetch 2.26.1
 oniguruma 6.9.10
 openblas 0.3.31
-opencode 1.1.20
+opencode 1.1.30
 opencore-amr 0.1.6
 openexr 3.4.4_1
 openjpeg 2.5.4
@@ -343,7 +343,7 @@ shaderc 2025.5
 shared-mime-info 2.4_1
 shellcheck 0.11.0
 simdjson 4.2.4
-sk 1.2.0
+sk 1.4.0
 sketchybar 2.23.0
 snappy 1.2.2
 sniffnet 1.4.2
@@ -418,24 +418,15 @@ cargo:sbyte                                                  0.3.3             ~
 github:h0rv/d2-mcp                                           1.1.0             ~/.config/mise/mise.toml  latest
 github:melkeydev/go-blueprint                                0.10.11           ~/.config/mise/mise.toml  latest
 go:github.com/nizos/tdd-guard/reporters/go/cmd/tdd-guard-go  v0.2.1            ~/.config/mise/mise.toml  v0.2.1
-go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.53
-go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.54
-go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.55
-go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.56
-go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.57
-go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.58
-go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.59
-go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.60
-go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.61    ~/.config/mise/mise.toml  latest
+go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.61
+go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.62    ~/.config/mise/mise.toml  latest
 go:golang.org/x/tools/gopls                                  0.21.0            ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck                        0.7.0-0.dev       ~/.config/mise/mise.toml  latest
 nix:bun                                                      1.3.6 (symlink)   ~/.config/mise/mise.toml  latest
-nix:nodejs                                                   25.2.1
 nix:nodejs                                                   25.4.0 (symlink)  ~/.config/mise/mise.toml  25
 nix:ruby                                                     4.0.1 (symlink)   ~/.config/mise/mise.toml  latest
 nix:rustup                                                   1.28.2 (symlink)  ~/.config/mise/mise.toml  latest
 nix:uv                                                       0.9.26 (symlink)  ~/.config/mise/mise.toml  latest
-npm:@langwatch/better-agents                                 0.1.20            ~/.config/mise/mise.toml  latest
 npm:@mixedbread/mgrep                                        0.1.9             ~/.config/mise/mise.toml  latest
 npm:@opentui/core                                            0.1.74            ~/.config/mise/mise.toml  latest
 npm:@opentui/react                                           0.1.74            ~/.config/mise/mise.toml  latest
