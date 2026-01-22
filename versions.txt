@@ -161,7 +161,7 @@ gping 1.20.1
 graphite2 1.3.14
 grex 1.4.6
 grpc 1.76.0_4
-harfbuzz 12.3.0
+harfbuzz 12.3.1
 hexyl 0.16.0
 highway 1.3.0
 htmlq 0.4.0
@@ -318,7 +318,7 @@ procs 0.14.10
 protobuf 33.4
 pstree 2.40
 pv 1.10.3
-pycparser 2.23_1
+pycparser 3.0
 pydantic 2.12.5
 pygit2 1.19.1
 python@3.13 3.13.11
