@@ -18,7 +18,6 @@
 "npm:@opentui/react" = "latest"
 "go:github.com/wailsapp/wails/v3/cmd/wails3" = "latest"
 "nix:nodejs" = "25"
-"nix:bun" = "latest"
 "nix:ruby" = "latest"
 "nix:uv" = "latest"
 "github:melkeydev/go-blueprint" = "latest"
