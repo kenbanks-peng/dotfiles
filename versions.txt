@@ -7,7 +7,7 @@ anybar 0.2.3
 audacity 3.7.7
 boop 1.4.0
 claude 1.1.381,c2a39e9c82f5a4d51f511f53f532afd276312731
-claude-code 2.1.15
+claude-code 2.1.16
 cleanshot 4.8.7
 codex 0.88.0
 container 0.6.0
@@ -50,7 +50,7 @@ superwhisper 2.8.0
 symboliclinker 2.2
 syntax-highlight 2.1.27
 typeface 4.2.3,4845
-visual-studio-code 1.108.1
+visual-studio-code 1.108.2
 vlc 3.0.23
 yaak 2026.1.0
 zed 0.220.3
@@ -343,11 +343,11 @@ shaderc 2025.5
 shared-mime-info 2.4_1
 shellcheck 0.11.0
 simdjson 4.2.4
-sk 1.4.0
+sk 1.5.3
 sketchybar 2.23.0
 snappy 1.2.2
 sniffnet 1.4.2
-snyk-cli 1.1302.0
+snyk-cli 1.1302.1
 sox 14.4.2_6
 spark 1.0.1
 speex 1.2.1
