@@ -1,0 +1,8 @@
+# add to ~/.claude/settings.json
+{
+  "statusLine": {
+      "type": "command",
+      "command": "oh-my-posh claude --config ~/Software/Public/dotfiles/omposh/claude.toml",
+      "padding": 0
+  }
+}
