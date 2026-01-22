@@ -17,12 +17,8 @@
 "npm:@opentui/core" = "latest"
 "npm:@opentui/react" = "latest"
 "go:github.com/wailsapp/wails/v3/cmd/wails3" = "latest"
-"nix:nodejs" = "25"
-"nix:ruby" = "latest"
-"nix:uv" = "latest"
 "github:melkeydev/go-blueprint" = "latest"
 "github:h0rv/d2-mcp" = "latest"
-"nix:rustup" = "latest"
 "npm:@mixedbread/mgrep" = "latest"
 
 [settings]
