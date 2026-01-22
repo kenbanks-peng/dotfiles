@@ -412,28 +412,29 @@ zstd 1.5.7
 
 MISE PACKAGES
 -------------
-cargo:cargo-cache                                            0.8.3           ~/.config/mise/mise.toml  latest
-cargo:cargo-update                                           18.0.0          ~/.config/mise/mise.toml  latest
-cargo:sbyte                                                  0.3.3           ~/.config/mise/mise.toml  latest
-github:h0rv/d2-mcp                                           1.1.0           ~/.config/mise/mise.toml  latest
-github:melkeydev/go-blueprint                                0.10.11         ~/.config/mise/mise.toml  latest
-go:github.com/nizos/tdd-guard/reporters/go/cmd/tdd-guard-go  v0.2.1          ~/.config/mise/mise.toml  v0.2.1
+cargo:cargo-cache                                            0.8.3             ~/.config/mise/mise.toml  latest
+cargo:cargo-update                                           18.0.0            ~/.config/mise/mise.toml  latest
+cargo:sbyte                                                  0.3.3             ~/.config/mise/mise.toml  latest
+github:h0rv/d2-mcp                                           1.1.0             ~/.config/mise/mise.toml  latest
+github:melkeydev/go-blueprint                                0.10.11           ~/.config/mise/mise.toml  latest
+go:github.com/nizos/tdd-guard/reporters/go/cmd/tdd-guard-go  v0.2.1            ~/.config/mise/mise.toml  v0.2.1
 go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.61
-go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.62  ~/.config/mise/mise.toml  latest
-go:golang.org/x/tools/gopls                                  0.21.0          ~/.config/mise/mise.toml  latest
-go:honnef.co/go/tools/cmd/staticcheck                        0.7.0-0.dev     ~/.config/mise/mise.toml  latest
-npm:@mixedbread/mgrep                                        0.1.9           ~/.config/mise/mise.toml  latest
-npm:@opentui/core                                            0.1.74          ~/.config/mise/mise.toml  latest
-npm:@opentui/react                                           0.1.74          ~/.config/mise/mise.toml  latest
-npm:github-markdown-css                                      5.8.1           ~/.config/mise/mise.toml  latest
-npm:md-to-pdf                                                5.2.5           ~/.config/mise/mise.toml  latest
-npm:nuekit                                                   2.0.0-beta.2    ~/.config/mise/mise.toml  latest
-npm:vite                                                     7.3.1           ~/.config/mise/mise.toml  latest
-pipx:SuperClaude                                             4.2.0           ~/.config/mise/mise.toml  latest
-pipx:meson                                                   1.10.1          ~/.config/mise/mise.toml  latest
-pipx:ninja                                                   1.13.0          ~/.config/mise/mise.toml  latest
-pipx:ruff                                                    0.14.13         ~/.config/mise/mise.toml  latest
-pipx:seagoat                                                 0.54.17         ~/.config/mise/mise.toml  latest
+go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.62    ~/.config/mise/mise.toml  latest
+go:golang.org/x/tools/gopls                                  0.21.0            ~/.config/mise/mise.toml  latest
+go:honnef.co/go/tools/cmd/staticcheck                        0.7.0-0.dev       ~/.config/mise/mise.toml  latest
+nix:hello                                                    2.12.2 (symlink)  ~/.config/mise/mise.toml  latest
+npm:@mixedbread/mgrep                                        0.1.9             ~/.config/mise/mise.toml  latest
+npm:@opentui/core                                            0.1.74            ~/.config/mise/mise.toml  latest
+npm:@opentui/react                                           0.1.74            ~/.config/mise/mise.toml  latest
+npm:github-markdown-css                                      5.8.1             ~/.config/mise/mise.toml  latest
+npm:md-to-pdf                                                5.2.5             ~/.config/mise/mise.toml  latest
+npm:nuekit                                                   2.0.0-beta.2      ~/.config/mise/mise.toml  latest
+npm:vite                                                     7.3.1             ~/.config/mise/mise.toml  latest
+pipx:SuperClaude                                             4.2.0             ~/.config/mise/mise.toml  latest
+pipx:meson                                                   1.10.1            ~/.config/mise/mise.toml  latest
+pipx:ninja                                                   1.13.0            ~/.config/mise/mise.toml  latest
+pipx:ruff                                                    0.14.13           ~/.config/mise/mise.toml  latest
+pipx:seagoat                                                 0.54.17           ~/.config/mise/mise.toml  latest
 
 RUSTUP/CARGO
 ------------
