@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 #
 # [MISE] description="Disk usage"
-# cd "$MISE_ORIGINAL_CWD"
-duf
+duf /
