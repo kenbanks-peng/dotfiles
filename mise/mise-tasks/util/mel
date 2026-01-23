@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# [MISE] description="Melody language to regex"
-# [MISE] usage='arg "[args...]"'
+#MISE description="Melody language to regex"
+#USAGE arg "<args>..." var=#true
 melody "$@"

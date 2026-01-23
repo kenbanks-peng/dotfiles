@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# [MISE] description="Shell linter"
-# [MISE] usage='arg "[args...]"'
+#MISE description="Shell linter"
+#USAGE arg "<args>..." var=#true
 shellcheck "$@"

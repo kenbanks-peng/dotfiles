@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# [MISE] description="Markdown to PDF"
-# [MISE] usage='arg "[args...]"'
+#MISE description="Markdown to PDF"
+#USAGE arg "<args>..." var=#true
 markitdown "$@"

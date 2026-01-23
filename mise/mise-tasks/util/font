@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# [MISE] description="Font manager"
-# [MISE] usage='arg "[args...]"'
+#MISE description="Font manager"
+#USAGE arg "<args>..." var=#true
 fnt "$@"

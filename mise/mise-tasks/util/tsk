@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# [MISE] description="Local task manager"
-# [MISE] usage='arg "[args...]"'
+#MISE description="Local task manager"
+#USAGE arg "<args>..." var=#true
 task "$@"

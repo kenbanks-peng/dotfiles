@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# [MISE] description="Generate regex from examples"
-# [MISE] usage='arg "[args...]"'
+#MISE description="Generate regex from examples"
+#USAGE arg "<args>..." var=#true
 grex "$@"

@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# [MISE] description="Show image"
-# [MISE] usage='arg "[args...]"'
+#MISE description="Show image"
+#USAGE arg "<args>..." var=#true
 imgcat "$@"

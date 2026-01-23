@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# [MISE] description="tv fzf"
-# [MISE] usage='arg "[args...]"'
+#MISE description="tv fzf"
+#USAGE arg "<args>..." var=#true
 tv "$@"

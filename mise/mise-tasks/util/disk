@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-# [MISE] description="Disk usage tui"
+#MISE description="Disk usage tui"
 ncdu

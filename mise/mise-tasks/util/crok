@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# [MISE] description="Croc file transfer"
-# [MISE] usage='arg "[args...]"'
+#MISE description="Croc file transfer"
+#USAGE arg "<args>..." var=#true
 croc "$@"

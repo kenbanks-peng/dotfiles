@@ -30,4 +30,5 @@
 
 [settings]
 experimental = true
+quiet = true
 
