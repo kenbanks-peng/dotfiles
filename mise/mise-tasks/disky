@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 #
 # [MISE] description="Disk usage"
-set -euxo pipefail
-cd "$MISE_ORIGINAL_CWD"
+# cd "$MISE_ORIGINAL_CWD"
 duf
