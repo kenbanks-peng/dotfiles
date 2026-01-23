@@ -114,7 +114,6 @@ deno 2.6.6
 direnv 2.37.1
 doppler 3.75.1
 dotenvx 1.52.0
-duf 0.9.1
 dvc 3.66.1_3
 espeak-ng 1.52.0
 fastfetch 2.58.0
