@@ -24,6 +24,9 @@
 "nix:rustup" = "latest"
 "nix:ruby" = "latest"
 "github:jdx/fnox" = "latest"
+"github:jdx/usage" = "latest"
+"nix:bun" = "latest"
+"nix:uv" = "latest"
 
 [settings]
 experimental = true
