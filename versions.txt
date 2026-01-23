@@ -114,9 +114,7 @@ deno 2.6.6
 direnv 2.37.1
 doppler 3.75.1
 dotenvx 1.52.0
-dua-cli 2.33.0
 duf 0.9.1
-dust 1.2.4
 dvc 3.66.1_3
 espeak-ng 1.52.0
 fastfetch 2.58.0
@@ -416,17 +414,18 @@ cargo:cargo-cache                                            0.8.3             ~
 cargo:cargo-update                                           18.0.0            ~/.config/mise/mise.toml  latest
 cargo:sbyte                                                  0.3.3             ~/.config/mise/mise.toml  latest
 github:h0rv/d2-mcp                                           1.1.0             ~/.config/mise/mise.toml  latest
+github:jdx/fnox                                              1.9.2             ~/.config/mise/mise.toml  latest
+github:jdx/usage                                             2.13.1            ~/.config/mise/mise.toml  latest
 github:melkeydev/go-blueprint                                0.10.11           ~/.config/mise/mise.toml  latest
 go:github.com/nizos/tdd-guard/reporters/go/cmd/tdd-guard-go  v0.2.1            ~/.config/mise/mise.toml  v0.2.1
-go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.61
 go:github.com/wailsapp/wails/v3/cmd/wails3                   3.0.0-alpha.62    ~/.config/mise/mise.toml  latest
 go:golang.org/x/tools/gopls                                  0.21.0            ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck                        0.7.0-0.dev       ~/.config/mise/mise.toml  latest
-nix:bun                                                      1.3.6 (symlink)
+nix:bun                                                      1.3.6 (symlink)   ~/.config/mise/mise.toml  latest
 nix:nodejs                                                   25.4.0 (symlink)  ~/.config/mise/mise.toml  latest
 nix:ruby                                                     4.0.1 (symlink)   ~/.config/mise/mise.toml  latest
 nix:rustup                                                   1.28.2 (symlink)  ~/.config/mise/mise.toml  latest
-nix:uv                                                       0.9.26 (symlink)
+nix:uv                                                       0.9.26 (symlink)  ~/.config/mise/mise.toml  latest
 npm:@mixedbread/mgrep                                        0.1.10            ~/.config/mise/mise.toml  latest
 npm:@opentui/core                                            0.1.74            ~/.config/mise/mise.toml  latest
 npm:@opentui/react                                           0.1.74            ~/.config/mise/mise.toml  latest
