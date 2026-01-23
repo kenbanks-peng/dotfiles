@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# [MISE] description="Benchmarks with hyperfine"
+# [MISE] usage='arg "[args...]"'
+hyperfine "$@"

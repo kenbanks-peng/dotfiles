@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# [MISE] description="Mac optimization"
+# [MISE] usage='arg "[args...]"'
+mo "$@"

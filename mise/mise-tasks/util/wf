@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# [MISE] description="Weather forecast"
+curl -s "wttr.in/London+ON" | sed '$d'

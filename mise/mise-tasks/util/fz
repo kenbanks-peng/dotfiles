@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# [MISE] description="fzf alternative (skim)"
+# [MISE] usage='arg "[args...]"'
+sk "$@"

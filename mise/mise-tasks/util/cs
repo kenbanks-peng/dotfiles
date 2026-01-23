@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# [MISE] description="Cheatsheet"
+# [MISE] usage='arg "[args...]"'
+cheat "$@"

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# [MISE] description="Watch directory/file for changes"
+# [MISE] usage='arg "[args...]"'
+watchexec "$@"

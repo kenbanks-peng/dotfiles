@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# [MISE] description="Port scanner"
+# [MISE] usage='arg "[args...]"'
+rustscan "$@"

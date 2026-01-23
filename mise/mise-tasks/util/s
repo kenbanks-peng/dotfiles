@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# [MISE] description="Sparkline generator"
+# [MISE] usage='arg "[args...]"'
+spark "$@"
