@@ -23,6 +23,7 @@
 "nix:nodejs" = "latest"
 "nix:rustup" = "latest"
 "nix:ruby" = "latest"
+"github:jdx/fnox" = "latest"
 
 [settings]
 experimental = true
