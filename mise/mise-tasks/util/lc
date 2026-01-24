@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+#MISE description="Rainbow text"
+#USAGE arg "[args]..." var=#true
+
+if [[ ! -t 0 ]]; then
+  cat
+elif [[ $# -gt 0 ]]; then
+  echo "$@"
+else
+  echo "Usage: lc <text> or echo <text> | lc"
+  exit 1
+fi | lolcat
