@@ -1,0 +1,7 @@
+#!/usr/bin/env zsh
+# [MISE] description="Initialize dvc and add files over 1 MB"
+[[ ! -d .git ]] && git init
+dvc init && \
+find . -type f -size +1M ! -path "./.git/*" ! -path "./.dvc/*" | while read file; do \
+  dvc add "$file" && echo "Added $file to DVC"; \
+done

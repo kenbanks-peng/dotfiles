@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# [MISE] description="Git delta viewer"
+# [USAGE] arg "[args]..." var=true
+delta "${usage_args[@]}"

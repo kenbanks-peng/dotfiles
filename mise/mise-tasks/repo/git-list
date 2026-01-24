@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# [MISE] description="Git list files"
+git ls-files

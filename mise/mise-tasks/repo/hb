@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# [MISE] description="GitHub CLI"
+# [USAGE] arg "[args]..." var=true
+hub "${usage_args[@]}"

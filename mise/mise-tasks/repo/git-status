@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# [MISE] description="Git status"
+git fetch
+git status

@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# [MISE] description="Git-bug"
+# [USAGE] arg "[args]..." var=true
+git-bug "${usage_args[@]}"
