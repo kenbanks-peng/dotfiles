@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-#MISE description="fzf alternative (skim)"
-#USAGE arg "<args>..." var=#true
-sk "$@"

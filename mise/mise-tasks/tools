@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+#MISE description="List miscellaneous tools"
+
+column -t -s'|' << 'EOF'
+sk|fzf alternative (skim)
+EOF
