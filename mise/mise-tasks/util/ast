@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
-#MISE description="Code refactoring with ast-grep"
-#USAGE arg "<args>..." var=#true
+# [MISE] description="Code refactoring with ast-grep"
 ast-grep "$@"

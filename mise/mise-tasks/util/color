@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
-#MISE description="Color utilities"
-#USAGE arg "<args>..." var=#true
+# [MISE] description="Color utilities"
 pastel color "$@"

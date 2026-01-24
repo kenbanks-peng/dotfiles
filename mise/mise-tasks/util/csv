@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
-#MISE description="CSV toolkit"
-#USAGE arg "<args>..." var=#true
+# [MISE] description="CSV toolkit"
 csvtk "$@"

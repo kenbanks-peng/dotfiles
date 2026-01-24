@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
-#MISE description="Markdown to PDF"
-#USAGE arg "<args>..." var=#true
+# [MISE] description="Convert various file types to markdown"
 markitdown "$@"

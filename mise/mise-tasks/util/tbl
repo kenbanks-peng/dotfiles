@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
-#MISE description="Format as table"
-#USAGE arg "<args>..." var=#true
+# [MISE] description="Format as table"
 column -t "$@"

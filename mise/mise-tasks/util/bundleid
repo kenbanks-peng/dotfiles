@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-#MISE description="Get bundle ID of an app"
+# [MISE] description="Get bundle ID of an app"
 #USAGE arg "<app_name>"
 osascript -e "id of app \"${usage_app_name}\""

@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-#MISE description="Remove app quarantine"
+# [MISE] description="Remove app quarantine"
 #USAGE arg "<app_name>"
 xattr -d com.apple.quarantine "/Applications/${usage_app_name}.app"
