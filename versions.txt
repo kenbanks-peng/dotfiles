@@ -6,8 +6,8 @@ antigravity 1.15.6,5250816192937984
 anybar 0.2.3
 audacity 3.7.7
 boop 1.4.0
-claude 1.1.673,5a47b0985054af4d65ff00b30b1f621fd225fdb3
-claude-code 2.1.17
+claude 1.1.799,2e02b656cbbb1f14a5a81a4ed79b1c5ea1427507
+claude-code 2.1.19
 cleanshot 4.8.7
 codex 0.89.0
 container 0.6.0
@@ -24,7 +24,7 @@ font-tex-gyre-termes 2.004
 ghostty 1.2.3
 git-credential-manager 2.6.1
 google-chrome 144.0.7559.97
-google-drive 119.0.2
+google-drive 120.0.1
 grandperspective 3.6.2
 iina 1.4.1,160
 karabiner-elements 15.9.0
@@ -85,7 +85,7 @@ bash 5.3.9
 bat 0.26.1
 bat-extras 2024.08.24
 bbrew 2.2.1
-biome 2.3.11
+biome 2.3.12
 borders 1.8.4
 brotli 1.2.0
 btop 1.4.6
@@ -131,7 +131,7 @@ fx 39.2.0
 fzf 0.67.0
 gawk 5.3.1
 gcc 15.2.0
-gemini-cli 0.25.1
+gemini-cli 0.25.2
 gettext 0.26_1
 gh 2.86.0
 giflib 5.2.2
@@ -149,7 +149,6 @@ gnu-getopt 2.41.3
 gnu-sed 4.9
 gnupg 2.4.9
 gnutls 3.8.11
-go-task 3.46.4
 gobang 0.1.0-alpha.5
 gpg-tui 0.11.1_1
 gpgme 2.0.1
@@ -187,7 +186,7 @@ lame 3.100
 lazydocker 0.24.4
 lazygit 0.58.1
 lazyjj 0.6.1
-lazyjournal 0.8.3
+lazyjournal 0.8.4
 lazysql 0.4.6
 leptonica 1.87.0
 lf 40
@@ -281,7 +280,7 @@ nspr 4.38.2
 nss 3.120
 numpy 2.4.1
 nushell 0.110.0
-oh-my-posh 29.0.2
+oh-my-posh 29.1.0
 onefetch 2.26.1
 oniguruma 6.9.10
 openblas 0.3.31
@@ -319,7 +318,7 @@ pycparser 3.0
 pydantic 2.12.5
 pygit2 1.19.1
 python@3.13 3.13.11_1
-python@3.14 3.14.2
+python@3.14 3.14.2_1
 qrencode 4.1.1
 qsv 14.0.0
 rav1e 0.8.1
@@ -336,11 +335,11 @@ sad 0.4.32
 sd 1.0.0
 sdl2 2.32.10
 sevenzip 25.01
-shaderc 2025.5
+shaderc 2026.1
 shared-mime-info 2.4_1
 shellcheck 0.11.0
 simdjson 4.2.4
-sk 1.5.3
+sk 1.6.0
 sketchybar 2.23.0
 snappy 1.2.2
 sniffnet 1.4.2
