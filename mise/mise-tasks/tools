@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
 #MISE description="List miscellaneous tools"
 
-column -t -s'|' << 'EOF'
-sk|fzf alternative (skim)
+mise tasks ls
+
+echo ""
+echo "Other tools:"
+echo -e "\033[31mName           Description\033[0m"
+while IFS='|' read -r name desc; do
+  printf "%-14s \033[90m%s\033[0m\n" "$name" "$desc"
+done << 'EOF'
+sk|skim, an fzf alternative
 EOF
