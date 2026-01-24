@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# [MISE] description="PDF attach"
+# [USAGE] arg "[args]..." var=true
+pdfattach "${usage_args[@]}"

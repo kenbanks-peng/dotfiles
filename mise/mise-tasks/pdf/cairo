@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# [MISE] description="PDF to cairo"
+# [USAGE] arg "[args]..." var=true
+pdftocairo "${usage_args[@]}"

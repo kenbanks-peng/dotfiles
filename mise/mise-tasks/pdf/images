@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# [MISE] description="PDF images"
+# [USAGE] arg "[args]..." var=true
+pdfimages "${usage_args[@]}"

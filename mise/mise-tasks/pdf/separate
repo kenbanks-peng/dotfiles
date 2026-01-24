@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# [MISE] description="PDF separate"
+# [USAGE] arg "[args]..." var=true
+pdfseparate "${usage_args[@]}"

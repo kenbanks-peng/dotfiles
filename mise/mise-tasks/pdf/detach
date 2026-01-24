@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# [MISE] description="PDF detach"
+# [USAGE] arg "[args]..." var=true
+pdfdetach "${usage_args[@]}"

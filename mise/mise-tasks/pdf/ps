@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# [MISE] description="PDF to ps"
+# [USAGE] arg "[args]..." var=true
+pdftops "${usage_args[@]}"

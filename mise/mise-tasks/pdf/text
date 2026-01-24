@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# [MISE] description="PDF to text"
+# [USAGE] arg "[args]..." var=true
+pdftotext "${usage_args[@]}"

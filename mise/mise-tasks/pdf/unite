@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# [MISE] description="PDF unite"
+# [USAGE] arg "[args]..." var=true
+pdfunite "${usage_args[@]}"

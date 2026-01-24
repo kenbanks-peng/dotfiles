@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# [MISE] description="PDF fonts"
+# [USAGE] arg "[args]..." var=true
+pdffonts "${usage_args[@]}"
