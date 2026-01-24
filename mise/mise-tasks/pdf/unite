@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # [MISE] description="PDF unite"
+# [MISE] dir="{{cwd}}"
 pdfunite "$@"
