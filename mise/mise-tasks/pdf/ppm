@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 # [MISE] description="PDF to ppm"
-# [USAGE] arg "[args]..." var=true
-pdftoppm "${usage_args[@]}"
+pdftoppm "$@"

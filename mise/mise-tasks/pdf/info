@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 # [MISE] description="PDF info"
-# [USAGE] arg "[args]..." var=true
-pdfinfo "${usage_args[@]}"
+pdfinfo "$@"
