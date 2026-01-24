@@ -1,0 +1,48 @@
+#!/usr/bin/env zsh
+# [MISE] description="pls list show hidden files"
+# [MISE] dir="{{cwd}}"
+# [USAGE] arg "[pls_args]..." var=true
+
+print -P "%F{green}${${PWD/#$HOME/\~}// /\\\\ }${${PWD:#/}:+/}%f"
+
+args=($usage_pls_args)
+
+git_flag=""
+git rev-parse --is-inside-work-tree > /dev/null 2>&1 && git_flag="--det=git"
+
+temp_dir=$(mktemp -d)
+temp_config="$temp_dir/pls.yml"
+trap "rm -rf $temp_dir" EXIT
+
+cp "$PLS_CONFIG" "$temp_config"
+
+sip_patterns=""
+setopt nullglob
+
+for item in *; do
+  if [[ -e "$item" ]]; then
+    if \ls -lO "$item" 2>/dev/null | grep -q "restricted"; then
+      escaped_item=$(printf '%s\n' "$item" | sed 's/[[\.*^$()+?{|]/\\&/g')
+      sip_patterns+="  - pattern: ^${escaped_item}\$"$'\n'"    icons:"$'\n'"      - lock"$'\n'"    style: red"$'\n'
+    fi
+  fi
+done
+
+for item in .*; do
+  if [[ "$item" != "." && "$item" != ".." && -e "$item" ]]; then
+    if \ls -lO "$item" 2>/dev/null | grep -q "restricted"; then
+      escaped_item=$(printf '%s\n' "$item" | sed 's/[[\.*^$()+?{|]/\\&/g')
+      sip_patterns+="  - pattern: ^${escaped_item}\$"$'\n'"    icons:"$'\n'"      - lock"$'\n'"    style: red"$'\n'
+    fi
+  fi
+done
+
+unsetopt nullglob
+
+if [[ -n "$sip_patterns" ]]; then
+  echo "" >> "$temp_config"
+  echo "  # SIP protected files" >> "$temp_config"
+  echo "$sip_patterns" >> "$temp_config"
+fi
+
+PLS_CONFIG="$temp_config" pls --header=false --suffix=false --sort=cat --sort=name $git_flag "${args[@]}"
