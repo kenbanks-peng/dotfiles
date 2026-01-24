@@ -11,24 +11,24 @@
   "agent": {
     "default_model": {
       "provider": "google",
-      "model": "gemini-3-pro-preview"
+      "model": "gemini-3-pro-preview",
     },
     "notify_when_agent_waiting": "all_screens",
-    "play_sound_when_agent_done": true
+    "play_sound_when_agent_done": true,
   },
   "agent_servers": {
     "gemini": {
-      "ignore_system_version": false
+      "ignore_system_version": false,
     },
     "claude": {
       "env": {
-        "CLAUDE_CODE_EXECUTABLE": "/opt/homebrew/bin/claude"
-      }
-    }
+        "CLAUDE_CODE_EXECUTABLE": "/opt/homebrew/bin/claude",
+      },
+    },
   },
   "icon_theme": "Catppuccin Mocha",
   "features": {
-    "edit_prediction_provider": "zed"
+    "edit_prediction_provider": "zed",
   },
   "vim_mode": false,
   "autosave": "off",
@@ -37,7 +37,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Catppuccin Mocha"
+    "dark": "Catppuccin Mocha",
   },
   "ui_font_size": 18,
   "buffer_font_family": "Hasklug Nerd Font Mono",
@@ -45,22 +45,22 @@
   "tab_size": 2,
   "terminal": {
     "font_family": "Hasklug Nerd Font Mono",
-    "line_height": "standard"
+    "line_height": "standard",
   },
   "file_types": {
-    "Shell Script": ["*.just"]
+    "Shell Script": ["*.just"],
   },
   "tabs": {
     "close_position": "right",
     "file_icons": false,
-    "git_status": true
+    "git_status": true,
   },
   "indent_guides": {
     "enabled": true,
     "line_width": 1,
     "active_line_width": 1,
     "coloring": "indent_aware",
-    "background_coloring": "disabled"
+    "background_coloring": "disabled",
   },
   "inlay_hints": {
     "enabled": true,
@@ -68,15 +68,18 @@
     "show_parameter_hints": true,
     "show_other_hints": true,
     "edit_debounce_ms": 700,
-    "scroll_debounce_ms": 50
+    "scroll_debounce_ms": 50,
   },
-  "restore_on_startup": "none",
+  "restore_on_startup": "empty_tab",
   "lsp": {
     "tinymist": {
       "initialization_options": {
         "exportPdf": "onSave",
-        "outputPath": "$root/$name"
-      }
-    }
-  }
+        "outputPath": "$root/$name",
+      },
+    },
+  },
+  "preview_tabs": {
+    "enable_preview_from_file_finder": true,
+  },
 }

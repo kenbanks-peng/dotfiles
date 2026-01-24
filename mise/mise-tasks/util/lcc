@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 #MISE description="Rainbow text"
 #USAGE arg "<args>..." var=#true
-lolcat "$@"
+echo "$@" | lolcat
