@@ -9,7 +9,7 @@ boop 1.4.0
 claude 1.1.886,ef5d267b24cd6ead766647763ca5bcfae49c823b
 claude-code 2.1.19
 cleanshot 4.8.7
-codex 0.89.0
+codex 0.91.0
 container 0.6.0
 cursor 2.4.21,dc8361355d709f306d5159635a677a571b277bcc
 daisydisk 4.33.2
@@ -53,8 +53,8 @@ typeface 4.2.3,4845
 visual-studio-code 1.108.2
 vlc 3.0.23
 yaak 2026.1.0
-zed 0.220.5
-zen 1.17.15b
+zed 0.220.6
+zen 1.18.1b
 zoom 6.7.2.72191
 
 BREW FORMULAS
@@ -338,7 +338,7 @@ shaderc 2026.1
 shared-mime-info 2.4_1
 shellcheck 0.11.0
 simdjson 4.2.4
-sk 1.6.0
+sk 1.7.2
 sketchybar 2.23.0
 snappy 1.2.2
 sniffnet 1.4.2
@@ -357,7 +357,6 @@ svgo 4.0.0
 svt-av1 4.0.0
 syncthing 2.0.13
 tailspin 5.5.0
-tdd-guard 1.1.0
 tealdeer 1.8.1
 television 0.14.5
 terminal-notifier 2.0.0
@@ -411,10 +410,9 @@ cargo:cargo-cache                           0.8.3             ~/.config/mise/mis
 cargo:cargo-update                          18.0.0            ~/.config/mise/mise.toml  latest
 cargo:sbyte                                 0.3.3             ~/.config/mise/mise.toml  latest
 github:h0rv/d2-mcp                          1.1.0             ~/.config/mise/mise.toml  latest
-github:jdx/fnox                             1.9.2             ~/.config/mise/mise.toml  latest
+github:jdx/fnox                             1.10.0            ~/.config/mise/mise.toml  latest
 github:jdx/usage                            2.13.1            ~/.config/mise/mise.toml  latest
 github:melkeydev/go-blueprint               0.10.11           ~/.config/mise/mise.toml  latest
-go:github.com/wailsapp/wails/v3/cmd/wails3  3.0.0-alpha.62
 go:github.com/wailsapp/wails/v3/cmd/wails3  3.0.0-alpha.63    ~/.config/mise/mise.toml  latest
 go:golang.org/x/tools/gopls                 0.21.0            ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck       0.7.0-0.dev       ~/.config/mise/mise.toml  latest
@@ -424,8 +422,8 @@ nix:ruby                                    4.0.1 (symlink)   ~/.config/mise/mis
 nix:rustup                                  1.28.2 (symlink)  ~/.config/mise/mise.toml  latest
 nix:uv                                      0.9.26 (symlink)  ~/.config/mise/mise.toml  latest
 npm:@mixedbread/mgrep                       0.1.10            ~/.config/mise/mise.toml  latest
-npm:@opentui/core                           0.1.74            ~/.config/mise/mise.toml  latest
-npm:@opentui/react                          0.1.74            ~/.config/mise/mise.toml  latest
+npm:@opentui/core                           0.1.75            ~/.config/mise/mise.toml  latest
+npm:@opentui/react                          0.1.75            ~/.config/mise/mise.toml  latest
 npm:github-markdown-css                     5.8.1             ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                               5.2.5             ~/.config/mise/mise.toml  latest
 npm:nuekit                                  2.0.0-beta.2      ~/.config/mise/mise.toml  latest
