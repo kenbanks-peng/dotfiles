@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-# [MISE] description="PDF detach"
-# [MISE] dir="{{cwd}}"
-pdfdetach "$@"

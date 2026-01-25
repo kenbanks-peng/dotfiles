@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-# [MISE] description="PDF to cairo"
-# [MISE] dir="{{cwd}}"
-pdftocairo "$@"

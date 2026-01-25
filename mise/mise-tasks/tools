@@ -10,4 +10,7 @@ while IFS='|' read -r name desc; do
   printf "%-14s \033[90m%s\033[0m\n" "$name" "$desc"
 done << 'EOF'
 sk|skim, an fzf alternative
+pdfattach|Attach PDFs
+pdfdetach|Detach PDFs
+pdftocairo|PDF to Cairo
 EOF
