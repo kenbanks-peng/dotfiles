@@ -2,8 +2,6 @@
 # [MISE] description="zed editor"
 # [MISE] dir="{{cwd}}"
 
-# zed editor
-
 if [ $# -gt 0 ]; then
   print -P "%F{magenta}zed $@ %f"
   print

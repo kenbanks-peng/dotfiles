@@ -1,8 +1,6 @@
 #!/usr/bin/env zsh
-# [MISE] description="nvim editor"
+# [MISE] description="neovim editor"
 # [MISE] dir="{{cwd}}"
-
-# neovim editor
 
 if [ $# -gt 0 ]; then
   print -P "%F{magenta}nvim $@ %f"

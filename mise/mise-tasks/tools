@@ -38,6 +38,8 @@ lazysql|lazysql
 lazydocker|lazydocker
 portal|file transfer (portal) tui
 sshs|ssh client tui
+glow|glow markdown viewer
+gitui|gitui git tui
 
 caddy|caddy web server
 sqlite3|SQLite db cli

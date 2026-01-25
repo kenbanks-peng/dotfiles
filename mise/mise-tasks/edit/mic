@@ -2,8 +2,6 @@
 # [MISE] description="micro editor"
 # [MISE] dir="{{cwd}}"
 
-# micro editor
-
 if [ $# -gt 0 ]; then
   print -P "%F{magenta}micro $@ %f"
   print

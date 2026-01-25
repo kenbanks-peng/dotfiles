@@ -2,8 +2,6 @@
 # [MISE] description="default editor"
 # [MISE] dir="{{cwd}}"
 
-# default editor
-
 if [ $# -gt 0 ]; then
   print -P "%F{magenta}$EDITOR $@ %f"
   print
