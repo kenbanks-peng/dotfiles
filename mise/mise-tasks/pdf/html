@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-# [MISE] description="PDF to html"
-# [MISE] dir="{{cwd}}"
-pdftohtml "$@"

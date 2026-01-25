@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-# [MISE] description="PDF info"
-# [MISE] dir="{{cwd}}"
-pdfinfo "$@"

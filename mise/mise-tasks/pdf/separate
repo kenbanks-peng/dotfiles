@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-# [MISE] description="PDF separate"
-# [MISE] dir="{{cwd}}"
-pdfseparate "$@"

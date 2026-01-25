@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-# [MISE] description="PDF to ps"
-# [MISE] dir="{{cwd}}"
-pdftops "$@"

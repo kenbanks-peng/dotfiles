@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-# [MISE] description="PDF to ppm"
-# [MISE] dir="{{cwd}}"
-pdftoppm "$@"
