@@ -52,4 +52,10 @@ jid|json interactive digger
 fx|fx json viewer
 jnv|jnv json navigator
 
+HTTP
+hurl|curl test framework
+xh|xh GET 'https://api.open-meteo.com/v1/forecast' latitude==42.9849 longitude==-81.2453 current_weather==true
+curlie|new curl
+posting|posting tui
+
 EOF
