@@ -1,0 +1,13 @@
+#!/usr/bin/env zsh
+# [MISE] description="default editor"
+# [MISE] dir="{{cwd}}"
+
+if [ $# -gt 0 ]; then
+  print -P "%F{magenta}$EDITOR $@ %f"
+  print
+  $EDITOR "$@"
+else
+  print -P "%F{magenta}$EDITOR . %f"
+  print
+  $EDITOR .
+fi

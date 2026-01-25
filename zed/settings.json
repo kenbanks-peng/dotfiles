@@ -9,6 +9,10 @@
 {
   "context_servers": {},
   "agent": {
+    "inline_assistant_model": {
+      "provider": "openai",
+      "model": "gpt-3.5-turbo"
+    },
     "default_model": {
       "provider": "google",
       "model": "gemini-3-pro-preview",
