@@ -67,6 +67,8 @@ dblab|database tui
 gobang|database tui
 limactl|create linux vm
 tursodb|turso db
+delta|git delta viewer
+hub|simplified github cli
 
 UNIX
 ditto|copy alternative

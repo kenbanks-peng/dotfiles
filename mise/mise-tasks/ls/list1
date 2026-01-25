@@ -1,11 +1,8 @@
 #!/usr/bin/env zsh
 # [MISE] description="pls list show hidden files"
-# [USAGE] arg "<pls_args>..." var=#true
 # [MISE] dir="{{cwd}}"
 
 print -P "%F{green}${${PWD/#$HOME/\~}// /\\\\ }${${PWD:#/}:+/}%f"
-
-args=($usage_pls_args)
 
 git_flag=""
 git rev-parse --is-inside-work-tree > /dev/null 2>&1 && git_flag="--det=git"
@@ -45,4 +42,4 @@ if [[ -n "$sip_patterns" ]]; then
   echo "$sip_patterns" >> "$temp_config"
 fi
 
-PLS_CONFIG="$temp_config" pls --header=false --suffix=false --sort=cat --sort=name $git_flag "${args[@]}"
+PLS_CONFIG="$temp_config" pls --header=false --suffix=false --sort=cat --sort=name $git_flag
