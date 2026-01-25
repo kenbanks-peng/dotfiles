@@ -40,4 +40,5 @@ portal|file transfer (portal) tui
 sshs|ssh client tui
 
 caddy|caddy web server
+sqlite3|SQLite db cli
 EOF
