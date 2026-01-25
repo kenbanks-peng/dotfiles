@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # [MISE] description="Rosetta on|off"
-# [MISE] usage="rosetta <state>"
 
 state="${1:-}"
 
@@ -10,10 +9,7 @@ if [[ "$state" == "on" ]]; then
   echo
   pkgutil --pkg-info com.apple.pkg.RosettaUpdateAuto
 elif [[ "$state" == "off" ]]; then
-  echo "Removing Rosetta (requires sudo)..."
-  sudo rm -rf /Library/Apple/usr/share/rosetta
-  sudo pkgutil --forget com.apple.pkg.RosettaUpdateAuto
+  echo "Rosetta files are now protected by System Integrity Protection (SIP)."
 else
-  echo "Usage: rosetta on|off"
-  exit 1
+  arch -x86_64 /usr/bin/true 2>/dev/null && echo "Rosetta is installed" || echo "Rosetta is not installed"
 fi
