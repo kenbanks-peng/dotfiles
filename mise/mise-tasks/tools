@@ -26,6 +26,7 @@ pdfsig|PDF sig
 pdfunite|PDF unite
 pdftotext|PDF to text
 
+TUIs
 gpg-tui|GPG tui
 sniffnet|Network monitor
 zellij|Zellij terminal
@@ -37,4 +38,6 @@ lazysql|lazysql
 lazydocker|lazydocker
 portal|file transfer (portal) tui
 sshs|ssh client tui
+
+caddy|caddy web server
 EOF
