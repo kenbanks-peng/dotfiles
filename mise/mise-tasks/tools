@@ -41,4 +41,15 @@ sshs|ssh client tui
 
 caddy|caddy web server
 sqlite3|SQLite db cli
+sqld|lib sql
+
+JSON
+jq|jq json processing
+jqn|jq.node json processing
+yq|jq-like for yaml, json, xml, properties, csv and tsv
+jc|CLI output to json
+jid|json interactive digger
+fx|fx json viewer
+jnv|jnv json navigator
+
 EOF
