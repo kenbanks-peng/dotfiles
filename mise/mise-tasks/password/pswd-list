@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# [MISE] description="List passwords"
+pass ls "$@"

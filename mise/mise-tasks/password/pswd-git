@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# [MISE] description="Run git commands on password store"
+pass git "$@"
