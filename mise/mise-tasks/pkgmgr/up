@@ -1,0 +1,91 @@
+#!/usr/bin/env zsh
+# [MISE] description="update packages"
+# [MISE] dir="{{cwd}}"
+# [MISE] depends=["pkgmgr:versions"]
+
+# homebrew + ports + mise + uv
+
+print
+print "${CYAN}MACPORTS: mac apps, binaries"
+print -- "----------------------------${BLUE}"
+# sudo port sync
+
+print
+print "${CYAN}BREW: mac apps, binaries"
+print -- "------------------------${BLUE}"
+brew update --auto-update --quiet
+
+# upgrade normal sw + auto-update apps but not sw tagged as latest
+brew upgrade --greedy-auto-updates --quiet
+
+# upgrade sw tagged with "latest" only if they have actually changed
+brew_cache="/tmp/brew-smart-cache"
+mkdir -p "$brew_cache"
+
+sw_labelled_latest=$(brew list --versions | grep " latest$" | awk '{print $1}')
+sw_to_update=""
+
+if [ -n "$sw_labelled_latest" ]; then
+  while read -r sw; do
+    [ -z "$sw" ] && continue
+
+    # Get actual download URL using jq
+    current_url=$(brew info "$sw" --json=v2 2>/dev/null | jq -r '.casks[0].url // .formulae[0].url // empty' 2>/dev/null || echo "")
+
+    if [ -n "$current_url" ]; then
+      cache_file="$brew_cache/$sw"
+      current_signature=""
+
+      # Detect content changes based on URL type
+      if echo "$current_url" | grep -q "github.com.*\.git$"; then
+        # Git repository - check HEAD commit hash
+        repo_url="$current_url"
+        current_signature=$(git ls-remote "$repo_url" HEAD 2>/dev/null | awk '{print $1}' || echo "")
+      elif echo "$current_url" | grep -q "github.com.*archive.*\(master\|main\)"; then
+        # Git archive - check commit hash of the branch
+        repo_url=$(echo "$current_url" | sed 's|/archive/.*||')
+        branch=$(echo "$current_url" | sed 's|.*/archive/refs/heads/||' | sed 's|\..*||')
+        current_signature=$(git ls-remote "$repo_url" "refs/heads/$branch" 2>/dev/null | awk '{print $1}' || echo "")
+      else
+        # Direct download - check HTTP headers
+        http_headers=$(curl -sI "$current_url" 2>/dev/null || echo "")
+        etag=$(echo "$http_headers" | grep -i "^etag:" | cut -d' ' -f2- | tr -d '\r\n' || echo "")
+        modified=$(echo "$http_headers" | grep -i "^last-modified:" | cut -d' ' -f2- | tr -d '\r\n' || echo "")
+        length=$(echo "$http_headers" | grep -i "^content-length:" | cut -d' ' -f2- | tr -d '\r\n' || echo "")
+
+        if [ -n "$etag" ]; then
+          current_signature="etag:$etag"
+        elif [ -n "$modified" ]; then
+          current_signature="modified:$modified"
+        elif [ -n "$length" ]; then
+          current_signature="length:$length"
+        fi
+      fi
+
+      cached_signature=$(cat "$cache_file" 2>/dev/null || echo "")
+
+      if [ -n "$current_signature" ] && [ "$current_signature" != "$cached_signature" ]; then
+        sw_to_update="$sw_to_update $sw"
+        echo "$current_signature" > "$cache_file"
+      fi
+    fi
+  done < <(echo "$sw_labelled_latest")
+
+  if [ -n "$sw_to_update" ]; then
+    echo "$sw_to_update" | xargs brew upgrade --quiet
+  fi
+fi
+
+brew cleanup --quiet
+
+print
+print "${CYAN}MISE: uv, bun, go, node, python, git"
+print -- "------------------------------------${BLUE}"
+mise self-update --silent --yes
+mise upgrade --bump --silent
+
+print
+print "${CYAN}UV TOOL: python"
+print -- "------------------------------------${BLUE}"
+uv tool upgrade --all
+print "${NORMAL}"

@@ -1,0 +1,43 @@
+#!/usr/bin/env zsh
+# [MISE] description="save versions to file"
+# [MISE] dir="{{cwd}}"
+
+# brew + mise + rustup + uv
+
+{
+  print "BREW CASKS"
+  print -- "----------"
+  brew list --versions --cask || print "No casks found"
+  print
+  print "BREW FORMULAS"
+  print -- "-------------"
+  brew list --versions --formula || print "No formulas found"
+  print
+  print "MISE PACKAGES"
+  print -- "-------------"
+  mise list 2>/dev/null || print "No global mise packages found"
+  print
+  print "RUSTUP/CARGO"
+  print -- "------------"
+  rustup show || print "No rustup found"
+  # cargo version || print "No cargo found"
+  # cargo install --list 2>/dev/null || print "No global cargo/rust packages found"
+  print
+  print "UV TOOLS"
+  print -- "--------"
+  uv tool list
+  # print
+  # print "GO TOOLS"
+  # print -- "--------"
+  # gup list 2>/dev/null || print "No global go packages found"
+  # print
+  # print "BUN"
+  # print -- "---"
+  # bun pm ls -g 2>/dev/null || print "No global bun packages found"
+} > "$DOTFILES/versions.txt"
+
+git -C "$DOTFILES" add versions.txt &>/dev/null
+git -C "$DOTFILES" diff --staged --quiet || (git -C "$DOTFILES" commit -m "update versions" && git -C "$DOTFILES" push) &>/dev/null
+
+print
+print "${MAGENTA}updated versions.txt${NORMAL}"

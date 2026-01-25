@@ -1,0 +1,33 @@
+#!/usr/bin/env zsh
+# [MISE] description="brew list/leaves"
+# [MISE] dir="{{cwd}}"
+
+# brew list / leaves
+
+set -- ${=@}
+len=$#
+
+if [ $len = 1 ] && [ $1 = "leaves" ]; then
+  print "brew leaves"
+  print
+  print "${MAGENTA}USER-INSTALLED LEAF FORMULAS"
+  print -- "----------------------------${CYAN}"
+  brew leaves --installed-on-request
+elif [ $len = 1 ] && [ $1 = "apps" ]; then
+  print "brew list casks"
+  print
+  print "${MAGENTA}CASK APPS"
+  print -- "---------${CYAN}"
+  brew list --cask | grep -v "^font-"
+elif [ $len = 1 ] && [ $1 = "fonts" ]; then
+  print "brew list fonts"
+  print
+  print "${MAGENTA}FONT APPS"
+  print -- "----------${CYAN}"
+  brew list --cask | grep "^font-"
+else
+  print "brew list $@"
+  print
+  brew list --formula $@
+fi
+print "${NORMAL}"

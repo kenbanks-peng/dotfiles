@@ -1,0 +1,12 @@
+#!/usr/bin/env zsh
+# [MISE] description="brew remove (w/ autoremove, cleanup)"
+# [MISE] dir="{{cwd}}"
+# [MISE] depends=["pkgmgr:versions"]
+
+# brew remove (w/ autoremove, cleanup)
+
+print "brew remove /w autoremove and cleanup"
+print
+brew remove $@
+brew autoremove
+brew cleanup

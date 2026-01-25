@@ -1,0 +1,220 @@
+#!/usr/bin/env zsh
+# [MISE] description="mise list by category"
+# [MISE] dir="{{cwd}}"
+
+# mise list by category
+
+set -- ${=@}
+len=$#
+
+# Define tool category aliases and display names
+# These map user-friendly names to the actual mise category prefixes
+declare -A tool_aliases
+tool_aliases=(
+  # Rust ecosystem
+  rust        cargo
+
+  # Python ecosystem
+  python      pipx
+  uv          pipx
+
+  # JavaScript/Node ecosystem
+  js          npm
+  node        npm
+  bun         npm
+  deno        npm
+)
+
+# Display names for mise categories (used in output headers)
+declare -A category_display_names
+category_display_names=(
+  cargo       "RUST"
+  pipx        "PYTHON"
+  npm         "NODE"
+)
+
+# Create reverse mapping: category -> list of tools that belong to it
+# This is derived from tool_aliases to avoid duplication
+declare -A category_tools_map
+for alias category in ${(kv)tool_aliases}; do
+  if [[ -n "${category_tools_map[$category]}" ]]; then
+    category_tools_map[$category]="${category_tools_map[$category]} $alias"
+  else
+    category_tools_map[$category]="$alias"
+  fi
+done
+
+mise_output=$(mise list)
+purple="\033[95m"
+white="\033[97m"
+title="${purple}Tool                                       Version           Source                    Requested${white}"
+
+# Helper function to filter ungrouped tools (excluding language-specific ones)
+filter_ungrouped_tools() {
+  local ungrouped="$1"
+  # Get all aliased tools plus standalone tools like 'go'
+  local tools="${(k)tool_aliases} go"
+  local filtered_ungrouped=""
+
+  for line in ${(f)ungrouped}; do
+    tool_name=$(echo "$line" | awk '{print $1}')
+    is_tool=false
+    for tool in ${=tools}; do
+      if [[ "$tool_name" == "$tool" ]]; then
+        is_tool=true
+        break
+      fi
+    done
+    if [[ "$is_tool" == false ]]; then
+      if [[ -n "$filtered_ungrouped" ]]; then
+        filtered_ungrouped="$filtered_ungrouped\n$line"
+      else
+        filtered_ungrouped="$line"
+      fi
+    fi
+  done
+
+  echo -e "$filtered_ungrouped"
+}
+
+# Helper function to get category tools for a specific tool category
+get_category_tools() {
+  local tool_category="$1"
+  local ungrouped="$2"
+  local track_displayed="${3:-false}"
+  local category_tools=""
+
+  for line in ${(f)ungrouped}; do
+    tool_name=$(echo "$line" | awk '{print $1}')
+    should_include=false
+
+    # Check if this tool belongs to the requested category using our reverse mapping
+    if [[ -n "${category_tools_map[$tool_category]}" ]]; then
+      # Check if tool_name is in the list of tools for this category
+      for category_tool in ${=category_tools_map[$tool_category]}; do
+        if [[ "$tool_name" == "$category_tool" ]]; then
+          should_include=true
+          break
+        fi
+      done
+    else
+      # Fallback: direct match (for categories not in our mapping)
+      if [[ "$tool_name" == "$tool_category" ]]; then
+        should_include=true
+      fi
+    fi
+
+    if [[ "$should_include" == true ]]; then
+      if [[ -n "$category_tools" ]]; then
+        category_tools="$category_tools\n$line"
+      else
+        category_tools="$line"
+      fi
+      if [[ "$track_displayed" == true ]]; then
+        displayed_tools="$displayed_tools $tool_name"
+      fi
+    fi
+  done
+
+  echo -e "$category_tools"
+}
+
+if [ $len = 1 ]; then
+  # Map aliases to actual prefixes using the predefined mapping
+  original_arg=$1
+  arg_lower="${(L)1}"
+
+  # Check if the argument (case-insensitive) exists in our alias mapping
+  a1="${tool_aliases[$arg_lower]:-$1}"
+
+  # Get ungrouped tools and filter them
+  ungrouped=$(echo "$mise_output" | grep -v ":")
+  filtered_ungrouped=$(filter_ungrouped_tools "$ungrouped")
+
+  # Check if we have the requested category in the available tools
+  available_tools=$(echo "$mise_output" | grep ":" | cut -d: -f1 | sort -u)
+  category_exists=false
+  for tool in ${=available_tools}; do
+    if [[ "$tool" == "$a1" ]]; then
+      category_exists=true
+      break
+    fi
+  done
+
+  # Collect output first to check if there are any results
+  output=""
+
+  if [[ "$category_exists" == true ]]; then
+    # Get category tools for this specific category
+    category_tools=$(get_category_tools $a1 "$ungrouped")
+    if [[ -n "$category_tools" ]]; then
+      output="$category_tools"
+    fi
+
+    # Then get the regular category tools
+    regular_tools=$(echo "$mise_output" | grep "^$a1:")
+    if [[ -n "$regular_tools" ]]; then
+      if [[ -n "$output" ]]; then
+        output="$output\n$regular_tools"
+      else
+        output="$regular_tools"
+      fi
+    fi
+  else
+    # Fallback to original behavior if category doesn't exist
+    # First check the standalone tool if it exists (for cases like 'ml go')
+    if [[ "$original_arg" != "$a1" ]]; then
+      # If we mapped the argument, get the original standalone tool
+      standalone=$(echo "$mise_output" | grep -v ":" | grep "^$original_arg ")
+      if [[ -n "$standalone" ]]; then
+        output="$standalone"
+      fi
+    fi
+
+    # Then get the prefixed tools
+    prefixed=$(echo "$mise_output" | grep "^$a1:")
+    if [[ -n "$prefixed" ]]; then
+      if [[ -n "$output" ]]; then
+        output="$output\n$prefixed"
+      else
+        output="$prefixed"
+      fi
+    fi
+  fi
+
+  # Only print title and output if there are results
+  if [[ -n "$output" ]]; then
+    echo -e "$title"
+    echo -e "$output"
+  fi
+else
+  # Get ungrouped tools and filter them
+  ungrouped=$(echo "$mise_output" | grep -v ":")
+  filtered_ungrouped=$(filter_ungrouped_tools "$ungrouped")
+
+  # Get unique tool prefixes from mise output
+  tools=$(echo "$mise_output" | grep ":" | cut -d: -f1 | sort -u)
+
+  # Only print if there's any output
+  if [[ -n "$filtered_ungrouped" ]] || [[ -n "$tools" ]]; then
+    echo -e "$title"
+
+    if [[ -n "$filtered_ungrouped" ]]; then
+      echo -e "$filtered_ungrouped"
+    fi
+
+    for tool in ${=tools}; do
+      echo
+      echo -e "${purple}${category_display_names[$tool]:-$(echo "$tool" | tr '[:lower:]' '[:upper:]')}${white}"
+
+      # Get category tools for this tool category
+      category_tools=$(get_category_tools "$tool" "$ungrouped" true)
+      if [[ -n "$category_tools" ]]; then
+        echo -e "$category_tools"
+      fi
+
+      # Then show the regular category tools
+      echo "$mise_output" | grep "^$tool:"
+    done
+  fi
+fi

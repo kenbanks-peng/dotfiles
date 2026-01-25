@@ -1,0 +1,16 @@
+#!/usr/bin/env zsh
+# [MISE] description="brew tree (deps)"
+# [MISE] dir="{{cwd}}"
+
+# brew tree (casks and formulas)
+
+print "brew tree $@"
+print
+print "${MAGENTA}FORMULAS"
+print -- "--------${CYAN}"
+if [ -n "$@" ]; then
+  brew deps --tree --formula $@
+else
+  brew leaves | xargs brew deps --tree --formula
+fi
+print "${NORMAL}"

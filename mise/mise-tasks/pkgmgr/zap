@@ -1,0 +1,13 @@
+#!/usr/bin/env zsh
+# [MISE] description="zap caches"
+# [MISE] dir="{{cwd}}"
+
+# zap caches
+
+brew cleanup --prune=all -s
+rm -rf "$HOME/Library/Application Support/Caches"
+mkdir "$HOME/Library/Application Support/Caches"
+rm -rf "$HOME/.cache"
+mkdir "$HOME/.cache"
+go clean -modcache
+fd '\.pkg$' /opt/homebrew/Caskroom -x rm

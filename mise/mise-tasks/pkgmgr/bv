@@ -1,0 +1,16 @@
+#!/usr/bin/env zsh
+# [MISE] description="brew versions"
+# [MISE] dir="{{cwd}}"
+
+# brew versions
+
+print "brew list --versions $@"
+print
+print "${MAGENTA}CASK APPS"
+print -- "---------${BLUE}"
+brew list --versions --cask $@ || print "${RED}No cask apps found${NORMAL}"
+print
+print "${MAGENTA}FORMULA APPS"
+print -- "------------${CYAN}"
+brew list --versions --formula $@ || print "${RED}No formula apps found${NORMAL}"
+print "${NORMAL}"

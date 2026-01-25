@@ -1,0 +1,18 @@
+#!/usr/bin/env zsh
+# [MISE] description="brew fonts"
+# [MISE] dir="{{cwd}}"
+
+# brew fonts
+
+set -- ${=@}
+len=$#
+
+if [ $len = 1 ] && [ $1 = "installed" ]; then
+  print "brew fonts installed"
+  print
+  brew list --cask | rg "font-"
+else
+  print "brew fonts available"
+  print
+  brew search --cask "font" | rg "font-" | rg -v -f <(brew list --cask | rg "font-")
+fi
