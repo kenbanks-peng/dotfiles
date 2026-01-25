@@ -58,4 +58,15 @@ xh|xh GET 'https://api.open-meteo.com/v1/forecast' latitude==42.9849 longitude==
 curlie|new curl
 posting|posting tui
 
+DEV
+tokei|count lines of code
+biome|lint: biome check --write
+lunchy|launch services ~/Library/LaunchAgents/
+nerdlog|log tui
+dblab|database tui
+gobang|database tui
+limactl|create linux vm
+tursodb|turso db
+
+
 EOF

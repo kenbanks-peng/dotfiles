@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# [MISE] description="Rosetta on|off"
+# [MISE] usage="rosetta <state>"
+
+state="${1:-}"
+
+if [[ "$state" == "on" ]]; then
+  echo "Installing Rosetta (requires sudo)..."
+  sudo /usr/sbin/softwareupdate --install-rosetta --agree-to-license 2>/dev/null
+  echo
+  pkgutil --pkg-info com.apple.pkg.RosettaUpdateAuto
+elif [[ "$state" == "off" ]]; then
+  echo "Removing Rosetta (requires sudo)..."
+  sudo rm -rf /Library/Apple/usr/share/rosetta
+  sudo pkgutil --forget com.apple.pkg.RosettaUpdateAuto
+else
+  echo "Usage: rosetta on|off"
+  exit 1
+fi
