@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# [MISE] description="Go tool update"
+gotools -u -q -j 8 "$@"

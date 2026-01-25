@@ -11,6 +11,7 @@ while IFS='|' read -r name desc; do
 done << 'EOF'
 sk|skim, an fzf alternative
 
+PDF
 pdfattach|Attach PDFs
 pdfdetach|Detach PDFs
 pdftocairo|PDF to Cairo
@@ -24,4 +25,16 @@ pdfseparate|PDF separate
 pdfsig|PDF sig
 pdfunite|PDF unite
 pdftotext|PDF to text
+
+gpg-tui|GPG tui
+sniffnet|Network monitor
+zellij|Zellij terminal
+tmux|tmux terminal
+navi|Shell cheatsheet
+lazyjj|lazyjj
+lazyjournal|lazyjournal
+lazysql|lazysql
+lazydocker|lazydocker
+portal|file transfer (portal) tui
+sshs|ssh client tui
 EOF
