@@ -1,0 +1,13 @@
+#!/usr/bin/env zsh
+# [MISE] description="Free and used memory"
+vm_stat | awk '
+/page size of/ {ps=$8}
+/Pages free/ {free=$3}
+/Pages active/ {active=$3}
+/Pages inactive/ {inactive=$3}
+/Pages speculative/ {spec=$3}
+/Pages wired down/ {wired=$4}
+END {
+  printf "free memory: %.1f GB\n", free*ps/1024/1024/1024
+  printf "used memory: %.1f GB\n", (active+inactive+wired)*ps/1024/1024/1024
+}'

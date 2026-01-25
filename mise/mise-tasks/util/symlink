@@ -1,0 +1,22 @@
+#!/usr/bin/env zsh
+# [MISE] description="Create a symlink with -symlink suffix"
+#USAGE arg "<original>" help="File to create symlink for"
+
+# Convert to absolute paths
+original_abs=$(realpath "$1")
+filename=$(basename "$original_abs")
+dir=$(dirname "$original_abs")
+
+if [[ "$filename" == *.* ]]; then
+  name="${filename%.*}"
+  ext="${filename##*.}"
+  symlink_name="${name}-symlink.${ext}"
+else
+  symlink_name="${filename}-symlink"
+fi
+
+symlink_path="${dir}/${symlink_name}"
+
+# Create the symlink using absolute paths
+ln -s "$original_abs" "$symlink_path"
+echo "$symlink_name -> $filename"

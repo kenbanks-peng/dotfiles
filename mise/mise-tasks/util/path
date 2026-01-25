@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh
+# [MISE] description="More readable path. Duplicates in red."
+print $PATH | tr ':' '\n' | awk '{
+  count[$0]++
+  paths[NR] = $0
+}
+END {
+    for (i = 1; i <= NR; i++) {
+        if (count[paths[i]] > 1) {
+            printf "\033[31m%s\033[0m\n", paths[i]
+        } else {
+            print paths[i]
+        }
+    }
+}'

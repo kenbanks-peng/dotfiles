@@ -69,6 +69,18 @@ limactl|create linux vm
 tursodb|turso db
 
 UNIX
-
+ditto|copy alternative
+sd|sed alternative for find/replace withing files
+sad|sed alternative with fzf
+rg|ripgrep grep alternative
+tldr|man alternative
+bat|cat alternative
+procs|ps alternative
+btop|top tui
+glances|top tui
+macmon|resource monitor
+tspin|tail alternative
+choose|cut alternative
+gping|ping alternative
 
 EOF

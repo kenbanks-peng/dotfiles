@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# [MISE] description="Find files with fd (unrestricted)"
+#USAGE arg "<args>" help="fd arguments" var=true
+fd -uuu "$@"
