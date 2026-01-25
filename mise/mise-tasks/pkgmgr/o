@@ -4,14 +4,14 @@
 
 # homebrew + ports + mise + rustup
 
-GREEN=${fg[green]}
+autoload -U colors && colors
 BLUE=${fg[blue]}
+CYAN=${fg[cyan]}
 NORMAL=${fg[default]}
 
-autoload -U colors && colors
 print
-print "$GREEN BREW: mac apps, binaries"
-print -- "------------------------${fg[blue]}"
+print "${CYAN}BREW: mac apps, binaries"
+print -- "------------------------${BLUE}"
 brew outdated --greedy --verbose
 print
 print "${CYAN}MISE: uv, bun, go, node, python, git"
