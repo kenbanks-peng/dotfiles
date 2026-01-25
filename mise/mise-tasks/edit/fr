@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh
+# [MISE] description="fresh editor"
+# [MISE] dir="{{cwd}}"
+
+# fresh editor
+
+if [ $# -gt 0 ]; then
+  print -P "%F{magenta}fresh $@ %f"
+  print
+  fresh "$@"
+else
+  print -P "%F{magenta}fresh . %f"
+  print
+  fresh .
+fi

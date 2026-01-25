@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh
+# [MISE] description="vscode editor"
+# [MISE] dir="{{cwd}}"
+
+# vscode editor
+
+if [ $# -gt 0 ]; then
+  print -P "%F{magenta}code $@ %f"
+  print
+  code "$@"
+else
+  print -P "%F{magenta}code . %f"
+  print
+  code .
+fi

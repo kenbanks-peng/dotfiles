@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh
+# [MISE] description="cursor editor"
+# [MISE] dir="{{cwd}}"
+
+# cursor editor
+
+if [ $# -gt 0 ]; then
+  print -P "%F{magenta}cursor $@ %f"
+  print
+  cursor "$@"
+else
+  print -P "%F{magenta}cursor . %f"
+  print
+  cursor .
+fi

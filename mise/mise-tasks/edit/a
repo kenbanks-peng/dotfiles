@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh
+# [MISE] description="agy editor"
+# [MISE] dir="{{cwd}}"
+
+# google antigravity editor
+
+if [ $# -gt 0 ]; then
+  print -P "%F{magenta}agy $@ %f"
+  print
+  agy "$@"
+else
+  print -P "%F{magenta}agy . %f"
+  print
+  agy .
+fi

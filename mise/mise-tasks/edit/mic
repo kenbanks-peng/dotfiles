@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh
+# [MISE] description="micro editor"
+# [MISE] dir="{{cwd}}"
+
+# micro editor
+
+if [ $# -gt 0 ]; then
+  print -P "%F{magenta}micro $@ %f"
+  print
+  micro "$@"
+else
+  print -P "%F{magenta}micro . %f"
+  print
+  micro .
+fi
