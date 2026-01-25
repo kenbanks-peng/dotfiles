@@ -1,0 +1,5 @@
+#!/usr/bin/env zsh
+# [MISE] description="init python project"
+# [MISE] dir="{{cwd}}"
+
+uv init --build-backend uv "$@"

@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 # [MISE] description="ai"
-# [USAGE] arg "[name]"
+# [USAGE] arg "<name>"
 # [MISE] dir="{{cwd}}"
 
 git clone https://github.com/kenbanks-peng/Claude-Code-Deep-Research.git "$usage_name"

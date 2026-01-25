@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 # [MISE] description="pls list long format"
+# [USAGE] arg "<pls_args>..." var=#true
 # [MISE] dir="{{cwd}}"
-# [USAGE] arg "[pls_args]..." var=true
 
 print -P "%F{green}${${PWD/#$HOME/\~}// /\\\\ }${${PWD:#/}:+/}%f"
 
