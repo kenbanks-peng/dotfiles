@@ -1,6 +1,5 @@
 #!/usr/bin/env zsh
 # [MISE] description="Create a symlink with -symlink suffix"
-#USAGE arg "<original>" help="File to create symlink for"
 
 # Convert to absolute paths
 original_abs=$(realpath "$1")

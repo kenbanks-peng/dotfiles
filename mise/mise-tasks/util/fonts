@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 # [MISE] description="List fonts with fzf"
-fc-list : family | sort | uniq | fzf
+fc-list "$@" | sort | uniq | fzf
