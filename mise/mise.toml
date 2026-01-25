@@ -7,7 +7,6 @@
 "cargo:cargo-cache" = "latest"
 "pipx:meson" = "latest"
 "pipx:ninja" = "latest"
-"pipx:seagoat" = "latest"
 "pipx:SuperClaude" = "latest"
 "npm:md-to-pdf" = "latest"
 "npm:github-markdown-css" = "latest"
@@ -31,4 +30,6 @@
 [settings]
 experimental = true
 quiet = true
+
+[env]
 
