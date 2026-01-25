@@ -1,0 +1,20 @@
+#!/usr/bin/env zsh
+# [MISE] description="outdated packages"
+# [MISE] dir="{{cwd}}"
+
+# homebrew + ports + mise + rustup
+
+print
+print "${CYAN}BREW: mac apps, binaries"
+print -- "------------------------${BLUE}"
+brew outdated --greedy --verbose
+print
+print "${CYAN}MISE: uv, bun, go, node, python, git"
+print -- "------------------------------------${BLUE}"
+mise outdated --bump --silent
+# rustup check
+# uv tool upgrade --all
+# cargo install-update -a
+# -bun -g update
+# -gup update
+print "${NORMAL}"
