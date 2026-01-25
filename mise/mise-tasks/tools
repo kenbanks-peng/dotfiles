@@ -1,90 +1,72 @@
 #!/usr/bin/env bash
 #MISE description="List miscellaneous tools"
 
-mise tasks ls
-
-echo ""
-echo "Other tools:"
 echo -e "\033[31mName           Description\033[0m"
 while IFS='|' read -r name desc; do
   printf "%-14s \033[90m%s\033[0m\n" "$name" "$desc"
 done << 'EOF'
-sk|skim, an fzf alternative
-
-PDF
-pdfattach|Attach PDFs
-pdfdetach|Detach PDFs
-pdftocairo|PDF to Cairo
-pdffonts|PDF fonts
-pdftohtml|PDF to HTML
-pdfimages|PDF to images
-pdfinfo|PDF info
-pdftoppm|PDF to ppm
-pdftops|PDF to ps
-pdfseparate|PDF separate
-pdfsig|PDF sig
-pdfunite|PDF unite
-pdftotext|PDF to text
-
-TUIs
-gpg-tui|GPG tui
-sniffnet|Network monitor
-zellij|Zellij terminal
-tmux|tmux terminal
-navi|Shell cheatsheet
-lazyjj|lazyjj
-lazyjournal|lazyjournal
-lazysql|lazysql
-lazydocker|lazydocker
-portal|file transfer (portal) tui
-sshs|ssh client tui
-glow|glow markdown viewer
-gitui|gitui git tui
-
-caddy|caddy web server
-sqlite3|SQLite db cli
-sqld|lib sql
-
-JSON
-jq|jq json processing
-jqn|jq.node json processing
-yq|jq-like for yaml, json, xml, properties, csv and tsv
-jc|CLI output to json
-jid|json interactive digger
-fx|fx json viewer
-jnv|jnv json navigator
-
-HTTP
-hurl|curl test framework
-xh|xh GET 'https://api.open-meteo.com/v1/forecast' latitude==42.9849 longitude==-81.2453 current_weather==true
-curlie|new curl
-posting|posting tui
-
-DEV
-tokei|count lines of code
-biome|lint: biome check --write
-lunchy|launch services ~/Library/LaunchAgents/
-nerdlog|log tui
-dblab|database tui
-gobang|database tui
-limactl|create linux vm
-tursodb|turso db
-delta|git delta viewer
-hub|simplified github cli
-
-UNIX
-ditto|copy alternative
-sd|sed alternative for find/replace withing files
-sad|sed alternative with fzf
-rg|ripgrep grep alternative
-tldr|man alternative
-bat|cat alternative
-procs|ps alternative
-btop|top tui
-glances|top tui
-macmon|resource monitor
-tspin|tail alternative
-choose|cut alternative
-gping|ping alternative
-
+pdf:pdfattach|Attach PDFs
+pdf:pdfdetach|Detach PDFs
+pdf:pdftocairo|PDF to Cairo
+pdf:pdffonts|PDF fonts
+pdf:pdftohtml|PDF to HTML
+pdf:pdfimages|PDF to images
+pdf:pdfinfo|PDF info
+pdf:pdftoppm|PDF to ppm
+pdf:pdftops|PDF to ps
+pdf:pdfseparate|PDF separate
+pdf:pdfsig|PDF sig
+pdf:pdfunite|PDF unite
+pdf:pdftotext|PDF to text
+tui:gpg-tui|GPG tui
+tui:sniffnet|Network monitor
+tui:zellij|Zellij terminal
+tui:tmux|tmux terminal
+tui:navi|Shell cheatsheet
+tui:lazyjj|lazyjj
+tui:lazyjournal|lazyjournal
+tui:lazysql|lazysql
+tui:lazydocker|lazydocker
+tui:portal|file transfer (portal) tui
+tui:sshs|ssh client tui
+tui:glow|glow markdown viewer
+tui:gitui|gitui git tui
+json:jq|jq json processing
+json:jqn|jq.node json processing
+json:yq|jq-like for yaml, json, xml, properties, csv and tsv
+json:jc|CLI output to json
+json:jid|json interactive digger
+json:fx|fx json viewer
+json:jnv|jnv json navigator
+http:hurl|curl test framework
+http:xh|curl alternative
+http:curlie|curl alternative
+http:posting|posting tui
+tools:tokei|count lines of code
+tools:biome|lint: biome check --write
+tools:lunchy|launch services ~/Library/LaunchAgents/
+tools:nerdlog|log tui
+tools:dblab|database tui
+tools:gobang|database tui
+tools:limactl|create linux vm
+tools:tursodb|turso db
+tools:delta|git delta viewer
+tools:hub|simplified github cli
+tools:caddy|caddy web server
+tools:sqlite3|SQLite db cli
+tools:sqld|lib sql
+tools:sk|skim, an fzf alternative
+unix:ditto|copy alternative
+unix:sd|sed alternative for find/replace withing files
+unix:sad|sed alternative with fzf
+unix:rg|ripgrep grep alternative
+unix:tldr|man alternative
+unix:bat|cat alternative
+unix:procs|ps alternative
+unix:btop|top tui
+unix:glances|top tui
+unix:macmon|resource monitor
+unix:tspin|tail alternative
+unix:choose|cut alternative
+unix:gping|ping alternative
 EOF
