@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+# [MISE] description="pls list show hidden files"
+# [MISE] dir="{{cwd}}"
+# [USAGE] arg "[file]"
+
+quarto render "$usage_file" --to revealjs --output-dir "$HOME/Documents/Presentations"
