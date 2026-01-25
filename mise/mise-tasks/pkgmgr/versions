@@ -4,6 +4,10 @@
 
 # brew + mise + rustup + uv
 
+autoload -U colors && colors
+MAGENTA=${fg[magenta]}
+NORMAL=${fg[default]}
+
 {
   print "BREW CASKS"
   print -- "----------"

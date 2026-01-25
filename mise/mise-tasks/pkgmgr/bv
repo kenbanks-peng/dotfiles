@@ -4,6 +4,13 @@
 
 # brew versions
 
+autoload -U colors && colors
+BLUE=${fg[blue]}
+CYAN=${fg[cyan]}
+MAGENTA=${fg[magenta]}
+RED=${fg[red]}
+NORMAL=${fg[default]}
+
 print "brew list --versions $@"
 print
 print "${MAGENTA}CASK APPS"

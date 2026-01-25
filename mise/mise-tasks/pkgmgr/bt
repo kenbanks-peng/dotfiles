@@ -4,6 +4,11 @@
 
 # brew tree (casks and formulas)
 
+autoload -U colors && colors
+CYAN=${fg[cyan]}
+MAGENTA=${fg[magenta]}
+NORMAL=${fg[default]}
+
 print "brew tree $@"
 print
 print "${MAGENTA}FORMULAS"

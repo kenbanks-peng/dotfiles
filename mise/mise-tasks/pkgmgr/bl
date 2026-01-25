@@ -4,6 +4,11 @@
 
 # brew list / leaves
 
+autoload -U colors && colors
+CYAN=${fg[cyan]}
+MAGENTA=${fg[magenta]}
+NORMAL=${fg[default]}
+
 set -- ${=@}
 len=$#
 

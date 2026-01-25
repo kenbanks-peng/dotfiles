@@ -1,9 +1,13 @@
 #!/usr/bin/env zsh
 # [MISE] description="update packages"
 # [MISE] dir="{{cwd}}"
-# [MISE] depends=["pkgmgr:versions"]
 
 # homebrew + ports + mise + uv
+
+autoload -U colors && colors
+BLUE=${fg[blue]}
+CYAN=${fg[cyan]}
+NORMAL=${fg[default]}
 
 print
 print "${CYAN}MACPORTS: mac apps, binaries"
@@ -89,3 +93,5 @@ print "${CYAN}UV TOOL: python"
 print -- "------------------------------------${BLUE}"
 uv tool upgrade --all
 print "${NORMAL}"
+
+mise run pkgmgr:versions
