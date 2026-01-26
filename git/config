@@ -21,10 +21,6 @@
   template = ~/.config/git/commitmsg
 [init]
   defaultBranch = main
-[credential]
-  helper = /usr/local/share/gcm-core/git-credential-manager
-[credential "https://dev.azure.com"]
-  useHttpPath = true
 [interactive]
   diffFilter = delta --color-only
 [include]
@@ -35,3 +31,8 @@
   dark = true
   side-by-side = true
   pager = "ov"
+[credential]
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager
+[credential "https://dev.azure.com"]
+	useHttpPath = true

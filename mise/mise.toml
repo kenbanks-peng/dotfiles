@@ -27,6 +27,8 @@
 "npm:clawdbot" = "latest"
 "go:github.com/wailsapp/wails/v3/cmd/wails3" = "latest"
 "cargo:krokiet" = "latest"
+"github:JohnnyMorganz/StyLua" = "latest"
+"github:sharkdp/fd" = "latest"
 
 [settings]
 experimental = true
