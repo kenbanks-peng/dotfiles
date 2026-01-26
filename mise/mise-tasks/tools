@@ -1,78 +1,83 @@
 #!/usr/bin/env bash
 #MISE description="List miscellaneous tools"
 
+strip() { sed 's/^[[:space:]]*//'; }
+
 function tools {
   echo -e "\033[31mName           Description\033[0m"
   while IFS='|' read -r name desc; do
     printf "%-14s \033[90m%s\033[0m\n" "$name" "$desc"
-  done << 'EOF'
-  pdf:pdfattach|Attach PDFs
-  pdf:pdfdetach|Detach PDFs
-  pdf:pdftocairo|PDF to Cairo
-  pdf:pdffonts|PDF fonts
-  pdf:pdftohtml|PDF to HTML
-  pdf:pdfimages|PDF to images
-  pdf:pdfinfo|PDF info
-  pdf:pdftoppm|PDF to ppm
-  pdf:pdftops|PDF to ps
-  pdf:pdfseparate|PDF separate
-  pdf:pdfsig|PDF sig
-  pdf:pdfunite|PDF unite
-  pdf:pdftotext|PDF to text
-  tui:gpg-tui|GPG tui
-  tui:sniffnet|Network monitor
-  tui:zellij|Zellij terminal
-  tui:tmux|tmux terminal
-  tui:navi|Shell cheatsheet
-  tui:lazyjj|lazyjj
-  tui:lazyjournal|lazyjournal
-  tui:lazysql|lazysql
-  tui:lazydocker|lazydocker
-  tui:portal|file transfer (portal) tui
-  tui:sshs|ssh client tui
-  tui:glow|glow markdown viewer
-  tui:gitui|gitui git tui
-  json:jq|jq json processing
-  json:jqn|jq.node json processing
-  json:yq|jq-like for yaml, json, xml, properties, csv and tsv
-  json:jc|CLI output to json
-  json:jid|json interactive digger
-  json:fx|fx json viewer
-  json:jnv|jnv json navigator
-  http:hurl|curl test framework
-  http:xh|curl alternative
-  http:curlie|curl alternative
-  http:posting|posting tui
-  tools:tokei|count lines of code
-  tools:biome|lint: biome check --write
-  tools:lunchy|launch services ~/Library/LaunchAgents/
-  tools:nerdlog|log tui
-  tools:dblab|database tui
-  tools:gobang|database tui
-  tools:limactl|create linux vm
-  tools:tursodb|turso db
-  tools:delta|git delta viewer
-  tools:hub|simplified github cli
-  tools:caddy|caddy web server
-  tools:sqlite3|SQLite db cli
-  tools:sqld|lib sql
-  tools:sk|skim, an fzf alternative
-  tools:tv|an fzf alternative
-  tools:spark|Sparkline generator
-  tools:shellcheck|shell linter
-  tools:watchexec|watch for changes
-  unix:ditto|copy alternative
-  unix:sd|sed alternative for find/replace withing files
-  unix:sad|sed alternative with fzf
-  unix:rg|ripgrep grep alternative
-  unix:tldr|man alternative
-  unix:bat|cat alternative
-  unix:procs|ps alternative
-  unix:btop|top tui
-  unix:glances|top tui
-  unix:macmon|resource monitor
-  unix:tspin|tail alternative
-  unix:choose|cut alternative
-  unix:gping|ping alternative
-  EOF
+  done < <(strip <<'EOF'
+    pdf:pdfattach|Attach PDFs
+    pdf:pdfdetach|Detach PDFs
+    pdf:pdftocairo|PDF to Cairo
+    pdf:pdffonts|PDF fonts
+    pdf:pdftohtml|PDF to HTML
+    pdf:pdfimages|PDF to images
+    pdf:pdfinfo|PDF info
+    pdf:pdftoppm|PDF to ppm
+    pdf:pdftops|PDF to ps
+    pdf:pdfseparate|PDF separate
+    pdf:pdfsig|PDF sig
+    pdf:pdfunite|PDF unite
+    pdf:pdftotext|PDF to text
+    tui:gpg-tui|GPG tui
+    tui:sniffnet|Network monitor
+    tui:zellij|Zellij terminal
+    tui:tmux|tmux terminal
+    tui:navi|Shell cheatsheet
+    tui:lazyjj|lazyjj
+    tui:lazyjournal|lazyjournal
+    tui:lazysql|lazysql
+    tui:lazydocker|lazydocker
+    tui:portal|file transfer (portal) tui
+    tui:sshs|ssh client tui
+    tui:glow|glow markdown viewer
+    tui:gitui|gitui git tui
+    json:jq|jq json processing
+    json:jqn|jq.node json processing
+    json:yq|jq-like for yaml, json, xml, properties, csv and tsv
+    json:jc|CLI output to json
+    json:jid|json interactive digger
+    json:fx|fx json viewer
+    json:jnv|jnv json navigator
+    http:hurl|curl test framework
+    http:xh|curl alternative
+    http:curlie|curl alternative
+    http:posting|posting tui
+    tools:tokei|count lines of code
+    tools:biome|lint: biome check --write
+    tools:lunchy|launch services ~/Library/LaunchAgents/
+    tools:nerdlog|log tui
+    tools:dblab|database tui
+    tools:gobang|database tui
+    tools:limactl|create linux vm
+    tools:tursodb|turso db
+    tools:delta|git delta viewer
+    tools:hub|simplified github cli
+    tools:caddy|caddy web server
+    tools:sqlite3|SQLite db cli
+    tools:sqld|lib sql
+    tools:sk|skim, an fzf alternative
+    tools:tv|an fzf alternative
+    tools:spark|Sparkline generator
+    tools:shellcheck|shell linter
+    tools:watchexec|watch for changes
+    unix:ditto|copy alternative
+    unix:sd|sed alternative for find/replace withing files
+    unix:sad|sed alternative with fzf
+    unix:rg|ripgrep grep alternative
+    unix:tldr|man alternative
+    unix:bat|cat alternative
+    unix:procs|ps alternative
+    unix:btop|top tui
+    unix:glances|top tui
+    unix:macmon|resource monitor
+    unix:tspin|tail alternative
+    unix:choose|cut alternative
+    unix:gping|ping alternative
+EOF
+)
 }
+
+tools
