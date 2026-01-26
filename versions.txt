@@ -413,7 +413,8 @@ github:h0rv/d2-mcp                          1.1.0             ~/.config/mise/mis
 github:jdx/fnox                             1.10.0            ~/.config/mise/mise.toml  latest
 github:jdx/usage                            2.13.1            ~/.config/mise/mise.toml  latest
 github:melkeydev/go-blueprint               0.10.11           ~/.config/mise/mise.toml  latest
-go:github.com/wailsapp/wails/v3/cmd/wails3  3.0.0-alpha.63    ~/.config/mise/mise.toml  latest
+go:github.com/wailsapp/wails/v3/cmd/wails3  3.0.0-alpha.63
+go:github.com/wailsapp/wails/v3/cmd/wails3  3.0.0-alpha.64    ~/.config/mise/mise.toml  latest
 go:golang.org/x/tools/gopls                 0.21.0            ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck       0.7.0-0.dev       ~/.config/mise/mise.toml  latest
 nix:bun                                     1.3.6 (symlink)   ~/.config/mise/mise.toml  latest
@@ -424,6 +425,7 @@ nix:uv                                      0.9.26 (symlink)  ~/.config/mise/mis
 npm:@mixedbread/mgrep                       0.1.10            ~/.config/mise/mise.toml  latest
 npm:@opentui/core                           0.1.75            ~/.config/mise/mise.toml  latest
 npm:@opentui/react                          0.1.75            ~/.config/mise/mise.toml  latest
+npm:clawdbot                                2026.1.24-3       ~/.config/mise/mise.toml  latest
 npm:github-markdown-css                     5.8.1             ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                               5.2.5             ~/.config/mise/mise.toml  latest
 npm:nuekit                                  2.0.0-beta.2      ~/.config/mise/mise.toml  latest
