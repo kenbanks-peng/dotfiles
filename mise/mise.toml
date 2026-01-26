@@ -25,6 +25,7 @@
 "github:jdx/usage" = "latest"
 "nix:bun" = "latest"
 "nix:uv" = "latest"
+"npm:clawdbot" = "latest"
 
 [settings]
 experimental = true

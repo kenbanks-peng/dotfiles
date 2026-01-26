@@ -1,0 +1,3 @@
+#!/usr/bin/env zsh
+# Print current directory in green with escaped spaces
+print -P "%F{green}${PWD// /\\\\ }/%f"

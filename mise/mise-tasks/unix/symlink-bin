@@ -1,0 +1,38 @@
+#!/usr/bin/env zsh
+
+# symlink-bin: Create symbolic links in bin directory
+# Usage: symlink-bin <original_file>
+
+# Check if argument is provided
+if [[ $# -eq 0 ]]; then
+    echo "Usage: $0 <original_file>"
+    echo "Creates a symbolic link in /Users/ken/Software/bin/ pointing to the specified file"
+    exit 1
+fi
+
+original="$1"
+
+# Check if the original file exists
+if [[ ! -e "$original" ]]; then
+    echo "Error: File '$original' does not exist"
+    exit 1
+fi
+
+# Convert to absolute paths
+original_abs=$(realpath "$original")
+filename=$(basename "$original_abs")
+
+symlink_path="$HOME/Software/bin/${filename}"
+
+# Remove existing symlink if it exists
+if [[ -e "$symlink_path" ]]; then
+    rm "$symlink_path"
+fi
+
+# Create the symlink using absolute paths
+if ln -s "$original_abs" "$symlink_path"; then
+    echo "bin/$filename -> $filename"
+else
+    echo "Error: Failed to create symlink"
+    exit 1
+fi
