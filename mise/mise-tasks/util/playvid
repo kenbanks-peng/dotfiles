@@ -11,5 +11,5 @@ fi
 
 # If a file was selected, play it with mpv
 if [ -n "$selected" ]; then
-  mpv ~/Wallpaper/"$selected" --wallpaper-mode=yes --loop-file=inf --fullscreen
+  mpv ~/Wallpaper/"$selected" --wallpaper-mode=yes --loop-file=inf
 fi
