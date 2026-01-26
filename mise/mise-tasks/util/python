@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# [MISE] description="Run Python via uv"
+# [MISE] dir="{{cwd}}"
+uv run python "$@"
