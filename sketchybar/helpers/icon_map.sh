@@ -888,6 +888,9 @@ function __icon_map() {
    "Perplexity" | "Perplexity AI")
         icon_result=":perplexity:"
         ;;
+   "pgAdmin 4")
+        icon_result=":pgadmin:"
+        ;;
    "Phoenix Slides")
         icon_result=":phoenix_slides:"
         ;;
@@ -1026,6 +1029,9 @@ function __icon_map() {
    "Safari" | "Safari浏览器" | "Safari Technology Preview")
         icon_result=":safari:"
         ;;
+   "Screencap")
+        icon_result=":screencap:"
+        ;;
    "Scribus")
         icon_result=":scribus:"
         ;;
@@ -1082,6 +1088,9 @@ function __icon_map() {
         ;;
    "Spark Desktop")
         icon_result=":spark:"
+        ;;
+   "Sparkle")
+        icon_result=":sparkle:"
         ;;
    "Spotify")
         icon_result=":spotify:"
@@ -1208,6 +1217,9 @@ function __icon_map() {
         ;;
    "Tweetbot" | "Twitter")
         icon_result=":twitter:"
+        ;;
+   "UGREEN NAS")
+        icon_result=":ugreen-nas:"
         ;;
    "Unity" | "Unity Hub")
         icon_result=":unity:"
