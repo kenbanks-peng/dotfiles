@@ -1,0 +1,15 @@
+#!/usr/bin/env zsh
+# [MISE] description="Play video as live wallpaper"
+
+# Create ~/Wallpaper if it doesn't exist
+mkdir -p ~/Wallpaper
+
+selected=$1
+if [ -z "$selected" ]; then
+  selected=$(cd ~/Wallpaper && fd -e mp4 -e webm -e avi -e mkv -e mov -e flv -e wmv -e m4v -e 3gp | fzf --prompt="Select a video for live wallpaper: ")
+fi
+
+# If a file was selected, play it with mpv
+if [ -n "$selected" ]; then
+  mpv ~/Wallpaper/"$selected" --wallpaper-mode=yes --loop-file=inf
+fi
