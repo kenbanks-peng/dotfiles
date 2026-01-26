@@ -1,0 +1,11 @@
+#!/bin/bash
+
+current=$(yabai -m config focus_follows_mouse)
+
+if [ "$current" = "disabled" ]; then
+    yabai -m config focus_follows_mouse autofocus
+    echo "Mouse focus enabled"
+else
+    yabai -m config focus_follows_mouse off
+    echo "Mouse focus disabled"
+fi
