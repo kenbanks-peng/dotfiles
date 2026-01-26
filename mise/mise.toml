@@ -32,6 +32,7 @@
 "github:jesseduffield/lazygit" = "latest"
 "github:noborus/ov" = "latest"
 "github:sharkdp/pastel" = "latest"
+"github:neilotoole/sq" = "latest"
 
 [settings]
 experimental = true

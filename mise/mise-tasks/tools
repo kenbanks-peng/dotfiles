@@ -33,6 +33,7 @@ def tools [] {
     [db sqlite3 "SQLite db cli"]
     [db sqld "lib sql"]
     [db tursodb "turso db"]
+    [db sq "jq-like for data sources"]
     # Container/VM tools
     [container lazydocker "lazydocker"]
     [container limactl "create linux vm"]
