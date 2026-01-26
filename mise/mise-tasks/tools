@@ -114,7 +114,7 @@ def main [filter?: string] {
   $groups
   | each {|grp|
       let rows = ($filtered | where group == $grp | sort-by task)
-      let header = $"(ansi purple_bold)($grp | str upcase)(ansi reset)"
+      let header = $"(ansi green)($grp | str upcase)(ansi reset)"
       let items = ($rows | each {|r| format_row $r} | str join "\n")
       $"($header)\n($items)"
     }
