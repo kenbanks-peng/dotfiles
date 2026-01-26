@@ -341,7 +341,6 @@ snyk-cli 1.1302.1
 sox 14.4.2_6
 spark 1.0.1
 speex 1.2.1
-sq 0.48.11
 sqlc 1.30.0
 sqlite 3.51.2
 srt 1.5.4
@@ -410,6 +409,7 @@ github:jdx/fnox                             1.10.0            ~/.config/mise/mis
 github:jdx/usage                            2.13.1            ~/.config/mise/mise.toml  latest
 github:jesseduffield/lazygit                0.58.1            ~/.config/mise/mise.toml  latest
 github:melkeydev/go-blueprint               0.10.11           ~/.config/mise/mise.toml  latest
+github:neilotoole/sq                        0.48.11           ~/.config/mise/mise.toml  latest
 github:noborus/ov                           0.50.2            ~/.config/mise/mise.toml  latest
 github:sharkdp/fd                           10.3.0            ~/.config/mise/mise.toml  latest
 github:sharkdp/pastel                       0.11.0            ~/.config/mise/mise.toml  latest
