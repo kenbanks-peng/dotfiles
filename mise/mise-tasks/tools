@@ -56,6 +56,8 @@ tools:caddy|caddy web server
 tools:sqlite3|SQLite db cli
 tools:sqld|lib sql
 tools:sk|skim, an fzf alternative
+tools:spark|Sparkline generator
+tools:shellcheck|shell linter
 unix:ditto|copy alternative
 unix:sd|sed alternative for find/replace withing files
 unix:sad|sed alternative with fzf
