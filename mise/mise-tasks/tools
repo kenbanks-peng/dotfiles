@@ -41,16 +41,16 @@ def tools [] {
     [lint shellcheck "shell linter"]
     # File transfer tools
     [file portal "file transfer (portal) tui"]
-    # Text/markdown tools
+    # Text viewer/processing tools
+    [text jq "jq json processing"]
+    [text jqn "jq.node json processing"]
+    [text yq "jq-like for yaml, json, xml, properties, csv and tsv"]
+    [text jc "CLI output to json"]
+    [text jid "json interactive digger"]
+    [text fx "fx json viewer"]
+    [text jnv "jnv json navigator"]
     [text glow "glow markdown viewer"]
-    # JSON tools
-    [json jq "jq json processing"]
-    [json jqn "jq.node json processing"]
-    [json yq "jq-like for yaml, json, xml, properties, csv and tsv"]
-    [json jc "CLI output to json"]
-    [json jid "json interactive digger"]
-    [json fx "fx json viewer"]
-    [json jnv "jnv json navigator"]
+    [text htmlq "jq-like for html"]
     # Web/HTTP tools
     [web hurl "curl test framework"]
     [web xh "curl alternative"]

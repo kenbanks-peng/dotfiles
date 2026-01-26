@@ -29,6 +29,7 @@
 "cargo:krokiet" = "latest"
 "github:JohnnyMorganz/StyLua" = "latest"
 "github:sharkdp/fd" = "latest"
+"github:jesseduffield/lazygit" = "latest"
 
 [settings]
 experimental = true
