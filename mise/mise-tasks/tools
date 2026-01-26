@@ -4,7 +4,6 @@
 strip() { sed 's/^[[:space:]]*//'; }
 
 function tools {
-  echo -e "\033[31mName           Description\033[0m"
   while IFS='|' read -r name desc; do
     printf "%-14s \033[90m%s\033[0m\n" "$name" "$desc"
   done < <(strip <<'EOF'
@@ -80,4 +79,5 @@ EOF
 )
 }
 
+mise
 tools
