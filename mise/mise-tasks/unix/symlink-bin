@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
+# [MISE] description="Create symbolic links in bin directory"
+# [MISE] dir="{{cwd}}"
 
-# symlink-bin: Create symbolic links in bin directory
 # Usage: symlink-bin <original_file>
 
 # Check if argument is provided

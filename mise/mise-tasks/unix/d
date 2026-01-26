@@ -1,3 +1,5 @@
 #!/usr/bin/env zsh
-# Print current directory in green with escaped spaces
+# [MISE] description="pwd with escaped spaces"
+# [MISE] dir="{{cwd}}"
+
 print -P "%F{green}${PWD// /\\\\ }/%f"
