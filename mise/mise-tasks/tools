@@ -89,6 +89,7 @@ def tools [] {
     [util tv "an fzf alternative"]
     [util spark "Sparkline generator"]
     [util wallpaper "macOS wallpaper"]
+    [util pv "pipe viewer"]
   ]
 }
 

@@ -36,7 +36,7 @@
 "github:sxyazi/yazi" = "latest"
 "github:ajeetdsouza/zoxide" = "latest"
 "github:o2sh/onefetch" = "latest"
-"github:sharkdp/vivid" = "latest"
+"github:Slackadays/Clipboard" = "latest"
 
 [settings]
 experimental = true
