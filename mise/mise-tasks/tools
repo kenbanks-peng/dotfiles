@@ -63,7 +63,8 @@ def tools [] {
     [dev lunchy "launch services ~/Library/LaunchAgents/"]
     [dev nerdlog "log tui"]
     [dev watchexec "watch for changes"]
-    [dev navi "Shell cheatsheet"]
+    [dev navi "cli cheatsheet"]
+    [dev cheat "cli cheatsheets"]
     # Unix alternatives
     [unix ditto "copy alternative"]
     [unix sd "sed alternative for find/replace within files"]
@@ -78,6 +79,7 @@ def tools [] {
     [unix tspin "tail alternative"]
     [unix choose "cut alternative"]
     [unix gping "ping alternative"]
+    [unix fd "find alternative"]
     # Util tools
     [util gpg-tui "GPG tui"]
     [util sniffnet "Network monitor"]
