@@ -3,7 +3,7 @@
 export NASA_API_KEY="$NASA_API_KEY"
 
 source "$CONFIG_DIR/colors.sh"
-source "$CONFIG_DIR/icons/icons.sh"
+source "$CONFIG_DIR/helpers/icons/icons.sh"
 
 export CACHE_DIR="$HOME/.cache/sketchybar"
 
