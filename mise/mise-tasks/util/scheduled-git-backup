@@ -1,0 +1,40 @@
+#!/bin/bash
+# Automated backup script that runs on a schedule to backup obsidian, password-store, and dotfiles
+
+# crontab -e
+#
+# */15 * * * * /Users/kenbanks/Software/bin/scheduled-git-backup
+
+# Set environment for cron execution
+PATH="/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+HOME="/Users/kenbanks"
+DOTFILES="$HOME/Software/Public/dotfiles"
+LOG="/tmp/git-autopush.log"
+VAULT="$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/"
+
+# Riana needs to use ssh to access my github
+export GIT_SSH_COMMAND="ssh -i $HOME/.ssh/github -o IdentitiesOnly=yes"
+
+git-ssh-push() {
+  REPO_DIR="$1"
+  COMMENT="$2"
+
+  # Use git -C instead of cd for more reliable execution
+  if ! git -C "$REPO_DIR" rev-parse --git-dir >/dev/null 2>&1; then
+    echo "Error: $REPO_DIR is not a git repository"
+    return 1
+  fi
+
+  if [[ -n $(git -C "$REPO_DIR" status --porcelain) ]]; then
+    git -C "$REPO_DIR" add .
+    git -C "$REPO_DIR" commit -m "$COMMENT on $(date '+%Y-%m-%d %H:%M:%S')"
+    git -C "$REPO_DIR" pull ssh main
+    git -C "$REPO_DIR" push ssh main
+  fi
+}
+
+git-ssh-push "$VAULT" "obsidian backup" >>$LOG 2>&1
+# git-ssh-push "$HOME/Software/password-store/" "password-store backup" >>$LOG 2>&1
+
+(cd "$DOTFILES" && brew bundle dump --force)
+git-ssh-push "$DOTFILES" "dotfiles backup" >>$LOG 2>&1

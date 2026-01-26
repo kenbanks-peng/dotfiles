@@ -1,0 +1,197 @@
+#!/usr/bin/env zsh
+# [MISE] description="window dimensions"
+
+# Create temporary HTML file (overwrite if exists)
+TEMP_HTML="/tmp/window-dimensions.html"
+
+# Write HTML content to temporary file
+cat > "$TEMP_HTML" << 'EOF'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Dimensions Display</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .dimensions {
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 20px 0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .label {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            opacity: 0.9;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .info-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .info-item h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.1rem;
+            color: #ffd700;
+        }
+
+        .info-item .value {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .additional-info {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+                margin: 10px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .dimensions {
+                font-size: 2rem;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Window Dimensions</h1>
+
+        <div class="label">Current Window Size</div>
+        <div class="dimensions" id="currentSize">Loading...</div>
+
+        <div class="info-grid">
+            <div class="info-item">
+                <h3>Width</h3>
+                <div class="value" id="width">-</div>
+            </div>
+            <div class="info-item">
+                <h3>Height</h3>
+                <div class="value" id="height">-</div>
+            </div>
+            <div class="info-item">
+                <h3>Screen Width</h3>
+                <div class="value" id="screenWidth">-</div>
+            </div>
+            <div class="info-item">
+                <h3>Screen Height</h3>
+                <div class="value" id="screenHeight">-</div>
+            </div>
+        </div>
+
+        <div class="additional-info">
+            <strong>Device Pixel Ratio:</strong> <span id="pixelRatio">-</span><br>
+            <strong>Available Screen Width:</strong> <span id="availWidth">-</span>px<br>
+            <strong>Available Screen Height:</strong> <span id="availHeight">-</span>px<br>
+            <strong>Color Depth:</strong> <span id="colorDepth">-</span> bits<br>
+            <strong>Orientation:</strong> <span id="orientation">-</span>
+        </div>
+    </div>
+
+    <script>
+        function updateDimensions() {
+            // Window dimensions
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+
+            // Screen dimensions
+            const screenWidth = screen.width;
+            const screenHeight = screen.height;
+            const availWidth = screen.availWidth;
+            const availHeight = screen.availHeight;
+
+            // Other info
+            const pixelRatio = window.devicePixelRatio || 1;
+            const colorDepth = screen.colorDepth;
+            const orientation = width > height ? 'Landscape' : 'Portrait';
+
+            // Update display
+            document.getElementById('currentSize').textContent = `${width} × ${height}`;
+            document.getElementById('width').textContent = `${width}px`;
+            document.getElementById('height').textContent = `${height}px`;
+            document.getElementById('screenWidth').textContent = `${screenWidth}px`;
+            document.getElementById('screenHeight').textContent = `${screenHeight}px`;
+            document.getElementById('pixelRatio').textContent = pixelRatio;
+            document.getElementById('availWidth').textContent = availWidth;
+            document.getElementById('availHeight').textContent = availHeight;
+            document.getElementById('colorDepth').textContent = colorDepth;
+            document.getElementById('orientation').textContent = orientation;
+        }
+
+        // Update dimensions on load
+        updateDimensions();
+
+        // Update dimensions when window is resized
+        window.addEventListener('resize', updateDimensions);
+
+        // Update dimensions when orientation changes (mobile)
+        window.addEventListener('orientationchange', function() {
+            setTimeout(updateDimensions, 100);
+        });
+
+        // Update every second to catch any changes
+        setInterval(updateDimensions, 1000);
+    </script>
+</body>
+</html>
+EOF
+
+# Open the temporary HTML file
+open "$TEMP_HTML"

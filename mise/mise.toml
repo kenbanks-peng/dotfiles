@@ -14,7 +14,6 @@
 "npm:vite" = "latest"
 "npm:@opentui/core" = "latest"
 "npm:@opentui/react" = "latest"
-"go:github.com/wailsapp/wails/v3/cmd/wails3" = "latest"
 "github:melkeydev/go-blueprint" = "latest"
 "github:h0rv/d2-mcp" = "latest"
 "npm:@mixedbread/mgrep" = "latest"
@@ -26,6 +25,7 @@
 "nix:bun" = "latest"
 "nix:uv" = "latest"
 "npm:clawdbot" = "latest"
+"go:github.com/wailsapp/wails/v3/cmd/wails3" = "latest"
 
 [settings]
 experimental = true
