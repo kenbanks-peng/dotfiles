@@ -391,7 +391,6 @@ z3 4.15.4
 zellij 0.43.1
 zeromq 4.3.5_2
 zimg 3.0.6
-zoxide 0.9.8
 zsh 5.9
 zstd 1.5.7
 
@@ -402,6 +401,7 @@ cargo:cargo-update                          18.0.0            ~/.config/mise/mis
 cargo:krokiet                               10.0.0            ~/.config/mise/mise.toml  latest
 cargo:sbyte                                 0.3.3             ~/.config/mise/mise.toml  latest
 github:JohnnyMorganz/StyLua                 2.3.1             ~/.config/mise/mise.toml  latest
+github:ajeetdsouza/zoxide                   0.9.8             ~/.config/mise/mise.toml  latest
 github:h0rv/d2-mcp                          1.1.0             ~/.config/mise/mise.toml  latest
 github:jdx/fnox                             1.10.0            ~/.config/mise/mise.toml  latest
 github:jdx/usage                            2.13.1            ~/.config/mise/mise.toml  latest
