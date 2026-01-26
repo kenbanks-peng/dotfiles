@@ -93,7 +93,6 @@ ca-certificates 2025-12-02
 caddy 2.10.2
 cairo 1.18.4
 carapace 1.6.0
-cbonsai 1.4.2
 certifi 2026.1.4
 cffi 2.0.0_1
 cheat 4.4.2
