@@ -182,7 +182,6 @@ json-c 0.18
 just 1.46.0
 lame 3.100
 lazydocker 0.24.4
-lazygit 0.58.1
 lazyjj 0.6.1
 lazyjournal 0.8.4
 lazysql 0.4.6
@@ -412,6 +411,7 @@ github:JohnnyMorganz/StyLua                 2.3.1             ~/Software/Public/
 github:h0rv/d2-mcp                          1.1.0             ~/Software/Public/dotfiles/mise/mise.toml  latest
 github:jdx/fnox                             1.10.0            ~/Software/Public/dotfiles/mise/mise.toml  latest
 github:jdx/usage                            2.13.1            ~/Software/Public/dotfiles/mise/mise.toml  latest
+github:jesseduffield/lazygit                0.58.1            ~/Software/Public/dotfiles/mise/mise.toml  latest
 github:melkeydev/go-blueprint               0.10.11           ~/Software/Public/dotfiles/mise/mise.toml  latest
 github:sharkdp/fd                           10.3.0            ~/Software/Public/dotfiles/mise/mise.toml  latest
 go:github.com/wailsapp/wails/v3/cmd/wails3  3.0.0-alpha.64    ~/Software/Public/dotfiles/mise/mise.toml  latest
