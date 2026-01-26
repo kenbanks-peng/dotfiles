@@ -117,7 +117,6 @@ dotenvx 1.52.0
 dvc 3.66.1_3
 espeak-ng 1.52.0
 fastfetch 2.58.0
-fd 10.3.0
 ffmpeg 8.0.1_1.reinstall 8.0.1_1
 figlet 2.2.5
 flac 1.5.0
@@ -414,6 +413,7 @@ github:h0rv/d2-mcp                          1.1.0             ~/Software/Public/
 github:jdx/fnox                             1.10.0            ~/Software/Public/dotfiles/mise/mise.toml  latest
 github:jdx/usage                            2.13.1            ~/Software/Public/dotfiles/mise/mise.toml  latest
 github:melkeydev/go-blueprint               0.10.11           ~/Software/Public/dotfiles/mise/mise.toml  latest
+github:sharkdp/fd                           10.3.0            ~/Software/Public/dotfiles/mise/mise.toml  latest
 go:github.com/wailsapp/wails/v3/cmd/wails3  3.0.0-alpha.64    ~/Software/Public/dotfiles/mise/mise.toml  latest
 go:golang.org/x/tools/gopls                 0.21.0            ~/Software/Public/dotfiles/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck       0.7.0-0.dev       ~/Software/Public/dotfiles/mise/mise.toml  latest
