@@ -4,9 +4,7 @@
 strip() { sed 's/^[[:space:]]*//'; }
 
 function tools {
-  while IFS='|' read -r name desc; do
-    printf "%-14s \033[90m%s\033[0m\n" "$name" "$desc"
-  done < <(strip <<'EOF'
+  strip <<'EOF'
     pdf:pdfattach|Attach PDFs
     pdf:pdfdetach|Detach PDFs
     pdf:pdftocairo|PDF to Cairo
@@ -76,8 +74,11 @@ function tools {
     unix:choose|cut alternative
     unix:gping|ping alternative
 EOF
-)
 }
 
-mise tasks ls
-tools
+{
+  mise tasks ls | awk '{name=$1; $1=""; sub(/^ +/, ""); printf "%s|%s\n", name, $0}'
+  tools
+} | while IFS='|' read -r name desc; do
+  printf "%-22s \033[90m%s\033[0m\n" "$name" "$desc"
+done
