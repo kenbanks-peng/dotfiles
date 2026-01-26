@@ -33,6 +33,8 @@
 "github:noborus/ov" = "latest"
 "github:sharkdp/pastel" = "latest"
 "github:neilotoole/sq" = "latest"
+"github:sxyazi/yazi" = "latest"
+"github:ajeetdsouza/zoxide" = "latest"
 
 [settings]
 experimental = true

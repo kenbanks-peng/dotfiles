@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # [MISE] description="Code/git stats"
-onefetch
+# [MISE] dir="{{cwd}}"
+onefetch "$@"

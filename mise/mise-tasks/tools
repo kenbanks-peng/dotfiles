@@ -88,6 +88,7 @@ def tools [] {
     [util sk "skim, an fzf alternative"]
     [util tv "an fzf alternative"]
     [util spark "Sparkline generator"]
+    [util wallpaper "macOS wallpaper"]
   ]
 }
 
