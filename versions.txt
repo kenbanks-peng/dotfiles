@@ -22,7 +22,7 @@ font-sf-pro latest
 font-symbols-only-nerd-font 3.4.0
 font-tex-gyre-termes 2.004
 ghostty 1.2.3
-git-credential-manager 2.6.1
+git-credential-manager 2.7.0
 google-chrome 144.0.7559.97
 google-drive 120.0.1
 grandperspective 3.6.3
@@ -337,7 +337,7 @@ shaderc 2026.1
 shared-mime-info 2.4_1
 shellcheck 0.11.0
 simdjson 4.2.4
-sk 1.7.2
+sk 1.8.1
 sketchybar 2.23.0
 snappy 1.2.2
 sniffnet 1.4.2
