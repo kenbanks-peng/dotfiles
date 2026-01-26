@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# [MISE] description="focus follows mouse"
 
 current=$(yabai -m config focus_follows_mouse)
 

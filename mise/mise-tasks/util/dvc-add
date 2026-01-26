@@ -1,0 +1,35 @@
+#!/bin/bash
+# [MISE] description="dvc add files over limit"
+# [MISE] dir="{{cwd}}"
+
+# defualt is +2M. Add + prefix if not already present
+LIMIT=${1:-"+2M"}
+if [[ "$LIMIT" != +* && "$LIMIT" != -* ]]; then
+    LIMIT="+$LIMIT"
+fi
+
+# ensure git init was run first (required for dvc)
+if [ ! -d ".git" ]; then
+    git init 2>/dev/null
+fi
+
+# ensure dvc init was run
+if [ ! -d ".dvc" ]; then
+    dvc init 2>/dev/null
+fi
+
+# enable autostage
+dvc config core.autostage true
+
+# Find and add large files to DVC
+find . -type f -size "$LIMIT" -not -path './.git/*' -not -path './.dvc/*' -not -path './.claude/*' -not -path './.vscode/*' | while read file; do
+    if [ ! -f "${file}.dvc" ]; then
+        # echo "Adding $file ($(ls -lh "$file" | awk '{print $5}'))"
+        dvc add "$file" 2>/dev/null
+    fi
+done
+
+# Add all .dvc files and .gitignore to git staging
+# Use find to locate .dvc files instead of glob patterns to ensure we work from pwd
+find . -name "*.dvc" -type f -exec git add {} +
+git add .gitignore 2>/dev/null || true
