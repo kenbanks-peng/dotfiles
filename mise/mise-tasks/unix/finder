@@ -1,0 +1,4 @@
+#!/usr/bin/env zsh
+# Opens the current directory in macOS Finder
+open .
+
