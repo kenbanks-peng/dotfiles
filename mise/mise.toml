@@ -26,6 +26,7 @@
 "nix:uv" = "latest"
 "npm:clawdbot" = "latest"
 "go:github.com/wailsapp/wails/v3/cmd/wails3" = "latest"
+"cargo:krokiet" = "latest"
 
 [settings]
 experimental = true
