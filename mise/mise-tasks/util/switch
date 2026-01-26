@@ -1,0 +1,89 @@
+#!/usr/bin/env -S uv run --with toml --script
+# [MISE] description="check toml validity"
+# [MISE] dir="{{cwd}}"
+
+import argparse
+import os
+import sys
+
+
+def print_state(source, dest1, dest2):
+    def get_state(path):
+        if os.path.exists(path):
+            if os.path.islink(path):
+                linkPath = os.readlink(path)
+                if linkPath == dest1:
+                    return "symlink pointing to dest1"
+                elif linkPath == dest2:
+                    return "symlink pointing to dest2"
+                else:
+                    return f"symlink pointing to {os.readlink(path)}"
+            else:
+                return "exists"
+        else:
+            return "does not exist"
+
+    print(f"State of source: {get_state(source)}")
+    print(f"State of dest1: {get_state(dest1)}")
+    print(f"State of dest2: {get_state(dest2)}")
+
+
+def switch_symlink(source, dest1, dest2):
+    # Step 1: Handle the new scenario
+    if os.path.exists(source) and not os.path.islink(source):
+        if os.path.exists(dest1) and not os.path.exists(dest2):
+            os.rename(source, dest2)
+            os.symlink(dest2, source)
+            print(f"Moved {source} to {dest2} and created symlink.")
+        elif os.path.exists(dest2) and not os.path.exists(dest1):
+            os.rename(source, dest1)
+            os.symlink(dest1, source)
+            print(f"Moved {source} to {dest1} and created symlink.")
+        else:
+            print(
+                "Error: Since source already exists, only one of the two destinations can exist."
+            )
+            sys.exit(1)
+    elif os.path.islink(source) and os.path.exists(dest1) and os.path.exists(dest2):
+        current_target = os.readlink(source)
+        print(f"Current symlink points to: {current_target}")
+
+        print("Choose the destination to switch to:")
+        print(f"1) {dest1}")
+        print(f"2) {dest2}")
+        choice = input("Enter 1 or 2: ")
+
+        if choice == "1":
+            os.unlink(source)
+            os.symlink(dest1, source)
+            print(f"Switched {source} to {dest1}")
+        elif choice == "2":
+            os.unlink(source)
+            os.symlink(dest2, source)
+            print(f"Switched {source} to {dest2}")
+        else:
+            print("Invalid choice. Exiting.")
+            sys.exit(1)
+    else:
+        print("Error: Invalid state for source and destination.")
+        sys.exit(1)
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Switch a symlink between two files or directories."
+    )
+    parser.add_argument(
+        "source", help="The source file or directory where the symlink will be created."
+    )
+    parser.add_argument("dest1", help="The first destination file or directory.")
+    parser.add_argument("dest2", help="The second destination file or directory.")
+
+    args = parser.parse_args()
+
+    print_state(args.source, args.dest1, args.dest2)
+    switch_symlink(args.source, args.dest1, args.dest2)
+
+
+if __name__ == "__main__":
+    main()
