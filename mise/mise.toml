@@ -30,6 +30,8 @@
 "github:JohnnyMorganz/StyLua" = "latest"
 "github:sharkdp/fd" = "latest"
 "github:jesseduffield/lazygit" = "latest"
+"github:noborus/ov" = "latest"
+"github:sharkdp/pastel" = "latest"
 
 [settings]
 experimental = true
