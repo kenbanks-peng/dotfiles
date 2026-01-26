@@ -81,7 +81,6 @@ aws-checksums 0.2.8
 aws-crt-cpp 0.37.1
 aws-sdk-cpp 1.11.720
 bandwhich 0.23.1
-bash 5.3.9
 bat 0.26.1
 bat-extras 2024.08.24
 bbrew 2.2.1
@@ -111,7 +110,6 @@ d2 0.7.1
 dav1d 1.5.3
 dblab 0.34.2
 deno 2.6.6
-direnv 2.37.1
 doppler 3.75.1
 dotenvx 1.52.0
 dvc 3.66.1_3
@@ -411,7 +409,6 @@ github:noborus/ov                           0.50.2            ~/.config/mise/mis
 github:o2sh/onefetch                        2.26.1            ~/.config/mise/mise.toml  latest
 github:sharkdp/fd                           10.3.0            ~/.config/mise/mise.toml  latest
 github:sharkdp/pastel                       0.11.0            ~/.config/mise/mise.toml  latest
-github:sharkdp/vivid                        0.10.1            ~/.config/mise/mise.toml  latest
 github:sxyazi/yazi                          26.1.22           ~/.config/mise/mise.toml  latest
 go:github.com/wailsapp/wails/v3/cmd/wails3  3.0.0-alpha.64    ~/.config/mise/mise.toml  latest
 go:golang.org/x/tools/gopls                 0.21.0            ~/.config/mise/mise.toml  latest
