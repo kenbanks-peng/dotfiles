@@ -408,12 +408,12 @@ MISE PACKAGES
 -------------
 cargo:cargo-cache                           0.8.3             ~/.config/mise/mise.toml  latest
 cargo:cargo-update                          18.0.0            ~/.config/mise/mise.toml  latest
+cargo:krokiet                               10.0.0            ~/.config/mise/mise.toml  latest
 cargo:sbyte                                 0.3.3             ~/.config/mise/mise.toml  latest
 github:h0rv/d2-mcp                          1.1.0             ~/.config/mise/mise.toml  latest
 github:jdx/fnox                             1.10.0            ~/.config/mise/mise.toml  latest
 github:jdx/usage                            2.13.1            ~/.config/mise/mise.toml  latest
 github:melkeydev/go-blueprint               0.10.11           ~/.config/mise/mise.toml  latest
-go:github.com/wailsapp/wails/v3/cmd/wails3  3.0.0-alpha.63
 go:github.com/wailsapp/wails/v3/cmd/wails3  3.0.0-alpha.64    ~/.config/mise/mise.toml  latest
 go:golang.org/x/tools/gopls                 0.21.0            ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck       0.7.0-0.dev       ~/.config/mise/mise.toml  latest
