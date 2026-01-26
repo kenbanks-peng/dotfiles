@@ -186,7 +186,6 @@ lazyjj 0.6.1
 lazyjournal 0.8.4
 lazysql 0.4.6
 leptonica 1.87.0
-lf 40
 libarchive 3.8.5
 libass 0.17.4
 libassuan 3.0.2
