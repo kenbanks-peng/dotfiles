@@ -1,17 +1,20 @@
 #!/usr/bin/env -S uv run --with toml --script
+# [MISE] description="check toml validity"
+# [MISE] dir="{{cwd}}"
 
 import sys
-import toml # type: ignore
+
+import toml  # type: ignore
 
 try:
     toml.load(sys.argv[1])
-    print('Valid TOML')
+    print("Valid TOML")
 except toml.TomlDecodeError as e:
-    print(f'Invalid TOML: {e}')
+    print(f"Invalid TOML: {e}")
     sys.exit(1)
 except FileNotFoundError:
-    print(f'File not found: {sys.argv[1]}')
+    print(f"File not found: {sys.argv[1]}")
     sys.exit(1)
 except IndexError:
-    print('Usage: check-toml <file.toml>')
+    print("Usage: check-toml <file.toml>")
     sys.exit(1)
