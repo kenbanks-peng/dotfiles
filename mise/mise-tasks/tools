@@ -4,6 +4,7 @@
 def tools [] {
   [
     [group task desc];
+    # PDF tools
     [pdf pdfattach "Attach PDFs"]
     [pdf pdfdetach "Detach PDFs"]
     [pdf pdftocairo "PDF to Cairo"]
@@ -17,14 +18,32 @@ def tools [] {
     [pdf pdfsig "PDF sig"]
     [pdf pdfunite "PDF unite"]
     [pdf pdftotext "PDF to text"]
-    [dev zellij "Zellij terminal"]
-    [dev tmux "tmux terminal"]
-    [dev navi "Shell cheatsheet"]
-    [dev lazyjj "lazyjj"]
-    [dev lazysql "lazysql"]
-    [dev lazydocker "lazydocker"]
-    [util portal "file transfer (portal) tui"]
-    [util glow "glow markdown viewer"]
+    # Terminal multiplexers
+    [terminal zellij "Zellij terminal"]
+    [terminal tmux "tmux terminal"]
+    # Git/Repo tools
+    [repo gitui "gitui git tui"]
+    [repo lazyjj "lazyjj"]
+    [repo delta "git delta viewer"]
+    [repo hub "simplified github cli"]
+    # Database tools
+    [db dblab "database tui"]
+    [db gobang "database tui"]
+    [db lazysql "lazysql"]
+    [db sqlite3 "SQLite db cli"]
+    [db sqld "lib sql"]
+    [db tursodb "turso db"]
+    # Container/VM tools
+    [container lazydocker "lazydocker"]
+    [container limactl "create linux vm"]
+    # Linting tools
+    [lint biome "lint: biome check --write"]
+    [lint shellcheck "shell linter"]
+    # File transfer tools
+    [file portal "file transfer (portal) tui"]
+    # Text/markdown tools
+    [text glow "glow markdown viewer"]
+    # JSON tools
     [json jq "jq json processing"]
     [json jqn "jq.node json processing"]
     [json yq "jq-like for yaml, json, xml, properties, csv and tsv"]
@@ -32,27 +51,20 @@ def tools [] {
     [json jid "json interactive digger"]
     [json fx "fx json viewer"]
     [json jnv "jnv json navigator"]
-    [http hurl "curl test framework"]
-    [http xh "curl alternative"]
-    [http curlie "curl alternative"]
-    [http posting "posting tui"]
+    # Web/HTTP tools
+    [web hurl "curl test framework"]
+    [web xh "curl alternative"]
+    [web curlie "curl alternative"]
+    [web posting "posting tui"]
+    [web caddy "caddy web server"]
+    # Dev tools (remaining)
     [dev sshs "ssh client tui"]
-    [dev gitui "gitui git tui"]
     [dev tokei "count lines of code"]
-    [dev biome "lint: biome check --write"]
     [dev lunchy "launch services ~/Library/LaunchAgents/"]
     [dev nerdlog "log tui"]
-    [dev dblab "database tui"]
-    [dev gobang "database tui"]
-    [dev limactl "create linux vm"]
-    [dev tursodb "turso db"]
-    [dev delta "git delta viewer"]
-    [dev hub "simplified github cli"]
-    [dev caddy "caddy web server"]
-    [dev sqlite3 "SQLite db cli"]
-    [dev sqld "lib sql"]
-    [dev shellcheck "shell linter"]
     [dev watchexec "watch for changes"]
+    [dev navi "Shell cheatsheet"]
+    # Unix alternatives
     [unix ditto "copy alternative"]
     [unix sd "sed alternative for find/replace within files"]
     [unix sad "sed alternative with fzf"]
@@ -66,6 +78,7 @@ def tools [] {
     [unix tspin "tail alternative"]
     [unix choose "cut alternative"]
     [unix gping "ping alternative"]
+    # Util tools
     [util gpg-tui "GPG tui"]
     [util sniffnet "Network monitor"]
     [util lazyjournal "lazyjournal"]
