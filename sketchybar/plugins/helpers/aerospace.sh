@@ -90,7 +90,7 @@ aerospace_create_window_item() {
     esac
   done
 
-  local icon="$($CONFIG_DIR/icons_apps.sh "$appname" 2>/dev/null || echo "")"
+  local icon="$($CONFIG_DIR/icons/icons_apps.sh "$appname" 2>/dev/null || echo "")"
 
   # Get props
   local props=()
@@ -475,7 +475,7 @@ aerospace_add_apps_in_spaceid() {
     fi
 
     local item="window.$sid.$window_id.$appname"
-    local icon="$($CONFIG_DIR/icons_apps.sh "$appname")"
+    local icon="$($CONFIG_DIR/icons/icons_apps.sh "$appname")"
 
     # Check if item already exists (using cached bar items)
     if ! item_in_array "$item" "$bar_items"; then
@@ -961,7 +961,7 @@ aerospace_swap_workspace() {
 
   for old_item in "${!items_to_update[@]}"; do
     IFS=':' read -r correct_item item_window_id item_appname new_sid <<< "${items_to_update[$old_item]}"
-    local icon="$($CONFIG_DIR/icons_apps.sh "$item_appname" 2>/dev/null || echo "")"
+    local icon="$($CONFIG_DIR/icons/icons_apps.sh "$item_appname" 2>/dev/null || echo "")"
 
     # Determine if this is the focused window
     local this_icon_color="$icon_color"
@@ -997,4 +997,3 @@ aerospace_swap_workspace() {
     sketchybar -m "${batch_args[@]}"
   fi
 }
-
