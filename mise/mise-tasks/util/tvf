@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-# [MISE] description="fzf alternative"
-tv "$@"
