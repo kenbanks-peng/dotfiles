@@ -454,8 +454,6 @@ installed targets:
 
 UV TOOLS
 --------
-cctui v0.1.0
-- cctui
 markitdown v0.1.4
 - markitdown
 specify-cli v0.0.22
