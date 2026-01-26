@@ -254,7 +254,6 @@ macmon 0.6.1
 mad 0.15.1b
 makensis 3.11
 mbedtls@3 3.6.5
-mcfly 0.9.4
 melody 0.20.0
 micro 2.0.15
 mole 1.23.2
