@@ -7,9 +7,9 @@ anybar 0.2.3
 audacity 3.7.7
 boop 1.4.0
 claude 1.1.886,ef5d267b24cd6ead766647763ca5bcfae49c823b
-claude-code 2.1.19
+claude-code 2.1.20
 cleanshot 4.8.7
-codex 0.91.0
+codex 0.92.0
 container 0.6.0
 cursor 2.4.21,dc8361355d709f306d5159635a677a571b277bcc
 daisydisk 4.33.2
@@ -46,13 +46,13 @@ screen-studio 3.5.2-4162
 sf-symbols 7.1,116
 sip-app 4.1.2
 skim 1.7.12
-superwhisper 2.8.0
+superwhisper 2.9.0
 symboliclinker 2.2
 syntax-highlight 2.1.27
 typeface 4.2.3,4845
 visual-studio-code 1.108.2
 vlc 3.0.23
-yaak 2026.1.0
+yaak 2026.1.1
 zed 0.220.6
 zen 1.18.1b
 zoom 6.7.2.72191
@@ -79,7 +79,7 @@ aws-c-s3 0.11.5
 aws-c-sdkutils 0.2.4
 aws-checksums 0.2.8
 aws-crt-cpp 0.37.1
-aws-sdk-cpp 1.11.720
+aws-sdk-cpp 1.11.735
 bandwhich 0.23.1
 bash 5.3.9
 bat 0.26.1
@@ -263,7 +263,7 @@ mujs 1.3.8
 navi 2.24.0
 ncdu 2.9.2
 ncurses 6.6
-neovim 0.11.5_1
+neovim 0.11.6
 nettle 3.10.2
 node 25.4.0
 npth 1.8
@@ -323,7 +323,7 @@ shaderc 2026.1
 shared-mime-info 2.4_1
 shellcheck 0.11.0
 simdjson 4.2.4
-sk 1.8.1
+sk 1.9.1
 sketchybar 2.23.0
 snappy 1.2.2
 sniffnet 1.4.2
@@ -341,7 +341,7 @@ svt-av1 4.0.0
 syncthing 2.0.13
 tailspin 5.5.0
 tealdeer 1.8.1
-television 0.14.5
+television 0.15.0
 terminal-notifier 2.0.0
 tesseract 5.5.2
 theora 1.2.0
@@ -396,7 +396,7 @@ github:ajeetdsouza/zoxide                   0.9.8             ~/Software/Public/
 github:bee-san/RustScan                     2.4.1             ~/Software/Public/dotfiles/mise/mise.toml  latest
 github:h0rv/d2-mcp                          1.1.0             ~/Software/Public/dotfiles/mise/mise.toml  latest
 github:jdx/fnox                             1.10.0            ~/Software/Public/dotfiles/mise/mise.toml  latest
-github:jdx/usage                            2.13.1            ~/Software/Public/dotfiles/mise/mise.toml  latest
+github:jdx/usage                            2.15.0            ~/Software/Public/dotfiles/mise/mise.toml  latest
 github:jesseduffield/lazygit                0.58.1            ~/Software/Public/dotfiles/mise/mise.toml  latest
 github:melkeydev/go-blueprint               0.10.11           ~/Software/Public/dotfiles/mise/mise.toml  latest
 github:neilotoole/sq                        0.48.11           ~/Software/Public/dotfiles/mise/mise.toml  latest
