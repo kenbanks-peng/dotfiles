@@ -1,12 +1,44 @@
 #!/usr/bin/env zsh
 # [MISE] description="More readable path. Duplicates in red."
-print $PATH | tr ':' '\n' | awk '{
-  count[$0]++
-  paths[NR] = $0
+print $PATH | tr ':' '\n' | awk -v home="$HOME" '
+BEGIN {
+    mise_prefix = home "/.local/share/mise/installs"
+    nix_prefix = "/nix/store"
+    cryptex_prefix = "/var/run/com.apple.security.cryptexd"
+    mise_shown = 0
+    nix_shown = 0
+    cryptex_shown = 0
+}
+{
+    if (index($0, mise_prefix) == 1) {
+        paths[NR] = "MISE_PLACEHOLDER"
+    } else if (index($0, nix_prefix) == 1) {
+        paths[NR] = "NIX_PLACEHOLDER"
+    } else if (index($0, cryptex_prefix) == 1) {
+        paths[NR] = "CRYPTEX_PLACEHOLDER"
+    } else {
+        count[$0]++
+        paths[NR] = $0
+    }
 }
 END {
     for (i = 1; i <= NR; i++) {
-        if (count[paths[i]] > 1) {
+        if (paths[i] == "MISE_PLACEHOLDER") {
+            if (!mise_shown) {
+                print home "/.local/share/mise/installs/..."
+                mise_shown = 1
+            }
+        } else if (paths[i] == "NIX_PLACEHOLDER") {
+            if (!nix_shown) {
+                print "/nix/store/..."
+                nix_shown = 1
+            }
+        } else if (paths[i] == "CRYPTEX_PLACEHOLDER") {
+            if (!cryptex_shown) {
+                print "/var/run/com.apple.security.cryptexd/..."
+                cryptex_shown = 1
+            }
+        } else if (count[paths[i]] > 1) {
             printf "\033[31m%s\033[0m\n", paths[i]
         } else {
             print paths[i]
