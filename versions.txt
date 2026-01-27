@@ -197,7 +197,6 @@ libgpg-error 1.58
 libheif 1.21.2
 libidn2 2.3.8
 libksba 1.6.7
-liblinear 2.50
 libmicrohttpd 1.0.2
 libmpc 1.3.1
 libnghttp2 1.68.0
@@ -266,7 +265,6 @@ ncdu 2.9.2
 ncurses 6.6
 neovim 0.11.5_1
 nettle 3.10.2
-nmap 7.98
 node 25.4.0
 npth 1.8
 nspr 4.38.2
@@ -306,7 +304,6 @@ pv 1.10.3
 pycparser 3.0
 pydantic 2.12.5
 pygit2 1.19.1
-python@3.13 3.13.11_1
 python@3.14 3.14.2_1
 qrencode 4.1.1
 qsv 15.0.0
@@ -319,7 +316,6 @@ resvg 0.46.0
 rich-cli 1.8.1_2
 ripgrep 15.1.0
 rubberband 4.0.0
-rustscan 2.4.1
 sad 0.4.32
 sd 1.0.0
 sdl2 2.32.10
@@ -398,6 +394,7 @@ cargo:sbyte                                 0.3.3             ~/Software/Public/
 github:JohnnyMorganz/StyLua                 2.3.1             ~/Software/Public/dotfiles/mise/mise.toml  latest
 github:Slackadays/Clipboard                 0.10.0            ~/Software/Public/dotfiles/mise/mise.toml  latest
 github:ajeetdsouza/zoxide                   0.9.8             ~/Software/Public/dotfiles/mise/mise.toml  latest
+github:bee-san/RustScan                     2.4.1             ~/Software/Public/dotfiles/mise/mise.toml  latest
 github:h0rv/d2-mcp                          1.1.0             ~/Software/Public/dotfiles/mise/mise.toml  latest
 github:jdx/fnox                             1.10.0            ~/Software/Public/dotfiles/mise/mise.toml  latest
 github:jdx/usage                            2.13.1            ~/Software/Public/dotfiles/mise/mise.toml  latest
@@ -449,7 +446,3 @@ installed targets:
 
 UV TOOLS
 --------
-markitdown v0.1.4
-- markitdown
-specify-cli v0.0.22
-- specify
