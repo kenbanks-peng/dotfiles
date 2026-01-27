@@ -313,7 +313,6 @@ re2 2025-11-05
 readline 8.3.3
 repomix 1.11.1
 resvg 0.46.0
-rich-cli 1.8.1_2
 ripgrep 15.1.0
 rubberband 4.0.0
 sad 0.4.32
