@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# [MISE] description="Move files to trash"
+# [MISE] dir="{{cwd}}"
+exec /Users/kenbanks/Software/DevBox/util/trash/bin/trash "$@"

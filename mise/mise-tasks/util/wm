@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# [MISE] description="Window manager utilities"
+# [MISE] dir="{{cwd}}"
+exec /Users/kenbanks/Software/DevBox/util/wm/bin/wm "$@"
