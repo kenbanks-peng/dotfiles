@@ -1,4 +1,4 @@
 #!/usr/bin/env zsh
 # [MISE] description="fast grep"
 # [MISE] dir="{{cwd}}"
-rg --hidden "$@"
+rg --hidden "$@" || true
