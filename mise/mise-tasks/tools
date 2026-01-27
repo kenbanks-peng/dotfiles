@@ -66,6 +66,7 @@ def tools [] {
     [dev watchexec "watch for changes"]
     [dev navi "cli cheatsheet"]
     [dev cheat "cli cheatsheets"]
+    [dev repomix "repo to single file"]
     # Unix alternatives
     [unix ditto "copy alternative"]
     [unix sd "sed alternative for find/replace within files"]
@@ -90,6 +91,7 @@ def tools [] {
     [util spark "Sparkline generator"]
     [util wallpaper "macOS wallpaper"]
     [util pv "pipe viewer"]
+    [util svgo "SVG optimizer"]
   ]
 }
 

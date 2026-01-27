@@ -37,6 +37,7 @@
 "github:ajeetdsouza/zoxide" = "latest"
 "github:o2sh/onefetch" = "latest"
 "github:Slackadays/Clipboard" = "latest"
+"github:bee-san/RustScan" = "latest"
 
 [settings]
 experimental = true
