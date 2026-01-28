@@ -7,11 +7,11 @@ anybar 0.2.3
 audacity 3.7.7
 boop 1.4.0
 claude 1.1.1093,5a5517183d88766e37a07fc3ad73585d1298a051
-claude-code 2.1.20
+claude-code 2.1.22
 cleanshot 4.8.7
 codex 0.92.0
 container 0.6.0
-cursor 2.4.21,dc8361355d709f306d5159635a677a571b277bcc
+cursor 2.4.22,618c607a249dd7fd2ffc662c6531143833bebd44
 daisydisk 4.33.2
 espanso 2.3.0
 font-hasklug-nerd-font 3.4.0
@@ -54,7 +54,7 @@ visual-studio-code 1.108.2
 vlc 3.0.23
 yaak 2026.1.2
 zed 0.220.7
-zen 1.18.1b
+zen 1.18.2b
 zoom 6.7.2.72191
 
 BREW FORMULAS
@@ -110,7 +110,7 @@ d2 0.7.1
 dav1d 1.5.3
 dblab 0.34.2
 deno 2.6.6
-doppler 3.75.1
+doppler 3.75.2
 dotenvx 1.52.0
 dvc 3.66.1_3
 espeak-ng 1.52.0
@@ -123,13 +123,13 @@ fmt 12.1.0
 fontconfig 2.17.1
 freetype 2.14.1_1
 frei0r 2.5.1
-fresh-editor 0.1.93
+fresh-editor 0.1.94
 fribidi 1.0.16
 fx 39.2.0
 fzf 0.67.0
 gawk 5.3.1
 gcc 15.2.0
-gemini-cli 0.25.2
+gemini-cli 0.26.0
 gettext 0.26_1
 gh 2.86.0
 giflib 5.2.2
@@ -400,7 +400,7 @@ github:ajeetdsouza/zoxide                   0.9.8             ~/Software/Public/
 github:bee-san/RustScan                     2.4.1             ~/Software/Public/dotfiles/mise/mise.toml  latest
 github:h0rv/d2-mcp                          1.1.0             ~/Software/Public/dotfiles/mise/mise.toml  latest
 github:jdx/fnox                             1.10.0            ~/Software/Public/dotfiles/mise/mise.toml  latest
-github:jdx/usage                            2.15.0            ~/Software/Public/dotfiles/mise/mise.toml  latest
+github:jdx/usage                            2.15.1            ~/Software/Public/dotfiles/mise/mise.toml  latest
 github:jesseduffield/lazygit                0.58.1            ~/Software/Public/dotfiles/mise/mise.toml  latest
 github:melkeydev/go-blueprint               0.10.11           ~/Software/Public/dotfiles/mise/mise.toml  latest
 github:neilotoole/sq                        0.48.11           ~/Software/Public/dotfiles/mise/mise.toml  latest
