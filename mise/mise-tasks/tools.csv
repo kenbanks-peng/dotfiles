@@ -1,0 +1,77 @@
+group,task,desc
+pdf,pdfattach,Attach PDFs
+pdf,pdfdetach,Detach PDFs
+pdf,pdftocairo,PDF to Cairo
+pdf,pdffonts,PDF fonts
+pdf,pdftohtml,PDF to HTML
+pdf,pdfimages,PDF to images
+pdf,pdfinfo,PDF info
+pdf,pdftoppm,PDF to ppm
+pdf,pdftops,PDF to ps
+pdf,pdfseparate,PDF separate
+pdf,pdfsig,PDF sig
+pdf,pdfunite,PDF unite
+pdf,pdftotext,PDF to text
+terminal,zellij,Zellij terminal
+terminal,tmux,tmux terminal
+repo,gitui,gitui git tui
+repo,lazyjj,lazyjj
+repo,delta,git delta viewer
+repo,hub,simplified github cli
+db,dblab,database tui
+db,gobang,database tui
+db,lazysql,lazysql
+db,sqlite3,SQLite db cli
+db,sqld,lib sql
+db,tursodb,turso db
+db,sq,jq-like for data sources
+container,lazydocker,lazydocker
+container,limactl,create linux vm
+lint,biome,"lint: biome check --write"
+lint,shellcheck,shell linter
+file,portal,file transfer (portal) tui
+text,jq,jq json processing
+text,jqn,jq.node json processing
+text,yq,"jq-like for yaml, json, xml, properties, csv and tsv"
+text,jc,CLI output to json
+text,jid,json interactive digger
+text,fx,fx json viewer
+text,jnv,jnv json navigator
+text,glow,glow markdown viewer
+text,htmlq,jq-like for html
+web,hurl,curl test framework
+web,xh,curl alternative
+web,curlie,curl alternative
+web,posting,posting tui
+web,caddy,caddy web server
+dev,sshs,ssh client tui
+dev,tokei,count lines of code
+dev,lunchy,launch services ~/Library/LaunchAgents/
+dev,nerdlog,log tui
+dev,watchexec,watch for changes
+dev,navi,cli cheatsheet
+dev,cheat,cli cheatsheets
+dev,repomix,repo to single file
+unix,ditto,copy alternative
+unix,sd,sed alternative for find/replace within files
+unix,sad,sed alternative with fzf
+unix,rg,ripgrep grep alternative
+unix,tldr,man alternative
+unix,bat,cat alternative
+unix,procs,ps alternative
+unix,btop,top tui
+unix,glances,top tui
+unix,macmon,resource monitor
+unix,tspin,tail alternative
+unix,choose,cut alternative
+unix,gping,ping alternative
+unix,fd,find alternative
+util,gpg-tui,GPG tui
+util,sniffnet,Network monitor
+util,lazyjournal,lazyjournal
+util,sk,"skim, an fzf alternative"
+util,tv,an fzf alternative
+util,spark,Sparkline generator
+util,wallpaper,macOS wallpaper
+util,pv,pipe viewer
+util,svgo,SVG optimizer

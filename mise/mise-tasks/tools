@@ -33,97 +33,8 @@ def bun_tools [] {
 }
 
 def tools [] {
-  [
-    [group task desc];
-    # PDF tools
-    [pdf pdfattach "Attach PDFs"]
-    [pdf pdfdetach "Detach PDFs"]
-    [pdf pdftocairo "PDF to Cairo"]
-    [pdf pdffonts "PDF fonts"]
-    [pdf pdftohtml "PDF to HTML"]
-    [pdf pdfimages "PDF to images"]
-    [pdf pdfinfo "PDF info"]
-    [pdf pdftoppm "PDF to ppm"]
-    [pdf pdftops "PDF to ps"]
-    [pdf pdfseparate "PDF separate"]
-    [pdf pdfsig "PDF sig"]
-    [pdf pdfunite "PDF unite"]
-    [pdf pdftotext "PDF to text"]
-    # Terminal multiplexers
-    [terminal zellij "Zellij terminal"]
-    [terminal tmux "tmux terminal"]
-    # Git/Repo tools
-    [repo gitui "gitui git tui"]
-    [repo lazyjj "lazyjj"]
-    [repo delta "git delta viewer"]
-    [repo hub "simplified github cli"]
-    # Database tools
-    [db dblab "database tui"]
-    [db gobang "database tui"]
-    [db lazysql "lazysql"]
-    [db sqlite3 "SQLite db cli"]
-    [db sqld "lib sql"]
-    [db tursodb "turso db"]
-    [db sq "jq-like for data sources"]
-    # Container/VM tools
-    [container lazydocker "lazydocker"]
-    [container limactl "create linux vm"]
-    # Linting tools
-    [lint biome "lint: biome check --write"]
-    [lint shellcheck "shell linter"]
-    # File transfer tools
-    [file portal "file transfer (portal) tui"]
-    # Text viewer/processing tools
-    [text jq "jq json processing"]
-    [text jqn "jq.node json processing"]
-    [text yq "jq-like for yaml, json, xml, properties, csv and tsv"]
-    [text jc "CLI output to json"]
-    [text jid "json interactive digger"]
-    [text fx "fx json viewer"]
-    [text jnv "jnv json navigator"]
-    [text glow "glow markdown viewer"]
-    [text htmlq "jq-like for html"]
-    # Web/HTTP tools
-    [web hurl "curl test framework"]
-    [web xh "curl alternative"]
-    [web curlie "curl alternative"]
-    [web posting "posting tui"]
-    [web caddy "caddy web server"]
-    # Dev tools (remaining)
-    [dev sshs "ssh client tui"]
-    [dev tokei "count lines of code"]
-    [dev lunchy "launch services ~/Library/LaunchAgents/"]
-    [dev nerdlog "log tui"]
-    [dev watchexec "watch for changes"]
-    [dev navi "cli cheatsheet"]
-    [dev cheat "cli cheatsheets"]
-    [dev repomix "repo to single file"]
-    # Unix alternatives
-    [unix ditto "copy alternative"]
-    [unix sd "sed alternative for find/replace within files"]
-    [unix sad "sed alternative with fzf"]
-    [unix rg "ripgrep grep alternative"]
-    [unix tldr "man alternative"]
-    [unix bat "cat alternative"]
-    [unix procs "ps alternative"]
-    [unix btop "top tui"]
-    [unix glances "top tui"]
-    [unix macmon "resource monitor"]
-    [unix tspin "tail alternative"]
-    [unix choose "cut alternative"]
-    [unix gping "ping alternative"]
-    [unix fd "find alternative"]
-    # Util tools
-    [util gpg-tui "GPG tui"]
-    [util sniffnet "Network monitor"]
-    [util lazyjournal "lazyjournal"]
-    [util sk "skim, an fzf alternative"]
-    [util tv "an fzf alternative"]
-    [util spark "Sparkline generator"]
-    [util wallpaper "macOS wallpaper"]
-    [util pv "pipe viewer"]
-    [util svgo "SVG optimizer"]
-  ]
+  let script_dir = ($env.FILE_PWD? | default (pwd))
+  open ($script_dir | path join "tools.csv")
 }
 
 def mise_tasks [] {
@@ -148,7 +59,11 @@ def format_row [row] {
 }
 
 def main [filter?: string] {
-  let all_data = (mise_tasks | append (tools) | append (uv_tools) | append (bun_tools))
+  let base_tools = (tools)
+  let base_names = ($base_tools | get task)
+  let filtered_uv = (uv_tools | where {|t| $t.task not-in $base_names})
+  let filtered_bun = (bun_tools | where {|t| $t.task not-in $base_names})
+  let all_data = (mise_tasks | append $base_tools | append $filtered_uv | append $filtered_bun)
 
   let filtered = if $filter == null {
     $all_data
@@ -160,7 +75,10 @@ def main [filter?: string] {
     return
   }
 
-  let groups = ($filtered | get group | uniq | sort)
+  let all_groups = ($filtered | get group | uniq)
+  let main_groups = ($all_groups | where {|g| $g != "bun" and $g != "uv"} | sort)
+  let end_groups = ($all_groups | where {|g| $g == "bun" or $g == "uv"})
+  let groups = ($main_groups | append $end_groups)
 
   $groups
   | each {|grp|
@@ -170,4 +88,5 @@ def main [filter?: string] {
       $"($header)\n($items)"
     }
   | str join "\n\n"
+  | $in + "\n"
 }
