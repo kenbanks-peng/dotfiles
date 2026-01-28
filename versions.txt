@@ -23,7 +23,7 @@ font-symbols-only-nerd-font 3.4.0
 font-tex-gyre-termes 2.004
 ghostty 1.2.3
 git-credential-manager 2.7.0
-google-chrome 144.0.7559.97
+google-chrome 144.0.7559.110
 google-drive 120.0.1
 grandperspective 3.6.3
 iina 1.4.1,160
@@ -31,7 +31,7 @@ karabiner-elements 15.9.0
 keyclu 0.31
 languagetool-desktop 2.10.0
 linear-linear 1.28.7,260121aah8dqpp9
-logos 47.2.0.0002
+logos 48.0.0.0238
 microsoft-auto-update 4.81.25121042
 obsidian 1.11.5
 omnifocus 4.8.6
@@ -60,6 +60,7 @@ zoom 6.7.2.72191
 BREW FORMULAS
 -------------
 abseil 20260107.0
+ada-url 3.4.1
 age 1.3.1
 aom 3.13.1
 apache-arrow 23.0.0
@@ -118,6 +119,7 @@ ffmpeg 8.0.1_1.reinstall 8.0.1_1
 figlet 2.2.5
 flac 1.5.0
 flock 0.4.0
+fmt 12.1.0
 fontconfig 2.17.1
 freetype 2.14.1_1
 frei0r 2.5.1
@@ -153,6 +155,7 @@ graphite2 1.3.14
 grex 1.4.6
 grpc 1.76.0_4
 harfbuzz 12.3.2
+hdrhistogram_c 0.11.9
 hexyl 0.16.0
 highway 1.3.0
 htmlq 0.4.0
@@ -235,6 +238,7 @@ libxrender 0.9.12
 libyaml 0.2.5
 lima 2.0.3
 little-cms2 2.18
+llhttp 9.3.0
 llvm 21.1.8
 lolcat 100.0.1
 lpeg 1.1.0
@@ -265,7 +269,7 @@ ncdu 2.9.2
 ncurses 6.6
 neovim 0.11.6
 nettle 3.10.2
-node 25.4.0
+node 25.5.0
 npth 1.8
 nspr 4.38.2
 nss 3.120
@@ -323,7 +327,7 @@ shaderc 2026.1
 shared-mime-info 2.4_1
 shellcheck 0.11.0
 simdjson 4.2.4
-sk 1.10.0
+sk 1.11.0
 sketchybar 2.23.0
 snappy 1.2.2
 sniffnet 1.4.2
