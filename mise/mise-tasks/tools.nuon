@@ -23,7 +23,7 @@
   {group: db, command: dblab, desc: "Database tui"}
   {group: db, command: gobang, desc: "Database tui"}
   {group: db, command: lazysql, desc: Lazysql}
-  {group: db, command: sqlite3, desc: "SQLite db cli", system: true}
+  {group: db, command: sqlite3, desc: "SQLite db cli", force: true}
   {group: db, command: sqld, desc: "Lib sql", name: libsql}
   {group: db, command: tursodb, desc: "Turso db", name:turso}
   {group: db, command: sq, desc: "Jq-like for data sources"}
@@ -58,7 +58,7 @@
   {group: unix, command: ditto, desc: "Copy alternative"}
   {group: unix, command: sd, desc: "Sed alternative for find/replace within files"}
   {group: unix, command: sad, desc: "Sed alternative with fzf"}
-  {group: unix, command: rg, desc: "Ripgrep grep alternative", name: ripgrep}
+  {group: unix, command: rg, desc: "Ripgrep grep alternative", force: true}
   {group: unix, command: tldr, desc: "Man alternative", name: tealdeer}
   {group: unix, command: bat, desc: "Cat alternative"}
   {group: unix, command: procs, desc: "Ps alternative"}

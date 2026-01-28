@@ -142,12 +142,12 @@ def main [filter?: string] {
       }
     } | flatten)
 
-  # Add system tools (system: true) that weren't discovered from package managers
+  # Add forced tools (force: true) that weren't discovered from package managers
   let enriched_commands = ($enriched | get command)
-  let system_tools = ($metadata
-    | where {|m| $m.system? == true and ($m.command not-in $enriched_commands)}
+  let forced_tools = ($metadata
+    | where {|m| $m.force? == true and ($m.command not-in $enriched_commands)}
     | each {|m| {group: $m.group command: $m.command desc: $m.desc}})
-  let enriched = ($enriched | append $system_tools)
+  let enriched = ($enriched | append $forced_tools)
 
   let filtered = if $filter == null {
     $enriched
