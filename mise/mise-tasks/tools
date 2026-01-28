@@ -153,8 +153,8 @@ def main [filter?: string] {
   }
 
   let all_groups = ($filtered | get group | uniq)
-  let main_groups = ($all_groups | where {|g| $g != "bun" and $g != "uv" and $g != "brew"} | sort)
-  let end_groups = ($all_groups | where {|g| $g == "bun" or $g == "uv" or $g == "brew"})
+  let main_groups = ($all_groups | where {|g| $g != "bun" and $g != "uv" and $g != "brew" and $g != "mise"} | sort)
+  let end_groups = ($all_groups | where {|g| $g == "bun" or $g == "uv" or $g == "brew" or $g == "mise"})
   let groups = ($main_groups | append $end_groups)
 
   $groups

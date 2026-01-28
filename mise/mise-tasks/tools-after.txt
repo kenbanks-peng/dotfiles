@@ -10,6 +10,7 @@ lazydocker             [38;5;8mLazydocker[0m
 dblab                  [38;5;8mDatabase tui[0m
 gobang                 [38;5;8mDatabase tui[0m
 lazysql                [38;5;8mLazysql[0m
+sq                     [38;5;8mJq-like for data sources[0m
 tursodb                [38;5;8mTurso db[0m
 
 [32mDEV[0m
@@ -104,6 +105,7 @@ yq                     [38;5;8mJq-like for yaml, json, xml, properties, csv and
 bat                    [38;5;8mCat alternative[0m
 btop                   [38;5;8mTop tui[0m
 d                      [38;5;8mPwd with escaped spaces[0m
+fd                     [38;5;8mFind alternative[0m
 fdf                    [38;5;8mFind files, find alternative[0m
 fdt                    [38;5;8mFind text, grep alternative[0m
 finder                 [38;5;8mOpens the current directory in macOS Finder[0m
@@ -266,4 +268,43 @@ wget                   [38;5;8mbrew[0m
 wgo                    [38;5;8mbrew[0m
 yabai                  [38;5;8mbrew[0m
 zsh                    [38;5;8mbrew[0m
+
+[32mMISE[0m
+Clipboard              [38;5;8mmise[0m
+RustScan               [38;5;8mmise[0m
+StyLua                 [38;5;8mmise[0m
+SuperClaude            [38;5;8mmise[0m
+bun                    [38;5;8mmise[0m
+cargo-cache            [38;5;8mmise[0m
+cargo-update           [38;5;8mmise[0m
+clawdbot               [38;5;8mmise[0m
+core                   [38;5;8mmise[0m
+d2-mcp                 [38;5;8mmise[0m
+fnox                   [38;5;8mmise[0m
+github-markdown-css    [38;5;8mmise[0m
+go-blueprint           [38;5;8mmise[0m
+gopls                  [38;5;8mmise[0m
+krokiet                [38;5;8mmise[0m
+lazygit                [38;5;8mmise[0m
+md-to-pdf              [38;5;8mmise[0m
+meson                  [38;5;8mmise[0m
+mgrep                  [38;5;8mmise[0m
+ninja                  [38;5;8mmise[0m
+nodejs                 [38;5;8mmise[0m
+nuekit                 [38;5;8mmise[0m
+onefetch               [38;5;8mmise[0m
+ov                     [38;5;8mmise[0m
+pastel                 [38;5;8mmise[0m
+react                  [38;5;8mmise[0m
+ruby                   [38;5;8mmise[0m
+ruff                   [38;5;8mmise[0m
+rustup                 [38;5;8mmise[0m
+sbyte                  [38;5;8mmise[0m
+staticcheck            [38;5;8mmise[0m
+usage                  [38;5;8mmise[0m
+uv                     [38;5;8mmise[0m
+vite                   [38;5;8mmise[0m
+wails3                 [38;5;8mmise[0m
+yazi                   [38;5;8mmise[0m
+zoxide                 [38;5;8mmise[0m
 
