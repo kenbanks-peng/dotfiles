@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-# [MISE] description="python package for pypi"
+# [MISE] description="Python package for pypi"
 # [USAGE] arg "<package>"
 # [MISE] dir="{{cwd}}"
 

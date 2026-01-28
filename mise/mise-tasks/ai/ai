@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-# [MISE] description="ai"
+# [MISE] description="Ai for terminal"
 # [USAGE] arg "<string>"
 # [MISE] dir="{{cwd}}"
 

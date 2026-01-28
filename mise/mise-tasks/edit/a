@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-# [MISE] description="google antigravity editor"
+# [MISE] description="Google antigravity editor"
 # [MISE] dir="{{cwd}}"
 
 if [ $# -gt 0 ]; then

@@ -1,4 +1,5 @@
 group,task,desc
+ai,specify-cli,Spec-kit
 pdf,pdfattach,Attach PDFs
 pdf,pdfdetach,Detach PDFs
 pdf,pdftocairo,PDF to Cairo
@@ -13,65 +14,66 @@ pdf,pdfsig,PDF sig
 pdf,pdfunite,PDF unite
 pdf,pdftotext,PDF to text
 terminal,zellij,Zellij terminal
-terminal,tmux,tmux terminal
-repo,gitui,gitui git tui
-repo,lazyjj,lazyjj
-repo,delta,git delta viewer
-repo,hub,simplified github cli
-db,dblab,database tui
-db,gobang,database tui
-db,lazysql,lazysql
+terminal,tmux,Tmux terminal
+repo,gitui,Gitui git tui
+repo,lazyjj,Lazyjj
+repo,delta,Git delta viewer
+repo,hub,Simplified github cli
+db,dblab,Database tui
+db,gobang,Database tui
+db,lazysql,Lazysql
 db,sqlite3,SQLite db cli
-db,sqld,lib sql
-db,tursodb,turso db
-db,sq,jq-like for data sources
-container,lazydocker,lazydocker
-container,limactl,create linux vm
-lint,biome,"lint: biome check --write"
-lint,shellcheck,shell linter
-file,portal,file transfer (portal) tui
-text,jq,jq json processing
-text,jqn,jq.node json processing
-text,yq,"jq-like for yaml, json, xml, properties, csv and tsv"
+db,sqld,Lib sql
+db,tursodb,Turso db
+db,sq,Jq-like for data sources
+container,lazydocker,Lazydocker
+container,limactl,Create linux vm
+lint,biome,Lint: biome check --write
+lint,shellcheck,Shell linter
+file,portal,File transfer tui
+text,jq,Jq json processing
+text,jqn,Jq.node json processing
+text,yq,"Jq-like for yaml, json, xml, properties, csv and tsv"
 text,jc,CLI output to json
-text,jid,json interactive digger
-text,fx,fx json viewer
-text,jnv,jnv json navigator
-text,glow,glow markdown viewer
-text,htmlq,jq-like for html
-web,hurl,curl test framework
-web,xh,curl alternative
-web,curlie,curl alternative
-web,posting,posting tui
-web,caddy,caddy web server
-dev,sshs,ssh client tui
-dev,tokei,count lines of code
-dev,lunchy,launch services ~/Library/LaunchAgents/
-dev,nerdlog,log tui
-dev,watchexec,watch for changes
-dev,navi,cli cheatsheet
-dev,cheat,cli cheatsheets
-dev,repomix,repo to single file
-unix,ditto,copy alternative
-unix,sd,sed alternative for find/replace within files
-unix,sad,sed alternative with fzf
-unix,rg,ripgrep grep alternative
-unix,tldr,man alternative
-unix,bat,cat alternative
-unix,procs,ps alternative
-unix,btop,top tui
-unix,glances,top tui
-unix,macmon,resource monitor
-unix,tspin,tail alternative
-unix,choose,cut alternative
-unix,gping,ping alternative
-unix,fd,find alternative
+text,jid,Json interactive digger
+text,fx,Fx json viewer
+text,jnv,Jnv json navigator
+text,glow,Markdown viewer
+text,htmlq,Jq-like for html
+text,markitdown,Convert many formats to markdown
+web,hurl,Curl test framework
+web,xh,Curl alternative
+web,curlie,Curl alternative
+web,posting,Posting tui
+web,caddy,Web server
+dev,sshs,Ssh client tui
+dev,tokei,Count lines of code
+dev,lunchy,Launch services ~/Library/LaunchAgents/
+dev,nerdlog,Log tui
+dev,watchexec,Watch for changes
+dev,navi,CLI cheatsheet
+dev,cheat,CLI cheatsheets
+dev,repomix,Repo to single file
+unix,ditto,Copy alternative
+unix,sd,Sed alternative for find/replace within files
+unix,sad,Sed alternative with fzf
+unix,rg,Ripgrep grep alternative
+unix,tldr,Man alternative
+unix,bat,Cat alternative
+unix,procs,Ps alternative
+unix,btop,Top tui
+unix,glances,Top tui
+unix,macmon,Resource monitor
+unix,tspin,Tail alternative
+unix,choose,Cut alternative
+unix,gping,Ping alternative
+unix,fd,Find alternative
 util,gpg-tui,GPG tui
 util,sniffnet,Network monitor
-util,lazyjournal,lazyjournal
-util,sk,"skim, an fzf alternative"
-util,tv,an fzf alternative
+util,lazyjournal,Lazyjournal
+util,sk,Skim: fzf alternative"
+util,tv,Fzf alternative
 util,spark,Sparkline generator
-util,wallpaper,macOS wallpaper
-util,pv,pipe viewer
+util,wallpaper,MacOS wallpaper
+util,pv,Pipe viewer
 util,svgo,SVG optimizer

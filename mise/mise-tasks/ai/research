@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-# [MISE] description="ai"
+# [MISE] description="Ai research topics"
 # [USAGE] arg "<name>"
 # [MISE] dir="{{cwd}}"
 

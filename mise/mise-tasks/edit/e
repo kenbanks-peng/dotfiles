@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-# [MISE] description="default editor"
+# [MISE] description="Default editor"
 # [MISE] dir="{{cwd}}"
 
 if [ $# -gt 0 ]; then

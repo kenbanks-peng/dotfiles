@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-# [MISE] description="pls list show hidden files"
+# [MISE] description="Quatro presentations"
 # [USAGE] arg "<file>"
 # [MISE] dir="{{cwd}}"
 
