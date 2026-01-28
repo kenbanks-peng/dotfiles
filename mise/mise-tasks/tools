@@ -1,25 +1,40 @@
 #!/usr/bin/env nu
 #MISE description="List miscellaneous tools"
 
-def uv_tools [] {
+# Package manager groups are displayed at the end, after custom groups
+const PACKAGE_MANAGER_GROUPS = ["bun", "uv", "brew", "mise"]
+const COMMAND_COLUMN_WIDTH = 22
+
+# Helper to run an external command and parse its output, returning [] on failure
+def run_command [cmd: closure, parser: closure] {
   try {
-    ^uv tool ls
-    | lines
-    | where {|line| ($line | str starts-with "-") == false and ($line | str trim | is-not-empty)}
-    | each {|line|
-        let parts = ($line | split row " ")
-        let name = ($parts | get 0)
-        {group: "uv" command: $name desc: "uv"}
-      }
+    let result = (do $cmd | complete)
+    if $result.exit_code == 0 {
+      do $parser $result.stdout
+    } else {
+      []
+    }
   } catch {
     []
   }
 }
 
+def uv_tools [] {
+  run_command { ^uv tool ls } {|stdout|
+    $stdout
+    | lines
+    | where {|line| not ($line | str starts-with "-") and ($line | str trim | is-not-empty)}
+    | each {|line|
+        let parts = ($line | split row " ")
+        let name = ($parts | get 0)
+        {group: "uv" command: $name desc: "uv"}
+      }
+  }
+}
+
 def bun_tools [] {
-  let result = (do { ^bun pm ls -g } | complete)
-  if $result.exit_code == 0 {
-    $result.stdout
+  run_command { ^bun pm ls -g } {|stdout|
+    $stdout
     | lines
     | skip 1
     | each {|line|
@@ -27,53 +42,41 @@ def bun_tools [] {
         let name = ($clean | split row "@" | get 0)
         {group: "bun" command: $name desc: "bun"}
       }
-  } else {
-    []
   }
 }
 
 def brew_tools [] {
-  let result = (do { ^brew leaves --installed-on-request } | complete)
-  if $result.exit_code == 0 {
-    $result.stdout
+  run_command { ^brew leaves --installed-on-request } {|stdout|
+    $stdout
     | lines
     | where {|line| $line | str trim | is-not-empty}
     | each {|line|
         # Extract just the formula name from tap paths like "tako8ki/tap/gobang"
-        let name = if ($line | str contains "/") {
-          $line | split row "/" | last
-        } else {
-          $line
-        }
+        # Using `last` works for both "gobang" (returns "gobang") and "tako8ki/tap/gobang" (returns "gobang")
+        let name = ($line | split row "/" | last)
         {group: "brew" command: $name desc: "brew"}
       }
-  } else {
-    []
   }
 }
 
 def mise_list [] {
-  let result = (do { ^mise list } | complete)
-  if $result.exit_code == 0 {
-    $result.stdout
+  run_command { ^mise list } {|stdout|
+    $stdout
     | lines
     | where {|line| $line | str trim | is-not-empty}
     | each {|line|
         let parts = ($line | split row -r '\s+')
         let full = ($parts | get 0)
         # Extract backend and package from "backend:package"
-        let backend = ($full | split row ":" | get 0)
-        let package = ($full | split row ":" | skip 1 | str join ":")
+        # If no colon exists, backend gets the full string and package becomes empty
+        let colon_parts = ($full | split row ":")
+        let backend = ($colon_parts | get 0)
+        let package = ($colon_parts | skip 1 | str join ":")
         # Extract command name (last segment after / or the whole package)
-        let name = if ($package | str contains "/") {
-          $package | split row "/" | last
-        } else {
-          $package
-        }
+        # Using `last` works for both cases
+        let name = ($package | split row "/" | last)
         {group: "mise" command: $name desc: $backend}
       }
-  } else {
-    []
   }
 }
 
@@ -83,23 +86,25 @@ def tools_metadata [] {
 }
 
 def mise_tasks [] {
-  ^mise tasks ls
-  | lines
-  | each {|line|
-      let parts = ($line | split row -r '\s{2,}')
-      let name = ($parts | get 0)
-      let desc = ($parts | get -o 1 | default "")
-      if ($name | str contains ":") {
-        let name_parts = ($name | split row ":")
-        {group: ($name_parts | get 0) command: ($name_parts | get 1) desc: $desc}
-      } else {
-        {group: "misc" command: $name desc: $desc}
+  run_command { ^mise tasks ls } {|stdout|
+    $stdout
+    | lines
+    | each {|line|
+        let parts = ($line | split row -r '\s{2,}')
+        let name = ($parts | get 0)
+        let desc = ($parts | get -o 1 | default "")
+        if ($name | str contains ":") {
+          let name_parts = ($name | split row ":")
+          {group: ($name_parts | get 0) command: ($name_parts | get 1) desc: $desc}
+        } else {
+          {group: "misc" command: $name desc: $desc}
+        }
       }
-    }
+  }
 }
 
 def format_row [row] {
-  let command = ($row.command | fill -w 22)
+  let command = ($row.command | fill -w $COMMAND_COLUMN_WIDTH)
   $"($command) (ansi grey)($row.desc)(ansi reset)"
 }
 
@@ -112,10 +117,11 @@ def main [filter?: string] {
   let mise = (mise_tasks)
 
   # Combine all available tools with their source
-  let available = ($uv | each {|t| {command: $t.command source: "uv"}}
-    | append ($bun | each {|t| {command: $t.command source: "bun"}})
-    | append ($brew | each {|t| {command: $t.command source: "brew"}})
-    | append ($mise_installed | each {|t| {command: $t.command source: "mise" desc: $t.desc}})
+  # All records have consistent shape: command, source, and optional group/desc
+  let available = ($uv | each {|t| {command: $t.command source: "uv" group: null desc: $t.desc}}
+    | append ($bun | each {|t| {command: $t.command source: "bun" group: null desc: $t.desc}})
+    | append ($brew | each {|t| {command: $t.command source: "brew" group: null desc: $t.desc}})
+    | append ($mise_installed | each {|t| {command: $t.command source: "mise" group: null desc: $t.desc}})
     | append ($mise | each {|t| {command: $t.command source: "mise" group: $t.group desc: $t.desc}}))
 
   # Deduplicate by command name, preferring mise tasks (which have group/desc)
@@ -147,12 +153,12 @@ def main [filter?: string] {
   let forced_tools = ($metadata
     | where {|m| $m.force? == true and ($m.command not-in $enriched_commands)}
     | each {|m| {group: $m.group command: $m.command desc: $m.desc}})
-  let enriched = ($enriched | append $forced_tools)
+  let final_tools = ($enriched | append $forced_tools)
 
   let filtered = if $filter == null {
-    $enriched
+    $final_tools
   } else {
-    $enriched | where group == $filter
+    $final_tools | where group == $filter
   }
 
   if ($filtered | is-empty) {
@@ -160,8 +166,8 @@ def main [filter?: string] {
   }
 
   let all_groups = ($filtered | get group | uniq)
-  let main_groups = ($all_groups | where {|g| $g != "bun" and $g != "uv" and $g != "brew" and $g != "mise"} | sort)
-  let end_groups = ($all_groups | where {|g| $g == "bun" or $g == "uv" or $g == "brew" or $g == "mise"})
+  let main_groups = ($all_groups | where {|g| $g not-in $PACKAGE_MANAGER_GROUPS} | sort)
+  let end_groups = ($all_groups | where {|g| $g in $PACKAGE_MANAGER_GROUPS})
   let groups = ($main_groups | append $end_groups)
 
   $groups

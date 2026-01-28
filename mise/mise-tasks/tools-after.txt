@@ -137,6 +137,7 @@ list2                  [38;5;8mPls list hide hidden files[0m
 list3                  [38;5;8mPls list long format[0m
 macmon                 [38;5;8mResource monitor[0m
 procs                  [38;5;8mPs alternative[0m
+rg                     [38;5;8mRipgrep grep alternative[0m
 sad                    [38;5;8mSed alternative with fzf[0m
 sd                     [38;5;8mSed alternative for find/replace within files[0m
 symlink-bin            [38;5;8mCreate symbolic links in bin directory[0m
