@@ -1,0 +1,269 @@
+[32mAI[0m
+ai                     [38;5;8mAi for terminal[0m
+research               [38;5;8mAi research topics[0m
+specify-cli            [38;5;8mSpec-kit[0m
+
+[32mCONTAINER[0m
+lazydocker             [38;5;8mLazydocker[0m
+
+[32mDB[0m
+dblab                  [38;5;8mDatabase tui[0m
+lazysql                [38;5;8mLazysql[0m
+
+[32mDEV[0m
+cheat                  [38;5;8mCLI cheatsheets[0m
+navi                   [38;5;8mCLI cheatsheet[0m
+python-init            [38;5;8mInit python project[0m
+python-package         [38;5;8mPython package for pypi[0m
+qmd                    [38;5;8mQuatro presentations[0m
+repomix                [38;5;8mRepo to single file[0m
+sshs                   [38;5;8mSsh client tui[0m
+tokei                  [38;5;8mCount lines of code[0m
+watchexec              [38;5;8mWatch for changes[0m
+
+[32mEDIT[0m
+a                      [38;5;8mGoogle antigravity editor[0m
+c                      [38;5;8mCursor editor[0m
+e                      [38;5;8mDefault editor[0m
+fr                     [38;5;8mFresh editor[0m
+mic                    [38;5;8mMicro editor[0m
+n                      [38;5;8mNeovim editor[0m
+v                      [38;5;8mVscode editor[0m
+z                      [38;5;8mZed editor[0m
+
+[32mFILE[0m
+portal                 [38;5;8mFile transfer tui[0m
+
+[32mGO[0m
+gtc                    [38;5;8mGo tool check[0m
+gti                    [38;5;8mGo tool install[0m
+gtu                    [38;5;8mGo tool update[0m
+
+[32mLINT[0m
+biome                  [38;5;8mLint: biome check --write[0m
+shellcheck             [38;5;8mShell linter[0m
+
+[32mMISC[0m
+tools                  [38;5;8mList miscellaneous tools[0m
+
+[32mPASSWORD[0m
+pswd-add               [38;5;8mAdd a new password[0m
+pswd-copy              [38;5;8mCopy password to clipboard[0m
+pswd-del               [38;5;8mDelete a password[0m
+pswd-find              [38;5;8mFind a password[0m
+pswd-gen               [38;5;8mGenerate a new password[0m
+pswd-git               [38;5;8mRun git commands on password store[0m
+pswd-grep              [38;5;8mGrep passwords[0m
+pswd-init              [38;5;8mInitialize password store[0m
+pswd-list              [38;5;8mList passwords[0m
+
+[32mPKGMGR[0m
+bdo                    [38;5;8mBrew packages that depend on[0m
+bf                     [38;5;8mBrew fonts[0m
+bl                     [38;5;8mBrew list/leaves[0m
+bo                     [38;5;8mBrew outdated (greedy)[0m
+br                     [38;5;8mBrew remove (w/ autoremove, cleanup)[0m
+bs                     [38;5;8mBrew search[0m
+bt                     [38;5;8mBrew tree (deps)[0m
+bv                     [38;5;8mBrew versions[0m
+ml                     [38;5;8mMise list by category[0m
+o                      [38;5;8mOutdated packages[0m
+up                     [38;5;8mUpdate packages[0m
+versions               [38;5;8mSave versions to file[0m
+zap                    [38;5;8mZap caches[0m
+
+[32mREPO[0m
+dvc-add                [38;5;8mdvc add files over limit[0m
+dvc-init               [38;5;8mInitialize dvc and add files over 1 MB[0m
+dvc-list               [38;5;8mDVC list[0m
+git-list               [38;5;8mGit list files[0m
+git-remote             [38;5;8mGit remote[0m
+git-status             [38;5;8mGit status[0m
+gitui                  [38;5;8mGitui git tui[0m
+hub                    [38;5;8mSimplified github cli[0m
+lazyjj                 [38;5;8mLazyjj[0m
+
+[32mTERMINAL[0m
+tmux                   [38;5;8mTmux terminal[0m
+zellij                 [38;5;8mZellij terminal[0m
+
+[32mTEXT[0m
+fx                     [38;5;8mFx json viewer[0m
+glow                   [38;5;8mMarkdown viewer[0m
+htmlq                  [38;5;8mJq-like for html[0m
+jc                     [38;5;8mCLI output to json[0m
+jid                    [38;5;8mJson interactive digger[0m
+jnv                    [38;5;8mJnv json navigator[0m
+jq                     [38;5;8mJq json processing[0m
+markitdown             [38;5;8mConvert many formats to markdown[0m
+yq                     [38;5;8mJq-like for yaml, json, xml, properties, csv and tsv[0m
+
+[32mUNIX[0m
+bat                    [38;5;8mCat alternative[0m
+btop                   [38;5;8mTop tui[0m
+d                      [38;5;8mPwd with escaped spaces[0m
+fdf                    [38;5;8mFind files, find alternative[0m
+fdt                    [38;5;8mFind text, grep alternative[0m
+finder                 [38;5;8mOpens the current directory in macOS Finder[0m
+glances                [38;5;8mTop tui[0m
+gping                  [38;5;8mPing alternative[0m
+list1                  [38;5;8mPls list show hidden files[0m
+list2                  [38;5;8mPls list hide hidden files[0m
+list3                  [38;5;8mPls list long format[0m
+macmon                 [38;5;8mResource monitor[0m
+procs                  [38;5;8mPs alternative[0m
+sad                    [38;5;8mSed alternative with fzf[0m
+sd                     [38;5;8mSed alternative for find/replace within files[0m
+symlink-bin            [38;5;8mCreate symbolic links in bin directory[0m
+
+[32mUTIL[0m
+ast                    [38;5;8mCode refactoring with ast-grep[0m
+bm                     [38;5;8mBenchmarks with hyperfine[0m
+bundleid               [38;5;8mGet bundle ID of an app[0m
+check-toml             [38;5;8mcheck toml validity[0m
+clean                  [38;5;8mRemove .DS_Store recursively[0m
+color                  [38;5;8mColor utilities[0m
+colors                 [38;5;8mColor conversion utilities[0m
+crok                   [38;5;8mCroc file transfer[0m
+csv                    [38;5;8mCSV toolkit[0m
+csv2                   [38;5;8mCSV toolkit (qsv)[0m
+diagram                [38;5;8mDiagram generator[0m
+disk                   [38;5;8mDisk usage tui[0m
+dotstow                [38;5;8mStow dotfiles[0m
+ff                     [38;5;8mSystem info with fastfetch[0m
+fonts                  [38;5;8mList fonts with fzf[0m
+free                   [38;5;8mFree and used memory[0m
+g                      [38;5;8mGit tui[0m
+gpg-tui                [38;5;8mGPG tui[0m
+lazyjournal            [38;5;8mLazyjournal[0m
+lc                     [38;5;8mRainbow text[0m
+md                     [38;5;8mConvert various file types to markdown[0m
+mdpdf                  [38;5;8mMarkdown to PDF[0m
+mel                    [38;5;8mMelody language to regex[0m
+mol                    [38;5;8mMac optimization[0m
+mouse-focus            [38;5;8mFocus follows mouse[0m
+of                     [38;5;8mCode/git stats[0m
+oklch                  [38;5;8mOKLCH color utilities[0m
+path                   [38;5;8mMore readable path. Duplicates in red. (Nushell version)[0m
+pip                    [38;5;8mPip via uv[0m
+playvid                [38;5;8mPlay video as live wallpaper[0m
+pv                     [38;5;8mPipe viewer[0m
+python                 [38;5;8mRun Python via uv[0m
+regex                  [38;5;8mGenerate regex from examples[0m
+release                [38;5;8mRemove app quarantine[0m
+rosetta                [38;5;8mRosetta on|off[0m
+scan                   [38;5;8mPort scanner[0m
+scheduled-git-backup   [38;5;8mScheduled backups[0m
+show                   [38;5;8mShow image[0m
+sk                     [38;5;8mSkim: fzf alternative"[0m
+sniffnet               [38;5;8mNetwork monitor[0m
+spark                  [38;5;8mSparkline generator[0m
+svgo                   [38;5;8mSVG optimizer[0m
+switch                 [38;5;8mCheck toml validity[0m
+symlink                [38;5;8mCreate a symlink with -symlink suffix[0m
+tbl                    [38;5;8mFormat as table[0m
+trash                  [38;5;8mMove files to trash[0m
+w                      [38;5;8m1-line weather[0m
+wallpaper              [38;5;8mMacOS wallpaper[0m
+wf                     [38;5;8mWeather forecast[0m
+windim                 [38;5;8mWindow dimensions[0m
+wm                     [38;5;8mWindow manager utilities[0m
+wr                     [38;5;8mWeather report[0m
+
+[32mWEB[0m
+caddy                  [38;5;8mWeb server[0m
+curlie                 [38;5;8mCurl alternative[0m
+hurl                   [38;5;8mCurl test framework[0m
+posting                [38;5;8mPosting tui[0m
+xh                     [38;5;8mCurl alternative[0m
+
+[32mBUN[0m
+cowsay                 [38;5;8mbun[0m
+
+[32mBREW[0m
+age                    [38;5;8mbrew[0m
+asciinema              [38;5;8mbrew[0m
+ast-grep               [38;5;8mbrew[0m
+autoconf               [38;5;8mbrew[0m
+bandwhich              [38;5;8mbrew[0m
+bash                   [38;5;8mbrew[0m
+bat-extras             [38;5;8mbrew[0m
+carapace               [38;5;8mbrew[0m
+choose-rust            [38;5;8mbrew[0m
+colima                 [38;5;8mbrew[0m
+coreutils              [38;5;8mbrew[0m
+croc                   [38;5;8mbrew[0m
+csvtk                  [38;5;8mbrew[0m
+d2                     [38;5;8mbrew[0m
+danielgatis/imgcat/imgcat [38;5;8mbrew[0m
+doppler                [38;5;8mbrew[0m
+dotenvx/brew/dotenvx   [38;5;8mbrew[0m
+dvc                    [38;5;8mbrew[0m
+espeak-ng              [38;5;8mbrew[0m
+fastfetch              [38;5;8mbrew[0m
+felixkratz/formulae/borders [38;5;8mbrew[0m
+felixkratz/formulae/sketchybar [38;5;8mbrew[0m
+figlet                 [38;5;8mbrew[0m
+flock                  [38;5;8mbrew[0m
+fresh-editor           [38;5;8mbrew[0m
+gawk                   [38;5;8mbrew[0m
+gemini-cli             [38;5;8mbrew[0m
+gh                     [38;5;8mbrew[0m
+git                    [38;5;8mbrew[0m
+git-delta              [38;5;8mbrew[0m
+git-filter-repo        [38;5;8mbrew[0m
+gitleaks               [38;5;8mbrew[0m
+gnu-sed                [38;5;8mbrew[0m
+grex                   [38;5;8mbrew[0m
+hexyl                  [38;5;8mbrew[0m
+hyperfine              [38;5;8mbrew[0m
+imagemagick            [38;5;8mbrew[0m
+iproute2mac            [38;5;8mbrew[0m
+jorgelbg/tap/pinentry-touchid [38;5;8mbrew[0m
+jqp                    [38;5;8mbrew[0m
+jrnl                   [38;5;8mbrew[0m
+just                   [38;5;8mbrew[0m
+koekeishiya/formulae/yabai [38;5;8mbrew[0m
+libsql                 [38;5;8mbrew[0m
+lolcat                 [38;5;8mbrew[0m
+luarocks               [38;5;8mbrew[0m
+lunchy-go              [38;5;8mbrew[0m
+makensis               [38;5;8mbrew[0m
+mcfly                  [38;5;8mbrew[0m
+melody                 [38;5;8mbrew[0m
+micro                  [38;5;8mbrew[0m
+mpv                    [38;5;8mbrew[0m
+ncdu                   [38;5;8mbrew[0m
+neovim                 [38;5;8mbrew[0m
+nushell                [38;5;8mbrew[0m
+oh-my-posh             [38;5;8mbrew[0m
+opencode               [38;5;8mbrew[0m
+pandoc                 [38;5;8mbrew[0m
+pass                   [38;5;8mbrew[0m
+pgvector               [38;5;8mbrew[0m
+pkgconf                [38;5;8mbrew[0m
+poppler                [38;5;8mbrew[0m
+pstree                 [38;5;8mbrew[0m
+qsv                    [38;5;8mbrew[0m
+rclone                 [38;5;8mbrew[0m
+resvg                  [38;5;8mbrew[0m
+sevenzip               [38;5;8mbrew[0m
+snyk-cli               [38;5;8mbrew[0m
+sox                    [38;5;8mbrew[0m
+sqlc                   [38;5;8mbrew[0m
+stow                   [38;5;8mbrew[0m
+syncthing              [38;5;8mbrew[0m
+tailspin               [38;5;8mbrew[0m
+tako8ki/tap/gobang     [38;5;8mbrew[0m
+tealdeer               [38;5;8mbrew[0m
+television             [38;5;8mbrew[0m
+terminal-notifier      [38;5;8mbrew[0m
+ttyd                   [38;5;8mbrew[0m
+turso                  [38;5;8mbrew[0m
+tw93/tap/mole          [38;5;8mbrew[0m
+typst                  [38;5;8mbrew[0m
+valkyrie00/bbrew/bbrew [38;5;8mbrew[0m
+wget                   [38;5;8mbrew[0m
+wgo                    [38;5;8mbrew[0m
+zsh                    [38;5;8mbrew[0m
+

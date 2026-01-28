@@ -44,7 +44,7 @@ def brew_tools [] {
   }
 }
 
-def tools [] {
+def tools_metadata [] {
   let script_dir = ($env.FILE_PWD? | default (pwd))
   open ($script_dir | path join "tools.csv")
 }
@@ -71,17 +71,45 @@ def format_row [row] {
 }
 
 def main [filter?: string] {
-  let base_tools = (tools)
-  let base_names = ($base_tools | get task)
-  let filtered_uv = (uv_tools | where {|t| $t.task not-in $base_names})
-  let filtered_bun = (bun_tools | where {|t| $t.task not-in $base_names})
-  let filtered_brew = (brew_tools | where {|t| $t.task not-in $base_names})
-  let all_data = (mise_tasks | append $base_tools | append $filtered_uv | append $filtered_bun | append $filtered_brew)
+  let metadata = (tools_metadata)
+  let uv = (uv_tools)
+  let bun = (bun_tools)
+  let brew = (brew_tools)
+  let mise = (mise_tasks)
+
+  # Combine all available tools with their source
+  let available = ($uv | each {|t| {task: $t.task source: "uv"}}
+    | append ($bun | each {|t| {task: $t.task source: "bun"}})
+    | append ($brew | each {|t| {task: $t.task source: "brew"}})
+    | append ($mise | each {|t| {task: $t.task source: "mise" group: $t.group desc: $t.desc}}))
+
+  # Deduplicate by task name, preferring mise tasks (which have group/desc)
+  let unique_tasks = ($available | group-by task | transpose name tools | each {|t|
+      let mise_tools = ($t.tools | where source == "mise")
+      if ($mise_tools | is-not-empty) {
+        $mise_tools | first
+      } else {
+        $t.tools | first
+      }
+    })
+
+  # Enrich with metadata from tools.csv
+  let enriched = ($unique_tasks | each {|t|
+      let meta_matches = ($metadata | where task == $t.task)
+      if ($meta_matches | is-not-empty) {
+        let meta = ($meta_matches | first)
+        {group: $meta.group task: $t.task desc: $meta.desc}
+      } else if ($t.group? != null) {
+        {group: $t.group task: $t.task desc: ($t.desc? | default "")}
+      } else {
+        {group: $t.source task: $t.task desc: $t.source}
+      }
+    })
 
   let filtered = if $filter == null {
-    $all_data
+    $enriched
   } else {
-    $all_data | where group == $filter
+    $enriched | where group == $filter
   }
 
   if ($filtered | is-empty) {
