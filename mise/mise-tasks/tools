@@ -9,8 +9,7 @@ def uv_tools [] {
     | each {|line|
         let parts = ($line | split row " ")
         let name = ($parts | get 0)
-        let version = ($parts | get -o 1 | default "")
-        {group: "uv" task: $name desc: $"uv tool ($version)"}
+        {group: "uv" task: $name desc: "uv"}
       }
   } catch {
     []
@@ -25,10 +24,8 @@ def bun_tools [] {
     | skip 1
     | each {|line|
         let clean = ($line | str replace -r '^[└├─│ ]+' '')
-        let parts = ($clean | split row "@")
-        let name = ($parts | get 0)
-        let version = ($parts | get -o 1 | default "")
-        {group: "bun" task: $name desc: $"bun global ($version)"}
+        let name = ($clean | split row "@" | get 0)
+        {group: "bun" task: $name desc: "bun"}
       }
   } else {
     []
