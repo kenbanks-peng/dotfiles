@@ -8,6 +8,7 @@ lazydocker             [38;5;8mLazydocker[0m
 
 [32mDB[0m
 dblab                  [38;5;8mDatabase tui[0m
+gobang                 [38;5;8mDatabase tui[0m
 lazysql                [38;5;8mLazysql[0m
 tursodb                [38;5;8mTurso db[0m
 
@@ -189,6 +190,8 @@ autoconf               [38;5;8mbrew[0m
 bandwhich              [38;5;8mbrew[0m
 bash                   [38;5;8mbrew[0m
 bat-extras             [38;5;8mbrew[0m
+bbrew                  [38;5;8mbrew[0m
+borders                [38;5;8mbrew[0m
 carapace               [38;5;8mbrew[0m
 choose-rust            [38;5;8mbrew[0m
 colima                 [38;5;8mbrew[0m
@@ -196,14 +199,11 @@ coreutils              [38;5;8mbrew[0m
 croc                   [38;5;8mbrew[0m
 csvtk                  [38;5;8mbrew[0m
 d2                     [38;5;8mbrew[0m
-danielgatis/imgcat/imgcat [38;5;8mbrew[0m
 doppler                [38;5;8mbrew[0m
-dotenvx/brew/dotenvx   [38;5;8mbrew[0m
+dotenvx                [38;5;8mbrew[0m
 dvc                    [38;5;8mbrew[0m
 espeak-ng              [38;5;8mbrew[0m
 fastfetch              [38;5;8mbrew[0m
-felixkratz/formulae/borders [38;5;8mbrew[0m
-felixkratz/formulae/sketchybar [38;5;8mbrew[0m
 figlet                 [38;5;8mbrew[0m
 flock                  [38;5;8mbrew[0m
 fresh-editor           [38;5;8mbrew[0m
@@ -219,12 +219,11 @@ grex                   [38;5;8mbrew[0m
 hexyl                  [38;5;8mbrew[0m
 hyperfine              [38;5;8mbrew[0m
 imagemagick            [38;5;8mbrew[0m
+imgcat                 [38;5;8mbrew[0m
 iproute2mac            [38;5;8mbrew[0m
-jorgelbg/tap/pinentry-touchid [38;5;8mbrew[0m
 jqp                    [38;5;8mbrew[0m
 jrnl                   [38;5;8mbrew[0m
 just                   [38;5;8mbrew[0m
-koekeishiya/formulae/yabai [38;5;8mbrew[0m
 libsql                 [38;5;8mbrew[0m
 lolcat                 [38;5;8mbrew[0m
 luarocks               [38;5;8mbrew[0m
@@ -233,6 +232,7 @@ makensis               [38;5;8mbrew[0m
 mcfly                  [38;5;8mbrew[0m
 melody                 [38;5;8mbrew[0m
 micro                  [38;5;8mbrew[0m
+mole                   [38;5;8mbrew[0m
 mpv                    [38;5;8mbrew[0m
 ncdu                   [38;5;8mbrew[0m
 neovim                 [38;5;8mbrew[0m
@@ -242,6 +242,7 @@ opencode               [38;5;8mbrew[0m
 pandoc                 [38;5;8mbrew[0m
 pass                   [38;5;8mbrew[0m
 pgvector               [38;5;8mbrew[0m
+pinentry-touchid       [38;5;8mbrew[0m
 pkgconf                [38;5;8mbrew[0m
 poppler                [38;5;8mbrew[0m
 pstree                 [38;5;8mbrew[0m
@@ -249,21 +250,20 @@ qsv                    [38;5;8mbrew[0m
 rclone                 [38;5;8mbrew[0m
 resvg                  [38;5;8mbrew[0m
 sevenzip               [38;5;8mbrew[0m
+sketchybar             [38;5;8mbrew[0m
 snyk-cli               [38;5;8mbrew[0m
 sox                    [38;5;8mbrew[0m
 sqlc                   [38;5;8mbrew[0m
 stow                   [38;5;8mbrew[0m
 syncthing              [38;5;8mbrew[0m
 tailspin               [38;5;8mbrew[0m
-tako8ki/tap/gobang     [38;5;8mbrew[0m
 tealdeer               [38;5;8mbrew[0m
 television             [38;5;8mbrew[0m
 terminal-notifier      [38;5;8mbrew[0m
 ttyd                   [38;5;8mbrew[0m
-tw93/tap/mole          [38;5;8mbrew[0m
 typst                  [38;5;8mbrew[0m
-valkyrie00/bbrew/bbrew [38;5;8mbrew[0m
 wget                   [38;5;8mbrew[0m
 wgo                    [38;5;8mbrew[0m
+yabai                  [38;5;8mbrew[0m
 zsh                    [38;5;8mbrew[0m
 
