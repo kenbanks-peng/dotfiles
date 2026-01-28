@@ -1,6 +1,5 @@
 # Tool metadata with optional names
 [
-  {group: ai, command: invisible, desc: "Cannot see me", hide:true}
   {group: ai, command: specify, desc: Spec-kit, name:specify-cli}
   {group: pdf, command: pdfattach, desc: "Attach PDFs", name: poppler}
   {group: pdf, command: pdfdetach, desc: "Detach PDFs", name: poppler}
