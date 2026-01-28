@@ -1,6 +1,40 @@
 #!/usr/bin/env nu
 #MISE description="List miscellaneous tools"
 
+def uv_tools [] {
+  try {
+    ^uv tool ls
+    | lines
+    | where {|line| ($line | str starts-with "-") == false and ($line | str trim | is-not-empty)}
+    | each {|line|
+        let parts = ($line | split row " ")
+        let name = ($parts | get 0)
+        let version = ($parts | get -o 1 | default "")
+        {group: "uv" task: $name desc: $"uv tool ($version)"}
+      }
+  } catch {
+    []
+  }
+}
+
+def bun_tools [] {
+  let result = (do { ^bun pm ls -g } | complete)
+  if $result.exit_code == 0 {
+    $result.stdout
+    | lines
+    | skip 1
+    | each {|line|
+        let clean = ($line | str replace -r '^[└├─│ ]+' '')
+        let parts = ($clean | split row "@")
+        let name = ($parts | get 0)
+        let version = ($parts | get -o 1 | default "")
+        {group: "bun" task: $name desc: $"bun global ($version)"}
+      }
+  } else {
+    []
+  }
+}
+
 def tools [] {
   [
     [group task desc];
@@ -117,7 +151,7 @@ def format_row [row] {
 }
 
 def main [filter?: string] {
-  let all_data = (mise_tasks | append (tools))
+  let all_data = (mise_tasks | append (tools) | append (uv_tools) | append (bun_tools))
 
   let filtered = if $filter == null {
     $all_data
