@@ -6,7 +6,7 @@ antigravity 1.15.8,5724687216017408
 anybar 0.2.3
 audacity 3.7.7
 boop 1.4.0
-claude 1.1.1093,5a5517183d88766e37a07fc3ad73585d1298a051
+claude 1.1.1200,46e5339828adcd54a87842c010c8c0607f729b52
 claude-code 2.1.22
 cleanshot 4.8.7
 codex 0.92.0
@@ -267,7 +267,7 @@ nushell 0.110.0
 oh-my-posh 29.1.0
 oniguruma 6.9.10
 openblas 0.3.31
-opencode 1.1.30
+opencode 1.1.40
 openexr 3.4.4_1
 openjpeg 2.5.4
 openjph 0.26.0
@@ -297,7 +297,7 @@ pydantic 2.12.5
 pygit2 1.19.1
 python@3.14 3.14.2_1
 qrencode 4.1.1
-qsv 15.0.0
+qsv 15.0.1
 rclone 1.72.1
 re2 2025-11-05
 readline 8.3.3
