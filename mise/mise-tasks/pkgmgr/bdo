@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-# [MISE] description="brew packages that depend on"
+# [MISE] description="Brew packages that depend on"
 # [MISE] dir="{{cwd}}"
 
 

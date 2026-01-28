@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-# [MISE] description="vscode editor"
+# [MISE] description="Vscode editor"
 # [MISE] dir="{{cwd}}"
 
 if [ $# -gt 0 ]; then

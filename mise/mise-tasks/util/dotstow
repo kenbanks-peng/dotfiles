@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-# [MISE] description="stow dotfiles"
+# [MISE] description="Stow dotfiles"
 
 cd "$HOME"/Software/Public/dotfiles
 stow -d "$HOME"/Software/Public/dotfiles/ -t "$HOME"/.config/ .

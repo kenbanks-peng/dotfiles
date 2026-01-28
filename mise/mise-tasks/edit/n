@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-# [MISE] description="neovim editor"
+# [MISE] description="Neovim editor"
 # [MISE] dir="{{cwd}}"
 
 if [ $# -gt 0 ]; then

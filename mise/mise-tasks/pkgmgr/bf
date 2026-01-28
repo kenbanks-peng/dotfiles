@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-# [MISE] description="brew fonts"
+# [MISE] description="Brew fonts"
 # [MISE] dir="{{cwd}}"
 
 # brew fonts

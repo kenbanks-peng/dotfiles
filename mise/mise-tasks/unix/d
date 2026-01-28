@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-# [MISE] description="pwd with escaped spaces"
+# [MISE] description="Pwd with escaped spaces"
 # [MISE] dir="{{cwd}}"
 
 print -P "%F{green}${PWD// /\\\\ }/%f"

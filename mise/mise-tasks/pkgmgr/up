@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-# [MISE] description="update packages"
+# [MISE] description="Update packages"
 # [MISE] dir="{{cwd}}"
 
 # homebrew + ports + mise + uv

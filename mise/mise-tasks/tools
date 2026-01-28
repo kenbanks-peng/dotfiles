@@ -32,6 +32,18 @@ def bun_tools [] {
   }
 }
 
+def brew_tools [] {
+  let result = (do { ^brew leaves --installed-on-request } | complete)
+  if $result.exit_code == 0 {
+    $result.stdout
+    | lines
+    | where {|line| $line | str trim | is-not-empty}
+    | each {|name| {group: "brew" task: $name desc: "brew"}}
+  } else {
+    []
+  }
+}
+
 def tools [] {
   let script_dir = ($env.FILE_PWD? | default (pwd))
   open ($script_dir | path join "tools.csv")
@@ -63,7 +75,8 @@ def main [filter?: string] {
   let base_names = ($base_tools | get task)
   let filtered_uv = (uv_tools | where {|t| $t.task not-in $base_names})
   let filtered_bun = (bun_tools | where {|t| $t.task not-in $base_names})
-  let all_data = (mise_tasks | append $base_tools | append $filtered_uv | append $filtered_bun)
+  let filtered_brew = (brew_tools | where {|t| $t.task not-in $base_names})
+  let all_data = (mise_tasks | append $base_tools | append $filtered_uv | append $filtered_bun | append $filtered_brew)
 
   let filtered = if $filter == null {
     $all_data
@@ -76,8 +89,8 @@ def main [filter?: string] {
   }
 
   let all_groups = ($filtered | get group | uniq)
-  let main_groups = ($all_groups | where {|g| $g != "bun" and $g != "uv"} | sort)
-  let end_groups = ($all_groups | where {|g| $g == "bun" or $g == "uv"})
+  let main_groups = ($all_groups | where {|g| $g != "bun" and $g != "uv" and $g != "brew"} | sort)
+  let end_groups = ($all_groups | where {|g| $g == "bun" or $g == "uv" or $g == "brew"})
   let groups = ($main_groups | append $end_groups)
 
   $groups

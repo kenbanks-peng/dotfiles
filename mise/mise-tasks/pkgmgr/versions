@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-# [MISE] description="save versions to file"
+# [MISE] description="Save versions to file"
 # [MISE] dir="{{cwd}}"
 
 # brew + mise + rustup + uv

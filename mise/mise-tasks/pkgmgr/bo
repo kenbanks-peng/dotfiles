@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-# [MISE] description="brew outdated (greedy)"
+# [MISE] description="Brew outdated (greedy)"
 # [MISE] dir="{{cwd}}"
 
 # brew outdated (greedy)

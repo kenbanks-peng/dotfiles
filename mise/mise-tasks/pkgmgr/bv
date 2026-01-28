@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-# [MISE] description="brew versions"
+# [MISE] description="Brew versions"
 # [MISE] dir="{{cwd}}"
 
 # brew versions

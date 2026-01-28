@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-# [MISE] description="brew remove (w/ autoremove, cleanup)"
+# [MISE] description="Brew remove (w/ autoremove, cleanup)"
 # [MISE] dir="{{cwd}}"
 
 # brew remove (w/ autoremove, cleanup)

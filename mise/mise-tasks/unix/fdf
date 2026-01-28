@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# [MISE] description="Find files, find alternative"
+fd -uuu "$@"

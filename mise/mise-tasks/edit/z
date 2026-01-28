@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-# [MISE] description="zed editor"
+# [MISE] description="Zed editor"
 # [MISE] dir="{{cwd}}"
 
 if [ $# -gt 0 ]; then

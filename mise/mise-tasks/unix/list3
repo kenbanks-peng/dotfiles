@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-# [MISE] description="pls list long format"
+# [MISE] description="Pls list long format"
 # [MISE] dir="{{cwd}}"
 
 print -P "%F{green}${${PWD/#$HOME/\~}// /\\\\ }${${PWD:#/}:+/}%f"

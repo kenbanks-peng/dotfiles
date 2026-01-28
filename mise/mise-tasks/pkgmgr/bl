@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-# [MISE] description="brew list/leaves"
+# [MISE] description="Brew list/leaves"
 # [MISE] dir="{{cwd}}"
 
 # brew list / leaves

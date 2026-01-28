@@ -1,4 +1,6 @@
 #!/bin/bash
+# [MISE] description="Scheduled backups"
+
 # Automated backup script that runs on a schedule to backup obsidian, password-store, and dotfiles
 
 # crontab -e

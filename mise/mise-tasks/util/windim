@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-# [MISE] description="window dimensions"
+# [MISE] description="Window dimensions"
 
 # Create temporary HTML file (overwrite if exists)
 TEMP_HTML="/tmp/window-dimensions.html"

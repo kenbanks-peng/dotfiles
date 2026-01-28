@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-# [MISE] description="outdated packages"
+# [MISE] description="Outdated packages"
 # [MISE] dir="{{cwd}}"
 
 # homebrew + ports + mise + rustup

@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-# [MISE] description="brew tree (deps)"
+# [MISE] description="Brew tree (deps)"
 # [MISE] dir="{{cwd}}"
 
 # brew tree (casks and formulas)

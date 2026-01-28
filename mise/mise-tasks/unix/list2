@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-# [MISE] description="pls list hide hidden files"
+# [MISE] description="Pls list hide hidden files"
 # [MISE] dir="{{cwd}}"
 
 print -P "%F{green}${${PWD/#$HOME/\~}// /\\\\ }${${PWD:#/}:+/}%f"

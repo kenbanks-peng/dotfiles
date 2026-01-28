@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-# [MISE] description="mise list by category"
+# [MISE] description="Mise list by category"
 # [MISE] dir="{{cwd}}"
 
 # mise list by category
