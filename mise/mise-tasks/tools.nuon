@@ -1,24 +1,24 @@
 # Tool metadata with optional names
 [
   {group: ai, command: specify, desc: Spec-kit, name:specify-cli}
-  {group: pdf, command: pdfattach, desc: "Attach PDFs"}
-  {group: pdf, command: pdfdetach, desc: "Detach PDFs"}
-  {group: pdf, command: pdftocairo, desc: "PDF to Cairo"}
-  {group: pdf, command: pdffonts, desc: "PDF fonts"}
-  {group: pdf, command: pdftohtml, desc: "PDF to HTML"}
-  {group: pdf, command: pdfimages, desc: "PDF to images"}
-  {group: pdf, command: pdfinfo, desc: "PDF info"}
-  {group: pdf, command: pdftoppm, desc: "PDF to ppm"}
-  {group: pdf, command: pdftops, desc: "PDF to ps"}
-  {group: pdf, command: pdfseparate, desc: "PDF separate"}
-  {group: pdf, command: pdfsig, desc: "PDF sig"}
-  {group: pdf, command: pdfunite, desc: "PDF unite"}
-  {group: pdf, command: pdftotext, desc: "PDF to text"}
+  {group: pdf, command: pdfattach, desc: "Attach PDFs", name: poppler}
+  {group: pdf, command: pdfdetach, desc: "Detach PDFs", name: poppler}
+  {group: pdf, command: pdftocairo, desc: "PDF to Cairo", name: poppler}
+  {group: pdf, command: pdffonts, desc: "PDF fonts", name: poppler}
+  {group: pdf, command: pdftohtml, desc: "PDF to HTML", name: poppler}
+  {group: pdf, command: pdfimages, desc: "PDF to images", name: poppler}
+  {group: pdf, command: pdfinfo, desc: "PDF info", name: poppler}
+  {group: pdf, command: pdftoppm, desc: "PDF to ppm", name: poppler}
+  {group: pdf, command: pdftops, desc: "PDF to ps", name: poppler}
+  {group: pdf, command: pdfseparate, desc: "PDF separate", name: poppler}
+  {group: pdf, command: pdfsig, desc: "PDF sig", name: poppler}
+  {group: pdf, command: pdfunite, desc: "PDF unite", name: poppler}
+  {group: pdf, command: pdftotext, desc: "PDF to text", name: poppler}
   {group: terminal, command: zellij, desc: "Zellij terminal"}
   {group: terminal, command: tmux, desc: "Tmux terminal"}
   {group: repo, command: gitui, desc: "Gitui git tui"}
   {group: repo, command: lazyjj, desc: Lazyjj}
-  {group: repo, command: delta, desc: "Git delta viewer"}
+  {group: repo, command: delta, desc: "Git delta viewer", name: git-delta}
   {group: repo, command: hub, desc: "Simplified github cli"}
   {group: db, command: dblab, desc: "Database tui"}
   {group: db, command: gobang, desc: "Database tui"}
@@ -49,7 +49,7 @@
   {group: web, command: caddy, desc: "Web server"}
   {group: dev, command: sshs, desc: "Ssh client tui"}
   {group: dev, command: tokei, desc: "Count lines of code"}
-  {group: dev, command: lunchy, desc: "Launch services ~/Library/LaunchAgents/"}
+  {group: dev, command: lunchy, desc: "Launch services ~/Library/LaunchAgents/",name: lunchy-go}
   {group: dev, command: nerdlog, desc: "Log tui"}
   {group: dev, command: watchexec, desc: "Watch for changes"}
   {group: dev, command: navi, desc: "CLI cheatsheet"}
@@ -58,22 +58,22 @@
   {group: unix, command: ditto, desc: "Copy alternative"}
   {group: unix, command: sd, desc: "Sed alternative for find/replace within files"}
   {group: unix, command: sad, desc: "Sed alternative with fzf"}
-  {group: unix, command: rg, desc: "Ripgrep grep alternative"}
-  {group: unix, command: tldr, desc: "Man alternative"}
+  {group: unix, command: rg, desc: "Ripgrep grep alternative", name: ripgrep}
+  {group: unix, command: tldr, desc: "Man alternative", name: tealdeer}
   {group: unix, command: bat, desc: "Cat alternative"}
   {group: unix, command: procs, desc: "Ps alternative"}
   {group: unix, command: btop, desc: "Top tui"}
   {group: unix, command: glances, desc: "Top tui"}
   {group: unix, command: macmon, desc: "Resource monitor"}
-  {group: unix, command: tspin, desc: "Tail alternative"}
-  {group: unix, command: choose, desc: "Cut alternative"}
+  {group: unix, command: tspin, desc: "Tail alternative", name: tailspin}
+  {group: unix, command: choose, desc: "Cut alternative", name: choose-rust}
   {group: unix, command: gping, desc: "Ping alternative"}
   {group: unix, command: fd, desc: "Find alternative"}
   {group: util, command: gpg-tui, desc: "GPG tui"}
   {group: util, command: sniffnet, desc: "Network monitor"}
   {group: util, command: lazyjournal, desc: Lazyjournal}
   {group: util, command: sk, desc: "Skim: fzf alternative"}
-  {group: util, command: tv, desc: "Fzf alternative"}
+  {group: util, command: tv, desc: "Fzf alternative", name: television}
   {group: util, command: spark, desc: "Sparkline generator"}
   {group: util, command: wallpaper, desc: "MacOS wallpaper"}
   {group: util, command: pv, desc: "Pipe viewer"}

@@ -11,6 +11,7 @@ dblab                  [38;5;8mDatabase tui[0m
 gobang                 [38;5;8mDatabase tui[0m
 lazysql                [38;5;8mLazysql[0m
 sq                     [38;5;8mJq-like for data sources[0m
+sqld                   [38;5;8mLib sql[0m
 tursodb                [38;5;8mTurso db[0m
 
 [32mDEV[0m
@@ -59,6 +60,21 @@ pswd-git               [38;5;8mRun git commands on password store[0m
 pswd-grep              [38;5;8mGrep passwords[0m
 pswd-init              [38;5;8mInitialize password store[0m
 pswd-list              [38;5;8mList passwords[0m
+
+[32mPDF[0m
+pdfattach              [38;5;8mAttach PDFs[0m
+pdfdetach              [38;5;8mDetach PDFs[0m
+pdffonts               [38;5;8mPDF fonts[0m
+pdfimages              [38;5;8mPDF to images[0m
+pdfinfo                [38;5;8mPDF info[0m
+pdfseparate            [38;5;8mPDF separate[0m
+pdfsig                 [38;5;8mPDF sig[0m
+pdftocairo             [38;5;8mPDF to Cairo[0m
+pdftohtml              [38;5;8mPDF to HTML[0m
+pdftoppm               [38;5;8mPDF to ppm[0m
+pdftops                [38;5;8mPDF to ps[0m
+pdftotext              [38;5;8mPDF to text[0m
+pdfunite               [38;5;8mPDF unite[0m
 
 [32mPKGMGR[0m
 bdo                    [38;5;8mBrew packages that depend on[0m
@@ -226,7 +242,6 @@ iproute2mac            [38;5;8mbrew[0m
 jqp                    [38;5;8mbrew[0m
 jrnl                   [38;5;8mbrew[0m
 just                   [38;5;8mbrew[0m
-libsql                 [38;5;8mbrew[0m
 lolcat                 [38;5;8mbrew[0m
 luarocks               [38;5;8mbrew[0m
 lunchy-go              [38;5;8mbrew[0m
@@ -246,7 +261,6 @@ pass                   [38;5;8mbrew[0m
 pgvector               [38;5;8mbrew[0m
 pinentry-touchid       [38;5;8mbrew[0m
 pkgconf                [38;5;8mbrew[0m
-poppler                [38;5;8mbrew[0m
 pstree                 [38;5;8mbrew[0m
 qsv                    [38;5;8mbrew[0m
 rclone                 [38;5;8mbrew[0m

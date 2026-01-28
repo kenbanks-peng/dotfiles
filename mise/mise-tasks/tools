@@ -130,17 +130,17 @@ def main [filter?: string] {
 
   # Enrich with metadata from tools.nuon
   # Match by name (cli) if present, otherwise by command (display name)
+  # A single package can expand to multiple commands (e.g., poppler -> pdfattach, pdfdetach, etc.)
   let enriched = ($unique_commands | each {|t|
       let meta_matches = ($metadata | where {|m| ($m.name? | default $m.command) == $t.command})
       if ($meta_matches | is-not-empty) {
-        let meta = ($meta_matches | first)
-        {group: $meta.group command: $meta.command desc: $meta.desc}
+        $meta_matches | each {|meta| {group: $meta.group command: $meta.command desc: $meta.desc}}
       } else if ($t.group? != null) {
-        {group: $t.group command: $t.command desc: ($t.desc? | default "")}
+        [{group: $t.group command: $t.command desc: ($t.desc? | default "")}]
       } else {
-        {group: $t.source command: $t.command desc: $t.source}
+        [{group: $t.source command: $t.command desc: $t.source}]
       }
-    })
+    } | flatten)
 
   let filtered = if $filter == null {
     $enriched
