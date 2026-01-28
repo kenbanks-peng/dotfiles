@@ -1,7 +1,7 @@
 [32mAI[0m
 ai                     [38;5;8mAi for terminal[0m
 research               [38;5;8mAi research topics[0m
-specify-cli            [38;5;8mSpec-kit[0m
+specify                [38;5;8mSpec-kit[0m
 
 [32mCONTAINER[0m
 lazydocker             [38;5;8mLazydocker[0m
@@ -9,6 +9,7 @@ lazydocker             [38;5;8mLazydocker[0m
 [32mDB[0m
 dblab                  [38;5;8mDatabase tui[0m
 lazysql                [38;5;8mLazysql[0m
+tursodb                [38;5;8mTurso db[0m
 
 [32mDEV[0m
 cheat                  [38;5;8mCLI cheatsheets[0m
@@ -155,7 +156,7 @@ rosetta                [38;5;8mRosetta on|off[0m
 scan                   [38;5;8mPort scanner[0m
 scheduled-git-backup   [38;5;8mScheduled backups[0m
 show                   [38;5;8mShow image[0m
-sk                     [38;5;8mSkim: fzf alternative"[0m
+sk                     [38;5;8mSkim: fzf alternative[0m
 sniffnet               [38;5;8mNetwork monitor[0m
 spark                  [38;5;8mSparkline generator[0m
 svgo                   [38;5;8mSVG optimizer[0m
@@ -259,7 +260,6 @@ tealdeer               [38;5;8mbrew[0m
 television             [38;5;8mbrew[0m
 terminal-notifier      [38;5;8mbrew[0m
 ttyd                   [38;5;8mbrew[0m
-turso                  [38;5;8mbrew[0m
 tw93/tap/mole          [38;5;8mbrew[0m
 typst                  [38;5;8mbrew[0m
 valkyrie00/bbrew/bbrew [38;5;8mbrew[0m

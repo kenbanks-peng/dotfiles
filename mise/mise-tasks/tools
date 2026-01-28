@@ -46,7 +46,7 @@ def brew_tools [] {
 
 def tools_metadata [] {
   let script_dir = ($env.FILE_PWD? | default (pwd))
-  open ($script_dir | path join "tools.csv")
+  open ($script_dir | path join "tools.nuon")
 }
 
 def mise_tasks [] {
@@ -93,12 +93,13 @@ def main [filter?: string] {
       }
     })
 
-  # Enrich with metadata from tools.csv
+  # Enrich with metadata from tools.nuon
+  # Match by name (cli) if present, otherwise by task (display name)
   let enriched = ($unique_tasks | each {|t|
-      let meta_matches = ($metadata | where task == $t.task)
+      let meta_matches = ($metadata | where {|m| ($m.name? | default $m.task) == $t.task})
       if ($meta_matches | is-not-empty) {
         let meta = ($meta_matches | first)
-        {group: $meta.group task: $t.task desc: $meta.desc}
+        {group: $meta.group task: $meta.task desc: $meta.desc}
       } else if ($t.group? != null) {
         {group: $t.group task: $t.task desc: ($t.desc? | default "")}
       } else {

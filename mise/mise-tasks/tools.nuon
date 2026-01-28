@@ -1,0 +1,81 @@
+# Tool metadata with optional names
+[
+  {group: ai, task: specify, desc: Spec-kit, name:specify-cli}
+  {group: pdf, task: pdfattach, desc: "Attach PDFs"}
+  {group: pdf, task: pdfdetach, desc: "Detach PDFs"}
+  {group: pdf, task: pdftocairo, desc: "PDF to Cairo"}
+  {group: pdf, task: pdffonts, desc: "PDF fonts"}
+  {group: pdf, task: pdftohtml, desc: "PDF to HTML"}
+  {group: pdf, task: pdfimages, desc: "PDF to images"}
+  {group: pdf, task: pdfinfo, desc: "PDF info"}
+  {group: pdf, task: pdftoppm, desc: "PDF to ppm"}
+  {group: pdf, task: pdftops, desc: "PDF to ps"}
+  {group: pdf, task: pdfseparate, desc: "PDF separate"}
+  {group: pdf, task: pdfsig, desc: "PDF sig"}
+  {group: pdf, task: pdfunite, desc: "PDF unite"}
+  {group: pdf, task: pdftotext, desc: "PDF to text"}
+  {group: terminal, task: zellij, desc: "Zellij terminal"}
+  {group: terminal, task: tmux, desc: "Tmux terminal"}
+  {group: repo, task: gitui, desc: "Gitui git tui"}
+  {group: repo, task: lazyjj, desc: Lazyjj}
+  {group: repo, task: delta, desc: "Git delta viewer"}
+  {group: repo, task: hub, desc: "Simplified github cli"}
+  {group: db, task: dblab, desc: "Database tui"}
+  {group: db, task: gobang, desc: "Database tui"}
+  {group: db, task: lazysql, desc: Lazysql}
+  {group: db, task: sqlite3, desc: "SQLite db cli"}
+  {group: db, task: sqld, desc: "Lib sql"}
+  {group: db, task: tursodb, desc: "Turso db", name:turso}
+  {group: db, task: sq, desc: "Jq-like for data sources"}
+  {group: container, task: lazydocker, desc: Lazydocker}
+  {group: container, task: limactl, desc: "Create linux vm"}
+  {group: lint, task: biome, desc: "Lint: biome check --write"}
+  {group: lint, task: shellcheck, desc: "Shell linter"}
+  {group: file, task: portal, desc: "File transfer tui"}
+  {group: text, task: jq, desc: "Jq json processing"}
+  {group: text, task: jqn, desc: "Jq.node json processing"}
+  {group: text, task: yq, desc: "Jq-like for yaml, json, xml, properties, csv and tsv"}
+  {group: text, task: jc, desc: "CLI output to json"}
+  {group: text, task: jid, desc: "Json interactive digger"}
+  {group: text, task: fx, desc: "Fx json viewer"}
+  {group: text, task: jnv, desc: "Jnv json navigator"}
+  {group: text, task: glow, desc: "Markdown viewer"}
+  {group: text, task: htmlq, desc: "Jq-like for html"}
+  {group: text, task: markitdown, desc: "Convert many formats to markdown"}
+  {group: web, task: hurl, desc: "Curl test framework"}
+  {group: web, task: xh, desc: "Curl alternative"}
+  {group: web, task: curlie, desc: "Curl alternative"}
+  {group: web, task: posting, desc: "Posting tui"}
+  {group: web, task: caddy, desc: "Web server"}
+  {group: dev, task: sshs, desc: "Ssh client tui"}
+  {group: dev, task: tokei, desc: "Count lines of code"}
+  {group: dev, task: lunchy, desc: "Launch services ~/Library/LaunchAgents/"}
+  {group: dev, task: nerdlog, desc: "Log tui"}
+  {group: dev, task: watchexec, desc: "Watch for changes"}
+  {group: dev, task: navi, desc: "CLI cheatsheet"}
+  {group: dev, task: cheat, desc: "CLI cheatsheets"}
+  {group: dev, task: repomix, desc: "Repo to single file"}
+  {group: unix, task: ditto, desc: "Copy alternative"}
+  {group: unix, task: sd, desc: "Sed alternative for find/replace within files"}
+  {group: unix, task: sad, desc: "Sed alternative with fzf"}
+  {group: unix, task: rg, desc: "Ripgrep grep alternative"}
+  {group: unix, task: tldr, desc: "Man alternative"}
+  {group: unix, task: bat, desc: "Cat alternative"}
+  {group: unix, task: procs, desc: "Ps alternative"}
+  {group: unix, task: btop, desc: "Top tui"}
+  {group: unix, task: glances, desc: "Top tui"}
+  {group: unix, task: macmon, desc: "Resource monitor"}
+  {group: unix, task: tspin, desc: "Tail alternative"}
+  {group: unix, task: choose, desc: "Cut alternative"}
+  {group: unix, task: gping, desc: "Ping alternative"}
+  {group: unix, task: fd, desc: "Find alternative"}
+  {group: util, task: gpg-tui, desc: "GPG tui"}
+  {group: util, task: sniffnet, desc: "Network monitor"}
+  {group: util, task: lazyjournal, desc: Lazyjournal}
+  {group: util, task: sk, desc: "Skim: fzf alternative"}
+  {group: util, task: tv, desc: "Fzf alternative"}
+  {group: util, task: spark, desc: "Sparkline generator"}
+  {group: util, task: wallpaper, desc: "MacOS wallpaper"}
+  {group: util, task: pv, desc: "Pipe viewer"}
+  {group: util, task: svgo, desc: "SVG optimizer"}
+]
