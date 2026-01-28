@@ -6,7 +6,7 @@ antigravity 1.15.8,5724687216017408
 anybar 0.2.3
 audacity 3.7.7
 boop 1.4.0
-claude 1.1.886,ef5d267b24cd6ead766647763ca5bcfae49c823b
+claude 1.1.1093,5a5517183d88766e37a07fc3ad73585d1298a051
 claude-code 2.1.20
 cleanshot 4.8.7
 codex 0.92.0
@@ -53,7 +53,7 @@ typeface 4.2.3,4845
 visual-studio-code 1.108.2
 vlc 3.0.23
 yaak 2026.1.2
-zed 0.220.6
+zed 0.220.7
 zen 1.18.1b
 zoom 6.7.2.72191
 
