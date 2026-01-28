@@ -23,12 +23,12 @@
   {group: db, command: dblab, desc: "Database tui"}
   {group: db, command: gobang, desc: "Database tui"}
   {group: db, command: lazysql, desc: Lazysql}
-  {group: db, command: sqlite3, desc: "SQLite db cli"}
+  {group: db, command: sqlite3, desc: "SQLite db cli", system: true}
   {group: db, command: sqld, desc: "Lib sql", name: libsql}
   {group: db, command: tursodb, desc: "Turso db", name:turso}
   {group: db, command: sq, desc: "Jq-like for data sources"}
   {group: container, command: lazydocker, desc: Lazydocker}
-  {group: container, command: limactl, desc: "Create linux vm"}
+  {group: container, command: lima, desc: "Create linux vm", name: colima}
   {group: lint, command: biome, desc: "Lint: biome check --write"}
   {group: lint, command: shellcheck, desc: "Shell linter"}
   {group: file, command: portal, desc: "File transfer tui"}

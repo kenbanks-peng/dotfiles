@@ -5,6 +5,7 @@ specify                [38;5;8mSpec-kit[0m
 
 [32mCONTAINER[0m
 lazydocker             [38;5;8mLazydocker[0m
+lima                   [38;5;8mCreate linux vm[0m
 
 [32mDB[0m
 dblab                  [38;5;8mDatabase tui[0m
@@ -12,10 +13,12 @@ gobang                 [38;5;8mDatabase tui[0m
 lazysql                [38;5;8mLazysql[0m
 sq                     [38;5;8mJq-like for data sources[0m
 sqld                   [38;5;8mLib sql[0m
+sqlite3                [38;5;8mSQLite db cli[0m
 tursodb                [38;5;8mTurso db[0m
 
 [32mDEV[0m
 cheat                  [38;5;8mCLI cheatsheets[0m
+lunchy                 [38;5;8mLaunch services ~/Library/LaunchAgents/[0m
 navi                   [38;5;8mCLI cheatsheet[0m
 python-init            [38;5;8mInit python project[0m
 python-package         [38;5;8mPython package for pypi[0m
@@ -92,6 +95,7 @@ versions               [38;5;8mSave versions to file[0m
 zap                    [38;5;8mZap caches[0m
 
 [32mREPO[0m
+delta                  [38;5;8mGit delta viewer[0m
 dvc-add                [38;5;8mdvc add files over limit[0m
 dvc-init               [38;5;8mInitialize dvc and add files over 1 MB[0m
 dvc-list               [38;5;8mDVC list[0m
@@ -120,6 +124,7 @@ yq                     [38;5;8mJq-like for yaml, json, xml, properties, csv and
 [32mUNIX[0m
 bat                    [38;5;8mCat alternative[0m
 btop                   [38;5;8mTop tui[0m
+choose                 [38;5;8mCut alternative[0m
 d                      [38;5;8mPwd with escaped spaces[0m
 fd                     [38;5;8mFind alternative[0m
 fdf                    [38;5;8mFind files, find alternative[0m
@@ -135,6 +140,8 @@ procs                  [38;5;8mPs alternative[0m
 sad                    [38;5;8mSed alternative with fzf[0m
 sd                     [38;5;8mSed alternative for find/replace within files[0m
 symlink-bin            [38;5;8mCreate symbolic links in bin directory[0m
+tldr                   [38;5;8mMan alternative[0m
+tspin                  [38;5;8mTail alternative[0m
 
 [32mUTIL[0m
 ast                    [38;5;8mCode refactoring with ast-grep[0m
@@ -183,6 +190,7 @@ switch                 [38;5;8mCheck toml validity[0m
 symlink                [38;5;8mCreate a symlink with -symlink suffix[0m
 tbl                    [38;5;8mFormat as table[0m
 trash                  [38;5;8mMove files to trash[0m
+tv                     [38;5;8mFzf alternative[0m
 w                      [38;5;8m1-line weather[0m
 wallpaper              [38;5;8mMacOS wallpaper[0m
 wf                     [38;5;8mWeather forecast[0m
@@ -211,8 +219,6 @@ bat-extras             [38;5;8mbrew[0m
 bbrew                  [38;5;8mbrew[0m
 borders                [38;5;8mbrew[0m
 carapace               [38;5;8mbrew[0m
-choose-rust            [38;5;8mbrew[0m
-colima                 [38;5;8mbrew[0m
 coreutils              [38;5;8mbrew[0m
 croc                   [38;5;8mbrew[0m
 csvtk                  [38;5;8mbrew[0m
@@ -229,7 +235,6 @@ gawk                   [38;5;8mbrew[0m
 gemini-cli             [38;5;8mbrew[0m
 gh                     [38;5;8mbrew[0m
 git                    [38;5;8mbrew[0m
-git-delta              [38;5;8mbrew[0m
 git-filter-repo        [38;5;8mbrew[0m
 gitleaks               [38;5;8mbrew[0m
 gnu-sed                [38;5;8mbrew[0m
@@ -244,7 +249,6 @@ jrnl                   [38;5;8mbrew[0m
 just                   [38;5;8mbrew[0m
 lolcat                 [38;5;8mbrew[0m
 luarocks               [38;5;8mbrew[0m
-lunchy-go              [38;5;8mbrew[0m
 makensis               [38;5;8mbrew[0m
 mcfly                  [38;5;8mbrew[0m
 melody                 [38;5;8mbrew[0m
@@ -272,9 +276,6 @@ sox                    [38;5;8mbrew[0m
 sqlc                   [38;5;8mbrew[0m
 stow                   [38;5;8mbrew[0m
 syncthing              [38;5;8mbrew[0m
-tailspin               [38;5;8mbrew[0m
-tealdeer               [38;5;8mbrew[0m
-television             [38;5;8mbrew[0m
 terminal-notifier      [38;5;8mbrew[0m
 ttyd                   [38;5;8mbrew[0m
 typst                  [38;5;8mbrew[0m
