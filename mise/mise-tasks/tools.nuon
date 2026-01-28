@@ -78,4 +78,122 @@
   {group: util, command: wallpaper, desc: "MacOS wallpaper"}
   {group: util, command: pv, desc: "Pipe viewer"}
   {group: util, command: svgo, desc: "SVG optimizer"}
+
+  # BUN items - to review
+  {group: fun, command: cowsay, desc: "ASCII art cow messages", tag: to-review}
+
+  # BREW items - to review
+  {group: security, command: age, desc: "Simple file encryption", tag: to-review}
+  {group: terminal, command: asciinema, desc: "Terminal session recorder", tag: to-review}
+  {group: dev, command: ast-grep, desc: "AST-based code search/refactor", tag: to-review}
+  {group: build, command: autoconf, desc: "Build system generator", tag: to-review}
+  {group: net, command: bandwhich, desc: "Network bandwidth monitor", tag: to-review}
+  {group: terminal, command: bash, desc: "Bourne Again Shell", tag: to-review}
+  {group: unix, command: bat-extras, desc: "Bat helper scripts", tag: to-review}
+  {group: unclear, command: bbrew, desc: "Homebrew wrapper", tag: to-review}
+  {group: macos, command: borders, desc: "Window borders for macOS", tag: to-review}
+  {group: terminal, command: carapace, desc: "Shell completion generator", tag: to-review}
+  {group: unix, command: coreutils, desc: "GNU core utilities", tag: to-review}
+  {group: file, command: croc, desc: "Secure file transfer", tag: to-review}
+  {group: text, command: csvtk, desc: "CSV/TSV toolkit", tag: to-review}
+  {group: util, command: d2, desc: "Diagram scripting language", tag: to-review}
+  {group: security, command: doppler, desc: "Secrets management", tag: to-review}
+  {group: dev, command: dotenvx, desc: "Env file management", tag: to-review}
+  {group: repo, command: dvc, desc: "Data version control", tag: to-review}
+  {group: audio, command: espeak-ng, desc: "Text-to-speech synthesizer", tag: to-review}
+  {group: util, command: fastfetch, desc: "System info fetcher", tag: to-review}
+  {group: fun, command: figlet, desc: "ASCII text banners", tag: to-review}
+  {group: unix, command: flock, desc: "File locking utility", tag: to-review}
+  {group: edit, command: fresh-editor, desc: "Fresh text editor", tag: to-review}
+  {group: unix, command: gawk, desc: "GNU awk", tag: to-review}
+  {group: ai, command: gemini-cli, desc: "Google Gemini CLI", tag: to-review}
+  {group: repo, command: gh, desc: "GitHub CLI", tag: to-review}
+  {group: repo, command: git, desc: "Version control system", tag: to-review}
+  {group: repo, command: git-filter-repo, desc: "Git history rewriter", tag: to-review}
+  {group: security, command: gitleaks, desc: "Git secrets scanner", tag: to-review}
+  {group: unix, command: gnu-sed, desc: "GNU stream editor", tag: to-review}
+  {group: util, command: grex, desc: "Regex generator from examples", tag: to-review}
+  {group: file, command: hexyl, desc: "Hex viewer", tag: to-review}
+  {group: util, command: hyperfine, desc: "Command benchmarking", tag: to-review}
+  {group: image, command: imagemagick, desc: "Image manipulation toolkit", tag: to-review}
+  {group: image, command: imgcat, desc: "Display images in terminal", tag: to-review}
+  {group: net, command: iproute2mac, desc: "iproute2 for macOS", tag: to-review}
+  {group: text, command: jqp, desc: "jq playground TUI", tag: to-review}
+  {group: util, command: jrnl, desc: "Command-line journal", tag: to-review}
+  {group: dev, command: just, desc: "Task runner", tag: to-review}
+  {group: fun, command: lolcat, desc: "Rainbow text output", tag: to-review}
+  {group: dev, command: luarocks, desc: "Lua package manager", tag: to-review}
+  {group: build, command: makensis, desc: "NSIS installer compiler", tag: to-review}
+  {group: terminal, command: mcfly, desc: "Shell history search", tag: to-review}
+  {group: util, command: melody, desc: "Regex language compiler", tag: to-review}
+  {group: edit, command: micro, desc: "Terminal text editor", tag: to-review}
+  {group: security, command: mole, desc: "SSH tunnel manager", tag: to-review}
+  {group: media, command: mpv, desc: "Media player", tag: to-review}
+  {group: unix, command: ncdu, desc: "NCurses disk usage", tag: to-review}
+  {group: edit, command: neovim, desc: "Vim-fork text editor", tag: to-review}
+  {group: terminal, command: nushell, desc: "Modern shell", tag: to-review}
+  {group: terminal, command: oh-my-posh, desc: "Shell prompt theme engine", tag: to-review}
+  {group: ai, command: opencode, desc: "AI coding assistant", tag: to-review}
+  {group: text, command: pandoc, desc: "Universal document converter", tag: to-review}
+  {group: password, command: pass, desc: "Password manager", tag: to-review}
+  {group: db, command: pgvector, desc: "PostgreSQL vector extension", tag: to-review}
+  {group: security, command: pinentry-touchid, desc: "GPG with TouchID", tag: to-review}
+  {group: build, command: pkgconf, desc: "Package config tool", tag: to-review}
+  {group: unix, command: pstree, desc: "Process tree viewer", tag: to-review}
+  {group: text, command: qsv, desc: "CSV toolkit (fast)", tag: to-review}
+  {group: file, command: rclone, desc: "Cloud storage sync", tag: to-review}
+  {group: image, command: resvg, desc: "SVG renderer", tag: to-review}
+  {group: file, command: sevenzip, desc: "7-Zip archiver", tag: to-review}
+  {group: macos, command: sketchybar, desc: "macOS status bar", tag: to-review}
+  {group: security, command: snyk-cli, desc: "Security vulnerability scanner", tag: to-review}
+  {group: audio, command: sox, desc: "Audio processing toolkit", tag: to-review}
+  {group: db, command: sqlc, desc: "SQL to type-safe Go", tag: to-review}
+  {group: util, command: stow, desc: "Symlink farm manager", tag: to-review}
+  {group: file, command: syncthing, desc: "Continuous file sync", tag: to-review}
+  {group: terminal, command: terminal-notifier, desc: "macOS notifications from CLI", tag: to-review}
+  {group: terminal, command: ttyd, desc: "Terminal over web", tag: to-review}
+  {group: text, command: typst, desc: "Modern typesetting system", tag: to-review}
+  {group: web, command: wget, desc: "Web file retriever", tag: to-review}
+  {group: go, command: wgo, desc: "Go live reload", tag: to-review}
+  {group: macos, command: yabai, desc: "Tiling window manager", tag: to-review}
+  {group: terminal, command: zsh, desc: "Z shell", tag: to-review}
+
+  # MISE items - to review
+  {group: util, command: Clipboard, desc: "Clipboard manager", tag: to-review}
+  {group: security, command: RustScan, desc: "Fast port scanner", tag: to-review}
+  {group: lint, command: StyLua, desc: "Lua formatter", tag: to-review}
+  {group: ai, command: SuperClaude, desc: "Claude AI enhancement", tag: to-review}
+  {group: runtime, command: bun, desc: "JavaScript runtime/bundler", tag: to-review}
+  {group: rust, command: cargo-cache, desc: "Cargo cache manager", tag: to-review}
+  {group: rust, command: cargo-update, desc: "Cargo crate updater", tag: to-review}
+  {group: ai, command: clawdbot, desc: "Claude bot", tag: to-review}
+  {group: unclear, command: core, desc: "Core utilities", tag: to-review}
+  {group: ai, command: d2-mcp, desc: "D2 diagram MCP server", tag: to-review}
+  {group: unclear, command: fnox, desc: "Function executor", tag: to-review}
+  {group: web, command: github-markdown-css, desc: "GitHub markdown styles", tag: to-review}
+  {group: go, command: go-blueprint, desc: "Go project scaffolding", tag: to-review}
+  {group: go, command: gopls, desc: "Go language server", tag: to-review}
+  {group: unclear, command: krokiet, desc: "Duplicate finder GUI", tag: to-review}
+  {group: repo, command: lazygit, desc: "Git TUI", tag: to-review}
+  {group: text, command: md-to-pdf, desc: "Markdown to PDF converter", tag: to-review}
+  {group: build, command: meson, desc: "Build system", tag: to-review}
+  {group: unix, command: mgrep, desc: "Multi-pattern grep", tag: to-review}
+  {group: build, command: ninja, desc: "Fast build system", tag: to-review}
+  {group: runtime, command: nodejs, desc: "JavaScript runtime", tag: to-review}
+  {group: unclear, command: nuekit, desc: "Nue web framework", tag: to-review}
+  {group: repo, command: onefetch, desc: "Git repo info display", tag: to-review}
+  {group: unix, command: ov, desc: "Terminal pager", tag: to-review}
+  {group: util, command: pastel, desc: "Color manipulation CLI", tag: to-review}
+  {group: web, command: react, desc: "React CLI tools", tag: to-review}
+  {group: runtime, command: ruby, desc: "Ruby runtime", tag: to-review}
+  {group: lint, command: ruff, desc: "Python linter/formatter", tag: to-review}
+  {group: rust, command: rustup, desc: "Rust toolchain manager", tag: to-review}
+  {group: unclear, command: sbyte, desc: "Byte manipulation", tag: to-review}
+  {group: lint, command: staticcheck, desc: "Go static analyzer", tag: to-review}
+  {group: dev, command: usage, desc: "CLI usage spec generator", tag: to-review}
+  {group: dev, command: uv, desc: "Python package manager", tag: to-review}
+  {group: web, command: vite, desc: "Frontend build tool", tag: to-review}
+  {group: go, command: wails3, desc: "Go desktop app framework", tag: to-review}
+  {group: file, command: yazi, desc: "Terminal file manager", tag: to-review}
+  {group: terminal, command: zoxide, desc: "Smart cd command", tag: to-review}
 ]
