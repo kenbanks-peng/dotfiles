@@ -24,7 +24,7 @@
   {group: db, command: gobang, desc: "Database tui"}
   {group: db, command: lazysql, desc: Lazysql}
   {group: db, command: sqlite3, desc: "SQLite db cli"}
-  {group: db, command: sqld, desc: "Lib sql"}
+  {group: db, command: sqld, desc: "Lib sql", name: libsql}
   {group: db, command: tursodb, desc: "Turso db", name:turso}
   {group: db, command: sq, desc: "Jq-like for data sources"}
   {group: container, command: lazydocker, desc: Lazydocker}
