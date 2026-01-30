@@ -31,7 +31,7 @@ grandperspective 3.6.3
 iina 1.4.1,160
 karabiner-elements 15.9.0
 keyclu 0.31
-languagetool-desktop 2.10.0
+languagetool-desktop 2.10.1
 linear-linear 1.28.7,260121aah8dqpp9
 logos 48.0.0.0238
 microsoft-auto-update 4.81.25121042
@@ -365,7 +365,7 @@ tree 2.2.1
 tree-sitter 0.26.3
 tree-sitter@0.25 0.25.10
 ttyd 1.7.7_6
-turso 0.4.3
+turso 0.4.4
 typst 0.14.2
 uchardet 0.0.8
 unbound 1.24.2
@@ -408,11 +408,11 @@ github:ajeetdsouza/zoxide                   0.9.8             ~/.config/mise/mis
 github:astral-sh/ruff                       0.14.14           ~/.config/mise/mise.toml  latest
 github:bee-san/RustScan                     2.4.1             ~/.config/mise/mise.toml  latest
 github:h0rv/d2-mcp                          1.1.0             ~/.config/mise/mise.toml  latest
-github:jdx/fnox                             1.10.0            ~/.config/mise/mise.toml  latest
+github:jdx/fnox                             1.10.1            ~/.config/mise/mise.toml  latest
 github:jdx/usage                            2.16.0            ~/.config/mise/mise.toml  latest
 github:jesseduffield/lazygit                0.58.1            ~/.config/mise/mise.toml  latest
 github:melkeydev/go-blueprint               0.10.11           ~/.config/mise/mise.toml  latest
-github:neilotoole/sq                        0.48.11           ~/.config/mise/mise.toml  latest
+github:neilotoole/sq                        0.48.12           ~/.config/mise/mise.toml  latest
 github:noborus/ov                           0.50.2            ~/.config/mise/mise.toml  latest
 github:o2sh/onefetch                        2.26.1            ~/.config/mise/mise.toml  latest
 github:sharkdp/fd                           10.3.0            ~/.config/mise/mise.toml  latest
