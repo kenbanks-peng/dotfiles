@@ -38,6 +38,7 @@
 "github:o2sh/onefetch" = "latest"
 "github:Slackadays/Clipboard" = "latest"
 "github:bee-san/RustScan" = "latest"
+"github:minbrowser/min" = "latest"
 
 [settings]
 experimental = true
