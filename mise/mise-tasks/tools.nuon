@@ -47,6 +47,7 @@
   {group: web, command: curlie, desc: "Curl alternative"}
   {group: web, command: posting, desc: "Posting tui"}
   {group: web, command: caddy, desc: "Web server"}
+  {group: dev, command: fnox, desc: "Function executor"}
   {group: dev, command: sshs, desc: "Ssh client tui"}
   {group: dev, command: tokei, desc: "Count lines of code"}
   {group: dev, command: lunchy, desc: "Launch services ~/Library/LaunchAgents/",name: lunchy-go}
@@ -169,7 +170,6 @@
   {group: ai, command: clawdbot, desc: "Claude bot", tag: to-review}
   {group: unclear, command: core, desc: "Core utilities", tag: to-review}
   {group: ai, command: d2-mcp, desc: "D2 diagram MCP server", tag: to-review}
-  {group: unclear, command: fnox, desc: "Function executor", tag: to-review}
   {group: web, command: github-markdown-css, desc: "GitHub markdown styles", tag: to-review}
   {group: go, command: go-blueprint, desc: "Go project scaffolding", tag: to-review}
   {group: go, command: gopls, desc: "Go language server", tag: to-review}
