@@ -1,12 +1,9 @@
 [tools]
 "cargo:sbyte" = "latest"
 "cargo:cargo-update" = "latest"
-"pipx:ruff" = "latest"
 "go:golang.org/x/tools/gopls" = "latest"
 "go:honnef.co/go/tools/cmd/staticcheck" = "latest"
 "cargo:cargo-cache" = "latest"
-"pipx:meson" = "latest"
-"pipx:ninja" = "latest"
 "pipx:SuperClaude" = "latest"
 "npm:md-to-pdf" = "latest"
 "npm:github-markdown-css" = "latest"
@@ -34,6 +31,8 @@
 "github:o2sh/onefetch" = "latest"
 "github:Slackadays/Clipboard" = "latest"
 "github:bee-san/RustScan" = "latest"
+"npm:openclaw" = "latest"
+"github:astral-sh/ruff" = "latest"
 
 [settings]
 experimental = true
