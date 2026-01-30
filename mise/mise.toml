@@ -33,6 +33,7 @@
 "github:bee-san/RustScan" = "latest"
 "npm:openclaw" = "latest"
 "github:astral-sh/ruff" = "latest"
+"nix:go" = "latest"
 
 [settings]
 experimental = true
