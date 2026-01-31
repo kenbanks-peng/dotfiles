@@ -9,7 +9,7 @@ audacity 3.7.7
 boop 1.4.0
 brainfm 0.0.217
 claude 1.1.1520,48ced7a78a74c4c1b03d1dab181d1b0dc21d8fc8
-claude-code 2.1.27
+claude-code 2.1.29
 cleanshot 4.8.7
 codex 0.93.0
 container 0.6.0
