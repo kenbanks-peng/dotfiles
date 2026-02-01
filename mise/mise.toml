@@ -39,8 +39,5 @@
 experimental = true
 quiet = true
 
-# [plugins]
-# fnox-env = "https://github.com/jdx/mise-env-fnox"
-
 [env]
-# _.fnox-env = {}
+_.env-fnox = {}
