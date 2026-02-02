@@ -32,6 +32,7 @@
 "github:astral-sh/ruff" = "latest"
 "nix:go" = "latest"
 "nix:uv" = "latest"
+"nix:bun" = "latest"
 
 [settings]
 experimental = true
