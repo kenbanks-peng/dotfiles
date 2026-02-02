@@ -38,6 +38,3 @@
 [settings]
 experimental = true
 quiet = true
-
-[env]
-_.env-fnox = {}
