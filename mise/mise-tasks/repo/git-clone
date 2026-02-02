@@ -1,0 +1,55 @@
+#!/usr/bin/env zsh
+# [MISE] description="Clone git repo and add upstream if fork"
+
+# Usage: git-clone <repo-url> [destination]
+
+if [ $# -lt 1 ]; then
+    echo "Usage: git-clone <repo-url> [destination]"
+    echo "Clones a repo and automatically adds upstream remote if it's a GitHub fork"
+    exit 1
+fi
+
+REPO_URL="$1"
+DEST="${2:-}"
+
+# Clone the repository
+if [ -n "$DEST" ]; then
+    git clone "$REPO_URL" "$DEST"
+    cd "$DEST"
+else
+    git clone "$REPO_URL"
+    # Extract repo name from URL
+    REPO_NAME=$(basename "$REPO_URL" .git)
+    cd "$REPO_NAME"
+fi
+
+echo "Repository cloned successfully"
+
+# Check if this is a GitHub repo
+if [[ "$REPO_URL" =~ 'github\.com[/:]([^/]+)/([^/\.]+)' ]]; then
+    OWNER="${match[1]}"
+    REPO="${match[2]}"
+
+    # Try to use gh CLI first
+    if command -v gh &> /dev/null; then
+        FORK_INFO=$(gh api "repos/$OWNER/$REPO" --jq '{fork: .fork, parent: .parent.clone_url}' 2>/dev/null || echo '{}')
+        IS_FORK=$(echo "$FORK_INFO" | jq -r '.fork // false')
+        PARENT_URL=$(echo "$FORK_INFO" | jq -r '.parent // empty')
+    else
+        # Fallback to curl with GitHub API
+        API_RESPONSE=$(curl -s "https://api.github.com/repos/$OWNER/$REPO")
+        IS_FORK=$(echo "$API_RESPONSE" | jq -r '.fork // false')
+        PARENT_URL=$(echo "$API_RESPONSE" | jq -r '.parent.clone_url // empty')
+    fi
+
+    if [ "$IS_FORK" = "true" ] && [ -n "$PARENT_URL" ]; then
+        echo "This is a fork! Adding upstream remote: $PARENT_URL"
+        git remote add upstream "$PARENT_URL"
+        git fetch upstream
+        echo "✓ Upstream added"
+    fi
+fi
+
+echo ""
+echo "Remotes configured:"
+git remote -v
