@@ -1,5 +1,6 @@
 #!/usr/bin/env zsh
 # [MISE] description="Clone git repo and add upstream if fork"
+# [MISE] dir="{{cwd}}"
 
 # Usage: git-clone <repo-url> [destination]
 
