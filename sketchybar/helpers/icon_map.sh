@@ -90,7 +90,7 @@ function __icon_map() {
    "App Store")
         icon_result=":app_store:"
         ;;
-   "Books" | "Apple Books")
+   "Apple Books" | "Books" | "Bücher")
         icon_result=":apple_books:"
         ;;
    "Arc")
@@ -153,7 +153,7 @@ function __icon_map() {
    "BluOS Controller")
         icon_result=":bluos_controller:"
         ;;
-   "Books" | "Calibre" | "Bücher")
+   "Calibre")
         icon_result=":book:"
         ;;
    "Brain.fm")
@@ -1145,6 +1145,9 @@ function __icon_map() {
         ;;
    "TeamSpeak 3")
         icon_result=":team_speak:"
+        ;;
+   "TeamViewer")
+        icon_result=":teamviewer:"
         ;;
    "Telegram")
         icon_result=":telegram:"
