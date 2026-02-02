@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-# [MISE] description="Find files, find alternative"
-# [MISE] dir="{{cwd}}"
-fd --hidden --no-ignore "$@"

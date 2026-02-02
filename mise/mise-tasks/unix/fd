@@ -9,7 +9,7 @@
 
 if [[ "$1" == "-t" ]] || [[ "$1" == "--text" ]]; then
     shift
-    builtin rg --hidden --no-ignore "$@" || true
+    command rg --hidden --no-ignore "$@" || true
 else
-    builtin fd --hidden --no-ignore "$@"
+    command fd --hidden --no-ignore "$@"
 fi

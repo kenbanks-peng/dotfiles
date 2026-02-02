@@ -1,4 +1,0 @@
-#!/usr/bin/env zsh
-# [MISE] description="Find text, grep alternative"
-# [MISE] dir="{{cwd}}"
-rg --hidden --no-ignore "$@" || true
