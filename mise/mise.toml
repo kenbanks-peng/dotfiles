@@ -18,7 +18,6 @@
 "github:jdx/usage" = "latest"
 "nix:bun" = "latest"
 "nix:uv" = "latest"
-"go:github.com/wailsapp/wails/v3/cmd/wails3" = "latest"
 "cargo:krokiet" = "latest"
 "github:JohnnyMorganz/StyLua" = "latest"
 "github:sharkdp/fd" = "latest"
