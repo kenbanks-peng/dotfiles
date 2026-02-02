@@ -3,33 +3,42 @@
 # [MISE] dir="{{cwd}}"
 
 # Usage:
-#   fd [pattern]                    - Find files by regex (default)
-#   fd text [pattern]               - Search for text in files
-#   fd glob [glob-pattern]          - Find files by glob pattern
-#   fd tglob [glob] [text-pattern]  - Search for text in files matching glob
+#   fd [pattern]              - Find files (auto-detects glob vs regex)
+#   fd text [pattern]         - Search for text in all files
+#   fd text [pattern] [glob]  - Search for text in files matching glob
 
-case "$1" in
-    text)
-        shift
-        command rg --hidden --no-ignore "$@" || true
-        ;;
-    glob)
-        shift
-        command fd --hidden --no-ignore --glob "$@"
-        ;;
-    tglob)
-        shift
-        if [[ $# -lt 2 ]]; then
-            echo "Error: tglob requires both glob pattern and text pattern"
-            echo "Usage: fd tglob [glob-pattern] [text-pattern]"
-            exit 1
-        fi
-        glob_pattern="$1"
-        shift
-        command rg --hidden --no-ignore --glob "$glob_pattern" "$@" || true
-        ;;
-    *)
-        # Default: file search
-        command fd --hidden --no-ignore "$@"
-        ;;
-esac
+if [[ "$1" == "text" ]]; then
+    shift
+    text_pattern="$1"
+    file_glob="$2"
+
+    if [[ -z "$text_pattern" ]]; then
+        echo "Error: text pattern required"
+        echo "Usage: fd text [pattern] [glob]"
+        exit 1
+    fi
+
+    if [[ -n "$file_glob" ]]; then
+        # Search for text in files matching glob
+        command rg --hidden --no-ignore --glob "$file_glob" "$text_pattern" || true
+    else
+        # Search for text in all files
+        command rg --hidden --no-ignore "$text_pattern" || true
+    fi
+else
+    # File search with auto-detection of glob vs regex
+    pattern="$1"
+
+    if [[ -z "$pattern" ]]; then
+        echo "Error: pattern required"
+        echo "Usage: fd [pattern]"
+        exit 1
+    fi
+
+    # Auto-detect glob patterns (contain *, ?, [, or ])
+    if [[ "$pattern" =~ [\*\?\[\]] ]]; then
+        command fd --hidden --no-ignore --glob "$pattern"
+    else
+        command fd --hidden --no-ignore "$pattern"
+    fi
+fi
