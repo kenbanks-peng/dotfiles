@@ -95,6 +95,6 @@ map("<M-Right>", function()
 end, "resize right")
 
 -- manage conflict instead of depending on lazy load order
-local builtin = require("telescope.builtin")
+-- local builtin = require("telescope.builtin")
 -- map('<leader>sf', builtin.find_files, 'telescope search files')
 map("<leader><space>", "<cmd>Yazi toggle<cr>", "yazi toggle")
