@@ -16,7 +16,6 @@
 "nix:ruby" = "latest"
 "github:jdx/fnox" = "latest"
 "github:jdx/usage" = "latest"
-"nix:bun" = "latest"
 "cargo:krokiet" = "latest"
 "github:JohnnyMorganz/StyLua" = "latest"
 "github:sharkdp/fd" = "latest"
@@ -32,6 +31,8 @@
 "npm:openclaw" = "latest"
 "github:astral-sh/ruff" = "latest"
 "nix:go" = "latest"
+"nix:uv" = "latest"
+"nix:bun" = "latest"
 
 [settings]
 experimental = true
