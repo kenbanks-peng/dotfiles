@@ -28,7 +28,6 @@
 "github:o2sh/onefetch" = "latest"
 "github:Slackadays/Clipboard" = "latest"
 "github:bee-san/RustScan" = "latest"
-"npm:openclaw" = "latest"
 "github:astral-sh/ruff" = "latest"
 "nix:go" = "latest"
 "nix:uv" = "latest"
