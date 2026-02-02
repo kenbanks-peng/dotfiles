@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # [MISE] description="Git remote"
+# [MISE] dir="{{cwd}}"
 git remote -v

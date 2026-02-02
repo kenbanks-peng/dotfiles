@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # [MISE] description="DVC list"
+# [MISE] dir="{{cwd}}"
 dvc list . --dvc-only

@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 # [MISE] description="Git status"
+# [MISE] dir="{{cwd}}"
 git fetch
 git status

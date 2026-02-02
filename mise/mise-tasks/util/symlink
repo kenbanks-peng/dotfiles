@@ -1,5 +1,6 @@
 #!/usr/bin/env zsh
 # [MISE] description="Create a symlink with -symlink suffix"
+# [MISE] dir="{{cwd}}"
 
 # Convert to absolute paths
 original_abs=$(realpath "$1")

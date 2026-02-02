@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # [MISE] description="Git list files"
+# [MISE] dir="{{cwd}}"
 git ls-files
