@@ -3,13 +3,33 @@
 # [MISE] dir="{{cwd}}"
 
 # Usage:
-#   fd [pattern]           - Find files (default)
-#   fd -t [pattern]        - Find text using ripgrep
-#   fd --text [pattern]    - Find text using ripgrep
+#   fd [pattern]                    - Find files by regex (default)
+#   fd text [pattern]               - Search for text in files
+#   fd glob [glob-pattern]          - Find files by glob pattern
+#   fd tglob [glob] [text-pattern]  - Search for text in files matching glob
 
-if [[ "$1" == "-t" ]] || [[ "$1" == "--text" ]]; then
-    shift
-    command rg --hidden --no-ignore "$@" || true
-else
-    command fd --hidden --no-ignore "$@"
-fi
+case "$1" in
+    text)
+        shift
+        command rg --hidden --no-ignore "$@" || true
+        ;;
+    glob)
+        shift
+        command fd --hidden --no-ignore --glob "$@"
+        ;;
+    tglob)
+        shift
+        if [[ $# -lt 2 ]]; then
+            echo "Error: tglob requires both glob pattern and text pattern"
+            echo "Usage: fd tglob [glob-pattern] [text-pattern]"
+            exit 1
+        fi
+        glob_pattern="$1"
+        shift
+        command rg --hidden --no-ignore --glob "$glob_pattern" "$@" || true
+        ;;
+    *)
+        # Default: file search
+        command fd --hidden --no-ignore "$@"
+        ;;
+esac
