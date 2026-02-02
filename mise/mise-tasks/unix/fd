@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# [MISE] description="Find files or text (combined fd/rg)"
+# [MISE] dir="{{cwd}}"
+
+# Usage:
+#   fd [pattern]           - Find files (default)
+#   fd -t [pattern]        - Find text using ripgrep
+#   fd --text [pattern]    - Find text using ripgrep
+
+if [[ "$1" == "-t" ]] || [[ "$1" == "--text" ]]; then
+    shift
+    builtin rg --hidden --no-ignore "$@" || true
+else
+    builtin fd --hidden --no-ignore "$@"
+fi
