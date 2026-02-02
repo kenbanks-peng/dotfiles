@@ -362,7 +362,7 @@ thrift 0.22.0
 tmux 3.6a
 tokei 14.0.0
 tree 2.3.1
-tree-sitter 0.26.3
+tree-sitter 0.26.5
 tree-sitter@0.25 0.25.10
 ttyd 1.7.7_6
 turso 0.4.4
