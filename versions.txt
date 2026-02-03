@@ -9,7 +9,7 @@ audacity 3.7.7
 boop 1.4.0
 brainfm 0.0.217
 claude 1.1.1520,48ced7a78a74c4c1b03d1dab181d1b0dc21d8fc8
-claude-code 2.1.29
+claude-code 2.1.30
 cleanshot 4.8.7
 codex 0.94.0
 container 0.6.0
@@ -88,7 +88,7 @@ bash 5.3.9
 bat 0.26.1
 bat-extras 2024.08.24
 bbrew 2.2.1
-biome 2.3.13
+biome 2.3.14
 bird 0.8.0
 borders 1.8.4
 brotli 1.2.0
@@ -353,7 +353,7 @@ stow 2.4.1
 summarize 0.10.0
 svgo 4.0.0
 svt-av1 4.0.1
-syncthing 2.0.13
+syncthing 2.0.14
 tailspin 5.5.0
 tealdeer 1.8.1
 television 0.15.0
