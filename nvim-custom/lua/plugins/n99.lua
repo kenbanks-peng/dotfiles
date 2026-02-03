@@ -1,7 +1,10 @@
 return {
 	{
 		"ThePrimeagen/99",
-		config = function()
+		dependencies = {
+			"hrsh7th/nvim-cmp",
+		},
+		opts = function()
 			local _99 = require("99")
 
 			-- For logging that is to a file if you wish to trace through requests
@@ -9,7 +12,8 @@ return {
 			-- logging mechanisms within 99.  This is for more debugging purposes
 			local cwd = vim.uv.cwd()
 			local basename = vim.fs.basename(cwd)
-			_99.setup({
+
+			return {
 				logger = {
 					level = _99.DEBUG,
 					path = "/tmp/" .. basename .. ".99.debug",
@@ -17,34 +21,35 @@ return {
 				},
 
 				--- A new feature that is centered around tags
-				completion = {
-					--- Defaults to .cursor/rules
-					-- I am going to disable these until i understand the
-					-- problem better.  Inside of cursor rules there is also
-					-- application rules, which means i need to apply these
-					-- differently
-					-- cursor_rules = "<custom path to cursor rules>"
+				-- Disabled: cmp not loaded yet when opts runs
+				-- completion = {
+				--   --- Defaults to .cursor/rules
+				--   -- I am going to disable these until i understand the
+				--   -- problem better.  Inside of cursor rules there is also
+				--   -- application rules, which means i need to apply these
+				--   -- differently
+				--   -- cursor_rules = "<custom path to cursor rules>"
 
-					--- A list of folders where you have your own SKILL.md
-					--- Expected format:
-					--- /path/to/dir/<skill_name>/SKILL.md
-					---
-					--- Example:
-					--- Input Path:
-					--- "scratch/custom_rules/"
-					---
-					--- Output Rules:
-					--- {path = "scratch/custom_rules/vim/SKILL.md", name = "vim"},
-					--- ... the other rules in that dir ...
-					---
-					custom_rules = {
-						"scratch/custom_rules/",
-					},
+				--   --- A list of folders where you have your own SKILL.md
+				--   --- Expected format:
+				--   --- /path/to/dir/<skill_name>/SKILL.md
+				--   ---
+				--   --- Example:
+				--   --- Input Path:
+				--   --- "scratch/custom_rules/"
+				--   ---
+				--   --- Output Rules:
+				--   --- {path = "scratch/custom_rules/vim/SKILL.md", name = "vim"},
+				--   --- ... the other rules in that dir ...
+				--   ---
+				--   custom_rules = {
+				--     "scratch/custom_rules/",
+				--   },
 
-					--- What autocomplete do you use.  We currently only
-					--- support cmp right now
-					source = "cmp",
-				},
+				--   --- What autocomplete do you use.  We currently only
+				--   --- support cmp right now
+				--   source = "cmp",
+				-- },
 
 				--- WARNING: if you change cwd then this is likely broken
 				--- ill likely fix this in a later change
@@ -58,7 +63,11 @@ return {
 				md_files = {
 					"AGENT.md",
 				},
-			})
+			}
+		end,
+		config = function(_, opts)
+			local _99 = require("99")
+			_99.setup(opts)
 
 			-- Create your own short cuts for the different types of actions
 			vim.keymap.set("n", "<leader>9f", function()
