@@ -1,5 +1,31 @@
 #!/usr/bin/env bash
 # [MISE] description="Git status"
 # [MISE] dir="{{cwd}}"
-git fetch
+
+# Fetch from origin
+git fetch origin
+
+# Check if upstream remote exists and fetch from it
+if git remote | grep -q '^upstream$'; then
+    echo "Fetching from upstream..."
+    git fetch upstream
+    echo ""
+
+    # Get current branch
+    CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+
+    # Compare origin and upstream for current branch
+    if git rev-parse --verify "upstream/$CURRENT_BRANCH" &>/dev/null; then
+        BEHIND=$(git rev-list --count "origin/$CURRENT_BRANCH..upstream/$CURRENT_BRANCH" 2>/dev/null || echo "0")
+        AHEAD=$(git rev-list --count "upstream/$CURRENT_BRANCH..origin/$CURRENT_BRANCH" 2>/dev/null || echo "0")
+
+        if [ "$BEHIND" -gt 0 ] || [ "$AHEAD" -gt 0 ]; then
+            echo "Comparison of origin/$CURRENT_BRANCH with upstream/$CURRENT_BRANCH:"
+            [ "$BEHIND" -gt 0 ] && echo "  Behind upstream by $BEHIND commit(s)"
+            [ "$AHEAD" -gt 0 ] && echo "  Ahead of upstream by $AHEAD commit(s)"
+            echo ""
+        fi
+    fi
+fi
+
 git status
