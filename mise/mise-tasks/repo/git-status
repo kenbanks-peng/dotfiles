@@ -31,6 +31,8 @@ if git remote | grep -q '^upstream$'; then
             [ "$BEHIND" -gt 0 ] && echo "origin/$DEFAULT_BRANCH behind upstream/$DEFAULT_BRANCH by $BEHIND commit(s)"
             [ "$AHEAD" -gt 0 ] && echo "origin/$DEFAULT_BRANCH ahead of upstream/$DEFAULT_BRANCH by $AHEAD commit(s)"
             echo ""
+        else
+            echo "origin/$DEFAULT_BRANCH is up to date with upstream/$DEFAULT_BRANCH"
         fi
     fi
 fi
