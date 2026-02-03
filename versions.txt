@@ -11,7 +11,7 @@ brainfm 0.0.217
 claude 1.1.1520,48ced7a78a74c4c1b03d1dab181d1b0dc21d8fc8
 claude-code 2.1.29
 cleanshot 4.8.7
-codex 0.93.0
+codex 0.94.0
 container 0.6.0
 cursor 2.4.22,618c607a249dd7fd2ffc662c6531143833bebd44
 daisydisk 4.33.2
@@ -31,7 +31,7 @@ grandperspective 3.6.3
 iina 1.4.1,160
 karabiner-elements 15.9.0
 keyclu 0.31
-languagetool-desktop 2.10.1
+languagetool-desktop 2.10.2
 linear-linear 1.28.10,260130ifjf6a66q
 logos 48.0.0.0238
 microsoft-auto-update 4.81.25121042
@@ -43,7 +43,7 @@ orbstack 2.0.5,19905
 orion 1.0.3,142
 pdf-pals 1.9.0
 quarto 1.8.27
-raycast 1.104.3
+raycast 1.104.4
 screen-studio 3.5.2-4162
 sf-symbols 7.1,116
 sip-app 4.1.2
@@ -282,7 +282,7 @@ obsidian-cli 0.2.2
 oh-my-posh 29.1.0
 oniguruma 6.9.10
 openai-whisper 20250625_3
-openblas 0.3.31
+openblas 0.3.31_1
 opencode 1.1.40
 openexr 3.4.4_1
 openhue-cli 0.23
@@ -337,7 +337,7 @@ shaderc 2026.1
 shared-mime-info 2.4_1
 shellcheck 0.11.0
 simdjson 4.2.4
-sk 2.0.0
+sk 2.0.1
 sketchybar 2.23.0
 sleef 3.9.0
 snappy 1.2.2
@@ -408,7 +408,8 @@ github:ajeetdsouza/zoxide              0.9.9             ~/.config/mise/mise.tom
 github:astral-sh/ruff                  0.14.14           ~/.config/mise/mise.toml  latest
 github:bee-san/RustScan                2.4.1             ~/.config/mise/mise.toml  latest
 github:h0rv/d2-mcp                     1.1.0             ~/.config/mise/mise.toml  latest
-github:jdx/fnox                        1.10.1            ~/.config/mise/mise.toml  latest
+github:jdx/fnox                        1.10.1
+github:jdx/fnox                        1.11.0            ~/.config/mise/mise.toml  latest
 github:jdx/usage                       2.16.1            ~/.config/mise/mise.toml  latest
 github:jesseduffield/lazygit           0.58.1            ~/.config/mise/mise.toml  latest
 github:melkeydev/go-blueprint          0.10.11           ~/.config/mise/mise.toml  latest
@@ -429,7 +430,6 @@ nix:uv                                 0.9.27 (symlink)  ~/.config/mise/mise.tom
 npm:@mixedbread/mgrep                  0.1.10            ~/.config/mise/mise.toml  latest
 npm:github-markdown-css                5.8.1             ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                          5.2.5             ~/.config/mise/mise.toml  latest
-npm:openclaw                           2026.1.30         ~/.config/mise/mise.toml  latest
 npm:vite                               7.3.1             ~/.config/mise/mise.toml  latest
 pipx:SuperClaude                       4.2.0             ~/.config/mise/mise.toml  latest
 
