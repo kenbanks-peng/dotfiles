@@ -2,4 +2,16 @@
 # [MISE] description="Line count"
 # [MISE] dir="{{cwd}}"
 
-wc -l "$@"
+files=()
+for arg in "$@"; do
+    [[ -f "$arg" ]] && files+=("$arg")
+done
+
+if [[ ${#files[@]} -eq 0 ]]; then
+    echo "No files found" >&2
+    exit 1
+elif [[ ${#files[@]} -eq 1 ]]; then
+    wc -l < "${files[0]}" | tr -d ' '
+else
+    wc -l "${files[@]}"
+fi
