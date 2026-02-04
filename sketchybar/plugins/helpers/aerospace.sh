@@ -397,17 +397,11 @@ aerospace_new_window_id() {
     return
   fi
 
-  # Get appname and window title from all_windows JSON
+  # Get appname from all_windows JSON
   local appname=$(aerospace_get_appname_by_windowid "$all_windows" "$window_id")
-  local window_title=$(aerospace_get_window_title_by_windowid "$all_windows" "$window_id")
 
   # Skip if appname is empty
   if [[ -z "$appname" ]]; then
-    return
-  fi
-
-  # Skip excluded apps/windows (checks both app name and window title patterns)
-  if ! apptype_allow_app "$appname" "$window_title"; then
     return
   fi
 
