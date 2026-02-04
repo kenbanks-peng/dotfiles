@@ -3,15 +3,15 @@ BREW CASKS
 1password-cli 2.32.0
 aerospace 0.20.2-Beta
 affinity 3.0.3,4027
-antigravity 1.15.8,5724687216017408
+antigravity 1.16.5,6703236727046144
 anybar 0.2.3
 audacity 3.7.7
 boop 1.4.0
 brainfm 0.0.217
-claude 1.1.1520,48ced7a78a74c4c1b03d1dab181d1b0dc21d8fc8
-claude-code 2.1.30
+claude 1.1.1890,af393cbac809fe788a4d156cb076b0e3e2b1160e
+claude-code 2.1.31
 cleanshot 4.8.7
-codex 0.94.0
+codex 0.95.0
 cursor 2.4.22,618c607a249dd7fd2ffc662c6531143833bebd44
 daisydisk 4.33.2
 espanso 2.3.0
@@ -24,7 +24,7 @@ font-symbols-only-nerd-font 3.4.0
 font-tex-gyre-termes 2.004
 ghostty 1.2.3
 git-credential-manager 2.7.0
-google-chrome 144.0.7559.110
+google-chrome 144.0.7559.133
 google-drive 120.0.1
 grandperspective 3.6.3
 iina 1.4.1,160
@@ -56,7 +56,7 @@ visual-studio-code 1.108.2
 vlc 3.0.23
 yaak 2026.1.2
 zed 0.221.5
-zen 1.18.3b
+zen 1.18.4b
 zoom 6.7.2.72191
 
 BREW FORMULAS
@@ -125,13 +125,13 @@ flock 0.4.0
 fmt 12.1.0
 fontconfig 2.17.1
 freetype 2.14.1_1
-fresh-editor 0.1.98
+fresh-editor 0.1.99
 fribidi 1.0.16
 fx 39.2.0
 fzf 0.67.0
 gawk 5.3.1
 gcc 15.2.0
-gemini-cli 0.26.0
+gemini-cli 0.27.0
 gettext 1.0
 gh 2.86.0
 gifgrep 0.2.1
@@ -252,7 +252,7 @@ lz4 1.10.0
 lzo 2.10
 m4 1.4.20
 macmon 0.6.1
-mad 0.15.1b
+mad 0.16.4
 makensis 3.11
 mcfly 0.9.4
 melody 0.20.0
@@ -281,7 +281,7 @@ oh-my-posh 29.1.0
 oniguruma 6.9.10
 openai-whisper 20250625_3
 openblas 0.3.31_1
-opencode 1.1.40
+opencode 1.1.50
 openexr 3.4.4_1
 openhue-cli 0.23
 openjpeg 2.5.4
@@ -313,7 +313,7 @@ pybind11 3.0.1_1
 pycparser 3.0
 pydantic 2.12.5
 pygit2 1.19.1
-python@3.13 3.13.11_2
+python@3.13 3.13.12
 python@3.14 3.14.2_1
 pytorch 2.10.0
 qrencode 4.1.1
@@ -386,7 +386,7 @@ xorgproto 2025.1
 xz 5.8.2
 yabai 7.1.16
 yq 4.52.2
-yt-dlp 2026.1.31
+yt-dlp 2026.2.4
 yyjson 0.12.0
 z3 4.15.4
 zellij 0.43.1
