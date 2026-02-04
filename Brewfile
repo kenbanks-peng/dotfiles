@@ -39,7 +39,6 @@ brew "caddy"
 brew "carapace"
 brew "cheat"
 brew "choose-rust"
-brew "container", link: false
 brew "coreutils"
 brew "croc"
 brew "csvtk"
