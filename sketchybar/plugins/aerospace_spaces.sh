@@ -80,7 +80,8 @@ elif [ "$SENDER" = "aerospace_workspace_change" ]; then
 
   # aerospace exec_on_workspace_change or on_focus_change fired
   appname=$(aerospace_get_appname_by_windowid "$all_windows" "$focused_window_id")
-  if apptype_allow_app "$appname"; then
+  window_title=$(aerospace_get_window_title_by_windowid "$all_windows" "$focused_window_id")
+  if apptype_allow_app "$appname" "$window_title"; then
     aerospace_focused_window_change "$focused_window_id" "$all_windows"
   fi
 
@@ -91,7 +92,8 @@ elif [ "$SENDER" = "yabai_window_created" ] || [ "$SENDER" = "yabai_window_demin
 
   # Validate window exists in aerospace
   appname=$(aerospace_get_appname_by_windowid "$all_windows" "$window_id")
-  if [[ -n "$appname" ]] && apptype_allow_app "$appname"; then
+  window_title=$(aerospace_get_window_title_by_windowid "$all_windows" "$window_id")
+  if [[ -n "$appname" ]] && apptype_allow_app "$appname" "$window_title"; then
     aerospace_new_window_id "$window_id" "$all_windows"
   fi
 
