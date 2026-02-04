@@ -12,7 +12,7 @@ source "$CONFIG_DIR/env.sh"
 # Returns JSON array of all windows with metadata
 # Usage: all_windows=$(aerospace_all_windows)
 aerospace_all_windows() {
-  aerospace list-windows --all --json --format "%{window-id}%{app-name}%{workspace}%{workspace-is-focused}"
+  aerospace list-windows --all --json --format "%{window-id}%{app-name}%{window-title}%{workspace}%{workspace-is-focused}"
 }
 
 # Ensure all_windows is populated - returns passed value or fetches fresh
@@ -231,6 +231,31 @@ aerospace_get_appname_by_windowid() {
   echo "$json" | jq -r --arg wid "$window_id" '.[] | select(."window-id" == ($wid | tonumber)) | ."app-name"'
 }
 
+# Get window title by window ID from all_windows JSON
+# Usage: window_title=$(aerospace_get_window_title_by_windowid "$all_windows" "$window_id")
+aerospace_get_window_title_by_windowid() {
+  local json="$1"
+  local window_id="$2"
+  # Return empty if window_id is empty (prevents jq tonumber error)
+  [[ -z "$window_id" ]] && return
+  echo "$json" | jq -r --arg wid "$window_id" '.[] | select(."window-id" == ($wid | tonumber)) | ."window-title"'
+}
+
+# Check if a window should be excluded from display
+# Usage: if should_exclude_window "$appname" "$window_title"; then skip; fi
+# Returns 0 (true) if window should be excluded, 1 (false) otherwise
+should_exclude_window() {
+  local appname="$1"
+  local window_title="$2"
+
+  # Exclude Outlook Reminder windows
+  if [[ "$appname" == "Microsoft Outlook" ]] && [[ "$window_title" =~ [0-9]+[[:space:]]*Reminder ]]; then
+    return 0  # Should exclude
+  fi
+
+  return 1  # Should not exclude
+}
+
 # Get focused window ID using aerospace (no yabai dependency)
 # Usage: focused_window_id=$(aerospace_get_focused_window_id)
 aerospace_get_focused_window_id() {
@@ -395,6 +420,12 @@ aerospace_new_window_id() {
     return
   fi
 
+  # Skip excluded windows by title (e.g., Outlook Reminders)
+  local window_title=$(aerospace_get_window_title_by_windowid "$all_windows" "$window_id")
+  if should_exclude_window "$appname" "$window_title"; then
+    return
+  fi
+
   local item="window.$sid.$window_id.$appname"
   local icon_color="$(sketchy_get_space_color foreground false)"
 
@@ -471,6 +502,12 @@ aerospace_add_apps_in_spaceid() {
 
     # Skip excluded apps (no more dialog check - aerospace doesn't track dialogs)
     if ! apptype_allow_app "$appname"; then
+      continue
+    fi
+
+    # Skip excluded windows by title (e.g., Outlook Reminders)
+    local window_title=$(aerospace_get_window_title_by_windowid "$all_windows" "$window_id")
+    if should_exclude_window "$appname" "$window_title"; then
       continue
     fi
 
