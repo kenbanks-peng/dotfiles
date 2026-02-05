@@ -3,6 +3,36 @@ import { createRoot, useKeyboard, useRenderer, useTerminalDimensions } from "@op
 import { useState, useEffect, useRef, useCallback } from "react";
 import { join, dirname } from "path";
 
+// Catppuccin Mocha theme
+const theme = {
+  base: "#1e1e2e",
+  mantle: "#181825",
+  crust: "#11111b",
+  surface0: "#313244",
+  surface1: "#45475a",
+  surface2: "#585b70",
+  overlay0: "#6c7086",
+  overlay1: "#7f849c",
+  overlay2: "#9399b2",
+  subtext0: "#a6adc8",
+  subtext1: "#bac2de",
+  text: "#cdd6f4",
+  lavender: "#b4befe",
+  blue: "#89b4fa",
+  sapphire: "#74c7ec",
+  sky: "#89dceb",
+  teal: "#94e2d5",
+  green: "#a6e3a1",
+  yellow: "#f9e2af",
+  peach: "#fab387",
+  maroon: "#eba0ac",
+  red: "#f38ba8",
+  mauve: "#cba6f7",
+  pink: "#f5c2e7",
+  flamingo: "#f2cdcd",
+  rosewater: "#f5e0dc",
+};
+
 // Strip ANSI escape codes
 function stripAnsi(str: string): string {
   return str.replace(/\x1B\[[0-9;]*[A-Za-z]/g, "");
@@ -156,19 +186,19 @@ function CommandOutput({ command, focused }: CommandOutputProps) {
   }, [focused, isRunning]));
 
   return (
-    <box flexDirection="column" flexGrow={1} border borderStyle={focused ? "double" : "rounded"} borderColor={focused ? "#00FF00" : "#888888"} padding={1}>
-      <text attributes={TextAttributes.BOLD}>Output {isRunning && "(Running...)"}</text>
+    <box flexDirection="column" flexGrow={1} border borderStyle={focused ? "double" : "rounded"} borderColor={focused ? theme.green : theme.surface2} backgroundColor={theme.mantle} padding={1}>
+      <text fg={theme.mauve} attributes={TextAttributes.BOLD}>Output {isRunning && <span fg={theme.yellow}>(Running...)</span>}</text>
       <scrollbox flexGrow={1}>
         {output.length > 0 ? (
           output.map((line, i) => (
-            <text key={i}>{line || " "}</text>
+            <text key={i} fg={theme.text}>{line || " "}</text>
           ))
         ) : (
-          <text fg="#666666">Select a command to run</text>
+          <text fg={theme.overlay1}>Select a command to run</text>
         )}
       </scrollbox>
       {focused && isRunning && (
-        <text fg="#00FF00" attributes={TextAttributes.DIM}>
+        <text fg={theme.green} attributes={TextAttributes.DIM}>
           Type to interact | Ctrl+C to stop
         </text>
       )}
@@ -194,6 +224,24 @@ function App() {
     loadRepos().then(setRepos);
   }, []);
 
+  // Navigate forward through columns
+  const navigateForward = () => {
+    setFocusedColumn(prev => {
+      if (prev === "commands") return selectedCommand === "add" ? "repos" : "output";
+      if (prev === "repos") return "output";
+      return "commands";
+    });
+  };
+
+  // Navigate backward through columns
+  const navigateBackward = () => {
+    setFocusedColumn(prev => {
+      if (prev === "output") return selectedCommand === "add" ? "repos" : "commands";
+      if (prev === "repos") return "commands";
+      return "output";
+    });
+  };
+
   // Handle global keyboard navigation
   useKeyboard((key) => {
     if (key.name === "escape" || (key.ctrl && key.name === "c")) {
@@ -201,30 +249,26 @@ function App() {
       return;
     }
 
-    // Tab to switch columns
-    if (key.name === "tab") {
-      if (key.shift) {
-        // Shift+Tab goes backwards
-        setFocusedColumn(prev => {
-          if (prev === "output") return selectedCommand === "add" ? "repos" : "commands";
-          if (prev === "repos") return "toggle";
-          if (prev === "toggle") return "commands";
-          return "commands";
-        });
-      } else {
-        // Tab goes forward
-        setFocusedColumn(prev => {
-          if (prev === "commands") return "toggle";
-          if (prev === "toggle") return selectedCommand === "add" ? "repos" : "output";
-          if (prev === "repos") return "output";
-          return "commands";
-        });
-      }
+    // Tab / Right arrow to switch columns forward
+    if (key.name === "tab" && !key.shift) {
+      navigateForward();
       return;
     }
 
-    // Toggle global/project with 'g' when in toggle focus
-    if (focusedColumn === "toggle" && (key.name === "enter" || key.name === "space")) {
+    // Shift+Tab / Left arrow to switch columns backward
+    if ((key.name === "tab" && key.shift) || key.name === "left") {
+      navigateBackward();
+      return;
+    }
+
+    // Right arrow navigates forward (but not when in a select that might use it)
+    if (key.name === "right" && focusedColumn !== "commands" && focusedColumn !== "repos") {
+      navigateForward();
+      return;
+    }
+
+    // Toggle global/project with space/enter when in commands column (on the toggle)
+    if (focusedColumn === "commands" && key.name === "g") {
       setIsGlobal(prev => !prev);
       return;
     }
@@ -250,71 +294,86 @@ function App() {
   }));
 
   const showRepos = selectedCommand === "add";
-  const col1Width = 20;
+  const col1Width = 22;
   const col2Width = showRepos ? 30 : 0;
 
   return (
-    <box flexDirection="column" flexGrow={1}>
+    <box flexDirection="column" flexGrow={1} backgroundColor={theme.base}>
       {/* Header */}
       <box justifyContent="center" padding={1}>
-        <ascii-font font="tiny" text="Skills" />
+        <ascii-font font="tiny" text="Skills" color={theme.mauve} />
       </box>
 
       {/* Main content */}
       <box flexDirection="row" flexGrow={1} gap={1} padding={1}>
-        {/* Column 1: Commands */}
-        <box flexDirection="column" width={col1Width} border borderStyle="rounded" padding={1}>
-          <text attributes={TextAttributes.BOLD}>Commands</text>
-          {commands.length > 0 ? (
-            <select
-              options={commandOptions}
-              focused={focusedColumn === "commands"}
-              height={height - 12}
-              onChange={(index, option) => setSelectedCommand(option.value)}
-              onSelect={(index, option) => {
-                setSelectedCommand(option.value);
-                if (option.value === "add") {
-                  setFocusedColumn("repos");
-                } else {
-                  // For non-add commands, run directly
-                  const globalFlag = isGlobal ? "-g " : "";
-                  setCurrentCommand(`skills ${option.value} ${globalFlag}`);
-                  setFocusedColumn("output");
-                }
-              }}
-            />
-          ) : (
-            <text fg="#888888">Loading...</text>
-          )}
-        </box>
+        {/* Column 1: Commands + Scope toggle */}
+        <box flexDirection="column" width={col1Width}>
+          {/* Commands */}
+          <box
+            flexDirection="column"
+            border
+            borderStyle={focusedColumn === "commands" ? "double" : "rounded"}
+            borderColor={focusedColumn === "commands" ? theme.lavender : theme.surface2}
+            backgroundColor={theme.mantle}
+            padding={1}
+          >
+            <text fg={theme.blue} attributes={TextAttributes.BOLD}>Commands</text>
+            {commands.length > 0 ? (
+              <select
+                options={commandOptions}
+                focused={focusedColumn === "commands"}
+                height={height - 15}
+                onChange={(index, option) => setSelectedCommand(option.value)}
+                onSelect={(index, option) => {
+                  setSelectedCommand(option.value);
+                  if (option.value === "add") {
+                    setFocusedColumn("repos");
+                  } else {
+                    // For non-add commands, run directly
+                    const globalFlag = isGlobal ? "-g " : "";
+                    setCurrentCommand(`skills ${option.value} ${globalFlag}`);
+                    setFocusedColumn("output");
+                  }
+                }}
+              />
+            ) : (
+              <text fg={theme.overlay1}>Loading...</text>
+            )}
+          </box>
 
-        {/* Toggle: Global/Project */}
-        <box flexDirection="column" width={12}>
+          {/* Scope toggle - under commands */}
           <box
             border
-            borderStyle={focusedColumn === "toggle" ? "double" : "rounded"}
-            borderColor={focusedColumn === "toggle" ? "#00FF00" : "#888888"}
-            padding={1}
-            flexDirection="column"
+            borderStyle="rounded"
+            borderColor={theme.surface2}
+            backgroundColor={theme.mantle}
+            paddingLeft={1}
+            paddingRight={1}
+            flexDirection="row"
             alignItems="center"
+            justifyContent="space-between"
+            marginTop={1}
+            height={3}
           >
-            <text attributes={TextAttributes.BOLD}>Scope</text>
-            <text fg={isGlobal ? "#00FF00" : "#888888"}>
-              {isGlobal ? "[x]" : "[ ]"} Global
-            </text>
-            <text fg={!isGlobal ? "#00FF00" : "#888888"}>
-              {!isGlobal ? "[x]" : "[ ]"} Project
+            <text fg={theme.subtext1}>Scope:</text>
+            <text fg={isGlobal ? theme.green : theme.peach} attributes={TextAttributes.BOLD}>
+              {isGlobal ? "global" : "project"}
             </text>
           </box>
-          <text fg="#666666" attributes={TextAttributes.DIM}>
-            Tab to focus
-          </text>
         </box>
 
         {/* Column 2: Repos (shown for "add" command) */}
         {showRepos && (
-          <box flexDirection="column" width={col2Width} border borderStyle="rounded" padding={1}>
-            <text attributes={TextAttributes.BOLD}>Repositories</text>
+          <box
+            flexDirection="column"
+            width={col2Width}
+            border
+            borderStyle={focusedColumn === "repos" ? "double" : "rounded"}
+            borderColor={focusedColumn === "repos" ? theme.lavender : theme.surface2}
+            backgroundColor={theme.mantle}
+            padding={1}
+          >
+            <text fg={theme.blue} attributes={TextAttributes.BOLD}>Repositories</text>
             {repos.length > 0 ? (
               <select
                 options={repoOptions}
@@ -329,7 +388,7 @@ function App() {
                 }}
               />
             ) : (
-              <text fg="#888888">No repos in skills.txt</text>
+              <text fg={theme.overlay1}>No repos in skills.txt</text>
             )}
           </box>
         )}
@@ -339,12 +398,13 @@ function App() {
       </box>
 
       {/* Footer */}
-      <box padding={1} borderStyle="single" borderColor="#444444">
-        <text fg="#888888">
-          <span fg="#00FFFF">Tab</span>: Switch columns |
-          <span fg="#00FFFF">↑/↓</span>: Navigate |
-          <span fg="#00FFFF">Enter</span>: Select |
-          <span fg="#00FFFF">Esc</span>: Exit
+      <box padding={1} borderStyle="single" borderColor={theme.surface1} backgroundColor={theme.crust}>
+        <text fg={theme.subtext0}>
+          <span fg={theme.sapphire}>←/→</span><span fg={theme.overlay1}> or </span><span fg={theme.sapphire}>Tab</span><span fg={theme.overlay1}>: Switch  </span>
+          <span fg={theme.sapphire}>↑/↓</span><span fg={theme.overlay1}>: Navigate  </span>
+          <span fg={theme.sapphire}>Enter</span><span fg={theme.overlay1}>: Select  </span>
+          <span fg={theme.sapphire}>g</span><span fg={theme.overlay1}>: Toggle scope  </span>
+          <span fg={theme.sapphire}>Esc</span><span fg={theme.overlay1}>: Exit</span>
         </text>
       </box>
     </box>
