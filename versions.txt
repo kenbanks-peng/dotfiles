@@ -1,6 +1,6 @@
 BREW CASKS
 ----------
-1password-cli 2.32.0
+1password-cli 2.32.1
 aerospace 0.20.2-Beta
 affinity 3.0.3,4027
 antigravity 1.16.5,6703236727046144
@@ -8,10 +8,10 @@ anybar 0.2.3
 audacity 3.7.7
 boop 1.4.0
 brainfm 0.0.217
-claude 1.1.2102,c5675a92379e95093157d911d894bcb2315461e7
-claude-code 2.1.31
+claude 1.1.2128,208c9a5d28ac54e2e12e93a9f6e1cd3019cfadbf
+claude-code 2.1.32
 cleanshot 4.8.7
-codex 0.97.0
+codex 0.98.0
 cursor 2.4.28,f3f5cec40024283013878b50c4f9be4002e0b587
 daisydisk 4.33.2
 espanso 2.3.0
@@ -131,7 +131,7 @@ fx 39.2.0
 fzf 0.67.0
 gawk 5.3.1
 gcc 15.2.0
-gemini-cli 0.27.0
+gemini-cli 0.27.1
 gettext 1.0
 gh 2.86.0
 gifgrep 0.2.1
@@ -217,7 +217,7 @@ libpng 1.6.54
 libsamplerate 0.2.2
 libsndfile 1.2.2_1
 libsql 0.24.32
-libssh2 1.11.1
+libssh2 1.11.1_1
 libtasn1 4.21.0
 libtiff 4.7.1
 libtool 2.5.4
@@ -294,7 +294,7 @@ p11-kit 0.26.1
 pandoc 3.9
 pass 1.7.4
 pcaudiolib 1.3
-pcre2 10.47
+pcre2 10.47_1
 peekaboo 3.0.0-beta3
 pgvector 0.8.1
 pinentry 1.3.2
@@ -345,7 +345,7 @@ songsee 0.1.0
 sox 14.4.2_6
 spark 1.0.1
 sqlc 1.30.0
-sqlite 3.51.2
+sqlite 3.51.2_1
 sshs 4.7.2
 stow 2.4.1
 summarize 0.10.0
@@ -392,49 +392,49 @@ z3 4.15.4
 zellij 0.43.1
 zimg 3.0.6
 zsh 5.9
-zstd 1.5.7
+zstd 1.5.7_1
 
 MISE PACKAGES
 -------------
-cargo:cargo-cache                      0.8.3             ~/Software/Public/dotfiles/mise/mise.toml  latest
-cargo:cargo-update                     18.0.0            ~/Software/Public/dotfiles/mise/mise.toml  latest
-cargo:krokiet                          10.0.0            ~/Software/Public/dotfiles/mise/mise.toml  latest
-cargo:sbyte                            0.3.3             ~/Software/Public/dotfiles/mise/mise.toml  latest
-github:JohnnyMorganz/StyLua            2.3.1             ~/Software/Public/dotfiles/mise/mise.toml  latest
-github:Slackadays/Clipboard            0.10.0            ~/Software/Public/dotfiles/mise/mise.toml  latest
-github:ajeetdsouza/zoxide              0.9.9             ~/Software/Public/dotfiles/mise/mise.toml  latest
-github:astral-sh/ruff                  0.15.0            ~/Software/Public/dotfiles/mise/mise.toml  latest
-github:bee-san/RustScan                2.4.1             ~/Software/Public/dotfiles/mise/mise.toml  latest
-github:h0rv/d2-mcp                     1.1.0             ~/Software/Public/dotfiles/mise/mise.toml  latest
+cargo:cargo-cache                      0.8.3             ~/.config/mise/mise.toml  latest
+cargo:cargo-update                     18.0.0            ~/.config/mise/mise.toml  latest
+cargo:krokiet                          10.0.0            ~/.config/mise/mise.toml  latest
+cargo:sbyte                            0.3.3             ~/.config/mise/mise.toml  latest
+github:JohnnyMorganz/StyLua            2.3.1             ~/.config/mise/mise.toml  latest
+github:Slackadays/Clipboard            0.10.0            ~/.config/mise/mise.toml  latest
+github:ajeetdsouza/zoxide              0.9.9             ~/.config/mise/mise.toml  latest
+github:astral-sh/ruff                  0.15.0            ~/.config/mise/mise.toml  latest
+github:bee-san/RustScan                2.4.1             ~/.config/mise/mise.toml  latest
+github:h0rv/d2-mcp                     1.1.0             ~/.config/mise/mise.toml  latest
 github:jdx/fnox                        1.10.1
-github:jdx/fnox                        1.11.0            ~/Software/Public/dotfiles/mise/mise.toml  latest
-github:jdx/usage                       2.16.1            ~/Software/Public/dotfiles/mise/mise.toml  latest
-github:jesseduffield/lazygit           0.58.1            ~/Software/Public/dotfiles/mise/mise.toml  latest
-github:melkeydev/go-blueprint          0.10.11           ~/Software/Public/dotfiles/mise/mise.toml  latest
-github:neilotoole/sq                   0.48.12           ~/Software/Public/dotfiles/mise/mise.toml  latest
-github:noborus/ov                      0.50.2            ~/Software/Public/dotfiles/mise/mise.toml  latest
-github:o2sh/onefetch                   2.26.1            ~/Software/Public/dotfiles/mise/mise.toml  latest
-github:sharkdp/fd                      10.3.0            ~/Software/Public/dotfiles/mise/mise.toml  latest
-github:sharkdp/pastel                  0.11.0            ~/Software/Public/dotfiles/mise/mise.toml  latest
-github:sxyazi/yazi                     26.1.22           ~/Software/Public/dotfiles/mise/mise.toml  latest
+github:jdx/fnox                        1.11.0            ~/.config/mise/mise.toml  latest
+github:jdx/usage                       2.16.1            ~/.config/mise/mise.toml  latest
+github:jesseduffield/lazygit           0.58.1            ~/.config/mise/mise.toml  latest
+github:melkeydev/go-blueprint          0.10.11           ~/.config/mise/mise.toml  latest
+github:neilotoole/sq                   0.48.12           ~/.config/mise/mise.toml  latest
+github:noborus/ov                      0.50.2            ~/.config/mise/mise.toml  latest
+github:o2sh/onefetch                   2.26.1            ~/.config/mise/mise.toml  latest
+github:sharkdp/fd                      10.3.0            ~/.config/mise/mise.toml  latest
+github:sharkdp/pastel                  0.11.0            ~/.config/mise/mise.toml  latest
+github:sxyazi/yazi                     26.1.22           ~/.config/mise/mise.toml  latest
 go                                     1.25.6
-go                                     1.25.7            ~/Software/Public/dotfiles/mise/mise.toml  latest
-go:golang.org/x/tools/gopls            latest            ~/Software/Public/dotfiles/mise/mise.toml  latest
+go                                     1.25.7            ~/.config/mise/mise.toml  latest
+go:golang.org/x/tools/gopls            latest            ~/.config/mise/mise.toml  latest
 go:golang.org/x/tools/gopls            0.21.0
-go:honnef.co/go/tools/cmd/staticcheck  latest            ~/Software/Public/dotfiles/mise/mise.toml  latest
+go:honnef.co/go/tools/cmd/staticcheck  latest            ~/.config/mise/mise.toml  latest
 go:honnef.co/go/tools/cmd/staticcheck  0.7.0-0.dev
-nix:bun                                1.3.8 (symlink)   ~/Software/Public/dotfiles/mise/mise.toml  latest
-nix:nodejs                             25.5.0 (symlink)  ~/Software/Public/dotfiles/mise/mise.toml  latest
-nix:ruby                               4.0.1 (symlink)   ~/Software/Public/dotfiles/mise/mise.toml  latest
-nix:rustup                             1.28.2 (symlink)  ~/Software/Public/dotfiles/mise/mise.toml  latest
-nix:uv                                 0.9.27 (symlink)  ~/Software/Public/dotfiles/mise/mise.toml  latest
-npm:@mixedbread/mgrep                  0.1.10            ~/Software/Public/dotfiles/mise/mise.toml  latest
-npm:github-markdown-css                5.9.0             ~/Software/Public/dotfiles/mise/mise.toml  latest
-npm:md-to-pdf                          5.2.5             ~/Software/Public/dotfiles/mise/mise.toml  latest
+nix:bun                                1.3.8 (symlink)   ~/.config/mise/mise.toml  latest
+nix:nodejs                             25.5.0 (symlink)  ~/.config/mise/mise.toml  latest
+nix:ruby                               4.0.1 (symlink)   ~/.config/mise/mise.toml  latest
+nix:rustup                             1.28.2 (symlink)  ~/.config/mise/mise.toml  latest
+nix:uv                                 0.9.27 (symlink)  ~/.config/mise/mise.toml  latest
+npm:@mixedbread/mgrep                  0.1.10            ~/.config/mise/mise.toml  latest
+npm:github-markdown-css                5.9.0             ~/.config/mise/mise.toml  latest
+npm:md-to-pdf                          5.2.5             ~/.config/mise/mise.toml  latest
 npm:skills                             1.3.5
-npm:skills                             1.3.6             ~/Software/Public/dotfiles/mise/mise.toml  latest
-npm:vite                               7.3.1             ~/Software/Public/dotfiles/mise/mise.toml  latest
-pipx:SuperClaude                       4.2.0             ~/Software/Public/dotfiles/mise/mise.toml  latest
+npm:skills                             1.3.6             ~/.config/mise/mise.toml  latest
+npm:vite                               7.3.1             ~/.config/mise/mise.toml  latest
+pipx:SuperClaude                       4.2.0             ~/.config/mise/mise.toml  latest
 
 RUSTUP/CARGO
 ------------
