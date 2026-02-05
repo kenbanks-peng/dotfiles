@@ -220,7 +220,12 @@ function App() {
 
   // Load commands and repos on mount
   useEffect(() => {
-    parseSkillsCommands().then(setCommands);
+    parseSkillsCommands().then(cmds => {
+      setCommands(cmds);
+      if (cmds.length > 0 && !selectedCommand) {
+        setSelectedCommand(cmds[0]);
+      }
+    });
     loadRepos().then(setRepos);
   }, []);
 
@@ -250,7 +255,7 @@ function App() {
     }
 
     // Tab / Right arrow to switch columns forward
-    if (key.name === "tab" && !key.shift) {
+    if ((key.name === "tab" && !key.shift) || key.name === "right") {
       navigateForward();
       return;
     }
@@ -258,12 +263,6 @@ function App() {
     // Shift+Tab / Left arrow to switch columns backward
     if ((key.name === "tab" && key.shift) || key.name === "left") {
       navigateBackward();
-      return;
-    }
-
-    // Right arrow navigates forward (but not when in a select that might use it)
-    if (key.name === "right" && focusedColumn !== "commands" && focusedColumn !== "repos") {
-      navigateForward();
       return;
     }
 
@@ -283,7 +282,6 @@ function App() {
 
   const commandOptions = commands.map(cmd => ({
     name: cmd,
-    description: getCommandDescription(cmd),
     value: cmd,
   }));
 
@@ -316,13 +314,14 @@ function App() {
             borderColor={focusedColumn === "commands" ? theme.lavender : theme.surface2}
             backgroundColor={theme.mantle}
             padding={1}
+            flexGrow={1}
           >
             <text fg={theme.blue} attributes={TextAttributes.BOLD}>Commands</text>
             {commands.length > 0 ? (
               <select
                 options={commandOptions}
                 focused={focusedColumn === "commands"}
-                height={height - 15}
+                height={height - 18}
                 onChange={(index, option) => setSelectedCommand(option.value)}
                 onSelect={(index, option) => {
                   setSelectedCommand(option.value);
@@ -338,6 +337,12 @@ function App() {
               />
             ) : (
               <text fg={theme.overlay1}>Loading...</text>
+            )}
+            {/* Description of selected command */}
+            {selectedCommand && (
+              <text fg={theme.subtext0} attributes={TextAttributes.ITALIC}>
+                {getCommandDescription(selectedCommand)}
+              </text>
             )}
           </box>
 
