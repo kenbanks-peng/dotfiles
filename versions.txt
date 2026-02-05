@@ -11,7 +11,7 @@ brainfm 0.0.217
 claude 1.1.1890,af393cbac809fe788a4d156cb076b0e3e2b1160e
 claude-code 2.1.31
 cleanshot 4.8.7
-codex 0.95.0
+codex 0.96.0
 cursor 2.4.22,618c607a249dd7fd2ffc662c6531143833bebd44
 daisydisk 4.33.2
 espanso 2.3.0
@@ -52,10 +52,10 @@ symboliclinker 2.2
 syntax-highlight 2.1.27
 typeface 4.2.3,4845
 vibetunnel 1.0.0-beta.15
-visual-studio-code 1.108.2
+visual-studio-code 1.109.0
 vlc 3.0.23
 yaak 2026.1.2
-zed 0.221.5
+zed 0.222.2
 zen 1.18.4b
 zoom 6.7.2.72191
 
@@ -103,7 +103,7 @@ cffi 2.0.0_1
 cheat 4.4.2
 choose-rust 1.3.7
 container 0.9.0
-coreutils 9.9
+coreutils 9.10
 croc 10.3.1
 cryptography 46.0.4
 csvtk 0.36.0
@@ -270,7 +270,7 @@ ncdu 2.9.2
 ncurses 6.6
 neovim 0.11.6
 nettle 3.10.2
-node 25.5.0
+node 25.6.0
 npth 1.8
 nspr 4.38.2
 nss 3.120
@@ -354,7 +354,7 @@ svt-av1 4.0.1
 syncthing 2.0.14
 tailspin 5.5.0
 tealdeer 1.8.1
-television 0.15.0
+television 0.15.1
 terminal-notifier 2.0.0
 thrift 0.22.0
 tmux 3.6a
@@ -418,7 +418,8 @@ github:o2sh/onefetch                   2.26.1            ~/.config/mise/mise.tom
 github:sharkdp/fd                      10.3.0            ~/.config/mise/mise.toml  latest
 github:sharkdp/pastel                  0.11.0            ~/.config/mise/mise.toml  latest
 github:sxyazi/yazi                     26.1.22           ~/.config/mise/mise.toml  latest
-go                                     1.25.6            ~/.config/mise/mise.toml  latest
+go                                     1.25.6
+go                                     1.25.7            ~/.config/mise/mise.toml  latest
 go:golang.org/x/tools/gopls            latest            ~/.config/mise/mise.toml  latest
 go:golang.org/x/tools/gopls            0.21.0
 go:honnef.co/go/tools/cmd/staticcheck  latest            ~/.config/mise/mise.toml  latest
