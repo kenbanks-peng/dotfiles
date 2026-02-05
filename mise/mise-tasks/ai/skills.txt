@@ -1,0 +1,3 @@
+anthropics/skills
+huggingface/skills
+openai/skills
