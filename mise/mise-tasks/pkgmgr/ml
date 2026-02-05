@@ -47,7 +47,22 @@ done
 mise_output=$(mise list)
 purple="\033[95m"
 white="\033[97m"
-title="${purple}Tool                                       Version           Source                    Requested${white}"
+reset="\033[0m"
+header="Tool Version Source Requested"
+
+# Format output with aligned columns, applying header coloring
+format_table() {
+  local data="$1"
+  if [[ -n "$data" ]]; then
+    (echo "$header"; echo -e "$data") | column -t | while IFS= read -r line; do
+      if [[ "$line" == Tool* ]]; then
+        echo -e "${purple}${line}${reset}"
+      else
+        echo "$line"
+      fi
+    done
+  fi
+}
 
 # Helper function to filter ungrouped tools (excluding language-specific ones)
 filter_ungrouped_tools() {
@@ -182,10 +197,9 @@ if [ $len = 1 ]; then
     fi
   fi
 
-  # Only print title and output if there are results
+  # Only print if there are results
   if [[ -n "$output" ]]; then
-    echo -e "$title"
-    echo -e "$output"
+    format_table "$output"
   fi
 else
   # Get ungrouped tools and filter them
