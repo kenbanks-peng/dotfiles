@@ -1,42 +1,56 @@
 import { createCliRenderer, TextAttributes } from "@opentui/core";
 import { createRoot, useKeyboard, useRenderer, useTerminalDimensions } from "@opentui/react";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
+import { join, dirname } from "path";
+
+// Strip ANSI escape codes
+function stripAnsi(str: string): string {
+  return str.replace(/\x1B\[[0-9;]*[A-Za-z]/g, "");
+}
 
 // Parse skills commands from help output
 async function parseSkillsCommands(): Promise<string[]> {
   const proc = Bun.spawn(["skills"], {
     stdout: "pipe",
     stderr: "pipe",
+    env: { ...process.env },
   });
   const text = await new Response(proc.stdout).text();
+  const cleanText = stripAnsi(text);
 
   // Parse commands from output like: "$ npx skills add <package>"
   const commandRegex = /\$\s+(?:npx\s+)?skills\s+(\w+)/g;
   const commands = new Set<string>();
   let match;
-  while ((match = commandRegex.exec(text)) !== null) {
+  while ((match = commandRegex.exec(cleanText)) !== null) {
     commands.add(match[1]);
   }
   return Array.from(commands);
 }
 
-// Load repos from skills.txt
+// Load repos from skills.txt (relative to parent directory)
 async function loadRepos(): Promise<string[]> {
-  const file = Bun.file("../skills.txt");
+  const skillsDir = dirname(dirname(import.meta.dir));
+  const skillsPath = join(skillsDir, "skills.txt");
+  const file = Bun.file(skillsPath);
+  if (!(await file.exists())) {
+    return [];
+  }
   const text = await file.text();
   return text.split("\n").map(line => line.trim()).filter(Boolean);
 }
 
 interface CommandOutputProps {
   command: string | null;
-  onKeyInput?: (key: string) => void;
+  focused: boolean;
 }
 
-function CommandOutput({ command, onKeyInput }: CommandOutputProps) {
+function CommandOutput({ command, focused }: CommandOutputProps) {
   const [output, setOutput] = useState<string[]>([]);
   const [isRunning, setIsRunning] = useState(false);
   const procRef = useRef<ReturnType<typeof Bun.spawn> | null>(null);
   const writerRef = useRef<WritableStreamDefaultWriter<Uint8Array> | null>(null);
+  const commandIdRef = useRef<number>(0);
 
   useEffect(() => {
     if (!command) {
@@ -44,13 +58,21 @@ function CommandOutput({ command, onKeyInput }: CommandOutputProps) {
       return;
     }
 
-    setOutput([`Running: ${command}`, ""]);
+    // Increment command ID to track which command this is
+    commandIdRef.current++;
+    const thisCommandId = commandIdRef.current;
+
+    setOutput([`$ ${command}`, ""]);
     setIsRunning(true);
 
-    const proc = Bun.spawn(command.split(" "), {
+    // Filter out empty args from command
+    const args = command.split(" ").filter(Boolean);
+
+    const proc = Bun.spawn(args, {
       stdout: "pipe",
       stderr: "pipe",
       stdin: "pipe",
+      env: { ...process.env, FORCE_COLOR: "1" },
     });
 
     procRef.current = proc;
@@ -64,8 +86,13 @@ function CommandOutput({ command, onKeyInput }: CommandOutputProps) {
         while (true) {
           const { done, value } = await reader.read();
           if (done) break;
+          // Only update if this is still the current command
+          if (thisCommandId !== commandIdRef.current) break;
+
           const text = decoder.decode(value);
-          const lines = text.split("\n");
+          // Strip ANSI for cleaner display in TUI
+          const cleanText = stripAnsi(text);
+          const lines = cleanText.split("\n");
           setOutput(prev => [...prev, ...lines.map(l => prefix + l)]);
         }
       } catch {
@@ -75,43 +102,74 @@ function CommandOutput({ command, onKeyInput }: CommandOutputProps) {
 
     Promise.all([
       readStream(proc.stdout),
-      readStream(proc.stderr, "[stderr] "),
+      readStream(proc.stderr),
     ]).then(() => {
-      setIsRunning(false);
-      setOutput(prev => [...prev, "", "--- Command completed ---"]);
+      if (thisCommandId === commandIdRef.current) {
+        setIsRunning(false);
+        setOutput(prev => [...prev, "", "--- Done ---"]);
+      }
     });
 
     return () => {
-      proc.kill();
-      procRef.current = null;
-      writerRef.current = null;
+      if (procRef.current === proc) {
+        proc.kill();
+        procRef.current = null;
+        writerRef.current = null;
+      }
     };
   }, [command]);
 
-  // Handle key input to subprocess
-  useEffect(() => {
-    if (!onKeyInput || !isRunning) return;
-  }, [onKeyInput, isRunning]);
+  // Handle keyboard input when focused and running
+  useKeyboard(useCallback((key) => {
+    if (!focused || !isRunning || !writerRef.current) return;
 
-  // Method to send input to subprocess
-  const sendInput = async (text: string) => {
-    if (writerRef.current && isRunning) {
-      const encoder = new TextEncoder();
-      await writerRef.current.write(encoder.encode(text));
+    // Forward key presses to subprocess
+    const encoder = new TextEncoder();
+    let data: string | null = null;
+
+    if (key.name === "enter") {
+      data = "\n";
+    } else if (key.name === "up") {
+      data = "\x1b[A";
+    } else if (key.name === "down") {
+      data = "\x1b[B";
+    } else if (key.name === "left") {
+      data = "\x1b[D";
+    } else if (key.name === "right") {
+      data = "\x1b[C";
+    } else if (key.name === "backspace") {
+      data = "\x7f";
+    } else if (key.name === "space") {
+      data = " ";
+    } else if (key.name.length === 1 && !key.ctrl && !key.meta) {
+      // Regular character
+      data = key.shift ? key.name.toUpperCase() : key.name;
+    } else if (key.ctrl && key.name === "c") {
+      // Ctrl+C to kill process
+      procRef.current?.kill();
+      return;
     }
-  };
+
+    if (data && writerRef.current) {
+      writerRef.current.write(encoder.encode(data)).catch(() => {});
+    }
+  }, [focused, isRunning]));
 
   return (
-    <box flexDirection="column" flexGrow={1} border borderStyle="rounded" padding={1}>
-      <text attributes={TextAttributes.BOLD}>Output</text>
-      <scrollbox flexGrow={1} focused={isRunning}>
-        {output.map((line, i) => (
-          <text key={i}>{line}</text>
-        ))}
+    <box flexDirection="column" flexGrow={1} border borderStyle={focused ? "double" : "rounded"} borderColor={focused ? "#00FF00" : "#888888"} padding={1}>
+      <text attributes={TextAttributes.BOLD}>Output {isRunning && "(Running...)"}</text>
+      <scrollbox flexGrow={1}>
+        {output.length > 0 ? (
+          output.map((line, i) => (
+            <text key={i}>{line || " "}</text>
+          ))
+        ) : (
+          <text fg="#666666">Select a command to run</text>
+        )}
       </scrollbox>
-      {isRunning && (
-        <text fg="#888888" attributes={TextAttributes.DIM}>
-          (Command running... press keys to interact)
+      {focused && isRunning && (
+        <text fg="#00FF00" attributes={TextAttributes.DIM}>
+          Type to interact | Ctrl+C to stop
         </text>
       )}
     </box>
@@ -277,7 +335,7 @@ function App() {
         )}
 
         {/* Column 3: Output */}
-        <CommandOutput command={currentCommand} />
+        <CommandOutput command={currentCommand} focused={focusedColumn === "output"} />
       </box>
 
       {/* Footer */}
