@@ -46,7 +46,6 @@ done
 
 mise_output=$(mise list)
 purple="\033[95m"
-white="\033[97m"
 reset="\033[0m"
 header="Tool Version Source Requested"
 
@@ -211,24 +210,67 @@ else
 
   # Only print if there's any output
   if [[ -n "$filtered_ungrouped" ]] || [[ -n "$tools" ]]; then
-    echo -e "$title"
+    # Build all data first to ensure consistent column widths
+    all_data=""
+    declare -a section_markers=()  # Track line numbers where sections start
+    line_count=0
 
     if [[ -n "$filtered_ungrouped" ]]; then
-      echo -e "$filtered_ungrouped"
+      all_data="$filtered_ungrouped"
+      line_count=$(echo -e "$filtered_ungrouped" | wc -l | tr -d ' ')
     fi
 
     for tool in ${=tools}; do
-      echo
-      echo -e "${purple}${category_display_names[$tool]:-$(echo "$tool" | tr '[:lower:]' '[:upper:]')}${white}"
+      section_start=$((line_count + 1))
+      section_name="${category_display_names[$tool]:-$(echo "$tool" | tr '[:lower:]' '[:upper:]')}"
+      section_markers+=("$section_start:$section_name")
 
       # Get category tools for this tool category
-      category_tools=$(get_category_tools "$tool" "$ungrouped" true)
-      if [[ -n "$category_tools" ]]; then
-        echo -e "$category_tools"
+      cat_tools=$(get_category_tools "$tool" "$ungrouped" true)
+      if [[ -n "$cat_tools" ]]; then
+        if [[ -n "$all_data" ]]; then
+          all_data="$all_data\n$cat_tools"
+        else
+          all_data="$cat_tools"
+        fi
+        line_count=$((line_count + $(echo -e "$cat_tools" | wc -l | tr -d ' ')))
       fi
 
-      # Then show the regular category tools
-      echo "$mise_output" | grep "^$tool:"
+      # Then get the regular category tools
+      regular_tools=$(echo "$mise_output" | grep "^$tool:")
+      if [[ -n "$regular_tools" ]]; then
+        if [[ -n "$all_data" ]]; then
+          all_data="$all_data\n$regular_tools"
+        else
+          all_data="$regular_tools"
+        fi
+        line_count=$((line_count + $(echo "$regular_tools" | wc -l | tr -d ' ')))
+      fi
+    done
+
+    # Format all data with header using column -t
+    formatted=$(echo -e "$header\n$all_data" | column -t)
+
+    # Print with section headers inserted at the right places
+    current_line=0
+    echo -e "$formatted" | while IFS= read -r line; do
+      if [[ $current_line -eq 0 ]]; then
+        # Header line
+        echo -e "${purple}${line}${reset}"
+      else
+        # Check if we need to print a section header before this line
+        for marker in "${section_markers[@]}"; do
+          marker_line="${marker%%:*}"
+          marker_name="${marker#*:}"
+          if [[ $current_line -eq $marker_line ]]; then
+            echo
+            echo -e "${purple}${marker_name}${reset}"
+            break
+          fi
+        done
+        echo "$line"
+      fi
+      ((current_line++))
     done
   fi
 fi
