@@ -8,8 +8,8 @@ anybar 0.2.3
 audacity 3.7.7
 boop 1.4.0
 brainfm 0.0.217
-claude 1.1.2128,208c9a5d28ac54e2e12e93a9f6e1cd3019cfadbf
-claude-code 2.1.32
+claude 1.1.2156,4e9bb23eb204516531acc576cc97f600309bdfff
+claude-code 2.1.34
 cleanshot 4.8.7
 codex 0.98.0
 cursor 2.4.28,f3f5cec40024283013878b50c4f9be4002e0b587
@@ -34,8 +34,8 @@ languagetool-desktop 2.10.2
 linear-linear 1.28.10,260130ifjf6a66q
 logos 48.0.0.0238
 microsoft-auto-update 4.81.25121042
-obsidian 1.11.5
-omnifocus 4.8.6
+obsidian 1.11.7
+omnifocus 4.8.7
 onedrive 25.243.1211.0001
 opcode 0.2.0
 orbstack 2.0.5,19905
@@ -55,7 +55,7 @@ vibetunnel 1.0.0-beta.15
 visual-studio-code 1.109.0
 vlc 3.0.23
 yaak 2026.1.2
-zed 0.222.2
+zed 0.222.4
 zen 1.18.4b
 zoom 6.7.2.72191
 
@@ -131,7 +131,7 @@ fx 39.2.0
 fzf 0.67.0
 gawk 5.3.1
 gcc 15.2.0
-gemini-cli 0.27.1
+gemini-cli 0.27.2
 gettext 1.0
 gh 2.86.0
 gifgrep 0.2.1
@@ -190,7 +190,7 @@ just 1.46.0
 lame 3.100
 lazydocker 0.24.4
 lazyjj 0.6.1
-lazyjournal 0.8.4
+lazyjournal 0.8.5
 lazysql 0.4.7
 libarchive 3.8.5
 libass 0.17.4
@@ -277,7 +277,7 @@ nss 3.120
 numpy 2.4.2
 nushell 0.110.0
 obsidian-cli 0.2.3
-oh-my-posh 29.1.0
+oh-my-posh 29.2.0
 oniguruma 6.9.10
 openai-whisper 20250625_3
 openblas 0.3.31_1
@@ -302,7 +302,7 @@ pinentry-mac 1.3.1.1
 pinentry-touchid 0.0.3
 pixman 0.46.4
 pkgconf 2.5.1
-poppler 26.01.0
+poppler 26.02.0
 portal 1.2.3
 posting 2.9.2
 procs 0.14.10
@@ -354,7 +354,7 @@ svt-av1 4.0.1
 syncthing 2.0.14
 tailspin 5.5.0
 tealdeer 1.8.1
-television 0.15.1
+television 0.15.2
 terminal-notifier 2.0.0
 thrift 0.22.0
 tmux 3.6a
@@ -432,7 +432,8 @@ npm:@mixedbread/mgrep                  0.1.10            ~/.config/mise/mise.tom
 npm:github-markdown-css                5.9.0             ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                          5.2.5             ~/.config/mise/mise.toml  latest
 npm:skills                             1.3.5
-npm:skills                             1.3.6             ~/.config/mise/mise.toml  latest
+npm:skills                             1.3.6
+npm:skills                             1.3.7             ~/.config/mise/mise.toml  latest
 npm:vite                               7.3.1             ~/.config/mise/mise.toml  latest
 pipx:SuperClaude                       4.2.0             ~/.config/mise/mise.toml  latest
 
