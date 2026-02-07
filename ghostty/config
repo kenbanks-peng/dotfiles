@@ -66,8 +66,11 @@ selection-foreground = e0e7ed
 
 # splits
 split-divider-color = 083e6c
-keybind = super+slash=new_split:down
-keybind = super+backslash=new_split:right
+# native ghostty splits (replaced with tmux splits)
+# keybind = super+slash=new_split:down
+# keybind = super+backslash=new_split:right
+keybind = super+slash=text:\x02"
+keybind = super+backslash=text:\x02%
 keybind = shift+left=goto_split:left
 keybind = shift+down=goto_split:down
 keybind = shift+up=goto_split:up
