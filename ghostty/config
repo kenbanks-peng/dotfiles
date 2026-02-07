@@ -83,4 +83,5 @@ quick-terminal-position = center
 
 # Keybindings
 keybind = shift+enter=text:\n
+keybind = super+k=esc:\x1b[24~
 
