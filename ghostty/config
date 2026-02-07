@@ -16,7 +16,7 @@ command = /opt/homebrew/bin/tmux new-session
 
 # ghostty supports nerd fonts natively.
 #   Hasklug Nerd Font Mono -> Hasklig Font Mono
-# 
+#
 # Variable fonts: Monaspace Argon, Krypton, Neon, Radon, Xenon
 #   wght (weight), slnt (slant), ital (italic),
 #   opsz (optical size), wdth (width), GRAD (gradient)
@@ -35,7 +35,7 @@ adjust-cell-height = 0%
 # cursor - block, bar, underline, block_hollow
 cursor-style = bar
 cursor-style-blink = false
-cursor-click-to-move = true 
+cursor-click-to-move = true
 cursor-color = ff5524
 cursor-opacity = 1
 
@@ -83,5 +83,4 @@ quick-terminal-position = center
 
 # Keybindings
 keybind = shift+enter=text:\n
-keybind = super+k=esc:\x1b[24~
-
+keybind = super+k=text:\x0c
