@@ -398,6 +398,9 @@ bind -n C-2 select-window -t 2
 bind -n C-3 select-window -t 3
 bind -n C-q confirm-before -p "kill window #W? (y/n)" kill-window
 
+# custom keybindings with prefix
+bind C command-prompt -p "new session name:" "new-session -s '%%'"
+
 
 # -- tpm -----------------------------------------------------------------------
 
