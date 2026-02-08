@@ -396,7 +396,7 @@ bind -n C-n new-window -c "#{pane_current_path}"
 bind -n C-1 select-window -t 1
 bind -n C-2 select-window -t 2
 bind -n C-3 select-window -t 3
-bind -n C-q kill-window
+bind -n C-q confirm-before -p "kill window #W? (y/n)" kill-window
 
 
 # -- tpm -----------------------------------------------------------------------
