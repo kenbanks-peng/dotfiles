@@ -93,3 +93,10 @@ quick-terminal-position = center
 # Keybindings
 keybind = shift+enter=text:\n
 keybind = super+k=text:\x0c
+
+# Pass through Ctrl+n, Ctrl+1/2/3, Ctrl+q to tmux
+keybind = ctrl+n=text:\x0e
+keybind = ctrl+one=text:\x02\x31
+keybind = ctrl+two=text:\x02\x32
+keybind = ctrl+three=text:\x02\x33
+keybind = ctrl+q=text:\x11
