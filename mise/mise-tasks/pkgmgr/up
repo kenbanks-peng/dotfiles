@@ -87,6 +87,7 @@ print "${CYAN}MISE: uv, bun, go, node, python, git"
 print -- "------------------------------------${BLUE}"
 mise self-update --silent --yes
 mise upgrade --bump --silent
+mise prune --yes
 
 print
 print "${CYAN}UV TOOL: python"
