@@ -3,31 +3,33 @@ version = 4
 final_space = true
 
 [palette]
-shell = '#005b95'
+shell = '#005b95' # blue
 shell-foreground = '#e5eaf0'
-root = '#a90000'
+root = '#a90000' # red
 root-foreground = '#f4e4e5'
-jobs = '#006b1d'
+fnox = '#006b1d' # green
+fnox-foreground = '#e5ece6'
+jobs = '#006b1d' # green
 jobs-foreground = '#e5ece6'
-directory = '#2f40c2'
+directory = '#2f40c2' # blue
 directory-foreground = '#e5e6f2'
-language = '#005b95'
+language = '#005b95' # blue
 language-foreground = '#e5eaf0'
-git = '#006b1d'
+git = '#006b1d' # green
 git-foreground = '#e5ece6'
-git-modified = '#a17a00'
-git-diverged = '#8c0888'
-git-ahead = '#8c0888'
-git-behind = '#8c0888'
-status = '#005b95'
+git-modified = '#a17a00' # yellow
+git-diverged = '#8c0888' # magenta
+git-ahead = '#8c0888' # magenta
+git-behind = '#8c0888' # magenta
+status = '#005b95' # blue
 status-foreground = '#e5eaf0'
-status-error = '#a90000'
+status-error = '#a90000' # red
 exectime-foreground = '#e5eaf0'
-error = '#a90000'
+error = '#a90000' # red
 error-foreground = '#f4e4e5'
-prompt = '#f55c1b'
-secondary = '#a90000'
-secondary-accent = '#a17a00'
+prompt = '#f55c1b' # orange
+secondary = '#a90000' # red
+secondary-accent = '#a17a00' # yellow
 
 # [transient_prompt]
 #   template = '<p:teal,transparent></><p:on_teal,p:teal>   </><p:teal,transparent></> '
@@ -72,6 +74,17 @@ trailing_diamond = ''
 foreground = 'p:root-foreground'
 background = 'p:root'
 template = '  '
+
+######### FNOX #########
+
+[[blocks.segments]]
+type = 'text'
+style = 'diamond'
+leading_diamond = ''
+trailing_diamond = ''
+foreground = 'p:fnox-foreground'
+background = 'p:fnox'
+template = "{{ if .Env.FNOX_SHELL }}  {{ end }}"
 
 ######### JOBS #########
 
