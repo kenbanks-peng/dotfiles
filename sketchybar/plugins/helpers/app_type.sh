@@ -22,6 +22,7 @@ EXCLUDED_APPS=(
   "CleanShot X"
   "Electron"
   "Microsoft Outlook|*Reminder*"
+  "Handy|Recording"
 )
 
 # List of app names that should stick to the current workspace
