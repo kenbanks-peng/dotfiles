@@ -393,10 +393,12 @@ bind m run "cut -c3- '#{TMUX_CONF}' | sh -s _toggle_mouse" \; display 'mouse #{?
 
 # custom keybindings without prefix
 bind -n C-n new-window -c "#{pane_current_path}"
+bind -n C-s command-prompt -p "new session name:" "new-session -s '%%'"
 bind -n C-1 select-window -t 1
 bind -n C-2 select-window -t 2
 bind -n C-3 select-window -t 3
 bind -n C-q confirm-before -p "kill window #W? (y/n)" kill-window
+bind -n C-r command-prompt -I "#W" "rename-window -- '%%'"
 bind -n C-Left previous-window
 bind -n C-Right next-window
 
