@@ -39,7 +39,7 @@ brew "caddy"
 brew "carapace"
 brew "cheat"
 brew "choose-rust"
-brew "container", restart_service: :changed
+brew "container"
 brew "coreutils"
 brew "croc"
 brew "csvtk"
