@@ -12,7 +12,7 @@ claude 1.1.2321,495628f91fbfa276fabd6da835ba226fdf5ec68e
 claude-code 2.1.37
 cleanshot 4.8.7
 codex 0.98.0
-cursor 2.4.28,f3f5cec40024283013878b50c4f9be4002e0b587
+cursor 2.4.31,3578107fdf149b00059ddad37048220e4168100f
 daisydisk 4.33.2
 espanso 2.3.0
 font-hasklug-nerd-font 3.4.0
@@ -34,6 +34,7 @@ languagetool-desktop 2.10.2
 linear-linear 1.28.10,260130ifjf6a66q
 logos 48.0.0.0238
 microsoft-auto-update 4.81.25121042
+ngrok 3.36.0,a8i6aqunjBw,a
 obsidian 1.11.7
 omnifocus 4.8.7
 onedrive 25.243.1211.0001
@@ -148,7 +149,7 @@ gmp 6.3.0
 gnu-getopt 2.41.3
 gnu-sed 4.9
 gnupg 2.4.9
-gnutls 3.8.11
+gnutls 3.8.11_1
 gobang 0.1.0-alpha.5
 gogcli 0.9.0
 goplaces 0.2.1
@@ -213,7 +214,7 @@ libngtcp2 1.20.0
 libogg 1.3.6
 libomp 21.1.8
 libplacebo 7.351.0
-libpng 1.6.54
+libpng 1.6.54_1
 libsamplerate 0.2.2
 libsndfile 1.2.2_1
 libsql 0.24.32
@@ -306,7 +307,7 @@ poppler 26.02.0
 portal 1.2.3
 posting 2.9.2
 procs 0.14.10
-protobuf 33.4
+protobuf 33.4_1
 pstree 2.40
 pv 1.10.3
 pybind11 3.0.1_1
@@ -356,7 +357,7 @@ tailspin 5.5.0
 tealdeer 1.8.1
 television 0.15.2
 terminal-notifier 2.0.0
-thrift 0.22.0
+thrift 0.22.0_1
 tmux 3.6a
 tokei 14.0.0
 tree 2.3.1
