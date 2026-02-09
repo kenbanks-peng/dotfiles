@@ -27,11 +27,8 @@
 "github:Slackadays/Clipboard" = "latest"
 "github:bee-san/RustScan" = "latest"
 "github:astral-sh/ruff" = "latest"
-"nix:uv" = "latest"
 "nix:bun" = "latest"
 go = "latest"
-"go:golang.org/x/tools/gopls" = "latest"
-"go:honnef.co/go/tools/cmd/staticcheck" = "latest"
 "npm:skills" = "latest"
 
 [settings]
