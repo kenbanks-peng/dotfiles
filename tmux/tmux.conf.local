@@ -391,6 +391,9 @@ bind m run "cut -c3- '#{TMUX_CONF}' | sh -s _toggle_mouse" \; display 'mouse #{?
 # move status line to top
 #set -g status-position top
 
+# when destroying a session, switch to another session instead of exiting
+set -g detach-on-destroy on
+
 # custom keybindings without prefix
 bind -n C-n new-window -c "#{pane_current_path}"
 bind -n C-s command-prompt -p "new session name:" "new-session -s '%%'"

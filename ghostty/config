@@ -11,8 +11,9 @@ theme = Catppuccin Mocha
 
 
 # startup command - attach to or create tmux session
+# Try to attach to any session, or create 'main' if none exist
+# broken: command = /opt/homebrew/bin/tmux attach || /opt/homebrew/bin/tmux new-session -s main
 command = /opt/homebrew/bin/tmux new-session -A -s main
-# command = /opt/homebrew/bin/tmux new-session
 
 # ghostty supports nerd fonts natively.
 #   Hasklug Nerd Font Mono -> Hasklig Font Mono
