@@ -36,4 +36,4 @@ go = "latest"
 
 [settings]
 experimental = true
-quiet = true
+# quiet = true
