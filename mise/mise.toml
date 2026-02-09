@@ -27,7 +27,6 @@
 "github:Slackadays/Clipboard" = "latest"
 "github:bee-san/RustScan" = "latest"
 "github:astral-sh/ruff" = "latest"
-"nix:bun" = "latest"
 go = "latest"
 "npm:skills" = "latest"
 
