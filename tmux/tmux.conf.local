@@ -397,6 +397,8 @@ bind -n C-1 select-window -t 1
 bind -n C-2 select-window -t 2
 bind -n C-3 select-window -t 3
 bind -n C-q confirm-before -p "kill window #W? (y/n)" kill-window
+bind -n C-Left previous-window
+bind -n C-Right next-window
 
 # custom keybindings with prefix
 bind C command-prompt -p "new session name:" "new-session -s '%%'"
