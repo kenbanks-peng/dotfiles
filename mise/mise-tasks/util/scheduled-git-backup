@@ -5,7 +5,7 @@
 
 # crontab -e
 #
-# */15 * * * * /Users/kenbanks/Software/bin/scheduled-git-backup
+# */15 * * * * $HOME/Software/bin/scheduled-git-backup
 
 # Set environment for cron execution
 PATH="/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"

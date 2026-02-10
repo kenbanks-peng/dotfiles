@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # [MISE] description="Markdown to PDF"
 # [MISE] dir="{{cwd}}"
-exec /Users/kenbanks/Software/DevBox/util/mdpdf/mdpdf "$@"
+exec "$HOME/Software/DevBox/util/mdpdf/mdpdf" "$@"
