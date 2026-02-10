@@ -397,39 +397,33 @@ zstd 1.5.7_1
 
 MISE PACKAGES
 -------------
-actionlint                     1.7.10 (missing)  ~/Software/DevApps/mise-backend-plugin-template/mise.toml  latest
-cargo:cargo-cache              0.8.3             ~/.config/mise/mise.toml                                   latest
-cargo:cargo-update             18.0.0            ~/.config/mise/mise.toml                                   latest
-cargo:krokiet                  10.0.0            ~/.config/mise/mise.toml                                   latest
-cargo:sbyte                    0.3.3             ~/.config/mise/mise.toml                                   latest
-github:JohnnyMorganz/StyLua    2.3.1             ~/.config/mise/mise.toml                                   latest
-github:Slackadays/Clipboard    0.10.0            ~/.config/mise/mise.toml                                   latest
-github:ajeetdsouza/zoxide      0.9.9             ~/.config/mise/mise.toml                                   latest
-github:astral-sh/ruff          0.15.0            ~/.config/mise/mise.toml                                   latest
-github:bee-san/RustScan        2.4.1             ~/.config/mise/mise.toml                                   latest
-github:h0rv/d2-mcp             1.1.0             ~/.config/mise/mise.toml                                   latest
-github:jdx/fnox                1.12.0            ~/.config/mise/mise.toml                                   latest
-github:jdx/usage               2.16.1            ~/.config/mise/mise.toml                                   latest
-github:jesseduffield/lazygit   0.59.0            ~/.config/mise/mise.toml                                   latest
-github:melkeydev/go-blueprint  0.10.11           ~/.config/mise/mise.toml                                   latest
-github:neilotoole/sq           0.48.12           ~/.config/mise/mise.toml                                   latest
-github:noborus/ov              0.50.2            ~/.config/mise/mise.toml                                   latest
-github:o2sh/onefetch           2.26.1            ~/.config/mise/mise.toml                                   latest
-github:sharkdp/fd              10.3.0            ~/.config/mise/mise.toml                                   latest
-github:sharkdp/pastel          0.11.0            ~/.config/mise/mise.toml                                   latest
-github:sxyazi/yazi             26.1.22           ~/.config/mise/mise.toml                                   latest
-go                             1.25.7            ~/.config/mise/mise.toml                                   latest
-hk                             1.36.0 (missing)  ~/Software/DevApps/mise-backend-plugin-template/mise.toml  latest
-lua                            5.4.8 (missing)   ~/Software/DevApps/mise-backend-plugin-template/mise.toml  5.4
-lua-language-server            3.17.1 (missing)  ~/Software/DevApps/mise-backend-plugin-template/mise.toml  latest
-npm:@mixedbread/mgrep          0.1.10            ~/.config/mise/mise.toml                                   latest
-npm:github-markdown-css        5.9.0             ~/.config/mise/mise.toml                                   latest
-npm:md-to-pdf                  5.2.5             ~/.config/mise/mise.toml                                   latest
-npm:skills                     1.3.7             ~/.config/mise/mise.toml                                   latest
-npm:vite                       7.3.1             ~/.config/mise/mise.toml                                   latest
-pipx:SuperClaude               4.2.0             ~/.config/mise/mise.toml                                   latest
-pkl                            0.30.2 (missing)  ~/Software/DevApps/mise-backend-plugin-template/mise.toml  latest
-stylua                         2.3.1 (missing)   ~/Software/DevApps/mise-backend-plugin-template/mise.toml  latest
+cargo:cargo-cache              0.8.3    ~/.config/mise/mise.toml  latest
+cargo:cargo-update             18.0.0   ~/.config/mise/mise.toml  latest
+cargo:krokiet                  10.0.0   ~/.config/mise/mise.toml  latest
+cargo:sbyte                    0.3.3    ~/.config/mise/mise.toml  latest
+github:JohnnyMorganz/StyLua    2.3.1    ~/.config/mise/mise.toml  latest
+github:Slackadays/Clipboard    0.10.0   ~/.config/mise/mise.toml  latest
+github:ajeetdsouza/zoxide      0.9.9    ~/.config/mise/mise.toml  latest
+github:astral-sh/ruff          0.15.0   ~/.config/mise/mise.toml  latest
+github:bee-san/RustScan        2.4.1    ~/.config/mise/mise.toml  latest
+github:h0rv/d2-mcp             1.1.0    ~/.config/mise/mise.toml  latest
+github:jdx/fnox                1.12.0   ~/.config/mise/mise.toml  latest
+github:jdx/usage               2.16.1   ~/.config/mise/mise.toml  latest
+github:jesseduffield/lazygit   0.59.0   ~/.config/mise/mise.toml  latest
+github:melkeydev/go-blueprint  0.10.11  ~/.config/mise/mise.toml  latest
+github:neilotoole/sq           0.48.12  ~/.config/mise/mise.toml  latest
+github:noborus/ov              0.50.2   ~/.config/mise/mise.toml  latest
+github:o2sh/onefetch           2.26.1   ~/.config/mise/mise.toml  latest
+github:sharkdp/fd              10.3.0   ~/.config/mise/mise.toml  latest
+github:sharkdp/pastel          0.11.0   ~/.config/mise/mise.toml  latest
+github:sxyazi/yazi             26.1.22  ~/.config/mise/mise.toml  latest
+go                             1.25.7   ~/.config/mise/mise.toml  latest
+npm:@mixedbread/mgrep          0.1.10   ~/.config/mise/mise.toml  latest
+npm:github-markdown-css        5.9.0    ~/.config/mise/mise.toml  latest
+npm:md-to-pdf                  5.2.5    ~/.config/mise/mise.toml  latest
+npm:skills                     1.3.7    ~/.config/mise/mise.toml  latest
+npm:vite                       7.3.1    ~/.config/mise/mise.toml  latest
+pipx:SuperClaude               4.2.0    ~/.config/mise/mise.toml  latest
 
 RUSTUP/CARGO
 ------------
