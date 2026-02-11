@@ -9,7 +9,6 @@
 "npm:@mixedbread/mgrep" = "latest"
 "github:jdx/fnox" = "latest"
 "github:jdx/usage" = "latest"
-"cargo:krokiet" = "latest"
 "github:JohnnyMorganz/StyLua" = "latest"
 "github:sharkdp/fd" = "latest"
 "github:jesseduffield/lazygit" = "latest"
