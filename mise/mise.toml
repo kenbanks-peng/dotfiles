@@ -27,6 +27,7 @@
 go = "latest"
 "npm:skills" = "latest"
 "nix:bun" = "latest"
+"nix:hello" = "latest"
 
 [settings]
 experimental = true
