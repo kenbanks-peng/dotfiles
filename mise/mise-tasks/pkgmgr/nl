@@ -1,5 +1,5 @@
 #!/usr/bin/env nu
-# [MISE] description="Nix profile list packages with versions"
+# [MISE] description="Nix profile list"
 # [MISE] dir="{{cwd}}"
 
 # Extract package-version from nix profile list store paths
@@ -12,11 +12,10 @@ let pkgs = (do -i { nix profile list }
   | sort)
 
 # Get mise-managed nix package names
-let mise_pkgs = (do -i { ml nix }
+let mise_pkgs = (do -i { mise ls }
   | lines
-  | skip 1
+  | where {|line| $line =~ "^nix:"}
   | each {|line| $line | str trim | split row -r '\s+' | first}
-  | where {|name| $name != ""}
   | each {|name| $name | str replace "nix:" ""})
 
 for pkg in $pkgs {
