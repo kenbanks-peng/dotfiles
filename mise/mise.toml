@@ -26,6 +26,7 @@
 "github:astral-sh/ruff" = "latest"
 go = "latest"
 "npm:skills" = "latest"
+"nix:bun" = "latest"
 
 [settings]
 experimental = true
