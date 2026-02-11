@@ -29,6 +29,7 @@ go = "latest"
 "nix:bun" = "latest"
 "nix:uv" = "latest"
 "nix:nodejs" = "latest"
+"nix:rustup" = "latest"
 
 [settings]
 experimental = true
