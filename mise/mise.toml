@@ -28,7 +28,6 @@
 "nix:rustup" = "latest"
 "nix:ruby" = "latest"
 "nix:go" = "latest"
-"nix:hello" = "latest"
 "nix:cargo-cache" = "latest"
 "nix:cargo-update" = "latest"
 

@@ -1,0 +1,29 @@
+#!/usr/bin/env nu
+# [MISE] description="Nix profile list packages with versions"
+# [MISE] dir="{{cwd}}"
+
+# Extract package-version from nix profile list store paths
+
+let pkgs = (do -i { nix profile list }
+  | lines
+  | where {|line| ($line | str starts-with "Store paths:")}
+  | each {|line| $line | split row " " | last}
+  | each {|path| $path | path basename | str substring 33..}
+  | sort)
+
+# Get mise-managed nix package names
+let mise_pkgs = (do -i { ml nix }
+  | lines
+  | skip 1
+  | each {|line| $line | str trim | split row -r '\s+' | first}
+  | where {|name| $name != ""}
+  | each {|name| $name | str replace "nix:" ""})
+
+for pkg in $pkgs {
+  let is_managed = ($mise_pkgs | any {|name| $pkg | str starts-with $"($name)-"})
+  if $is_managed {
+    print $pkg
+  } else {
+    print $"(ansi red)($pkg)(ansi reset)"
+  }
+}
