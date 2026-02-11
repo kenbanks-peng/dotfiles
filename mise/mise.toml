@@ -1,7 +1,5 @@
 [tools]
 "cargo:sbyte" = "latest"
-"cargo:cargo-update" = "latest"
-"cargo:cargo-cache" = "latest"
 "pipx:SuperClaude" = "latest"
 "npm:md-to-pdf" = "latest"
 "npm:github-markdown-css" = "latest"
@@ -32,6 +30,8 @@
 "nix:ruby" = "latest"
 "nix:go" = "latest"
 "nix:hello" = "latest"
+"nix:cargo-cache" = "latest"
+"nix:cargo-update" = "latest"
 
 [settings]
 experimental = true
