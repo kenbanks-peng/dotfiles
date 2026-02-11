@@ -24,12 +24,13 @@
 "github:Slackadays/Clipboard" = "latest"
 "github:bee-san/RustScan" = "latest"
 "github:astral-sh/ruff" = "latest"
-go = "latest"
 "npm:skills" = "latest"
 "nix:bun" = "latest"
 "nix:uv" = "latest"
 "nix:nodejs" = "latest"
 "nix:rustup" = "latest"
+"nix:ruby" = "latest"
+"nix:go" = "latest"
 
 [settings]
 experimental = true
