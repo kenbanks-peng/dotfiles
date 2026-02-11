@@ -4,9 +4,10 @@
 
 # Extract package-version from nix profile list store paths
 
-(do -i { nix profile list }
+do -i { nix profile list }
   | lines
   | where {|line| ($line | str starts-with "Store paths:")}
   | each {|line| $line | split row " " | last}
   | each {|path| $path | path basename | str substring 33..}
-  | sort)
+  | sort
+  | to text
