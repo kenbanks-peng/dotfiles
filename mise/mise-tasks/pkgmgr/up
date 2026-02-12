@@ -96,3 +96,7 @@ uv tool upgrade --all
 print "${NORMAL}"
 
 mise run pkgmgr:versions
+
+RUSTUP_HOME="$HOME/Software/ToolChain/rustup" \
+CARGO_HOME="$HOME/Software/ToolChain/cargo" \
+brew bundle dump --force --file="$HOME/Software/Public/dotfiles/dotfiles/"
