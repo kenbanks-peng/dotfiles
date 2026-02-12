@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# [MISE] description="KeePassXC cli"
+# [MISE] dir="{{cwd}}"
+keepassxc-cli "$@"
