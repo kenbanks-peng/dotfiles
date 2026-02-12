@@ -22,15 +22,15 @@
 "github:bee-san/RustScan" = "latest"
 "github:astral-sh/ruff" = "latest"
 "npm:skills" = "latest"
-"nix:bun" = "latest"
-"nix:uv" = "latest"
-"nix:nodejs" = "latest"
-"nix:rustup" = "latest"
-"nix:ruby" = "latest"
-"nix:go" = "latest"
-"nix:cargo-cache" = "latest"
-"nix:cargo-update" = "latest"
+# "nix:bun" = "latest"
+# "nix:uv" = "latest"
+# "nix:nodejs" = "latest"
+# "nix:rustup" = "latest"
+# "nix:ruby" = "latest"
+# "nix:go" = "latest"
+# "nix:cargo-cache" = "latest"
+# "nix:cargo-update" = "latest"
 
 [settings]
 experimental = true
-quiet = true
+# quiet = true
