@@ -29,7 +29,6 @@ grandperspective 3.6.3
 handy 0.7.5
 iina 1.4.1,160
 karabiner-elements 15.9.0
-keepassxc 2.7.11
 keyclu 0.31
 languagetool-desktop 2.10.3
 linear-linear 1.28.10,260130ifjf6a66q
