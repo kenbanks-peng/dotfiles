@@ -1,5 +1,6 @@
 BREW CASKS
 ----------
+1password-cli 2.32.1
 aerospace 0.20.2-Beta
 affinity 3.0.3,4027
 antigravity 1.16.5,6703236727046144
@@ -35,6 +36,7 @@ languagetool-desktop 2.10.3
 linear-linear 1.28.10,260130ifjf6a66q
 logos 48.0.0.0238
 microsoft-auto-update 4.81.25121042
+microsoft-outlook 16.106.26020821
 ngrok 3.36.1,7eDVKgsuaQh,a
 obsidian 1.11.7
 omnifocus 4.8.7
@@ -88,7 +90,6 @@ bat 0.26.1
 bat-extras 2024.08.24
 bbrew 2.2.1
 biome 2.3.15
-bird 0.8.0
 borders 1.8.4
 brotli 1.2.0
 btop 1.4.6
@@ -118,7 +119,7 @@ dvc 3.66.1_4
 eigen 5.0.1
 espeak-ng 1.52.0
 fastfetch 2.58.0
-ffmpeg 8.0.1_3 8.0.1_1.reinstall
+ffmpeg 8.0.1_3
 figlet 2.2.5
 flac 1.5.0
 flock 0.4.0
@@ -149,6 +150,7 @@ gnu-getopt 2.41.3
 gnu-sed 4.9
 gnupg 2.4.9
 gnutls 3.8.12
+go 1.26.0
 gobang 0.1.0-alpha.5
 gogcli 0.9.0
 goplaces 0.2.1
@@ -168,7 +170,6 @@ htmlq 0.4.0
 hub 2.14.2
 hurl 7.1.0
 hyperfine 1.20.0
-icu4c@77 77.1_1
 icu4c@78 78.2
 imagemagick 7.1.2-13
 imath 3.2.2
@@ -386,12 +387,14 @@ xh 0.25.3
 xorgproto 2025.1
 xz 5.8.2
 yabai 7.1.16
+yazi 26.1.22
 yq 4.52.2
 yt-dlp 2026.2.4
 yyjson 0.12.0
 z3 4.15.4
 zellij 0.43.1
 zimg 3.0.6
+zoxide 0.9.9
 zsh 5.9
 zstd 1.5.7_1
 
@@ -405,7 +408,7 @@ github:astral-sh/ruff          0.15.0   ~/.config/mise/mise.toml  latest
 github:bee-san/RustScan        2.4.1    ~/.config/mise/mise.toml  latest
 github:h0rv/d2-mcp             1.1.0    ~/.config/mise/mise.toml  latest
 github:jdx/fnox                1.12.1   ~/.config/mise/mise.toml  latest
-github:jdx/usage               2.16.2   ~/.config/mise/mise.toml  latest
+github:jdx/usage               2.16.1   ~/.config/mise/mise.toml  latest
 github:jesseduffield/lazygit   0.59.0   ~/.config/mise/mise.toml  latest
 github:melkeydev/go-blueprint  0.10.11  ~/.config/mise/mise.toml  latest
 github:neilotoole/sq           0.48.12  ~/.config/mise/mise.toml  latest
@@ -424,13 +427,11 @@ pipx:SuperClaude               4.2.0    ~/.config/mise/mise.toml  latest
 RUSTUP/CARGO
 ------------
 Default host: aarch64-apple-darwin
-rustup home:  /Users/kenbanks/Software/ToolChain/rustup
+rustup home:  /Users/kenbanks/Software/Toolchain/rustup
 
 installed toolchains
 --------------------
 stable-aarch64-apple-darwin (active, default)
-nightly-2025-12-04-aarch64-apple-darwin
-1.90.0-aarch64-apple-darwin
 
 active toolchain
 ----------------
@@ -441,9 +442,3 @@ installed targets:
 
 UV TOOLS
 --------
-markitdown v0.1.4
-- markitdown
-nano-pdf v0.2.1
-- nano-pdf
-specify-cli v1.0.0
-- specify
