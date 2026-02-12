@@ -22,7 +22,16 @@ export FONTSIZE=12
 export NERD="Symbols Nerd Font:Regular"
 export ICOMOON="Icomoon:Regular"
 
-export BAR_HEIGHT=40
+# Detect screen type and set BAR_HEIGHT accordingly
+# Check if using built-in Retina display (laptop) or external monitor
+if system_profiler SPDisplaysDataType | grep -q "Retina"; then
+  # Built-in Retina display (laptop) - use smaller bar
+  export BAR_HEIGHT=40
+else
+  # External monitor - use larger bar
+  export BAR_HEIGHT=48
+fi
+
 export ITEM_HEIGHT=24
 export BACKGROUND_HEIGHT=30
 export APP_WIDTH=16
