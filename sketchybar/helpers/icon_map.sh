@@ -198,7 +198,7 @@ function __icon_map() {
    "Cherry Studio")
         icon_result=":cherry_studio:"
         ;;
-   "Chess")
+   "Chess" | "The Enemy Within")
         icon_result=":chess:"
         ;;
    "Amazon Chime")
@@ -501,6 +501,9 @@ function __icon_map() {
    "Hyper")
         icon_result=":hyper:"
         ;;
+   "Hyperkey")
+        icon_result=":hyperkey:"
+        ;;
    "IntelliJ IDEA")
         icon_result=":idea:"
         ;;
@@ -636,6 +639,9 @@ function __icon_map() {
    "LM Studio")
         icon_result=":lm_studio:"
         ;;
+   "LobeHub")
+        icon_result=":lobehub:"
+        ;;
    "LocalSend")
         icon_result=":localsend:"
         ;;
@@ -705,6 +711,9 @@ function __icon_map() {
    "Microsoft Word")
         icon_result=":microsoft_word:"
         ;;
+   "Migaku")
+        icon_result=":migaku:"
+        ;;
    "Mimestream")
         icon_result=":mimestream:"
         ;;
@@ -731,6 +740,9 @@ function __icon_map() {
         ;;
    "mpv")
         icon_result=":mpv:"
+        ;;
+   "MTGA")
+        icon_result=":mtga:"
         ;;
    "Mullvad Browser")
         icon_result=":mullvad_browser:"
@@ -938,6 +950,9 @@ function __icon_map() {
         ;;
    "Preview" | "预览" | "Skim" | "zathura" | "Aperçu" | "プレビュー" | "Vorschau")
         icon_result=":preview:"
+        ;;
+   "Print Center" | "Druckzentrale")
+        icon_result=":print_center:"
         ;;
    "Pro Tools")
         icon_result=":pro_tools:"
