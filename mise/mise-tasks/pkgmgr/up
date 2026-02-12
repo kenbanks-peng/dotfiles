@@ -98,3 +98,5 @@ print "${NORMAL}"
 mise run pkgmgr:versions
 
 brew bundle dump --force --file="$HOME/Software/Public/dotfiles/dotfiles/" 2>/dev/null
+echo "updated Brewfile"
+
