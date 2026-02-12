@@ -29,7 +29,7 @@ if system_profiler SPDisplaysDataType | grep -q "Retina"; then
   export BAR_HEIGHT=40
 else
   # External monitor - use larger bar
-  export BAR_HEIGHT=48
+  export BAR_HEIGHT=50
 fi
 
 export ITEM_HEIGHT=24
