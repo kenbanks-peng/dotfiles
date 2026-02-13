@@ -151,7 +151,6 @@ gnu-getopt 2.41.3
 gnu-sed 4.9
 gnupg 2.4.9
 gnutls 3.8.12
-go 1.26.0
 gobang 0.1.0-alpha.5
 gogcli 0.9.0
 goplaces 0.2.1
@@ -427,19 +426,7 @@ pipx:SuperClaude               4.2.0    ~/.config/mise/mise.toml  latest
 
 RUSTUP/CARGO
 ------------
-Default host: aarch64-apple-darwin
-rustup home:  /Users/kenbanks/Software/Toolchain/rustup
-
-installed toolchains
---------------------
-stable-aarch64-apple-darwin (active, default)
-
-active toolchain
-----------------
-name: stable-aarch64-apple-darwin
-active because: it's the default toolchain
-installed targets:
-  aarch64-apple-darwin
+No rustup found
 
 UV TOOLS
 --------
