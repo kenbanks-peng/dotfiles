@@ -15,6 +15,7 @@ codex 0.101.0
 cursor 2.4.31,3578107fdf149b00059ddad37048220e4168100f
 daisydisk 4.33.2
 espanso 2.3.0
+flox 1.9.0
 font-hasklug-nerd-font 3.4.0
 font-ia-writer-quattro latest
 font-inter 4.1
