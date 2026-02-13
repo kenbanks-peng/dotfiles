@@ -8,11 +8,11 @@ anybar 0.2.3
 audacity 3.7.7
 boop 1.4.0
 brainfm 0.0.217
-claude 1.1.2685,f39a622da544d39d746a0aba120ee29d06b1bd28
-claude-code 2.1.39
+claude 1.1.2998,1f1d4db7e0019f539cc3c59fba17a541ccffe0d5
+claude-code 2.1.41
 cleanshot 4.8.7
 codex 0.101.0
-cursor 2.4.31,3578107fdf149b00059ddad37048220e4168100f
+cursor 2.4.36,f9919bf991f247689f9ead605b5c5a3239a2a794
 daisydisk 4.33.2
 espanso 2.3.0
 flox 1.9.0
@@ -33,7 +33,7 @@ iina 1.4.1,160
 karabiner-elements 15.9.0
 keepassxc 2.7.11
 keyclu 0.31
-languagetool-desktop 2.10.3
+languagetool-desktop 2.11.0
 linear-linear 1.28.10,260130ifjf6a66q
 logos 48.0.0.0238
 microsoft-auto-update 4.81.25121042
@@ -59,8 +59,8 @@ visual-studio-code 1.109.3
 vlc 3.0.23
 yaak 2026.1.2
 zed 0.223.3
-zen 1.18.5b
-zoom 6.7.5.75246
+zen 1.18.6b
+zoom 6.7.6.75444
 
 BREW FORMULAS
 -------------
@@ -119,7 +119,7 @@ dotenvx 1.52.0
 dvc 3.66.1_4
 eigen 5.0.1
 espeak-ng 1.52.0
-fastfetch 2.58.0
+fastfetch 2.59.0
 ffmpeg 8.0.1_3
 figlet 2.2.5
 flac 1.5.0
@@ -332,12 +332,12 @@ sad 0.4.32
 sag 0.2.2
 sd 1.0.0
 sdl2 2.32.10
-sevenzip 25.01
+sevenzip 26.00
 shaderc 2026.1
 shared-mime-info 2.4_1
 shellcheck 0.11.0
 simdjson 4.2.4
-sk 3.0.1
+sk 3.2.0
 sketchybar 2.23.0
 sleef 3.9.0
 snappy 1.2.2
