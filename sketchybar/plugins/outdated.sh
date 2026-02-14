@@ -14,7 +14,7 @@ sum=0
 
 count=$(mise list | grep -o '\boutdated\b' | wc -l | tr -d '[:space:]')
 sum=$((sum + count))
-echo "$(date): mise count=$count, sum=$sum" >> "$CACHE_DIR/$LOG_FILE"
+echo "$(date): mise count=$count" >>"$CACHE_DIR/$LOG_FILE"
 
 # BUG:WORKAROUND: Bypass homebrew CPU core detection that fails in sketchybar context
 # Setting this to a number (not "auto") skips Hardware::CPU.cores call
@@ -28,8 +28,14 @@ cask_output=$(brew outdated --cask </dev/null 2>&1)
 cask_exit=$?
 
 if [ $formula_exit -ne 0 ] || [ $cask_exit -ne 0 ]; then
-  [ $formula_exit -ne 0 ] && { echo "ERROR: brew formula exit code: $formula_exit" >>"$CACHE_DIR/$LOG_FILE"; echo "ERROR: brew formula output: $formula_output" >>"$CACHE_DIR/$LOG_FILE"; }
-  [ $cask_exit -ne 0 ] && { echo "ERROR: brew cask exit code: $cask_exit" >>"$CACHE_DIR/$LOG_FILE"; echo "ERROR: brew cask output: $cask_output" >>"$CACHE_DIR/$LOG_FILE"; }
+  [ $formula_exit -ne 0 ] && {
+    echo "ERROR: brew formula exit code: $formula_exit" >>"$CACHE_DIR/$LOG_FILE"
+    echo "ERROR: brew formula output: $formula_output" >>"$CACHE_DIR/$LOG_FILE"
+  }
+  [ $cask_exit -ne 0 ] && {
+    echo "ERROR: brew cask exit code: $cask_exit" >>"$CACHE_DIR/$LOG_FILE"
+    echo "ERROR: brew cask output: $cask_output" >>"$CACHE_DIR/$LOG_FILE"
+  }
   props=(
     icon.color="$RED"
     label="E"
@@ -42,7 +48,9 @@ fi
 
 # Combine and count outputs
 count=$(printf '%s\n%s' "$formula_output" "$cask_output" | grep -c . || echo 0)
+echo "$(date): brew count=$count" >>"$CACHE_DIR/$LOG_FILE"
 sum=$((sum + count))
+echo "$(date): final sum=$sum" >>"$CACHE_DIR/$LOG_FILE"
 
 case "$sum" in
 0)
