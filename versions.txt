@@ -9,7 +9,7 @@ audacity 3.7.7
 boop 1.4.0
 brainfm 0.0.217
 claude 1.1.2998,1f1d4db7e0019f539cc3c59fba17a541ccffe0d5
-claude-code 2.1.41
+claude-code 2.1.42
 cleanshot 4.8.7
 codex 0.101.0
 cursor 2.4.36,f9919bf991f247689f9ead605b5c5a3239a2a794
@@ -37,6 +37,7 @@ languagetool-desktop 2.11.0
 linear-linear 1.28.10,260130ifjf6a66q
 logos 48.0.0.0238
 microsoft-auto-update 4.81.25121042
+microsoft-outlook 16.106.26020821
 ngrok 3.36.1,7eDVKgsuaQh,a
 obsidian 1.11.7
 omnifocus 4.8.7
