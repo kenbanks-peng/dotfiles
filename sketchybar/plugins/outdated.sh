@@ -15,18 +15,24 @@ sum=0
 count=$(mise list | grep -o '\boutdated\b' | wc -l | tr -d '[:space:]')
 sum=$((sum + count))
 
-# this gives error when using --greedy and called via sketchybar
-brew_output=$(/opt/homebrew/bin/brew outdated 2>&1)
+# BUG:WORKAROUND: Bypass homebrew CPU core detection that fails in sketchybar context
+# Setting this to a number (not "auto") skips Hardware::CPU.cores call
+export HOMEBREW_DOWNLOAD_CONCURRENCY=4
+
+# Redirect stdin from /dev/null to avoid pipe issues
+brew_output=$(brew outdated </dev/null 2>&1)
 exit_code=$?
+
 if [ $exit_code -ne 0 ]; then
-  echo "DEBUG: brew exit code: $exit_code" >> /tmp/outdated_debug.log
-  echo "DEBUG: brew output: $brew_output" >> /tmp/outdated_debug.log
+  echo "ERROR: brew exit code: $exit_code" >>"$LOG_FILE"
+  echo "ERROR: brew output: $brew_output" >>"$LOG_FILE"
   props=(
     icon.color="$RED"
     label="E"
     label.color="$RED"
   )
   sketchybar --set "$NAME" "${props[@]}"
+  rm -f "$LOCK_FILE"
   exit 1
 fi
 
