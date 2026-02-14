@@ -2,9 +2,9 @@
 
 source "$CONFIG_DIR/env.sh"
 
-# Sum all macOS APFS volumes (Data + System + Preboot + VM) and get container size
-read used total <<< $(df -H | awk '/disk2s[1346]/ {
-  # Get total from first volume
+# Sum all macOS APFS volumes by mount point (more reliable than device names)
+read used total <<< $(df -H | awk '$9 ~ /^\/$|^\/System\/Volumes\/(VM|Preboot|Data)$/ {
+  # Get total from first volume (root)
   if (total == 0) {
     total_str = $2;
     gsub("G", "", total_str);
