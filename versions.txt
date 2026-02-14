@@ -37,7 +37,6 @@ languagetool-desktop 2.11.0
 linear-linear 1.28.10,260130ifjf6a66q
 logos 48.0.0.0238
 microsoft-auto-update 4.81.25121042
-microsoft-outlook 16.106.26020821
 ngrok 3.36.1,7eDVKgsuaQh,a
 obsidian 1.11.7
 omnifocus 4.8.7
