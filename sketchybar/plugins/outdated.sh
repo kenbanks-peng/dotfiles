@@ -19,6 +19,8 @@ sum=$((sum + count))
 brew_output=$(/opt/homebrew/bin/brew outdated 2>&1)
 exit_code=$?
 if [ $exit_code -ne 0 ]; then
+  echo "DEBUG: brew exit code: $exit_code" >> /tmp/outdated_debug.log
+  echo "DEBUG: brew output: $brew_output" >> /tmp/outdated_debug.log
   props=(
     icon.color="$RED"
     label="E"
@@ -26,9 +28,6 @@ if [ $exit_code -ne 0 ]; then
   )
   sketchybar --set "$NAME" "${props[@]}"
   exit 1
-else
-  echo "DEBUG: brew exit code: $exit_code" >> /tmp/outdated_debug.log
-  echo "DEBUG: brew output: $brew_output" >> /tmp/outdated_debug.log
 fi
 
 count=$(echo "$brew_output" | wc -l | tr -d ' ')
