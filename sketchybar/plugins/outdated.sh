@@ -36,7 +36,7 @@ if [ $exit_code -ne 0 ]; then
   exit 1
 fi
 
-count=$(echo "$brew_output" | wc -l | tr -d ' ')
+count=$(printf '%s' "$brew_output" | wc -l | tr -d ' ')
 sum=$((sum + count))
 
 case "$sum" in
