@@ -8,7 +8,7 @@ anybar 0.2.3
 audacity 3.7.7
 boop 1.4.0
 brainfm 0.0.217
-claude 1.1.2998,1f1d4db7e0019f539cc3c59fba17a541ccffe0d5
+claude 1.1.3189,1b7b58b8b5060b7d5d19c6863d8f0caef4f0fc97
 claude-code 2.1.42
 cleanshot 4.8.7
 codex 0.101.0
@@ -403,7 +403,7 @@ cargo:sbyte                    0.3.3    ~/.config/mise/mise.toml  latest
 github:JohnnyMorganz/StyLua    2.3.1    ~/.config/mise/mise.toml  latest
 github:Slackadays/Clipboard    0.10.0   ~/.config/mise/mise.toml  latest
 github:ajeetdsouza/zoxide      0.9.9    ~/.config/mise/mise.toml  latest
-github:astral-sh/ruff          0.15.0   ~/.config/mise/mise.toml  latest
+github:astral-sh/ruff          0.15.1   ~/.config/mise/mise.toml  latest
 github:bee-san/RustScan        2.4.1    ~/.config/mise/mise.toml  latest
 github:h0rv/d2-mcp             1.1.0    ~/.config/mise/mise.toml  latest
 github:jdx/fnox                1.12.1   ~/.config/mise/mise.toml  latest
