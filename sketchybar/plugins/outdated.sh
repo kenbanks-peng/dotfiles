@@ -46,8 +46,15 @@ if [ $formula_exit -ne 0 ] || [ $cask_exit -ne 0 ]; then
   exit 1
 fi
 
-# Combine and count outputs
-count=$(printf '%s\n%s' "$formula_output" "$cask_output" | grep -c . || echo 0)
+# Log actual brew outputs for debugging
+echo "$(date): === BREW FORMULA OUTPUT ===" >>"$CACHE_DIR/$LOG_FILE"
+echo "$formula_output" >>"$CACHE_DIR/$LOG_FILE"
+echo "$(date): === BREW CASK OUTPUT ===" >>"$CACHE_DIR/$LOG_FILE"
+echo "$cask_output" >>"$CACHE_DIR/$LOG_FILE"
+echo "$(date): === END BREW OUTPUT ===" >>"$CACHE_DIR/$LOG_FILE"
+
+# Combine and count outputs, filtering out brew error messages
+count=$(printf '%s\n%s' "$formula_output" "$cask_output" | grep -v '^✘' | grep -v '^Error:' | grep -c . || echo 0)
 echo "$(date): brew count=$count" >>"$CACHE_DIR/$LOG_FILE"
 sum=$((sum + count))
 echo "$(date): final sum=$sum" >>"$CACHE_DIR/$LOG_FILE"
