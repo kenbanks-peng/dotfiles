@@ -51,8 +51,8 @@ hotkey = "Command+Period"
 
 # Path to the image file (can be relative or absolute)
 # Relative paths are resolved from the application directory
-image_path = "image.png"
+image_path = "~/.config/popup/vim.png"
 
 # Window dimensions in pixels
-width = 800
-height = 600
+width = 1920
+height = 1080
