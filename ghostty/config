@@ -82,7 +82,7 @@ keybind = shift+left=text:\x02\x1b[D
 keybind = shift+down=text:\x02\x1b[B
 keybind = shift+up=text:\x02\x1b[A
 keybind = shift+right=text:\x02\x1b[C
-keybind = ctrl+enter=toggle_split_zoom
+keybind = ctrl+enter=text:\x1b[13;5u
 focus-follows-mouse = true
 
 

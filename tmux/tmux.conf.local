@@ -404,6 +404,8 @@ bind -n C-q confirm-before -p "kill window #W? (y/n)" kill-window
 bind -n C-r command-prompt -I "#W" "rename-window -- '%%'"
 bind -n C-Left previous-window
 bind -n C-Right next-window
+bind -n C-Enter resize-pane -Z
+bind -n "\e[13;5u" resize-pane -Z
 
 # custom keybindings with prefix
 bind C command-prompt -p "new session name:" "new-session -s '%%'"
