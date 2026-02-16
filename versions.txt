@@ -100,7 +100,7 @@ camsnap 0.2.0
 carapace 1.6.2
 certifi 2026.1.4
 cffi 2.0.0_1
-cheat 4.7.1
+cheat 5.1.0
 choose-rust 1.3.7
 container 0.9.0
 coreutils 9.10
