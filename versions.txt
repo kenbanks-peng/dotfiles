@@ -266,6 +266,7 @@ navi 2.24.0
 ncdu 2.9.2
 ncurses 6.6
 neovim 0.11.6
+netbird 0.65.2
 nettle 3.10.2
 nim 2.2.6
 node 25.6.1
