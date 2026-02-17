@@ -27,7 +27,6 @@ google-drive 121.0.1
 grandperspective 3.6.3
 handy 0.7.6
 iina 1.4.1,160
-karabiner-elements 15.9.0
 keepassxc 2.7.11
 keyclu 0.31
 languagetool-desktop 2.11.0
