@@ -9,7 +9,7 @@ audacity 3.7.7
 boop 1.4.0
 brainfm 0.0.217
 claude 1.1.3189,1b7b58b8b5060b7d5d19c6863d8f0caef4f0fc97
-claude-code 2.1.42
+claude-code 2.1.44
 cleanshot 4.8.7
 codex 0.101.0
 cursor 2.4.37,7b9c34466f5c119e93c3e654bb80fe9306b6cc79
@@ -272,6 +272,7 @@ ncdu 2.9.2
 ncurses 6.6
 neovim 0.11.6
 nettle 3.10.2
+nim 2.2.6
 node 25.6.1
 npth 1.8
 nspr 4.38.2
