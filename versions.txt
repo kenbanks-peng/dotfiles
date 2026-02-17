@@ -50,7 +50,6 @@ sip-app 4.1.4
 skim 1.7.12
 symboliclinker 2.2
 typeface 4.2.3,4845
-vibetunnel 1.0.0-beta.15
 visual-studio-code 1.109.4
 vlc 3.0.23
 yaak 2026.2.1
