@@ -282,7 +282,7 @@ opencode 1.2.0
 openexr 3.4.4_2
 openhue-cli 0.23
 openjpeg 2.5.4
-openjph 0.26.1
+openjph 0.26.3
 openssl@3 3.6.1
 opus 1.6.1
 opusfile 0.12_1
