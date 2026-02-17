@@ -2,7 +2,6 @@ BREW CASKS
 ----------
 aerospace 0.20.2-Beta
 affinity 3.0.3,4027
-antigravity 1.16.5,6703236727046144
 anybar 0.2.3
 audacity 3.7.7
 boop 1.4.0
