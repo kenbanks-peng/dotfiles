@@ -8,7 +8,7 @@ audacity 3.7.7
 boop 1.4.0
 brainfm 0.0.217
 claude 1.1.3189,1b7b58b8b5060b7d5d19c6863d8f0caef4f0fc97
-claude-code 2.1.44
+claude-code 2.1.45
 cleanshot 4.8.7
 codex 0.101.0
 cursor 2.4.37,7b9c34466f5c119e93c3e654bb80fe9306b6cc79
@@ -187,7 +187,7 @@ lame 3.100
 lazydocker 0.24.4
 lazyjj 0.6.1
 lazyjournal 0.8.5
-lazysql 0.4.7
+lazysql 0.4.8
 libarchive 3.8.5_1
 libass 0.17.4
 libassuan 3.0.2
