@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
 # [MISE] description="Disk usage tui"
+# [MISE] dir="{{cwd}}"
+
 ncdu
