@@ -6,12 +6,12 @@ affinity 3.0.3,4027
 anybar 0.2.3
 audacity 3.7.7
 boop 1.4.0
-brainfm 0.0.217
-claude 1.1.3770,f7f5859a17386e383fad75f35ff6dd0f6e9dfd66
-claude-code 2.1.49
+brainfm 0.0.247
+claude 1.1.3918,a4b368d308b05c425b74c1c19ed47a572d3a90f6
+claude-code 2.1.50
 cleanshot 4.8.7
 codex 0.104.0
-cursor 2.5.17,7b98dcb824ea96c9c62362a5e80dbf0d1aae4775
+cursor 2.5.20,511523af765daeb1fa69500ab0df5b6524424612
 daisydisk 4.33.2
 espanso 2.3.0
 flox 1.9.0
@@ -53,8 +53,8 @@ symboliclinker 2.2
 typeface 4.2.3,4845
 visual-studio-code 1.109.5
 vlc 3.0.23
-yaak 2026.2.3
-zed 0.224.8
+yaak 2026.2.4
+zed 0.224.10
 zen 1.18.9b
 zoom 6.7.6.75444
 
@@ -86,13 +86,13 @@ bash 5.3.9
 bat 0.26.1
 bat-extras 2024.08.24
 bbrew 2.2.1
-biome 2.4.3
+biome 2.4.4
 borders 1.8.4
 brotli 1.2.0
 btop 1.4.6
 c-ares 1.34.6
 ca-certificates 2025-12-02
-caddy 2.10.2
+caddy 2.11.1
 cairo 1.18.4
 camsnap 0.2.0
 carapace 1.6.2
@@ -130,7 +130,7 @@ gawk 5.3.2
 gcc 15.2.0_1
 gemini-cli 0.29.5
 gettext 1.0
-gh 2.87.0
+gh 2.87.2
 gifgrep 0.2.1
 giflib 5.2.2
 git 2.53.0
@@ -176,7 +176,7 @@ jc 1.25.6
 jid 0.7.6
 jj 0.38.0
 jjui 0.9.12
-jnv 0.6.1
+jnv 0.6.2
 jpeg-turbo 3.1.3
 jpeg-xl 0.11.2
 jq 1.8.1
@@ -197,7 +197,7 @@ libbluray 1.4.0_1
 libde265 1.0.16
 libdeflate 1.25
 libevent 2.1.12_1
-libgcrypt 1.12.0
+libgcrypt 1.12.1
 libgit2 1.9.2_1
 libgpg-error 1.59
 libheif 1.21.2
@@ -273,7 +273,7 @@ nim 2.2.6
 node 25.6.1
 npth 1.8
 nspr 4.38.2
-nss 3.120.1
+nss 3.121
 numpy 2.4.2
 nushell 0.110.0
 obsidian-cli 0.2.3
@@ -398,33 +398,48 @@ zstd 1.5.7_1
 
 MISE PACKAGES
 -------------
-cargo:sbyte                    0.3.3    ~/.config/mise/mise.toml  latest
-github:JohnnyMorganz/StyLua    2.3.1    ~/.config/mise/mise.toml  latest
-github:Slackadays/Clipboard    0.10.0   ~/.config/mise/mise.toml  latest
-github:ajeetdsouza/zoxide      0.9.9    ~/.config/mise/mise.toml  latest
-github:astral-sh/ruff          0.15.2   ~/.config/mise/mise.toml  latest
-github:bee-san/RustScan        2.4.1    ~/.config/mise/mise.toml  latest
-github:h0rv/d2-mcp             1.1.0    ~/.config/mise/mise.toml  latest
-github:jdx/fnox                1.12.1   ~/.config/mise/mise.toml  latest
-github:jdx/usage               2.18.0   ~/.config/mise/mise.toml  latest
-github:jesseduffield/lazygit   0.59.0   ~/.config/mise/mise.toml  latest
-github:melkeydev/go-blueprint  0.10.11  ~/.config/mise/mise.toml  latest
-github:neilotoole/sq           0.50.0   ~/.config/mise/mise.toml  latest
-github:noborus/ov              0.51.1   ~/.config/mise/mise.toml  latest
-github:o2sh/onefetch           2.26.1   ~/.config/mise/mise.toml  latest
-github:sharkdp/fd              10.3.0   ~/.config/mise/mise.toml  latest
-github:sharkdp/pastel          0.12.0   ~/.config/mise/mise.toml  latest
-github:sxyazi/yazi             26.1.22  ~/.config/mise/mise.toml  latest
-npm:@mixedbread/mgrep          0.1.10   ~/.config/mise/mise.toml  latest
-npm:github-markdown-css        5.9.0    ~/.config/mise/mise.toml  latest
-npm:md-to-pdf                  5.2.5    ~/.config/mise/mise.toml  latest
-npm:skills                     1.4.0    ~/.config/mise/mise.toml  latest
-npm:vite                       7.3.1    ~/.config/mise/mise.toml  latest
-pipx:SuperClaude               4.2.0    ~/.config/mise/mise.toml  latest
+cargo:sbyte                    0.3.3             ~/.config/mise/mise.toml  latest
+github:JohnnyMorganz/StyLua    2.3.1             ~/.config/mise/mise.toml  latest
+github:Slackadays/Clipboard    0.10.0            ~/.config/mise/mise.toml  latest
+github:ajeetdsouza/zoxide      0.9.9             ~/.config/mise/mise.toml  latest
+github:astral-sh/ruff          0.15.2            ~/.config/mise/mise.toml  latest
+github:bee-san/RustScan        2.4.1             ~/.config/mise/mise.toml  latest
+github:h0rv/d2-mcp             1.1.0             ~/.config/mise/mise.toml  latest
+github:jdx/fnox                1.12.1            ~/.config/mise/mise.toml  latest
+github:jdx/usage               2.18.0            ~/.config/mise/mise.toml  latest
+github:jesseduffield/lazygit   0.59.0            ~/.config/mise/mise.toml  latest
+github:melkeydev/go-blueprint  0.10.11           ~/.config/mise/mise.toml  latest
+github:neilotoole/sq           0.50.0            ~/.config/mise/mise.toml  latest
+github:noborus/ov              0.51.1            ~/.config/mise/mise.toml  latest
+github:o2sh/onefetch           2.26.1            ~/.config/mise/mise.toml  latest
+github:sharkdp/fd              10.3.0            ~/.config/mise/mise.toml  latest
+github:sharkdp/pastel          0.12.0            ~/.config/mise/mise.toml  latest
+github:sxyazi/yazi             26.1.22           ~/.config/mise/mise.toml  latest
+npm:@mixedbread/mgrep          0.1.10            ~/.config/mise/mise.toml  latest
+npm:github-markdown-css        5.9.0             ~/.config/mise/mise.toml  latest
+npm:md-to-pdf                  5.2.5             ~/.config/mise/mise.toml  latest
+npm:skills                     1.4.1             ~/.config/mise/mise.toml  latest
+npm:vite                       7.3.1             ~/.config/mise/mise.toml  latest
+pipx:SuperClaude               4.2.0             ~/.config/mise/mise.toml  latest
+rust                           1.93.1 (symlink)  ~/.config/mise/mise.toml  latest
+uv                             0.10.4            ~/.config/mise/mise.toml  latest
 
 RUSTUP/CARGO
 ------------
-No rustup found
+Default host: aarch64-apple-darwin
+rustup home:  /Users/kenbanks/Software/Toolchain/rustup
+
+installed toolchains
+--------------------
+stable-aarch64-apple-darwin (default)
+1.93.1-aarch64-apple-darwin (active)
+
+active toolchain
+----------------
+name: 1.93.1-aarch64-apple-darwin
+active because: overridden by environment variable RUSTUP_TOOLCHAIN
+installed targets:
+  aarch64-apple-darwin
 
 UV TOOLS
 --------
