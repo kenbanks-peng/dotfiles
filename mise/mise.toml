@@ -22,6 +22,8 @@
 "github:bee-san/RustScan" = "latest"
 "github:astral-sh/ruff" = "latest"
 "npm:skills" = "latest"
+uv = "latest"
+rust = "latest"
 # "nix:bun" = "latest"
 # "nix:uv" = "latest"
 # "nix:nodejs" = "latest"
