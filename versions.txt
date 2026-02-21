@@ -24,7 +24,7 @@ font-symbols-only-nerd-font 3.4.0
 font-tex-gyre-termes 2.004
 ghostty 1.2.3
 git-credential-manager 2.7.0
-google-chrome 145.0.7632.76
+google-chrome 145.0.7632.110
 google-drive 121.0.1
 grandperspective 3.6.3
 handy 0.7.7
@@ -54,8 +54,8 @@ typeface 4.2.3,4845
 visual-studio-code 1.109.5
 vlc 3.0.23
 yaak 2026.2.4
-zed 0.224.10
-zen 1.18.9b
+zed 0.224.11
+zen 1.18.10b
 zoom 6.7.6.75444
 
 BREW FORMULAS
@@ -256,7 +256,7 @@ mcfly 0.9.4
 melody 0.20.0
 memo 0.4.0
 micro 2.0.15
-mole 1.26.0
+mole 1.27.0
 molten-vk 1.4.0
 mpdecimal 4.0.1
 mpfr 4.2.2
@@ -277,7 +277,7 @@ nss 3.121
 numpy 2.4.2
 nushell 0.110.0
 obsidian-cli 0.2.3
-oh-my-posh 29.4.1
+oh-my-posh 29.5.0
 oniguruma 6.9.10
 openai-whisper 20250625_3
 openblas 0.3.31_1
@@ -384,7 +384,7 @@ x265 4.1
 xh 0.25.3
 xorgproto 2025.1
 xz 5.8.2
-yabai 7.1.16
+yabai 7.1.17
 yazi 26.1.22
 yq 4.52.4
 yt-dlp 2026.2.4
