@@ -1,0 +1,42 @@
+#!/usr/bin/env nu
+# [MISE] description="List mise tools"
+# [MISE] dir="{{cwd}}"
+
+let global_config = ($env.DOTFILES | path join "mise" "mise.toml" | path expand)
+let metadata = (open ($env.FILE_PWD? | default (pwd) | path join "tools.nuon"))
+
+let rows = (mise list
+  | lines
+  | each {|line| $line | split row -r '\s+'}
+  | where {|parts| ($parts | length) >= 3}
+  | each {|parts|
+      let source = ($parts | get 2 | str replace "~" $env.HOME | path expand)
+      let name = ($parts | get 0 | split row -r '[:/]' | last)
+      let meta = ($metadata | where command == $name | get -o 0)
+      let desc = ($meta | get -o desc | default "")
+      {name: $name version: ($parts | get 1) desc: $desc source: $source}
+    })
+
+let global = ($rows | where source == $global_config | sort-by name)
+let project = ($rows | where source != $global_config | sort-by name)
+
+let name_width = ($rows | get name | each {|n| $n | str length} | math max)
+let ver_width = ($rows | get version | each {|v| $v | str length} | math max)
+
+def print_group [label: string, rows: list, name_width: int, ver_width: int] {
+  print $"(ansi green)($label)(ansi reset)"
+  for r in $rows {
+    let name = ($r.name | fill -w $name_width)
+    let ver = ($r.version | fill -w $ver_width)
+    print $"  ($name)  ($ver)  (ansi grey)($r.desc)(ansi reset)"
+  }
+}
+
+if ($project | is-not-empty) {
+  print_group "PROJECT" $project $name_width $ver_width
+}
+
+if ($global | is-not-empty) {
+  if ($project | is-not-empty) { print "" }
+  print_group "GLOBAL" $global $name_width $ver_width
+}
