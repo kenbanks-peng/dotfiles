@@ -7,7 +7,7 @@ anybar 0.2.3
 audacity 3.7.7
 boop 1.4.0
 brainfm 0.0.247
-claude 1.1.3918,a4b368d308b05c425b74c1c19ed47a572d3a90f6
+claude 1.1.3963,71a7aee7e4c1ab9eb313dc3051d72cf09be28d70
 claude-code 2.1.50
 cleanshot 4.8.7
 codex 0.104.0
@@ -387,7 +387,7 @@ xz 5.8.2
 yabai 7.1.17
 yazi 26.1.22
 yq 4.52.4
-yt-dlp 2026.2.4
+yt-dlp 2026.2.21
 yyjson 0.12.0
 z3 4.15.4
 zellij 0.43.1
@@ -405,7 +405,7 @@ github:ajeetdsouza/zoxide      0.9.9             ~/.config/mise/mise.toml  lates
 github:astral-sh/ruff          0.15.2            ~/.config/mise/mise.toml  latest
 github:bee-san/RustScan        2.4.1             ~/.config/mise/mise.toml  latest
 github:h0rv/d2-mcp             1.1.0             ~/.config/mise/mise.toml  latest
-github:jdx/fnox                1.12.1            ~/.config/mise/mise.toml  latest
+github:jdx/fnox                1.13.0            ~/.config/mise/mise.toml  latest
 github:jdx/usage               2.18.0            ~/.config/mise/mise.toml  latest
 github:jesseduffield/lazygit   0.59.0            ~/.config/mise/mise.toml  latest
 github:melkeydev/go-blueprint  0.10.11           ~/.config/mise/mise.toml  latest
