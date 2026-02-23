@@ -20,23 +20,21 @@ let rows = (mise list
 let global = ($rows | where source == $global_config | sort-by name)
 let project = ($rows | where source != $global_config | sort-by name)
 
-let name_width = ($rows | get name | each {|n| $n | str length} | math max)
-let ver_width = ($rows | get version | each {|v| $v | str length} | math max)
+let col_width = ($rows | each {|r| $"($r.name) ($r.version)" | str length} | math max)
 
-def print_group [label: string, rows: list, name_width: int, ver_width: int] {
+def print_group [label: string, rows: list, col_width: int] {
   print $"(ansi green)($label)(ansi reset)"
   for r in $rows {
-    let name = ($r.name | fill -w $name_width)
-    let ver = ($r.version | fill -w $ver_width)
-    print $"  ($name)  ($ver)  (ansi grey)($r.desc)(ansi reset)"
+    let col = ($"($r.name) ($r.version)" | fill -w $col_width)
+    print $"  ($col)  (ansi grey)($r.desc)(ansi reset)"
   }
 }
 
 if ($project | is-not-empty) {
-  print_group "PROJECT" $project $name_width $ver_width
+  print_group "PROJECT" $project $col_width
 }
 
 if ($global | is-not-empty) {
   if ($project | is-not-empty) { print "" }
-  print_group "GLOBAL" $global $name_width $ver_width
+  print_group "GLOBAL" $global $col_width
 }
