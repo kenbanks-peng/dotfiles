@@ -1,5 +1,5 @@
 #!/usr/bin/env nu
-# [MISE] description="List mise tools"
+# [MISE] description="List mise project tools"
 # [MISE] dir="{{cwd}}"
 
 let global_config = ($env.DOTFILES | path join "mise" "mise.toml" | path expand)
@@ -20,24 +20,14 @@ let rows = (mise list
       {name: $name version: ($parts | get 1) desc: $desc source: $source}
     })
 
-let global = ($rows | where source == $global_config | sort-by name)
 let project = ($rows | where {|r| ($r.source | is-not-empty) and $r.source != $global_config} | sort-by name)
 
-let col_width = ($rows | each {|r| $"($r.name) ($r.version)" | str length} | math max)
+if ($project | is-empty) { return }
 
-def print_group [label: string, rows: list, col_width: int] {
-  print $"(ansi green)($label)(ansi reset)"
-  for r in $rows {
-    let col = ($"($r.name) ($r.version)" | fill -w $col_width)
-    print $"  ($col)  (ansi grey)($r.desc)(ansi reset)"
-  }
-}
+let col_width = ($project | each {|r| $"($r.name) ($r.version)" | str length} | math max)
 
-if ($project | is-not-empty) {
-  print_group "PROJECT" $project $col_width
-}
-
-if ($global | is-not-empty) {
-  if ($project | is-not-empty) { print "" }
-  print_group "GLOBAL" $global $col_width
+print $"(ansi green)PROJECT(ansi reset)"
+for r in $project {
+  let col = ($"($r.name) ($r.version)" | fill -w $col_width)
+  print $"  ($col)  (ansi grey)($r.desc)(ansi reset)"
 }
