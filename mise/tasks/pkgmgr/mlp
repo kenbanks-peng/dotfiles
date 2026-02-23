@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 # [MISE] description="mise list project"
 # [MISE] dir="{{cwd}}"
-eval "$(mise env -C "$HOME/Software/DevBox/util-nu")"
-exec "$HOME/Software/DevBox/util-nu/mlp" "$@"
+eval "$(mise env -C "$HOME/Software/DevBox/util/nu")"
+exec "$HOME/Software/DevBox/util/nu/mlp" "$@"
