@@ -1,33 +1,5 @@
-#!/usr/bin/env nu
-# [MISE] description="List mise project tools"
+#!/usr/bin/env bash
+# [MISE] description="mise list project"
 # [MISE] dir="{{cwd}}"
-
-let global_config = ($env.DOTFILES | path join "mise" "mise.toml" | path expand)
-let metadata = (open ($env.FILE_PWD? | default (pwd) | path join "tools.nuon"))
-
-let rows = (mise list
-  | lines
-  | each {|line| $line | split row -r '\s+'}
-  | where {|parts| ($parts | length) >= 3}
-  | each {|parts|
-      let raw_source = ($parts | get 2)
-      let source = if ($raw_source | str starts-with "~") or ($raw_source | str starts-with "/") {
-          $raw_source | str replace "~" $env.HOME | path expand
-      } else { "" }
-      let name = ($parts | get 0 | split row -r '[:/]' | last)
-      let meta = ($metadata | where command == $name | get -o 0)
-      let desc = ($meta | get -o desc | default "")
-      {name: $name version: ($parts | get 1) desc: $desc source: $source}
-    })
-
-let project = ($rows | where {|r| ($r.source | is-not-empty) and $r.source != $global_config} | sort-by name)
-
-if ($project | is-empty) { return }
-
-let col_width = ($project | each {|r| $"($r.name) ($r.version)" | str length} | math max)
-
-print $"(ansi green)PROJECT(ansi reset)"
-for r in $project {
-  let col = ($"($r.name) ($r.version)" | fill -w $col_width)
-  print $"  ($col)  (ansi grey)($r.desc)(ansi reset)"
-}
+eval "$(mise env -C "$HOME/Software/DevBox/util-nu")"
+exec "$HOME/Software/DevBox/util-nu/mlp" "$@"
