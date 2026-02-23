@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# [MISE] description="Run ai-skills TUI"
+# [MISE] dir="{{cwd}}"
+eval "$(mise env -C "$HOME/Software/DevBox/util-js")"
+exec "$HOME/Software/DevBox/util-js/ai-skills/src/ai-skills.tsx" "$@"
