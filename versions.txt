@@ -8,7 +8,6 @@ audacity 3.7.7
 boop 1.4.0
 brainfm 0.0.247
 claude 1.1.4010,da63f369d7533437f1b59f14173962eb5b54c714
-claude-code 2.1.50
 cleanshot 4.8.7
 codex 0.104.0
 cursor 2.5.20,511523af765daeb1fa69500ab0df5b6524424612
