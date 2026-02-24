@@ -1,6 +1,5 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 # [MISE] description="Python package for pypi"
-# [USAGE] arg "<package>"
 # [MISE] dir="{{cwd}}"
-
-uv init --build-backend uv --package "$usage_package"
+eval "$(mise env -C "$HOME/Software/DevBox/util/python")"
+exec "$HOME/Software/DevBox/util/python/uv-package" "$@"
