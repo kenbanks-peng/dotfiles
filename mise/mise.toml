@@ -14,6 +14,7 @@
 "github:Slackadays/Clipboard" = "latest"
 "github:bee-san/RustScan" = "latest"
 "npm:skills" = "latest"
+claude-code = "latest"
 
 [settings]
 experimental = true
