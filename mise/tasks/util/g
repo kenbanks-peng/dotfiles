@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-# [MISE] description="Git tui"
-# [MISE] dir="{{cwd}}"
-lazygit "$@"

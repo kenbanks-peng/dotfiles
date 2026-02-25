@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-# [MISE] description="Copy password to clipboard"
-pass show -c "$@"

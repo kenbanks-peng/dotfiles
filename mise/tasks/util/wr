@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-# [MISE] description="Weather report"
-curl "wttr.in/London+ON?0"

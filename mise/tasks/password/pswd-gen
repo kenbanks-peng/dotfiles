@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-# [MISE] description="Generate a new password"
-pass generate "$@"

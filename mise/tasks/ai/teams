@@ -1,6 +1,0 @@
-#!/usr/bin/env zsh
-# [MISE] description="claude in teammate-mode"
-# [MISE] dir="{{cwd}}"
-
-claude --teammate-mode tmux
-

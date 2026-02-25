@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-# [MISE] description="OKLCH color utilities"
-# [MISE] dir="{{cwd}}"
-exec "$HOME/Software/DevBox/util/oklch/oklch" "$@"

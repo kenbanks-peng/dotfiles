@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-# [MISE] description="Pip via uv"
-# [MISE] dir="{{cwd}}"
-uv pip "$@"

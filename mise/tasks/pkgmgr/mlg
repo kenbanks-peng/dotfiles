@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-# [MISE] description="mise list global"
-# [MISE] dir="{{cwd}}"
-eval "$(mise env -C "$HOME/Software/DevBox/util/nu")"
-exec "$HOME/Software/DevBox/util/nu/mlg" "$@"

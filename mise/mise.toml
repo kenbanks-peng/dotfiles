@@ -18,7 +18,43 @@ usage = "latest"
 "npm:@mariozechner/pi-coding-agent" = "latest"
 claude-code = "latest"
 yq = "latest"
+"github:nushell/nushell" = "latest"
 
 [settings]
 experimental = true
 quiet = true
+
+
+[tasks]
+[tasks."pkgmgr:scan"]
+description = "Scan for dev tools"
+tools = {"github:nushell/nushell" = "latest"}
+run = "/Users/kenbanks/Software/DevBox/util/pkgmgr/scan $args"
+
+[tasks."unix:d"]
+description = "Pwd with escaped spaces"
+run = "/Users/kenbanks/Software/DevBox/util/unix/d $args"
+
+[tasks."unix:fd"]
+description = "Find files or text (combined fd/rg)"
+run = "/Users/kenbanks/Software/DevBox/util/unix/fd $args"
+
+[tasks."unix:finder"]
+description = "Opens the current directory in macOS Finder"
+run = "/Users/kenbanks/Software/DevBox/util/unix/finder $args"
+
+[tasks."unix:list1"]
+description = "Pls list show hidden files"
+run = "/Users/kenbanks/Software/DevBox/util/unix/list1 $args"
+
+[tasks."unix:list2"]
+description = "Pls list hide hidden files"
+run = "/Users/kenbanks/Software/DevBox/util/unix/list2 $args"
+
+[tasks."unix:list3"]
+description = "Pls list long format"
+run = "/Users/kenbanks/Software/DevBox/util/unix/list3 $args"
+
+[tasks."unix:symlink-bin"]
+description = "Create symbolic links in bin directory"
+run = "/Users/kenbanks/Software/DevBox/util/unix/symlink-bin $args"

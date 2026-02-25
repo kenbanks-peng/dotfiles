@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-# [MISE] description="Scan for required tools"
-# [MISE] dir="{{cwd}}"
-eval "$(mise env -C "$HOME/Software/DevBox/util/nu")"
-exec nu "$HOME/Software/DevBox/util/nu/scan/scan" "$@"

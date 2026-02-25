@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-# [MISE] description="Initialize python project"
-# [MISE] dir="{{cwd}}"
-eval "$(mise env -C "$HOME/Software/DevBox/util/python")"
-exec "$HOME/Software/DevBox/util/python/uv-init" "$@"

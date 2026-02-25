@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-# [MISE] description="Re-source tmux config"
-tmux source-file ~/.config/tmux/tmux.conf

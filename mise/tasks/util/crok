@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-# [MISE] description="Croc file transfer"
-croc "$@"

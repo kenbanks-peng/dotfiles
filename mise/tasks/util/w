@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-# [MISE] description="1-line weather"
-curl "wttr.in/London+ON?format=%c%t(%f)+%p+%m\n"
