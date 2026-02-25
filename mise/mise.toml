@@ -141,9 +141,9 @@ run = "/Users/kenbanks/Software/DevBox/util/pkgmgr/bt $args"
 description = "Brew installed versions"
 run = "/Users/kenbanks/Software/DevBox/util/pkgmgr/bv $args"
 
-[tasks."pkgmgr:ml"]
-description = "Mise list by category"
-run = "/Users/kenbanks/Software/DevBox/util/pkgmgr/ml $args"
+[tasks."pkgmgr:mlb"]
+description = "Mise list by backend"
+run = "/Users/kenbanks/Software/DevBox/util/pkgmgr/mlb $args"
 
 [tasks."pkgmgr:mlg"]
 description = "List mise global tools"
@@ -176,6 +176,7 @@ run = "/Users/kenbanks/Software/DevBox/util/pkgmgr/tools $args"
 
 [tasks."pkgmgr:up"]
 description = "Update all packages"
+tools = {"uv" = "latest"}
 run = "/Users/kenbanks/Software/DevBox/util/pkgmgr/up $args"
 
 [tasks."pkgmgr:versions"]
