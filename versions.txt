@@ -7,13 +7,13 @@ anybar 0.2.3
 audacity 3.7.7
 boop 1.4.0
 brainfm 0.0.247
-claude 1.1.4010,da63f369d7533437f1b59f14173962eb5b54c714
+claude 1.1.4088,7e63fdb935ef758b2356a3d040ccd9176414cac7
 cleanshot 4.8.7
 codex 0.104.0
 cursor 2.5.20,511523af765daeb1fa69500ab0df5b6524424612
 daisydisk 4.33.2
 espanso 2.3.0
-flox 1.9.0
+flox 1.9.1
 font-hasklug-nerd-font 3.4.0
 font-ia-writer-quattro latest
 font-inter 4.1
@@ -23,22 +23,22 @@ font-symbols-only-nerd-font 3.4.0
 font-tex-gyre-termes 2.004
 ghostty 1.2.3
 git-credential-manager 2.7.0
-google-chrome 145.0.7632.110
+google-chrome 145.0.7632.117
 google-drive 121.0.1
 grandperspective 3.6.3
-handy 0.7.7
+handy 0.7.8
 iina 1.4.1,160
 keepassxc 2.7.11
 keyclu 0.31
 languagetool-desktop 2.11.2
-linear-linear 1.28.10,260130ifjf6a66q
+linear-linear 1.28.11,2602232dq2d1ql3
 logos 48.0.0.0238
 microsoft-auto-update 4.82.26020434
 microsoft-outlook 16.106.26021521
 ngrok 3.36.1,7eDVKgsuaQh,a
 obsidian 1.11.7
 omnifocus 4.8.7
-onedrive 25.243.1211.0001
+onedrive 26.017.0126.0002
 orbstack 2.0.5,19905
 pdf-pals 1.9.0
 proton-mail 1.12.1
@@ -60,7 +60,7 @@ zoom 6.7.6.75444
 BREW FORMULAS
 -------------
 abseil 20260107.1
-ada-url 3.4.2
+ada-url 3.4.3
 age 1.3.1
 aom 3.13.1
 apache-arrow 23.0.1
@@ -94,7 +94,7 @@ ca-certificates 2025-12-02
 caddy 2.11.1
 cairo 1.18.4
 camsnap 0.2.0
-carapace 1.6.2
+carapace 1.6.3
 certifi 2026.1.4
 cffi 2.0.0_1
 choose-rust 1.3.7
@@ -121,13 +121,13 @@ flock 0.4.0
 fmt 12.1.0
 fontconfig 2.17.1
 freetype 2.14.1_2
-fresh-editor 0.2.5
+fresh-editor 0.2.9
 fribidi 1.0.16
 fx 39.2.0
 fzf 0.68.0
 gawk 5.4.0
 gcc 15.2.0_1
-gemini-cli 0.29.6
+gemini-cli 0.30.0
 gettext 1.0
 gh 2.87.3
 gifgrep 0.2.1
@@ -180,7 +180,7 @@ jpeg-turbo 3.1.3
 jpeg-xl 0.11.2
 jq 1.8.1
 jqp 0.8.0
-jrnl 4.2.1
+jrnl 4.3
 json-c 0.18
 just 1.46.0
 lame 3.100
@@ -202,7 +202,7 @@ libgpg-error 1.59
 libheif 1.21.2
 libiconv 1.18
 libidn2 2.3.8
-libksba 1.6.7
+libksba 1.6.8
 libmpc 1.3.1
 libnghttp2 1.68.0
 libnghttp3 1.15.0
@@ -254,7 +254,6 @@ makensis 3.11
 mcfly 0.9.4
 melody 0.20.0
 memo 0.4.0
-micro 2.0.15
 mole 1.27.0
 molten-vk 1.4.0
 mpdecimal 4.0.1
@@ -372,7 +371,7 @@ vulkan-headers 1.4.341.0
 vulkan-loader 1.4.341.0
 wacli 0.2.0
 wallpaper 2.3.3
-watchexec 2.4.1
+watchexec 2.5.0
 webp 1.6.0
 wget 1.25.0
 wgo 0.6.3
@@ -395,31 +394,35 @@ zstd 1.5.7_1
 
 MISE PACKAGES
 -------------
-bun                            1.3.9
-github:Slackadays/Clipboard    0.10.0            ~/.config/mise/mise.toml             latest
-github:ajeetdsouza/zoxide      0.9.9             ~/.config/mise/mise.toml             latest
-github:astral-sh/ruff          0.15.2
-github:bee-san/RustScan        2.4.1             ~/.config/mise/mise.toml             latest
-github:h0rv/d2-mcp             1.1.0             ~/.config/mise/mise.toml             latest
-github:jdx/fnox                1.13.0            ~/.config/mise/mise.toml             latest
-github:jesseduffield/lazygit   0.59.0            ~/.config/mise/mise.toml             latest
-github:melkeydev/go-blueprint  0.10.11
-github:neilotoole/sq           0.50.0            ~/.config/mise/mise.toml             latest
-github:nushell/nushell         0.110.0           ~/Software/DevBox/util/nu/mise.toml  latest
-github:o2sh/onefetch           2.26.1            ~/.config/mise/mise.toml             latest
-github:sharkdp/fd              10.3.0            ~/.config/mise/mise.toml             latest
-github:sharkdp/pastel          0.12.0            ~/.config/mise/mise.toml             latest
-github:sxyazi/yazi             26.1.22           ~/.config/mise/mise.toml             latest
-github:typst/typst             0.14.2
-go                             1.26.0
-node                           24.13.1
-npm:@mixedbread/mgrep          0.1.10            ~/.config/mise/mise.toml             latest
-npm:github-markdown-css        5.9.0             ~/.config/mise/mise.toml             latest
-npm:md-to-pdf                  5.2.5             ~/.config/mise/mise.toml             latest
-npm:skills                     1.4.1             ~/.config/mise/mise.toml             latest
-npm:vite                       7.3.1
-rust                           1.93.1 (symlink)
-uv                             0.10.4
+bun                                1.3.9
+claude-code                        2.1.50            ~/.config/mise/mise.toml  latest
+github:Slackadays/Clipboard        0.10.0            ~/.config/mise/mise.toml  latest
+github:ajeetdsouza/zoxide          0.9.9             ~/.config/mise/mise.toml  latest
+github:astral-sh/ruff              0.15.2
+github:bee-san/RustScan            2.4.1             ~/.config/mise/mise.toml  latest
+github:h0rv/d2-mcp                 1.1.0             ~/.config/mise/mise.toml  latest
+github:jdx/fnox                    1.13.0            ~/.config/mise/mise.toml  latest
+github:jesseduffield/lazygit       0.59.0            ~/.config/mise/mise.toml  latest
+github:melkeydev/go-blueprint      0.10.11
+github:neilotoole/sq               0.50.0            ~/.config/mise/mise.toml  latest
+github:nushell/nushell             0.110.0           ~/.config/mise/mise.toml  latest
+github:o2sh/onefetch               2.26.1            ~/.config/mise/mise.toml  latest
+github:sharkdp/fd                  10.3.0            ~/.config/mise/mise.toml  latest
+github:sharkdp/pastel              0.12.0            ~/.config/mise/mise.toml  latest
+github:sxyazi/yazi                 26.1.22           ~/.config/mise/mise.toml  latest
+github:typst/typst                 0.14.2
+go                                 1.26.0
+node                               24.13.1
+npm:@mariozechner/pi-coding-agent  0.54.2            ~/.config/mise/mise.toml  latest
+npm:@mixedbread/mgrep              0.1.10            ~/.config/mise/mise.toml  latest
+npm:github-markdown-css            5.9.0             ~/.config/mise/mise.toml  latest
+npm:md-to-pdf                      5.2.5             ~/.config/mise/mise.toml  latest
+npm:skills                         1.4.1             ~/.config/mise/mise.toml  latest
+npm:vite                           7.3.1
+rust                               1.93.1 (symlink)
+usage                              2.18.0            ~/.config/mise/mise.toml  latest
+uv                                 0.10.4
+yq                                 4.52.4            ~/.config/mise/mise.toml  latest
 
 RUSTUP/CARGO
 ------------
