@@ -53,7 +53,7 @@ typeface 4.2.3,4845
 visual-studio-code 1.109.5
 vlc 3.0.23
 yaak 2026.2.4
-zed 0.224.11
+zed 0.225.9
 zen 1.18.10b
 zoom 6.7.6.75444
 
@@ -420,7 +420,6 @@ npm:md-to-pdf                      5.2.5             ~/.config/mise/mise.toml  l
 npm:skills                         1.4.1             ~/.config/mise/mise.toml  latest
 npm:vite                           7.3.1
 rust                               1.93.1 (symlink)
-usage                              2.18.1            ~/.config/mise/mise.toml  latest
 uv                                 0.10.4
 yq                                 4.52.4            ~/.config/mise/mise.toml  latest
 
