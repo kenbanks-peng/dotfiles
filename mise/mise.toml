@@ -26,10 +26,15 @@ quiet = true
 
 
 [tasks]
+
+##################   PKGMGR   ##################
+
 [tasks."pkgmgr:scan"]
 description = "Scan for dev tools"
 tools = {"github:nushell/nushell" = "latest"}
 run = "/Users/kenbanks/Software/DevBox/util/pkgmgr/scan $args"
+
+##################   UNIX   ##################
 
 [tasks."unix:d"]
 description = "Pwd with escaped spaces"
