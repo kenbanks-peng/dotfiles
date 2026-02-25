@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#MISE description="Run scan"
+#MISE dir="{{cwd}}"
+#MISE tools={"github:nushell/nushell" = "latest"}
+exec /Users/kenbanks/Software/DevBox/util/nu/scan "$@"
