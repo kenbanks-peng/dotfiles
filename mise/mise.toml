@@ -19,6 +19,46 @@ usage = "latest"
 claude-code = "latest"
 yq = "latest"
 
+[tasks."go:anybar"]
+run = "bin/anybar \"$@\""
+dir = "/Users/kenbanks/Software/DevBox/util/go/anybar"
+description = "Run anybar"
+
+[tasks."go:crud"]
+run = "bin/api \"$@\""
+dir = "/Users/kenbanks/Software/DevBox/util/go/crud"
+description = "Run crud API"
+
+[tasks."go:diagram"]
+run = "bin/diagram \"$@\""
+dir = "/Users/kenbanks/Software/DevBox/util/go/diagram"
+description = "Run diagram"
+
+[tasks."go:dir"]
+run = "bin/dir \"$@\""
+dir = "/Users/kenbanks/Software/DevBox/util/go/dir"
+description = "Run dir"
+
+[tasks."go:trash"]
+run = "bin/trash \"$@\""
+dir = "/Users/kenbanks/Software/DevBox/util/go/trash"
+description = "Run trash"
+
+[tasks."go:util"]
+run = "bin/util \"$@\""
+dir = "/Users/kenbanks/Software/DevBox/util/go/util"
+description = "Run util"
+
+[tasks."go:ver"]
+run = "bin/ver \"$@\""
+dir = "/Users/kenbanks/Software/DevBox/util/go/ver"
+description = "Run ver"
+
+[tasks."go:wm"]
+run = "bin/wm \"$@\""
+dir = "/Users/kenbanks/Software/DevBox/util/go/wm"
+description = "Run wm"
+
 [settings]
 experimental = true
 quiet = true
