@@ -14,7 +14,10 @@
 "github:Slackadays/Clipboard" = "latest"
 "github:bee-san/RustScan" = "latest"
 "npm:skills" = "latest"
+usage = "latest"
+"npm:@mariozechner/pi-coding-agent" = "latest"
 claude-code = "latest"
+yq = "latest"
 
 [settings]
 experimental = true

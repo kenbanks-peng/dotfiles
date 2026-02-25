@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 # [MISE] description="Python package for pypi"
+# [USAGE] arg "<package>"
 # [MISE] dir="{{cwd}}"
+
 eval "$(mise env -C "$HOME/Software/DevBox/util/python")"
-exec "$HOME/Software/DevBox/util/python/uv-package" "$@"
+exec "$HOME/Software/DevBox/util/python/uv-package" "$usage_package"

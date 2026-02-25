@@ -3,4 +3,4 @@
 # [USAGE] arg "<string>"
 # [MISE] dir="{{cwd}}"
 
-claude -p "$usage_string"
+claude -p "$*"
