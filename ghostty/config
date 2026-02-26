@@ -72,7 +72,7 @@ split-divider-color = 083e6c
 # keybind = super+backslash=new_split:right
 keybind = super+slash=text:\x01"
 keybind = super+backslash=text:\x01%
-keybind = super+left_bracket=text:\x01[
+
 
 # native ghostty split navigation (replaced with tmux navigation)
 # keybind = shift+left=goto_split:left
