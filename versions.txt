@@ -129,7 +129,6 @@ gcc 15.2.0_1
 gemini-cli 0.30.0
 gettext 1.0
 gh 2.87.3
-gifgrep 0.2.1
 giflib 5.2.2
 git 2.53.0
 git-delta 0.18.2_3
