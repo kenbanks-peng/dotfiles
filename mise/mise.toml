@@ -51,10 +51,6 @@ run = "/Users/kenbanks/Software/DevBox/util/dev/qmd $args"
 description = "Open in Cursor editor"
 run = "/Users/kenbanks/Software/DevBox/util/edit/c $args"
 
-[tasks."edit:e"]
-description = "Open in default editor"
-run = "/Users/kenbanks/Software/DevBox/util/edit/e $args"
-
 [tasks."edit:fr"]
 description = "Open in Fresh editor"
 run = "/Users/kenbanks/Software/DevBox/util/edit/fr $args"
@@ -272,6 +268,10 @@ run = "/Users/kenbanks/Software/DevBox/util/util/clean $args"
 description = "Color utilities (pastel)"
 run = "/Users/kenbanks/Software/DevBox/util/util/color $args"
 
+[tasks."util:colors"]
+description = "Color space conversion (colorjs)"
+run = "/Users/kenbanks/Software/DevBox/util/util/colors/colors $args"
+
 [tasks."util:crok"]
 description = "Croc file transfer"
 run = "/Users/kenbanks/Software/DevBox/util/util/crok $args"
@@ -324,6 +324,10 @@ run = "/Users/kenbanks/Software/DevBox/util/util/lines $args"
 description = "Convert files to markdown"
 run = "/Users/kenbanks/Software/DevBox/util/util/md $args"
 
+[tasks."util:mdpdf"]
+description = "Markdown to PDF"
+run = "/Users/kenbanks/Software/DevBox/util/util/mdpdf/mdpdf $args"
+
 [tasks."util:mel"]
 description = "Melody language to regex"
 run = "/Users/kenbanks/Software/DevBox/util/util/mel $args"
@@ -339,6 +343,10 @@ run = "/Users/kenbanks/Software/DevBox/util/util/mouse-focus $args"
 [tasks."util:of"]
 description = "Code/git stats (onefetch)"
 run = "/Users/kenbanks/Software/DevBox/util/util/of $args"
+
+[tasks."util:oklch"]
+description = "OKLCH color space tool"
+run = "/Users/kenbanks/Software/DevBox/util/util/oklch/oklch $args"
 
 [tasks."util:path"]
 description = "Pretty-print PATH"
@@ -360,10 +368,6 @@ run = "/Users/kenbanks/Software/DevBox/util/util/regex $args"
 [tasks."util:release"]
 description = "Remove app quarantine"
 run = "/Users/kenbanks/Software/DevBox/util/util/release $args"
-
-[tasks."util:rosetta"]
-description = "Rosetta x86_64 emulation on/off"
-run = "/Users/kenbanks/Software/DevBox/util/util/rosetta $args"
 
 [tasks."util:rscan"]
 description = "Port scanner (rustscan)"
@@ -389,6 +393,10 @@ run = "/Users/kenbanks/Software/DevBox/util/util/tbl $args"
 description = "Re-source tmux config"
 run = "/Users/kenbanks/Software/DevBox/util/util/tmuxx $args"
 
+[tasks."util:trash"]
+description = "Move files to trash"
+run = "/Users/kenbanks/Software/DevBox/util/util/trash/bin/trash $args"
+
 [tasks."util:uv-init"]
 description = "Initialize UV project"
 run = "/Users/kenbanks/Software/DevBox/util/util/uv-init $args"
@@ -408,6 +416,10 @@ run = "/Users/kenbanks/Software/DevBox/util/util/wf $args"
 [tasks."util:windim"]
 description = "Window dimensions"
 run = "/Users/kenbanks/Software/DevBox/util/util/windim $args"
+
+[tasks."util:wm"]
+description = "Window manager helper"
+run = "/Users/kenbanks/Software/DevBox/util/util/wm/bin/wm $args"
 
 [tasks."util:wr"]
 description = "Weather report"
