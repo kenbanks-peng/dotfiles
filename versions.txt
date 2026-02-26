@@ -93,7 +93,6 @@ c-ares 1.34.6
 ca-certificates 2025-12-02
 caddy 2.11.1
 cairo 1.18.4
-camsnap 0.2.0
 carapace 1.6.3
 certifi 2026.1.4
 cffi 2.0.0_1
@@ -405,6 +404,7 @@ github:jdx/fnox                    1.13.0            ~/.config/mise/mise.toml  l
 github:jesseduffield/lazygit       0.59.0            ~/.config/mise/mise.toml  latest
 github:melkeydev/go-blueprint      0.10.11
 github:neilotoole/sq               0.50.0            ~/.config/mise/mise.toml  latest
+github:nushell/nushell             0.110.0
 github:o2sh/onefetch               2.26.1            ~/.config/mise/mise.toml  latest
 github:sharkdp/fd                  10.3.0            ~/.config/mise/mise.toml  latest
 github:sharkdp/pastel              0.12.0            ~/.config/mise/mise.toml  latest
