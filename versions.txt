@@ -9,7 +9,7 @@ boop 1.4.0
 brainfm 0.0.247
 claude 1.1.4328,d8e39139e1c50f5530ac3da3af80e689710c8ea1
 cleanshot 4.8.7
-codex 0.104.0
+codex 0.105.0
 cursor 2.5.25,7150844152b426ed50d2b68dd6b33b5c5beb73ca
 daisydisk 4.33.2
 espanso 2.3.0
@@ -37,7 +37,7 @@ microsoft-auto-update 4.82.26020434
 microsoft-outlook 16.106.26022219
 ngrok 3.36.1,7eDVKgsuaQh,a
 obsidian 1.11.7
-omnifocus 4.8.7
+omnifocus 4.8.8
 onedrive 26.017.0126.0002
 orbstack 2.0.5,19905
 pdf-pals 1.9.0
@@ -293,7 +293,7 @@ pass 1.7.4
 pcaudiolib 1.3
 pcre2 10.47_1
 peekaboo 3.0.0-beta3
-pgvector 0.8.1
+pgvector 0.8.2
 pinentry 1.3.2
 pinentry-mac 1.3.1.1
 pinentry-touchid 0.0.3
@@ -357,7 +357,7 @@ thrift 0.22.0_1
 tmux 3.6a
 tokei 14.0.0
 tree 2.3.1
-tree-sitter 0.26.5
+tree-sitter 0.26.6
 tree-sitter@0.25 0.25.10
 ttyd 1.7.7_6
 turso 0.4.4
@@ -395,7 +395,7 @@ zstd 1.5.7_1
 MISE PACKAGES
 -------------
 bun                                1.3.9
-claude-code                        2.1.56            ~/.config/mise/mise.toml  latest
+claude-code                        2.1.58            ~/.config/mise/mise.toml  latest
 github:Slackadays/Clipboard        0.10.0            ~/.config/mise/mise.toml  latest
 github:ajeetdsouza/zoxide          0.9.9             ~/.config/mise/mise.toml  latest
 github:astral-sh/ruff              0.15.2
@@ -405,7 +405,6 @@ github:jdx/fnox                    1.13.0            ~/.config/mise/mise.toml  l
 github:jesseduffield/lazygit       0.59.0            ~/.config/mise/mise.toml  latest
 github:melkeydev/go-blueprint      0.10.11
 github:neilotoole/sq               0.50.0            ~/.config/mise/mise.toml  latest
-github:nushell/nushell             0.110.0           ~/.config/mise/mise.toml  latest
 github:o2sh/onefetch               2.26.1            ~/.config/mise/mise.toml  latest
 github:sharkdp/fd                  10.3.0            ~/.config/mise/mise.toml  latest
 github:sharkdp/pastel              0.12.0            ~/.config/mise/mise.toml  latest
@@ -413,7 +412,7 @@ github:sxyazi/yazi                 26.1.22           ~/.config/mise/mise.toml  l
 github:typst/typst                 0.14.2
 go                                 1.26.0
 node                               24.13.1
-npm:@mariozechner/pi-coding-agent  0.55.0            ~/.config/mise/mise.toml  latest
+npm:@mariozechner/pi-coding-agent  0.55.1            ~/.config/mise/mise.toml  latest
 npm:@mixedbread/mgrep              0.1.10            ~/.config/mise/mise.toml  latest
 npm:github-markdown-css            5.9.0             ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                      5.2.5             ~/.config/mise/mise.toml  latest
