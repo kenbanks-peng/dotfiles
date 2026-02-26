@@ -316,7 +316,6 @@ resvg 0.47.0
 ripgrep 15.1.0
 rubberband 4.0.0
 sad 0.4.32
-sag 0.2.2
 sd 1.0.0
 sdl2 2.32.10
 sevenzip 26.00
