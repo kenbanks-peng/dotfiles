@@ -14,11 +14,9 @@
 "github:Slackadays/Clipboard" = "latest"
 "github:bee-san/RustScan" = "latest"
 "npm:skills" = "latest"
-usage = "latest"
 "npm:@mariozechner/pi-coding-agent" = "latest"
 claude-code = "latest"
 yq = "latest"
-"github:nushell/nushell" = "latest"
 
 [settings]
 experimental = true
@@ -143,6 +141,7 @@ run = "/Users/kenbanks/Software/DevBox/util/pkgmgr/bv $args"
 
 [tasks."pkgmgr:mlb"]
 description = "Mise list by backend"
+tools = {"github:nushell/nushell" = "latest"}
 run = "/Users/kenbanks/Software/DevBox/util/pkgmgr/mlb $args"
 
 [tasks."pkgmgr:mlg"]
