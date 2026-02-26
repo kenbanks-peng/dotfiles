@@ -311,7 +311,6 @@ qsv 16.1.0
 rclone 1.73.1
 re2 2025-11-05
 readline 8.3.3
-remindctl 0.1.1
 repomix 1.11.1
 resvg 0.47.0
 ripgrep 15.1.0
