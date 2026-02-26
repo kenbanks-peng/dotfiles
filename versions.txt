@@ -281,7 +281,6 @@ openjph 0.26.3
 openssl@3 3.6.1
 opus 1.6.1
 opusfile 0.12_1
-ordercli 0.1.0
 p11-kit 0.26.2
 pandoc 3.9
 pass 1.7.4
