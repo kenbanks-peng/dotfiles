@@ -421,10 +421,3 @@ npm:vite                           7.3.1
 rust                               1.93.1 (symlink)
 uv                                 0.10.4
 yq                                 4.52.4            ~/.config/mise/mise.toml  latest
-
-RUSTUP/CARGO
-------------
-No rustup found
-
-UV TOOLS
---------
