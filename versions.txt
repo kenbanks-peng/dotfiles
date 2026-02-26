@@ -144,7 +144,6 @@ gnu-sed 4.9
 gnupg 2.4.9
 gnutls 3.8.12
 gobang 0.1.0-alpha.5
-gogcli 0.11.0
 goplaces 0.3.0
 gpg-tui 0.11.1_1
 gpgme 2.0.1
