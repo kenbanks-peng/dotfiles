@@ -11,7 +11,7 @@ claude 1.1.4328,d8e39139e1c50f5530ac3da3af80e689710c8ea1
 cleanshot 4.8.7
 codex 0.105.0
 cursor 2.5.25,7150844152b426ed50d2b68dd6b33b5c5beb73ca
-daisydisk 4.33.2
+daisydisk 4.33.3
 espanso 2.3.0
 flox 1.9.1
 font-hasklug-nerd-font 3.4.0
@@ -313,7 +313,7 @@ qsv 16.1.0
 rclone 1.73.1
 re2 2025-11-05
 readline 8.3.3
-repomix 1.11.1
+repomix 1.12.0
 resvg 0.47.0
 ripgrep 15.1.0
 rubberband 4.0.0
