@@ -13,10 +13,10 @@
 claude-code = "latest"
 yq = "latest"
 zoxide = "latest"
-yazi = "latest"
 fd = "latest"
 lazygit = "latest"
 fnox = "latest"
+yazi = "latest"
 
 [settings]
 experimental = true
