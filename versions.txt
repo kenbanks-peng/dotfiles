@@ -36,7 +36,7 @@ logos 48.0.0.0238
 microsoft-auto-update 4.82.26020434
 microsoft-outlook 16.106.26022219
 ngrok 3.36.1,7eDVKgsuaQh,a
-obsidian 1.11.7
+obsidian 1.12.4
 omnifocus 4.8.8
 onedrive 26.017.0126.0002
 orbstack 2.0.5,19905
@@ -126,7 +126,7 @@ fx 39.2.0
 fzf 0.68.0
 gawk 5.4.0
 gcc 15.2.0_1
-gemini-cli 0.30.0
+gemini-cli 0.30.1
 gettext 1.0
 gh 2.87.3
 giflib 5.2.2
