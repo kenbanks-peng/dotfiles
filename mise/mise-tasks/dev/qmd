@@ -1,6 +1,0 @@
-#!/usr/bin/env zsh
-# [MISE] description="Quatro presentations"
-# [USAGE] arg "<file>"
-# [MISE] dir="{{cwd}}"
-
-quarto render "$usage_file" --to revealjs --output-dir "$HOME/Documents/Presentations"

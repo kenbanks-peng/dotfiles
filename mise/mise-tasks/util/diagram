@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-# [MISE] description="Diagram generator"
-# [MISE] dir="{{cwd}}"
-exec "$HOME/Software/DevBox/util/diagram/build/diagram" "$@"

@@ -1,5 +1,0 @@
-#!/usr/bin/env zsh
-# [MISE] description="Opens the current directory in macOS Finder"
-# [MISE] dir="{{cwd}}"
-
-open .

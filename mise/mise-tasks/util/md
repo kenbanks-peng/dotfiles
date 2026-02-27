@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-# [MISE] description="Convert various file types to markdown"
-markitdown "$@"

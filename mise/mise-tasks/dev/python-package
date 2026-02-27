@@ -1,6 +1,0 @@
-#!/usr/bin/env zsh
-# [MISE] description="Python package for pypi"
-# [USAGE] arg "<package>"
-# [MISE] dir="{{cwd}}"
-
-uv init --build-backend uv --package "$usage_package"

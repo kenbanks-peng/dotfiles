@@ -1,3 +1,0 @@
-#!/usr/bin/env zsh
-# [MISE] description="Remove .DS_Store recursively"
-sudo fd --unrestricted '^\.DS_Store$' --type file --exec-batch rm

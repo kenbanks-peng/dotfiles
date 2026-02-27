@@ -1,9 +1,0 @@
-#!/usr/bin/env zsh
-# [MISE] description="Brew search"
-# [MISE] dir="{{cwd}}"
-
-# brew search
-
-print "brew search" $@
-print
-brew search $@

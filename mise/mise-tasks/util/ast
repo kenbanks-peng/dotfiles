@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-# [MISE] description="Code refactoring with ast-grep"
-ast-grep "$@"

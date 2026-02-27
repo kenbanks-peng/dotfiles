@@ -1,6 +1,0 @@
-#!/usr/bin/env zsh
-# [MISE] description="Ai for terminal"
-# [USAGE] arg "<string>"
-# [MISE] dir="{{cwd}}"
-
-claude -p "$usage_string"
