@@ -203,7 +203,7 @@ leading_diamond = ''
 trailing_diamond = ''
 background = 'p:git'
 foreground = 'p:git-foreground'
-template = ' {{ if .UpstreamURL }}{{ url .UpstreamIcon .UpstreamURL }} {{ end }}{{ .HEAD }}{{ if .Working.Changed }} 󱩽{{ end }}{{ if gt .Ahead 0 }} {{ .Ahead }}{{ end }}{{ if gt .Behind 0 }} {{ .Behind }}{{ end }}{{ if and (not .Working.Changed) (eq .Ahead 0) (eq .Behind 0) }} {{ end }} '
+template = ' {{ .Env.GITSTATUS }} '
 background_templates = [
   '{{ if or .Working.Changed .Staging.Changed }}p:git-modified{{ end }}',
   '{{ if or (gt .Ahead 0) (gt .Behind 0) }}p:git-diverged{{ end }}',
