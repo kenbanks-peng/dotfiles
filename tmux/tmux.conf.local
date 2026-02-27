@@ -394,6 +394,12 @@ bind m run "cut -c3- '#{TMUX_CONF}' | sh -s _toggle_mouse" \; display 'mouse #{?
 # when destroying a session, switch to another session instead of exiting
 set -g detach-on-destroy off
 
+# ESC in copy mode → exit copy mode (returns to zsh insert mode)
+bind -T copy-mode-vi Escape send-keys -X cancel
+
+# copy mode cursor: blinking block in yellow (distinct from zsh normal mode steady block)
+set-hook -g pane-mode-changed 'if-shell -F "#{pane_in_mode}" "set -p cursor-style blinking-block ; set -p cursor-colour yellow" "set -p cursor-style default ; set -up -p cursor-colour"'
+
 # custom keybindings without prefix
 bind -n C-n new-window -c "#{pane_current_path}"
 bind -n C-s command-prompt -p "new session name:" "new-session -s '%%'"
