@@ -48,6 +48,7 @@ screen-studio 3.6.0-4214
 sf-symbols 7.2,119
 sip-app 4.1.4
 skim 1.7.12
+superset 1.0.3
 symboliclinker 2.2
 typeface 4.2.3,4845
 visual-studio-code 1.109.5
