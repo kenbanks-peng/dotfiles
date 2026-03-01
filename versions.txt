@@ -55,7 +55,7 @@ visual-studio-code 1.109.5
 vlc 3.0.23
 yaak 2026.2.4
 zed 0.225.10
-zen 1.18.10b
+zen 1.19b
 zoom 6.7.6.75444
 
 BREW FORMULAS
