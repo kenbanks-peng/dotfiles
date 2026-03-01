@@ -33,7 +33,7 @@ linear-linear 1.28.12,260226pqw0vmhth
 logos 48.0.0.0238
 microsoft-auto-update 4.82.26020434
 ngrok 3.36.1,7eDVKgsuaQh,a
-obsidian 1.11.7
+obsidian 1.12.4
 omnifocus 4.8.8
 onedrive 26.017.0126.0002
 orbstack 2.0.5,19905
@@ -50,7 +50,7 @@ visual-studio-code 1.109.5
 vlc 3.0.23
 yaak 2026.2.4
 zed 0.225.10
-zen 1.18.10b
+zen 1.19b
 zoom 6.7.6.75444
 
 BREW FORMULAS
@@ -63,7 +63,7 @@ apache-arrow 23.0.1_1
 asciinema 3.1.0
 ast-grep 0.41.0
 autoconf 2.72
-aws-c-auth 0.9.6
+aws-c-auth 0.10.0
 aws-c-cal 0.9.13
 aws-c-common 0.12.6
 aws-c-compression 0.3.2
@@ -124,7 +124,7 @@ fx 39.2.0
 fzf 0.68.0
 gawk 5.4.0
 gcc 15.2.0_1
-gemini-cli 0.30.0
+gemini-cli 0.31.0
 gettext 1.0
 gh 2.87.3
 gifgrep 0.2.1
@@ -233,13 +233,13 @@ libxrender 0.9.12
 libyaml 0.2.5
 little-cms2 2.18
 llhttp 9.3.1
-llvm 21.1.8_1
+llvm 22.1.0
 llvm@20 20.1.8
 llvm@21 21.1.8
 lolcat 100.0.1
 lpeg 1.1.0
 lua 5.4.8
-luajit 2.1.1771967821
+luajit 2.1.1772148810
 luarocks 3.12.2
 lunchy-go 0.2.1
 luv 1.51.0-2
@@ -253,7 +253,7 @@ mcfly 0.9.4
 melody 0.20.0
 memo 0.4.0
 micro 2.0.15
-mole 1.28.0
+mole 1.28.1
 molten-vk 1.4.0
 mpdecimal 4.0.1
 mpfr 4.2.2
@@ -271,7 +271,7 @@ npth 1.8
 nspr 4.38.2
 nss 3.121
 numpy 2.4.2
-nushell 0.110.0
+nushell 0.111.0
 obsidian-cli 0.2.3
 oh-my-posh 29.7.0
 oniguruma 6.9.10
@@ -392,9 +392,9 @@ zstd 1.5.7_1
 
 MISE PACKAGES
 -------------
-claude-code                        2.1.62   ~/.config/mise/mise.toml  latest
+claude-code                        2.1.63   ~/.config/mise/mise.toml  latest
 fd                                 10.3.0   ~/.config/mise/mise.toml  latest
-fnox                               1.13.0   ~/.config/mise/mise.toml  latest
+fnox                               1.14.0   ~/.config/mise/mise.toml  latest
 github:Slackadays/Clipboard        0.10.0   ~/.config/mise/mise.toml  latest
 github:bee-san/RustScan            2.4.1    ~/.config/mise/mise.toml  latest
 github:h0rv/d2-mcp                 1.1.0    ~/.config/mise/mise.toml  latest
@@ -402,11 +402,11 @@ github:neilotoole/sq               0.50.0   ~/.config/mise/mise.toml  latest
 github:o2sh/onefetch               2.26.1   ~/.config/mise/mise.toml  latest
 github:sharkdp/pastel              0.12.0   ~/.config/mise/mise.toml  latest
 lazygit                            0.59.0   ~/.config/mise/mise.toml  latest
-npm:@mariozechner/pi-coding-agent  0.55.1   ~/.config/mise/mise.toml  latest
+npm:@mariozechner/pi-coding-agent  0.55.3   ~/.config/mise/mise.toml  latest
 npm:@mixedbread/mgrep              0.1.10   ~/.config/mise/mise.toml  latest
 npm:github-markdown-css            5.9.0    ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                      5.2.5    ~/.config/mise/mise.toml  latest
-npm:skills                         1.4.2    ~/.config/mise/mise.toml  latest
+npm:skills                         1.4.3    ~/.config/mise/mise.toml  latest
 yazi                               26.1.22  ~/.config/mise/mise.toml  latest
 yq                                 4.52.4   ~/.config/mise/mise.toml  latest
 zoxide                             0.9.9    ~/.config/mise/mise.toml  latest
