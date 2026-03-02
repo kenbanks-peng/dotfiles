@@ -9,7 +9,7 @@ boop 1.4.0
 brainfm 0.0.249
 claude 1.1.4498,24f7682cc400dec8d91fc28e444aa02743ab79dd
 cleanshot 4.8.7
-codex 0.106.0
+codex 0.107.0
 cursor 2.5.26,7d96c2a03bb088ad367615e9da1a3fe20fbbc6ae
 daisydisk 4.33.3
 espanso 2.3.0
@@ -327,7 +327,7 @@ shaderc 2026.1
 shared-mime-info 2.4_1
 shellcheck 0.11.0
 simdjson 4.3.0
-sk 3.5.0
+sk 3.6.0
 sketchybar 2.23.0
 sleef 3.9.0
 snappy 1.2.2
@@ -389,29 +389,30 @@ zstd 1.5.7_1
 MISE PACKAGES
 -------------
 bun                                1.3.9
-claude-code                        2.1.63            ~/Software/Public/dotfiles/mise/mise.toml  latest
-fd                                 10.3.0            ~/Software/Public/dotfiles/mise/mise.toml  latest
-fnox                               1.15.1            ~/Software/Public/dotfiles/mise/mise.toml  latest
-github:Slackadays/Clipboard        0.10.0            ~/Software/Public/dotfiles/mise/mise.toml  latest
-github:bee-san/RustScan            2.4.1             ~/Software/Public/dotfiles/mise/mise.toml  latest
-github:h0rv/d2-mcp                 1.1.0             ~/Software/Public/dotfiles/mise/mise.toml  latest
+claude-code                        2.1.63            ~/.config/mise/mise.toml  latest
+fd                                 10.3.0            ~/.config/mise/mise.toml  latest
+fnox                               1.15.1            ~/.config/mise/mise.toml  latest
+github:Slackadays/Clipboard        0.10.0            ~/.config/mise/mise.toml  latest
+github:bee-san/RustScan            2.4.1             ~/.config/mise/mise.toml  latest
+github:h0rv/d2-mcp                 1.1.0             ~/.config/mise/mise.toml  latest
 github:melkeydev/go-blueprint      0.10.11
-github:neilotoole/sq               0.50.0            ~/Software/Public/dotfiles/mise/mise.toml  latest
-github:o2sh/onefetch               2.26.1            ~/Software/Public/dotfiles/mise/mise.toml  latest
-github:sharkdp/pastel              0.12.0            ~/Software/Public/dotfiles/mise/mise.toml  latest
+github:neilotoole/sq               0.50.0            ~/.config/mise/mise.toml  latest
+github:o2sh/onefetch               2.26.1            ~/.config/mise/mise.toml  latest
+github:sharkdp/pastel              0.12.0            ~/.config/mise/mise.toml  latest
 go                                 1.26.0
-lazygit                            0.59.0            ~/Software/Public/dotfiles/mise/mise.toml  latest
+lazygit                            0.59.0            ~/.config/mise/mise.toml  latest
 node                               24.14.0
-npm:@mariozechner/pi-coding-agent  0.55.3            ~/Software/Public/dotfiles/mise/mise.toml  latest
-npm:@mixedbread/mgrep              0.1.10            ~/Software/Public/dotfiles/mise/mise.toml  latest
-npm:github-markdown-css            5.9.0             ~/Software/Public/dotfiles/mise/mise.toml  latest
-npm:md-to-pdf                      5.2.5             ~/Software/Public/dotfiles/mise/mise.toml  latest
-npm:skills                         1.4.3             ~/Software/Public/dotfiles/mise/mise.toml  latest
+npm:@mariozechner/pi-coding-agent  0.55.3            ~/.config/mise/mise.toml  latest
+npm:@mixedbread/mgrep              0.1.10            ~/.config/mise/mise.toml  latest
+npm:github-markdown-css            5.9.0             ~/.config/mise/mise.toml  latest
+npm:md-to-pdf                      5.2.5             ~/.config/mise/mise.toml  latest
+npm:skills                         1.4.3             ~/.config/mise/mise.toml  latest
 npm:vite                           7.3.1
 ruff                               0.15.4
 rust                               1.93.1 (symlink)
+sops                               3.12.1            ~/.config/mise/mise.toml  latest
 typst                              0.14.2
 uv                                 0.10.4
-yazi                               26.1.22           ~/Software/Public/dotfiles/mise/mise.toml  latest
-yq                                 4.52.4            ~/Software/Public/dotfiles/mise/mise.toml  latest
-zoxide                             0.9.9             ~/Software/Public/dotfiles/mise/mise.toml  latest
+yazi                               26.1.22           ~/.config/mise/mise.toml  latest
+yq                                 4.52.4            ~/.config/mise/mise.toml  latest
+zoxide                             0.9.9             ~/.config/mise/mise.toml  latest
