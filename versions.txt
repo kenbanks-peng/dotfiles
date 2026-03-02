@@ -30,7 +30,7 @@ handy 0.7.9
 iina 1.4.1,160
 keepassxc 2.7.11
 keyclu 0.31
-languagetool-desktop 2.11.2
+languagetool-desktop 2.11.3
 linear-linear 1.28.12,260226pqw0vmhth
 logos 48.0.0.0238
 microsoft-auto-update 4.82.26020434
@@ -401,7 +401,7 @@ github:sharkdp/pastel              0.12.0            ~/.config/mise/mise.toml  l
 go                                 1.26.0
 lazygit                            0.59.0            ~/.config/mise/mise.toml  latest
 node                               24.14.0
-npm:@mariozechner/pi-coding-agent  0.55.3            ~/.config/mise/mise.toml  latest
+npm:@mariozechner/pi-coding-agent  0.55.4            ~/.config/mise/mise.toml  latest
 npm:@mixedbread/mgrep              0.1.10            ~/.config/mise/mise.toml  latest
 npm:github-markdown-css            5.9.0             ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                      5.2.5             ~/.config/mise/mise.toml  latest
