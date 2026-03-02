@@ -26,7 +26,7 @@ git-credential-manager 2.7.0
 google-chrome 145.0.7632.117
 google-drive 121.0.1
 grandperspective 3.6.3
-handy 0.7.8
+handy 0.7.9
 iina 1.4.1,160
 keepassxc 2.7.11
 keyclu 0.31
@@ -64,8 +64,8 @@ abseil 20260107.1
 ada-url 3.4.3
 age 1.3.1
 aom 3.13.1
-apache-arrow 23.0.1_1
-asciinema 3.1.0
+apache-arrow 23.0.1_2
+asciinema 3.2.0
 ast-grep 0.41.0
 autoconf 2.72
 aws-c-auth 0.10.0
@@ -121,7 +121,7 @@ flock 0.4.0
 fmt 12.1.0
 fontconfig 2.17.1
 freetype 2.14.1_2
-fresh-editor 0.2.10
+fresh-editor 0.2.11
 fribidi 1.0.16
 fx 39.2.0
 fzf 0.68.0
@@ -151,7 +151,7 @@ gpgmepp 2.0.0
 gping 1.20.1
 graphite2 1.3.14
 grex 1.4.6
-grpc 1.78.1
+grpc 1.78.1_1
 grype 0.109.0
 harfbuzz 12.3.2
 hdrhistogram_c 0.11.9
@@ -239,7 +239,7 @@ llvm@21 21.1.8
 lolcat 100.0.1
 lpeg 1.1.0
 lua 5.4.8
-luajit 2.1.1771967821
+luajit 2.1.1772148810
 luarocks 3.12.2
 lunchy-go 0.2.1
 luv 1.51.0-2
@@ -266,7 +266,7 @@ neovim 0.11.6
 netbird 0.66.0
 nettle 3.10.2
 nim 2.2.8
-node 25.6.1_1
+node 25.7.0
 npth 1.8
 nspr 4.38.2
 nss 3.121
@@ -300,6 +300,7 @@ portal 1.2.3
 posting 2.9.2
 procs 0.14.11
 protobuf 33.4_1
+protobuf@33 33.5
 pstree 2.40
 pv 1.10.3
 pybind11 3.0.2
@@ -344,7 +345,7 @@ syft 1.42.1
 syncthing 2.0.14
 tailspin 5.5.0
 tealdeer 1.8.1
-television 0.15.2
+television 0.15.3
 terminal-notifier 2.0.0
 thrift 0.22.0_1
 tmux 3.6a
@@ -352,7 +353,7 @@ tokei 14.0.0
 tree 2.3.1
 tree-sitter 0.26.6
 tree-sitter@0.25 0.25.10
-trivy 0.69.1
+trivy 0.69.2
 ttyd 1.7.7_6
 turso 0.4.4
 uchardet 0.0.8
@@ -390,7 +391,7 @@ MISE PACKAGES
 bun                                1.3.9
 claude-code                        2.1.63            ~/.config/mise/mise.toml  latest
 fd                                 10.3.0            ~/.config/mise/mise.toml  latest
-fnox                               1.14.0            ~/.config/mise/mise.toml  latest
+fnox                               1.15.0            ~/.config/mise/mise.toml  latest
 github:Slackadays/Clipboard        0.10.0            ~/.config/mise/mise.toml  latest
 github:bee-san/RustScan            2.4.1             ~/.config/mise/mise.toml  latest
 github:h0rv/d2-mcp                 1.1.0             ~/.config/mise/mise.toml  latest
