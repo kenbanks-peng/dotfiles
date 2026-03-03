@@ -1,3 +1,5 @@
+[env]
+
 [tools]
 "npm:md-to-pdf" = "latest"
 "npm:github-markdown-css" = "latest"
@@ -424,3 +426,5 @@ run = "/Users/kenbanks/Software/DevBox/util/util/wm/bin/wm $args"
 [tasks."util:wr"]
 description = "Weather report"
 run = "/Users/kenbanks/Software/DevBox/util/util/wr $args"
+
+
