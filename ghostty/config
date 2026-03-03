@@ -44,8 +44,8 @@ cursor-opacity = 1
 # window
 macos-icon = glass
 window-padding-x = 30
-window-padding-y = 15
-window-padding-balance = true
+window-padding-y = 5,15
+window-padding-balance = false
 macos-window-shadow = false
 quit-after-last-window-closed = true
 macos-titlebar-style = transparent
