@@ -19,6 +19,7 @@ fd = "latest"
 lazygit = "latest"
 fnox = "latest"
 yazi = "latest"
+sops = "latest"
 
 [settings]
 experimental = true
