@@ -34,7 +34,7 @@ languagetool-desktop 2.11.3
 linear-linear 1.28.12,260226pqw0vmhth
 logos 48.0.0.0238
 microsoft-auto-update 4.82.26020434
-microsoft-outlook 16.106.26022219
+microsoft-outlook 16.106.26030211
 ngrok 3.36.1,7eDVKgsuaQh,a
 obsidian 1.12.4
 omnifocus 4.8.8
@@ -106,7 +106,7 @@ curlie 1.8.2
 d2 0.7.1
 dav1d 1.5.3
 dblab 0.34.3
-deno 2.7.1
+deno 2.7.2
 doppler 3.75.3
 dotenvx 1.52.0
 dvc 3.66.1_4
@@ -394,6 +394,7 @@ fnox                               1.15.1            ~/.config/mise/mise.toml  l
 github:Slackadays/Clipboard        0.10.0            ~/.config/mise/mise.toml  latest
 github:bee-san/RustScan            2.4.1             ~/.config/mise/mise.toml  latest
 github:h0rv/d2-mcp                 1.1.0             ~/.config/mise/mise.toml  latest
+github:max-sixty/worktrunk         0.28.2            ~/.config/mise/mise.toml  latest
 github:melkeydev/go-blueprint      0.10.11
 github:neilotoole/sq               0.50.0            ~/.config/mise/mise.toml  latest
 github:o2sh/onefetch               2.26.1            ~/.config/mise/mise.toml  latest
