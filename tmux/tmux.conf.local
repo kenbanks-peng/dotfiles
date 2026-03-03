@@ -393,7 +393,7 @@ set -g status-position top
 
 # status line 2
 set -g status 2
-set -g status-format[1] '#[align=left]#[fg=#1e1e2e,bg=#a6e3a1,bold]  #{@git_branch} #[default]'
+set -g status-format[1] '#[align=left]#{@git_segment}'
 
 # when destroying a session, switch to another session instead of exiting
 set -g detach-on-destroy off
