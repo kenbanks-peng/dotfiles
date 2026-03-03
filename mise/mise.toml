@@ -20,6 +20,7 @@ fd = "latest"
 lazygit = "latest"
 fnox = "latest"
 sops = "latest"
+"github:max-sixty/worktrunk" = "latest"
 
 [settings]
 experimental = true
