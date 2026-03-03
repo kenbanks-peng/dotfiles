@@ -22,7 +22,7 @@ font-tex-gyre-termes 2.004
 ghostty 1.2.3
 git-credential-manager 2.7.0
 google-chrome 145.0.7632.117
-google-drive 121.0.1
+google-drive 122.0.1
 grandperspective 3.6.3
 handy 0.7.9
 iina 1.4.1,160
@@ -49,7 +49,7 @@ typeface 4.2.3,4845
 visual-studio-code 1.109.5
 vlc 3.0.23
 yaak 2026.2.4
-zed 0.225.10
+zed 0.225.12
 zen 1.19b
 zoom 6.7.6.75444
 
@@ -68,7 +68,7 @@ aws-c-cal 0.9.13
 aws-c-common 0.12.6
 aws-c-compression 0.3.2
 aws-c-event-stream 0.5.9
-aws-c-http 0.10.10
+aws-c-http 0.10.11
 aws-c-io 0.26.1
 aws-c-mqtt 0.14.0
 aws-c-s3 0.11.5
@@ -254,7 +254,7 @@ melody 0.20.0
 memo 0.5.0
 micro 2.0.15
 mole 1.28.1
-molten-vk 1.4.0
+molten-vk 1.4.1
 mpdecimal 4.0.1
 mpfr 4.2.2
 mpg123 1.33.4
@@ -264,7 +264,7 @@ navi 2.24.0
 ncdu 2.9.2
 ncurses 6.6
 neovim 0.11.6
-netbird 0.66.0
+netbird 0.66.1
 nettle 3.10.2
 node 25.7.0
 npth 1.8
@@ -302,7 +302,7 @@ poppler 26.02.0_1
 portal 1.2.3
 posting 2.9.2
 procs 0.14.11
-protobuf 33.4_1
+protobuf 34.0
 protobuf@33 33.5
 pstree 2.40
 pv 1.10.3
@@ -332,7 +332,7 @@ shaderc 2026.1
 shared-mime-info 2.4_1
 shellcheck 0.11.0
 simdjson 4.3.0
-sk 3.6.0
+sk 3.6.1
 sketchybar 2.23.0
 sleef 3.9.0
 snappy 1.2.2
@@ -348,7 +348,7 @@ stow 2.4.1
 summarize 0.11.1
 svgo 4.0.0
 svt-av1 4.0.1
-syncthing 2.0.14
+syncthing 2.0.15
 tailspin 5.5.0
 tealdeer 1.8.1
 television 0.15.3
@@ -408,6 +408,7 @@ npm:@mixedbread/mgrep              0.1.10   ~/.config/mise/mise.toml  latest
 npm:github-markdown-css            5.9.0    ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                      5.2.5    ~/.config/mise/mise.toml  latest
 npm:skills                         1.4.3    ~/.config/mise/mise.toml  latest
+sops                               3.12.1   ~/.config/mise/mise.toml  latest
 yazi                               26.1.22  ~/.config/mise/mise.toml  latest
 yq                                 4.52.4   ~/.config/mise/mise.toml  latest
 zoxide                             0.9.9    ~/.config/mise/mise.toml  latest
