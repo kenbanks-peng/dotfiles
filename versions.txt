@@ -8,7 +8,7 @@ boop 1.4.0
 brainfm 0.0.249
 claude 1.1.4498,24f7682cc400dec8d91fc28e444aa02743ab79dd
 cleanshot 4.8.7
-codex 0.106.0
+codex 0.107.0
 cursor 2.5.26,7d96c2a03bb088ad367615e9da1a3fe20fbbc6ae
 daisydisk 4.33.3
 espanso 2.3.0
@@ -24,11 +24,11 @@ git-credential-manager 2.7.0
 google-chrome 145.0.7632.117
 google-drive 121.0.1
 grandperspective 3.6.3
-handy 0.7.8
+handy 0.7.9
 iina 1.4.1,160
 keepassxc 2.7.11
 keyclu 0.31
-languagetool-desktop 2.11.2
+languagetool-desktop 2.11.3
 linear-linear 1.28.12,260226pqw0vmhth
 logos 48.0.0.0238
 microsoft-auto-update 4.82.26020434
@@ -39,11 +39,11 @@ onedrive 26.017.0126.0002
 orbstack 2.0.5,19905
 pdf-pals 1.9.0
 quarto 1.8.27
-raycast 1.104.7
+raycast 1.104.8
 screen-studio 3.6.0-4214
 sf-symbols 7.2,119
 sip-app 4.1.4
-skim 1.7.12
+skim 1.7.13
 symboliclinker 2.2
 typeface 4.2.3,4845
 visual-studio-code 1.109.5
@@ -59,8 +59,8 @@ abseil 20260107.1
 ada-url 3.4.3
 age 1.3.1
 aom 3.13.1
-apache-arrow 23.0.1_1
-asciinema 3.1.0
+apache-arrow 23.0.1_2
+asciinema 3.2.0
 ast-grep 0.41.0
 autoconf 2.72
 aws-c-auth 0.10.0
@@ -81,7 +81,7 @@ bash 5.3.9
 bat 0.26.1
 bat-extras 2024.08.24
 bbrew 2.2.1
-biome 2.4.4
+biome 2.4.5
 bird 0.8.0
 borders 1.8.4
 brotli 1.2.0
@@ -117,11 +117,11 @@ flac 1.5.0
 flock 0.4.0
 fmt 12.1.0
 fontconfig 2.17.1
-freetype 2.14.1_2
-fresh-editor 0.2.10
+freetype 2.14.2
+fresh-editor 0.2.12
 fribidi 1.0.16
 fx 39.2.0
-fzf 0.68.0
+fzf 0.70.0
 gawk 5.4.0
 gcc 15.2.0_1
 gemini-cli 0.31.0
@@ -151,7 +151,7 @@ gpgmepp 2.0.0
 gping 1.20.1
 graphite2 1.3.14
 grex 1.4.6
-grpc 1.78.1
+grpc 1.78.1_1
 harfbuzz 12.3.2
 hdrhistogram_c 0.11.9
 hexyl 0.17.0
@@ -251,22 +251,22 @@ mad 0.16.4
 makensis 3.11
 mcfly 0.9.4
 melody 0.20.0
-memo 0.4.0
+memo 0.5.0
 micro 2.0.15
 mole 1.28.1
 molten-vk 1.4.0
 mpdecimal 4.0.1
 mpfr 4.2.2
 mpg123 1.33.4
-mpv 0.41.0_2
-mujs 1.3.8
+mpv 0.41.0_3
+mujs 1.3.9
 navi 2.24.0
 ncdu 2.9.2
 ncurses 6.6
 neovim 0.11.6
 netbird 0.66.0
 nettle 3.10.2
-node 25.6.1_1
+node 25.7.0
 npth 1.8
 nspr 4.38.2
 nss 3.121
@@ -278,7 +278,7 @@ oniguruma 6.9.10
 openai-whisper 20250625_3
 openblas 0.3.31_1
 opencode 1.2.10
-openexr 3.4.5
+openexr 3.4.6
 openhue-cli 0.23
 openjpeg 2.5.4
 openjph 0.26.3
@@ -303,6 +303,7 @@ portal 1.2.3
 posting 2.9.2
 procs 0.14.11
 protobuf 33.4_1
+protobuf@33 33.5
 pstree 2.40
 pv 1.10.3
 pybind11 3.0.2
@@ -311,7 +312,7 @@ pydantic 2.12.5
 pygit2 1.19.1
 python@3.13 3.13.12_1
 python@3.14 3.14.3_1
-pytorch 2.10.0
+pytorch 2.10.0_1
 qrencode 4.1.1
 qsv 16.1.0
 rclone 1.73.1
@@ -331,7 +332,7 @@ shaderc 2026.1
 shared-mime-info 2.4_1
 shellcheck 0.11.0
 simdjson 4.3.0
-sk 3.5.0
+sk 3.6.0
 sketchybar 2.23.0
 sleef 3.9.0
 snappy 1.2.2
@@ -350,7 +351,7 @@ svt-av1 4.0.1
 syncthing 2.0.14
 tailspin 5.5.0
 tealdeer 1.8.1
-television 0.15.2
+television 0.15.3
 terminal-notifier 2.0.0
 thrift 0.22.0_1
 tmux 3.6a
@@ -394,7 +395,7 @@ MISE PACKAGES
 -------------
 claude-code                        2.1.63   ~/.config/mise/mise.toml  latest
 fd                                 10.3.0   ~/.config/mise/mise.toml  latest
-fnox                               1.14.0   ~/.config/mise/mise.toml  latest
+fnox                               1.15.1   ~/.config/mise/mise.toml  latest
 github:Slackadays/Clipboard        0.10.0   ~/.config/mise/mise.toml  latest
 github:bee-san/RustScan            2.4.1    ~/.config/mise/mise.toml  latest
 github:h0rv/d2-mcp                 1.1.0    ~/.config/mise/mise.toml  latest
@@ -402,7 +403,7 @@ github:neilotoole/sq               0.50.0   ~/.config/mise/mise.toml  latest
 github:o2sh/onefetch               2.26.1   ~/.config/mise/mise.toml  latest
 github:sharkdp/pastel              0.12.0   ~/.config/mise/mise.toml  latest
 lazygit                            0.59.0   ~/.config/mise/mise.toml  latest
-npm:@mariozechner/pi-coding-agent  0.55.3   ~/.config/mise/mise.toml  latest
+npm:@mariozechner/pi-coding-agent  0.55.4   ~/.config/mise/mise.toml  latest
 npm:@mixedbread/mgrep              0.1.10   ~/.config/mise/mise.toml  latest
 npm:github-markdown-css            5.9.0    ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                      5.2.5    ~/.config/mise/mise.toml  latest
