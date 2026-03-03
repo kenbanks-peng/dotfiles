@@ -391,9 +391,9 @@ bind m run "cut -c3- '#{TMUX_CONF}' | sh -s _toggle_mouse" \; display 'mouse #{?
 # move status line to top
 set -g status-position top
 
-# extra status line above the main one
+# status line 2
 set -g status 2
-set -g status-format[1] '#[align=left]#[fg=#1e1e2e,bg=#a6e3a1,bold]  #(cd #{pane_current_path} && git rev-parse --abbrev-ref HEAD 2>/dev/null) #[default]'
+set -g status-format[1] '#[align=left]#[fg=#1e1e2e,bg=#a6e3a1,bold]  #{@git_branch} #[default]'
 
 # when destroying a session, switch to another session instead of exiting
 set -g detach-on-destroy off
