@@ -230,17 +230,9 @@ run = "/Users/kenbanks/Software/DevBox/tools/unix/fd $args"
 description = "Opens the current directory in macOS Finder"
 run = "/Users/kenbanks/Software/DevBox/tools/unix/finder $args"
 
-[tasks."unix:list1"]
+[tasks."unix:list"]
 description = "Pls list show hidden files"
-run = "/Users/kenbanks/Software/DevBox/tools/unix/list1 $args"
-
-[tasks."unix:list2"]
-description = "Pls list hide hidden files"
-run = "/Users/kenbanks/Software/DevBox/tools/unix/list2 $args"
-
-[tasks."unix:list3"]
-description = "Pls list long format"
-run = "/Users/kenbanks/Software/DevBox/tools/unix/list3 $args"
+run = "/Users/kenbanks/Software/DevBox/tools/unix/list $args"
 
 [tasks."unix:symlink-bin"]
 description = "Create symbolic links in bin directory"
