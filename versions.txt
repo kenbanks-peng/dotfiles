@@ -106,7 +106,7 @@ curlie 1.8.2
 d2 0.7.1
 dav1d 1.5.3
 dblab 0.34.3
-deno 2.7.2
+deno 2.7.3
 doppler 3.75.3
 dotenvx 1.52.0
 dvc 3.66.1_4
@@ -262,7 +262,7 @@ navi 2.24.0
 ncdu 2.9.2
 ncurses 6.6
 neovim 0.11.6
-netbird 0.66.1
+netbird 0.66.2
 nettle 3.10.2
 nim 2.2.8
 node 25.8.0
@@ -354,7 +354,7 @@ tree-sitter 0.26.6
 tree-sitter@0.25 0.25.10
 trivy 0.69.3
 ttyd 1.7.7_6
-turso 0.4.4
+turso 0.5.0
 uchardet 0.0.8
 unbound 1.24.2
 unibilium 2.1.2
