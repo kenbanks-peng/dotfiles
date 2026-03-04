@@ -11,8 +11,8 @@
 [commit.generation]
 command = "MAX_THINKING_TOKENS=0 claude -p --model=haiku --tools='' --disable-slash-commands --setting-sources='' --system-prompt=''"
 
-# [post-switch]
-# tmux = "[ -n \"$TMUX\" ] && tmux rename-window {{ branch | sanitize }}"
+[post-switch]
+tmux = "[ -n \"$TMUX\" ] && tmux rename-window {{ (repo ~ '-' ~ branch) | sanitize }}"
 
 #
 # ## Worktree path template
