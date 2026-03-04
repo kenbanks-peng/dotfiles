@@ -33,400 +33,398 @@ quiet = true
 
 [tasks."ai:ai"]
 description = "Terminal AI interface (Claude)"
-run = "/Users/kenbanks/Software/DevBox/util/ai/ai $args"
+run = "/Users/kenbanks/Software/DevBox/tools/ai/ai $args"
 
 [tasks."ai:research"]
 description = "AI deep research project"
-run = "/Users/kenbanks/Software/DevBox/util/ai/research $args"
+run = "/Users/kenbanks/Software/DevBox/tools/ai/research $args"
 
 [tasks."ai:teams"]
 description = "Claude in teammate mode (tmux)"
-run = "/Users/kenbanks/Software/DevBox/util/ai/teams $args"
+run = "/Users/kenbanks/Software/DevBox/tools/ai/teams $args"
 
 ##################   DEV   ##################
 
 [tasks."dev:qmd"]
 description = "Render Quarto markdown to reveal.js"
-run = "/Users/kenbanks/Software/DevBox/util/dev/qmd $args"
+run = "/Users/kenbanks/Software/DevBox/tools/dev/qmd $args"
 
 ##################   EDIT   ##################
 
 [tasks."edit:c"]
 description = "Open in Cursor editor"
-run = "/Users/kenbanks/Software/DevBox/util/edit/c $args"
+run = "/Users/kenbanks/Software/DevBox/tools/edit/c $args"
 
 [tasks."edit:fr"]
 description = "Open in Fresh editor"
-run = "/Users/kenbanks/Software/DevBox/util/edit/fr $args"
+run = "/Users/kenbanks/Software/DevBox/tools/edit/fr $args"
 
 [tasks."edit:n"]
 description = "Open in Neovim"
-run = "/Users/kenbanks/Software/DevBox/util/edit/n $args"
+run = "/Users/kenbanks/Software/DevBox/tools/edit/n $args"
 
 [tasks."edit:v"]
 description = "Open in VS Code"
-run = "/Users/kenbanks/Software/DevBox/util/edit/v $args"
+run = "/Users/kenbanks/Software/DevBox/tools/edit/v $args"
 
 [tasks."edit:z"]
 description = "Open in Zed editor"
-run = "/Users/kenbanks/Software/DevBox/util/edit/z $args"
+run = "/Users/kenbanks/Software/DevBox/tools/edit/z $args"
 
 ##################   PASSWORD   ##################
 
 [tasks."password:pswd-add"]
 description = "Add a new password"
-run = "/Users/kenbanks/Software/DevBox/util/password/pswd-add $args"
+run = "/Users/kenbanks/Software/DevBox/tools/password/pswd-add $args"
 
 [tasks."password:pswd-copy"]
 description = "Copy password to clipboard"
-run = "/Users/kenbanks/Software/DevBox/util/password/pswd-copy $args"
+run = "/Users/kenbanks/Software/DevBox/tools/password/pswd-copy $args"
 
 [tasks."password:pswd-del"]
 description = "Delete a password"
-run = "/Users/kenbanks/Software/DevBox/util/password/pswd-del $args"
+run = "/Users/kenbanks/Software/DevBox/tools/password/pswd-del $args"
 
 [tasks."password:pswd-find"]
 description = "Find a password"
-run = "/Users/kenbanks/Software/DevBox/util/password/pswd-find $args"
+run = "/Users/kenbanks/Software/DevBox/tools/password/pswd-find $args"
 
 [tasks."password:pswd-gen"]
 description = "Generate a random password"
-run = "/Users/kenbanks/Software/DevBox/util/password/pswd-gen $args"
+run = "/Users/kenbanks/Software/DevBox/tools/password/pswd-gen $args"
 
 [tasks."password:pswd-git"]
 description = "Git commands on password store"
-run = "/Users/kenbanks/Software/DevBox/util/password/pswd-git $args"
+run = "/Users/kenbanks/Software/DevBox/tools/password/pswd-git $args"
 
 [tasks."password:pswd-grep"]
 description = "Search passwords"
-run = "/Users/kenbanks/Software/DevBox/util/password/pswd-grep $args"
+run = "/Users/kenbanks/Software/DevBox/tools/password/pswd-grep $args"
 
 [tasks."password:pswd-init"]
 description = "Initialize password store"
-run = "/Users/kenbanks/Software/DevBox/util/password/pswd-init $args"
+run = "/Users/kenbanks/Software/DevBox/tools/password/pswd-init $args"
 
 [tasks."password:pswd-list"]
 description = "List all passwords"
-run = "/Users/kenbanks/Software/DevBox/util/password/pswd-list $args"
+run = "/Users/kenbanks/Software/DevBox/tools/password/pswd-list $args"
 
 ##################   PKGMGR   ##################
 
 [tasks."pkgmgr:bdo"]
 description = "Brew packages that depend on"
-run = "/Users/kenbanks/Software/DevBox/util/pkgmgr/bdo $args"
+run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/bdo $args"
 
 [tasks."pkgmgr:bf"]
 description = "Brew fonts list"
-run = "/Users/kenbanks/Software/DevBox/util/pkgmgr/bf $args"
+run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/bf $args"
 
 [tasks."pkgmgr:bl"]
 description = "Brew list installed packages"
-run = "/Users/kenbanks/Software/DevBox/util/pkgmgr/bl $args"
+run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/bl $args"
 
 [tasks."pkgmgr:bo"]
 description = "Brew outdated packages"
-run = "/Users/kenbanks/Software/DevBox/util/pkgmgr/bo $args"
+run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/bo $args"
 
 [tasks."pkgmgr:br"]
 description = "Brew remove package"
-run = "/Users/kenbanks/Software/DevBox/util/pkgmgr/br $args"
+run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/br $args"
 
 [tasks."pkgmgr:bt"]
 description = "Brew dependency tree"
-run = "/Users/kenbanks/Software/DevBox/util/pkgmgr/bt $args"
+run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/bt $args"
 
 [tasks."pkgmgr:bv"]
 description = "Brew installed versions"
-run = "/Users/kenbanks/Software/DevBox/util/pkgmgr/bv $args"
+run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/bv $args"
 
 [tasks."pkgmgr:mlb"]
 description = "Mise list by backend"
-tools = {"github:nushell/nushell" = "latest"}
-run = "/Users/kenbanks/Software/DevBox/util/pkgmgr/mlb $args"
+tools = { "github:nushell/nushell" = "latest" }
+run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/mlb $args"
 
 [tasks."pkgmgr:mlg"]
 description = "List mise global tools"
-tools = {"github:nushell/nushell" = "latest"}
-run = "/Users/kenbanks/Software/DevBox/util/pkgmgr/mlg $args"
+tools = { "github:nushell/nushell" = "latest" }
+run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/mlg $args"
 
 [tasks."pkgmgr:mlp"]
 description = "List mise project tools"
-tools = {"github:nushell/nushell" = "latest"}
-run = "/Users/kenbanks/Software/DevBox/util/pkgmgr/mlp $args"
+tools = { "github:nushell/nushell" = "latest" }
+run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/mlp $args"
 
 [tasks."pkgmgr:nl"]
 description = "Nix profile list"
-tools = {"github:nushell/nushell" = "latest"}
-run = "/Users/kenbanks/Software/DevBox/util/pkgmgr/nl $args"
+tools = { "github:nushell/nushell" = "latest" }
+run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/nl $args"
 
 [tasks."pkgmgr:o"]
 description = "Outdated packages across managers"
-run = "/Users/kenbanks/Software/DevBox/util/pkgmgr/o $args"
+run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/o $args"
 
 [tasks."pkgmgr:scan"]
 description = "Scan for dev tools"
-tools = {"github:nushell/nushell" = "latest"}
-run = "/Users/kenbanks/Software/DevBox/util/pkgmgr/scan $args"
+tools = { "github:nushell/nushell" = "latest" }
+run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/scan $args"
 
 [tasks."pkgmgr:tools"]
 description = "List all tools across managers"
-tools = {"github:nushell/nushell" = "latest"}
-run = "/Users/kenbanks/Software/DevBox/util/pkgmgr/tools $args"
+tools = { "github:nushell/nushell" = "latest" }
+run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/tools $args"
 
 [tasks."pkgmgr:up"]
 description = "Update all packages"
-tools = {"uv" = "latest"}
-run = "/Users/kenbanks/Software/DevBox/util/pkgmgr/up $args"
+tools = { "uv" = "latest" }
+run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/up $args"
 
 [tasks."pkgmgr:versions"]
 description = "Save package versions to file"
-run = "/Users/kenbanks/Software/DevBox/util/pkgmgr/versions $args"
+run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/versions $args"
 
 [tasks."pkgmgr:zap"]
 description = "Zap caches (brew, system, go)"
-run = "/Users/kenbanks/Software/DevBox/util/pkgmgr/zap $args"
+run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/zap $args"
 
 ##################   REPO   ##################
 
 [tasks."repo:dvc-add"]
 description = "DVC add files over size limit"
-run = "/Users/kenbanks/Software/DevBox/util/repo/dvc-add $args"
+run = "/Users/kenbanks/Software/DevBox/tools/repo/dvc-add $args"
 
 [tasks."repo:dvc-init"]
 description = "Initialize DVC and add large files"
-run = "/Users/kenbanks/Software/DevBox/util/repo/dvc-init $args"
+run = "/Users/kenbanks/Software/DevBox/tools/repo/dvc-init $args"
 
 [tasks."repo:dvc-list"]
 description = "List DVC-tracked files"
-run = "/Users/kenbanks/Software/DevBox/util/repo/dvc-list $args"
+run = "/Users/kenbanks/Software/DevBox/tools/repo/dvc-list $args"
 
 [tasks."repo:git-clone"]
 description = "Clone repo and add upstream if fork"
-run = "/Users/kenbanks/Software/DevBox/util/repo/git-clone $args"
+run = "/Users/kenbanks/Software/DevBox/tools/repo/git-clone $args"
 
 [tasks."repo:git-list"]
 description = "List git-tracked files"
-run = "/Users/kenbanks/Software/DevBox/util/repo/git-list $args"
+run = "/Users/kenbanks/Software/DevBox/tools/repo/git-list $args"
 
 [tasks."repo:git-remote"]
 description = "Show git remotes"
-run = "/Users/kenbanks/Software/DevBox/util/repo/git-remote $args"
+run = "/Users/kenbanks/Software/DevBox/tools/repo/git-remote $args"
 
 [tasks."repo:git-status"]
 description = "Git fetch and status"
-run = "/Users/kenbanks/Software/DevBox/util/repo/git-status $args"
+run = "/Users/kenbanks/Software/DevBox/tools/repo/git-status $args"
 
 ##################   UNIX   ##################
 
 [tasks."unix:d"]
 description = "Pwd with escaped spaces"
-run = "/Users/kenbanks/Software/DevBox/util/unix/d $args"
+run = "/Users/kenbanks/Software/DevBox/tools/unix/d $args"
 
 [tasks."unix:fd"]
 description = "Find files or text (combined fd/rg)"
-run = "/Users/kenbanks/Software/DevBox/util/unix/fd $args"
+run = "/Users/kenbanks/Software/DevBox/tools/unix/fd $args"
 
 [tasks."unix:finder"]
 description = "Opens the current directory in macOS Finder"
-run = "/Users/kenbanks/Software/DevBox/util/unix/finder $args"
+run = "/Users/kenbanks/Software/DevBox/tools/unix/finder $args"
 
 [tasks."unix:list1"]
 description = "Pls list show hidden files"
-run = "/Users/kenbanks/Software/DevBox/util/unix/list1 $args"
+run = "/Users/kenbanks/Software/DevBox/tools/unix/list1 $args"
 
 [tasks."unix:list2"]
 description = "Pls list hide hidden files"
-run = "/Users/kenbanks/Software/DevBox/util/unix/list2 $args"
+run = "/Users/kenbanks/Software/DevBox/tools/unix/list2 $args"
 
 [tasks."unix:list3"]
 description = "Pls list long format"
-run = "/Users/kenbanks/Software/DevBox/util/unix/list3 $args"
+run = "/Users/kenbanks/Software/DevBox/tools/unix/list3 $args"
 
 [tasks."unix:symlink-bin"]
 description = "Create symbolic links in bin directory"
-run = "/Users/kenbanks/Software/DevBox/util/unix/symlink-bin $args"
+run = "/Users/kenbanks/Software/DevBox/tools/unix/symlink-bin $args"
 
 ##################   UTIL   ##################
 
 [tasks."util:ast"]
 description = "Code refactoring with ast-grep"
-run = "/Users/kenbanks/Software/DevBox/util/util/ast $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/ast $args"
 
 [tasks."util:bm"]
 description = "Benchmarks with hyperfine"
-run = "/Users/kenbanks/Software/DevBox/util/util/bm $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/bm $args"
 
 [tasks."util:bundleid"]
 description = "Get bundle ID of a macOS app"
-run = "/Users/kenbanks/Software/DevBox/util/util/bundleid $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/bundleid $args"
 
 [tasks."util:check-toml"]
 description = "Check TOML validity"
-run = "/Users/kenbanks/Software/DevBox/util/util/check-toml $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/check-toml $args"
 
 [tasks."util:clean"]
 description = "Remove .DS_Store recursively"
-run = "/Users/kenbanks/Software/DevBox/util/util/clean $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/clean $args"
 
 [tasks."util:color"]
 description = "Color utilities (pastel)"
-run = "/Users/kenbanks/Software/DevBox/util/util/color $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/color $args"
 
 [tasks."util:colors"]
 description = "Color space conversion (colorjs)"
-run = "/Users/kenbanks/Software/DevBox/util/util/colors/colors $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/colors/colors $args"
 
 [tasks."util:crok"]
 description = "Croc file transfer"
-run = "/Users/kenbanks/Software/DevBox/util/util/crok $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/crok $args"
 
 [tasks."util:csv"]
 description = "CSV toolkit (csvtk)"
-run = "/Users/kenbanks/Software/DevBox/util/util/csv $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/csv $args"
 
 [tasks."util:csv2"]
 description = "CSV toolkit (qsv)"
-run = "/Users/kenbanks/Software/DevBox/util/util/csv2 $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/csv2 $args"
 
 [tasks."util:disk"]
 description = "Disk usage TUI (ncdu)"
-run = "/Users/kenbanks/Software/DevBox/util/util/disk $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/disk $args"
 
 [tasks."util:dotstow"]
 description = "Stow dotfiles to ~/.config"
-run = "/Users/kenbanks/Software/DevBox/util/util/dotstow $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/dotstow $args"
 
 [tasks."util:ff"]
 description = "System info (fastfetch)"
-run = "/Users/kenbanks/Software/DevBox/util/util/ff $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/ff $args"
 
 [tasks."util:fonts"]
 description = "List fonts with fzf"
-run = "/Users/kenbanks/Software/DevBox/util/util/fonts $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/fonts $args"
 
 [tasks."util:free"]
 description = "Free and used memory"
-run = "/Users/kenbanks/Software/DevBox/util/util/free $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/free $args"
 
 [tasks."util:g"]
 description = "Git TUI (lazygit)"
-run = "/Users/kenbanks/Software/DevBox/util/util/g $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/g $args"
 
 [tasks."util:kee"]
 description = "KeePassXC CLI"
-run = "/Users/kenbanks/Software/DevBox/util/util/kee $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/kee $args"
 
 [tasks."util:lc"]
 description = "Rainbow text (lolcat)"
-run = "/Users/kenbanks/Software/DevBox/util/util/lc $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/lc $args"
 
 [tasks."util:lines"]
 description = "Line count"
-run = "/Users/kenbanks/Software/DevBox/util/util/lines $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/lines $args"
 
 [tasks."util:md"]
 description = "Convert files to markdown"
-run = "/Users/kenbanks/Software/DevBox/util/util/md $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/md $args"
 
 [tasks."util:mdpdf"]
 description = "Markdown to PDF"
-run = "/Users/kenbanks/Software/DevBox/util/util/mdpdf/mdpdf $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/mdpdf/mdpdf $args"
 
 [tasks."util:mel"]
 description = "Melody language to regex"
-run = "/Users/kenbanks/Software/DevBox/util/util/mel $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/mel $args"
 
 [tasks."util:mol"]
 description = "Mac optimization"
-run = "/Users/kenbanks/Software/DevBox/util/util/mol $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/mol $args"
 
 [tasks."util:mouse-focus"]
 description = "Toggle focus follows mouse"
-run = "/Users/kenbanks/Software/DevBox/util/util/mouse-focus $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/mouse-focus $args"
 
 [tasks."util:of"]
 description = "Code/git stats (onefetch)"
-run = "/Users/kenbanks/Software/DevBox/util/util/of $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/of $args"
 
 [tasks."util:oklch"]
 description = "OKLCH color space tool"
-run = "/Users/kenbanks/Software/DevBox/util/util/oklch/oklch $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/oklch/oklch $args"
 
 [tasks."util:path"]
 description = "Pretty-print PATH"
-tools = {"github:nushell/nushell" = "latest"}
-run = "/Users/kenbanks/Software/DevBox/util/util/path $args"
+tools = { "github:nushell/nushell" = "latest" }
+run = "/Users/kenbanks/Software/DevBox/tools/util/path $args"
 
 [tasks."util:pip"]
 description = "Pip via uv"
-run = "/Users/kenbanks/Software/DevBox/util/util/pip $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/pip $args"
 
 [tasks."util:playvid"]
 description = "Play video as live wallpaper"
-run = "/Users/kenbanks/Software/DevBox/util/util/playvid $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/playvid $args"
 
 [tasks."util:regex"]
 description = "Generate regex from examples (grex)"
-run = "/Users/kenbanks/Software/DevBox/util/util/regex $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/regex $args"
 
 [tasks."util:release"]
 description = "Remove app quarantine"
-run = "/Users/kenbanks/Software/DevBox/util/util/release $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/release $args"
 
 [tasks."util:rscan"]
 description = "Port scanner (rustscan)"
-run = "/Users/kenbanks/Software/DevBox/util/util/rscan $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/rscan $args"
 
 [tasks."util:show"]
 description = "Show image in terminal"
-run = "/Users/kenbanks/Software/DevBox/util/util/show $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/show $args"
 
 [tasks."util:switch"]
 description = "Switch symlink between targets"
-run = "/Users/kenbanks/Software/DevBox/util/util/switch $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/switch $args"
 
 [tasks."util:symlink"]
 description = "Create a named symlink"
-run = "/Users/kenbanks/Software/DevBox/util/util/symlink $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/symlink $args"
 
 [tasks."util:tbl"]
 description = "Format as aligned table"
-run = "/Users/kenbanks/Software/DevBox/util/util/tbl $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/tbl $args"
 
 [tasks."util:tmuxx"]
 description = "Re-source tmux config"
-run = "/Users/kenbanks/Software/DevBox/util/util/tmuxx $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/tmuxx $args"
 
 [tasks."util:trash"]
 description = "Move files to trash"
-run = "/Users/kenbanks/Software/DevBox/util/util/trash/bin/trash $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/trash/bin/trash $args"
 
 [tasks."util:uv-init"]
 description = "Initialize UV project"
-run = "/Users/kenbanks/Software/DevBox/util/util/uv-init $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/uv-init $args"
 
 [tasks."util:uv-package"]
 description = "Initialize UV package"
-run = "/Users/kenbanks/Software/DevBox/util/util/uv-package $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/uv-package $args"
 
 [tasks."util:w"]
 description = "1-line weather"
-run = "/Users/kenbanks/Software/DevBox/util/util/w $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/w $args"
 
 [tasks."util:wf"]
 description = "Weather forecast"
-run = "/Users/kenbanks/Software/DevBox/util/util/wf $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/wf $args"
 
 [tasks."util:windim"]
 description = "Window dimensions"
-run = "/Users/kenbanks/Software/DevBox/util/util/windim $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/windim $args"
 
 [tasks."util:wm"]
 description = "Window manager helper"
-run = "/Users/kenbanks/Software/DevBox/util/util/wm/bin/wm $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/wm/bin/wm $args"
 
 [tasks."util:wr"]
 description = "Weather report"
-run = "/Users/kenbanks/Software/DevBox/util/util/wr $args"
-
-
+run = "/Users/kenbanks/Software/DevBox/tools/util/wr $args"
