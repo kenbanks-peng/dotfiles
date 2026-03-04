@@ -54,7 +54,7 @@ visual-studio-code 1.109.5
 vlc 3.0.23
 yaak 2026.2.4
 zed 0.225.13
-zen 1.19b
+zen 1.19.1b
 zoom 6.7.7.76486
 
 BREW FORMULAS
@@ -236,10 +236,10 @@ llvm 22.1.0
 llvm@20 20.1.8
 llvm@21 21.1.8
 lolcat 100.0.1
-lpeg 1.1.0
+lpeg 1.1.0_1
 lua 5.4.8
 luajit 2.1.1772148810
-luarocks 3.12.2
+luarocks 3.13.0
 lunchy-go 0.2.1
 luv 1.51.0-2
 lz4 1.10.0
@@ -331,7 +331,7 @@ sketchybar 2.23.0
 sleef 3.9.0
 snappy 1.2.2
 sniffnet 1.4.2
-snyk-cli 1.1303.0
+snyk-cli 1.1303.1
 sox 14.4.2_6
 spark 1.0.1
 sqlc 1.30.0
