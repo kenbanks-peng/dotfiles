@@ -51,7 +51,7 @@ vlc 3.0.23
 yaak 2026.2.4
 zed 0.225.13
 zen 1.19b
-zoom 6.7.6.75444
+zoom 6.7.7.76486
 
 BREW FORMULAS
 -------------
@@ -124,7 +124,7 @@ fx 39.2.0
 fzf 0.70.0
 gawk 5.4.0
 gcc 15.2.0_1
-gemini-cli 0.32.0
+gemini-cli 0.32.1
 gettext 1.0
 gh 2.87.3
 gifgrep 0.2.1
@@ -266,7 +266,7 @@ ncurses 6.6
 neovim 0.11.6
 netbird 0.66.1
 nettle 3.10.2
-node 25.7.0
+node 25.8.0
 npth 1.8
 nspr 4.38.2
 nss 3.121
@@ -393,12 +393,13 @@ zstd 1.5.7_1
 
 MISE PACKAGES
 -------------
-claude-code                        2.1.63   ~/.config/mise/mise.toml  latest
+claude-code                        2.1.68   ~/.config/mise/mise.toml  latest
 fd                                 10.3.0   ~/.config/mise/mise.toml  latest
 fnox                               1.15.1   ~/.config/mise/mise.toml  latest
 github:Slackadays/Clipboard        0.10.0   ~/.config/mise/mise.toml  latest
 github:bee-san/RustScan            2.4.1    ~/.config/mise/mise.toml  latest
 github:h0rv/d2-mcp                 1.1.0    ~/.config/mise/mise.toml  latest
+github:max-sixty/worktrunk         0.28.2   ~/.config/mise/mise.toml  latest
 github:neilotoole/sq               0.50.0   ~/.config/mise/mise.toml  latest
 github:o2sh/onefetch               2.26.1   ~/.config/mise/mise.toml  latest
 github:sharkdp/pastel              0.12.0   ~/.config/mise/mise.toml  latest
