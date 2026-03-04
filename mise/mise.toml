@@ -328,10 +328,6 @@ run = "/Users/kenbanks/Software/DevBox/util/util/lines $args"
 description = "Convert files to markdown"
 run = "/Users/kenbanks/Software/DevBox/util/util/md $args"
 
-[tasks."util:mdpdf"]
-description = "Markdown to PDF"
-run = "/Users/kenbanks/Software/DevBox/util/util/mdpdf/mdpdf $args"
-
 [tasks."util:mel"]
 description = "Melody language to regex"
 run = "/Users/kenbanks/Software/DevBox/util/util/mel $args"
