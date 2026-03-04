@@ -104,7 +104,7 @@ curlie 1.8.2
 d2 0.7.1
 dav1d 1.5.3
 dblab 0.34.3
-deno 2.7.2
+deno 2.7.3
 doppler 3.75.3
 dotenvx 1.52.0
 dvc 3.66.1_4
@@ -237,10 +237,10 @@ llvm 22.1.0
 llvm@20 20.1.8
 llvm@21 21.1.8
 lolcat 100.0.1
-lpeg 1.1.0
+lpeg 1.1.0_1
 lua 5.4.8
 luajit 2.1.1772148810
-luarocks 3.12.2
+luarocks 3.13.0
 lunchy-go 0.2.1
 luv 1.51.0-2
 lz4 1.10.0
@@ -264,7 +264,7 @@ navi 2.24.0
 ncdu 2.9.2
 ncurses 6.6
 neovim 0.11.6
-netbird 0.66.1
+netbird 0.66.2
 nettle 3.10.2
 node 25.8.0
 npth 1.8
