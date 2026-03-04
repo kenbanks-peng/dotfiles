@@ -389,7 +389,11 @@ bind C-a send-prefix
 bind m run "cut -c3- '#{TMUX_CONF}' | sh -s _toggle_mouse" \; display 'mouse #{?#{mouse},on,off}'
 
 # move status line to top
-#set -g status-position top
+set -g status-position top
+
+# status line 2
+set -g status 2
+set -g status-format[1] '#[align=left]#{@git_segment}'
 
 # when destroying a session, switch to another session instead of exiting
 set -g detach-on-destroy off
