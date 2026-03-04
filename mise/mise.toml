@@ -409,6 +409,10 @@ run = "/Users/kenbanks/Software/DevBox/util/util/uv-init $args"
 description = "Initialize UV package"
 run = "/Users/kenbanks/Software/DevBox/util/util/uv-package $args"
 
+[tasks."util:ver"]
+description = "Version info"
+run = "/Users/kenbanks/Software/DevBox/util/util/ver/bin/ver $args"
+
 [tasks."util:w"]
 description = "1-line weather"
 run = "/Users/kenbanks/Software/DevBox/util/util/w $args"
