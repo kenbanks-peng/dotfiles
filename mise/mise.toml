@@ -288,6 +288,10 @@ run = "/Users/kenbanks/Software/DevBox/util/util/csv $args"
 description = "CSV toolkit (qsv)"
 run = "/Users/kenbanks/Software/DevBox/util/util/csv2 $args"
 
+[tasks."util:dir"]
+description = "Directory utility"
+run = "/Users/kenbanks/Software/DevBox/util/util/dir/bin/dir $args"
+
 [tasks."util:disk"]
 description = "Disk usage TUI (ncdu)"
 run = "/Users/kenbanks/Software/DevBox/util/util/disk $args"
