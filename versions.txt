@@ -9,7 +9,7 @@ brainfm 0.0.249
 claude 1.1.4498,24f7682cc400dec8d91fc28e444aa02743ab79dd
 cleanshot 4.8.7
 codex 0.107.0
-cursor 2.5.26,7d96c2a03bb088ad367615e9da1a3fe20fbbc6ae
+cursor 2.6.11,8c95649f251a168cc4bb34c89531fae7db4bd992
 daisydisk 4.33.3
 espanso 2.3.0
 font-hasklug-nerd-font 3.4.0
@@ -49,7 +49,7 @@ typeface 4.2.3,4845
 visual-studio-code 1.109.5
 vlc 3.0.23
 yaak 2026.2.4
-zed 0.225.12
+zed 0.225.13
 zen 1.19b
 zoom 6.7.6.75444
 
@@ -104,7 +104,7 @@ curlie 1.8.2
 d2 0.7.1
 dav1d 1.5.3
 dblab 0.34.3
-deno 2.7.1
+deno 2.7.2
 doppler 3.75.3
 dotenvx 1.52.0
 dvc 3.66.1_4
@@ -124,7 +124,7 @@ fx 39.2.0
 fzf 0.70.0
 gawk 5.4.0
 gcc 15.2.0_1
-gemini-cli 0.31.0
+gemini-cli 0.32.0
 gettext 1.0
 gh 2.87.3
 gifgrep 0.2.1
@@ -314,7 +314,7 @@ python@3.13 3.13.12_1
 python@3.14 3.14.3_1
 pytorch 2.10.0_1
 qrencode 4.1.1
-qsv 16.1.0
+qsv 17.0.0
 rclone 1.73.1
 re2 2025-11-05
 readline 8.3.3
@@ -383,7 +383,7 @@ xorgproto 2025.1
 xz 5.8.2
 yabai 7.1.17
 yq 4.52.4
-yt-dlp 2026.2.21
+yt-dlp 2026.3.3
 yyjson 0.12.0
 z3 4.15.4
 zellij 0.43.1
