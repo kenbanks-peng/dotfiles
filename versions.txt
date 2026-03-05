@@ -238,7 +238,7 @@ llvm@21 21.1.8
 lolcat 100.0.1
 lpeg 1.1.0_1
 lua 5.5.0
-luajit 2.1.1772148810
+luajit 2.1.1772619647
 luarocks 3.13.0_1
 lunchy-go 0.2.1
 luv 1.51.0-2_1
