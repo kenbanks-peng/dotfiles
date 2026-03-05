@@ -67,7 +67,7 @@ apache-arrow 23.0.1_2
 asciinema 3.2.0
 ast-grep 0.41.0
 autoconf 2.72
-aws-c-auth 0.10.0
+aws-c-auth 0.10.1
 aws-c-cal 0.9.13
 aws-c-common 0.12.6
 aws-c-compression 0.3.2
