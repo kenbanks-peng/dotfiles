@@ -10,7 +10,7 @@ brainfm 0.0.249
 claude 1.1.4498,24f7682cc400dec8d91fc28e444aa02743ab79dd
 cleanshot 4.8.7
 codex 0.110.0
-cursor 2.6.11,8c95649f251a168cc4bb34c89531fae7db4bd992
+cursor 2.6.12,1917e900a0c4b0111dc7975777cfff60853059d3
 daisydisk 4.33.3
 espanso 2.3.0
 flox 1.9.1
@@ -84,7 +84,7 @@ bash 5.3.9
 bat 0.26.1
 bat-extras 2024.08.24
 bbrew 2.2.1
-biome 2.4.5
+biome 2.4.6
 borders 1.8.4
 brotli 1.2.0
 btop 1.4.6
@@ -107,7 +107,7 @@ dav1d 1.5.3
 dblab 0.34.3
 deno 2.7.3
 doppler 3.75.3
-dotenvx 1.52.0
+dotenvx 1.53.0
 dvc 3.66.1_4
 eigen 5.0.1
 espeak-ng 1.52.0
@@ -235,7 +235,7 @@ llvm 22.1.0
 llvm@20 20.1.8
 llvm@21 21.1.8
 lolcat 100.0.1
-lpeg 1.1.0_1
+lpeg 1.1.0_2
 lua 5.5.0
 luajit 2.1.1772619647
 luarocks 3.13.0_1
@@ -411,7 +411,7 @@ ruff                               0.15.4
 rust                               1.93.1 (symlink)
 sops                               3.12.1            ~/.config/mise/mise.toml  latest
 typst                              0.14.2
-uv                                 0.10.4
+uv                                 0.10.8            ~/.config/mise/mise.toml  latest
 yazi                               26.1.22           ~/.config/mise/mise.toml  latest
 yq                                 4.52.4            ~/.config/mise/mise.toml  latest
 zoxide                             0.9.9             ~/.config/mise/mise.toml  latest
