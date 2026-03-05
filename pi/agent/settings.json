@@ -9,8 +9,9 @@
   ],
   "lastChangelogVersion": "0.56.1",
   "packages": [
-    "npm:oh-pi",
-    "~/Software/DevBox/ai/pi/cc-keychain-provider"
+    "~/Software/DevBox/ai/pi/cc-keychain-provider",
+    "npm:pi-extmgr",
+    "npm:oh-pi"
   ],
   "quietStartup": true,
   "hideThinkingBlock": true,
