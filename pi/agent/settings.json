@@ -1,13 +1,15 @@
 {
   "lastChangelogVersion": "0.56.1",
   "enabledModels": [
-    "anthropic/claude-sonnet-4-6",
-    "anthropic/claude-opus-4-6",
-    "anthropic/claude-haiku-4-5-20251001"
+    "keychain-anthropic/claude-opus-4-6",
+    "keychain-anthropic/claude-sonnet-4-6",
+    "keychain-anthropic/claude-haiku-4-5"
   ],
   "quietStartup": true,
-  "defaultProvider": "anthropic",
-  "defaultModel": "claude-opus-4-6",
-  "defaultThinkingLevel": "medium",
-  "packages": [] 
+  "defaultProvider": "keychain-anthropic",
+  "defaultThinkingLevel": "off",
+  "packages": [
+    "~/Software/DevBox/ai/pi/cc-keychain-provider"
+  ],
+  "defaultModel": "claude-opus-4-6"
 }
