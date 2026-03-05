@@ -1,8 +1,5 @@
 {
   "packages": [
-    "../../../Software/DevBox/ai/pi/custom-provider"
   ],
   "lastChangelogVersion": "0.56.0",
-  "defaultProvider": "keychain-anthropic",
-  "defaultModel": "claude-opus-4-6"
 }
