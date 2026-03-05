@@ -7,5 +7,6 @@
   ],
   "quietStartup": true,
   "defaultProvider": "anthropic",
-  "defaultModel": "claude-opus-4-6"
+  "defaultModel": "claude-opus-4-6",
+  "defaultThinkingLevel": "medium"
 }

@@ -1,8 +1,7 @@
 # Ignore everything
 *
 
-# Except settings.json
-!settings.json
-
-# Keep this file
+# Allow the following
 !.gitignore
+!settings.json
+!skills/
