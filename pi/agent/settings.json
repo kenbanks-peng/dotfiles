@@ -1,5 +1,5 @@
 {
-  "lastChangelogVersion": "0.56.0",
+  "lastChangelogVersion": "0.56.1",
   "enabledModels": [
     "anthropic/claude-sonnet-4-6",
     "anthropic/claude-opus-4-6",
@@ -8,5 +8,6 @@
   "quietStartup": true,
   "defaultProvider": "anthropic",
   "defaultModel": "claude-opus-4-6",
-  "defaultThinkingLevel": "medium"
+  "defaultThinkingLevel": "medium",
+  "packages": [] 
 }
