@@ -21,6 +21,7 @@ fnox = "latest"
 sops = "latest"
 "github:max-sixty/worktrunk" = "latest"
 "npm:@mariozechner/pi-coding-agent" = "latest"
+uv = "latest"
 
 [settings]
 experimental = true
