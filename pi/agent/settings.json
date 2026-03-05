@@ -1,5 +1,11 @@
 {
-  "packages": [
-  ],
   "lastChangelogVersion": "0.56.0",
+  "enabledModels": [
+    "anthropic/claude-sonnet-4-6",
+    "anthropic/claude-opus-4-6",
+    "anthropic/claude-haiku-4-5-20251001"
+  ],
+  "quietStartup": true,
+  "defaultProvider": "anthropic",
+  "defaultModel": "claude-opus-4-6"
 }
