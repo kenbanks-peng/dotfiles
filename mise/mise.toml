@@ -44,6 +44,11 @@ run = "/Users/kenbanks/Software/DevBox/tools/ai/research $args"
 description = "Claude in teammate mode (tmux)"
 run = "/Users/kenbanks/Software/DevBox/tools/ai/teams $args"
 
+[tasks."ai:ai-skills"]
+description = "skills tui"
+tools = { bun = "latest" }
+run = "~/Software/DevBox/tools/ai/ai-skills/ai-skills.tsx"
+
 ##################   DEV   ##################
 
 [tasks."dev:qmd"]
