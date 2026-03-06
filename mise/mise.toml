@@ -22,6 +22,7 @@ sops = "latest"
 "github:max-sixty/worktrunk" = "latest"
 "npm:@mariozechner/pi-coding-agent" = "latest"
 uv = "latest"
+"github:dlvhdr/gh-dash" = "latest"
 
 [settings]
 experimental = true
@@ -349,6 +350,10 @@ run = "/Users/kenbanks/Software/DevBox/tools/util/of $args"
 [tasks."util:oklch"]
 description = "OKLCH color space tool"
 run = "/Users/kenbanks/Software/DevBox/tools/util/oklch/oklch $args"
+
+[tasks."util:pr"]
+description = "PR dashboard (gh-dash)"
+run = "gh dash"
 
 [tasks."util:path"]
 description = "Pretty-print PATH"

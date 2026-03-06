@@ -1,15 +1,23 @@
 {
   "version": 3,
   "skills": {
-    "pdf": {
-      "source": "anthropics/skills",
+    "find-skills": {
+      "source": "vercel-labs/skills",
       "sourceType": "github",
-      "sourceUrl": "https://github.com/anthropics/skills.git",
-      "skillPath": "skills/pdf/SKILL.md",
-      "skillFolderHash": "6369f4649de69bd6857c9bc3b058a77206009238",
-      "pluginName": "document-skills",
-      "installedAt": "2026-03-06T03:24:05.814Z",
-      "updatedAt": "2026-03-06T03:24:05.814Z"
+      "sourceUrl": "https://github.com/vercel-labs/skills.git",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "skillFolderHash": "c2f31172b6f256272305a5e6e7228b258446899f",
+      "installedAt": "2026-03-06T05:03:35.991Z",
+      "updatedAt": "2026-03-06T05:03:35.991Z"
+    },
+    "brainstorming": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/brainstorming/SKILL.md",
+      "skillFolderHash": "d28aa4ed67fe5a3f1336f0fcccb1e548c67dc864",
+      "installedAt": "2026-03-06T05:10:43.331Z",
+      "updatedAt": "2026-03-06T05:10:43.331Z"
     }
   },
   "dismissed": {}
