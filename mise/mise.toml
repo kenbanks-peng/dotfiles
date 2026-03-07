@@ -36,18 +36,22 @@ quiet = true
 
 [tasks."ai:ai"]
 description = "Terminal AI interface (Claude)"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/ai/ai $args"
 
 [tasks."ai:research"]
 description = "AI deep research project"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/ai/research $args"
 
 [tasks."ai:teams"]
 description = "Claude in teammate mode (tmux)"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/ai/teams $args"
 
 [tasks."ai:ai-skills"]
 description = "skills tui"
+dir = "{{cwd}}"
 tools = { bun = "latest" }
 run = "~/Software/DevBox/tools/ai/ai-skills/ai-skills.tsx"
 
@@ -55,380 +59,470 @@ run = "~/Software/DevBox/tools/ai/ai-skills/ai-skills.tsx"
 
 [tasks."dev:qmd"]
 description = "Render Quarto markdown to reveal.js"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/dev/qmd $args"
 
 ##################   EDIT   ##################
 
 [tasks."edit:c"]
 description = "Open in Cursor editor"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/edit/c $args"
 
 [tasks."edit:fr"]
 description = "Open in Fresh editor"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/edit/fr $args"
 
 [tasks."edit:n"]
 description = "Open in Neovim"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/edit/n $args"
 
 [tasks."edit:v"]
 description = "Open in VS Code"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/edit/v $args"
 
 [tasks."edit:z"]
 description = "Open in Zed editor"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/edit/z $args"
 
 ##################   PASSWORD   ##################
 
 [tasks."password:pswd-add"]
 description = "Add a new password"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/password/pswd-add $args"
 
 [tasks."password:pswd-copy"]
 description = "Copy password to clipboard"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/password/pswd-copy $args"
 
 [tasks."password:pswd-del"]
 description = "Delete a password"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/password/pswd-del $args"
 
 [tasks."password:pswd-find"]
 description = "Find a password"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/password/pswd-find $args"
 
 [tasks."password:pswd-gen"]
 description = "Generate a random password"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/password/pswd-gen $args"
 
 [tasks."password:pswd-git"]
 description = "Git commands on password store"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/password/pswd-git $args"
 
 [tasks."password:pswd-grep"]
 description = "Search passwords"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/password/pswd-grep $args"
 
 [tasks."password:pswd-init"]
 description = "Initialize password store"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/password/pswd-init $args"
 
 [tasks."password:pswd-list"]
 description = "List all passwords"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/password/pswd-list $args"
 
 ##################   PKGMGR   ##################
 
 [tasks."pkgmgr:bdo"]
 description = "Brew packages that depend on"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/bdo $args"
 
 [tasks."pkgmgr:bf"]
 description = "Brew fonts list"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/bf $args"
 
 [tasks."pkgmgr:bl"]
 description = "Brew list installed packages"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/bl $args"
 
 [tasks."pkgmgr:bo"]
 description = "Brew outdated packages"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/bo $args"
 
 [tasks."pkgmgr:br"]
 description = "Brew remove package"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/br $args"
 
 [tasks."pkgmgr:bt"]
 description = "Brew dependency tree"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/bt $args"
 
 [tasks."pkgmgr:bv"]
 description = "Brew installed versions"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/bv $args"
 
 [tasks."pkgmgr:mlb"]
 description = "Mise list by backend"
+dir = "{{cwd}}"
 tools = { "github:nushell/nushell" = "latest" }
 run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/mlb $args"
 
 [tasks."pkgmgr:mlg"]
 description = "List mise global tools"
+dir = "{{cwd}}"
 tools = { "github:nushell/nushell" = "latest" }
 run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/mlg $args"
 
 [tasks."pkgmgr:mlp"]
 description = "List mise project tools"
+dir = "{{cwd}}"
 tools = { "github:nushell/nushell" = "latest" }
 run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/mlp $args"
 
 [tasks."pkgmgr:nl"]
 description = "Nix profile list"
+dir = "{{cwd}}"
 tools = { "github:nushell/nushell" = "latest" }
 run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/nl $args"
 
 [tasks."pkgmgr:o"]
 description = "Outdated packages across managers"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/o $args"
 
 [tasks."pkgmgr:scan"]
 description = "Scan for dev tools"
+dir = "{{cwd}}"
 tools = { "github:nushell/nushell" = "latest" }
 run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/scan $args"
 
 [tasks."pkgmgr:tools"]
 description = "List all tools across managers"
+dir = "{{cwd}}"
 tools = { "github:nushell/nushell" = "latest" }
 run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/tools $args"
 
 [tasks."pkgmgr:up"]
 description = "Update all packages"
+dir = "{{cwd}}"
 tools = { "uv" = "latest" }
 run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/up $args"
 
 [tasks."pkgmgr:versions"]
 description = "Save package versions to file"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/versions $args"
 
 [tasks."pkgmgr:zap"]
 description = "Zap caches (brew, system, go)"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/zap $args"
 
 ##################   REPO   ##################
 
 [tasks."repo:dvc-add"]
 description = "DVC add files over size limit"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/repo/dvc-add $args"
 
 [tasks."repo:dvc-init"]
 description = "Initialize DVC and add large files"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/repo/dvc-init $args"
 
 [tasks."repo:dvc-list"]
 description = "List DVC-tracked files"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/repo/dvc-list $args"
 
 [tasks."repo:git-clone"]
 description = "Clone repo and add upstream if fork"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/repo/git-clone $args"
 
 [tasks."repo:git-list"]
 description = "List git-tracked files"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/repo/git-list $args"
 
 [tasks."repo:git-remote"]
 description = "Show git remotes"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/repo/git-remote $args"
 
 [tasks."repo:git-status"]
 description = "Git fetch and status"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/repo/git-status $args"
 
 ##################   UNIX   ##################
 
 [tasks."unix:d"]
 description = "Pwd with escaped spaces"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/unix/d $args"
 
 [tasks."unix:fd"]
 description = "Find files or text (combined fd/rg)"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/unix/fd $args"
 
 [tasks."unix:finder"]
 description = "Opens the current directory in macOS Finder"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/unix/finder $args"
 
 [tasks."unix:list"]
 description = "Pls list show hidden files"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/unix/list $args"
 
 [tasks."unix:symlink-bin"]
 description = "Create symbolic links in bin directory"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/unix/symlink-bin $args"
 
 ##################   UTIL   ##################
 
 [tasks."util:ast"]
 description = "Code refactoring with ast-grep"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/ast $args"
 
 [tasks."util:bm"]
 description = "Benchmarks with hyperfine"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/bm $args"
 
 [tasks."util:bundleid"]
 description = "Get bundle ID of a macOS app"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/bundleid $args"
 
 [tasks."util:check-toml"]
 description = "Check TOML validity"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/check-toml $args"
 
 [tasks."util:clean"]
 description = "Remove .DS_Store recursively"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/clean $args"
 
 [tasks."util:color"]
 description = "Color utilities (pastel)"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/color $args"
 
 [tasks."util:colors"]
 description = "Color space conversion (colorjs)"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/colors/colors $args"
 
 [tasks."util:crok"]
 description = "Croc file transfer"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/crok $args"
 
 [tasks."util:csv"]
 description = "CSV toolkit (csvtk)"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/csv $args"
 
 [tasks."util:csv2"]
 description = "CSV toolkit (qsv)"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/csv2 $args"
 
 [tasks."util:disk"]
 description = "Disk usage TUI (ncdu)"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/disk $args"
 
 [tasks."util:dotstow"]
 description = "Stow dotfiles to ~/.config"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/dotstow $args"
 
 [tasks."util:ff"]
 description = "System info (fastfetch)"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/ff $args"
 
 [tasks."util:fonts"]
 description = "List fonts with fzf"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/fonts $args"
 
 [tasks."util:free"]
 description = "Free and used memory"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/free $args"
 
 [tasks."util:g"]
 description = "Git TUI (lazygit)"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/g $args"
 
 [tasks."util:kee"]
 description = "KeePassXC CLI"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/kee $args"
 
 [tasks."util:lc"]
 description = "Rainbow text (lolcat)"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/lc $args"
 
 [tasks."util:lines"]
 description = "Line count"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/lines $args"
 
 [tasks."util:md"]
 description = "Convert files to markdown"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/md $args"
 
 [tasks."util:mdpdf"]
 description = "Markdown to PDF"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/mdpdf/mdpdf $args"
 
 [tasks."util:mel"]
 description = "Melody language to regex"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/mel $args"
 
 [tasks."util:mol"]
 description = "Mac optimization"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/mol $args"
 
 [tasks."util:mouse-focus"]
 description = "Toggle focus follows mouse"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/mouse-focus $args"
 
 [tasks."util:of"]
 description = "Code/git stats (onefetch)"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/of $args"
 
 [tasks."util:oklch"]
 description = "OKLCH color space tool"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/oklch/oklch $args"
 
 [tasks."util:pr"]
 description = "PR dashboard (gh-dash)"
+dir = "{{cwd}}"
 run = "gh dash"
 
 [tasks."util:path"]
 description = "Pretty-print PATH"
+dir = "{{cwd}}"
 tools = { "github:nushell/nushell" = "latest" }
 run = "/Users/kenbanks/Software/DevBox/tools/util/path $args"
 
 [tasks."util:pip"]
 description = "Pip via uv"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/pip $args"
 
 [tasks."util:playvid"]
 description = "Play video as live wallpaper"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/playvid $args"
 
 [tasks."util:regex"]
 description = "Generate regex from examples (grex)"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/regex $args"
 
 [tasks."util:release"]
 description = "Remove app quarantine"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/release $args"
 
 [tasks."util:rscan"]
 description = "Port scanner (rustscan)"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/rscan $args"
 
 [tasks."util:show"]
 description = "Show image in terminal"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/show $args"
 
 [tasks."util:switch"]
 description = "Switch symlink between targets"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/switch $args"
 
 [tasks."util:symlink"]
 description = "Create a named symlink"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/symlink $args"
 
 [tasks."util:tbl"]
 description = "Format as aligned table"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/tbl $args"
 
 [tasks."util:tmuxx"]
 description = "Re-source tmux config"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/tmuxx $args"
 
 [tasks."util:trash"]
 description = "Move files to trash"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/trash/bin/trash $args"
 
 [tasks."util:uv-init"]
 description = "Initialize UV project"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/uv-init $args"
 
 [tasks."util:uv-package"]
 description = "Initialize UV package"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/uv-package $args"
 
 [tasks."util:w"]
 description = "1-line weather"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/w $args"
 
 [tasks."util:wf"]
 description = "Weather forecast"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/wf $args"
 
 [tasks."util:windim"]
 description = "Window dimensions"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/windim $args"
 
 [tasks."util:wm"]
 description = "Window manager helper"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/wm/bin/wm $args"
 
 [tasks."util:wr"]
 description = "Weather report"
+dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/wr $args"
