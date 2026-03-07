@@ -1,0 +1,20 @@
+{
+  "defaultModel": "claude-opus-4-6",
+  "defaultProvider": "keychain-anthropic",
+  "defaultThinkingLevel": "medium",
+  "enabledModels": [
+    "keychain-anthropic/claude-opus-4-6",
+    "keychain-anthropic/claude-sonnet-4-6",
+    "keychain-anthropic/claude-haiku-4-5"
+  ],
+  "lastChangelogVersion": "0.56.1",
+  "packages": [
+    "~/Software/DevBox/ai/pi/cc-keychain-provider",
+    "npm:pi-extmgr",
+    "npm:oh-pi"
+  ],
+  "quietStartup": true,
+  "hideThinkingBlock": true,
+  "doubleEscapeAction": "tree",
+  "theme": "dark"
+}

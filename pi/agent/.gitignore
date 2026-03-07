@@ -1,0 +1,8 @@
+# Ignore everything
+*
+
+# Allow the following
+!.gitignore
+!settings.json
+!skills/
+!skills/**
