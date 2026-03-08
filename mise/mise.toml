@@ -49,11 +49,11 @@ description = "Claude in teammate mode (tmux)"
 dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/ai/teams $args"
 
-[tasks."ai:ai-skills"]
+[tasks."ai:skills-tui"]
 description = "skills tui"
 dir = "{{cwd}}"
 tools = { bun = "latest" }
-run = "~/Software/DevBox/tools/ai/ai-skills/ai-skills.tsx"
+run = "~/Software/DevBox/tools/ai/skills-tui/src/index.tsx"
 
 ##################   DEV   ##################
 
@@ -180,16 +180,16 @@ tools = { "github:nushell/nushell" = "latest" }
 run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/mlb $args"
 
 [tasks."pkgmgr:mlg"]
-description = "List mise global tools"
+description = "Mise list global"
 dir = "{{cwd}}"
 tools = { "github:nushell/nushell" = "latest" }
 run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/mlg $args"
 
-[tasks."pkgmgr:mlp"]
-description = "List mise project tools"
+[tasks."pkgmgr:mll"]
+description = "Mise list local"
 dir = "{{cwd}}"
 tools = { "github:nushell/nushell" = "latest" }
-run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/mlp $args"
+run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/mll $args"
 
 [tasks."pkgmgr:nl"]
 description = "Nix profile list"
