@@ -48,11 +48,11 @@ description = "Claude in teammate mode (tmux)"
 dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/ai/teams $args"
 
-[tasks."ai:ai-skills"]
+[tasks."ai:skills-tui"]
 description = "skills tui"
 dir = "{{cwd}}"
 tools = { bun = "latest" }
-run = "~/Software/DevBox/tools/ai/ai-skills/ai-skills.tsx"
+run = "~/Software/DevBox/tools/ai/skills-tui/src/index.tsx"
 
 ##################   DEV   ##################
 

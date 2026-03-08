@@ -18,7 +18,7 @@ enabled = [
   "claude-code",
   "codex",
   "cursor",
-  "gemini",
+  "gemini-cli",
   "opencode",
   "pi",
 ]
@@ -31,13 +31,13 @@ enabled = [
 both = [
   "augment",
   "codex",
-  "gemini",
-  "kimi-code",
+  "gemini-cli",
+  "kimi-cli",
   "mux",
   "opencode",
   "openhands",
   "pi",
-  "roo-code",
+  "roo",
   "windsurf",
 ]
 local = [
