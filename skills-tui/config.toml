@@ -18,7 +18,35 @@ enabled = [
   "claude-code",
   "codex",
   "cursor",
+  "gemini",
+  "opencode",
   "pi",
+]
+
+# Agents that discover skills from the standard .agents/skills paths.
+# These agents will see any skill installed by the skills CLI.
+# "both" = reads .agents/skills (local) and ~/.agents/skills (global)
+# "local" = reads .agents/skills (local) only
+[agents.universal]
+both = [
+  "augment",
+  "codex",
+  "gemini",
+  "kimi-code",
+  "mux",
+  "opencode",
+  "openhands",
+  "pi",
+  "roo-code",
+  "windsurf",
+]
+local = [
+  "amp",
+  "antigravity",
+  "command-code",
+  "cursor",
+  "goose",
+  "replit",
 ]
 
 # To add a custom agent or override builtin paths:
