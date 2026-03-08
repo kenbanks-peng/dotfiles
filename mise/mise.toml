@@ -15,7 +15,6 @@ claude-code = "latest"
 yq = "latest"
 zoxide = "latest"
 yazi = "latest"
-fd = "latest"
 lazygit = "latest"
 fnox = "latest"
 sops = "latest"
@@ -180,16 +179,16 @@ tools = { "github:nushell/nushell" = "latest" }
 run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/mlb $args"
 
 [tasks."pkgmgr:mlg"]
-description = "List mise global tools"
+description = "Mise list global"
 dir = "{{cwd}}"
 tools = { "github:nushell/nushell" = "latest" }
 run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/mlg $args"
 
-[tasks."pkgmgr:mlp"]
-description = "List mise project tools"
+[tasks."pkgmgr:mll"]
+description = "Mise list local"
 dir = "{{cwd}}"
 tools = { "github:nushell/nushell" = "latest" }
-run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/mlp $args"
+run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/mll $args"
 
 [tasks."pkgmgr:nl"]
 description = "Nix profile list"

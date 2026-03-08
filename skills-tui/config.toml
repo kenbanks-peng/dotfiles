@@ -1,0 +1,29 @@
+# skills-tui configuration
+
+[repos]
+list = [
+  "vercel-labs/skills",
+  "anthropics/skills",
+  "huggingface/skills",
+  "openai/skills",
+  "msmps/opentui-skill",
+  "vercel-labs/agent-skills",
+  "kepano/obsidian-skills",
+  "obra/superpowers",
+  "sickn33/antigravity-awesome-skills",
+]
+
+[agents]
+enabled = [
+  "claude-code",
+  "codex",
+  "cursor",
+  "pi",
+]
+
+# To add a custom agent or override builtin paths:
+# [[custom-agents]]
+# name = "my-agent"
+# display = "My Agent"
+# local = ".my-agent/skills/"
+# global = "~/.my-agent/skills/"
