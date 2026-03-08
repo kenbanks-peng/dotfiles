@@ -47,7 +47,6 @@ sip-app 4.1.4
 skim 1.7.13
 symboliclinker 2.2
 typeface 4.2.3,4845
-visual-studio-code 1.110.1
 vlc 3.0.23
 yaak 2026.2.4
 zed 0.226.5
