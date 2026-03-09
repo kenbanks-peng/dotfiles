@@ -1,15 +1,15 @@
 BREW CASKS
 ----------
 1password-cli 2.32.1
-aerospace 0.20.2-Beta
+aerospace 0.20.3-Beta
 affinity 3.0.3,4027
 anybar 0.2.3
 audacity 3.7.7
 boop 1.4.0
 brainfm 0.0.249
-claude 1.1.5368,d12d0218c6c7bc46d52919117bd57508c591a8ad
+claude 1.1.5749,ecf3d94e6eb8c8af9caed33a16c58e199abe2aec
 cleanshot 4.8.7
-codex 0.111.0
+codex 0.112.0
 cursor 2.6.13,60faf7b51077ed1df1db718157bbfed740d2e168
 daisydisk 4.33.3
 espanso 2.3.0
@@ -111,7 +111,7 @@ dvc 3.66.1_4
 eigen 5.0.1
 espeak-ng 1.52.0
 fastfetch 2.60.0
-fd 10.4.0
+fd 10.4.1
 ffmpeg 8.0.1_4
 figlet 2.2.5
 flac 1.5.0
@@ -161,7 +161,7 @@ hub 2.14.2
 hurl 7.1.0
 hyperfine 1.20.0
 icu4c@78 78.2
-imagemagick 7.1.2-15_1
+imagemagick 7.1.2-16
 imath 3.2.2
 imgcat 1.0.22
 iproute2mac 1.7.2
@@ -169,7 +169,7 @@ isl 0.27
 jc 1.25.6
 jid 0.7.6
 jj 0.39.0
-jjui 0.9.12
+jjui 0.10.0
 jnv 0.6.2
 jpeg-turbo 3.1.3
 jpeg-xl 0.11.2
@@ -250,7 +250,7 @@ makensis 3.11
 mcfly 0.9.4
 melody 0.20.0
 memo 0.5.1
-mole 1.29.0
+mole 1.30.0
 molten-vk 1.4.1
 mpdecimal 4.0.1
 mpfr 4.2.2
@@ -300,7 +300,7 @@ procs 0.14.11
 protobuf 34.0
 protobuf@33 33.5
 pstree 2.40
-pv 1.10.3
+pv 1.10.4
 pybind11 3.0.2
 pycparser 3.0
 pydantic 2.12.5
@@ -325,12 +325,13 @@ shaderc 2026.1
 shared-mime-info 2.4_1
 shellcheck 0.11.0
 simdjson 4.3.0
-sk 3.6.2
+sk 3.7.0
 sketchybar 2.23.0
 sleef 3.9.0
 snappy 1.2.2
 sniffnet 1.4.2
 snyk-cli 1.1303.1
+softnet 0.18.0
 sox 14.4.2_6
 spark 1.0.1
 sqlc 1.30.0
@@ -342,6 +343,7 @@ svt-av1 4.0.1
 syft 1.42.1
 syncthing 2.0.15
 tailspin 5.5.0
+tart 2.31.0
 tealdeer 1.8.1
 television 0.15.3
 terminal-notifier 2.0.0
@@ -388,7 +390,7 @@ MISE PACKAGES
 -------------
 bun                                1.3.10
 claude-code                        2.1.71            ~/.config/mise/mise.toml  latest
-fnox                               1.15.1            ~/.config/mise/mise.toml  latest
+fnox                               1.16.1            ~/.config/mise/mise.toml  latest
 github:Slackadays/Clipboard        0.10.0            ~/.config/mise/mise.toml  latest
 github:bee-san/RustScan            2.4.1             ~/.config/mise/mise.toml  latest
 github:dlvhdr/diffnav              0.10.0            ~/.config/mise/mise.toml  latest
