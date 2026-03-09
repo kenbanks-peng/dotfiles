@@ -48,6 +48,16 @@ description = "Claude in teammate mode (tmux)"
 dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/ai/teams $args"
 
+[tasks."ai:chamber"]
+description = "Chamber"
+dir = "{{cwd}}"
+run = "/Users/kenbanks/Software/Repos/forks/chamber/bin/chamber $args"
+
+[tasks."ai:connect"]
+description = "Connect to a Tart VM"
+dir = "{{cwd}}"
+run = "tart exec -i -t {{arg(name='vm')}} zsh"
+
 [tasks."ai:skills-tui"]
 description = "skills tui"
 dir = "{{cwd}}"

@@ -1,4 +1,4 @@
-#files: 1040	version: 5.9
+#files: 1035	version: 5.9
 
 _comps=(
 '_arguments' '__arguments'
@@ -238,7 +238,6 @@ _comps=(
 'carapace' '_carapace'
 'cat' '_cat'
 'catchsegv' '_precommand'
-'cb' '_cb'
 'cc' '_gcc'
 'ccal' '_ccal'
 'cd' '_cd'
@@ -255,7 +254,6 @@ _comps=(
 'chattr' '_chattr'
 'chcon' '_chcon'
 'chdir' '_cd'
-'cheat' '_cheat'
 'chflags' '_chflags'
 'chfn' '_users'
 'chgrp' '_chown'
@@ -283,7 +281,6 @@ _comps=(
 'cmp' '_cmp'
 'co' '_rcs'
 'code' '_code'
-'colima' '_colima'
 'column' '_column'
 'comb' '_sccs'
 'combine' '_imagemagick'
@@ -300,6 +297,7 @@ _comps=(
 'conch' '_twisted'
 'config.status' '_configure'
 'configure' '_configure'
+'container' '_container'
 'convert' '_imagemagick'
 'coreadm' '_coreadm'
 'cowsay' '_cowsay'
@@ -514,6 +512,7 @@ _comps=(
 'flists' '_mh'
 'float' '_typeset'
 'flowadm' '_flowadm'
+'flox' '_flox'
 'fmadm' '_fmadm'
 'fmt' '_fmt'
 'fmttest' '_mh'
@@ -663,6 +662,7 @@ _comps=(
 'groupmod' '_user_admin'
 'groups' '_users'
 'growisofs' '_growisofs'
+'grype' '_grype'
 'gs' '_ghostscript'
 'gsbj' '_pspdf'
 'gsdj' '_pspdf'
@@ -746,6 +746,7 @@ _comps=(
 'help' '_sccs'
 'hexdump' '_hexdump'
 'hilite' '_precommand'
+'himalaya' '_himalaya'
 'histed' '_zed'
 'history' '_fc'
 'host' '_host'
@@ -853,14 +854,11 @@ _comps=(
 'ldd' '_ldd'
 'less' '_less'
 'let' '_math'
-'lf' '_lf'
-'lfcd' '_lf'
 'lftp' '_ncftp'
 'lha' '_lha'
 'light' '_webbrowser'
 'lighty-disable-mod' '_lighttpd'
 'lighty-enable-mod' '_lighttpd'
-'limactl' '_limactl'
 'limit' '_limit'
 'links' '_links'
 'links2' '_links'
@@ -1053,6 +1051,7 @@ _comps=(
 'nginx' '_nginx'
 'ngrep' '_ngrep'
 'nice' '_nice'
+'nix' '_nix'
 'nkf' '_nkf'
 'nl' '_nl'
 'nm' '_nm'
@@ -1081,7 +1080,6 @@ _comps=(
 'ogginfo' '_vorbis'
 'oksh' '_sh'
 'okular' '_okular'
-'onefetch' '_onefetch'
 'open' '_open'
 'openstack' '_openstack'
 'opera' '_webbrowser'
@@ -1095,7 +1093,6 @@ _comps=(
 'osascript' '_osascript'
 'osc' '_osc'
 'otool' '_otool'
-'ov' '_ov'
 'p11-kit' '_p11-kit'
 'p4' '_perforce'
 'p4d' '_perforce'
@@ -1106,7 +1103,6 @@ _comps=(
 'pass' '_pass'
 'passwd' '_users'
 'paste' '_paste'
-'pastel' '_pastel'
 'patch' '_patch'
 'pax' '_pax'
 'pbcopy' '_pbcopy'
@@ -1133,7 +1129,6 @@ _comps=(
 'perf' '_perf'
 'perl' '_perl'
 'perldoc' '_perldoc'
-'pet' '_pet'
 'pfctl' '_pfctl'
 'pfexec' '_pfexec'
 'pfiles' '_pids'
@@ -1294,7 +1289,6 @@ _comps=(
 'rgview' '_vim'
 'rgvim' '_vim'
 'ri' '_ri'
-'rich' '_rich'
 'rlogin' '_rlogin'
 'rm' '_rm'
 'rmadison' '_madison'
@@ -1418,7 +1412,6 @@ _comps=(
 'spamassassin' '_spamassassin'
 'split' '_split'
 'splitdiff' '_patchutils'
-'sq' '_sq'
 'sqlc' '_sqlc'
 'sqlite' '_sqlite'
 'sqlite3' '_sqlite'
@@ -1471,6 +1464,7 @@ _comps=(
 'swanctl' '_swanctl'
 'swift' '_swift'
 'swiftc' '_swift'
+'syft' '_syft'
 'sync' '_nothing'
 'sysclean' '_sysclean'
 'sysctl' '_sysctl'
@@ -1486,6 +1480,7 @@ _comps=(
 'talk' '_other_accounts'
 'tar' '_tar'
 'tardy' '_tardy'
+'tart' '_tart'
 'tcp_open' '_tcpsys'
 'tcpdump' '_tcpdump'
 'tcptraceroute' '_tcptraceroute'
@@ -1535,6 +1530,7 @@ _comps=(
 'trash' '_trash'
 'tree' '_tree'
 'trial' '_twisted'
+'trivy' '_trivy'
 'trove' '_openstack'
 'true' '_nothing'
 'truncate' '_truncate'
@@ -1555,7 +1551,6 @@ _comps=(
 'txt' '_hosts'
 'type' '_which'
 'typeset' '_typeset'
-'typst' '_typst'
 'ulimit' '_ulimit'
 'uml_mconsole' '_uml'
 'uml_moo' '_uml'
@@ -1901,19 +1896,18 @@ bindkey '^[,' _history-complete-newer
 bindkey '^[/' _history-complete-older
 bindkey '^[~' _bash_complete-word
 
-autoload -Uz _mpv _aerospace _asciinema _ast-grep _bandwhich \
-            _bat _brew _caddy _carapace _cb \
-            _cheat _colima _csvtk _dblab _delta \
-            _deno _doppler _dvc _fastfetch _fd \
-            _fx _gh _ghostty _git _gitleaks \
-            _glances _glow _gpg-tui _hub _hurl \
-            _hurlfmt _hyperfine _jc _jj _just \
-            _lf _limactl _luarocks _melody _mole \
-            _mpv _onefetch _orb _orbctl _ov \
-            _p11-kit _pass _pastel _pet _portal \
+autoload -Uz _flox _nix _aerospace _asciinema _ast-grep \
+            _bandwhich _bat _brew _caddy _carapace \
+            _container _csvtk _dblab _delta _deno \
+            _doppler _dvc _fastfetch _fd _fx \
+            _gh _ghostty _git _gitleaks _glances \
+            _glow _gpg-tui _grype _himalaya _hub \
+            _hurl _hurlfmt _hyperfine _jc _jj \
+            _just _luarocks _melody _mole _mpv \
+            _orb _orbctl _p11-kit _pass _portal \
             _posting _procs _qsv _rclone _rg \
-            _rich _sd _sk _sq _sqlc \
-            _tldr _trust _tspin _tv _typst \
+            _sd _sk _sqlc _syft _tart \
+            _tldr _trivy _trust _tspin _tv \
             _watchexec _xh _ya _yazi _yq \
             _yt-dlp _zellij _zoxide __arguments _a2ps \
             _a2utils _aap _abcde _absolute_command_paths _ack \
