@@ -53,6 +53,11 @@ description = "Chamber"
 dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/Repos/forks/chamber/bin/chamber $args"
 
+[tasks."ai:fs"]
+description = "Fileshare"
+dir = "{{cwd}}"
+run = "~/Software/Repos/forks/fileshare/bin/fileshare $args"
+
 [tasks."ai:connect"]
 description = "Connect to a Tart VM"
 dir = "{{cwd}}"
