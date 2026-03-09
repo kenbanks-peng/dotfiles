@@ -7,6 +7,7 @@ anybar 0.2.3
 audacity 3.7.7
 boop 1.4.0
 brainfm 0.0.249
+chamber 0.2.0
 claude 1.1.5749,ecf3d94e6eb8c8af9caed33a16c58e199abe2aec
 cleanshot 4.8.7
 codex 0.112.0
