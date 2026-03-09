@@ -283,6 +283,7 @@ openssl@3 3.6.1
 opus 1.6.1
 opusfile 0.12_1
 p11-kit 0.26.2
+packer 1.15.0
 pandoc 3.9
 pass 1.7.4
 pcaudiolib 1.3
@@ -343,6 +344,7 @@ svt-av1 4.0.1
 syft 1.42.1
 syncthing 2.0.15
 tailspin 5.5.0
+tart 2.31.0
 tealdeer 1.8.1
 television 0.15.3
 terminal-notifier 2.0.0
