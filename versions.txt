@@ -400,6 +400,7 @@ github:h0rv/d2-mcp                 1.1.0             ~/.config/mise/mise.toml  l
 github:max-sixty/worktrunk         0.28.2            ~/.config/mise/mise.toml  latest
 github:melkeydev/go-blueprint      0.10.11
 github:neilotoole/sq               0.50.0            ~/.config/mise/mise.toml  latest
+github:nushell/nushell             0.111.0
 github:o2sh/onefetch               2.26.1            ~/.config/mise/mise.toml  latest
 github:sharkdp/pastel              0.12.0            ~/.config/mise/mise.toml  latest
 go                                 1.26.0
