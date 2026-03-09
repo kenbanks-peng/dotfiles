@@ -343,7 +343,6 @@ svt-av1 4.0.1
 syft 1.42.1
 syncthing 2.0.15
 tailspin 5.5.0
-tart 2.31.0
 tealdeer 1.8.1
 television 0.15.3
 terminal-notifier 2.0.0
