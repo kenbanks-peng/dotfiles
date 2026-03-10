@@ -10,7 +10,7 @@ brainfm 0.0.249
 claude 1.1.5749,ecf3d94e6eb8c8af9caed33a16c58e199abe2aec
 cleanshot 4.8.7
 codex 0.113.0
-cursor 2.6.14,eb1c4e0702d201d1226d2a7afb25c501c2e56088
+cursor 2.6.18,68fbec5aed9da587d1c6a64172792f505bafa252
 daisydisk 4.33.3
 espanso 2.3.0
 flox 1.9.1
@@ -32,10 +32,10 @@ keepassxc 2.7.11
 keyclu 0.31
 languagetool-desktop 2.12.0
 linear-linear 1.28.12,260226pqw0vmhth
-logos 48.0.0.0238
+logos 49.0.0.0144
 microsoft-auto-update 4.82.26020434
 microsoft-outlook 16.106.26030211
-ngrok 3.37.1,43g4rYQwAMz,a
+ngrok 3.37.2,nboc9dCtERa,a
 obsidian 1.12.4
 omnifocus 4.8.8
 onedrive 26.022.0203.0006
@@ -268,9 +268,9 @@ node 25.8.0
 npth 1.8
 nspr 4.38.2
 nss 3.121
-numpy 2.4.2
+numpy 2.4.3
 obsidian-cli 0.2.3
-oh-my-posh 29.7.1
+oh-my-posh 29.8.0
 oniguruma 6.9.10
 openai-whisper 20250625_3
 openblas 0.3.31_1
@@ -326,7 +326,7 @@ shaderc 2026.1
 shared-mime-info 2.4_1
 shellcheck 0.11.0
 simdjson 4.3.0
-sk 3.7.0
+sk 4.0.0
 sketchybar 2.23.0
 sleef 3.9.0
 snappy 1.2.2
