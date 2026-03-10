@@ -19,6 +19,8 @@ echo "$(date): mise count=$count" >>"$CACHE_DIR/$LOG_FILE"
 # BUG:WORKAROUND: Bypass homebrew CPU core detection that fails in sketchybar context
 # Setting this to a number (not "auto") skips Hardware::CPU.cores call
 export HOMEBREW_DOWNLOAD_CONCURRENCY=4
+# Disable auto-update to avoid Ruby crashes in sketchybar context
+export HOMEBREW_NO_AUTO_UPDATE=1
 
 # Redirect stdin from /dev/null to avoid pipe issues
 # Split formula and cask checks to avoid --greedy curl timeout bug in sketchybar context
@@ -53,8 +55,9 @@ echo "$(date): === BREW CASK OUTPUT ===" >>"$CACHE_DIR/$LOG_FILE"
 echo "$cask_output" >>"$CACHE_DIR/$LOG_FILE"
 echo "$(date): === END BREW OUTPUT ===" >>"$CACHE_DIR/$LOG_FILE"
 
-# Combine and count outputs, filtering out brew error messages
-count=$(printf '%s\n%s' "$formula_output" "$cask_output" | grep -v '^✘' | grep -v '^Error:' | grep -c . || echo 0)
+# Combine and count outputs — only count lines that look like package names
+# (non-empty, no spaces, no ==> prefixes, no error messages, no stack traces)
+count=$(printf '%s\n%s' "$formula_output" "$cask_output" | grep -v '^\s*$' | grep -v ' ' | grep -v '^==>' | grep -v '^Error:' | grep -v '^✘' | grep -v '^/' | grep -v '^Please' | grep -c . || echo 0)
 echo "$(date): brew count=$count" >>"$CACHE_DIR/$LOG_FILE"
 sum=$((sum + count))
 echo "$(date): final sum=$sum" >>"$CACHE_DIR/$LOG_FILE"
