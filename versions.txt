@@ -7,13 +7,13 @@ anybar 0.2.3
 audacity 3.7.7
 boop 1.4.0
 brainfm 0.0.249
-claude 1.1.5749,ecf3d94e6eb8c8af9caed33a16c58e199abe2aec
+claude 1.1.6041,62e193c55a57c09a3640f5cf09c3759e802a4d46
 cleanshot 4.8.7
 codex 0.113.0
 cursor 2.6.18,68fbec5aed9da587d1c6a64172792f505bafa252
 daisydisk 4.33.3
 espanso 2.3.0
-flox 1.9.1
+flox 1.10.0
 font-hasklug-nerd-font 3.4.0
 font-ia-writer-quattro latest
 font-inter 4.1
@@ -127,7 +127,7 @@ gawk 5.4.0
 gcc 15.2.0_1
 gemini-cli 0.32.1
 gettext 1.0
-gh 2.87.3
+gh 2.88.0
 giflib 5.2.2
 git 2.53.0
 git-delta 0.18.2_3
