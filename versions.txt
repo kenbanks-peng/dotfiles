@@ -125,7 +125,7 @@ gawk 5.4.0
 gcc 15.2.0_1
 gemini-cli 0.32.1
 gettext 1.0
-gh 2.87.3
+gh 2.88.0
 gifgrep 0.2.1
 giflib 5.2.2
 git 2.53.0
