@@ -203,7 +203,7 @@ libnghttp2 1.68.0
 libnghttp3 1.15.0
 libngtcp2 1.21.0
 libogg 1.3.6
-libomp 22.1.0
+libomp 22.1.1
 libplacebo 7.360.0
 libpng 1.6.55
 libsamplerate 0.2.2
