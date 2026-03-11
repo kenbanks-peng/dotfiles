@@ -71,7 +71,7 @@ aws-c-compression 0.3.2
 aws-c-event-stream 0.6.0
 aws-c-http 0.10.11
 aws-c-io 0.26.1
-aws-c-mqtt 0.14.0
+aws-c-mqtt 0.15.0
 aws-c-s3 0.11.5
 aws-c-sdkutils 0.2.4
 aws-checksums 0.2.10
@@ -388,7 +388,7 @@ zstd 1.5.7_1
 MISE PACKAGES
 -------------
 bun                                                        1.3.10
-claude-code                                                2.1.72            ~/.config/mise/mise.toml  latest
+claude-code                                                2.1.73            ~/.config/mise/mise.toml  latest
 fnox                                                       1.17.0            ~/.config/mise/mise.toml  latest
 github:Slackadays/Clipboard                                0.10.0            ~/.config/mise/mise.toml  latest
 github:bee-san/RustScan                                    2.4.1             ~/.config/mise/mise.toml  latest
