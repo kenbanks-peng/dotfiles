@@ -5,7 +5,7 @@ affinity 3.0.3,4027
 anybar 0.2.3
 audacity 3.7.7
 boop 1.4.0
-brainfm 0.0.249
+brainfm 0.0.252
 claude 1.1.6041,62e193c55a57c09a3640f5cf09c3759e802a4d46
 cleanshot 4.8.7
 codex 0.114.0
@@ -49,8 +49,8 @@ skim 1.7.13
 symboliclinker 2.2
 typeface 4.2.3,4845
 vlc 3.0.23
-yaak 2026.2.4
-zed 0.226.5
+yaak 2026.3.0
+zed 0.227.1
 zen 1.19.2b
 zoom 6.7.7.76486
 
@@ -103,7 +103,7 @@ curlie 1.8.2
 d2 0.7.1
 dav1d 1.5.3
 dblab 0.34.3
-deno 2.7.4
+deno 2.7.5
 doppler 3.75.3
 dotenvx 1.54.1
 dvc 3.66.1_4
@@ -168,7 +168,7 @@ isl 0.27
 jc 1.25.6
 jid 0.7.6
 jj 0.39.0
-jjui 0.10.0
+jjui 0.10.1
 jnv 0.6.2
 jpeg-turbo 3.1.3
 jpeg-xl 0.11.2
@@ -259,10 +259,10 @@ navi 2.24.0
 ncdu 2.9.2
 ncurses 6.6
 neovim 0.11.6
-netbird 0.66.3
+netbird 0.66.4
 nettle 3.10.2
 nim 2.2.8
-node 25.8.0
+node 25.8.1
 npth 1.8
 nspr 4.38.2
 nss 3.121
@@ -398,7 +398,6 @@ github:h0rv/d2-mcp                                         1.1.0             ~/.
 github:max-sixty/worktrunk                                 0.29.0            ~/.config/mise/mise.toml  latest
 github:melkeydev/go-blueprint                              0.10.11
 github:neilotoole/sq                                       0.50.0            ~/.config/mise/mise.toml  latest
-github:nushell/nushell                                     0.111.0
 github:o2sh/onefetch                                       2.26.1            ~/.config/mise/mise.toml  latest
 github:sharkdp/pastel                                      0.12.0            ~/.config/mise/mise.toml  latest
 go                                                         1.26.0
