@@ -4,9 +4,10 @@ source "$CONFIG_DIR/env.sh"
 
 SEP="sep_$NAME"
 
-percentage=$(ioreg -c AppleDeviceManagementHIDEventService -r -l | awk '
+read -r percentage transport < <(ioreg -c AppleDeviceManagementHIDEventService -r -l | awk '
+  /Transport/ { gsub(/"/, "", $NF); trans = $NF }
   /Product.*=.*"Magic Trackpad"/ { found = 1 }
-  /BatteryPercent/ { if (found) { print $NF; exit } }
+  /BatteryPercent/ { if (found) { print $NF, trans; exit } }
 ')
 
 if [ -n "$percentage" ]; then
@@ -18,6 +19,9 @@ if [ -n "$percentage" ]; then
     [1-2][0-9])   label="$ICON_VBAT_1"; color="$YELLOW" ;;
     *)            label="$ICON_VBAT_0"; color="$RED" ;;
   esac
+  if [[ "$transport" == "USB" ]] || [[ "$percentage" -eq 100 ]]; then
+    color="$GREEN"
+  fi
   sketchybar -m --set "$NAME" drawing=on label="$label" label.color="$color" icon.color="$color" label.font="$NERD:14" \
              --set "$SEP" drawing=on
 else
