@@ -8,7 +8,7 @@
 
 export ICON_APPLE_LOGO=􀣺 # SF Symbols
 
-export ICON_LEGO=􀐛 # SF Symbols
+export ICON_LEGO=􀈄 # SF Symbols - arrow.down.circle
 export ICON_CHECKMARK=􀆅 # SF Symbols
 export ICON_DISK=􀥾 # SF Symbols - disk 􀥾 
 export ICON_CPU=􀧓  # SF Symbols 􀧓

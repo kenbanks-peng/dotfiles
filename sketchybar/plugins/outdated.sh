@@ -61,7 +61,7 @@ echo "$(date): final sum=$sum" >>"$CACHE_DIR/$LOG_FILE"
 
 case "$sum" in
 0)
-  color="$GREEN"
+  color="$SAPPHIRE"
   sum="$ICON_CHECKMARK"
   ;;
 [1-2])
