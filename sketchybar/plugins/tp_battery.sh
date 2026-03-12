@@ -6,8 +6,8 @@ SEP="sep_$NAME"
 
 read -r percentage transport < <(ioreg -c AppleDeviceManagementHIDEventService -r -l | awk '
   /Transport/ { gsub(/"/, "", $NF); trans = $NF }
-  /Product.*=.*"Magic Trackpad"/ { found = 1 }
-  /BatteryPercent/ { if (found) { print $NF, trans; exit } }
+  /ProductID/ { pid = $NF }
+  /BatteryPercent/ { if (pid == 613) { print $NF, trans; exit } }
 ')
 
 if [ -n "$percentage" ]; then
