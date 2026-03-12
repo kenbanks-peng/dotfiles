@@ -1,18 +1,14 @@
 BREW CASKS
 ----------
 aerospace 0.20.3-Beta
-affinity 3.0.3,4027
 anybar 0.2.3
 audacity 3.7.7
-boop 1.4.0
-brainfm 0.0.252
 claude 1.1.6041,62e193c55a57c09a3640f5cf09c3759e802a4d46
 cleanshot 4.8.7
 codex 0.114.0
 cursor 2.6.18,68fbec5aed9da587d1c6a64172792f505bafa252
 daisydisk 4.33.3
 espanso 2.3.0
-flox 1.10.0
 font-hasklug-nerd-font 3.4.0
 font-ia-writer-quattro latest
 font-inter 4.1
@@ -31,13 +27,11 @@ keepassxc 2.7.12
 keyclu 0.31
 languagetool-desktop 2.12.0
 linear-linear 1.28.12,260226pqw0vmhth
-logos 49.0.0.0144
 microsoft-auto-update 4.82.26020434
 microsoft-outlook 16.107.26030937
 ngrok 3.37.2,nboc9dCtERa,a
 obsidian 1.12.4
 omnifocus 4.8.8
-onedrive 26.022.0203.0006
 orbstack 2.0.5,19905
 pdf-pals 1.9.0
 quarto 1.8.27
@@ -176,7 +170,6 @@ jq 1.8.1
 jqp 0.8.0
 jrnl 4.3
 json-c 0.18
-just 1.46.0
 lame 3.100
 lazydocker 0.24.4
 lazyjj 0.6.1
@@ -248,7 +241,6 @@ makensis 3.11
 mcfly 0.9.4
 melody 0.20.0
 memo 0.5.1
-mole 1.30.0
 molten-vk 1.4.1
 mpdecimal 4.0.1
 mpfr 4.2.2
@@ -259,7 +251,6 @@ navi 2.24.0
 ncdu 2.9.2
 ncurses 6.6
 neovim 0.11.6
-netbird 0.66.4
 nettle 3.10.2
 nim 2.2.8
 node 25.8.1
@@ -300,7 +291,6 @@ protobuf 34.0
 protobuf@33 33.5
 pstree 2.40
 pv 1.10.4
-pybind11 3.0.2
 pycparser 3.0
 pydantic 2.12.5
 pygit2 1.19.1
@@ -330,7 +320,6 @@ sleef 3.9.0
 snappy 1.2.2
 sniffnet 1.4.2
 snyk-cli 1.1303.1
-softnet 0.18.0
 sox 14.4.2_6
 spark 1.0.1
 sqlc 1.30.0
@@ -342,7 +331,6 @@ svt-av1 4.0.1
 syft 1.42.2
 syncthing 2.0.15
 tailspin 5.5.0
-tart 2.31.0
 tealdeer 1.8.1
 television 0.15.3
 terminal-notifier 2.0.0
@@ -368,6 +356,7 @@ watchexec 2.5.0
 webp 1.6.0
 wget 1.25.0
 wgo 0.6.3
+worktrunk 0.29.0
 x264 r3222
 x265 4.1
 xh 0.25.3
