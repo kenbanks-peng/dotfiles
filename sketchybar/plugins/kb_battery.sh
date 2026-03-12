@@ -16,5 +16,5 @@ if [ -n "$percentage" ]; then
     [1-2][0-9])   label="$ICON_VBAT_1"; color="$YELLOW" ;;
     *)            label="$ICON_VBAT_0"; color="$RED" ;;
   esac
-  sketchybar -m --set "$NAME" label="$label" label.color="$color" label.font="$NERD:14"
+  sketchybar -m --set "$NAME" label="$label" label.color="$color" icon.color="$color" label.font="$NERD:14"
 fi

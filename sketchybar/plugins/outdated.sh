@@ -59,10 +59,12 @@ echo "$(date): brew count=$count" >>"$CACHE_DIR/$LOG_FILE"
 sum=$((sum + count))
 echo "$(date): final sum=$sum" >>"$CACHE_DIR/$LOG_FILE"
 
+label_font=""
 case "$sum" in
 0)
   color="$SAPPHIRE"
   sum="$ICON_CHECKMARK"
+  label_font="$FONT:$((FONTSIZE-4))"
   ;;
 [1-2])
   color="$YELLOW"
@@ -80,4 +82,5 @@ props=(
   label="$sum"
   label.color="$color"
 )
+[ -n "$label_font" ] && props+=(label.font="$label_font")
 sketchybar --set "$NAME" "${props[@]}"
