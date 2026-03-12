@@ -7,10 +7,15 @@
 #
 
 export ICON_APPLE_LOGO=􀣺 # SF Symbols
-export ICON_DISK=󰤃 # SF Symbols - disk 􀥾
-export ICON_CPU=󰤃  # SF Symbols 􀧓
+
 export ICON_LEGO=􀐛 # SF Symbols
 export ICON_CHECKMARK=􀆅 # SF Symbols
+export ICON_DISK=􀥾 # SF Symbols - disk 􀥾 
+export ICON_CPU=􀧓  # SF Symbols 􀧓
+export ICON_KEYBOARD=􀇳 # SF Symbols - keyboard 􀇳
+export ICON_TRACKPAD=􀟰 # SF Symbols - trackpad 􀟰
+export ICON_PIPE=󰤃
+
 
 export ICON_NET_WIFI_3=      # Icomoon - Wi-Fi connected - 3 bars
 export ICON_NET_WIFI_2=      # Icomoon - Wi-Fi connected - 2 bars

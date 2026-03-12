@@ -5,9 +5,9 @@ source "$PLUGIN_DIR/helpers/sketchy.sh"
 location="right"
 
 props=(
-  script="$PLUGIN_DIR/disk.sh"
-  update_freq=5
-  icon="$ICON_DISK"
+  script="$PLUGIN_DIR/tp_battery.sh"
+  update_freq=120
+  icon="$ICON_TRACKPAD"
   icon.color="$SAPPHIRE"
   icon.font="$FONT:$((ICON_FONTSIZE+4))"
   icon.padding_left=0
@@ -19,9 +19,8 @@ props=(
   label.width=36
   label.align=center
   background.padding_left=0
-  background.padding_right=0  
+  background.padding_right=0
 )
 
-sketchy_add_item disk "$location" \
-  --set disk "${props[@]}" \
-  --subscribe disk mouse.clicked
+sketchy_add_item tp_battery "$location" \
+  --set tp_battery "${props[@]}"

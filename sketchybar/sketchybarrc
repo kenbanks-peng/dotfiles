@@ -22,6 +22,8 @@ source $ITEM_DIR/aerospace_controls.sh
 # source $ITEM_DIR/wifi.sh
 # source $ITEM_DIR/battery.sh
 # source $ITEM_DIR/volume.sh
+source $ITEM_DIR/kb_battery.sh
+source $ITEM_DIR/tp_battery.sh
 source $ITEM_DIR/cpu.sh
 source $ITEM_DIR/disk.sh
 source $ITEM_DIR/outdated.sh
