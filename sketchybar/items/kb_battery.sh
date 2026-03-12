@@ -20,7 +20,23 @@ props=(
   label.align=center
   background.padding_left=0
   background.padding_right=0
+  drawing=off
 )
 
 sketchy_add_item kb_battery "$location" \
   --set kb_battery "${props[@]}"
+
+sep_props=(
+  icon="$ICON_PIPE"
+  icon.color="$SURFACE1"
+  icon.font="$NERD:18"
+  icon.padding_left=6
+  icon.padding_right=6
+  label.drawing=off
+  background.padding_left=0
+  background.padding_right=0
+  drawing=off
+)
+
+sketchy_add_item sep_kb_battery "$location" \
+  --set sep_kb_battery "${sep_props[@]}"

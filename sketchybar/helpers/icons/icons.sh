@@ -14,6 +14,7 @@ export ICON_DISK=􀥾 # SF Symbols - disk 􀥾
 export ICON_CPU=􀧓  # SF Symbols 􀧓
 export ICON_KEYBOARD=􀇳 # SF Symbols - keyboard 􀇳
 export ICON_TRACKPAD=􀬁 # SF Symbols - hand.tap 􀬁
+export ICON_LAPTOP=􀟛   # SF Symbols - laptopcomputer 􀟛
 export ICON_PIPE=󰤃
 
 

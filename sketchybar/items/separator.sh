@@ -2,6 +2,7 @@
 
 # Creates a pipe separator item
 # Usage: SEPARATOR_NAME=sep_1 source $ITEM_DIR/separator.sh
+# Optional: SEPARATOR_DRAWING=off to start hidden
 
 source "$PLUGIN_DIR/helpers/sketchy.sh"
 
