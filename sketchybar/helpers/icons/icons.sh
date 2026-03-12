@@ -32,6 +32,12 @@ export ICON_BATTERY_1=􀛩        # SF Symbols - low
 export ICON_BATTERY_0=􀛪        # SF Symbols - empty
 export ICON_BATTERY_CHARGING=􀢋 # SF Symbols - charging
 
+export ICON_VBAT_4=󰁹 # Nerd Font - battery full
+export ICON_VBAT_3=󰂀 # Nerd Font - battery 70
+export ICON_VBAT_2=󰁾 # Nerd Font - battery 50
+export ICON_VBAT_1=󰁻 # Nerd Font - battery 30
+export ICON_VBAT_0=󰂎 # Nerd Font - battery outline
+
 export ICON_STACK=􀏧       # SF Symbols
 export ICON_TILE=􀏟        # SF Symbols
 export ICON_FLOAT=􀣤       # SF Symbols
