@@ -118,7 +118,7 @@ fx 39.2.0
 fzf 0.70.0
 gawk 5.4.0
 gcc 15.2.0_1
-gemini-cli 0.33.0
+gemini-cli 0.33.1
 gettext 1.0
 gh 2.88.1
 giflib 5.2.2
@@ -133,7 +133,7 @@ glow 2.1.1
 gmp 6.3.0
 gnu-getopt 2.41.3
 gnu-sed 4.9
-gnupg 2.4.9
+gnupg 2.5.18
 gnutls 3.8.12
 gobang 0.1.0-alpha.5
 gpg-tui 0.11.1_1
@@ -223,7 +223,7 @@ libxrender 0.9.12
 libyaml 0.2.5
 little-cms2 2.18
 llhttp 9.3.1
-llvm 22.1.0
+llvm 22.1.1
 llvm@20 20.1.8
 lolcat 100.0.1
 lpeg 1.1.0_2
@@ -383,7 +383,7 @@ github:bee-san/RustScan            2.4.1             ~/.config/mise/mise.toml  l
 github:dlvhdr/diffnav              0.10.0            ~/.config/mise/mise.toml  latest
 github:dlvhdr/gh-dash              4.23.2            ~/.config/mise/mise.toml  latest
 github:h0rv/d2-mcp                 1.1.0             ~/.config/mise/mise.toml  latest
-github:max-sixty/worktrunk         0.29.0            ~/.config/mise/mise.toml  latest
+github:max-sixty/worktrunk         0.29.1            ~/.config/mise/mise.toml  latest
 github:neilotoole/sq               0.50.0            ~/.config/mise/mise.toml  latest
 github:o2sh/onefetch               2.26.1            ~/.config/mise/mise.toml  latest
 github:sharkdp/pastel              0.12.0            ~/.config/mise/mise.toml  latest
