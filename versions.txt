@@ -99,7 +99,7 @@ dav1d 1.5.3
 dblab 0.34.3
 deno 2.7.5
 doppler 3.75.3
-dotenvx 1.55.0
+dotenvx 1.55.1
 dvc 3.66.1_4
 eigen 5.0.1
 espeak-ng 1.52.0
@@ -253,7 +253,7 @@ ncurses 6.6
 neovim 0.11.6
 nettle 3.10.2
 nim 2.2.8
-node 25.8.1
+node 25.8.1_1
 npth 1.8
 nspr 4.38.2
 nss 3.121
@@ -313,7 +313,7 @@ sevenzip 26.00
 shaderc 2026.1
 shared-mime-info 2.4_1
 shellcheck 0.11.0
-simdjson 4.3.0
+simdjson 4.4.0
 sk 4.0.0
 sketchybar 2.23.0
 sleef 3.9.0
@@ -376,7 +376,7 @@ zstd 1.5.7_1
 
 MISE PACKAGES
 -------------
-claude-code                        2.1.75            ~/.config/mise/mise.toml  latest
+claude-code                        2.1.76            ~/.config/mise/mise.toml  latest
 fnox                               1.18.0            ~/.config/mise/mise.toml  latest
 github:Slackadays/Clipboard        0.10.0            ~/.config/mise/mise.toml  latest
 github:bee-san/RustScan            2.4.1             ~/.config/mise/mise.toml  latest
@@ -389,7 +389,7 @@ github:o2sh/onefetch               2.26.1            ~/.config/mise/mise.toml  l
 github:sharkdp/pastel              0.12.0            ~/.config/mise/mise.toml  latest
 go                                 1.26.1
 lazygit                            0.60.0            ~/.config/mise/mise.toml  latest
-npm:@mariozechner/pi-coding-agent  0.57.1            ~/.config/mise/mise.toml  latest
+npm:@mariozechner/pi-coding-agent  0.58.1            ~/.config/mise/mise.toml  latest
 npm:@mixedbread/mgrep              0.1.10            ~/.config/mise/mise.toml  latest
 npm:github-markdown-css            5.9.0             ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                      5.2.5             ~/.config/mise/mise.toml  latest
