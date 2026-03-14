@@ -3,7 +3,7 @@ BREW CASKS
 aerospace 0.20.3-Beta
 anybar 0.2.3
 audacity 3.7.7
-claude 1.1.6452,5afc23a0310b20a371d1fbd79ddf31a392ebef25
+claude 1.1.6679,f8f4ffd55f41cdea65b2c8adb312eb985aef916f
 cleanshot 4.8.7
 codex 0.114.0
 cursor 2.6.19,224838f96445be37e3db643a163a817c15b3606c
@@ -16,7 +16,7 @@ font-monaspace-var 1.301
 font-sf-pro latest
 font-symbols-only-nerd-font 3.4.0
 font-tex-gyre-termes 2.004
-ghostty 1.3.0
+ghostty 1.3.1
 git-credential-manager 2.7.3
 google-chrome 146.0.7680.72
 google-drive 122.0.1
@@ -76,7 +76,7 @@ bash 5.3.9
 bat 0.26.1
 bat-extras 2024.08.24
 bbrew 2.2.1
-biome 2.4.6
+biome 2.4.7
 borders 1.8.4
 brotli 1.2.0
 btop 1.4.6
@@ -99,7 +99,7 @@ dav1d 1.5.3
 dblab 0.34.3
 deno 2.7.5
 doppler 3.75.3
-dotenvx 1.54.1
+dotenvx 1.55.0
 dvc 3.66.1_4
 eigen 5.0.1
 espeak-ng 1.52.0
@@ -121,7 +121,7 @@ gcc 15.2.0_1
 gemini-cli 0.33.1
 gettext 1.0
 gh 2.88.1
-giflib 5.2.2
+giflib 6.1.2
 git 2.53.0
 git-delta 0.18.2_3
 git-filter-repo 2.47.0
@@ -196,7 +196,7 @@ libnghttp3 1.15.0
 libngtcp2 1.21.0
 libogg 1.3.6
 libomp 22.1.1
-libplacebo 7.360.0
+libplacebo 7.360.1
 libpng 1.6.55
 libsamplerate 0.2.2
 libsndfile 1.2.2_1
@@ -356,7 +356,7 @@ watchexec 2.5.0
 webp 1.6.0
 wget 1.25.0
 wgo 0.6.3
-worktrunk 0.29.1
+worktrunk 0.29.2
 x264 r3222
 x265 4.1
 xh 0.25.3
@@ -376,14 +376,14 @@ zstd 1.5.7_1
 
 MISE PACKAGES
 -------------
-claude-code                        2.1.74            ~/.config/mise/mise.toml  latest
-fnox                               1.17.0            ~/.config/mise/mise.toml  latest
+claude-code                        2.1.75            ~/.config/mise/mise.toml  latest
+fnox                               1.18.0            ~/.config/mise/mise.toml  latest
 github:Slackadays/Clipboard        0.10.0            ~/.config/mise/mise.toml  latest
 github:bee-san/RustScan            2.4.1             ~/.config/mise/mise.toml  latest
 github:dlvhdr/diffnav              0.10.0            ~/.config/mise/mise.toml  latest
 github:dlvhdr/gh-dash              4.23.2            ~/.config/mise/mise.toml  latest
 github:h0rv/d2-mcp                 1.1.0             ~/.config/mise/mise.toml  latest
-github:max-sixty/worktrunk         0.29.1            ~/.config/mise/mise.toml  latest
+github:max-sixty/worktrunk         0.29.2            ~/.config/mise/mise.toml  latest
 github:neilotoole/sq               0.50.0            ~/.config/mise/mise.toml  latest
 github:o2sh/onefetch               2.26.1            ~/.config/mise/mise.toml  latest
 github:sharkdp/pastel              0.12.0            ~/.config/mise/mise.toml  latest
@@ -393,11 +393,11 @@ npm:@mariozechner/pi-coding-agent  0.57.1            ~/.config/mise/mise.toml  l
 npm:@mixedbread/mgrep              0.1.10            ~/.config/mise/mise.toml  latest
 npm:github-markdown-css            5.9.0             ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                      5.2.5             ~/.config/mise/mise.toml  latest
-npm:skills                         1.4.4             ~/.config/mise/mise.toml  latest
+npm:skills                         1.4.5             ~/.config/mise/mise.toml  latest
 rust                               1.94.0 (symlink)
 sops                               3.12.1            ~/.config/mise/mise.toml  latest
 typst                              0.14.2
-uv                                 0.10.9            ~/.config/mise/mise.toml  latest
+uv                                 0.10.10           ~/.config/mise/mise.toml  latest
 yazi                               26.1.22           ~/.config/mise/mise.toml  latest
 yq                                 4.52.4            ~/.config/mise/mise.toml  latest
 zoxide                             0.9.9             ~/.config/mise/mise.toml  latest
