@@ -1,3 +1,0 @@
-#!/bin/sh
-TMUX=/opt/homebrew/bin/tmux
-exec $TMUX new-session -s "tmux-$$"

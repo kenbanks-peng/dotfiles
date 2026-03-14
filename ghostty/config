@@ -10,8 +10,7 @@
 theme = Catppuccin Mocha
 
 
-# One tmux session, one window per Ghostty split (each split independent). Use Ctrl+a d to close only this split.
-command = ~/.config/ghostty/tmux-split
+# command = 
 
 # ghostty supports nerd fonts natively.
 #   Hasklug Nerd Font Mono -> Hasklig Font Mono
