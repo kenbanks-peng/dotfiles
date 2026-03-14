@@ -10,9 +10,8 @@
 theme = Catppuccin Mocha
 
 
-# startup command - attach to or create tmux session
-# Try to attach to any session, or create 'tmux' if none exist
-command = /opt/homebrew/bin/tmux new-session -A -s tmux
+# One tmux session, one window per Ghostty split (each split independent). Use Ctrl+a d to close only this split.
+command = ~/.config/ghostty/tmux-split
 
 # ghostty supports nerd fonts natively.
 #   Hasklug Nerd Font Mono -> Hasklig Font Mono
