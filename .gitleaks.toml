@@ -1,0 +1,7 @@
+# Extend default rules; allowlist excludes paths from all scanning.
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Paths that only contain config/theme data, not secrets"
+paths = ['''ghostty/config''']

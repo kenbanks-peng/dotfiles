@@ -67,9 +67,7 @@ selection-foreground = e0e7ed
 # splits
 split-divider-color = 083e6c
 focus-follows-mouse = true
-# close pane and kill tmux session (sends C-a C-w to tmux, then closes)
-keybind = super+w=text:\x01\x17
-keybind = chain=close_surface
+
 
 # native splits
 # keybind = super+slash=new_split:down
@@ -78,6 +76,9 @@ keybind = chain=close_surface
 # keybind = shift+down=goto_split:down
 # keybind = shift+up=goto_split:up
 # keybind = shift+right=goto_split:right
+# close pane and kill tmux session (sends C-a C-w to tmux, then closes)
+# keybind = super+w=text:\x01\x17
+# keybind = chain=close_surface
 
 # tmux splits
 keybind = super+slash=text:\x01\x22
