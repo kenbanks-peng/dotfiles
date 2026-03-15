@@ -1,2 +1,4 @@
-# generic-api-key false positive: keybind value "chain=close_surface" (Ghostty action, not a secret)
+# generic-api-key false positive: keybind values (Ghostty actions / tmux C-a C-w control chars, not secrets)
 ghostty/config:generic-api-key:69
+ghostty/config:generic-api-key:71
+ghostty/config:generic-api-key:72

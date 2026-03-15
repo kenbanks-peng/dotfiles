@@ -414,6 +414,8 @@ bind -n C-Enter resize-pane -Z
 
 # custom keybindings with prefix
 bind C command-prompt -p "new session name:" "new-session -s '%%'"
+# C-a C-w: kill current session (used by Ghostty super+w to close split and kill session)
+bind C-w kill-session
 
 
 # -- tpm -----------------------------------------------------------------------
