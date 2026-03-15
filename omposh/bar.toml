@@ -53,8 +53,8 @@ newline = false
 [[blocks.segments]]
 type = 'root'
 style = 'diamond'
-leading_diamond = ''
-trailing_diamond = ''
+leading_diamond = ''
+trailing_diamond = '<default,default> '
 foreground = 'p:root-foreground'
 background = 'p:root'
 template = '  '
@@ -64,8 +64,8 @@ template = '  '
 [[blocks.segments]]
 type = 'text'
 style = 'diamond'
-leading_diamond = ''
-trailing_diamond = ''
+leading_diamond = ''
+trailing_diamond = '<default,default> '
 foreground = 'p:fnox-foreground'
 background = 'p:fnox'
 template = "{{ if .Env.FNOX_SHELL }}  {{ end }}"
@@ -76,8 +76,8 @@ template = "{{ if .Env.FNOX_SHELL }}  {{ end }}"
 [[blocks.segments]]
 type = 'text'
 style = 'diamond'
-leading_diamond = ''
-trailing_diamond = ''
+leading_diamond = ''
+trailing_diamond = '<default,default> '
 background = 'p:jobs'
 foreground = 'p:jobs-foreground'
 template = ' {{ .Env.JOBCOUNT }} '
@@ -87,8 +87,8 @@ template = ' {{ .Env.JOBCOUNT }} '
 [[blocks.segments]]
 type = "session"
 style = "diamond"
-leading_diamond = ""
-trailing_diamond = ""
+leading_diamond = ""
+trailing_diamond = '<default,default> '
 background = 'p:jobs'
 foreground = 'p:jobs-foreground'
 template = "{{ if .SSHSession }} {{ .UserName }}@{{ .HostName }}{{ end }}"
@@ -99,8 +99,8 @@ template = "{{ if .SSHSession }} {{ .UserName }}@{{ .HostName }}{{ end }}"
 [[blocks.segments]]
 type = 'text'
 style = 'diamond'
-leading_diamond = ''
-trailing_diamond = ''
+leading_diamond = ''
+trailing_diamond = '<default,default> '
 background = 'p:directory'
 foreground = 'p:directory-foreground'
 template = ' {{ .Env.DIRPATH }} '
@@ -110,8 +110,8 @@ template = ' {{ .Env.DIRPATH }} '
 [[blocks.segments]]
 type = 'go'
 style = 'diamond'
-leading_diamond = ''
-trailing_diamond = ''
+leading_diamond = ''
+trailing_diamond = '<default,default> '
 background = 'p:language'
 foreground = 'p:language-foreground'
 template = ' go {{ .Full }} '
@@ -119,8 +119,8 @@ template = ' go {{ .Full }} '
 [[blocks.segments]]
 type = 'lua'
 style = 'diamond'
-leading_diamond = ''
-trailing_diamond = ''
+leading_diamond = ''
+trailing_diamond = '<default,default> '
 background = 'p:language'
 foreground = 'p:language-foreground'
 template = '  {{ .Full }} '
@@ -128,8 +128,8 @@ template = '  {{ .Full }} '
 [[blocks.segments]]
 type = 'zig'
 style = 'diamond'
-leading_diamond = ''
-trailing_diamond = ''
+leading_diamond = ''
+trailing_diamond = '<default,default> '
 background = 'p:language'
 foreground = 'p:language-foreground'
 template = '  {{ .Full }} '
@@ -137,8 +137,8 @@ template = '  {{ .Full }} '
 # [[blocks.segments]]
 # type = 'rust'
 # style = 'diamond'
-# leading_diamond = ''
-# trailing_diamond = ''
+# leading_diamond = ''
+# trailing_diamond = '<default,default> '
 # background = 'p:language'
 # foreground = 'p:language-foreground'
 # template = '  {{ .Full }} '
@@ -148,8 +148,8 @@ template = '  {{ .Full }} '
 [[blocks.segments]]
 type = 'text'
 style = 'diamond'
-leading_diamond = ''
-trailing_diamond = ''
+leading_diamond = ''
+trailing_diamond = '<default,default> '
 background = 'p:language'
 foreground = 'p:language-foreground'
 template = ' {{ .Env.JS_SEGMENT }} '
@@ -159,8 +159,8 @@ template = ' {{ .Env.JS_SEGMENT }} '
 [[blocks.segments]]
 type = 'text'
 style = 'diamond'
-leading_diamond = ''
-trailing_diamond = ''
+leading_diamond = ''
+trailing_diamond = '<default,default> '
 background = 'p:language'
 foreground = 'p:language-foreground'
 template = ' {{ .Env.PYTHON_SEGMENT }} '
@@ -170,8 +170,8 @@ template = ' {{ .Env.PYTHON_SEGMENT }} '
 [[blocks.segments]]
 type = 'docker'
 style = 'diamond'
-leading_diamond = ''
-trailing_diamond = ''
+leading_diamond = ''
+trailing_diamond = '<default,default> '
 background = 'p:language'
 foreground = 'p:language-foreground'
 template = '   '
@@ -182,8 +182,8 @@ options = { display_mode = 'files' }
 [[blocks.segments]]
 type = 'git'
 style = 'diamond'
-leading_diamond = ''
-trailing_diamond = ''
+leading_diamond = ''
+trailing_diamond = '<default,default> '
 background = 'p:git'
 foreground = 'p:git-foreground'
 template = ' {{ .Env.GITSTATUS }} '
@@ -193,18 +193,7 @@ background_templates = [
 ]
 options = { branch_template = '{{ trunc 25 .Branch }}', fetch_status = true, fetch_upstream_icon = true }
 
-######### STATUS ENDCAP #########
-
-[[blocks.segments]]
-type = 'status'
-style = 'accordion'
-leading_powerline_symbol = '<transparent,background></>'
-powerline_symbol = ''
-background = 'p:status'
-foreground = 'p:status-foreground'
-template = '   '
-background_templates = ['{{ if gt .Code 0 }}p:status-error{{ end }}']
-options = { always_enabled = true }
+########### RIGHT SEGMENTS #########
 
 [[blocks]]
 type = 'prompt'
@@ -221,7 +210,7 @@ options = { threshold = 1000 }
 type = 'text'
 style = 'diamond'
 leading_diamond = ''
-trailing_diamond = ''
+trailing_diamond = '<default,default> '
 foreground = 'p:error-foreground'
 background = 'p:error'
 template = '{{if .Segments.Status.Error }}{{ .Segments.Status.Meaning }}{{ end }}'
