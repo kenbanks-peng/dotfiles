@@ -4,33 +4,33 @@ final_space = true
 # streaming = 100
 
 [palette]
-shell = '#005b95'              # blue
+shell = '#005b95'                # blue
 shell-foreground = '#e5eaf0'
-root = '#a90000'               # red
+root = '#a90000'                 # red
 root-foreground = '#f4e4e5'
-fnox = '#f55c1b'               # orange
+fnox = '#f55c1b'                 # orange
 fnox-foreground = '#feefe8'
-jobs = '#006b1d'               # green
+jobs = '#006b1d'                 # green
 jobs-foreground = '#e5ece6'
-directory = '#2f40c2'          # blue
+directory = '#2f40c2'            # blue
 directory-foreground = '#e5e6f2'
-language = '#005b95'           # blue
+language = '#005b95'             # blue
 language-foreground = '#e5eaf0'
-git = '#006b1d'                # green
+git = '#006b1d'                  # green
 git-foreground = '#e5ece6'
-git-modified = '#a17a00'       # yellow
-git-diverged = '#8c0888'       # magenta
-git-ahead = '#8c0888'          # magenta
-git-behind = '#8c0888'         # magenta
-status = '#005b95'             # blue
+git-modified = '#a17a00'         # yellow
+git-diverged = '#8c0888'         # magenta
+git-ahead = '#8c0888'            # magenta
+git-behind = '#8c0888'           # magenta
+status = '#005b95'               # blue
 status-foreground = '#e5eaf0'
-status-error = '#a90000'       # red
+status-error = '#a90000'         # red
 exectime-foreground = '#e5eaf0'
-error = '#a90000'              # red
+error = '#a90000'                # red
 error-foreground = '#f4e4e5'
-prompt = '#f55c1b'             # orange
-secondary = '#a90000'          # red
-secondary-accent = '#a17a00'   # yellow
+prompt = '#f55c1b'               # orange
+secondary = '#a90000'            # red
+secondary-accent = '#a17a00'     # yellow
 
 # [transient_prompt]
 #   template = '<p:teal,transparent></><p:on_teal,p:teal>   </><p:teal,transparent></> '
@@ -58,6 +58,7 @@ trailing_diamond = ''
 background = 'p:shell'
 foreground = 'p:shell-foreground'
 templates = [
+  '{{ if eq .Name "claude" }}  {{ end }}',
   '{{ if eq .Name "zsh" }}  {{ end }}',
   '{{ if eq .Name "bash" }}  {{ end }}',
   '{{ if eq .Name "fish" }}   {{ end }}',
