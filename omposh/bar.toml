@@ -46,25 +46,7 @@ background = 'transparent'
 [[blocks]]
 type = 'prompt'
 alignment = 'left'
-newline = true
-
-######### SHELL #########
-
-[[blocks.segments]]
-type = 'shell'
-style = 'diamond'
-leading_diamond = ''
-trailing_diamond = ''
-background = 'p:shell'
-foreground = 'p:shell-foreground'
-templates = [
-  '{{ if eq .Name "claude" }}  {{ end }}',
-  '{{ if eq .Name "zsh" }}  {{ end }}',
-  '{{ if eq .Name "bash" }}  {{ end }}',
-  '{{ if eq .Name "fish" }}   {{ end }}',
-  '{{ if eq .Name "nu" }} 󰫻󰬂 {{ end }}',
-]
-templates_logic = 'first_match'
+newline = false
 
 ######### ROOT #########
 

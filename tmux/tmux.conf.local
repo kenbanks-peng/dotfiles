@@ -388,12 +388,8 @@ bind C-a send-prefix
 # display a message after toggling mouse support
 bind m run "cut -c3- '#{TMUX_CONF}' | sh -s _toggle_mouse" \; display 'mouse #{?#{mouse},on,off}'
 
-# move status line to top
-set -g status-position top
-
-# status line 2: job count, directory path, git status
-set -g status 2
-set -g status-format[1] '#[align=left]#{@job_segment}#{@directory_segment}#{@git_segment}'
+# move status line to bottom
+set -g status-position bottom
 
 # when destroying a session, switch to another session instead of exiting
 set -g detach-on-destroy off
