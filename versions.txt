@@ -176,9 +176,9 @@ jq 1.8.1
 jqp 0.8.0
 jrnl 4.3
 json-c 0.18
-just 1.46.0
+just 1.47.0
 lame 3.100
-lazydocker 0.24.4
+lazydocker 0.25.0
 lazyjj 0.6.1
 lazyjournal 0.8.5
 lazysql 0.4.8
@@ -268,7 +268,7 @@ nspr 4.38.2
 nss 3.121
 numpy 2.4.3
 obsidian-cli 0.2.3
-oh-my-posh 29.8.0
+oh-my-posh 29.9.0
 oniguruma 6.9.10
 openai-whisper 20250625_3
 openblas 0.3.31_1
