@@ -4,6 +4,7 @@ source "$CONFIG_DIR/env.sh"
 
 # reprocess on mouse click
 props=(
+  icon.drawing=off
   icon.color="$BLUE"
   label.drawing=on
   label="?"
@@ -79,6 +80,7 @@ esac
 
 props=(
   icon.color="$color"
+  icon.drawing=$([ "$sum" = "$ICON_CHECKMARK" ] && echo off || echo on)
   label="$sum"
   label.color="$color"
 )
