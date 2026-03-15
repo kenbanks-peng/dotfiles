@@ -242,19 +242,3 @@ trailing_diamond = ''
 foreground = 'p:error-foreground'
 background = 'p:error'
 template = '{{if .Segments.Status.Error }}{{ .Segments.Status.Meaning }}{{ end }}'
-
-
-######### NEW_LINE - SHELL LEVEL PROMPT #########
-
-[[blocks]]
-type = 'prompt'
-alignment = 'left'
-newline = true
-
-# using shell function set_poshcontext()
-[[blocks.segments]]
-type = 'text'
-style = 'plain'
-background = 'transparent'
-foreground = 'p:prompt'
-template = '{{ if .Env.SHLVL_RELATIVE }}{{ repeat (.Env.SHLVL_RELATIVE | int) "❯" }}{{ else }}{{ repeat .SHLVL "❯" }}{{ end }}'
