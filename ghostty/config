@@ -10,8 +10,8 @@
 theme = Catppuccin Mocha
 
 
-# startup command - only compatible with tmux splits
-# command = /opt/homebrew/bin/tmux new-session -A -s main
+# new tmux session per terminal/split
+command = /opt/homebrew/bin/tmux new-session
 
 
 # ghostty supports nerd fonts natively.
