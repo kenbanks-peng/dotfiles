@@ -1,0 +1,25 @@
+{
+  "statusLine": {
+    "type": "command",
+    "command": "oh-my-posh claude --config ~/Software/Public/dotfiles/omposh/claude.toml",
+    "padding": 0
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/Users/kenbanks/Software/DevBox/tools/ai/hooks/session_start_git_ls_files.py"
+          }
+        ]
+      }
+    ]
+  },
+  "voiceEnabled": true,
+  "skipDangerousModePermissionPrompt": true,
+  "enabledPlugins": {
+    "gopls-lsp@claude-plugins-official": true
+  }
+}
