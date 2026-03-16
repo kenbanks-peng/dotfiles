@@ -1,7 +1,7 @@
 # skills-tui configuration
 
 repos = [
-  "file:///Users/kenbanks/Software/DevBox/skills",
+  "file:///Users/kenbanks/Software/DevBox/local-skills",
   "vercel-labs/skills",
   "anthropics/skills",
   "huggingface/skills",

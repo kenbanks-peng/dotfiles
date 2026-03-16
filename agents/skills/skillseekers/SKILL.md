@@ -1,194 +1,74 @@
 ---
-name: skillseekersweb
-description: Use when working with skillseekersweb
-doc_version: 
+name: skill-seekers
+description: Use when creating, enhancing, packaging, or deploying AI skills using the skill-seekers CLI
 ---
 
-# Skillseekersweb Skill
+# Skill Seekers CLI
 
-Use when working with skillseekersweb, generated from official documentation.
+Create AI skills from any knowledge source — docs sites, GitHub repos, PDFs, or local codebases.
 
-## When to Use This Skill
+## Installation
 
-This skill should be triggered when:
-- Working with skillseekersweb
-- Asking about skillseekersweb features or APIs
-- Implementing skillseekersweb solutions
-- Debugging skillseekersweb code
-- Learning skillseekersweb best practices
-
-## Quick Reference
-
-### Common Patterns
-
-**Pattern 1:** Menu Documentation About What is Skill Seekers? Features Overview Use Cases Community Showcase Frequently Asked Questions Getting Started Overview ...
-
-```
-# Combined all internal sources
-skill-seekers create \
-  https://internal-docs.company.com \
-  --github https://github.com/company/platform \
-  --pdf ./architecture-docs/ \
-  --target claude \
-  --enhance-workflow architecture-comprehensive
+```bash
+pip install skill-seekers              # Claude only
+pip install skill-seekers[all]         # All platforms (gemini, openai)
+uv pip install skill-seekers[all]      # Or via uv
+skill-seekers --version                # Verify (expect 3.1.0+)
 ```
 
-**Pattern 2:** Usage: Literature review, implementation guidance, comparative analysis
+Requires Python 3.10+. Optional: Claude Code for free local enhancement.
 
-```
-# Analyze a GitHub repo and create Cursor rules
-"Fetch the repo https://github.com/facebook/react, 
- analyze the codebase patterns, 
- and create Cursor rules for React development"
+## Quick Start
 
-# Result: Complete .cursorrules file with React patterns
-```
+```bash
+# One command from any source
+skill-seekers create <source> --target claude
 
-**Pattern 3:** Menu Documentation About What is Skill Seekers? Features Overview Use Cases Community Showcase Frequently Asked Questions Getting Started Overview ...
-
-```
-User: "Create skill from https://tailwindcss.com/docs"
-Tool: Auto-detects Tailwind, uses template, generates in 30 seconds
+# Sources: URL, GitHub URL, PDF path, or local directory
+skill-seekers create https://docs.example.com --target claude
+skill-seekers create https://github.com/owner/repo --target claude
+skill-seekers create ./manual.pdf --target claude
+skill-seekers create ./my-project --target claude
 ```
 
-**Pattern 4:** Menu Documentation About What is Skill Seekers? Features Overview Use Cases Community Showcase Frequently Asked Questions Getting Started Overview ...
+Targets: `claude` (default), `gemini`, `openai`, `markdown`, `langchain`, `cursor`
 
-```
-# Create React skill with docs + GitHub examples
-skill-seekers scrape --config configs/react.json
+## Pipeline Commands
+
+When `create` isn't enough, run the pipeline manually:
+
+| Step | Command | Purpose |
+|------|---------|---------|
+| 1 | `scrape` | Scrape docs from URL |
+| 2 | `github` | Analyze a GitHub repo |
+| 3 | `pdf` | Extract from PDF |
+| 4 | `unified` | Combine multiple sources |
+| 5 | `enhance` | Improve with AI |
+| 6 | `package` | Package for platform |
+| 7 | `upload` | Upload to platform |
+
+```bash
+# Typical full pipeline
+skill-seekers scrape --url https://react.dev --name react
 skill-seekers enhance output/react/
-skill-seekers package output/react/ --upload
+skill-seekers package output/react/ --target claude
+skill-seekers upload output/react.zip
 ```
 
-**Pattern 5:** Example: AI/ML Research Skill
+## Utility Commands
 
-```
-# Combine TensorFlow docs + PyTorch docs + research papers (PDFs)
-skill-seekers unified --config configs/ml-research.json
-```
-
-**Pattern 6:** Menu Documentation About What is Skill Seekers? Features Overview Use Cases Community Showcase Frequently Asked Questions Getting Started Overview ...
-
-```
-name
-```
-
-**Pattern 7:** Example:
-
-```
-~/.skill-seekers/git-sources/
-├── company-configs/
-│   ├── .git/
-│   ├── configs/
-│   └── README.md
-└── team-configs/
-    ├── .git/
-    └── configs/
-```
-
-**Pattern 8:** Example:
-
-```
-# First run: 30 minutes
-skill-seekers unified --source /my/project --depth c3x
-
-# After changing 5 files: 3 minutes
-skill-seekers unified --source /my/project --depth c3x
-```
-
-### Example Code Patterns
-
-**Example 1** (markdown):
-```markdown
-# Default installation (Claude support only)
-pip install skill-seekers
-```
-
-**Example 2** (markdown):
-```markdown
-# Clone repository
-git clone https://github.com/yusufkaraaslan/Skill_Seekers.git
-cd Skill_Seekers
-
-# Run setup script
-./setup_mcp.sh
-```
-
-**Example 3** (json):
-```json
-{
-  "url": "https://react.dev",
-  "max_pages": 100,
-  "selectors": { "content": "article" },
-  "output_dir": "./output/react"
-}
-```
-
-**Example 4** (json):
-```json
-{
-  "repo": "facebook/react",
-  "include_issues": false,
-  "include_tests": true,
-  "output_dir": "./output/react-github"
-}
-```
-
-**Example 5** (go):
-```go
-skill-seekers package INPUT_DIR [OPTIONS]
-```
+| Command | Purpose |
+|---------|---------|
+| `config` | Interactive setup (tokens, API keys) |
+| `resume --list` | List/resume interrupted jobs |
+| `list-configs` | List 24+ preset scraping configs |
+| `estimate --config <file>` | Estimate page count before scraping |
+| `validate <config>` | Validate config file |
+| `workflows list` | List enhancement workflow presets |
+| `router <dirs...>` | Create router skill from sub-skills |
 
 ## Reference Files
 
-This skill includes comprehensive documentation in `references/`:
-
-- **about.md** - About documentation
-- **cli.md** - Cli documentation
-- **getting-started.md** - Getting-Started documentation
-- **integrations.md** - Integrations documentation
-- **manual.md** - Manual documentation
-- **other.md** - Other documentation
-- **reference.md** - Reference documentation
-- **tutorials.md** - Tutorials documentation
-
-Use `view` to read specific reference files when detailed information is needed.
-
-## Working with This Skill
-
-### For Beginners
-Start with the getting_started or tutorials reference files for foundational concepts.
-
-### For Specific Features
-Use the appropriate category reference file (api, guides, etc.) for detailed information.
-
-### For Code Examples
-The quick reference section above contains common patterns extracted from the official docs.
-
-## Resources
-
-### references/
-Organized documentation extracted from official sources. These files contain:
-- Detailed explanations
-- Code examples with language annotations
-- Links to original documentation
-- Table of contents for quick navigation
-
-### scripts/
-Add helper scripts here for common automation tasks.
-
-### assets/
-Add templates, boilerplate, or example projects here.
-
-## Notes
-
-- This skill was automatically generated from official documentation
-- Reference files preserve the structure and examples from source docs
-- Code examples include language detection for better syntax highlighting
-- Quick reference patterns are extracted from common usage examples in the docs
-
-## Updating
-
-To refresh this skill with updated documentation:
-1. Re-run the scraper with the same configuration
-2. The skill will be rebuilt with the latest information
+- **commands.md** — Full command reference with all flags and options
+- **config.md** — Configuration schema for unified, docs, GitHub, and PDF sources
+- **advanced.md** — MCP setup, large docs strategies, workflow presets, git config sources
