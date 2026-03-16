@@ -23,6 +23,7 @@ sops = "latest"
 uv = "latest"
 "github:dlvhdr/gh-dash" = "latest"
 "github:dlvhdr/diffnav" = "latest"
+"pipx:skill-seekers" = "latest"
 
 [settings]
 experimental = true

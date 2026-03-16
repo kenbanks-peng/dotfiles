@@ -1,17 +1,40 @@
 # skills-tui configuration
 
-[repos]
-list = [
-  "vercel-labs/skills",
-  "anthropics/skills",
-  "huggingface/skills",
-  "openai/skills",
-  "msmps/opentui-skill",
-  "vercel-labs/agent-skills",
-  "kepano/obsidian-skills",
-  "obra/superpowers",
-  "sickn33/antigravity-awesome-skills",
-]
+[[repos]]
+type = "github"
+url = "vercel-labs/skills"
+
+[[repos]]
+type = "github"
+url = "anthropics/skills"
+
+[[repos]]
+type = "github"
+url = "huggingface/skills"
+
+[[repos]]
+type = "github"
+url = "openai/skills"
+
+[[repos]]
+type = "github"
+url = "msmps/opentui-skill"
+
+[[repos]]
+type = "github"
+url = "vercel-labs/agent-skills"
+
+[[repos]]
+type = "github"
+url = "kepano/obsidian-skills"
+
+[[repos]]
+type = "github"
+url = "obra/superpowers"
+
+[[repos]]
+type = "github"
+url = "sickn33/antigravity-awesome-skills"
 
 [agents]
 enabled = [
