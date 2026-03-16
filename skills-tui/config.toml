@@ -1,34 +1,17 @@
 # skills-tui configuration
 
-[[repos]]
-url = "file:///Users/kenbanks/Software/DevBox/skills"
-
-[[repos]]
-url = "vercel-labs/skills"
-
-[[repos]]
-url = "anthropics/skills"
-
-[[repos]]
-url = "huggingface/skills"
-
-[[repos]]
-url = "openai/skills"
-
-[[repos]]
-url = "msmps/opentui-skill"
-
-[[repos]]
-url = "vercel-labs/agent-skills"
-
-[[repos]]
-url = "kepano/obsidian-skills"
-
-[[repos]]
-url = "obra/superpowers"
-
-[[repos]]
-url = "sickn33/antigravity-awesome-skills"
+repos = [
+  "file:///Users/kenbanks/Software/DevBox/skills",
+  "vercel-labs/skills",
+  "anthropics/skills",
+  "huggingface/skills",
+  "openai/skills",
+  "msmps/opentui-skill",
+  "vercel-labs/agent-skills",
+  "kepano/obsidian-skills",
+  "obra/superpowers",
+  "sickn33/antigravity-awesome-skills",
+]
 
 [agents]
 enabled = [
