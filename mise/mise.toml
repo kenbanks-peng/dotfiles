@@ -30,6 +30,8 @@ ruff = "latest"
 go = "latest"
 rust = "latest"
 yamlfmt = "latest"
+yamllint = "latest"
+golangci-lint = "latest"
 
 [settings]
 experimental = true

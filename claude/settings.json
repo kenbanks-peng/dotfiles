@@ -1,75 +1,90 @@
 {
-	"hooks": {
-		"SessionStart": [
-			{
-				"matcher": "",
-				"hooks": [
-					{
-						"type": "command",
-						"command": "$CCHOOKS/session_start.py"
-					}
-				]
-			}
-		],
-		"Stop": [
-			{
-				"matcher": "",
-				"hooks": [
-					{
-						"type": "command",
-						"command": "$CCHOOKS/stop.py"
-					}
-				]
-			}
-		],
-		"Notification": [
-			{
-				"matcher": "",
-				"hooks": [
-					{
-						"type": "command",
-						"command": "$CCHOOKS/notification.py"
-					}
-				]
-			}
-		]
-	},
-	"statusLine": {
-		"type": "command",
-		"command": "oh-my-posh claude --config $DOTFILES/omposh/claude.toml",
-		"padding": 0
-	},
-	"enabledPlugins": {
-		"gopls-lsp@claude-plugins-official": true,
-		"typescript-lsp@claude-plugins-official": true,
-		"pyright-lsp@claude-plugins-official": true,
-		"rust-analyzer-lsp@claude-plugins-official": true,
-		"lua-lsp@claude-plugins-official": true,
-		"context7@claude-plugins-official": true,
-		"frontend-design@claude-plugins-official": true,
-		"superpowers@claude-plugins-official": true,
-		"code-review@claude-plugins-official": true
-	},
-	"voiceEnabled": true,
-	"skipDangerousModePermissionPrompt": true,
-	"permissions": {
-		"allow": [
-			"Bash",
-			"Read",
-			"Edit",
-			"Write",
-			"WebFetch",
-			"Grep",
-			"Glob",
-			"LS",
-			"MultiEdit",
-			"NotebookRead",
-			"NotebookEdit",
-			"TodoRead",
-			"TodoWrite",
-			"WebSearch",
-			"MCP",
-			"Agent"
-		]
-	}
+  "permissions": {
+    "allow": [
+      "Bash",
+      "Read",
+      "Edit",
+      "Write",
+      "WebFetch",
+      "Grep",
+      "Glob",
+      "LS",
+      "MultiEdit",
+      "NotebookRead",
+      "NotebookEdit",
+      "TodoRead",
+      "TodoWrite",
+      "WebSearch",
+      "MCP",
+      "Agent"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$CCHOOKS/session_start.py"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$CCHOOKS/stop.py"
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$CCHOOKS/notification.py"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$CCHOOKS/post_tool_use.py"
+          }
+        ]
+      }
+    ]
+  },
+  "env": {
+    "PATH": "$MISE_SHIMS:$PATH"
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "oh-my-posh claude --config $DOTFILES/omposh/claude.toml",
+    "padding": 0
+  },
+  "enabledPlugins": {
+    "gopls-lsp@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true,
+    "pyright-lsp@claude-plugins-official": true,
+    "rust-analyzer-lsp@claude-plugins-official": true,
+    "lua-lsp@claude-plugins-official": true,
+    "context7@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true,
+    "code-review@claude-plugins-official": true
+  },
+  "voiceEnabled": true,
+  "skipDangerousModePermissionPrompt": true,
+  "model": "sonnet"
 }
