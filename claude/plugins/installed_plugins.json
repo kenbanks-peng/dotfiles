@@ -10,6 +10,86 @@
         "lastUpdated": "2026-03-09T04:14:01.178Z",
         "gitCommitSha": "205b6e0b30366a969412d9aab7b99bea99d58db1"
       }
+    ],
+    "typescript-lsp@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/kenbanks/.claude/plugins/cache/claude-plugins-official/typescript-lsp/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-03-17T00:19:35.158Z",
+        "lastUpdated": "2026-03-17T00:19:35.158Z",
+        "gitCommitSha": "d5c15b861cd23e3102215c26020368ad5134dc47"
+      }
+    ],
+    "pyright-lsp@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/kenbanks/.claude/plugins/cache/claude-plugins-official/pyright-lsp/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-03-17T00:23:59.668Z",
+        "lastUpdated": "2026-03-17T00:23:59.668Z",
+        "gitCommitSha": "d5c15b861cd23e3102215c26020368ad5134dc47"
+      }
+    ],
+    "rust-analyzer-lsp@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/kenbanks/.claude/plugins/cache/claude-plugins-official/rust-analyzer-lsp/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-03-17T00:24:35.459Z",
+        "lastUpdated": "2026-03-17T00:24:35.459Z",
+        "gitCommitSha": "d5c15b861cd23e3102215c26020368ad5134dc47"
+      }
+    ],
+    "lua-lsp@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/kenbanks/.claude/plugins/cache/claude-plugins-official/lua-lsp/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-03-17T00:24:58.453Z",
+        "lastUpdated": "2026-03-17T00:24:58.453Z",
+        "gitCommitSha": "d5c15b861cd23e3102215c26020368ad5134dc47"
+      }
+    ],
+    "context7@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/kenbanks/.claude/plugins/cache/claude-plugins-official/context7/d5c15b861cd2",
+        "version": "d5c15b861cd2",
+        "installedAt": "2026-03-17T00:25:24.344Z",
+        "lastUpdated": "2026-03-17T00:25:24.344Z",
+        "gitCommitSha": "d5c15b861cd23e3102215c26020368ad5134dc47"
+      }
+    ],
+    "frontend-design@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/kenbanks/.claude/plugins/cache/claude-plugins-official/frontend-design/d5c15b861cd2",
+        "version": "d5c15b861cd2",
+        "installedAt": "2026-03-17T00:26:16.426Z",
+        "lastUpdated": "2026-03-17T00:26:16.426Z",
+        "gitCommitSha": "d5c15b861cd23e3102215c26020368ad5134dc47"
+      }
+    ],
+    "superpowers@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/kenbanks/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.2",
+        "version": "5.0.2",
+        "installedAt": "2026-03-17T00:26:45.652Z",
+        "lastUpdated": "2026-03-17T00:26:45.652Z",
+        "gitCommitSha": "825a142aa32af84a8f276b7d7ee38c5bcaee64b1"
+      }
+    ],
+    "code-review@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/kenbanks/.claude/plugins/cache/claude-plugins-official/code-review/d5c15b861cd2",
+        "version": "d5c15b861cd2",
+        "installedAt": "2026-03-17T00:27:01.576Z",
+        "lastUpdated": "2026-03-17T00:27:01.576Z",
+        "gitCommitSha": "d5c15b861cd23e3102215c26020368ad5134dc47"
+      }
     ]
   }
 }

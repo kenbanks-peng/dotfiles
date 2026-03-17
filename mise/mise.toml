@@ -24,6 +24,7 @@ uv = "latest"
 "github:dlvhdr/gh-dash" = "latest"
 "github:dlvhdr/diffnav" = "latest"
 "pipx:skill-seekers" = "latest"
+bun = "latest"
 
 [settings]
 experimental = true
