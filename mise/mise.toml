@@ -25,6 +25,11 @@ uv = "latest"
 "github:dlvhdr/diffnav" = "latest"
 "pipx:skill-seekers" = "latest"
 bun = "latest"
+biome = "latest"
+ruff = "latest"
+go = "latest"
+rust = "latest"
+yamlfmt = "latest"
 
 [settings]
 experimental = true
