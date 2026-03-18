@@ -90,6 +90,16 @@
         "lastUpdated": "2026-03-17T22:50:59.149Z",
         "gitCommitSha": "d5c15b861cd23e3102215c26020368ad5134dc47"
       }
+    ],
+    "ui-ux-pro-max@ui-ux-pro-max-skill": [
+      {
+        "scope": "user",
+        "installPath": "/Users/kenbanks/.claude/plugins/cache/ui-ux-pro-max-skill/ui-ux-pro-max/2.0.1",
+        "version": "2.0.1",
+        "installedAt": "2026-03-18T20:28:42.589Z",
+        "lastUpdated": "2026-03-18T20:28:42.589Z",
+        "gitCommitSha": "07f4ef3ac2568c25a3b0c8ef5165a86abc3e56e4"
+      }
     ]
   }
 }
