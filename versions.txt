@@ -9,7 +9,7 @@ brainfm 0.0.252
 claude 1.1.7203,034f0796e916559a4e40673b6ee944c25a8478b2
 cleanshot 4.8.7
 codex 0.115.0
-cursor 2.6.19,224838f96445be37e3db643a163a817c15b3606c
+cursor 2.6.20,b29eb4ee5f9f6d1cb2afbc09070198d3ea6ad76f
 daisydisk 4.33.3
 espanso 2.3.0
 flox 1.10.0
@@ -50,7 +50,7 @@ symboliclinker 2.2
 typeface 4.2.3,4845
 vlc 3.0.23
 yaak 2026.3.1
-zed 0.227.1
+zed 0.228.0
 zen 1.19.3b
 zoom 6.7.7.76486
 
@@ -298,7 +298,7 @@ portal 1.2.3
 posting 2.9.2
 procs 0.14.11
 protobuf 34.0
-protobuf@33 33.5
+protobuf@33 33.6
 pstree 2.40
 pv 1.10.4
 pybind11 3.0.2
@@ -391,11 +391,12 @@ zstd 1.5.7_1
 
 MISE PACKAGES
 -------------
-biome                                                      2.4.6             ~/.config/mise/mise.toml  latest
+biome                                                      2.4.8             ~/.config/mise/mise.toml  latest
 bun                                                        1.3.11            ~/.config/mise/mise.toml  latest
 claude-code                                                2.1.78            ~/.config/mise/mise.toml  latest
 fnox                                                       1.18.0            ~/.config/mise/mise.toml  latest
 github:Slackadays/Clipboard                                0.10.0            ~/.config/mise/mise.toml  latest
+github:aome510/hackernews-TUI                              0.13.5            ~/.config/mise/mise.toml  latest
 github:bee-san/RustScan                                    2.4.1             ~/.config/mise/mise.toml  latest
 github:dlvhdr/diffnav                                      0.10.0            ~/.config/mise/mise.toml  latest
 github:dlvhdr/gh-dash                                      4.23.2            ~/.config/mise/mise.toml  latest
