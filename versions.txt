@@ -71,7 +71,7 @@ aws-c-common 0.12.6
 aws-c-compression 0.3.2
 aws-c-event-stream 0.6.0
 aws-c-http 0.10.11
-aws-c-io 0.26.2
+aws-c-io 0.26.3
 aws-c-mqtt 0.15.1
 aws-c-s3 0.11.5
 aws-c-sdkutils 0.2.4
@@ -119,7 +119,7 @@ flock 0.4.0
 fmt 12.1.0
 fontconfig 2.17.1
 freetype 2.14.2
-fresh-editor 0.2.14
+fresh-editor 0.2.16
 fribidi 1.0.16
 fx 39.2.0
 fzf 0.70.0
@@ -416,6 +416,7 @@ npm:@mixedbread/mgrep                                      0.1.10            ~/.
 npm:github-markdown-css                                    5.9.0             ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                                              5.2.5             ~/.config/mise/mise.toml  latest
 npm:skills                                                 1.4.5             ~/.config/mise/mise.toml  latest
+npm:uipro-cli                                              2.2.3             ~/.config/mise/mise.toml  latest
 npm:vite                                                   7.3.1
 pipx:skill-seekers                                         3.3.0             ~/.config/mise/mise.toml  latest
 ruff                                                       0.15.6            ~/.config/mise/mise.toml  latest
