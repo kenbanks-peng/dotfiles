@@ -102,7 +102,7 @@ curlie 1.8.2
 d2 0.7.1
 dav1d 1.5.3
 dblab 0.34.3
-deno 2.7.5
+deno 2.7.6
 doppler 3.75.3
 dotenvx 1.55.1
 dua-cli 2.34.0
@@ -353,6 +353,7 @@ tokei 14.0.0
 tree 2.3.2
 tree-sitter 0.26.7
 tree-sitter@0.25 0.25.10
+trippy 0.13.0
 trivy 0.69.3
 ttyd 1.7.7_10
 turso 0.5.1
@@ -370,6 +371,7 @@ watchexec 2.5.0
 webp 1.6.0
 wget 1.25.0
 wgo 0.6.3
+wishlist 0.15.2
 x264 r3222
 x265 4.1
 xh 0.25.3
