@@ -1,0 +1,52 @@
+# hackernews-TUI configuration
+
+use_page_scrolling = true
+use_pacman_loading = true
+url_open_command = { command = "open", options = [] }
+client_timeout = 32
+
+[theme.palette]
+background = "#1a1b26"
+foreground = "#c0caf5"
+selection_background = "#33467c"
+selection_foreground = "#c0caf5"
+
+black = "#15161e"
+red = "#f7768e"
+green = "#9ece6a"
+yellow = "#e0af68"
+blue = "#7aa2f7"
+magenta = "#bb9af7"
+cyan = "#7dcfff"
+white = "#a9b1d6"
+
+light_black = "#414868"
+light_red = "#f7768e"
+light_green = "#9ece6a"
+light_yellow = "#e0af68"
+light_blue = "#7aa2f7"
+light_magenta = "#bb9af7"
+light_cyan = "#7dcfff"
+light_white = "#c0caf5"
+
+[theme.component_style]
+title_bar = { back = "#ff6600", front = "#1a1b26", effect = "bold" }
+matched_highlight = { front = "#1a1b26", back = "#e0af68" }
+metadata = { front = "#565f89" }
+username = { front = "#bb9af7", effect = "bold" }
+loading_bar = { front = "#e0af68", back = "#33467c" }
+
+header = { front = "#c0caf5", effect = "bold" }
+quote = { front = "#565f89" }
+italic = { effect = "italic" }
+bold = { effect = "bold" }
+single_code_block = { front = "#9ece6a", back = "#24283b" }
+multiline_code_block = { front = "#9ece6a", back = "#24283b" }
+link = { front = "#7aa2f7" }
+link_id = { front = "#1a1b26", back = "#7aa2f7" }
+
+current_story_tag = { front = "#c0caf5" }
+ask_hn = { front = "#f7768e", effect = "bold" }
+tell_hn = { front = "#e0af68", effect = "bold" }
+show_hn = { front = "#7aa2f7", effect = "bold" }
+launch_hn = { front = "#9ece6a", effect = "bold" }

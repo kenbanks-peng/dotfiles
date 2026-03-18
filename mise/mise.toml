@@ -33,6 +33,7 @@ yamlfmt = "latest"
 yamllint = "latest"
 golangci-lint = "latest"
 node = "lts"
+"github:aome510/hackernews-TUI" = "latest"
 
 [settings]
 experimental = true
@@ -394,6 +395,11 @@ run = "/Users/kenbanks/Software/DevBox/tools/util/free $args"
 description = "Git TUI (lazygit)"
 dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/g $args"
+
+[tasks."util:hnews"]
+description = "Hacker News TUI"
+dir = "{{cwd}}"
+run = "/Users/kenbanks/Software/DevBox/tools/util/hnews $args"
 
 [tasks."util:kee"]
 description = "KeePassXC CLI"
