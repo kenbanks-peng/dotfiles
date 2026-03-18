@@ -1,6 +1,5 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "theme": "catppuccin",
   "provider": {},
   "model": "anthropic/claude-sonnet-4-5-20250929",
   "small_model": "anthropic/claude-haiku-4-5-20251001",
@@ -59,5 +58,8 @@
     "zai-coding-plan",
     "zhipuai",
     "zhipuai-coding-plan"
+  ],
+  "plugin": [
+    "oh-my-opencode@latest"
   ]
 }
