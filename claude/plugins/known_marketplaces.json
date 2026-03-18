@@ -1,18 +1,18 @@
 {
-  "claude-plugins-official": {
-    "source": {
-      "source": "github",
-      "repo": "anthropics/claude-plugins-official"
-    },
-    "installLocation": "/Users/kenbanks/.claude/plugins/marketplaces/claude-plugins-official",
-    "lastUpdated": "2026-03-18T20:29:42.059Z"
-  },
-  "ui-ux-pro-max-skill": {
-    "source": {
-      "source": "github",
-      "repo": "nextlevelbuilder/ui-ux-pro-max-skill"
-    },
-    "installLocation": "/Users/kenbanks/.claude/plugins/marketplaces/ui-ux-pro-max-skill",
-    "lastUpdated": "2026-03-18T20:28:20.957Z"
-  }
+	"claude-plugins-official": {
+		"source": {
+			"source": "github",
+			"repo": "anthropics/claude-plugins-official"
+		},
+		"installLocation": "/Users/kenbanks/.claude/plugins/marketplaces/claude-plugins-official",
+		"lastUpdated": "2026-03-18T20:39:24.622Z"
+	},
+	"ui-ux-pro-max-skill": {
+		"source": {
+			"source": "github",
+			"repo": "nextlevelbuilder/ui-ux-pro-max-skill"
+		},
+		"installLocation": "/Users/kenbanks/.claude/plugins/marketplaces/ui-ux-pro-max-skill",
+		"lastUpdated": "2026-03-18T20:28:20.957Z"
+	}
 }
