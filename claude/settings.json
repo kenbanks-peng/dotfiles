@@ -44,16 +44,6 @@
     ],
     "Notification": [
       {
-        "matcher": "permission_prompt",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "$CCHOOKS/notification.py"
-          }
-        ]
-      },
-      {
-        "matcher": "idle_prompt",
         "hooks": [
           {
             "type": "command",
