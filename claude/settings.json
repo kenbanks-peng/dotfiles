@@ -75,7 +75,7 @@
     ]
   },
   "env": {
-    "PATH": "/Users/kenbanks/.local/share/mise/shims:/usr/local/bin:/usr/bin:/bin"
+    "PATH": "/Users/kenbanks/.local/share/mise/shims:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
   },
   "statusLine": {
     "type": "command",
