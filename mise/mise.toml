@@ -34,6 +34,7 @@ yamllint = "latest"
 golangci-lint = "latest"
 node = "lts"
 "github:aome510/hackernews-TUI" = "latest"
+"npm:uipro-cli" = "latest"
 
 [settings]
 experimental = true
