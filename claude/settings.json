@@ -5,11 +5,21 @@
   "permissions": {
     "allow": [
       "Bash",
+      "Read",
       "Edit",
       "Write",
       "WebFetch",
-      "WebSearch",
+      "Grep",
+      "Glob",
+      "LS",
+      "MultiEdit",
+      "NotebookRead",
       "NotebookEdit",
+      "TodoRead",
+      "TodoWrite",
+      "WebSearch",
+      "MCP",
+      "Agent",
       "ExitPlanMode",
       "Skill"
     ]
