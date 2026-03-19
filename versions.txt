@@ -22,7 +22,7 @@ font-symbols-only-nerd-font 3.4.0
 font-tex-gyre-termes 2.004
 ghostty 1.3.1
 git-credential-manager 2.7.3
-google-chrome 146.0.7680.80
+google-chrome 146.0.7680.154
 google-drive 122.0.1
 grandperspective 3.6.3
 handy 0.7.11
@@ -72,7 +72,7 @@ aws-c-compression 0.3.2
 aws-c-event-stream 0.6.0
 aws-c-http 0.10.11
 aws-c-io 0.26.3
-aws-c-mqtt 0.15.1
+aws-c-mqtt 0.15.2
 aws-c-s3 0.11.5
 aws-c-sdkutils 0.2.4
 aws-checksums 0.2.10
@@ -119,7 +119,7 @@ flock 0.4.0
 fmt 12.1.0
 fontconfig 2.17.1
 freetype 2.14.2
-fresh-editor 0.2.16
+fresh-editor 0.2.17
 fribidi 1.0.16
 fx 39.2.0
 fzf 0.70.0
@@ -151,7 +151,7 @@ graphite2 1.3.14
 grex 1.4.6
 grpc 1.78.1_2
 grype 0.109.1
-harfbuzz 13.1.1
+harfbuzz 13.2.0
 hdrhistogram_c 0.11.9
 hexyl 0.17.0
 highway 1.3.0
@@ -392,7 +392,7 @@ MISE PACKAGES
 -------------
 biome                                                      2.4.8             ~/.config/mise/mise.toml  latest
 bun                                                        1.3.11            ~/.config/mise/mise.toml  latest
-claude-code                                                2.1.78            ~/.config/mise/mise.toml  latest
+claude-code                                                2.1.79            ~/.config/mise/mise.toml  latest
 fnox                                                       1.18.0            ~/.config/mise/mise.toml  latest
 github:Slackadays/Clipboard                                0.10.0            ~/.config/mise/mise.toml  latest
 github:aome510/hackernews-TUI                              0.13.5            ~/.config/mise/mise.toml  latest
