@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/oh-my-opencode.schema.json",
-  "disabled_hooks": [],
+  "disabled_hooks": ["claude-code-hooks", "session-notification"],
   "agents": {
     "sisyphus": {
       "model": "anthropic/claude-opus-4-6",

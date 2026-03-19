@@ -204,10 +204,10 @@ function summarize(cwd, startTs = null) {
 // src/session-idle/alert.ts
 import { existsSync as existsSync3 } from "fs";
 import { join as join4 } from "path";
-var ICON = "claude-icon.png";
+var ICON = "opencode-icon.png";
 var SOUND = "ding.wav";
 function resource(name) {
-  return join4(process.env.OCHOOKS ?? import.meta.dir, "resources", name);
+  return join4(import.meta.dir, "resources", name);
 }
 async function ghosttyIsFocused() {
   const proc = Bun.spawn([
@@ -221,7 +221,12 @@ async function ghosttyIsFocused() {
   const stdout = await new Response(proc.stdout).text();
   return stdout.trim().toLowerCase() === "ghostty";
 }
-async function send(message, title = "OpenCode", timeout = 10, sound = SOUND) {
+async function send({
+  message,
+  title = "opencode",
+  timeout = 10,
+  sound = SOUND
+}) {
   if (await ghosttyIsFocused()) {
     return;
   }
@@ -315,7 +320,7 @@ async function handleSessionIdle(directory, previouslyFormatted) {
   if (duration !== null) {
     increment("session.duration_seconds", Math.floor(duration));
   }
-  await send("Session idle", "OpenCode", 10, "ding.wav");
+  await send({ message: "Response Ended" });
   const updatedSet = new Set(previouslyFormatted);
   for (const f of changedFiles)
     updatedSet.add(f);
