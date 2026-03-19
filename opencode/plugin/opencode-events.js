@@ -1082,9 +1082,6 @@ function increment(key, by = 1) {
   }
 }
 
-// src/session-idle/index.ts
-import { extname } from "path";
-
 // src/lib/token-tracker.ts
 import { existsSync as existsSync3, mkdirSync as mkdirSync2, unlinkSync as unlinkSync2 } from "fs";
 import { homedir as homedir3 } from "os";
@@ -1110,107 +1107,11 @@ async function endSession() {
   }
 }
 
-// src/lib/lint-format-config.ts
-var FORMATTERS = {
-  ".py": ["ruff", "format"],
-  ".js": ["biome", "format", "--write"],
-  ".ts": ["biome", "format", "--write"],
-  ".tsx": ["biome", "format", "--write"],
-  ".jsx": ["biome", "format", "--write"],
-  ".css": ["biome", "format", "--write"],
-  ".html": ["biome", "format", "--write"],
-  ".json": ["biome", "format", "--write"],
-  ".yaml": ["yamlfmt"],
-  ".yml": ["yamlfmt"],
-  ".rs": ["rustfmt"],
-  ".go": ["gofmt", "-w"]
-};
-
-// src/session-idle/session-summary.ts
-import { appendFileSync as appendFileSync2 } from "fs";
-import { join as join4, basename } from "path";
-var logDir = process.env.OCHOOKS_LOG_DIR ?? join4(process.env.HOME ?? "~", ".opencode");
-var JOURNAL_FILE = join4(logDir, "hooks_journal.log");
-function runGit(args, cwd) {
-  const result = Bun.spawnSync(["git", ...args], { cwd });
-  if (result.exitCode !== 0)
-    return null;
-  return new TextDecoder().decode(result.stdout).trim();
-}
-function parseDiffStat(statOutput) {
-  const lines = statOutput.trim().split(`
-`);
-  const lastLine = lines[lines.length - 1] ?? "";
-  const filesMatch = lastLine.match(/(\d+) files? changed/);
-  const insertMatch = lastLine.match(/(\d+) insertions?\(\+\)/);
-  const deleteMatch = lastLine.match(/(\d+) deletions?\(-\)/);
-  const files = filesMatch ? parseInt(filesMatch[1], 10) : 0;
-  const insertions = insertMatch ? parseInt(insertMatch[1], 10) : 0;
-  const deletions = deleteMatch ? parseInt(deleteMatch[1], 10) : 0;
-  return [files, insertions, deletions];
-}
-function getUntrackedFiles(cwd) {
-  const output = runGit(["ls-files", "--others", "--exclude-standard"], cwd);
-  return (output ?? "").split(`
-`).filter((f) => f.length > 0);
-}
-function getChangedFileNames(cwd) {
-  const tracked = runGit(["diff", "--name-only", "HEAD"], cwd);
-  const trackedFiles = (tracked ?? "").split(`
-`).filter((f) => f.length > 0);
-  const untracked = getUntrackedFiles(cwd);
-  return [
-    ...new Map([...trackedFiles, ...untracked].map((f) => [f, f])).values()
-  ];
-}
-function getCommitCount(cwd, startTs) {
-  if (!startTs)
-    return 0;
-  const output = runGit(["log", "--oneline", `--since=${startTs}`], cwd);
-  return output ? output.split(`
-`).filter((l) => l.length > 0).length : 0;
-}
-function formatSummary(filesChanged, insertions, deletions, commitCount, newFileCount) {
-  const parts = [];
-  if (filesChanged > 0) {
-    parts.push(`${filesChanged} file${filesChanged !== 1 ? "s" : ""} changed (+${insertions}/-${deletions})`);
-  } else {
-    parts.push("0 files changed");
-  }
-  if (commitCount > 0) {
-    parts.push(`${commitCount} commit${commitCount !== 1 ? "s" : ""}`);
-  }
-  if (newFileCount > 0) {
-    parts.push(`${newFileCount} new file${newFileCount !== 1 ? "s" : ""}`);
-  }
-  return parts.join(", ");
-}
-function appendJournal(cwd, summary, fileList) {
-  const ts = new Date().toISOString().replace(/\.\d{3}Z$/, "Z");
-  const fileNames = fileList.slice(0, config.journal.max_files_shown).map((f) => basename(f)).join(", ");
-  const entry = `${ts} | ${cwd} | ${summary} | ${fileNames}
-`;
-  appendFileSync2(JOURNAL_FILE, entry);
-}
-function summarize(cwd, startTs = null) {
-  const statOutput = runGit(["diff", "--stat", "HEAD"], cwd);
-  const [filesChanged, insertions, deletions] = parseDiffStat(statOutput ?? "");
-  const untracked = getUntrackedFiles(cwd);
-  const commitCount = getCommitCount(cwd, startTs);
-  const allFiles = getChangedFileNames(cwd);
-  if (filesChanged === 0 && commitCount === 0 && untracked.length === 0) {
-    return null;
-  }
-  const summary = formatSummary(filesChanged, insertions, deletions, commitCount, untracked.length);
-  appendJournal(cwd, summary, allFiles);
-  return summary;
-}
-
 // src/session-idle/alert.ts
 import { existsSync as existsSync4 } from "fs";
-import { join as join5 } from "path";
+import { join as join4 } from "path";
 function resource(name) {
-  return join5(import.meta.dir, "resources", name);
+  return join4(import.meta.dir, "resources", name);
 }
 async function terminalIsFocused() {
   const proc = Bun.spawn([
@@ -1269,81 +1170,384 @@ async function send({
   })();
 }
 
-// src/session-idle/index.ts
-function getChangedFiles(cwd) {
-  const decoder = new TextDecoder;
-  const tracked = Bun.spawnSync(["git", "diff", "--name-only", "HEAD"], {
-    cwd
-  });
-  const trackedFiles = tracked.exitCode === 0 ? decoder.decode(tracked.stdout).trim().split(`
-`).filter(Boolean) : [];
-  const untracked = Bun.spawnSync(["git", "ls-files", "--others", "--exclude-standard"], { cwd });
-  const untrackedFiles = untracked.exitCode === 0 ? decoder.decode(untracked.stdout).trim().split(`
-`).filter(Boolean) : [];
-  return [...new Set([...trackedFiles, ...untrackedFiles])];
-}
-function formatFile(filePath, cwd) {
-  const ext = extname(filePath).toLowerCase();
-  const fmt = FORMATTERS[ext];
-  if (!fmt)
-    return false;
-  const binary = Bun.which(fmt[0]);
-  if (!binary)
-    return false;
-  const result = Bun.spawnSync([binary, ...fmt.slice(1), filePath], { cwd });
-  return result.exitCode === 0;
-}
-async function handleSessionIdle(directory, previouslyFormatted) {
-  const changedFiles = getChangedFiles(directory);
-  const newlyChanged = changedFiles.filter((f) => !previouslyFormatted.has(f));
-  const formatted = [];
-  for (const f of newlyChanged) {
-    if (formatFile(f, directory)) {
-      formatted.push(f);
-    }
+// src/session-idle/lint.ts
+import { extname as extname2, join as join6 } from "path";
+
+// src/lib/lint-format-config.ts
+var LINTERS = {
+  ".py": ["ruff", "check"],
+  ".js": ["biome", "lint"],
+  ".ts": ["biome", "lint"],
+  ".tsx": ["biome", "lint"],
+  ".jsx": ["biome", "lint"],
+  ".css": ["biome", "lint"],
+  ".html": ["biome", "lint"],
+  ".json": ["biome", "lint"],
+  ".yaml": ["yamllint"],
+  ".yml": ["yamllint"],
+  ".rs": ["cargo", "clippy"],
+  ".go": ["golangci-lint", "run"]
+};
+
+// src/lib/linter.ts
+import { existsSync as existsSync5 } from "fs";
+import { dirname, join as join5 } from "path";
+function parseRuffJson(stdout) {
+  let issues;
+  try {
+    issues = JSON.parse(stdout);
+  } catch {
+    return [];
   }
-  if (formatted.length > 0) {
-    log("Formatted", {
-      count: formatted.length,
-      files: formatted.join(",")
+  const result = [];
+  for (const issue of issues) {
+    const code = issue.code ?? "";
+    const severity = code.startsWith("W") ? "warning" : "error";
+    const loc = issue.location ?? {};
+    result.push({
+      file: issue.filename ?? "",
+      line: loc.row ?? 0,
+      col: loc.column ?? 0,
+      severity,
+      rule: code,
+      message: issue.message ?? ""
     });
   }
-  const { duration, startTs } = await endSession();
-  const summary = summarize(directory, startTs);
-  if (summary) {
-    log("SessionSummary", { directory, summary });
+  return result;
+}
+function parseBiomeJson(stdout) {
+  let data;
+  try {
+    data = JSON.parse(stdout);
+  } catch {
+    return [];
   }
-  log("Stop", {
-    directory,
-    formatted: formatted.length,
-    duration: duration ?? 0
+  const diagnostics = data.diagnostics ?? [];
+  const result = [];
+  for (const diag of diagnostics) {
+    const category = diag.category ?? "";
+    if (category.startsWith("internalError/")) {
+      log("BiomeInternalError", {
+        category,
+        message: diag.message ?? ""
+      });
+      continue;
+    }
+    let sev = (diag.severity ?? "error").toLowerCase();
+    if (!["error", "warning", "info", "hint"].includes(sev)) {
+      sev = "error";
+    }
+    const location = diag.location ?? {};
+    const fname = typeof location.path === "string" ? location.path : "";
+    const start = location.start ?? {};
+    result.push({
+      file: fname,
+      line: start.line ?? 0,
+      col: start.column ?? 0,
+      severity: sev,
+      rule: category,
+      message: diag.message ?? ""
+    });
+  }
+  return result;
+}
+function parseClippyJson(stdout) {
+  const result = [];
+  for (const raw of stdout.split(`
+`)) {
+    const trimmed = raw.trim();
+    if (!trimmed)
+      continue;
+    let obj;
+    try {
+      obj = JSON.parse(trimmed);
+    } catch {
+      continue;
+    }
+    if (obj.reason !== "compiler-message")
+      continue;
+    const msg = obj.message ?? {};
+    const level = msg.level ?? "";
+    if (level !== "error" && level !== "warning")
+      continue;
+    const spans = msg.spans ?? [];
+    const primary = spans.find((s) => s.is_primary === true) ?? spans[0] ?? {};
+    const codeInfo = msg.code ?? {};
+    result.push({
+      file: primary.file_name ?? "",
+      line: primary.line_start ?? 0,
+      col: primary.column_start ?? 0,
+      severity: level,
+      rule: codeInfo.code ?? "",
+      message: msg.message ?? ""
+    });
+  }
+  return result;
+}
+function parseGolangciJson(stdout) {
+  let data;
+  try {
+    data = JSON.parse(stdout);
+  } catch {
+    return [];
+  }
+  const issues = data.Issues ?? [];
+  const result = [];
+  for (const issue of issues) {
+    const pos = issue.Pos ?? {};
+    result.push({
+      file: pos.Filename ?? "",
+      line: pos.Line ?? 0,
+      col: pos.Column ?? 0,
+      severity: "error",
+      rule: issue.FromLinter ?? "",
+      message: issue.Text ?? ""
+    });
+  }
+  return result;
+}
+var YAMLLINT_RE = /^(.+):(\d+):(\d+): \[(error|warning)] (.+?) \(([^)]+)\)\s*$/;
+function parseYamllintText(stdout, stderr) {
+  const result = [];
+  const combined = stdout + `
+` + stderr;
+  for (const line of combined.split(`
+`)) {
+    const m = YAMLLINT_RE.exec(line);
+    if (m) {
+      result.push({
+        file: m[1],
+        line: parseInt(m[2], 10),
+        col: parseInt(m[3], 10),
+        severity: m[4],
+        rule: m[6],
+        message: m[5]
+      });
+    }
+  }
+  return result;
+}
+function parseIssues(ext, stdout, stderr) {
+  if (ext === ".py")
+    return parseRuffJson(stdout);
+  if ([".js", ".ts", ".tsx", ".jsx", ".css", ".html", ".json"].includes(ext))
+    return parseBiomeJson(stdout);
+  if (ext === ".rs")
+    return parseClippyJson(stdout);
+  if (ext === ".go")
+    return parseGolangciJson(stdout);
+  if (ext === ".yaml" || ext === ".yml")
+    return parseYamllintText(stdout, stderr);
+  return [];
+}
+function findCargoRoot(filePath) {
+  let dir = dirname(filePath);
+  for (let i = 0;i < 20; i++) {
+    if (existsSync5(join5(dir, "Cargo.toml")))
+      return dir;
+    const parent = dirname(dir);
+    if (parent === dir)
+      break;
+    dir = parent;
+  }
+  return null;
+}
+function runLinter(ext, filePath, cwd) {
+  const cmdAndArgs = LINTERS[ext];
+  if (!cmdAndArgs)
+    return { code: 0, stdout: "", stderr: "" };
+  const binary = Bun.which(cmdAndArgs[0]);
+  if (!binary) {
+    log("LinterNotFound", { linter: cmdAndArgs[0], ext });
+    return { code: 0, stdout: "", stderr: "" };
+  }
+  const argv = [binary, ...cmdAndArgs.slice(1)];
+  let runCwd = cwd;
+  if (ext === ".rs") {
+    const root = findCargoRoot(filePath);
+    if (!root)
+      return { code: 0, stdout: "", stderr: "" };
+    runCwd = root;
+    argv.push("--message-format=json");
+  } else if (ext === ".go") {
+    argv.push("--out-format=json", filePath);
+  } else if (ext === ".py") {
+    argv.push("--output-format=json", filePath);
+  } else if ([".js", ".ts", ".tsx", ".jsx", ".css", ".html", ".json"].includes(ext)) {
+    argv.push("--reporter=json", filePath);
+  } else {
+    argv.push(filePath);
+  }
+  const result = Bun.spawnSync(argv, { cwd: runCwd });
+  const decoder = new TextDecoder;
+  return {
+    code: result.exitCode,
+    stdout: decoder.decode(result.stdout),
+    stderr: decoder.decode(result.stderr)
+  };
+}
+
+// src/session-idle/lint.ts
+var _lastIdleWasLintFix = false;
+function shouldSkipLint() {
+  if (_lastIdleWasLintFix) {
+    _lastIdleWasLintFix = false;
+    return true;
+  }
+  return false;
+}
+function markLintFixPrompted() {
+  _lastIdleWasLintFix = true;
+}
+function runGit(args, cwd) {
+  const result = Bun.spawnSync(["git", ...args], { cwd });
+  if (result.exitCode !== 0)
+    return null;
+  return new TextDecoder().decode(result.stdout).trim();
+}
+function getChangedLintableFiles(cwd) {
+  const tracked = runGit(["diff", "--name-only", "HEAD"], cwd);
+  const trackedFiles = (tracked ?? "").split(`
+`).filter((f) => f.length > 0);
+  const untracked = runGit(["ls-files", "--others", "--exclude-standard"], cwd);
+  const untrackedFiles = (untracked ?? "").split(`
+`).filter((f) => f.length > 0);
+  const allFiles = [
+    ...new Map([...trackedFiles, ...untrackedFiles].map((f) => [f, f])).values()
+  ];
+  const lintable = allFiles.filter((f) => {
+    const ext = extname2(f).toLowerCase();
+    return ext in LINTERS;
   });
-  increment("stop.invocations");
-  if (formatted.length > 0) {
-    increment("formatted.files_total", formatted.length);
+  log("GetChangedFiles", {
+    cwd,
+    trackedGitNull: tracked === null,
+    trackedCount: trackedFiles.length,
+    untrackedGitNull: untracked === null,
+    untrackedCount: untrackedFiles.length,
+    totalChanged: allFiles.length,
+    lintableCount: lintable.length
+  });
+  return lintable;
+}
+function lintChangedFiles(cwd) {
+  const files = getChangedLintableFiles(cwd);
+  if (files.length === 0)
+    return [];
+  const allIssues = [];
+  for (const file of files) {
+    const filePath = join6(cwd, file);
+    const ext = extname2(file).toLowerCase();
+    const linterName = LINTERS[ext]?.[0] ?? "unknown";
+    const { code, stdout, stderr } = runLinter(ext, filePath, cwd);
+    const issues = parseIssues(ext, stdout, stderr);
+    log("LintFile", { file, linter: linterName, exitCode: code, issues: issues.length });
+    if (issues.length > 0) {
+      allIssues.push(...issues);
+    } else if (code !== 0) {
+      const combined = (stdout.trim() + `
+` + stderr.trim()).trim();
+      if (combined) {
+        allIssues.push({
+          file,
+          line: 0,
+          col: 0,
+          severity: "error",
+          rule: "linter-exit",
+          message: combined.slice(0, 500)
+        });
+      }
+    }
   }
+  log("LintOnIdle", { files: files.length, issues: allIssues.length });
+  increment("lint_on_idle.invocations");
+  if (allIssues.length > 0) {
+    increment("lint_on_idle.issues_total", allIssues.length);
+  }
+  return allIssues;
+}
+function formatLintPrompt(issues) {
+  const grouped = new Map;
+  for (const issue of issues) {
+    const existing = grouped.get(issue.file) ?? [];
+    existing.push(issue);
+    grouped.set(issue.file, existing);
+  }
+  const lines = [
+    `Lint issues were found in the following files. Please fix them:
+`
+  ];
+  for (const [file, fileIssues] of grouped) {
+    lines.push(`### ${file}`);
+    for (const issue of fileIssues) {
+      const loc = issue.line > 0 ? `:${issue.line}:${issue.col}` : "";
+      const rule = issue.rule ? ` (${issue.rule})` : "";
+      lines.push(`- ${issue.severity}${loc}${rule}: ${issue.message}`);
+    }
+    lines.push("");
+  }
+  return lines.join(`
+`);
+}
+
+// src/session-idle/index.ts
+async function handleSessionIdle(directory, client, sessionID) {
+  const { duration } = await endSession();
+  increment("stop.invocations");
   if (duration !== null) {
     increment("session.duration_seconds", Math.floor(duration));
   }
+  if (!shouldSkipLint()) {
+    await runLintFlow(directory, client, sessionID);
+  }
   await send({ message: config.alert.message });
-  const updatedSet = new Set(previouslyFormatted);
-  for (const f of changedFiles)
-    updatedSet.add(f);
-  return updatedSet;
+}
+async function runLintFlow(directory, client, sessionID) {
+  await client.tui.showToast({
+    body: {
+      title: "Lint",
+      message: "Lint check running\u2026",
+      variant: "info"
+    }
+  });
+  const issues = lintChangedFiles(directory);
+  if (issues.length === 0) {
+    await client.tui.showToast({
+      body: {
+        title: "Lint",
+        message: "Lint clean",
+        variant: "success"
+      }
+    });
+    return;
+  }
+  await client.tui.showToast({
+    body: {
+      title: "Lint",
+      message: `Found ${issues.length} issue${issues.length !== 1 ? "s" : ""} \u2014 prompting agent to fix`,
+      variant: "warning"
+    }
+  });
+  markLintFixPrompted();
+  await client.session.prompt({
+    path: { id: sessionID },
+    body: {
+      parts: [{ type: "text", text: formatLintPrompt(issues) }]
+    }
+  });
 }
 
 // plugin.ts
-var OcHooksPlugin = async ({ directory }) => {
-  let lastIdleFormattedSet = new Set;
+var OcHooksPlugin = async ({ directory, client }) => {
   return {
     event: async ({ event }) => {
       try {
         if (event.type === "session.idle") {
-          lastIdleFormattedSet = await handleSessionIdle(directory, lastIdleFormattedSet);
+          await handleSessionIdle(directory, client, event.properties.sessionID);
         }
       } catch (err) {
-        log("EventError", {
-          type: event.type,
+        log("EventHandlerError", {
+          event: event.type,
           error: err instanceof Error ? err.message : String(err)
         });
       }

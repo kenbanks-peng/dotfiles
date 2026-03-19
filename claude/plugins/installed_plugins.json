@@ -54,20 +54,20 @@
     "context7@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "/Users/kenbanks/.claude/plugins/cache/claude-plugins-official/context7/6b70f99f769f",
-        "version": "6b70f99f769f",
+        "installPath": "/Users/kenbanks/.claude/plugins/cache/claude-plugins-official/context7/8908a582f80d",
+        "version": "8908a582f80d",
         "installedAt": "2026-03-17T00:25:24.344Z",
-        "lastUpdated": "2026-03-17T22:50:59.148Z",
+        "lastUpdated": "2026-03-19T23:32:31.454Z",
         "gitCommitSha": "d5c15b861cd23e3102215c26020368ad5134dc47"
       }
     ],
     "frontend-design@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "/Users/kenbanks/.claude/plugins/cache/claude-plugins-official/frontend-design/6b70f99f769f",
-        "version": "6b70f99f769f",
+        "installPath": "/Users/kenbanks/.claude/plugins/cache/claude-plugins-official/frontend-design/8908a582f80d",
+        "version": "8908a582f80d",
         "installedAt": "2026-03-17T00:26:16.426Z",
-        "lastUpdated": "2026-03-17T22:50:59.151Z",
+        "lastUpdated": "2026-03-19T23:32:31.455Z",
         "gitCommitSha": "d5c15b861cd23e3102215c26020368ad5134dc47"
       }
     ],
@@ -84,10 +84,10 @@
     "code-review@claude-plugins-official": [
       {
         "scope": "user",
-        "installPath": "/Users/kenbanks/.claude/plugins/cache/claude-plugins-official/code-review/6b70f99f769f",
-        "version": "6b70f99f769f",
+        "installPath": "/Users/kenbanks/.claude/plugins/cache/claude-plugins-official/code-review/8908a582f80d",
+        "version": "8908a582f80d",
         "installedAt": "2026-03-17T00:27:01.576Z",
-        "lastUpdated": "2026-03-17T22:50:59.149Z",
+        "lastUpdated": "2026-03-19T23:32:31.454Z",
         "gitCommitSha": "d5c15b861cd23e3102215c26020368ad5134dc47"
       }
     ],
