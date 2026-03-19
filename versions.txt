@@ -346,7 +346,6 @@ tailspin 5.5.0
 tart 2.31.0
 tealdeer 1.8.1
 television 0.15.3
-terminal-notifier 2.0.0
 thrift 0.22.0_1
 tmux 3.6a
 tokei 14.0.0
