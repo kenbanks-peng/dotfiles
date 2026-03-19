@@ -324,7 +324,7 @@ sevenzip 26.00
 shaderc 2026.1
 shared-mime-info 2.4_1
 shellcheck 0.11.0
-simdjson 4.4.0
+simdjson 4.4.1
 sk 4.0.0
 sketchybar 2.23.0
 sleef 3.9.0
