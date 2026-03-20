@@ -4,4 +4,7 @@ useDefault = true
 
 [allowlist]
 description = "Paths that only contain config/theme data, not secrets"
-paths = ['''ghostty/config''']
+paths = [
+  '''ghostty/config''',
+  '''opencode/plugin/keychain-provider\.js''',
+]
