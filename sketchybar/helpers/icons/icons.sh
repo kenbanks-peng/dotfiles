@@ -7,10 +7,16 @@
 #
 
 export ICON_APPLE_LOGO=􀣺 # SF Symbols
-export ICON_DISK=󰤃 # SF Symbols - disk 􀥾
-export ICON_CPU=󰤃  # SF Symbols 􀧓
-export ICON_LEGO=􀐛 # SF Symbols
+
+export ICON_LEGO=􀈄 # SF Symbols - arrow.down.circle
 export ICON_CHECKMARK=􀆅 # SF Symbols
+export ICON_DISK=􀥾 # SF Symbols - disk 􀥾 
+export ICON_CPU=􀧓  # SF Symbols 􀧓
+export ICON_KEYBOARD=􀇳 # SF Symbols - keyboard 􀇳
+export ICON_TRACKPAD=􀬁 # SF Symbols - hand.tap 􀬁
+export ICON_LAPTOP=􀟛   # SF Symbols - laptopcomputer 􀟛
+export ICON_PIPE=󰤃
+
 
 export ICON_NET_WIFI_3=      # Icomoon - Wi-Fi connected - 3 bars
 export ICON_NET_WIFI_2=      # Icomoon - Wi-Fi connected - 2 bars
@@ -27,12 +33,18 @@ export ICON_BATTERY_1=􀛩        # SF Symbols - low
 export ICON_BATTERY_0=􀛪        # SF Symbols - empty
 export ICON_BATTERY_CHARGING=􀢋 # SF Symbols - charging
 
+export ICON_VBAT_4=󰁹 # Nerd Font - battery full
+export ICON_VBAT_3=󰂀 # Nerd Font - battery 70
+export ICON_VBAT_2=󰁾 # Nerd Font - battery 50
+export ICON_VBAT_1=󰁻 # Nerd Font - battery 30
+export ICON_VBAT_0=󰂎 # Nerd Font - battery outline
+
 export ICON_STACK=􀏧       # SF Symbols
 export ICON_TILE=􀏟        # SF Symbols
 export ICON_FLOAT=􀣤       # SF Symbols
 export ICON_JOIN_LEFT=   # icomoon
 export ICON_JOIN_RIGHT=  # icomoon
-export ICON_FLATTEN=􀊉     # SF Symbols
+export ICON_FLATTEN=􀅉     # SF Symbols - arrow.clockwise
 export ICON_BUTTON=􀆨      # SF Symbols
 export ICON_MOUSE_PTR=􀇰   # SF Symbols
 export ICON_SWAP=􁁀        # SF Symbols

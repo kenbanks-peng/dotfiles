@@ -1,0 +1,24 @@
+# opencode hooks configuration
+#
+# Place a copy of this file at one of:
+#   $XDG_CONFIG_HOME/opencode/events/config.toml
+#   ~/.config/opencode/events/config.toml
+#   ~/.opencode/events/config.toml
+#
+# Any value omitted will use the default shown below.
+
+[alert]
+message = "Response Ended"
+title = "opencode"
+timeout = 10
+icon = "opencode-icon.png"
+sound = "ding.wav"
+terminal_app = "Ghostty"
+action_label = "Show"
+
+[logging]
+max_bytes = 1_048_576
+max_backups = 10
+
+[journal]
+max_files_shown = 20

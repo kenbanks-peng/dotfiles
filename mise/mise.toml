@@ -24,6 +24,18 @@ sops = "latest"
 uv = "latest"
 "github:dlvhdr/gh-dash" = "latest"
 "github:dlvhdr/diffnav" = "latest"
+"pipx:skill-seekers" = "latest"
+bun = "latest"
+biome = "latest"
+ruff = "latest"
+go = "latest"
+rust = "latest"
+yamlfmt = "latest"
+yamllint = "latest"
+golangci-lint = "latest"
+node = "lts"
+"github:aome510/hackernews-TUI" = "latest"
+"npm:uipro-cli" = "latest"
 
 [settings]
 experimental = true
@@ -49,11 +61,21 @@ description = "Claude in teammate mode (tmux)"
 dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/ai/teams $args"
 
+[tasks."ai:chamber"]
+description = "Chamber"
+dir = "{{cwd}}"
+run = "/Users/kenbanks/Software/Repos/forks/chamber/bin/chamber $args"
+
+[tasks."ai:connect"]
+description = "Connect to a Tart VM"
+dir = "{{cwd}}"
+run = "tart exec -i -t {{arg(name='vm')}} zsh"
+
 [tasks."ai:skills-tui"]
 description = "skills tui"
 dir = "{{cwd}}"
 tools = { bun = "latest" }
-run = "~/Software/DevBox/tools/ai/skills-tui/src/index.tsx"
+run = "~/Software/DevBox/tools/apps/skills-tui/src/index.tsx"
 
 ##################   DEV   ##################
 
@@ -387,6 +409,11 @@ run = "/Users/kenbanks/Software/DevBox/tools/util/free $args"
 description = "Git TUI (lazygit)"
 dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/g $args"
+
+[tasks."util:hnews"]
+description = "Hacker News TUI"
+dir = "{{cwd}}"
+run = "/Users/kenbanks/Software/DevBox/tools/util/hnews $args"
 
 [tasks."util:kee"]
 description = "KeePassXC CLI"

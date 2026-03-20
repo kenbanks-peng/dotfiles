@@ -5,8 +5,10 @@ source "$PLUGIN_DIR/helpers/sketchy.sh"
 location="right"
 
 props=(
-  icon.padding_left=6
-  icon.padding_right=6
+  icon.padding_left=0
+  icon.padding_right=0
+  icon.font="$FONT:11"
+  icon.color=$SAPPHIRE
   script="$PLUGIN_DIR/aerospace_controls.sh"
 )
 
@@ -31,12 +33,12 @@ sketchy_add_item layout.flatten $location \
 
 # join windows right
 sketchy_add_item layout.join_right $location \
-  --set layout.join_right icon="$ICON_JOIN_RIGHT" "${props[@]}" icon.font="$ICOMOON:20" \
+  --set layout.join_right icon="$ICON_JOIN_RIGHT" "${props[@]}" icon.font="$ICOMOON:16" \
   --subscribe layout.join_right mouse.clicked
 
 # join windows left
 sketchy_add_item layout.join_left $location \
-  --set layout.join_left icon="$ICON_JOIN_LEFT" "${props[@]}" icon.font="$ICOMOON:20" \
+  --set layout.join_left icon="$ICON_JOIN_LEFT" "${props[@]}" icon.font="$ICOMOON:16" \
   --subscribe layout.join_left mouse.clicked
 
 # floating / tiling

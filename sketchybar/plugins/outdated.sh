@@ -4,6 +4,7 @@ source "$CONFIG_DIR/env.sh"
 
 # reprocess on mouse click
 props=(
+  icon.drawing=off
   icon.color="$BLUE"
   label.drawing=on
   label="?"
@@ -62,10 +63,12 @@ echo "$(date): brew count=$count" >>"$CACHE_DIR/$LOG_FILE"
 sum=$((sum + count))
 echo "$(date): final sum=$sum" >>"$CACHE_DIR/$LOG_FILE"
 
+label_font=""
 case "$sum" in
 0)
-  color="$GREEN"
+  color="$SAPPHIRE"
   sum="$ICON_CHECKMARK"
+  label_font="$FONT:$((FONTSIZE-4))"
   ;;
 [1-2])
   color="$YELLOW"
@@ -80,7 +83,9 @@ esac
 
 props=(
   icon.color="$color"
+  icon.drawing=$([ "$sum" = "$ICON_CHECKMARK" ] && echo off || echo on)
   label="$sum"
   label.color="$color"
 )
+[ -n "$label_font" ] && props+=(label.font="$label_font")
 sketchybar --set "$NAME" "${props[@]}"

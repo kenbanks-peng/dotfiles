@@ -20,10 +20,14 @@ source $ITEM_DIR/aerospace_controls.sh
 
 # source $ITEM_DIR/clock.sh
 # source $ITEM_DIR/wifi.sh
-# source $ITEM_DIR/battery.sh
 # source $ITEM_DIR/volume.sh
+source $ITEM_DIR/kb_battery.sh
+source $ITEM_DIR/tp_battery.sh
+source $ITEM_DIR/battery.sh
 source $ITEM_DIR/cpu.sh
+SEPARATOR_NAME=separator1 source $ITEM_DIR/separator.sh
 source $ITEM_DIR/disk.sh
+SEPARATOR_NAME=separator2 source $ITEM_DIR/separator.sh
 source $ITEM_DIR/outdated.sh
 
 ##### Finalizing Setup #####

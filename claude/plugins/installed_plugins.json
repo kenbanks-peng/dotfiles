@@ -1,0 +1,105 @@
+{
+  "version": 2,
+  "plugins": {
+    "gopls-lsp@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/kenbanks/.claude/plugins/cache/claude-plugins-official/gopls-lsp/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-03-09T04:14:01.178Z",
+        "lastUpdated": "2026-03-09T04:14:01.178Z",
+        "gitCommitSha": "205b6e0b30366a969412d9aab7b99bea99d58db1"
+      }
+    ],
+    "typescript-lsp@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/kenbanks/.claude/plugins/cache/claude-plugins-official/typescript-lsp/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-03-17T00:19:35.158Z",
+        "lastUpdated": "2026-03-17T00:19:35.158Z",
+        "gitCommitSha": "d5c15b861cd23e3102215c26020368ad5134dc47"
+      }
+    ],
+    "pyright-lsp@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/kenbanks/.claude/plugins/cache/claude-plugins-official/pyright-lsp/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-03-17T00:23:59.668Z",
+        "lastUpdated": "2026-03-17T00:23:59.668Z",
+        "gitCommitSha": "d5c15b861cd23e3102215c26020368ad5134dc47"
+      }
+    ],
+    "rust-analyzer-lsp@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/kenbanks/.claude/plugins/cache/claude-plugins-official/rust-analyzer-lsp/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-03-17T00:24:35.459Z",
+        "lastUpdated": "2026-03-17T00:24:35.459Z",
+        "gitCommitSha": "d5c15b861cd23e3102215c26020368ad5134dc47"
+      }
+    ],
+    "lua-lsp@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/kenbanks/.claude/plugins/cache/claude-plugins-official/lua-lsp/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-03-17T00:24:58.453Z",
+        "lastUpdated": "2026-03-17T00:24:58.453Z",
+        "gitCommitSha": "d5c15b861cd23e3102215c26020368ad5134dc47"
+      }
+    ],
+    "context7@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/kenbanks/.claude/plugins/cache/claude-plugins-official/context7/8908a582f80d",
+        "version": "8908a582f80d",
+        "installedAt": "2026-03-17T00:25:24.344Z",
+        "lastUpdated": "2026-03-19T23:32:31.454Z",
+        "gitCommitSha": "d5c15b861cd23e3102215c26020368ad5134dc47"
+      }
+    ],
+    "frontend-design@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/kenbanks/.claude/plugins/cache/claude-plugins-official/frontend-design/8908a582f80d",
+        "version": "8908a582f80d",
+        "installedAt": "2026-03-17T00:26:16.426Z",
+        "lastUpdated": "2026-03-19T23:32:31.455Z",
+        "gitCommitSha": "d5c15b861cd23e3102215c26020368ad5134dc47"
+      }
+    ],
+    "superpowers@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/kenbanks/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.5",
+        "version": "5.0.5",
+        "installedAt": "2026-03-17T00:26:45.652Z",
+        "lastUpdated": "2026-03-17T22:06:41.709Z",
+        "gitCommitSha": "825a142aa32af84a8f276b7d7ee38c5bcaee64b1"
+      }
+    ],
+    "code-review@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/kenbanks/.claude/plugins/cache/claude-plugins-official/code-review/8908a582f80d",
+        "version": "8908a582f80d",
+        "installedAt": "2026-03-17T00:27:01.576Z",
+        "lastUpdated": "2026-03-19T23:32:31.454Z",
+        "gitCommitSha": "d5c15b861cd23e3102215c26020368ad5134dc47"
+      }
+    ],
+    "ui-ux-pro-max@ui-ux-pro-max-skill": [
+      {
+        "scope": "user",
+        "installPath": "/Users/kenbanks/.claude/plugins/cache/ui-ux-pro-max-skill/ui-ux-pro-max/2.0.1",
+        "version": "2.0.1",
+        "installedAt": "2026-03-18T20:28:42.589Z",
+        "lastUpdated": "2026-03-18T20:28:42.589Z",
+        "gitCommitSha": "07f4ef3ac2568c25a3b0c8ef5165a86abc3e56e4"
+      }
+    ]
+  }
+}
