@@ -134,7 +134,7 @@ giflib 6.1.2
 git 2.53.0
 git-delta 0.19.0
 git-filter-repo 2.47.0
-gitleaks 8.30.0
+gitleaks 8.30.1
 gitui 0.28.0
 glances 4.5.2_1
 glib 2.88.0
@@ -252,7 +252,7 @@ makensis 3.11
 mcfly 0.9.4
 melody 0.20.0
 memo 0.5.1
-mole 1.30.0
+mole 1.31.0
 molten-vk 1.4.1
 mpdecimal 4.0.1
 mpfr 4.2.2
@@ -326,7 +326,7 @@ sevenzip 26.00
 shaderc 2026.1
 shared-mime-info 2.4_1
 shellcheck 0.11.0
-simdjson 4.4.1
+simdjson 4.4.2
 sk 4.0.0
 sketchybar 2.23.0
 sleef 3.9.0
@@ -400,10 +400,10 @@ fnox                                                       1.18.0            ~/.
 github:Slackadays/Clipboard                                0.10.0            ~/.config/mise/mise.toml  latest
 github:aome510/hackernews-TUI                              0.13.5            ~/.config/mise/mise.toml  latest
 github:bee-san/RustScan                                    2.4.1             ~/.config/mise/mise.toml  latest
-github:dlvhdr/diffnav                                      0.10.0            ~/.config/mise/mise.toml  latest
+github:dlvhdr/diffnav                                      0.11.0            ~/.config/mise/mise.toml  latest
 github:dlvhdr/gh-dash                                      4.23.2            ~/.config/mise/mise.toml  latest
 github:h0rv/d2-mcp                                         1.1.0             ~/.config/mise/mise.toml  latest
-github:max-sixty/worktrunk                                 0.30.0            ~/.config/mise/mise.toml  latest
+github:max-sixty/worktrunk                                 0.30.1            ~/.config/mise/mise.toml  latest
 github:melkeydev/go-blueprint                              0.10.11
 github:neilotoole/sq                                       0.50.0            ~/.config/mise/mise.toml  latest
 github:o2sh/onefetch                                       2.27.1            ~/.config/mise/mise.toml  latest
