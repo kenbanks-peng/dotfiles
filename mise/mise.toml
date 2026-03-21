@@ -320,7 +320,7 @@ run = "/Users/kenbanks/Software/DevBox/tools/unix/symlink-bin $args"
 
 [tasks."util:anybar"]
 description = "AnyBar menu bar indicator"
-run = "/Users/kenbanks/Software/DevBox/util/util/anybar/bin/anybar $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/anybar/bin/anybar $args"
 
 [tasks."util:ast"]
 description = "Code refactoring with ast-grep"
@@ -374,11 +374,11 @@ run = "/Users/kenbanks/Software/DevBox/tools/util/csv2 $args"
 
 [tasks."util:dir"]
 description = "Directory utility"
-run = "/Users/kenbanks/Software/DevBox/util/util/dir/bin/dir $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/dir/bin/dir $args"
 
 [tasks."util:diagram"]
 description = "Diagram utility"
-run = "/Users/kenbanks/Software/DevBox/util/util/diagram/bin/diagram $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/diagram/bin/diagram $args"
 
 [tasks."util:disk"]
 description = "Disk usage TUI (ncdu)"
@@ -538,7 +538,7 @@ run = "/Users/kenbanks/Software/DevBox/tools/util/uv-package $args"
 
 [tasks."util:ver"]
 description = "Version info"
-run = "/Users/kenbanks/Software/DevBox/util/util/ver/bin/ver $args"
+run = "/Users/kenbanks/Software/DevBox/tools/util/ver/bin/ver $args"
 
 [tasks."util:w"]
 description = "1-line weather"
