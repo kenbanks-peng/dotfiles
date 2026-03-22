@@ -25,7 +25,7 @@ ghostty 1.3.1
 git-credential-manager 2.7.3
 google-chrome 146.0.7680.154
 google-drive 122.0.1
-grandperspective 3.6.3
+grandperspective 3.6.4
 handy 0.7.12
 iina 1.4.1,160
 keepassxc 2.7.12
@@ -63,10 +63,10 @@ ada-url 3.4.3
 age 1.3.1
 alerter 26.5
 aom 3.13.2
-apache-arrow 23.0.1_3
+apache-arrow 23.0.1_4
 asciinema 3.2.0
 ast-grep 0.42.0
-autoconf 2.72
+autoconf 2.73
 aws-c-auth 0.10.1
 aws-c-cal 0.9.13
 aws-c-common 0.12.6
@@ -106,7 +106,7 @@ dav1d 1.5.3
 dblab 0.34.3
 deno 2.7.7
 doppler 3.75.3
-dotenvx 1.57.0
+dotenvx 1.57.1
 dua-cli 2.34.0
 dvc 3.67.0_1
 dysk 3.6.0
@@ -132,7 +132,7 @@ gettext 1.0
 gh 2.88.1
 giflib 6.1.2
 git 2.53.0
-git-delta 0.19.0
+git-delta 0.19.1
 git-filter-repo 2.47.0
 gitleaks 8.30.1
 gitui 0.28.0
@@ -151,7 +151,7 @@ gpgmepp 2.0.0
 gping 1.20.1
 graphite2 1.3.14
 grex 1.4.6
-grpc 1.78.1_2
+grpc 1.78.1_3
 grype 0.110.0
 harfbuzz 13.2.1
 hdrhistogram_c 0.11.9
@@ -273,6 +273,7 @@ numpy 2.4.3
 obsidian-cli 0.2.3
 oh-my-posh 29.9.0
 oniguruma 6.9.10
+onnx 1.20.1_5
 openai-whisper 20250625_3
 openblas 0.3.31_1
 opencode 1.2.20
@@ -299,8 +300,7 @@ poppler 26.03.0
 portal 1.2.3
 posting 2.9.2
 procs 0.14.11
-protobuf 34.0
-protobuf@33 33.6
+protobuf 34.1
 pstree 2.40
 pv 1.10.4
 pybind11 3.0.2
@@ -309,7 +309,7 @@ pydantic 2.12.5
 pygit2 1.19.1
 python@3.13 3.13.12_1
 python@3.14 3.14.3_1
-pytorch 2.10.0_1
+pytorch 2.10.0_2
 qrencode 4.1.1
 qsv 17.0.0
 rclone 1.73.2
@@ -347,7 +347,7 @@ syncthing 2.0.15
 tailspin 5.5.0
 tart 2.31.0
 tealdeer 1.8.1
-television 0.15.3
+television 0.15.4
 thrift 0.22.0_1
 tmux 3.6a
 tokei 14.0.0
@@ -410,7 +410,7 @@ github:o2sh/onefetch                                       2.27.1            ~/.
 github:sharkdp/pastel                                      0.12.0            ~/.config/mise/mise.toml  latest
 go                                                         1.26.1            ~/.config/mise/mise.toml  latest
 go:github.com/golangci/golangci-lint/v2/cmd/golangci-lint  2.11.2
-golangci-lint                                              2.11.3            ~/.config/mise/mise.toml  latest
+golangci-lint                                              2.11.4            ~/.config/mise/mise.toml  latest
 lazygit                                                    0.60.0            ~/.config/mise/mise.toml  latest
 node                                                       24.14.0           ~/.config/mise/mise.toml  lts
 npm:@mariozechner/pi-coding-agent                          0.61.1            ~/.config/mise/mise.toml  latest
