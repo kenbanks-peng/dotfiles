@@ -1,19 +1,14 @@
 BREW CASKS
 ----------
-adguard 2.18.0.2089
 aerospace 0.20.3-Beta
-affinity 3.1.0,4231
 anybar 0.2.3
 audacity 3.7.7
-boop 1.4.0
-brainfm 0.0.252
 claude 1.1.7714,3bd6f69326a0abac98bb269c29140e2a543cad64
 cleanshot 4.8.7
 codex 0.116.0
 cursor 2.6.20,b29eb4ee5f9f6d1cb2afbc09070198d3ea6ad76f
 daisydisk 4.33.3
 espanso 2.3.0
-flox 1.10.0
 font-hasklug-nerd-font 3.4.0
 font-ia-writer-quattro latest
 font-inter 4.1
@@ -26,20 +21,20 @@ git-credential-manager 2.7.3
 google-chrome 146.0.7680.154
 google-drive 122.0.1
 grandperspective 3.6.4
+grandperspective 3.6.4
 handy 0.7.12
 iina 1.4.1,160
 keepassxc 2.7.12
 keyclu 0.31
+kindavim 89
 languagetool-desktop 2.12.0
 linear-linear 1.28.13,260318pho1bttxr
-logos 49.0.0.0144
 microsoft-auto-update 4.82.26020434
 microsoft-outlook 16.107.26031524
 ngrok 3.37.2,nboc9dCtERa,a
 obsidian 1.12.4
 omnifocus 4.8.8
-onedrive 26.032.0217.0003
-opencode-desktop 1.2.27
+opencode-desktop 1.3.0
 orbstack 2.0.5,19905
 pdf-pals 1.9.0
 quarto 1.9.36
@@ -61,11 +56,12 @@ BREW FORMULAS
 abseil 20260107.1
 ada-url 3.4.3
 age 1.3.1
-alerter 26.5
 aom 3.13.2
+apache-arrow 23.0.1_4
 apache-arrow 23.0.1_4
 asciinema 3.2.0
 ast-grep 0.42.0
+autoconf 2.73
 autoconf 2.73
 aws-c-auth 0.10.1
 aws-c-cal 0.9.13
@@ -85,8 +81,10 @@ bash 5.3.9
 bat 0.26.1
 bat-extras 2024.08.24
 bbrew 2.2.1
+biome 2.4.8
 borders 1.8.4
 brotli 1.2.0
+btop 1.4.6
 c-ares 1.34.6
 ca-certificates 2026-03-19
 caddy 2.11.2
@@ -103,13 +101,11 @@ csvtk 0.36.0
 curlie 1.8.2
 d2 0.7.1
 dav1d 1.5.3
-dblab 0.34.3
+dblab 0.35.0
 deno 2.7.7
 doppler 3.75.3
-dotenvx 1.57.1
-dua-cli 2.34.0
+dotenvx 1.57.2
 dvc 3.67.0_1
-dysk 3.6.0
 eigen 5.0.1
 espeak-ng 1.52.0
 fastfetch 2.60.0
@@ -133,7 +129,9 @@ gh 2.88.1
 giflib 6.1.2
 git 2.53.0
 git-delta 0.19.1
+git-delta 0.19.1
 git-filter-repo 2.47.0
+gitleaks 8.30.1
 gitleaks 8.30.1
 gitui 0.28.0
 glances 4.5.2_1
@@ -152,6 +150,7 @@ gping 1.20.1
 graphite2 1.3.14
 grex 1.4.6
 grpc 1.78.1_3
+grpc 1.78.1_3
 grype 0.110.0
 harfbuzz 13.2.1
 hdrhistogram_c 0.11.9
@@ -159,7 +158,6 @@ hexyl 0.17.0
 highway 1.3.0
 himalaya 1.2.0
 htmlq 0.4.0
-htop 3.4.1
 hub 2.14.2
 hurl 7.1.0
 hyperfine 1.20.0
@@ -170,7 +168,7 @@ imgcat 1.0.22
 iproute2mac 1.7.2
 isl 0.27
 jc 1.25.6
-jid 0.7.6
+jid 1.0.0
 jj 0.39.0
 jjui 0.10.2
 jnv 0.6.2
@@ -180,7 +178,6 @@ jq 1.8.1
 jqp 0.8.0
 jrnl 4.3
 json-c 0.18
-just 1.47.1
 lame 3.100
 lazydocker 0.25.0
 lazyjj 0.6.1
@@ -252,7 +249,6 @@ makensis 3.11
 mcfly 0.9.4
 melody 0.20.0
 memo 0.5.1
-mole 1.31.0
 molten-vk 1.4.1
 mpdecimal 4.0.1
 mpfr 4.2.2
@@ -260,9 +256,9 @@ mpg123 1.33.4
 mpv 0.41.0_4
 mujs 1.3.9
 navi 2.24.0
+ncdu 2.9.2
 ncurses 6.6
 neovim 0.11.6
-netbird 0.66.4
 nettle 3.10.2
 nim 2.2.8
 node 25.8.1_1
@@ -274,9 +270,10 @@ obsidian-cli 0.2.3
 oh-my-posh 29.9.0
 oniguruma 6.9.10
 onnx 1.20.1_5
+onnx 1.20.1_5
 openai-whisper 20250625_3
 openblas 0.3.31_1
-opencode 1.2.20
+opencode 1.3.0
 openexr 3.4.7
 openhue-cli 0.23
 openjpeg 2.5.4
@@ -301,14 +298,15 @@ portal 1.2.3
 posting 2.9.2
 procs 0.14.11
 protobuf 34.1
+protobuf@33 33.6
 pstree 2.40
-pv 1.10.4
-pybind11 3.0.2
+pv 1.10.5
 pycparser 3.0
 pydantic 2.12.5
 pygit2 1.19.1
 python@3.13 3.13.12_1
 python@3.14 3.14.3_1
+pytorch 2.10.0_2
 pytorch 2.10.0_2
 qrencode 4.1.1
 qsv 17.0.0
@@ -327,13 +325,13 @@ shaderc 2026.1
 shared-mime-info 2.4_1
 shellcheck 0.11.0
 simdjson 4.4.2
+simdjson 4.4.2
 sk 4.0.0
 sketchybar 2.23.0
 sleef 3.9.0
 snappy 1.2.2
 sniffnet 1.4.2
 snyk-cli 1.1303.1
-softnet 0.18.0
 sox 14.4.2_6
 spark 1.0.1
 sqlc 1.30.0
@@ -345,22 +343,19 @@ svt-av1 4.0.1
 syft 1.42.3
 syncthing 2.0.15
 tailspin 5.5.0
-tart 2.31.0
 tealdeer 1.8.1
 television 0.15.4
+terminal-notifier 2.0.0
 thrift 0.22.0_1
 tmux 3.6a
 tokei 14.0.0
 tree 2.3.2
 tree-sitter 0.26.7
 tree-sitter@0.25 0.25.10
-trippy 0.13.0
-trivy 0.69.4
+trivy 0.69.3
 ttyd 1.7.7_10
 turso 0.5.1
-typescript 5.9.3
 uchardet 0.0.8
-ugrep 7.6.0
 unbound 1.24.2
 unibilium 2.1.2
 utf8proc 2.11.3
@@ -373,7 +368,7 @@ watchexec 2.5.0
 webp 1.6.0
 wget 1.25.0
 wgo 0.6.3
-wishlist 0.15.2
+worktrunk 0.30.1
 x264 r3222
 x265 4.1
 xh 0.25.3
@@ -393,41 +388,39 @@ zstd 1.5.7_1
 
 MISE PACKAGES
 -------------
-biome                                                      2.4.8             ~/.config/mise/mise.toml  latest
-bun                                                        1.3.11            ~/.config/mise/mise.toml  latest
-claude-code                                                2.1.81            ~/.config/mise/mise.toml  latest
-fnox                                                       1.18.0            ~/.config/mise/mise.toml  latest
-github:Slackadays/Clipboard                                0.10.0            ~/.config/mise/mise.toml  latest
-github:aome510/hackernews-TUI                              0.13.5            ~/.config/mise/mise.toml  latest
-github:bee-san/RustScan                                    2.4.1             ~/.config/mise/mise.toml  latest
-github:dlvhdr/diffnav                                      0.11.0            ~/.config/mise/mise.toml  latest
-github:dlvhdr/gh-dash                                      4.23.2            ~/.config/mise/mise.toml  latest
-github:h0rv/d2-mcp                                         1.1.0             ~/.config/mise/mise.toml  latest
-github:max-sixty/worktrunk                                 0.30.1            ~/.config/mise/mise.toml  latest
-github:melkeydev/go-blueprint                              0.10.11
-github:neilotoole/sq                                       0.50.0            ~/.config/mise/mise.toml  latest
-github:o2sh/onefetch                                       2.27.1            ~/.config/mise/mise.toml  latest
-github:sharkdp/pastel                                      0.12.0            ~/.config/mise/mise.toml  latest
-go                                                         1.26.1            ~/.config/mise/mise.toml  latest
-go:github.com/golangci/golangci-lint/v2/cmd/golangci-lint  2.11.2
-golangci-lint                                              2.11.4            ~/.config/mise/mise.toml  latest
-lazygit                                                    0.60.0            ~/.config/mise/mise.toml  latest
-node                                                       24.14.0           ~/.config/mise/mise.toml  lts
-npm:@mariozechner/pi-coding-agent                          0.61.1            ~/.config/mise/mise.toml  latest
-npm:@mixedbread/mgrep                                      0.1.10            ~/.config/mise/mise.toml  latest
-npm:github-markdown-css                                    5.9.0             ~/.config/mise/mise.toml  latest
-npm:md-to-pdf                                              5.2.5             ~/.config/mise/mise.toml  latest
-npm:skills                                                 1.4.5             ~/.config/mise/mise.toml  latest
-npm:uipro-cli                                              2.2.3             ~/.config/mise/mise.toml  latest
-npm:vite                                                   7.3.1
-pipx:skill-seekers                                         3.3.0             ~/.config/mise/mise.toml  latest
-ruff                                                       0.15.7            ~/.config/mise/mise.toml  latest
-rust                                                       1.94.0 (symlink)  ~/.config/mise/mise.toml  latest
-sops                                                       3.12.2            ~/.config/mise/mise.toml  latest
-typst                                                      0.14.2
-uv                                                         0.10.12           ~/.config/mise/mise.toml  latest
-yamlfmt                                                    0.21.0            ~/.config/mise/mise.toml  latest
-yamllint                                                   1.38.0            ~/.config/mise/mise.toml  latest
-yazi                                                       26.1.22           ~/.config/mise/mise.toml  latest
-yq                                                         4.52.4            ~/.config/mise/mise.toml  latest
-zoxide                                                     0.9.9             ~/.config/mise/mise.toml  latest
+biome                              2.4.8             ~/.config/mise/mise.toml  latest
+bun                                1.3.11            ~/.config/mise/mise.toml  latest
+claude-code                        2.1.81            ~/.config/mise/mise.toml  latest
+fd                                 10.4.2            ~/.config/mise/mise.toml  latest
+fnox                               1.19.0            ~/.config/mise/mise.toml  latest
+github:Slackadays/Clipboard        0.10.0            ~/.config/mise/mise.toml  latest
+github:aome510/hackernews-TUI      0.13.5            ~/.config/mise/mise.toml  latest
+github:bee-san/RustScan            2.4.1             ~/.config/mise/mise.toml  latest
+github:dlvhdr/diffnav              0.11.0            ~/.config/mise/mise.toml  latest
+github:dlvhdr/gh-dash              4.23.2            ~/.config/mise/mise.toml  latest
+github:h0rv/d2-mcp                 1.1.0             ~/.config/mise/mise.toml  latest
+github:max-sixty/worktrunk         0.30.1            ~/.config/mise/mise.toml  latest
+github:neilotoole/sq               0.50.0            ~/.config/mise/mise.toml  latest
+github:o2sh/onefetch               2.27.1            ~/.config/mise/mise.toml  latest
+github:sharkdp/pastel              0.12.0            ~/.config/mise/mise.toml  latest
+go                                 1.26.1            ~/.config/mise/mise.toml  latest
+golangci-lint                      2.11.4            ~/.config/mise/mise.toml  latest
+lazygit                            0.60.0            ~/.config/mise/mise.toml  latest
+node                               24.14.0           ~/.config/mise/mise.toml  lts
+npm:@mariozechner/pi-coding-agent  0.62.0            ~/.config/mise/mise.toml  latest
+npm:@mixedbread/mgrep              0.1.10            ~/.config/mise/mise.toml  latest
+npm:github-markdown-css            5.9.0             ~/.config/mise/mise.toml  latest
+npm:md-to-pdf                      5.2.5             ~/.config/mise/mise.toml  latest
+npm:skills                         1.4.5             ~/.config/mise/mise.toml  latest
+npm:uipro-cli                      2.2.3             ~/.config/mise/mise.toml  latest
+pipx:skill-seekers                 3.3.0             ~/.config/mise/mise.toml  latest
+ruff                               0.15.7            ~/.config/mise/mise.toml  latest
+rust                               1.94.0 (symlink)  ~/.config/mise/mise.toml  latest
+sops                               3.12.2            ~/.config/mise/mise.toml  latest
+typst                              0.14.2
+uv                                 0.10.12           ~/.config/mise/mise.toml  latest
+yamlfmt                            0.21.0            ~/.config/mise/mise.toml  latest
+yamllint                           1.38.0            ~/.config/mise/mise.toml  latest
+yazi                               26.1.22           ~/.config/mise/mise.toml  latest
+yq                                 4.52.4            ~/.config/mise/mise.toml  latest
+zoxide                             0.9.9             ~/.config/mise/mise.toml  latest

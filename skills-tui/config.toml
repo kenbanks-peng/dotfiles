@@ -12,6 +12,7 @@ repos = [
   "obra/superpowers",
   "mattpocock/skills",
   "sickn33/antigravity-awesome-skills",
+  "ooiyeefei/ccc",
 ]
 
 [agents]
