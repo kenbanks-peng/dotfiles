@@ -33,6 +33,7 @@ microsoft-outlook 16.107.26031524
 ngrok 3.37.2,nboc9dCtERa,a
 obsidian 1.12.4
 omnifocus 4.8.8
+opencode-desktop 1.3.0
 orbstack 2.0.5,19905
 pdf-pals 1.9.0
 quarto 1.9.36
@@ -265,7 +266,7 @@ oniguruma 6.9.10
 onnx 1.20.1_5
 openai-whisper 20250625_3
 openblas 0.3.31_1
-opencode 1.2.20
+opencode 1.3.0
 openexr 3.4.7
 openhue-cli 0.23
 openjpeg 2.5.4
@@ -397,7 +398,7 @@ go                                 1.26.1            ~/.config/mise/mise.toml  l
 golangci-lint                      2.11.4            ~/.config/mise/mise.toml  latest
 lazygit                            0.60.0            ~/.config/mise/mise.toml  latest
 node                               24.14.0           ~/.config/mise/mise.toml  lts
-npm:@mariozechner/pi-coding-agent  0.61.1            ~/.config/mise/mise.toml  latest
+npm:@mariozechner/pi-coding-agent  0.62.0            ~/.config/mise/mise.toml  latest
 npm:@mixedbread/mgrep              0.1.10            ~/.config/mise/mise.toml  latest
 npm:github-markdown-css            5.9.0             ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                      5.2.5             ~/.config/mise/mise.toml  latest
