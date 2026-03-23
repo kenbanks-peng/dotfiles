@@ -1,20 +1,4 @@
 // @bun
-// src/lib/observability.ts
-import {
-  mkdirSync,
-  existsSync as existsSync2,
-  readFileSync as readFileSync2,
-  writeFileSync,
-  renameSync,
-  statSync,
-  appendFileSync,
-  openSync,
-  closeSync,
-  unlinkSync
-} from "fs";
-import { homedir as homedir2 } from "os";
-import { join as join2 } from "path";
-
 // src/lib/config.ts
 import { existsSync, readFileSync } from "fs";
 import { homedir } from "os";
@@ -971,13 +955,6 @@ var DEFAULTS = {
     sound: "ding.wav",
     terminal_app: "Ghostty",
     action_label: "Show"
-  },
-  logging: {
-    max_bytes: 1048576,
-    max_backups: 10
-  },
-  journal: {
-    max_files_shown: 20
   }
 };
 function resolveConfigDir() {
@@ -989,6 +966,23 @@ function resolveConfigDir() {
   candidates.push(join(homedir(), ".opencode", "events"));
   return candidates.find((d) => existsSync(d)) ?? candidates[candidates.length - 1];
 }
+function isRecord(v) {
+  return typeof v === "object" && v !== null && !Array.isArray(v);
+}
+function pick(value, fallback) {
+  return typeof value === typeof fallback ? value : fallback;
+}
+function validateAlert(raw, defaults) {
+  return {
+    message: pick(raw.message, defaults.message),
+    title: pick(raw.title, defaults.title),
+    timeout: pick(raw.timeout, defaults.timeout),
+    icon: pick(raw.icon, defaults.icon),
+    sound: pick(raw.sound, defaults.sound),
+    terminal_app: pick(raw.terminal_app, defaults.terminal_app),
+    action_label: pick(raw.action_label, defaults.action_label)
+  };
+}
 function loadConfig(dir) {
   const configPath = join(dir, "config.toml");
   if (!existsSync(configPath))
@@ -996,122 +990,25 @@ function loadConfig(dir) {
   let raw;
   try {
     const text = readFileSync(configPath, "utf8");
-    raw = parse(text);
+    const parsed = parse(text);
+    if (!isRecord(parsed))
+      return { ...DEFAULTS };
+    raw = parsed;
   } catch {
     return { ...DEFAULTS };
   }
   return {
-    alert: {
-      ...DEFAULTS.alert,
-      ...raw.alert ?? {}
-    },
-    logging: {
-      ...DEFAULTS.logging,
-      ...raw.logging ?? {}
-    },
-    journal: {
-      ...DEFAULTS.journal,
-      ...raw.journal ?? {}
-    }
+    alert: isRecord(raw.alert) ? validateAlert(raw.alert, DEFAULTS.alert) : { ...DEFAULTS.alert }
   };
 }
 var configDir = resolveConfigDir();
 var config = loadConfig(configDir);
 
-// src/lib/observability.ts
-var _dir = process.env.OCHOOKS_LOG_DIR ?? join2(homedir2(), ".opencode");
-var _maxBytes = parseInt(process.env.OCHOOKS_LOG_MAX_BYTES ?? String(config.logging.max_bytes), 10);
-var _maxBackups = config.logging.max_backups;
-var LOG_FILE = join2(_dir, "hooks.log");
-var METRICS_FILE = join2(_dir, "hooks_metrics.json");
-var LOG_ARCHIVE_DIR = join2(_dir, "logs");
-function _ensureDirs() {
-  mkdirSync(_dir, { recursive: true });
-  mkdirSync(LOG_ARCHIVE_DIR, { recursive: true });
-}
-function _rotateLogs() {
-  if (!existsSync2(LOG_FILE))
-    return;
-  const size = statSync(LOG_FILE).size;
-  if (size < _maxBytes)
-    return;
-  for (let i = _maxBackups - 1;i >= 1; i--) {
-    const src = join2(LOG_ARCHIVE_DIR, `hooks.log.${i}`);
-    const dst = join2(LOG_ARCHIVE_DIR, `hooks.log.${i + 1}`);
-    if (existsSync2(src))
-      renameSync(src, dst);
-  }
-  renameSync(LOG_FILE, join2(LOG_ARCHIVE_DIR, "hooks.log.1"));
-}
-function _now() {
-  return new Date().toISOString().replace(/\.\d{3}Z$/, "+00:00");
-}
-function log(event, fields = {}) {
-  _ensureDirs();
-  _rotateLogs();
-  const parts = [
-    _now(),
-    event,
-    ...Object.entries(fields).map(([k, v]) => `${k}=${v}`)
-  ];
-  const line = parts.join(" | ") + `
-`;
-  appendFileSync(LOG_FILE, line, "utf8");
-}
-function increment(key, by = 1) {
-  _ensureDirs();
-  const lockFile = METRICS_FILE + ".lock";
-  const lockFd = openSync(lockFile, "w");
-  try {
-    let metrics = {};
-    if (existsSync2(METRICS_FILE)) {
-      try {
-        metrics = JSON.parse(readFileSync2(METRICS_FILE, "utf8"));
-      } catch {
-        metrics = {};
-      }
-    }
-    metrics[key] = (metrics[key] ?? 0) + by;
-    writeFileSync(METRICS_FILE, JSON.stringify(metrics, null, 2) + `
-`, "utf8");
-  } finally {
-    closeSync(lockFd);
-    try {
-      unlinkSync(lockFile);
-    } catch {}
-  }
-}
-
-// src/lib/token-tracker.ts
-import { existsSync as existsSync3, mkdirSync as mkdirSync2, unlinkSync as unlinkSync2 } from "fs";
-import { homedir as homedir3 } from "os";
-import { join as join3 } from "path";
-var _dir2 = process.env.OCHOOKS_LOG_DIR ?? join3(homedir3(), ".opencode");
-var SESSION_FILE = join3(_dir2, "hooks_session.json");
-async function endSession() {
-  if (!existsSync3(SESSION_FILE)) {
-    return { duration: null, startTs: null };
-  }
-  try {
-    const text = await Bun.file(SESSION_FILE).text();
-    const data = JSON.parse(text);
-    const startTs = data.start_ts;
-    const startDate = new Date(startTs);
-    const duration = (Date.now() - startDate.getTime()) / 1000;
-    try {
-      unlinkSync2(SESSION_FILE);
-    } catch {}
-    return { duration, startTs };
-  } catch {
-    return { duration: null, startTs: null };
-  }
-}
-
 // src/session-idle/alert.ts
-import { existsSync as existsSync4 } from "fs";
-import { join as join4 } from "path";
+import { existsSync as existsSync2 } from "fs";
+import { join as join2 } from "path";
 function resource(name) {
-  return join4(import.meta.dir, "resources", name);
+  return join2(import.meta.dir, "resources", name);
 }
 async function terminalIsFocused() {
   const proc = Bun.spawn([
@@ -1123,7 +1020,9 @@ async function terminalIsFocused() {
   if (exitCode !== 0)
     return false;
   const stdout = await new Response(proc.stdout).text();
-  return stdout.trim().toLowerCase() === config.alert.terminal_app.toLowerCase();
+  const frontApp = stdout.trim().toLowerCase();
+  const terminalApp = config.alert.terminal_app.toLowerCase();
+  return frontApp === terminalApp;
 }
 async function send({
   message,
@@ -1131,9 +1030,8 @@ async function send({
   timeout = config.alert.timeout,
   sound = config.alert.sound
 }) {
-  if (await terminalIsFocused()) {
+  if (await terminalIsFocused())
     return;
-  }
   const cmd = [
     "alerter",
     "--message",
@@ -1146,11 +1044,11 @@ async function send({
     String(timeout)
   ];
   const iconPath = resource(config.alert.icon);
-  if (existsSync4(iconPath)) {
+  if (existsSync2(iconPath)) {
     cmd.push("--app-icon", iconPath);
   }
   const soundPath = resource(sound);
-  if (existsSync4(soundPath)) {
+  if (existsSync2(soundPath)) {
     Bun.spawn(["afplay", soundPath], {
       stdio: ["ignore", "ignore", "ignore"]
     });
@@ -1159,40 +1057,436 @@ async function send({
     stdio: ["ignore", "pipe", "ignore"]
   });
   (async () => {
-    const result = await new Response(alertProc.stdout).text();
-    if (result.trim() === config.alert.action_label) {
-      Bun.spawn([
-        "osascript",
-        "-e",
-        `tell application "${config.alert.terminal_app}" to activate`
-      ], { stdio: ["ignore", "ignore", "ignore"] });
+    try {
+      const result = await new Response(alertProc.stdout).text();
+      if (result.trim() === config.alert.action_label) {
+        Bun.spawn([
+          "osascript",
+          "-e",
+          `tell application "${config.alert.terminal_app}" to activate`
+        ], { stdio: ["ignore", "ignore", "ignore"] });
+      }
+    } catch (error) {
+      console.error("[opencode-events] alert click handler error:", error);
     }
   })();
 }
 
-// src/session-idle/index.ts
-async function handleSessionIdle(directory, client, sessionID) {
-  const { duration } = await endSession();
-  increment("stop.invocations");
-  if (duration !== null) {
-    increment("session.duration_seconds", Math.floor(duration));
+// src/session-idle/lint.ts
+import { existsSync as existsSync4 } from "fs";
+import { extname, join as join4 } from "path";
+
+// src/lib/lint-format-config.ts
+var LINTERS = {
+  ".py": ["ruff", "check"],
+  ".js": ["biome", "lint"],
+  ".ts": ["biome", "lint"],
+  ".tsx": ["biome", "lint"],
+  ".jsx": ["biome", "lint"],
+  ".css": ["biome", "lint"],
+  ".html": ["biome", "lint"],
+  ".json": ["biome", "lint"],
+  ".yaml": ["yamllint"],
+  ".yml": ["yamllint"],
+  ".rs": ["cargo", "clippy"],
+  ".go": ["golangci-lint", "run"]
+};
+
+// src/lib/linter.ts
+import { existsSync as existsSync3 } from "fs";
+import { dirname, join as join3 } from "path";
+function isRecord2(v) {
+  return typeof v === "object" && v !== null && !Array.isArray(v);
+}
+function parseRuffJson(stdout) {
+  let parsed;
+  try {
+    parsed = JSON.parse(stdout);
+  } catch {
+    return [];
   }
-  await send({ message: config.alert.message });
+  if (!Array.isArray(parsed))
+    return [];
+  const issues = parsed;
+  const result = [];
+  for (const issue of issues) {
+    const code = issue.code ?? "";
+    const severity = code.startsWith("W") ? "warning" : "error";
+    const loc = issue.location ?? {};
+    result.push({
+      file: issue.filename ?? "",
+      line: loc.row ?? 0,
+      col: loc.column ?? 0,
+      severity,
+      rule: code,
+      message: issue.message ?? ""
+    });
+  }
+  return result;
+}
+function parseBiomeJson(stdout) {
+  let parsed;
+  try {
+    parsed = JSON.parse(stdout);
+  } catch {
+    return [];
+  }
+  if (!isRecord2(parsed))
+    return [];
+  const data = parsed;
+  const diagnostics = Array.isArray(data.diagnostics) ? data.diagnostics : [];
+  const result = [];
+  for (const diag of diagnostics) {
+    const category = diag.category ?? "";
+    if (category.startsWith("internalError/")) {
+      continue;
+    }
+    let sev = (diag.severity ?? "error").toLowerCase();
+    if (!["error", "warning", "info", "hint"].includes(sev)) {
+      sev = "error";
+    }
+    const location = diag.location ?? {};
+    const fname = typeof location.path === "string" ? location.path : "";
+    const start = location.start ?? {};
+    result.push({
+      file: fname,
+      line: start.line ?? 0,
+      col: start.column ?? 0,
+      severity: sev,
+      rule: category,
+      message: diag.message ?? ""
+    });
+  }
+  return result;
+}
+function parseClippyJson(stdout) {
+  const result = [];
+  for (const raw of stdout.split(`
+`)) {
+    const trimmed = raw.trim();
+    if (!trimmed)
+      continue;
+    let parsed;
+    try {
+      parsed = JSON.parse(trimmed);
+    } catch {
+      continue;
+    }
+    if (!isRecord2(parsed))
+      continue;
+    const obj = parsed;
+    if (obj.reason !== "compiler-message")
+      continue;
+    const msg = obj.message ?? {};
+    const level = msg.level ?? "";
+    if (level !== "error" && level !== "warning")
+      continue;
+    const spans = msg.spans ?? [];
+    const primary = spans.find((s) => s.is_primary === true) ?? spans[0] ?? {};
+    const codeInfo = msg.code ?? {};
+    result.push({
+      file: primary.file_name ?? "",
+      line: primary.line_start ?? 0,
+      col: primary.column_start ?? 0,
+      severity: level,
+      rule: codeInfo.code ?? "",
+      message: msg.message ?? ""
+    });
+  }
+  return result;
+}
+function parseGolangciJson(stdout) {
+  let parsed;
+  try {
+    parsed = JSON.parse(stdout);
+  } catch {
+    return [];
+  }
+  if (!isRecord2(parsed))
+    return [];
+  const data = parsed;
+  const issues = Array.isArray(data.Issues) ? data.Issues : [];
+  const result = [];
+  for (const issue of issues) {
+    const pos = issue.Pos ?? {};
+    result.push({
+      file: pos.Filename ?? "",
+      line: pos.Line ?? 0,
+      col: pos.Column ?? 0,
+      severity: "error",
+      rule: issue.FromLinter ?? "",
+      message: issue.Text ?? ""
+    });
+  }
+  return result;
+}
+var YAMLLINT_RE = /^(.+):(\d+):(\d+): \[(error|warning)] (.+?) \(([^)]+)\)\s*$/;
+function parseYamllintText(stdout, stderr) {
+  const result = [];
+  const combined = `${stdout}
+${stderr}`;
+  for (const line of combined.split(`
+`)) {
+    const m = YAMLLINT_RE.exec(line);
+    if (m) {
+      result.push({
+        file: m[1],
+        line: parseInt(m[2], 10),
+        col: parseInt(m[3], 10),
+        severity: m[4],
+        rule: m[6],
+        message: m[5]
+      });
+    }
+  }
+  return result;
+}
+function parseIssues(ext, stdout, stderr) {
+  if (ext === ".py")
+    return parseRuffJson(stdout);
+  if ([".js", ".ts", ".tsx", ".jsx", ".css", ".html", ".json"].includes(ext))
+    return parseBiomeJson(stdout);
+  if (ext === ".rs")
+    return parseClippyJson(stdout);
+  if (ext === ".go")
+    return parseGolangciJson(stdout);
+  if (ext === ".yaml" || ext === ".yml")
+    return parseYamllintText(stdout, stderr);
+  return [];
+}
+function findCargoRoot(filePath) {
+  let dir = dirname(filePath);
+  for (let i = 0;i < 20; i++) {
+    if (existsSync3(join3(dir, "Cargo.toml")))
+      return dir;
+    const parent = dirname(dir);
+    if (parent === dir)
+      break;
+    dir = parent;
+  }
+  return null;
+}
+function runLinter(ext, filePath, cwd) {
+  const cmdAndArgs = LINTERS[ext];
+  if (!cmdAndArgs)
+    return { code: 0, stdout: "", stderr: "" };
+  const binary = Bun.which(cmdAndArgs[0]);
+  if (!binary)
+    return { code: 0, stdout: "", stderr: "" };
+  const argv = [binary, ...cmdAndArgs.slice(1)];
+  let runCwd = cwd;
+  if (ext === ".rs") {
+    const root = findCargoRoot(filePath);
+    if (!root)
+      return { code: 0, stdout: "", stderr: "" };
+    runCwd = root;
+    argv.push("--message-format=json");
+  } else if (ext === ".go") {
+    argv.push("--out-format=json", filePath);
+  } else if (ext === ".py") {
+    argv.push("--output-format=json", filePath);
+  } else if ([".js", ".ts", ".tsx", ".jsx", ".css", ".html", ".json"].includes(ext)) {
+    argv.push("--reporter=json", filePath);
+  } else {
+    argv.push(filePath);
+  }
+  const result = Bun.spawnSync(argv, { cwd: runCwd });
+  const decoder = new TextDecoder;
+  return {
+    code: result.exitCode,
+    stdout: decoder.decode(result.stdout),
+    stderr: decoder.decode(result.stderr)
+  };
+}
+
+// src/session-idle/lint.ts
+var _states = new Map;
+function getState(cwd) {
+  let s = _states.get(cwd);
+  if (!s) {
+    s = { lastDiffHash: null, fixInProgress: false };
+    _states.set(cwd, s);
+  }
+  return s;
+}
+function diffHash(cwd) {
+  const diff = runGit(["diff", "--relative", "HEAD"], cwd) ?? "";
+  const untracked = runGit(["ls-files", "--others", "--exclude-standard", "--relative"], cwd) ?? "";
+  return Bun.hash(`${diff}
+${untracked}`).toString();
+}
+function shouldSkipLint(cwd) {
+  const state = getState(cwd);
+  const currentHash = diffHash(cwd);
+  if (currentHash === state.lastDiffHash) {
+    state.fixInProgress = false;
+    return true;
+  }
+  if (state.fixInProgress) {
+    state.lastDiffHash = currentHash;
+    state.fixInProgress = false;
+    return true;
+  }
+  return false;
+}
+function markLintComplete(cwd, hadIssues) {
+  const state = getState(cwd);
+  state.lastDiffHash = diffHash(cwd);
+  state.fixInProgress = hadIssues;
+}
+function consumeFixInProgress(cwd) {
+  const state = getState(cwd);
+  if (!state.fixInProgress)
+    return;
+  state.lastDiffHash = diffHash(cwd);
+  state.fixInProgress = false;
+}
+function runGit(args, cwd) {
+  const result = Bun.spawnSync(["git", ...args], { cwd });
+  if (result.exitCode !== 0)
+    return null;
+  return new TextDecoder().decode(result.stdout).trim();
+}
+function getChangedLintableFiles(cwd) {
+  const tracked = runGit(["diff", "--name-only", "--relative", "HEAD"], cwd);
+  const trackedFiles = (tracked ?? "").split(`
+`).filter((f) => f.length > 0);
+  const untracked = runGit(["ls-files", "--others", "--exclude-standard", "--relative"], cwd);
+  const untrackedFiles = (untracked ?? "").split(`
+`).filter((f) => f.length > 0);
+  const allFiles = [
+    ...new Map([...trackedFiles, ...untrackedFiles].map((f) => [f, f])).values()
+  ];
+  return allFiles.filter((f) => {
+    const ext = extname(f).toLowerCase();
+    return ext in LINTERS && existsSync4(join4(cwd, f));
+  });
+}
+function lintChangedFiles(cwd) {
+  const files = getChangedLintableFiles(cwd);
+  if (files.length === 0)
+    return [];
+  const allIssues = [];
+  for (const file of files) {
+    const filePath = join4(cwd, file);
+    const ext = extname(file).toLowerCase();
+    const { code, stdout, stderr } = runLinter(ext, filePath, cwd);
+    const issues = parseIssues(ext, stdout, stderr);
+    if (issues.length > 0) {
+      allIssues.push(...issues);
+    } else if (code !== 0) {
+      const combined = `${stdout.trim()}
+${stderr.trim()}`.trim();
+      if (combined) {
+        allIssues.push({
+          file,
+          line: 0,
+          col: 0,
+          severity: "error",
+          rule: "linter-exit",
+          message: combined.slice(0, 500)
+        });
+      }
+    }
+  }
+  return allIssues;
+}
+function formatLintPrompt(issues) {
+  const grouped = new Map;
+  for (const issue of issues) {
+    const existing = grouped.get(issue.file) ?? [];
+    existing.push(issue);
+    grouped.set(issue.file, existing);
+  }
+  const lines = [
+    `Lint issues were found in the following files. Please fix them:
+`
+  ];
+  for (const [file, fileIssues] of grouped) {
+    lines.push(`### ${file}`);
+    for (const issue of fileIssues) {
+      const loc = issue.line > 0 ? `:${issue.line}:${issue.col}` : "";
+      const rule = issue.rule ? ` (${issue.rule})` : "";
+      lines.push(`- ${issue.severity}${loc}${rule}: ${issue.message}`);
+    }
+    lines.push("");
+  }
+  return lines.join(`
+`);
+}
+
+// src/session-idle/index.ts
+var _idleInProgress = new Set;
+async function handleSessionIdle(directory, client, sessionID) {
+  if (_idleInProgress.has(directory))
+    return;
+  _idleInProgress.add(directory);
+  try {
+    const sentFixPrompt = !shouldSkipLint(directory) && await runLintFlow(directory, client, sessionID);
+    if (!sentFixPrompt) {
+      await send({ message: config.alert.message });
+    }
+  } finally {
+    _idleInProgress.delete(directory);
+  }
+}
+async function runLintFlow(directory, client, sessionID) {
+  await client.tui.showToast({
+    body: {
+      title: "Lint",
+      message: "Lint check running\u2026",
+      variant: "info"
+    }
+  });
+  const issues = lintChangedFiles(directory);
+  if (issues.length === 0) {
+    markLintComplete(directory, false);
+    await client.tui.showToast({
+      body: {
+        message: "Lint clean",
+        variant: "success"
+      }
+    });
+    return false;
+  }
+  markLintComplete(directory, true);
+  await client.tui.showToast({
+    body: {
+      title: "Lint",
+      message: `Found ${issues.length} issue${issues.length !== 1 ? "s" : ""} \u2014 prompting agent to fix`,
+      variant: "warning"
+    }
+  });
+  const prompt = formatLintPrompt(issues);
+  await client.session.prompt({
+    path: { id: sessionID },
+    body: {
+      parts: [{ type: "text", text: prompt }]
+    }
+  });
+  consumeFixInProgress(directory);
+  return true;
 }
 
 // plugin.ts
+var _childSessions = new Set;
 var OcHooksPlugin = async ({ directory, client }) => {
   return {
     event: async ({ event }) => {
       try {
+        if (event.type === "session.created" && event.properties.info.parentID) {
+          _childSessions.add(event.properties.info.id);
+        }
+        if (event.type === "session.deleted") {
+          _childSessions.delete(event.properties.info.id);
+        }
         if (event.type === "session.idle") {
+          if (_childSessions.has(event.properties.sessionID))
+            return;
           await handleSessionIdle(directory, client, event.properties.sessionID);
         }
-      } catch (err) {
-        log("EventHandlerError", {
-          event: event.type,
-          error: err instanceof Error ? err.message : String(err)
-        });
+      } catch (error) {
+        console.error("[opencode-events] event handler error:", error);
       }
     }
   };

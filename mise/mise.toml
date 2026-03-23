@@ -14,9 +14,10 @@
 claude-code = "latest"
 yq = "latest"
 zoxide = "latest"
-yazi = "latest"
+fd = "latest"
 lazygit = "latest"
 fnox = "latest"
+yazi = "latest"
 sops = "latest"
 "github:max-sixty/worktrunk" = "latest"
 "npm:@mariozechner/pi-coding-agent" = "latest"
@@ -74,7 +75,7 @@ run = "tart exec -i -t {{arg(name='vm')}} zsh"
 description = "skills tui"
 dir = "{{cwd}}"
 tools = { bun = "latest" }
-run = "~/Software/DevBox/tools/apps/skills-tui/src/index.tsx"
+run = "~/Software/DevBox/tools/ai/skills-tui/src/index.tsx"
 
 ##################   DEV   ##################
 
@@ -317,6 +318,10 @@ run = "/Users/kenbanks/Software/DevBox/tools/unix/symlink-bin $args"
 
 ##################   UTIL   ##################
 
+[tasks."util:anybar"]
+description = "AnyBar menu bar indicator"
+run = "/Users/kenbanks/Software/DevBox/tools/util/anybar/bin/anybar $args"
+
 [tasks."util:ast"]
 description = "Code refactoring with ast-grep"
 dir = "{{cwd}}"
@@ -366,6 +371,14 @@ run = "/Users/kenbanks/Software/DevBox/tools/util/csv $args"
 description = "CSV toolkit (qsv)"
 dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/csv2 $args"
+
+[tasks."util:dir"]
+description = "Directory utility"
+run = "/Users/kenbanks/Software/DevBox/tools/util/dir/bin/dir $args"
+
+[tasks."util:diagram"]
+description = "Diagram utility"
+run = "/Users/kenbanks/Software/DevBox/tools/util/diagram/bin/diagram $args"
 
 [tasks."util:disk"]
 description = "Disk usage TUI (ncdu)"
@@ -421,11 +434,6 @@ run = "/Users/kenbanks/Software/DevBox/tools/util/lines $args"
 description = "Convert files to markdown"
 dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/md $args"
-
-[tasks."util:mdpdf"]
-description = "Markdown to PDF"
-dir = "{{cwd}}"
-run = "/Users/kenbanks/Software/DevBox/tools/util/mdpdf/mdpdf $args"
 
 [tasks."util:mel"]
 description = "Melody language to regex"
@@ -527,6 +535,10 @@ run = "/Users/kenbanks/Software/DevBox/tools/util/uv-init $args"
 description = "Initialize UV package"
 dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/uv-package $args"
+
+[tasks."util:ver"]
+description = "Version info"
+run = "/Users/kenbanks/Software/DevBox/tools/util/ver/bin/ver $args"
 
 [tasks."util:w"]
 description = "1-line weather"
