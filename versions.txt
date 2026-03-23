@@ -26,7 +26,7 @@ git-credential-manager 2.7.3
 google-chrome 146.0.7680.154
 google-drive 122.0.1
 grandperspective 3.6.4
-handy 0.7.12
+handy 0.8.0
 iina 1.4.1,160
 keepassxc 2.7.12
 keyclu 0.31
@@ -39,7 +39,7 @@ ngrok 3.37.2,nboc9dCtERa,a
 obsidian 1.12.4
 omnifocus 4.8.8
 onedrive 26.032.0217.0003
-opencode-desktop 1.2.27
+opencode-desktop 1.3.0
 orbstack 2.0.5,19905
 pdf-pals 1.9.0
 quarto 1.9.36
@@ -103,10 +103,10 @@ csvtk 0.36.0
 curlie 1.8.2
 d2 0.7.1
 dav1d 1.5.3
-dblab 0.34.3
+dblab 0.35.0
 deno 2.7.7
 doppler 3.75.3
-dotenvx 1.57.1
+dotenvx 1.57.2
 dua-cli 2.34.0
 dvc 3.67.0_1
 dysk 3.6.0
@@ -121,7 +121,7 @@ flock 0.4.0
 fmt 12.1.0
 fontconfig 2.17.1
 freetype 2.14.2
-fresh-editor 0.2.17
+fresh-editor 0.2.18
 fribidi 1.0.16
 fx 39.2.0
 fzf 0.70.0
@@ -164,13 +164,13 @@ hub 2.14.2
 hurl 7.1.0
 hyperfine 1.20.0
 icu4c@78 78.3
-imagemagick 7.1.2-17
+imagemagick 7.1.2-18
 imath 3.2.2
 imgcat 1.0.22
 iproute2mac 1.7.2
 isl 0.27
 jc 1.25.6
-jid 0.7.6
+jid 1.0.0
 jj 0.39.0
 jjui 0.10.2
 jnv 0.6.2
@@ -262,7 +262,7 @@ mujs 1.3.9
 navi 2.24.0
 ncurses 6.6
 neovim 0.11.6
-netbird 0.66.4
+netbird 0.67.0
 nettle 3.10.2
 nim 2.2.8
 node 25.8.1_1
@@ -276,7 +276,7 @@ oniguruma 6.9.10
 onnx 1.20.1_5
 openai-whisper 20250625_3
 openblas 0.3.31_1
-opencode 1.2.20
+opencode 1.3.0
 openexr 3.4.7
 openhue-cli 0.23
 openjpeg 2.5.4
@@ -302,7 +302,7 @@ posting 2.9.2
 procs 0.14.11
 protobuf 34.1
 pstree 2.40
-pv 1.10.4
+pv 1.10.5
 pybind11 3.0.2
 pycparser 3.0
 pydantic 2.12.5
@@ -311,7 +311,7 @@ python@3.13 3.13.12_1
 python@3.14 3.14.3_1
 pytorch 2.10.0_2
 qrencode 4.1.1
-qsv 17.0.0
+qsv 18.0.0
 rclone 1.73.2
 re2 2025-11-05
 readline 8.3.3
@@ -332,7 +332,7 @@ sketchybar 2.23.0
 sleef 3.9.0
 snappy 1.2.2
 sniffnet 1.4.2
-snyk-cli 1.1303.1
+snyk-cli 1.1303.2
 softnet 0.18.0
 sox 14.4.2_6
 spark 1.0.1
@@ -385,7 +385,7 @@ yq 4.52.4
 yt-dlp 2026.3.17
 yyjson 0.12.0
 z3 4.15.4
-zellij 0.43.1
+zellij 0.44.0
 zimg 3.0.6
 zoxide 0.9.9
 zsh 5.9
@@ -396,14 +396,14 @@ MISE PACKAGES
 biome                                                      2.4.8             ~/.config/mise/mise.toml  latest
 bun                                                        1.3.11            ~/.config/mise/mise.toml  latest
 claude-code                                                2.1.81            ~/.config/mise/mise.toml  latest
-fnox                                                       1.18.0            ~/.config/mise/mise.toml  latest
+fnox                                                       1.19.0            ~/.config/mise/mise.toml  latest
 github:Slackadays/Clipboard                                0.10.0            ~/.config/mise/mise.toml  latest
 github:aome510/hackernews-TUI                              0.13.5            ~/.config/mise/mise.toml  latest
 github:bee-san/RustScan                                    2.4.1             ~/.config/mise/mise.toml  latest
 github:dlvhdr/diffnav                                      0.11.0            ~/.config/mise/mise.toml  latest
 github:dlvhdr/gh-dash                                      4.23.2            ~/.config/mise/mise.toml  latest
 github:h0rv/d2-mcp                                         1.1.0             ~/.config/mise/mise.toml  latest
-github:max-sixty/worktrunk                                 0.30.1            ~/.config/mise/mise.toml  latest
+github:max-sixty/worktrunk                                 0.31.0            ~/.config/mise/mise.toml  latest
 github:melkeydev/go-blueprint                              0.10.11
 github:neilotoole/sq                                       0.50.0            ~/.config/mise/mise.toml  latest
 github:o2sh/onefetch                                       2.27.1            ~/.config/mise/mise.toml  latest
@@ -413,7 +413,7 @@ go:github.com/golangci/golangci-lint/v2/cmd/golangci-lint  2.11.2
 golangci-lint                                              2.11.4            ~/.config/mise/mise.toml  latest
 lazygit                                                    0.60.0            ~/.config/mise/mise.toml  latest
 node                                                       24.14.0           ~/.config/mise/mise.toml  lts
-npm:@mariozechner/pi-coding-agent                          0.61.1            ~/.config/mise/mise.toml  latest
+npm:@mariozechner/pi-coding-agent                          0.62.0            ~/.config/mise/mise.toml  latest
 npm:@mixedbread/mgrep                                      0.1.10            ~/.config/mise/mise.toml  latest
 npm:github-markdown-css                                    5.9.0             ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                                              5.2.5             ~/.config/mise/mise.toml  latest
