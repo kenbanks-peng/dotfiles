@@ -21,6 +21,7 @@ git-credential-manager 2.7.3
 google-chrome 146.0.7680.154
 google-drive 122.0.1
 grandperspective 3.6.4
+grandperspective 3.6.4
 handy 0.7.12
 iina 1.4.1,160
 keepassxc 2.7.12
@@ -57,8 +58,10 @@ ada-url 3.4.3
 age 1.3.1
 aom 3.13.2
 apache-arrow 23.0.1_4
+apache-arrow 23.0.1_4
 asciinema 3.2.0
 ast-grep 0.42.0
+autoconf 2.73
 autoconf 2.73
 aws-c-auth 0.10.1
 aws-c-cal 0.9.13
@@ -126,7 +129,9 @@ gh 2.88.1
 giflib 6.1.2
 git 2.53.0
 git-delta 0.19.1
+git-delta 0.19.1
 git-filter-repo 2.47.0
+gitleaks 8.30.1
 gitleaks 8.30.1
 gitui 0.28.0
 glances 4.5.2_1
@@ -144,6 +149,7 @@ gpgmepp 2.0.0
 gping 1.20.1
 graphite2 1.3.14
 grex 1.4.6
+grpc 1.78.1_3
 grpc 1.78.1_3
 grype 0.110.0
 harfbuzz 13.2.1
@@ -264,6 +270,7 @@ obsidian-cli 0.2.3
 oh-my-posh 29.9.0
 oniguruma 6.9.10
 onnx 1.20.1_5
+onnx 1.20.1_5
 openai-whisper 20250625_3
 openblas 0.3.31_1
 opencode 1.3.0
@@ -300,6 +307,7 @@ pygit2 1.19.1
 python@3.13 3.13.12_1
 python@3.14 3.14.3_1
 pytorch 2.10.0_2
+pytorch 2.10.0_2
 qrencode 4.1.1
 qsv 17.0.0
 rclone 1.73.2
@@ -316,6 +324,7 @@ sevenzip 26.00
 shaderc 2026.1
 shared-mime-info 2.4_1
 shellcheck 0.11.0
+simdjson 4.4.2
 simdjson 4.4.2
 sk 4.0.0
 sketchybar 2.23.0
