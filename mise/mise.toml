@@ -75,7 +75,7 @@ run = "tart exec -i -t {{arg(name='vm')}} zsh"
 description = "skills tui"
 dir = "{{cwd}}"
 tools = { bun = "latest" }
-run = "~/Software/DevBox/tools/apps/skills-tui/src/index.tsx"
+run = "~/Software/DevBox/tools/ai/skills-tui/src/index.tsx"
 
 ##################   DEV   ##################
 
