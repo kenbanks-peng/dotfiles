@@ -97,10 +97,10 @@ csvtk 0.36.0
 curlie 1.8.2
 d2 0.7.1
 dav1d 1.5.3
-dblab 0.34.3
+dblab 0.35.0
 deno 2.7.7
 doppler 3.75.3
-dotenvx 1.57.1
+dotenvx 1.57.2
 dvc 3.67.0_1
 eigen 5.0.1
 espeak-ng 1.52.0
@@ -161,7 +161,7 @@ imgcat 1.0.22
 iproute2mac 1.7.2
 isl 0.27
 jc 1.25.6
-jid 0.7.6
+jid 1.0.0
 jj 0.39.0
 jjui 0.10.2
 jnv 0.6.2
