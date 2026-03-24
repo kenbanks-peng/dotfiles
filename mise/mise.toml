@@ -432,11 +432,6 @@ description = "Line count"
 dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/lines"
 
-[tasks."util:md"]
-description = "Convert files to markdown"
-dir = "{{cwd}}"
-run = "markitdown"
-
 [tasks."util:mel"]
 description = "Melody language to regex"
 dir = "{{cwd}}"
