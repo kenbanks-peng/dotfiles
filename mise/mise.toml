@@ -192,6 +192,11 @@ description = "Brew dependency tree"
 dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/bt"
 
+[tasks."pkgmgr:btap"]
+description = "Brew taps with installed packages"
+dir = "{{cwd}}"
+run = "/Users/kenbanks/Software/DevBox/tools/pkgmgr/btap"
+
 [tasks."pkgmgr:bv"]
 description = "Brew installed versions"
 dir = "{{cwd}}"
