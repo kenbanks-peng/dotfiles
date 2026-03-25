@@ -1,6 +1,7 @@
 BREW CASKS
 ----------
 adguard 2.18.0.2089
+aerospace 0.20.3-Beta
 affinity 3.1.0,4231
 anybar 0.2.3
 audacity 3.7.7
@@ -252,7 +253,6 @@ mad 0.16.4
 makensis 3.11
 mcfly 0.9.4
 melody 0.20.0
-memo 0.5.2
 mole 1.31.0
 molten-vk 1.4.1
 mpdecimal 4.0.1
@@ -306,7 +306,6 @@ pycparser 3.0
 pydantic 2.12.5
 pygit2 1.19.1
 pyright 1.1.408
-python@3.13 3.13.12_1
 python@3.14 3.14.3_1
 pytorch 2.11.0
 qrencode 4.1.1
