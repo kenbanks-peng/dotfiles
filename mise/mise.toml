@@ -547,6 +547,11 @@ description = "Weather forecast"
 dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/wf"
 
+[tasks."util:witr"]
+description = "Explain why a process or port is running"
+dir = "{{cwd}}"
+run = "witr"
+
 [tasks."util:windim"]
 description = "Window dimensions"
 dir = "{{cwd}}"
