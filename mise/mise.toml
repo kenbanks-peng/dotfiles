@@ -51,17 +51,17 @@ quiet = true
 [tasks."ai:ai"]
 description = "Terminal AI interface (Claude)"
 dir = "{{cwd}}"
-run = "/Users/kenbanks/Software/DevBox/tools/ai/ai"
+run = "claude -p"
 
 [tasks."ai:research"]
 description = "AI deep research project"
 dir = "{{cwd}}"
-run = "/Users/kenbanks/Software/DevBox/tools/ai/research"
+run = "git clone https://github.com/kenbanks-peng/Claude-Code-Deep-Research.git"
 
 [tasks."ai:teams"]
 description = "Claude in teammate mode (tmux)"
 dir = "{{cwd}}"
-run = "/Users/kenbanks/Software/DevBox/tools/ai/teams"
+run = "claude --teammate-mode tmux"
 
 [tasks."ai:chamber"]
 description = "Chamber"
@@ -329,7 +329,7 @@ description = "Code refactoring with ast-grep"
 dir = "{{cwd}}"
 run = "ast-grep"
 
-[tasks."util:bm"]
+[tasks."util:hyperfine"]
 description = "Benchmarks with hyperfine"
 dir = "{{cwd}}"
 run = "hyperfine"
@@ -359,7 +359,7 @@ description = "Color space conversion (colorjs)"
 dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/colors/colors"
 
-[tasks."util:crok"]
+[tasks."util:croc"]
 description = "Croc file transfer"
 dir = "{{cwd}}"
 run = "croc"
@@ -432,12 +432,12 @@ description = "Line count"
 dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/lines"
 
-[tasks."util:mel"]
+[tasks."util:melody"]
 description = "Melody language to regex"
 dir = "{{cwd}}"
 run = "melody"
 
-[tasks."util:mol"]
+[tasks."util:mo"]
 description = "Mac optimization"
 dir = "{{cwd}}"
 run = "mo"
