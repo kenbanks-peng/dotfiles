@@ -106,7 +106,7 @@ dav1d 1.5.3
 dblab 0.35.0
 deno 2.7.8
 doppler 3.75.3
-dotenvx 1.57.5
+dotenvx 1.58.0
 dua-cli 2.34.0
 dvc 3.67.0_1
 dysk 3.6.0
@@ -127,7 +127,7 @@ fx 39.2.0
 fzf 0.70.0
 gawk 5.4.0
 gcc 15.2.0_1
-gemini-cli 0.35.1
+gemini-cli 0.35.2
 gettext 1.0
 gh 2.89.0
 giflib 6.1.2
@@ -396,7 +396,7 @@ MISE PACKAGES
 -------------
 biome                                                      2.4.9             ~/.config/mise/mise.toml  latest
 bun                                                        1.3.11            ~/.config/mise/mise.toml  latest
-claude-code                                                2.1.84            ~/.config/mise/mise.toml  latest
+claude-code                                                2.1.85            ~/.config/mise/mise.toml  latest
 fd                                                         10.4.2            ~/.config/mise/mise.toml  latest
 fnox                                                       1.19.0            ~/.config/mise/mise.toml  latest
 github:Slackadays/Clipboard                                0.10.0            ~/.config/mise/mise.toml  latest
@@ -405,7 +405,7 @@ github:bee-san/RustScan                                    2.4.1             ~/.
 github:dlvhdr/diffnav                                      0.11.0            ~/.config/mise/mise.toml  latest
 github:dlvhdr/gh-dash                                      4.23.2            ~/.config/mise/mise.toml  latest
 github:h0rv/d2-mcp                                         1.1.0             ~/.config/mise/mise.toml  latest
-github:max-sixty/worktrunk                                 0.32.0            ~/.config/mise/mise.toml  latest
+github:max-sixty/worktrunk                                 0.33.0            ~/.config/mise/mise.toml  latest
 github:melkeydev/go-blueprint                              0.10.11
 github:neilotoole/sq                                       0.50.0            ~/.config/mise/mise.toml  latest
 github:o2sh/onefetch                                       2.27.1            ~/.config/mise/mise.toml  latest
