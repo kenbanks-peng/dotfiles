@@ -36,6 +36,7 @@ golangci-lint = "latest"
 node = "lts"
 "github:aome510/hackernews-TUI" = "latest"
 "npm:uipro-cli" = "latest"
+"npm:tsx" = "latest"
 
 [settings]
 experimental = true
