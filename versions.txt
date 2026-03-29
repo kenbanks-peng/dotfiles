@@ -7,17 +7,17 @@ anybar 0.2.3
 audacity 3.7.7
 boop 1.4.0
 brainfm 0.0.258
-claude 1.1.9134,87a63a530ffde53c132fa8e81bb53b2238e0c4e5
+claude 1.1.9310,cb30ace41ae027db67a2e649866d8a2bb6f4c2af
 cleanshot 4.8.8
 codex 0.117.0
-cursor 2.6.21,fea2f546c979a0a4ad1deab23552a43568807592
+cursor 2.6.22,c6285feaba0ad62603f7c22e72f0a170dc8415a5
 daisydisk 4.33.3
 espanso 2.3.0
 flox 1.11.0
 font-hasklug-nerd-font 3.4.0
 font-ia-writer-quattro latest
 font-inter 4.1
-font-monaspace-var 1.301
+font-monaspace-var 1.400
 font-sf-pro latest
 font-symbols-only-nerd-font 3.4.0
 font-tex-gyre-termes 2.004
@@ -54,7 +54,7 @@ typeface 4.2.3,4845
 vlc 3.0.23
 yaak 2026.3.1
 zed 0.229.0
-zen 1.19.4b
+zen 1.19.5b
 zoom 7.0.0.77593
 
 BREW FORMULAS
@@ -79,7 +79,7 @@ aws-c-mqtt 0.15.2
 aws-c-s3 0.12.0
 aws-c-sdkutils 0.2.4
 aws-checksums 0.2.10
-aws-crt-cpp 0.37.4
+aws-crt-cpp 0.38.1
 aws-sdk-cpp 1.11.765
 bandwhich 0.23.1
 bash 5.3.9
@@ -98,21 +98,21 @@ choose-rust 1.3.7
 container 0.10.0
 coreutils 9.10
 croc 10.4.2
-cryptography 46.0.5
+cryptography 46.0.6
 csvtk 0.36.0
 curlie 1.8.2
 d2 0.7.1
 dav1d 1.5.3
 dblab 0.35.0
-deno 2.7.8
+deno 2.7.9
 doppler 3.75.3
-dotenvx 1.58.0
+dotenvx 1.59.1
 dua-cli 2.34.0
 dvc 3.67.0_1
 dysk 3.6.0
 eigen 5.0.1
 espeak-ng 1.52.0
-fastfetch 2.60.0
+fastfetch 2.61.0
 fd 10.4.2
 ffmpeg 8.1
 figlet 2.2.5
@@ -127,16 +127,16 @@ fx 39.2.0
 fzf 0.70.0
 gawk 5.4.0
 gcc 15.2.0_1
-gemini-cli 0.35.2
+gemini-cli 0.35.3
 gettext 1.0
 gh 2.89.0
 giflib 6.1.2
 git 2.53.0_1
-git-delta 0.19.1
+git-delta 0.19.2
 git-filter-repo 2.47.0
 gitleaks 8.30.1
 gitui 0.28.1
-glances 4.5.2_1
+glances 4.5.2_2
 glib 2.88.0
 glow 2.1.1
 gmp 6.3.0
@@ -171,17 +171,17 @@ imgcat 1.0.22
 iproute2mac 1.7.2
 isl 0.27
 jc 1.25.6
-jid 1.0.0
+jid 1.1.1
 jj 0.39.0
 jjui 0.10.2
 jnv 0.7.0
-jpeg-turbo 3.1.3
+jpeg-turbo 3.1.4
 jpeg-xl 0.11.2
 jq 1.8.1
 jqp 0.8.0
 jrnl 4.3
 json-c 0.18
-just 1.48.0
+just 1.48.1
 lame 3.100
 lazydocker 0.25.0
 lazyjj 0.6.1
@@ -208,7 +208,7 @@ libngtcp2 1.21.0
 libogg 1.3.6
 libomp 22.1.2
 libplacebo 7.360.1
-libpng 1.6.55
+libpng 1.6.56
 libsamplerate 0.2.2
 libsndfile 1.2.2_1
 libsql 0.24.32
@@ -224,7 +224,7 @@ libuv 1.52.1
 libvmaf 3.0.0
 libvorbis 1.3.7
 libvpx 1.16.0
-libwebsockets 4.5.7
+libwebsockets 4.5.8
 libx11 1.8.13
 libxau 1.0.12
 libxcb 1.17.0
@@ -234,14 +234,14 @@ libxrender 0.9.12
 libyaml 0.2.5
 little-cms2 2.18
 llhttp 9.3.1
-llvm 22.1.1
+llvm 22.1.2
 llvm@20 20.1.8
 lnav 0.13.2
 lolcat 100.0.1
 lpeg 1.1.0_2
 lua 5.5.0
 lua-language-server 3.17.1
-luajit 2.1.1772619647
+luajit 2.1.1774638290
 luarocks 3.13.0_1
 lunchy-go 0.2.1
 luv 1.52.1-0
@@ -253,7 +253,7 @@ mad 0.16.4
 makensis 3.11
 mcfly 0.9.4
 melody 0.20.0
-mole 1.31.0
+mole 1.32.0
 molten-vk 1.4.1
 mpdecimal 4.0.1
 mpfr 4.2.2
@@ -262,7 +262,7 @@ mpv 0.41.0_4
 mujs 1.3.9
 navi 2.24.0
 ncurses 6.6
-neovim 0.11.6
+neovim 0.11.7
 nettle 3.10.2
 nim 2.2.8
 node 25.8.2
@@ -273,8 +273,8 @@ numpy 2.4.3
 obsidian-cli 0.2.3
 oh-my-posh 29.9.2
 oniguruma 6.9.10
-onnx 1.20.1_5
-openai-whisper 20250625_3
+onnx 1.21.0
+openai-whisper 20250625_4
 openblas 0.3.32
 opencode 1.3.0
 openexr 3.4.8
@@ -301,7 +301,6 @@ procs 0.14.11
 protobuf 34.1
 pstree 2.40
 pv 1.10.5
-pybind11 3.0.2
 pycparser 3.0
 pydantic 2.12.5
 pygit2 1.19.1
@@ -326,7 +325,7 @@ shaderc 2026.1
 shared-mime-info 2.4_1
 shellcheck 0.11.0
 simdjson 4.4.2
-sk 4.0.0
+sk 4.0.1
 sketchybar 2.23.0
 sleef 3.9.0
 snappy 1.2.2
@@ -355,7 +354,7 @@ tree-sitter 0.26.7
 tree-sitter@0.25 0.25.10
 trippy 0.13.0
 trivy 0.69.4
-ttyd 1.7.7_10
+ttyd 1.7.7_11
 turso 0.5.1
 typescript 6.0.2
 typescript-language-server 5.1.3
@@ -396,7 +395,7 @@ MISE PACKAGES
 -------------
 biome                                                      2.4.9             ~/.config/mise/mise.toml  latest
 bun                                                        1.3.11            ~/.config/mise/mise.toml  latest
-claude-code                                                2.1.85            ~/.config/mise/mise.toml  latest
+claude-code                                                2.1.86            ~/.config/mise/mise.toml  latest
 fd                                                         10.4.2            ~/.config/mise/mise.toml  latest
 fnox                                                       1.19.0            ~/.config/mise/mise.toml  latest
 github:Slackadays/Clipboard                                0.10.0            ~/.config/mise/mise.toml  latest
