@@ -10,8 +10,8 @@
 theme = Catppuccin Mocha
 
 
-# new tmux session per terminal/split
-command = /opt/homebrew/bin/tmux new-session
+# attach to last tmux session, or create a new one
+command = /bin/sh -c '/opt/homebrew/bin/tmux attach || /opt/homebrew/bin/tmux new-session -s main'
 
 
 # ghostty supports nerd fonts natively.
