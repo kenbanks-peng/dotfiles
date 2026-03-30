@@ -415,7 +415,7 @@ bind -n C-Right next-window
 bind -n C-Enter resize-pane -Z
 
 # custom keybindings with prefix
-bind C command-prompt -p "new session name:" "new-session -s '%%'"
+bind C command-prompt -p "new session name:" "if-shell -F '%1' 'new-session -s \"%%\"'"
 
 # C-a C-w: kill current session (used by Ghostty super+w to close split and kill session)
 bind C-w kill-session
@@ -427,7 +427,7 @@ bind-key x kill-pane
 set -g detach-on-destroy off
 
 # C-t: new session prompt
-bind -n C-t command-prompt -p "new session name:" "new-session -s '%%'"
+bind -n C-t command-prompt -p "new session name:" "if-shell -F '%1' 'new-session -s \"%%\"'"
 
 # C-p: next session
 bind -n C-p switch-client -n
