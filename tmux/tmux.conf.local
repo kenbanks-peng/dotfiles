@@ -404,7 +404,7 @@ set-hook -g pane-mode-changed 'if-shell -F "#{pane_in_mode}" "set -p cursor-styl
 
 # custom keybindings without prefix
 bind -n C-n new-window -c "#{pane_current_path}"
-bind -n C-s run-shell '"$(dirname "$TMUX_CONF_LOCAL")/sesh-picker.sh"'
+bind -n C-s run-shell "$HOME/Software/Public/dotfiles/tmux/sesh-picker.sh"
 bind -n C-1 select-window -t 1
 bind -n C-2 select-window -t 2
 bind -n C-3 select-window -t 3
@@ -429,8 +429,9 @@ set -g detach-on-destroy off
 # C-t: new session prompt
 bind -n C-t command-prompt -p "new session name:" "new-session -s '%%'"
 
-# C-a L: switch to last session via sesh
-bind -N "last-session (via sesh) " L run-shell "sesh last"
+# C-p: next session
+bind -n C-p switch-client -n
+
 
 
 # -- tpm -----------------------------------------------------------------------
