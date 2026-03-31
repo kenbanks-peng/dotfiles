@@ -5,7 +5,7 @@
       "repo": "anthropics/claude-plugins-official"
     },
     "installLocation": "/Users/kenbanks/.claude/plugins/marketplaces/claude-plugins-official",
-    "lastUpdated": "2026-03-20T01:11:26.731Z"
+    "lastUpdated": "2026-03-30T14:35:08.007Z"
   },
   "ui-ux-pro-max-skill": {
     "source": {
@@ -14,5 +14,21 @@
     },
     "installLocation": "/Users/kenbanks/.claude/plugins/marketplaces/ui-ux-pro-max-skill",
     "lastUpdated": "2026-03-18T20:28:20.957Z"
+  },
+  "understand-anything": {
+    "source": {
+      "source": "github",
+      "repo": "Lum1104/Understand-Anything"
+    },
+    "installLocation": "/Users/kenbanks/.claude/plugins/marketplaces/understand-anything",
+    "lastUpdated": "2026-03-23T15:09:54.016Z"
+  },
+  "everything-claude-code": {
+    "source": {
+      "source": "github",
+      "repo": "affaan-m/everything-claude-code"
+    },
+    "installLocation": "/Users/kenbanks/.claude/plugins/marketplaces/everything-claude-code",
+    "lastUpdated": "2026-03-24T14:55:45.757Z"
   }
 }

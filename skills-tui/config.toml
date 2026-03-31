@@ -1,7 +1,7 @@
 # skills-tui configuration
 
+# GitHub: "owner/repo", remote: "https://...", local: "file:///path/to/skills"
 repos = [
-  "file:///Users/kenbanks/Software/DevBox/local-skills",
   "vercel-labs/skills",
   "anthropics/skills",
   "huggingface/skills",
@@ -11,8 +11,9 @@ repos = [
   "kepano/obsidian-skills",
   "obra/superpowers",
   "mattpocock/skills",
-  "sickn33/antigravity-awesome-skills",
   "ooiyeefei/ccc",
+  "kenbanks-peng/skills",
+  "sickn33/antigravity-awesome-skills",
 ]
 
 [agents]
@@ -23,6 +24,40 @@ enabled = [
   "gemini-cli",
   "opencode",
   "pi",
+  # "adal",
+  # "amp",
+  # "antigravity",
+  # "augment",
+  # "cline",
+  # "codebuddy",
+  # "command-code",
+  # "continue",
+  # "github-copilot",
+  # "cortex",
+  # "crush",
+  # "droid",
+  # "goose",
+  # "iflow-cli",
+  # "junie",
+  # "kilo",
+  # "kimi-cli",
+  # "kiro-cli",
+  # "kode",
+  # "mcpjam",
+  # "mistral-vibe",
+  # "mux",
+  # "neovate",
+  # "openclaw",
+  # "openhands",
+  # "pochi",
+  # "qoder",
+  # "qwen-code",
+  # "replit",
+  # "roo",
+  # "trae",
+  # "trae-cn",
+  # "windsurf",
+  # "zencoder",
 ]
 
 # Agents that discover skills from the standard .agents/skills paths.
