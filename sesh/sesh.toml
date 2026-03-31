@@ -12,3 +12,8 @@ startup_command = "nvim init.lua"
 name = "tmux config"
 path = "~/Software/Public/dotfiles/tmux"
 startup_command = "nvim tmux.conf"
+
+[[session]]
+name = "cv"
+path = "~/Software/DevTypst/cv-typst-2025"
+startup_command = "tmux split-window -h && tmux send-keys -t '{right}' 'cursor .' Enter && claude"
