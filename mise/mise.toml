@@ -41,6 +41,7 @@ node = "lts"
 [settings]
 experimental = true
 quiet = true
+trusted_config_paths = ["~/Software"]
 
 
 # Task arguments are automatically appended to the run command by mise.
