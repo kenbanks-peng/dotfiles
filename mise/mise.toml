@@ -399,6 +399,11 @@ description = "Stow dotfiles to ~/.config"
 dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/dotstow"
 
+[tasks."util:ext"]
+description = "macOS app extensions manager"
+dir = "{{cwd}}"
+run = "/Users/kenbanks/Software/DevBox/tools/apps/ext/bin/ext"
+
 [tasks."util:ff"]
 description = "System info (fastfetch)"
 dir = "{{cwd}}"
