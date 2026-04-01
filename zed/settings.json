@@ -38,11 +38,7 @@
   "autosave": "off",
   "current_line_highlight": "gutter",
   "cursor_blink": false,
-  "theme": {
-    "mode": "system",
-    "light": "One Light",
-    "dark": "Catppuccin Mocha",
-  },
+  "theme": "Catppuccin Mocha",
   "ui_font_size": 18,
   "buffer_font_family": "Hasklug Nerd Font Mono",
   "buffer_font_size": 18,
