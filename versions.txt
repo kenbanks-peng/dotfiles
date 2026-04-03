@@ -10,7 +10,7 @@ brainfm 0.0.258
 claude 1.2.234,2d185519f5f0b8818981c4fcd90fc502d8e8bc14
 cleanshot 4.8.8
 codex 0.118.0
-cursor 2.6.22,c6285feaba0ad62603f7c22e72f0a170dc8415a5
+cursor 3.0.4,63715ffc1807793ce209e935e5c3ab9b79fddc85
 daisydisk 4.33.3
 espanso 2.3.0
 flox 1.11.0
@@ -76,7 +76,7 @@ aws-c-event-stream 0.7.0
 aws-c-http 0.10.13
 aws-c-io 0.26.3
 aws-c-mqtt 0.15.2
-aws-c-s3 0.12.1
+aws-c-s3 0.12.2
 aws-c-sdkutils 0.2.4
 aws-checksums 0.2.10
 aws-crt-cpp 0.38.3
@@ -326,7 +326,7 @@ shaderc 2026.1
 shared-mime-info 2.4_1
 shellcheck 0.11.0
 simdjson 4.4.2
-sk 4.3.0
+sk 4.4.0
 sketchybar 2.23.0
 sleef 3.9.0
 snappy 1.2.2
@@ -423,7 +423,7 @@ npm:tsx                                                    4.21.0            ~/.
 npm:uipro-cli                                              2.2.3             ~/.config/mise/mise.toml  latest
 npm:vite                                                   8.0.2
 pipx:skill-seekers                                         3.4.0             ~/.config/mise/mise.toml  latest
-ruff                                                       0.15.8            ~/.config/mise/mise.toml  latest
+ruff                                                       0.15.9            ~/.config/mise/mise.toml  latest
 rust                                                       1.94.1 (symlink)  ~/.config/mise/mise.toml  latest
 sops                                                       3.12.2            ~/.config/mise/mise.toml  latest
 typst                                                      0.14.2
