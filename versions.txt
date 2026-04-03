@@ -7,10 +7,10 @@ anybar 0.2.3
 audacity 3.7.7
 boop 1.4.0
 brainfm 0.0.258
-claude 1.2.234,2d185519f5f0b8818981c4fcd90fc502d8e8bc14
+claude 1.569.0,49894ad878c985b0dd77178b75b353f11481ebf4
 cleanshot 4.8.8
 codex 0.118.0
-cursor 3.0.4,63715ffc1807793ce209e935e5c3ab9b79fddc85
+cursor 3.0.9,93e276db8a03af947eafb2d10241e2de17806c29
 daisydisk 4.33.3
 espanso 2.3.0
 flox 1.11.0
@@ -53,7 +53,7 @@ symboliclinker 2.2
 typeface 4.2.3,4845
 vlc 3.0.23
 yaak 2026.3.1
-zed 0.230.0
+zed 0.230.1
 zen 1.19.5b
 zoom 7.0.0.77593
 
@@ -63,8 +63,8 @@ abseil 20260107.1
 ada-url 3.4.4
 age 1.3.1
 alerter 26.5
-aom 3.13.2
-apache-arrow 23.0.1_4
+aom 3.13.3
+apache-arrow 23.0.1_5
 asciinema 3.2.0
 ast-grep 0.42.0
 autoconf 2.73
@@ -73,13 +73,13 @@ aws-c-cal 0.9.13
 aws-c-common 0.12.6
 aws-c-compression 0.3.2
 aws-c-event-stream 0.7.0
-aws-c-http 0.10.13
+aws-c-http 0.10.14
 aws-c-io 0.26.3
 aws-c-mqtt 0.15.2
 aws-c-s3 0.12.2
 aws-c-sdkutils 0.2.4
 aws-checksums 0.2.10
-aws-crt-cpp 0.38.3
+aws-crt-cpp 0.38.4
 aws-sdk-cpp 1.11.780
 bandwhich 0.23.1
 bash 5.3.9
@@ -152,7 +152,7 @@ gpgmepp 2.0.0
 gping 1.20.1
 graphite2 1.3.14
 grex 1.4.6
-grpc 1.78.1_3
+grpc 1.80.0
 grype 0.110.0
 harfbuzz 14.0.0
 hdrhistogram_c 0.11.9
@@ -221,7 +221,7 @@ libunibreak 6.1
 libunistring 1.4.2
 libusb 1.0.29
 libuv 1.52.1
-libvmaf 3.0.0
+libvmaf 3.1.0
 libvorbis 1.3.7
 libvpx 1.16.0
 libwebsockets 4.5.8
@@ -265,7 +265,7 @@ ncurses 6.6
 neovim 0.12.0
 nettle 3.10.2
 nim 2.2.8
-node 25.9.0
+node 25.9.0_1
 npth 1.8
 nspr 4.38.2
 nss 3.122
@@ -325,7 +325,7 @@ sevenzip 26.00
 shaderc 2026.1
 shared-mime-info 2.4_1
 shellcheck 0.11.0
-simdjson 4.4.2
+simdjson 4.6.0
 sk 4.4.0
 sketchybar 2.23.0
 sleef 3.9.0
@@ -395,7 +395,7 @@ MISE PACKAGES
 -------------
 biome                                                      2.4.10            ~/.config/mise/mise.toml  latest
 bun                                                        1.3.11            ~/.config/mise/mise.toml  latest
-claude-code                                                2.1.90            ~/.config/mise/mise.toml  latest
+claude-code                                                2.1.91            ~/.config/mise/mise.toml  latest
 fd                                                         10.4.2            ~/.config/mise/mise.toml  latest
 fnox                                                       1.19.0            ~/.config/mise/mise.toml  latest
 github:Slackadays/Clipboard                                0.10.0            ~/.config/mise/mise.toml  latest
@@ -404,7 +404,7 @@ github:bee-san/RustScan                                    2.4.1             ~/.
 github:dlvhdr/diffnav                                      0.11.0            ~/.config/mise/mise.toml  latest
 github:dlvhdr/gh-dash                                      4.23.2            ~/.config/mise/mise.toml  latest
 github:h0rv/d2-mcp                                         1.1.0             ~/.config/mise/mise.toml  latest
-github:max-sixty/worktrunk                                 0.33.0            ~/.config/mise/mise.toml  latest
+github:max-sixty/worktrunk                                 0.34.0            ~/.config/mise/mise.toml  latest
 github:melkeydev/go-blueprint                              0.10.11
 github:neilotoole/sq                                       0.50.0            ~/.config/mise/mise.toml  latest
 github:o2sh/onefetch                                       2.27.1            ~/.config/mise/mise.toml  latest
