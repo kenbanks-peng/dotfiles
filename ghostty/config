@@ -94,7 +94,7 @@ quick-terminal-position = center
 # quick-terminal-size = 50%
 
 # Keybindings
-keybind = shift+enter=text:\n
+keybind = shift+enter=text:\x1b[13;2u
 keybind = super+k=text:\x0c
 
 # ctrl+number for tmux window switching (CSI u encoding)
