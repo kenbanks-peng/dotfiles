@@ -395,6 +395,10 @@ bind m run "cut -c3- '#{TMUX_CONF}' | sh -s _toggle_mouse" \; display 'mouse #{?
 # move status line to bottom
 set -g status-position bottom
 
+# pass through extended keys (CSI u) so apps like Claude Code can see shift+enter
+set -s extended-keys on
+set -as terminal-features ',xterm-ghostty:extkeys'
+
 
 # ESC in copy mode → exit copy mode (returns to zsh insert mode)
 bind -T copy-mode-vi Escape send-keys -X cancel
