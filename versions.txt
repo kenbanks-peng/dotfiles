@@ -7,10 +7,10 @@ anybar 0.2.3
 audacity 3.7.7
 boop 1.4.0
 brainfm 0.0.258
-claude 1.569.0,49894ad878c985b0dd77178b75b353f11481ebf4
+claude 1.1062.0,b81bcd21a6bc90aa5b302a81dea7a6161dd03413
 cleanshot 4.8.8
 codex 0.118.0
-cursor 3.0.12,a80ff7dfcaa45d7750f6e30be457261379c29b06
+cursor 3.0.13,48a15759f53cd5fc9b5c20936ad7d79847d914b5
 daisydisk 4.33.3
 espanso 2.3.0
 flox 1.11.0
@@ -23,7 +23,7 @@ font-symbols-only-nerd-font 3.4.0
 font-tex-gyre-termes 2.609,31_03_2026
 ghostty 1.3.1
 git-credential-manager 2.7.3
-google-chrome 146.0.7680.178
+google-chrome 147.0.7727.56
 google-drive 123.0.1
 grandperspective 3.6.4
 handy 0.8.2
@@ -39,8 +39,8 @@ mitmproxy 12.2.1
 ngrok 3.37.3,5mfSNpNhBZC,a
 obsidian 1.12.7
 omnifocus 4.8.9
-onedrive 26.032.0217.0003
-opencode-desktop 1.3.17
+onedrive 26.040.0301.0001
+opencode-desktop 1.4.0
 orbstack 2.0.5,19905
 pdf-pals 1.9.0
 quarto 1.9.36
@@ -99,14 +99,14 @@ container 0.11.0
 coreutils 9.10
 croc 10.4.2
 cryptography 46.0.6
-csvtk 0.36.0
+csvtk 0.37.0
 curlie 1.8.2
 d2 0.7.1
 dav1d 1.5.3
-dblab 0.37.0
+dblab 0.37.1
 deno 2.7.11
 doppler 3.75.3
-dotenvx 1.60.1
+dotenvx 1.60.2
 dua-cli 2.34.0
 dvc 3.67.1
 dysk 3.6.0
@@ -206,7 +206,7 @@ libnghttp2 1.68.1
 libnghttp3 1.15.0
 libngtcp2 1.22.0
 libogg 1.3.6
-libomp 22.1.2
+libomp 22.1.3
 libplacebo 7.360.1
 libpng 1.6.56
 libsamplerate 0.2.2
@@ -240,7 +240,7 @@ lnav 0.13.2
 lolcat 100.0.1
 lpeg 1.1.0_2
 lua 5.5.0
-lua-language-server 3.18.0
+lua-language-server 3.18.1
 luajit 2.1.1774896198
 luarocks 3.13.0_1
 lunchy-go 0.2.1
@@ -326,7 +326,7 @@ shaderc 2026.1
 shared-mime-info 2.4_1
 shellcheck 0.11.0
 simdjson 4.6.1
-sk 4.5.0
+sk 4.5.1
 sketchybar 2.23.0
 sleef 3.9.0
 snappy 1.2.2
@@ -396,7 +396,7 @@ MISE PACKAGES
 biome                                                      2.4.10            ~/.config/mise/mise.toml  latest
 bun                                                        1.3.11            ~/.config/mise/mise.toml  latest
 cargo:tauri-cli                                            2.10.1
-claude-code                                                2.1.92            ~/.config/mise/mise.toml  latest
+claude-code                                                2.1.96            ~/.config/mise/mise.toml  latest
 fd                                                         10.4.2            ~/.config/mise/mise.toml  latest
 fnox                                                       1.20.0            ~/.config/mise/mise.toml  latest
 github:Slackadays/Clipboard                                0.10.0            ~/.config/mise/mise.toml  latest
@@ -405,12 +405,12 @@ github:bee-san/RustScan                                    2.4.1             ~/.
 github:dlvhdr/diffnav                                      0.11.0            ~/.config/mise/mise.toml  latest
 github:dlvhdr/gh-dash                                      4.23.2            ~/.config/mise/mise.toml  latest
 github:h0rv/d2-mcp                                         1.1.0             ~/.config/mise/mise.toml  latest
-github:max-sixty/worktrunk                                 0.34.2            ~/.config/mise/mise.toml  latest
+github:max-sixty/worktrunk                                 0.35.0            ~/.config/mise/mise.toml  latest
 github:melkeydev/go-blueprint                              0.10.11
 github:neilotoole/sq                                       0.50.0            ~/.config/mise/mise.toml  latest
 github:o2sh/onefetch                                       2.27.1            ~/.config/mise/mise.toml  latest
 github:sharkdp/pastel                                      0.12.0            ~/.config/mise/mise.toml  latest
-go                                                         1.26.1            ~/.config/mise/mise.toml  latest
+go                                                         1.26.2            ~/.config/mise/mise.toml  latest
 go:github.com/golangci/golangci-lint/v2/cmd/golangci-lint  2.11.2
 golangci-lint                                              2.11.4            ~/.config/mise/mise.toml  latest
 lazygit                                                    0.61.0            ~/.config/mise/mise.toml  latest
@@ -428,7 +428,7 @@ ruff                                                       0.15.9            ~/.
 rust                                                       1.94.1 (symlink)  ~/.config/mise/mise.toml  latest
 sops                                                       3.12.2            ~/.config/mise/mise.toml  latest
 typst                                                      0.14.2
-uv                                                         0.11.3            ~/.config/mise/mise.toml  latest
+uv                                                         0.11.4            ~/.config/mise/mise.toml  latest
 yamlfmt                                                    0.21.0            ~/.config/mise/mise.toml  latest
 yamllint                                                   1.38.0            ~/.config/mise/mise.toml  latest
 yazi                                                       26.1.22           ~/.config/mise/mise.toml  latest
