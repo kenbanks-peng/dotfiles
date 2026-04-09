@@ -545,6 +545,14 @@ description = "Initialize UV package"
 dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/uv-package"
 
+[tasks."util:unzipskill"]
+description = "Extract .skill file with ditto"
+dir = "{{cwd}}"
+run = '''
+skillfile="{{arg(name='skillfile')}}"
+ditto -x -k "$skillfile" "${skillfile%.skill}"
+'''
+
 [tasks."util:ver"]
 description = "Version info"
 run = "/Users/kenbanks/Software/DevBox/tools/util/ver/bin/ver"
