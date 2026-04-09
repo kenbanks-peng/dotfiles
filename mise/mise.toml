@@ -474,6 +474,16 @@ description = "PR dashboard (gh-dash)"
 dir = "{{cwd}}"
 run = "gh dash"
 
+[tasks."util:pack"]
+description = "Pack folder to zip (ditto, preserves macOS metadata)"
+dir = "{{cwd}}"
+run = "ditto -c -k --sequesterRsrc --keepParent {{arg(name='folder')}} {{arg(name='folder')}}.zip"
+
+[tasks."util:unpack"]
+description = "Unpack zip (ditto, preserves macOS metadata)"
+dir = "{{cwd}}"
+run = "ditto -x -k {{arg(name='file')}} ."
+
 [tasks."util:path"]
 description = "Pretty-print PATH"
 dir = "{{cwd}}"
@@ -544,14 +554,6 @@ run = "/Users/kenbanks/Software/DevBox/tools/util/uv-init"
 description = "Initialize UV package"
 dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/uv-package"
-
-[tasks."util:unzipskill"]
-description = "Extract .skill file with ditto"
-dir = "{{cwd}}"
-run = '''
-skillfile="{{arg(name='skillfile')}}"
-ditto -x -k "$skillfile" "${skillfile%.skill}"
-'''
 
 [tasks."util:ver"]
 description = "Version info"
