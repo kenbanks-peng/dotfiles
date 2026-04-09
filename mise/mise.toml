@@ -475,9 +475,9 @@ dir = "{{cwd}}"
 run = "gh dash"
 
 [tasks."util:pack"]
-description = "Pack folder to zip (ditto, preserves macOS metadata)"
+description = "Pack folder to .skill (ditto, preserves macOS metadata)"
 dir = "{{cwd}}"
-run = "ditto -c -k --sequesterRsrc --keepParent {{arg(name='folder')}} {{arg(name='folder')}}.zip"
+run = "ditto -c -k --sequesterRsrc --keepParent {{arg(name='folder')}} {{arg(name='folder')}}.skill"
 
 [tasks."util:unpack"]
 description = "Unpack zip (ditto, preserves macOS metadata)"
