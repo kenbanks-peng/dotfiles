@@ -37,6 +37,7 @@ node = "lts"
 "github:aome510/hackernews-TUI" = "latest"
 "npm:uipro-cli" = "latest"
 "npm:tsx" = "latest"
+"pipx:harlequin" = "latest"
 
 [settings]
 experimental = true
@@ -80,6 +81,13 @@ description = "skills tui"
 dir = "{{cwd}}"
 tools = { bun = "latest" }
 run = "~/Software/Public/skills-tui/src/index.tsx"
+
+##################   DB   ##################
+
+[tasks."database:db"]
+description = "harlequin SQLite database browser"
+dir = "{{cwd}}"
+run = "harlequin --adapter sqlite --show-files ."
 
 ##################   DEV   ##################
 

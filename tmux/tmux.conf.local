@@ -412,7 +412,15 @@ bind -n C-s run-shell "$HOME/Software/Public/dotfiles/tmux/sesh-picker.sh"
 bind -n C-1 select-window -t 1
 bind -n C-2 select-window -t 2
 bind -n C-3 select-window -t 3
-bind -n C-q confirm-before -p "kill window #W? (y/n)" kill-window
+# C-q: cascading close - pane → window → session → terminal
+bind -n C-q run-shell '\
+  panes=$(tmux display -p "#{window_panes}"); \
+  windows=$(tmux display -p "#{session_windows}"); \
+  sessions=$(tmux list-sessions | wc -l | tr -d " "); \
+  if [ "$panes" -gt 1 ]; then tmux kill-pane; \
+  elif [ "$windows" -gt 1 ]; then tmux kill-window; \
+  elif [ "$sessions" -gt 1 ]; then tmux kill-session; \
+  else tmux kill-server; fi'
 bind -n C-r command-prompt -I "#W" "rename-window -- '%%'"
 bind -n C-Left previous-window
 bind -n C-Right next-window

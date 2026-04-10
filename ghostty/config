@@ -101,3 +101,6 @@ keybind = super+k=text:\x0c
 keybind = ctrl+one=text:\x1b[49;5u
 keybind = ctrl+two=text:\x1b[50;5u
 keybind = ctrl+three=text:\x1b[51;5u
+
+# pass ctrl+q through to applications instead of quitting ghostty
+keybind = ctrl+q=unbind
