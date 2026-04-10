@@ -87,7 +87,7 @@ run = "~/Software/Public/skills-tui/src/index.tsx"
 [tasks."database:db"]
 description = "harlequin SQLite database browser"
 dir = "{{cwd}}"
-run = "harlequin --adapter sqlite --show-files ."
+run = "harlequin"
 
 ##################   DEV   ##################
 
