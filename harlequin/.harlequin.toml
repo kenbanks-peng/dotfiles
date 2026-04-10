@@ -1,0 +1,8 @@
+default_profile = "jobs"
+
+[profiles.jobs]
+adapter = "sqlite"
+theme = "catppuccin-mocha"
+limit = 100
+keymap_name = ["vscode"]
+conn_str = ["~/Documents/Claude/Projects/JobSearch/data/jobs.db"]
