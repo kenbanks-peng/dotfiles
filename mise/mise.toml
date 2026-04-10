@@ -38,6 +38,7 @@ node = "lts"
 "npm:uipro-cli" = "latest"
 "npm:tsx" = "latest"
 "pipx:harlequin" = "latest"
+python = "latest"
 
 [settings]
 experimental = true
