@@ -39,6 +39,7 @@ node = "lts"
 "npm:tsx" = "latest"
 "pipx:harlequin" = "latest"
 python = "latest"
+"npm:gitnexus" = "latest"
 
 [settings]
 experimental = true
