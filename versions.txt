@@ -8,11 +8,11 @@ audacity 3.7.7
 beekeeper-studio 5.6.5
 boop 1.4.0
 brainfm 0.0.258
-claude 1.1617.0,8d63450d9eae59f17102abdee7bf0759472f30a2
+claude 1.2278.0,e5213fcf70d7f16280888f281833a19f6ee13156
 cleanshot 4.8.8
 cmux 0.63.2
 codex 0.120.0
-cursor 3.0.16,475871d112608994deb2e3065dfb7c6b0baa0c54
+cursor 3.1.10,dacbe9b31599a253763e4910eb6ab3870465332c
 daisydisk 4.33.3
 db-browser-for-sqlite 3.13.1
 dbeaver-community 26.0.2
@@ -84,7 +84,7 @@ aws-c-mqtt 0.15.2
 aws-c-s3 0.12.2
 aws-c-sdkutils 0.2.4
 aws-checksums 0.2.10
-aws-crt-cpp 0.38.4
+aws-crt-cpp 0.38.5
 aws-sdk-cpp 1.11.780
 bandwhich 0.23.1
 bash 5.3.9
@@ -274,7 +274,7 @@ nim 2.2.8
 node 25.9.0_2
 npth 1.8
 nspr 4.38.2
-nss 3.122
+nss 3.122.1
 numpy 2.4.4
 obsidian-cli 0.2.3
 oh-my-posh 29.10.0
@@ -283,9 +283,9 @@ onnx 1.21.0
 openai-whisper 20250625_4
 openblas 0.3.32
 opencode 1.4.0
-openexr 3.4.9
+openexr 3.4.9_1
 openjpeg 2.5.4
-openjph 0.26.3
+openjph 0.27.0
 openssl@3 3.6.2
 opus 1.6.1
 opusfile 0.12_1
@@ -402,7 +402,7 @@ MISE PACKAGES
 biome                                                      2.4.11            ~/.config/mise/mise.toml  latest
 bun                                                        1.3.12            ~/.config/mise/mise.toml  latest
 cargo:tauri-cli                                            2.10.1
-claude-code                                                2.1.105           ~/.config/mise/mise.toml  latest
+claude-code                                                2.1.107           ~/.config/mise/mise.toml  latest
 fd                                                         10.4.2            ~/.config/mise/mise.toml  latest
 fnox                                                       1.20.0            ~/.config/mise/mise.toml  latest
 github:Slackadays/Clipboard                                0.10.0            ~/.config/mise/mise.toml  latest
@@ -419,10 +419,10 @@ github:sharkdp/pastel                                      0.12.0            ~/.
 go                                                         1.26.2            ~/.config/mise/mise.toml  latest
 go:github.com/golangci/golangci-lint/v2/cmd/golangci-lint  2.11.2
 golangci-lint                                              2.11.4            ~/.config/mise/mise.toml  latest
-lazygit                                                    0.61.0            ~/.config/mise/mise.toml  latest
+lazygit                                                    0.61.1            ~/.config/mise/mise.toml  latest
 node                                                       24.14.1           ~/.config/mise/mise.toml  lts
 npm:@mariozechner/pi-coding-agent                          0.67.1            ~/.config/mise/mise.toml  latest
-npm:@mixedbread/mgrep                                      0.1.11            ~/.config/mise/mise.toml  latest
+npm:@mixedbread/mgrep                                      0.1.12            ~/.config/mise/mise.toml  latest
 npm:github-markdown-css                                    5.9.0             ~/.config/mise/mise.toml  latest
 npm:gitnexus                                               1.6.1             ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                                              5.2.5             ~/.config/mise/mise.toml  latest
