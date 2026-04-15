@@ -12,7 +12,7 @@ claude 1.2581.0,f103981571883c6ef0522635cf396089a3ae0e0f
 cleanshot 4.8.8
 cmux 0.63.2
 codex 0.120.0
-cursor 3.1.14,d8673fb56ba50fda33ad78382000b519bb8acb7e
+cursor 3.1.15,3a67af7b780e0bfc8d32aefa96b8ff1cb8817f88
 daisydisk 4.33.3
 db-browser-for-sqlite 3.13.1
 dbeaver-community 26.0.2
@@ -44,8 +44,8 @@ mitmproxy 12.2.2
 ngrok 3.37.6,nmREUzfvtXG,a
 obsidian 1.12.7
 omnifocus 4.8.9
-onedrive 26.040.0301.0001
-opencode-desktop 1.4.4
+onedrive 26.051.0316.0004
+opencode-desktop 1.4.6
 orbstack 2.0.5,19905
 pdf-pals 1.9.0
 quarto 1.9.37
@@ -55,7 +55,7 @@ sf-symbols 7.2,119
 sip-app 4.1.4
 skim 1.7.14
 symboliclinker 2.2
-typeface 4.2.3,4845
+typeface 4.3.0,5029
 vlc 3.0.23
 yaak 2026.3.1
 zed 0.231.2
@@ -191,7 +191,7 @@ lazydocker 0.25.0
 lazyjj 0.6.1
 lazyjournal 0.8.6
 lazysql 0.4.8
-libarchive 3.8.6
+libarchive 3.8.7
 libass 0.17.4_1
 libassuan 3.0.2
 libb2 0.98.1
@@ -199,7 +199,7 @@ libbluray 1.4.1
 libde265 1.0.18
 libdeflate 1.25
 libevent 2.1.12_1
-libgcrypt 1.12.1
+libgcrypt 1.12.2
 libgit2 1.9.2_1
 libgpg-error 1.59
 libheif 1.21.2_1
@@ -352,7 +352,7 @@ syncthing 2.0.16
 tailspin 6.0.0
 tart 2.32.1
 tealdeer 1.8.1
-television 0.15.5
+television 0.15.6
 thrift 0.22.0_1
 tmux 3.6a
 tokei 14.0.0
@@ -402,7 +402,7 @@ MISE PACKAGES
 biome                                                      2.4.12            ~/.config/mise/mise.toml  latest
 bun                                                        1.3.12            ~/.config/mise/mise.toml  latest
 cargo:tauri-cli                                            2.10.1
-claude-code                                                2.1.108           ~/.config/mise/mise.toml  latest
+claude-code                                                2.1.109           ~/.config/mise/mise.toml  latest
 fd                                                         10.4.2            ~/.config/mise/mise.toml  latest
 fnox                                                       1.20.0            ~/.config/mise/mise.toml  latest
 github:Slackadays/Clipboard                                0.10.0            ~/.config/mise/mise.toml  latest
@@ -411,7 +411,7 @@ github:bee-san/RustScan                                    2.4.1             ~/.
 github:dlvhdr/diffnav                                      0.11.0            ~/.config/mise/mise.toml  latest
 github:dlvhdr/gh-dash                                      4.23.2            ~/.config/mise/mise.toml  latest
 github:h0rv/d2-mcp                                         1.1.0             ~/.config/mise/mise.toml  latest
-github:max-sixty/worktrunk                                 0.37.0            ~/.config/mise/mise.toml  latest
+github:max-sixty/worktrunk                                 0.37.1            ~/.config/mise/mise.toml  latest
 github:melkeydev/go-blueprint                              0.10.11
 github:neilotoole/sq                                       0.50.0            ~/.config/mise/mise.toml  latest
 github:o2sh/onefetch                                       2.27.1            ~/.config/mise/mise.toml  latest
