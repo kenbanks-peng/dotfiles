@@ -45,7 +45,7 @@ ngrok 3.37.6,nmREUzfvtXG,a
 obsidian 1.12.7
 omnifocus 4.8.9
 onedrive 26.040.0301.0001
-opencode-desktop 1.4.3
+opencode-desktop 1.4.4
 orbstack 2.0.5,19905
 pdf-pals 1.9.0
 quarto 1.9.37
