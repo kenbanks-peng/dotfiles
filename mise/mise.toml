@@ -409,11 +409,6 @@ description = "Stow dotfiles to ~/.config"
 dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/dotstow"
 
-[tasks."util:ext"]
-description = "macOS app extensions manager"
-dir = "{{cwd}}"
-run = "/Users/kenbanks/Software/DevBox/tools/apps/ext/bin/ext"
-
 [tasks."util:ff"]
 description = "System info (fastfetch)"
 dir = "{{cwd}}"
@@ -473,6 +468,11 @@ run = "/Users/kenbanks/Software/DevBox/tools/util/mouse-focus"
 description = "Code/git stats (onefetch)"
 dir = "{{cwd}}"
 run = "onefetch"
+
+[tasks."util:open-with"]
+description = "Open file with app chooser"
+dir = "{{cwd}}"
+run = "/Users/kenbanks/Software/Public/open-with/src-tauri/target/release/open-with"
 
 [tasks."util:oklch"]
 description = "OKLCH color space tool"
