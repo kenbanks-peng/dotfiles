@@ -7,8 +7,8 @@ anybar 0.2.3
 audacity 3.7.7
 beekeeper-studio 5.6.5
 boop 1.4.0
-brainfm 0.0.258
-claude 1.2773.0,884b3735b1ce5042a0c286824c6f9bd2d341f7c8
+brainfm 0.0.271
+claude 1.3109.0,35cbf6530e05912137624cde0f075dc7f121fa60
 cleanshot 4.8.8
 cmux 0.63.2
 codex 0.121.0
@@ -36,7 +36,7 @@ keyclu 0.31
 languagetool-desktop 2.12.1
 linear-linear 1.28.13,260318pho1bttxr
 logos 49.0.0.0144
-microsoft-auto-update 4.82.26020434
+microsoft-auto-update 4.83.26040910
 microsoft-excel 16.108.26041219
 microsoft-outlook 16.108.26041219
 microsoft-word 16.108.26041219
@@ -131,9 +131,9 @@ fx 39.2.0
 fzf 0.71.0
 gawk 5.4.0
 gcc 15.2.0_1
-gemini-cli 0.38.0
+gemini-cli 0.38.1
 gettext 1.0
-gh 2.89.0
+gh 2.90.0
 giflib 6.1.3
 git 2.53.0_1
 git-delta 0.19.2
@@ -208,11 +208,11 @@ libksba 1.6.8
 libmpc 1.4.0
 libnghttp2 1.68.1
 libnghttp3 1.15.0
-libngtcp2 1.22.0
+libngtcp2 1.22.1
 libogg 1.3.6
 libomp 22.1.3
 libplacebo 7.360.1
-libpng 1.6.57
+libpng 1.6.58
 libsamplerate 0.2.2
 libsndfile 1.2.2_1
 libsql 0.24.32
@@ -402,7 +402,7 @@ MISE PACKAGES
 biome                                                      2.4.12            ~/.config/mise/mise.toml  latest
 bun                                                        1.3.12            ~/.config/mise/mise.toml  latest
 cargo:tauri-cli                                            2.10.1
-claude-code                                                2.1.110           ~/.config/mise/mise.toml  latest
+claude-code                                                2.1.112           ~/.config/mise/mise.toml  latest
 fd                                                         10.4.2            ~/.config/mise/mise.toml  latest
 fnox                                                       1.20.0            ~/.config/mise/mise.toml  latest
 github:Slackadays/Clipboard                                0.10.0            ~/.config/mise/mise.toml  latest
@@ -411,10 +411,9 @@ github:bee-san/RustScan                                    2.4.1             ~/.
 github:dlvhdr/diffnav                                      0.11.0            ~/.config/mise/mise.toml  latest
 github:dlvhdr/gh-dash                                      4.23.2            ~/.config/mise/mise.toml  latest
 github:h0rv/d2-mcp                                         1.1.0             ~/.config/mise/mise.toml  latest
-github:max-sixty/worktrunk                                 0.37.1            ~/.config/mise/mise.toml  latest
+github:max-sixty/worktrunk                                 0.38.0            ~/.config/mise/mise.toml  latest
 github:melkeydev/go-blueprint                              0.10.11
 github:neilotoole/sq                                       0.50.0            ~/.config/mise/mise.toml  latest
-github:nushell/nushell                                     0.112.2
 github:o2sh/onefetch                                       2.27.1            ~/.config/mise/mise.toml  latest
 github:sharkdp/pastel                                      0.12.0            ~/.config/mise/mise.toml  latest
 go                                                         1.26.2            ~/.config/mise/mise.toml  latest
@@ -422,7 +421,7 @@ go:github.com/golangci/golangci-lint/v2/cmd/golangci-lint  2.11.2
 golangci-lint                                              2.11.4            ~/.config/mise/mise.toml  latest
 lazygit                                                    0.61.1            ~/.config/mise/mise.toml  latest
 node                                                       24.15.0           ~/.config/mise/mise.toml  lts
-npm:@mariozechner/pi-coding-agent                          0.67.3            ~/.config/mise/mise.toml  latest
+npm:@mariozechner/pi-coding-agent                          0.67.6            ~/.config/mise/mise.toml  latest
 npm:@mixedbread/mgrep                                      0.1.12            ~/.config/mise/mise.toml  latest
 npm:github-markdown-css                                    5.9.0             ~/.config/mise/mise.toml  latest
 npm:gitnexus                                               1.6.1             ~/.config/mise/mise.toml  latest
@@ -434,8 +433,8 @@ npm:vite                                                   8.0.2
 pipx:harlequin                                             2.5.2             ~/.config/mise/mise.toml  latest
 pipx:skill-seekers                                         3.5.1             ~/.config/mise/mise.toml  latest
 python                                                     3.14.4            ~/.config/mise/mise.toml  latest
-ruff                                                       0.15.10           ~/.config/mise/mise.toml  latest
-rust                                                       1.94.1 (symlink)  ~/.config/mise/mise.toml  latest
+ruff                                                       0.15.11           ~/.config/mise/mise.toml  latest
+rust                                                       1.95.0 (symlink)  ~/.config/mise/mise.toml  latest
 sops                                                       3.12.2            ~/.config/mise/mise.toml  latest
 typst                                                      0.14.2
 uv                                                         0.11.7            ~/.config/mise/mise.toml  latest
