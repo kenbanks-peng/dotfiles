@@ -409,6 +409,11 @@ description = "Stow dotfiles to ~/.config"
 dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/dotstow"
 
+[tasks."util:fda"]
+description = "FDA utility"
+dir = "{{cwd}}"
+run = "/Users/kenbanks/Software/DevBox/tools/util/fda/FDA"
+
 [tasks."util:ff"]
 description = "System info (fastfetch)"
 dir = "{{cwd}}"
