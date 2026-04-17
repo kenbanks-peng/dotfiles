@@ -274,7 +274,7 @@ nim 2.2.8
 node 25.9.0_2
 npth 1.8
 nspr 4.38.2
-nss 3.122.1
+nss 3.123
 numpy 2.4.4
 obsidian-cli 0.2.3
 oh-my-posh 29.10.0
@@ -308,9 +308,9 @@ protobuf 34.1
 pstree 2.40
 pv 1.10.5
 pycparser 3.0
-pydantic 2.13.0
+pydantic 2.13.1
 pygit2 1.19.2
-pyright 1.1.408
+pyright 1.1.409
 python@3.14 3.14.4
 pytorch 2.11.0
 qrencode 4.1.1
@@ -359,7 +359,7 @@ tokei 14.0.0
 tree 2.3.2
 tree-sitter 0.26.8
 trippy 0.13.0
-trivy 0.69.4
+trivy 0.70.0
 ttyd 1.7.7_11
 turso 0.5.3
 typescript 6.0.2
@@ -387,7 +387,7 @@ xorgproto 2025.1
 xz 5.8.3
 yabai 7.1.18
 yazi 26.1.22
-yq 4.52.5
+yq 4.53.2
 yt-dlp 2026.3.17_1
 yyjson 0.12.0
 z3 4.15.4
@@ -441,5 +441,5 @@ uv                                                         0.11.7            ~/.
 yamlfmt                                                    0.21.0            ~/.config/mise/mise.toml  latest
 yamllint                                                   1.38.0            ~/.config/mise/mise.toml  latest
 yazi                                                       26.1.22           ~/.config/mise/mise.toml  latest
-yq                                                         4.52.5            ~/.config/mise/mise.toml  latest
+yq                                                         4.53.2            ~/.config/mise/mise.toml  latest
 zoxide                                                     0.9.9             ~/.config/mise/mise.toml  latest
