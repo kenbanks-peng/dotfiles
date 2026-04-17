@@ -45,7 +45,7 @@ ngrok 3.37.6,nmREUzfvtXG,a
 obsidian 1.12.7
 omnifocus 4.8.9
 onedrive 26.051.0316.0004
-opencode-desktop 1.4.6
+opencode-desktop 1.4.7
 orbstack 2.0.5,19905
 pdf-pals 1.9.0
 quarto 1.9.37
@@ -125,7 +125,7 @@ flock 0.4.0
 fmt 12.1.0
 fontconfig 2.17.1
 freetype 2.14.3
-fresh-editor 0.2.23
+fresh-editor 0.2.24
 fribidi 1.0.16
 fx 39.2.0
 fzf 0.71.0
