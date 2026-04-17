@@ -13,13 +13,16 @@
       "shift shift": "file_finder::Toggle",
       "ctrl-alt-cmd-g": [
         "agent::NewExternalAgentThread",
-        { "agent": "gemini" },
+        { "agent": { "custom": { "name": "gemini" } } },
       ],
       "ctrl-alt-cmd-c": [
         "agent::NewExternalAgentThread",
-        { "agent": "claude_code" },
+        { "agent": { "custom": { "name": "claude-acp" } } },
       ],
-      "ctrl-alt-cmd-o": ["agent::NewExternalAgentThread", { "agent": "codex" }],
+      "ctrl-alt-cmd-o": [
+        "agent::NewExternalAgentThread",
+        { "agent": { "custom": { "name": "codex-acp" } } },
+      ],
     },
   },
   {
