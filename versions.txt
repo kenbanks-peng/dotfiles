@@ -30,7 +30,7 @@ google-chrome 147.0.7727.102
 google-drive 124.0.3
 grandperspective 3.6.4
 handy 0.8.2
-iina 1.4.1,160
+iina 1.4.2,164
 keepassxc 2.7.12
 keyclu 0.31
 languagetool-desktop 2.12.1
@@ -110,7 +110,7 @@ d2 0.7.1
 dav1d 1.5.3
 deno 2.7.12
 doppler 3.75.3
-dotenvx 1.61.0
+dotenvx 1.61.1
 dua-cli 2.34.0
 dvc 3.67.1
 dysk 3.6.0
@@ -402,7 +402,7 @@ MISE PACKAGES
 biome                                                      2.4.12            ~/.config/mise/mise.toml  latest
 bun                                                        1.3.12            ~/.config/mise/mise.toml  latest
 cargo:tauri-cli                                            2.10.1
-claude-code                                                2.1.112           ~/.config/mise/mise.toml  latest
+claude-code                                                2.1.113           ~/.config/mise/mise.toml  latest
 fd                                                         10.4.2            ~/.config/mise/mise.toml  latest
 fnox                                                       1.20.0            ~/.config/mise/mise.toml  latest
 github:Slackadays/Clipboard                                0.10.0            ~/.config/mise/mise.toml  latest
@@ -411,7 +411,7 @@ github:bee-san/RustScan                                    2.4.1             ~/.
 github:dlvhdr/diffnav                                      0.11.0            ~/.config/mise/mise.toml  latest
 github:dlvhdr/gh-dash                                      4.23.2            ~/.config/mise/mise.toml  latest
 github:h0rv/d2-mcp                                         1.1.0             ~/.config/mise/mise.toml  latest
-github:max-sixty/worktrunk                                 0.38.0            ~/.config/mise/mise.toml  latest
+github:max-sixty/worktrunk                                 0.39.0            ~/.config/mise/mise.toml  latest
 github:melkeydev/go-blueprint                              0.10.11
 github:neilotoole/sq                                       0.50.0            ~/.config/mise/mise.toml  latest
 github:o2sh/onefetch                                       2.27.1            ~/.config/mise/mise.toml  latest
@@ -421,12 +421,12 @@ go:github.com/golangci/golangci-lint/v2/cmd/golangci-lint  2.11.2
 golangci-lint                                              2.11.4            ~/.config/mise/mise.toml  latest
 lazygit                                                    0.61.1            ~/.config/mise/mise.toml  latest
 node                                                       24.15.0           ~/.config/mise/mise.toml  lts
-npm:@mariozechner/pi-coding-agent                          0.67.6            ~/.config/mise/mise.toml  latest
+npm:@mariozechner/pi-coding-agent                          0.67.67           ~/.config/mise/mise.toml  latest
 npm:@mixedbread/mgrep                                      0.1.12            ~/.config/mise/mise.toml  latest
 npm:github-markdown-css                                    5.9.0             ~/.config/mise/mise.toml  latest
 npm:gitnexus                                               1.6.1             ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                                              5.2.5             ~/.config/mise/mise.toml  latest
-npm:skills                                                 1.5.0             ~/.config/mise/mise.toml  latest
+npm:skills                                                 1.5.1             ~/.config/mise/mise.toml  latest
 npm:tsx                                                    4.21.0            ~/.config/mise/mise.toml  latest
 npm:uipro-cli                                              2.2.3             ~/.config/mise/mise.toml  latest
 npm:vite                                                   8.0.2
