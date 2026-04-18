@@ -45,7 +45,7 @@ ngrok 3.37.6,nmREUzfvtXG,a
 obsidian 1.12.7
 omnifocus 4.8.9
 onedrive 26.051.0316.0004
-opencode-desktop 1.4.9
+opencode-desktop 1.4.10
 orbstack 2.0.5,19905
 pdf-pals 1.9.0
 quarto 1.9.37
@@ -283,7 +283,7 @@ onnx 1.21.0
 openai-whisper 20250625_4
 openblas 0.3.32
 opencode 1.4.0
-openexr 3.4.9_1
+openexr 3.4.10
 openjpeg 2.5.4
 openjph 0.27.0
 openssl@3 3.6.2
@@ -421,7 +421,7 @@ go:github.com/golangci/golangci-lint/v2/cmd/golangci-lint  2.11.2
 golangci-lint                                              2.11.4            ~/.config/mise/mise.toml  latest
 lazygit                                                    0.61.1            ~/.config/mise/mise.toml  latest
 node                                                       24.15.0           ~/.config/mise/mise.toml  lts
-npm:@mariozechner/pi-coding-agent                          0.67.67           ~/.config/mise/mise.toml  latest
+npm:@mariozechner/pi-coding-agent                          0.67.68           ~/.config/mise/mise.toml  latest
 npm:@mixedbread/mgrep                                      0.1.12            ~/.config/mise/mise.toml  latest
 npm:github-markdown-css                                    5.9.0             ~/.config/mise/mise.toml  latest
 npm:gitnexus                                               1.6.1             ~/.config/mise/mise.toml  latest
