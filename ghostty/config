@@ -94,10 +94,13 @@ quick-terminal-position = center
 # quick-terminal-size = 50%
 
 # Keybindings
-keybind = shift+enter=text:\n
+keybind = shift+enter=text:\x1b[13;2u
 keybind = super+k=text:\x0c
 
 # ctrl+number for tmux window switching (CSI u encoding)
 keybind = ctrl+one=text:\x1b[49;5u
 keybind = ctrl+two=text:\x1b[50;5u
 keybind = ctrl+three=text:\x1b[51;5u
+
+# pass ctrl+q through to applications instead of quitting ghostty
+keybind = ctrl+q=unbind

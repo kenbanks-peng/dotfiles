@@ -1,0 +1,12 @@
+default_profile = "jobs"
+
+[profiles.jobs]
+adapter = "sqlite"
+theme = "catppuccin-mocha"
+limit = 100
+keymap_name = ["vscode", "custom"]
+conn_str = ["/Users/kenbanks/Documents/Claude/Projects/JobHunt/output/jobs.db"]
+
+[[keymaps.custom]]
+keys = "ctrl+d"
+action = "code_editor.new_buffer"

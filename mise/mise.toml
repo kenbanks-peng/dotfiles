@@ -38,10 +38,14 @@ node = "lts"
 "npm:uipro-cli" = "latest"
 "npm:tsx" = "latest"
 "npm:@kilocode/cli" = "latest"
+"pipx:harlequin" = "latest"
+python = "latest"
+"npm:gitnexus" = "latest"
 
 [settings]
 experimental = true
 quiet = true
+trusted_config_paths = ["~/Software"]
 
 
 # Task arguments are automatically appended to the run command by mise.
@@ -80,6 +84,13 @@ description = "skills tui"
 dir = "{{cwd}}"
 tools = { bun = "latest" }
 run = "~/Software/Public/skills-tui/src/index.tsx"
+
+##################   DB   ##################
+
+[tasks."database:db"]
+description = "harlequin SQLite database browser"
+dir = "{{cwd}}"
+run = "harlequin"
 
 ##################   DEV   ##################
 
@@ -399,10 +410,10 @@ description = "Stow dotfiles to ~/.config"
 dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/dotstow"
 
-[tasks."util:ext"]
-description = "macOS app extensions manager"
+[tasks."util:fda"]
+description = "FDA utility"
 dir = "{{cwd}}"
-run = "/Users/kenbanks/Software/DevBox/tools/apps/ext/bin/ext"
+run = "/Users/kenbanks/Software/DevBox/tools/util/fda/FDA"
 
 [tasks."util:ff"]
 description = "System info (fastfetch)"
@@ -464,6 +475,11 @@ description = "Code/git stats (onefetch)"
 dir = "{{cwd}}"
 run = "onefetch"
 
+[tasks."util:open-with"]
+description = "Open file with app chooser"
+dir = "{{cwd}}"
+run = "/Users/kenbanks/Software/Public/open-with/src-tauri/target/release/open-with"
+
 [tasks."util:oklch"]
 description = "OKLCH color space tool"
 dir = "{{cwd}}"
@@ -473,6 +489,16 @@ run = "/Users/kenbanks/Software/DevBox/tools/util/oklch/oklch"
 description = "PR dashboard (gh-dash)"
 dir = "{{cwd}}"
 run = "gh dash"
+
+[tasks."util:pack"]
+description = "Pack folder to .skill (zip)"
+dir = "{{cwd}}"
+run = "zip -r {{arg(name='folder')}}.skill {{arg(name='folder')}}"
+
+[tasks."util:unpack"]
+description = "Unpack zip"
+dir = "{{cwd}}"
+run = "unzip {{arg(name='file')}}"
 
 [tasks."util:path"]
 description = "Pretty-print PATH"

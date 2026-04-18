@@ -11,29 +11,24 @@
   "agent": {
     "inline_assistant_model": {
       "provider": "openai",
-      "model": "gpt-3.5-turbo"
+      "model": "gpt-3.5-turbo",
     },
     "default_model": {
       "provider": "google",
       "model": "gemini-3-pro-preview",
     },
     "notify_when_agent_waiting": "all_screens",
-    "play_sound_when_agent_done": true,
+    "play_sound_when_agent_done": "when_hidden",
   },
   "agent_servers": {
-    "gemini": {
-      "ignore_system_version": false,
-    },
-    "claude": {
-      "env": {
-        "CLAUDE_CODE_EXECUTABLE": "/opt/homebrew/bin/claude",
+    "claude-acp": {
+      "default_config_options": {
+        "mode": "bypassPermissions"
       },
+      "type": "registry",
     },
   },
   "icon_theme": "Catppuccin Mocha",
-  "features": {
-    "edit_prediction_provider": "zed",
-  },
   "vim_mode": false,
   "autosave": "off",
   "current_line_highlight": "gutter",
@@ -71,14 +66,6 @@
     "scroll_debounce_ms": 50,
   },
   "restore_on_startup": "empty_tab",
-  "lsp": {
-    "tinymist": {
-      "initialization_options": {
-        "exportPdf": "onSave",
-        "outputPath": "$root/$name",
-      },
-    },
-  },
   "preview_tabs": {
     "enabled": true,
     "enable_preview_from_file_finder": true,
