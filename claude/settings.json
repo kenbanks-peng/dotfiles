@@ -23,7 +23,8 @@
       "Agent",
       "ExitPlanMode",
       "Skill"
-    ]
+    ],
+    "defaultMode": "auto"
   },
   "hooks": {
     "SessionStart": [
@@ -98,6 +99,9 @@
       }
     }
   },
+  "effortLevel": "medium",
   "skipDangerousModePermissionPrompt": true,
-  "voiceEnabled": true
+  "skipAutoPermissionPrompt": true,
+  "voiceEnabled": true,
+  "model": "sonnet"
 }
