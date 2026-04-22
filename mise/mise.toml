@@ -85,6 +85,11 @@ dir = "{{cwd}}"
 tools = { bun = "latest" }
 run = "~/Software/Public/skills-tui/src/index.tsx"
 
+[tasks."ai:gitnexus"]
+description = "GitNexus local CLI and MCP server"
+dir = "{{cwd}}"
+run = "gitnexus"
+
 ##################   DB   ##################
 
 [tasks."database:db"]
