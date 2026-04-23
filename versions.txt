@@ -11,7 +11,7 @@ brainfm 0.0.271
 claude 1.3883.0,93ff6cb984386882b4bd9b6bca80d4cf5af8e13b
 cleanshot 4.8.8
 cmux 0.63.2
-codex 0.123.0
+codex 0.124.0
 cursor 3.1.17,fce1e9ab7844f9ea35793da01e634aa7e50bce90
 daisydisk 4.33.3
 db-browser-for-sqlite 3.13.1
@@ -125,7 +125,7 @@ flock 0.4.0
 fmt 12.1.0
 fontconfig 2.17.1
 freetype 2.14.3
-fresh-editor 0.2.25
+fresh-editor 0.3.0
 fribidi 1.0.16
 fx 39.2.0
 fzf 0.71.0
@@ -161,7 +161,7 @@ grype 0.111.1
 harfbuzz 14.2.0
 hdrhistogram_c 0.11.9
 hexyl 0.17.0
-highway 1.3.0
+highway 1.4.0
 himalaya 1.2.0
 htmlq 0.4.0
 htop 3.5.0
@@ -422,7 +422,7 @@ golangci-lint                                              2.11.4            ~/.
 lazygit                                                    0.61.1            ~/.config/mise/mise.toml  latest
 node                                                       24.15.0           ~/.config/mise/mise.toml  lts
 npm:@kilocode/cli                                          7.2.20            ~/.config/mise/mise.toml  latest
-npm:@mariozechner/pi-coding-agent                          0.69.0            ~/.config/mise/mise.toml  latest
+npm:@mariozechner/pi-coding-agent                          0.70.0            ~/.config/mise/mise.toml  latest
 npm:@mixedbread/mgrep                                      0.1.12            ~/.config/mise/mise.toml  latest
 npm:github-markdown-css                                    5.9.0             ~/.config/mise/mise.toml  latest
 npm:gitnexus                                               1.6.2             ~/.config/mise/mise.toml  latest
