@@ -319,7 +319,7 @@ qsv 19.1.0
 rclone 1.73.5
 re2 2025-11-05
 readline 8.3.3
-repomix 1.13.1
+repomix 1.14.0
 resvg 0.47.0
 ripgrep 15.1.0
 rubberband 4.0.0
@@ -328,8 +328,8 @@ sad 0.4.32
 sd 1.1.0
 sdl2 2.32.10
 sesh 2.26.0
-sevenzip 26.00
-shaderc 2026.1
+sevenzip 26.01
+shaderc 2026.2
 shellcheck 0.11.0
 simdjson 4.6.3
 simdutf 9.0.0
@@ -412,7 +412,7 @@ github:bee-san/RustScan                                    2.4.1             ~/.
 github:dlvhdr/diffnav                                      0.11.0            ~/.config/mise/mise.toml  latest
 github:dlvhdr/gh-dash                                      4.23.2            ~/.config/mise/mise.toml  latest
 github:h0rv/d2-mcp                                         1.2.0             ~/.config/mise/mise.toml  latest
-github:max-sixty/worktrunk                                 0.45.0            ~/.config/mise/mise.toml  latest
+github:max-sixty/worktrunk                                 0.45.1            ~/.config/mise/mise.toml  latest
 github:melkeydev/go-blueprint                              0.10.11
 github:neilotoole/sq                                       0.50.2            ~/.config/mise/mise.toml  latest
 github:o2sh/onefetch                                       2.27.1            ~/.config/mise/mise.toml  latest
@@ -428,7 +428,7 @@ npm:@mixedbread/mgrep                                      0.1.13            ~/.
 npm:github-markdown-css                                    5.9.0             ~/.config/mise/mise.toml  latest
 npm:gitnexus                                               1.6.3             ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                                              5.2.5             ~/.config/mise/mise.toml  latest
-npm:skills                                                 1.5.1             ~/.config/mise/mise.toml  latest
+npm:skills                                                 1.5.2             ~/.config/mise/mise.toml  latest
 npm:tsx                                                    4.21.0            ~/.config/mise/mise.toml  latest
 npm:uipro-cli                                              2.2.3             ~/.config/mise/mise.toml  latest
 npm:vite                                                   8.0.2
