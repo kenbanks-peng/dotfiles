@@ -31,7 +31,7 @@ linear-linear 1.28.13,260318pho1bttxr
 microsoft-auto-update 4.83.26040910
 microsoft-outlook 16.108.26041915
 mitmproxy 12.2.2
-ngrok 3.38.0,7EMiwS51we7,a
+ngrok 3.39.0,n4Qxg6LF3RB,a
 obsidian 1.12.7
 omnifocus 4.8.9
 opencode-desktop 1.14.28
@@ -48,7 +48,7 @@ typeface 4.3.0,5029
 vlc 3.0.23
 yaak 2026.3.1
 zed 0.233.10
-zen 1.19.9b
+zen 1.19.10b
 zoom 7.0.0.77593
 
 BREW FORMULAS
@@ -102,7 +102,7 @@ dav1d 1.5.3
 dblab 0.38.0
 deno 2.7.13
 doppler 3.76.0
-dotenvx 1.63.0
+dotenvx 1.64.0
 dvc 3.67.1_1
 eigen 5.0.1
 espeak-ng 1.52.0
@@ -300,7 +300,7 @@ qsv 19.1.0
 rclone 1.73.5
 re2 2025-11-05
 readline 8.3.3
-repomix 1.13.1
+repomix 1.14.0
 resvg 0.47.0
 ripgrep 15.1.0
 rubberband 4.0.0
@@ -308,8 +308,8 @@ sad 0.4.32
 sd 1.1.0
 sdl2 2.32.10
 sesh 2.26.0
-sevenzip 26.00
-shaderc 2026.1
+sevenzip 26.01
+shaderc 2026.2
 shellcheck 0.11.0
 simdjson 4.6.3
 simdutf 9.0.0
@@ -354,7 +354,7 @@ watchexec 2.5.1
 webp 1.6.0
 wget 1.25.0
 wgo 0.6.3
-worktrunk 0.44.0
+worktrunk 0.45.0
 x264 r3222
 x265 4.2
 xh 0.25.3
@@ -386,7 +386,7 @@ github:bee-san/RustScan            2.4.1             ~/.config/mise/mise.toml  l
 github:dlvhdr/diffnav              0.11.0            ~/.config/mise/mise.toml  latest
 github:dlvhdr/gh-dash              4.23.2            ~/.config/mise/mise.toml  latest
 github:h0rv/d2-mcp                 1.2.0             ~/.config/mise/mise.toml  latest
-github:max-sixty/worktrunk         0.44.0            ~/.config/mise/mise.toml  latest
+github:max-sixty/worktrunk         0.45.1            ~/.config/mise/mise.toml  latest
 github:neilotoole/sq               0.50.2            ~/.config/mise/mise.toml  latest
 github:o2sh/onefetch               2.27.1            ~/.config/mise/mise.toml  latest
 github:sharkdp/pastel              0.12.0            ~/.config/mise/mise.toml  latest
@@ -395,12 +395,13 @@ golangci-lint                      2.11.4            ~/.config/mise/mise.toml  l
 lazygit                            0.61.1            ~/.config/mise/mise.toml  latest
 node                               24.15.0           ~/.config/mise/mise.toml  lts
 npm:@kilocode/cli                  7.2.25            ~/.config/mise/mise.toml  latest
-npm:@mariozechner/pi-coding-agent  0.70.2            ~/.config/mise/mise.toml  latest
+npm:@mariozechner/pi-coding-agent  0.70.5            ~/.config/mise/mise.toml  latest
 npm:@mixedbread/mgrep              0.1.13            ~/.config/mise/mise.toml  latest
+npm:codeburn                       0.9.2             ~/.config/mise/mise.toml  latest
 npm:github-markdown-css            5.9.0             ~/.config/mise/mise.toml  latest
 npm:gitnexus                       1.6.3             ~/.config/mise/mise.toml  latest
 npm:md-to-pdf                      5.2.5             ~/.config/mise/mise.toml  latest
-npm:skills                         1.5.1             ~/.config/mise/mise.toml  latest
+npm:skills                         1.5.2             ~/.config/mise/mise.toml  latest
 npm:tsx                            4.21.0            ~/.config/mise/mise.toml  latest
 npm:uipro-cli                      2.2.3             ~/.config/mise/mise.toml  latest
 npm:vite                           8.0.8
