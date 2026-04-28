@@ -27,6 +27,7 @@ font-tex-gyre-termes 2.609,31_03_2026
 ghostty 1.3.1
 git-credential-manager 2.7.3
 google-chrome 147.0.7727.117
+google-chrome 147.0.7727.117
 google-drive 124.0.3
 grandperspective 3.6.4
 handy 0.8.2
@@ -41,6 +42,7 @@ microsoft-excel 16.108.26041915
 microsoft-outlook 16.108.26041915
 microsoft-word 16.108.26041915
 mitmproxy 12.2.2
+ngrok 3.39.0,n4Qxg6LF3RB,a
 ngrok 3.39.0,n4Qxg6LF3RB,a
 obsidian 1.12.7
 omnifocus 4.8.9
@@ -61,6 +63,8 @@ vlc 3.0.23
 yaak 2026.3.1
 zed 0.233.10
 zen 1.19.10b
+zed 0.233.10
+zen 1.19.10b
 zoom 7.0.0.77593
 
 BREW FORMULAS
@@ -70,6 +74,7 @@ ada-url 3.4.4
 age 1.3.1
 alerter 26.5
 aom 3.13.3
+apache-arrow 24.0.0
 apache-arrow 24.0.0
 asciinema 3.2.0
 ast-grep 0.42.1
@@ -83,9 +88,11 @@ aws-c-http 0.10.14
 aws-c-io 0.26.3
 aws-c-mqtt 0.15.2
 aws-c-s3 0.12.3
+aws-c-s3 0.12.3
 aws-c-sdkutils 0.2.4
 aws-checksums 0.2.10
 aws-crt-cpp 0.38.5
+aws-sdk-cpp 1.11.795
 aws-sdk-cpp 1.11.795
 bandwhich 0.23.1
 bash 5.3.9
@@ -99,11 +106,13 @@ caddy 2.11.2
 cairo 1.18.4
 carapace 1.6.4
 certifi 2026.4.22
+certifi 2026.4.22
 cffi 2.0.0_1
 choose-rust 1.3.7
 container 0.11.0
 coreutils 9.11
 croc 10.4.2
+cryptography 47.0.0
 cryptography 47.0.0
 csvtk 0.37.0
 curlie 1.8.2
@@ -118,6 +127,7 @@ dysk 3.6.0
 eigen 5.0.1
 espeak-ng 1.52.0
 fastfetch 2.62.1
+fastfetch 2.62.1
 fd 10.4.2
 ffmpeg 8.1_1
 figlet 2.2.5
@@ -127,13 +137,16 @@ fmt 12.1.0
 fontconfig 2.17.1
 freetype 2.14.3
 fresh-editor 0.3.0
+fresh-editor 0.3.0
 fribidi 1.0.16
 fx 39.2.0
+fzf 0.72.0
 fzf 0.72.0
 gawk 5.4.0
 gcc 15.2.0_1
 gemini-cli 0.38.2
 gettext 1.0
+gh 2.91.0
 gh 2.91.0
 giflib 6.1.3
 git 2.54.0
@@ -148,6 +161,8 @@ gmp 6.3.0
 gnu-getopt 2.42
 gnu-sed 4.10
 gnupg 2.5.19
+gnu-sed 4.10
+gnupg 2.5.19
 gnutls 3.8.12
 gobang 0.1.0-alpha.5
 gopls 0.21.1
@@ -159,6 +174,7 @@ graphite2 1.3.14
 grex 1.4.6
 grpc 1.80.0
 grype 0.111.1
+grype 0.111.1
 harfbuzz 14.2.0
 hdrhistogram_c 0.11.9
 hexyl 0.17.0
@@ -167,6 +183,7 @@ himalaya 1.2.0
 htmlq 0.4.0
 htop 3.5.0
 hub 2.14.2
+hurl 8.0.0
 hurl 8.0.0
 hyperfine 1.20.0
 icu4c@78 78.3
@@ -178,6 +195,7 @@ isl 0.27
 jc 1.25.6_1
 jid 1.1.2
 jj 0.40.0
+jjui 0.10.4
 jjui 0.10.4
 jnv 0.7.1
 jpeg-turbo 3.1.4.1
@@ -203,6 +221,7 @@ libevent 2.1.12_1
 libgcrypt 1.12.2
 libgit2 1.9.2_1
 libgpg-error 1.60
+libgpg-error 1.60
 libheif 1.21.2_2
 libidn2 2.3.8
 libksba 1.6.8
@@ -211,6 +230,7 @@ libnghttp2 1.69.0
 libnghttp3 1.15.0
 libngtcp2 1.22.1
 libogg 1.3.6
+libomp 22.1.4
 libomp 22.1.4
 libplacebo 7.360.1
 libpng 1.6.58
@@ -238,6 +258,7 @@ libxext 1.3.7
 libxrender 0.9.12
 libyaml 0.2.5
 little-cms2 2.19
+little-cms2 2.19
 llhttp 9.3.1
 llvm 22.1.4
 llvm@20 20.1.8
@@ -264,17 +285,21 @@ molten-vk 1.4.1
 mpdecimal 4.0.1
 mpfr 4.2.2
 mpg123 1.33.5
+mpg123 1.33.5
 mpv 0.41.0_4
 mujs 1.3.9
 navi 2.24.0
 nbytes 0.1.4
 ncurses 6.6
 neovim 0.12.2
+neovim 0.12.2
 nettle 3.10.2
+nim 2.2.10
 nim 2.2.10
 node 25.9.0_2
 npth 1.8
 nspr 4.38.2
+nss 3.123.1
 nss 3.123.1
 numpy 2.4.4
 obsidian-cli 0.2.3
@@ -282,6 +307,7 @@ oh-my-posh 29.10.0
 oniguruma 6.9.10
 onnx 1.21.0
 openai-whisper 20250625_4
+openblas 0.3.33
 openblas 0.3.33
 opencode 1.4.10
 openexr 3.4.10
@@ -291,6 +317,7 @@ openssl@3 3.6.2
 opus 1.6.1
 opusfile 0.12_1
 p11-kit 0.26.2
+packer 1.15.3
 packer 1.15.3
 pandoc 3.9.0.2
 pass 1.7.4
@@ -320,6 +347,7 @@ rclone 1.73.5
 re2 2025-11-05
 readline 8.3.3
 repomix 1.14.0
+repomix 1.14.0
 resvg 0.47.0
 ripgrep 15.1.0
 rubberband 4.0.0
@@ -330,8 +358,13 @@ sdl2 2.32.10
 sesh 2.26.0
 sevenzip 26.01
 shaderc 2026.2
+sesh 2.26.0
+sevenzip 26.01
+shaderc 2026.2
 shellcheck 0.11.0
 simdjson 4.6.3
+simdutf 9.0.0
+sk 4.6.1
 simdutf 9.0.0
 sk 4.6.1
 sketchybar 2.23.0
@@ -343,11 +376,13 @@ softnet 0.18.0
 sox 14.4.2_6
 spark 1.0.1
 sqlc 1.31.1
+sqlc 1.31.1
 sqlite 3.53.0
 sshs 4.7.2
 stow 2.4.1
 svgo 4.0.1
 svt-av1 4.1.0
+syft 1.43.0
 syft 1.43.0
 syncthing 2.0.16
 tailspin 6.0.0
@@ -386,6 +421,7 @@ x265 4.2
 xh 0.25.3
 xorgproto 2025.1
 xz 5.8.3
+yabai 7.1.24
 yabai 7.1.24
 yazi 26.1.22
 yq 4.53.2
