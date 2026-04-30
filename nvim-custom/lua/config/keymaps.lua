@@ -98,3 +98,10 @@ end, "resize right")
 -- local builtin = require("telescope.builtin")
 -- map('<leader>sf', builtin.find_files, 'telescope search files')
 map("<leader><space>", "<cmd>Yazi toggle<cr>", "yazi toggle")
+
+-------------------
+--    BUFFER     --
+-------------------
+map("<leader>bs", "<cmd>w<cr>", "buffer save")
+map("<leader>bc", "<cmd>up | bd<cr>", "buffer save & close")
+map("<leader>bq", "<cmd>bd!<cr>", "buffer close, no save")

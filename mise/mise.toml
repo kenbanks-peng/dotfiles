@@ -41,6 +41,7 @@ node = "lts"
 "pipx:harlequin" = "latest"
 python = "latest"
 "npm:gitnexus" = "latest"
+"npm:codeburn" = "latest"
 
 [settings]
 experimental = true
