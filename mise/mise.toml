@@ -91,6 +91,11 @@ description = "GitNexus local CLI and MCP server"
 dir = "{{cwd}}"
 run = "gitnexus"
 
+[tasks."ai:composio"]
+description = "Composio CLI"
+dir = "{{cwd}}"
+run = "~/.composio/composio"
+
 ##################   DB   ##################
 
 [tasks."database:db"]

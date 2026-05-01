@@ -5,7 +5,7 @@
       "repo": "anthropics/claude-plugins-official"
     },
     "installLocation": "/Users/kenbanks/.claude/plugins/marketplaces/claude-plugins-official",
-    "lastUpdated": "2026-04-22T18:53:00.473Z"
+    "lastUpdated": "2026-04-30T23:59:16.842Z"
   },
   "ui-ux-pro-max-skill": {
     "source": {
@@ -21,7 +21,7 @@
       "repo": "Lum1104/Understand-Anything"
     },
     "installLocation": "/Users/kenbanks/.claude/plugins/marketplaces/understand-anything",
-    "lastUpdated": "2026-03-23T15:09:54.016Z"
+    "lastUpdated": "2026-04-26T02:26:50.878Z"
   },
   "everything-claude-code": {
     "source": {
