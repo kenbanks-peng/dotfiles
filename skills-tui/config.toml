@@ -13,6 +13,7 @@ repos = [
   "obra/superpowers",
   "mattpocock/skills",
   "ooiyeefei/ccc",
+  "addyosmani/agent-skills",
   "kenbanks-peng/skills",
   "sickn33/antigravity-awesome-skills",
   "samber/cc-skills-golang"
