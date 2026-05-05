@@ -140,7 +140,7 @@ run = "/Users/kenbanks/Software/DevBox/tools/edit/z"
 
 ##################   FNOX   ##################
 
-[tasks."fnox:fnox"]
+[tasks."fnox:ss"]
 description = "Run shell with fnox secrets loaded"
 dir = "{{cwd}}"
 run = "fnox exec -- $SHELL"
