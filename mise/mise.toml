@@ -624,3 +624,8 @@ run = "/Users/kenbanks/Software/DevBox/tools/util/wm/bin/wm"
 description = "Weather report"
 dir = "{{cwd}}"
 run = "/Users/kenbanks/Software/DevBox/tools/util/wr"
+
+[tasks."util:ytp"]
+description = "YouTube player"
+dir = "{{cwd}}"
+run = "~/Software/Public/ytplayer/bin/ytplayer"
