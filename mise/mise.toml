@@ -43,6 +43,7 @@ python = "latest"
 "npm:gitnexus" = "latest"
 "npm:codeburn" = "latest"
 "pipx:graphifyy" = "latest"
+"npm:hunkdiff" = "latest"
 
 [settings]
 experimental = true
