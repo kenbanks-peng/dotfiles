@@ -441,8 +441,22 @@ set -g detach-on-destroy off
 # C-t: new session prompt
 bind -n C-t command-prompt -p "new session name:" "if-shell -F '%1' 'new-session -s \"%%\"'"
 
-# C-p: next session
-bind -n C-p switch-client -n
+# next/prev session, skipping the "quick" session used by ghostty's quick terminal
+bind -n C-p run-shell '\
+  current=$(tmux display -p "#S"); \
+  next=$(tmux list-sessions -F "#{session_name}" | grep -vx quick | awk -v c="$current" '"'"'$0==c{found=1;next} found{print;exit}'"'"' ); \
+  [ -z "$next" ] && next=$(tmux list-sessions -F "#{session_name}" | grep -vx quick | head -n1); \
+  [ -n "$next" ] && [ "$next" != "$current" ] && tmux switch-client -t "$next"'
+bind ")" run-shell '\
+  current=$(tmux display -p "#S"); \
+  next=$(tmux list-sessions -F "#{session_name}" | grep -vx quick | awk -v c="$current" '"'"'$0==c{found=1;next} found{print;exit}'"'"' ); \
+  [ -z "$next" ] && next=$(tmux list-sessions -F "#{session_name}" | grep -vx quick | head -n1); \
+  [ -n "$next" ] && [ "$next" != "$current" ] && tmux switch-client -t "$next"'
+bind "(" run-shell '\
+  current=$(tmux display -p "#S"); \
+  prev=$(tmux list-sessions -F "#{session_name}" | grep -vx quick | awk -v c="$current" '"'"'$0==c{print last;exit} {last=$0}'"'"' ); \
+  [ -z "$prev" ] && prev=$(tmux list-sessions -F "#{session_name}" | grep -vx quick | tail -n1); \
+  [ -n "$prev" ] && [ "$prev" != "$current" ] && tmux switch-client -t "$prev"'
 
 
 
