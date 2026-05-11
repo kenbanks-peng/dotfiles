@@ -5,7 +5,6 @@ repos = [
   "vercel-labs/skills",
   "anthropics/skills",
   "forrestchang/andrej-karpathy-skills",
-  "huggingface/skills",
   "openai/skills",
   "msmps/opentui-skill",
   "vercel-labs/agent-skills",

@@ -60,7 +60,7 @@
     "zhipuai-coding-plan"
   ],
   "plugin": [
-    "oh-my-openagent@latest",
-    "./plugin/keychain-provider.js"
+    "./plugin/keychain-provider.js",
+    "oh-my-openagent@latest"
   ]
 }
