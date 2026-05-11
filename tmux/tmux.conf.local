@@ -438,6 +438,11 @@ bind-key x kill-pane
 # don't exit from tmux when closing a session
 set -g detach-on-destroy off
 
+# but: if a large (non-quick) client gets switched to the "quick" session
+# (because its prior session was destroyed and quick is the only one left),
+# move it to another real session or detach.
+set-hook -g session-closed 'run-shell -b "$HOME/Software/Public/dotfiles/tmux/avoid-quick.sh"'
+
 # C-t: new session prompt
 bind -n C-t command-prompt -p "new session name:" "if-shell -F '%1' 'new-session -s \"%%\"'"
 
