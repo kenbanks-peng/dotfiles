@@ -17,10 +17,12 @@
   ],
   "packages": [
     "~/Software/DevBox/tools/ai/pi-keychain-provider",
-    "npm:pi-extmgr"
+    "npm:pi-extmgr",
+    "npm:pi-memctx"
   ],
   "quietStartup": true,
   "hideThinkingBlock": true,
   "doubleEscapeAction": "tree",
-  "theme": "dark"
+  "theme": "dark",
+  "editorPaddingX": 2
 }
