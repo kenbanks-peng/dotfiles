@@ -7,7 +7,7 @@
     "keychain-anthropic/claude-sonnet-4-6",
     "keychain-anthropic/claude-haiku-4-5"
   ],
-  "lastChangelogVersion": "0.56.1",
+  "lastChangelogVersion": "0.74.0",
   "packages": [
     "~/Software/DevBox/ai/pi/cc-keychain-provider",
     "npm:pi-extmgr",

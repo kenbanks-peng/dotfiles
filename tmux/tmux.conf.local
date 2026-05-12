@@ -397,6 +397,7 @@ set -g status-position bottom
 
 # pass through extended keys (CSI u) so apps like Claude Code can see shift+enter
 set -s extended-keys on
+set -g extended-keys-format csi-u
 set -as terminal-features ',xterm-ghostty:extkeys'
 
 

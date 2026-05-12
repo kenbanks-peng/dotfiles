@@ -7,8 +7,21 @@
 // custom settings, run `zed: open default settings` from the
 // command palette
 {
+  "project_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
   "context_servers": {},
   "agent": {
+    "dock": "right",
     "inline_assistant_model": {
       "provider": "openai",
       "model": "gpt-3.5-turbo",
