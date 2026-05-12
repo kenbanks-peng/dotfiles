@@ -1,12 +1,15 @@
 {
-  "defaultModel": "",
-  "defaultProvider": "",
+  "defaultModel": "claude-sonnet-4-6",
+  "defaultProvider": "keychain-anthropic",
   "defaultThinkingLevel": "medium",
   "enabledModels": [
+    "keychain-anthropic/claude-opus-4-6",
+    "keychain-anthropic/claude-sonnet-4-6",
+    "keychain-anthropic/claude-haiku-4-5"
   ],
   "lastChangelogVersion": "0.74.0",
   "packages": [
-    "~/Software/DevBox/ai/pi-keychain-provider",
+    "~/Software/DevBox/tools/ai/pi-keychain-provider",
     "npm:pi-extmgr",
     "npm:oh-pi"
   ],
