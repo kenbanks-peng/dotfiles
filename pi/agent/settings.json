@@ -8,10 +8,16 @@
     "keychain-anthropic/claude-haiku-4-5"
   ],
   "lastChangelogVersion": "0.74.0",
+  "npmCommand": [
+    "mise",
+    "exec",
+    "node@24",
+    "--",
+    "npm"
+  ],
   "packages": [
     "~/Software/DevBox/tools/ai/pi-keychain-provider",
-    "npm:pi-extmgr",
-    "npm:oh-pi"
+    "npm:pi-extmgr"
   ],
   "quietStartup": true,
   "hideThinkingBlock": true,
