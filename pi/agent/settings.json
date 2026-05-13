@@ -23,6 +23,6 @@
   "quietStartup": true,
   "hideThinkingBlock": true,
   "doubleEscapeAction": "tree",
-  "theme": "dark",
+  "theme": "terminal",
   "editorPaddingX": 2
 }
