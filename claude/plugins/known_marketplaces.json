@@ -5,7 +5,7 @@
       "repo": "anthropics/claude-plugins-official"
     },
     "installLocation": "/Users/kenbanks/.claude/plugins/marketplaces/claude-plugins-official",
-    "lastUpdated": "2026-05-08T19:13:06.916Z"
+    "lastUpdated": "2026-05-13T15:03:04.500Z"
   },
   "ui-ux-pro-max-skill": {
     "source": {
@@ -30,5 +30,13 @@
     },
     "installLocation": "/Users/kenbanks/.claude/plugins/marketplaces/everything-claude-code",
     "lastUpdated": "2026-03-24T14:55:45.757Z"
+  },
+  "context-mode": {
+    "source": {
+      "source": "github",
+      "repo": "mksglu/context-mode"
+    },
+    "installLocation": "/Users/kenbanks/.claude/plugins/marketplaces/context-mode",
+    "lastUpdated": "2026-05-12T20:22:28.772Z"
   }
 }

@@ -2,7 +2,7 @@
 {
   "statusLine": {
       "type": "command",
-      "command": "oh-my-posh claude --config ~/Software/Public/dotfiles/omposh/claude.toml",
+      "command": "oh-my-posh claude --config ~/Software/Public/dotfiles/omposh/agent.toml",
       "padding": 0
   }
 }
