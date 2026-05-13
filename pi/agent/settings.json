@@ -23,7 +23,9 @@
     "npm:pi-hermes-memory",
     "npm:@juicesharp/rpiv-pi",
     "npm:@juicesharp/rpiv-args",
-    "npm:@heart-of-gold/toolkit"
+    "npm:@heart-of-gold/toolkit",
+    "npm:pi-context",
+    "npm:@the-forge-flow/lumen"
   ],
   "quietStartup": true,
   "hideThinkingBlock": true,
