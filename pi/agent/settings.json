@@ -25,5 +25,8 @@
   "hideThinkingBlock": true,
   "doubleEscapeAction": "tree",
   "theme": "terminal",
-  "editorPaddingX": 2
+  "editorPaddingX": 2,
+  "terminal": {
+    "clearOnShrink": true
+  }
 }
