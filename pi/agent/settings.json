@@ -16,7 +16,9 @@
     "npm"
   ],
   "packages": [
-    "~/Software/DevBox/tools/ai/pi-keychain-provider"
+    "../../../Software/DevBox/tools/ai/util/pi/pi-keychain-provider",
+    "npm:pi-resource-center",
+    "npm:pi-terminal-theme"
   ],
   "quietStartup": true,
   "hideThinkingBlock": true,
