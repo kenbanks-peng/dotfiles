@@ -16,10 +16,10 @@
     "npm"
   ],
   "packages": [
-    "../../../Software/DevBox/tools/ai/util/pi/pi-keychain-provider",
     "npm:pi-resource-center",
     "npm:pi-terminal-theme",
-    "../../../Software/DevBox/tools/ai/util/pi/pi-status-footer/pi-status-footer.ts"
+    "../../../Software/DevBox/tools/ai/util/pi/pi-status-footer/pi-status-footer.ts",
+    "../../../Software/DevBox/tools/ai/util/pi/pi-keychain-provider/pi-keychain-provider.ts"
   ],
   "quietStartup": true,
   "hideThinkingBlock": true,
