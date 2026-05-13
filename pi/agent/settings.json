@@ -1,9 +1,9 @@
 {
-  "defaultModel": "claude-sonnet-4-6",
+  "defaultModel": "claude-opus-4-7",
   "defaultProvider": "keychain-anthropic",
   "defaultThinkingLevel": "medium",
   "enabledModels": [
-    "keychain-anthropic/claude-opus-4-6",
+    "keychain-anthropic/claude-opus-4-7",
     "keychain-anthropic/claude-sonnet-4-6",
     "keychain-anthropic/claude-haiku-4-5"
   ],
@@ -18,7 +18,8 @@
   "packages": [
     "../../../Software/DevBox/tools/ai/util/pi/pi-keychain-provider",
     "npm:pi-resource-center",
-    "npm:pi-terminal-theme"
+    "npm:pi-terminal-theme",
+    "../../../Software/DevBox/tools/ai/util/pi/pi-status-footer/pi-status-footer.ts"
   ],
   "quietStartup": true,
   "hideThinkingBlock": true,

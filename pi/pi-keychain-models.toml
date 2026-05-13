@@ -1,0 +1,21 @@
+# pi-keychain-provider model overrides
+# Entries merged by `id`: matching defaults are overridden, new entries appended.
+# Defaults live in pi-keychain-provider/index.ts (DEFAULT_MODELS).
+
+[[models]]
+id = "claude-opus-4-7"
+name = "Claude Opus 4.7 (Keychain)"
+reasoning = true
+input = ["text", "image"]
+contextWindow = 200000
+maxTokens = 64000
+cost = { input = 5, output = 25, cacheRead = 0.5, cacheWrite = 6.25 }
+
+[[models]]
+id = "claude-opus-4-7[1m]"
+name = "Claude Opus 4.7 1M (Keychain)"
+reasoning = true
+input = ["text", "image"]
+contextWindow = 1000000
+maxTokens = 64000
+cost = { input = 6, output = 22.50, cacheRead = 0.60, cacheWrite = 7.50 }
