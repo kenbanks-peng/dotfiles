@@ -16,9 +16,7 @@
     "npm"
   ],
   "packages": [
-    "~/Software/DevBox/tools/ai/pi-keychain-provider",
-    "npm:pi-extmgr",
-    "npm:pi-memctx"
+    "~/Software/DevBox/tools/ai/pi-keychain-provider"
   ],
   "quietStartup": true,
   "hideThinkingBlock": true,
