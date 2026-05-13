@@ -19,7 +19,11 @@
     "npm:pi-resource-center",
     "npm:pi-terminal-theme",
     "../../../Software/DevBox/tools/ai/util/pi/pi-status-footer/pi-status-footer.ts",
-    "../../../Software/DevBox/tools/ai/util/pi/pi-keychain-provider/pi-keychain-provider.ts"
+    "../../../Software/DevBox/tools/ai/util/pi/pi-keychain-provider/pi-keychain-provider.ts",
+    "npm:pi-hermes-memory",
+    "npm:@juicesharp/rpiv-pi",
+    "npm:@juicesharp/rpiv-args",
+    "npm:@heart-of-gold/toolkit"
   ],
   "quietStartup": true,
   "hideThinkingBlock": true,
