@@ -1,1 +1,0 @@
-/Users/kenbanks/Software/DevBox/zsh/pre-completions/omp.zsh
