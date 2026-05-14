@@ -1,21 +1,32 @@
-# pi-keychain-provider model overrides
-# Entries merged by `id`: matching defaults are overridden, new entries appended.
-# Defaults live in pi-keychain-provider/index.ts (DEFAULT_MODELS).
+# pi-keychain-provider models
+# All keychain-anthropic models are defined here.
+# Edit this file to add, remove, or override models.
+# Optional `apiId` lets a sanitized id map to a bracketed API model id
+# (e.g. apiId = "claude-opus-4-7[1m]").
 
 [[models]]
 id = "claude-opus-4-7"
 name = "Claude Opus 4.7 (Keychain)"
 reasoning = true
 input = ["text", "image"]
-contextWindow = 200000
+contextWindow = 1000000
 maxTokens = 64000
 cost = { input = 5, output = 25, cacheRead = 0.5, cacheWrite = 6.25 }
 
 [[models]]
-id = "claude-opus-4-7[1m]"
-name = "Claude Opus 4.7 1M (Keychain)"
+id = "claude-sonnet-4-6"
+name = "Claude Sonnet 4.6 (Keychain)"
 reasoning = true
 input = ["text", "image"]
-contextWindow = 1000000
+contextWindow = 200000
 maxTokens = 64000
-cost = { input = 6, output = 22.50, cacheRead = 0.60, cacheWrite = 7.50 }
+cost = { input = 3, output = 15, cacheRead = 0.3, cacheWrite = 3.75 }
+
+[[models]]
+id = "claude-haiku-4-5"
+name = "Claude Haiku 4.5 (Keychain)"
+reasoning = false
+input = ["text", "image"]
+contextWindow = 200000
+maxTokens = 8192
+cost = { input = 0.8, output = 4, cacheRead = 0.08, cacheWrite = 1 }
