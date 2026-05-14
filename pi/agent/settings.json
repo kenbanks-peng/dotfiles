@@ -16,10 +16,9 @@
     "npm"
   ],
   "packages": [
-    "../../../Software/DevBox/tools/ai/util/pi/pi-status-footer/pi-status-footer.ts",
+    "../../../Software/DevBox/tools/ai/util/pi/pi-theme/pi-theme.ts",
     "../../../Software/DevBox/tools/ai/util/pi/pi-keychain-provider/pi-keychain-provider.ts",
     "npm:pi-resource-center",
-    "npm:pi-terminal-theme",
     "npm:@tintinweb/pi-subagents",
     "npm:context-mode",
     "npm:pi-mcp-adapter",
@@ -36,11 +35,17 @@
     "npm:@the-forge-flow/lumen"
   ],
   "quietStartup": true,
-  "hideThinkingBlock": false,
+  "hideThinkingBlock": true,
   "doubleEscapeAction": "tree",
-  "theme": "terminal",
+  "theme": "dark",
   "editorPaddingX": 2,
   "terminal": {
     "clearOnShrink": true
-  }
+  },
+  "collapseChangelog": true,
+  "treeFilterMode": "default",
+  "warnings": {
+    "anthropicExtraUsage": true
+  },
+  "enableInstallTelemetry": true
 }
