@@ -444,8 +444,8 @@ set -g detach-on-destroy off
 # move it to another real session or detach.
 set-hook -g session-closed 'run-shell -b "$HOME/Software/Public/dotfiles/tmux/avoid-quick.sh"'
 
-# C-t: new session prompt
-bind -n C-t command-prompt -p "new session name:" "if-shell -F '%1' 'new-session -s \"%%\"'"
+# C-y: new session prompt (C-t reserved for pi)
+bind -n C-y command-prompt -p "new session name:" "if-shell -F '%1' 'new-session -s \"%%\"'"
 
 # next/prev session, skipping the "quick" session used by ghostty's quick terminal
 bind -n C-p run-shell '\
