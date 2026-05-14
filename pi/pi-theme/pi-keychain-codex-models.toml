@@ -1,0 +1,22 @@
+# pi-keychain-provider codex models
+# All keychain-codex models are defined here.
+# Edit this file to add, remove, or override models.
+# Cost is 0 because access is via ChatGPT Plus/Pro subscription.
+
+[[models]]
+id = "gpt-5-codex"
+name = "GPT-5 Codex (Keychain)"
+reasoning = true
+input = ["text", "image"]
+contextWindow = 400000
+maxTokens = 128000
+cost = { input = 0, output = 0, cacheRead = 0, cacheWrite = 0 }
+
+[[models]]
+id = "gpt-5"
+name = "GPT-5 (Keychain)"
+reasoning = true
+input = ["text", "image"]
+contextWindow = 400000
+maxTokens = 128000
+cost = { input = 0, output = 0, cacheRead = 0, cacheWrite = 0 }
