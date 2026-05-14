@@ -1,0 +1,9 @@
+{
+  "allowList": [],
+  "allowedGroups": [],
+  "ignoredNumbers": [],
+  "status": "disconnected",
+  "hasAuthState": false,
+  "openaiKey": "",
+  "visionModel": "gpt-4o"
+}

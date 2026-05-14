@@ -36,6 +36,14 @@
             "command": "$CCHOOKS/session_start.py"
           }
         ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"/Users/kenbanks/.claude/hooks/context-mode-cache-heal.mjs\""
+          }
+        ]
       }
     ],
     "Stop": [
@@ -94,7 +102,8 @@
     "rust-analyzer-lsp@claude-plugins-official": true,
     "lua-lsp@claude-plugins-official": true,
     "context7@claude-plugins-official": true,
-    "clangd-lsp@claude-plugins-official": true
+    "clangd-lsp@claude-plugins-official": true,
+    "context-mode@context-mode": true
   },
   "extraKnownMarketplaces": {
     "ui-ux-pro-max-skill": {
