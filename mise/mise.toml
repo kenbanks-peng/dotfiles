@@ -101,15 +101,7 @@ run = "~/.composio/composio"
 [tasks."ai:pii"]
 description = "Pi WhatsApp online mode"
 dir = "{{cwd}}"
-run = '''
-bash -c '
-if [ "$#" -eq 0 ] || [ -z "${1:-}" ] || [[ "$1" == -* ]]; then
-  exec pi --whatsapp-pi-online "$@"
-fi
-
-exec pi "$@"
-' -- {{arg(name="args", var=true, default="")}}
-'''
+run = "pi --whatsapp-pi-online {{arg(name=\"args\", var=true, default=\"\")}}"
 
 ##################   DB   ##################
 
