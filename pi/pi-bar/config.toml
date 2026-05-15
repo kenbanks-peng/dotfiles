@@ -1,13 +1,13 @@
-# pi-theme configuration
-# Color values may be hex colors (#rrggbb) or references to theme vars / other colors.
+# pi-bar configuration
+# Color values may be hex colors (#rrggbb) or references to other colors in this file.
 
 [colors]
 model_bg = "#005b95"
 thinking_bg = "#005b95"
-context_ok_bg = "status_ok"
-context_warn_bg = "status_warn"
-context_alert_bg = "status_alert"
-work_bg = "surface0"
+context_ok_bg = "#006b1d"
+context_warn_bg = "#a17a00"
+context_alert_bg = "#972e2d"
+work_bg = "#313244"
 work_fg = "#2dd4bf"
 status_ok = "#006b1d"
 status_warn = "#a17a00"
@@ -15,37 +15,42 @@ status_alert = "#972e2d"
 tool_card_pending = "#252535"
 tool_card_success = "#1f2e26"
 tool_card_error = "#3a212a"
+text = "#cdd6f4"
 
 [footer]
 reserved_rows = 7
 
-# Footer layout is fully dynamic. Add, remove, reorder, or duplicate fields.
-# Supported field values: "model", "thinking", "context", "statuses", "activity", "text".
-[[footer.fields]]
-field = "model"
+# Footer layout is fully dynamic. Add, remove, reorder, or duplicate segments.
+# Supported segment types: "model", "thinking", "context", "statuses", "activity", "text", "command".
+# command segments evaluate a JavaScript expression with segment, ctx, pi, state,
+# model, and formatContextWindow in scope.
+[[footer.segments]]
+type = "command"
+command = "model?.id ?? segment.empty_text ?? ''"
 fg = "text"
 bg = "model_bg"
 empty_text = "no model"
 
-[[footer.fields]]
-field = "thinking"
+[[footer.segments]]
+type = "command"
+command = "model?.reasoning ? pi.getThinkingLevel() : ''"
 fg = "text"
 bg = "thinking_bg"
 show_only_for_reasoning_models = true
 
-[[footer.fields]]
-field = "context"
+[[footer.segments]]
+type = "context"
 fg = "text"
 include_window = true
 window_prefix = " of "
 warn_percent = 50
 alert_percent = 75
 
-[[footer.fields]]
-field = "statuses"
+[[footer.segments]]
+type = "statuses"
 
-[[footer.fields]]
-field = "activity"
+[[footer.segments]]
+type = "activity"
 fg = "work_fg"
 bg = "work_bg"
 working_text = "working"

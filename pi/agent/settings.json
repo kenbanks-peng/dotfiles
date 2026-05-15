@@ -19,8 +19,6 @@
     "npm"
   ],
   "packages": [
-    "../../../Software/DevBox/tools/ai/util/pi/pi-theme/index.ts",
-    "../../../Software/DevBox/tools/ai/util/pi/pi-keychain-provider/pi-keychain-provider.ts",
     "npm:pi-resource-center",
     "npm:@tintinweb/pi-subagents",
     "npm:pi-mcp-adapter",
@@ -33,7 +31,8 @@
     "npm:@juicesharp/rpiv-btw",
     "npm:whatsapp-pi",
     "npm:context-mode",
-    "../../Software/DevBox/tools/ai/util/pi/pi-theme/index.ts"
+    "../../../Software/DevBox/tools/ai/util/pi/pi-keychain-provider/pi-keychain-provider.ts",
+    "../../../Software/DevBox/tools/ai/util/pi/pi-bar/index.ts"
   ],
   "quietStartup": true,
   "hideThinkingBlock": true,
