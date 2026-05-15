@@ -98,7 +98,7 @@ description = "Composio CLI"
 dir = "{{cwd}}"
 run = "~/.composio/composio"
 
-[tasks."ai:pi"]
+[tasks."ai:pii"]
 description = "Pi WhatsApp online mode"
 dir = "{{cwd}}"
 run = '''

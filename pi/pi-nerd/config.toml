@@ -1,0 +1,96 @@
+# pi-theme configuration
+# Color values may be hex colors (#rrggbb) or references to theme vars / other colors.
+
+[colors]
+model_bg = "#005b95"
+thinking_bg = "#005b95"
+context_ok_bg = "status_ok"
+context_warn_bg = "status_warn"
+context_alert_bg = "status_alert"
+work_bg = "surface0"
+work_fg = "#2dd4bf"
+status_ok = "#006b1d"
+status_warn = "#a17a00"
+status_alert = "#972e2d"
+tool_card_pending = "#252535"
+tool_card_success = "#1f2e26"
+tool_card_error = "#3a212a"
+
+[footer]
+reserved_rows = 7
+
+# Footer layout is fully dynamic. Add, remove, reorder, or duplicate fields.
+# Supported field values: "model", "thinking", "context", "statuses", "activity", "text".
+[[footer.fields]]
+field = "model"
+fg = "text"
+bg = "model_bg"
+empty_text = "no model"
+
+[[footer.fields]]
+field = "thinking"
+fg = "text"
+bg = "thinking_bg"
+show_only_for_reasoning_models = true
+
+[[footer.fields]]
+field = "context"
+fg = "text"
+include_window = true
+window_prefix = " of "
+warn_percent = 50
+alert_percent = 75
+
+[[footer.fields]]
+field = "statuses"
+
+[[footer.fields]]
+field = "activity"
+fg = "work_fg"
+bg = "work_bg"
+working_text = "working"
+spinner_frames = ["⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏"]
+spinner_interval_ms = 100
+min_display_ms = 1000
+min_width = 11
+
+[footer.status_fallback]
+fg = "work_fg"
+bg = "work_bg"
+separator = "  "
+
+[[statuses]]
+id = "whatsapp"
+order = 10
+match = "\\bwhatsapp\\b"
+text = "  "
+fg = "text"
+default_bg = "status_warn"
+
+[[statuses.states]]
+name = "connected"
+match = "\\bconnected\\b"
+bg = "status_ok"
+
+[[statuses.states]]
+name = "disconnected"
+match = "\\bdisconnected\\b"
+bg = "status_alert"
+
+[[statuses]]
+id = "lsp"
+order = 20
+match = "\\blsp\\b"
+text = " LSP "
+fg = "text"
+default_bg = "status_warn"
+
+[[statuses.states]]
+name = "active"
+match = "\\bactive\\b"
+bg = "status_ok"
+
+[[statuses.states]]
+name = "inactive"
+match = "\\binactive\\b"
+bg = "status_alert"
