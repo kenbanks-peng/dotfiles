@@ -19,32 +19,26 @@
     "npm"
   ],
   "packages": [
+    "../../../Software/DevBox/tools/ai/util/pi/pi-theme/index.ts",
     "../../../Software/DevBox/tools/ai/util/pi/pi-keychain-provider/pi-keychain-provider.ts",
     "npm:pi-resource-center",
     "npm:@tintinweb/pi-subagents",
     "npm:context-mode",
     "npm:pi-mcp-adapter",
     "npm:pi-web-access",
-    "npm:@plannotator/pi-extension",
     "npm:@juicesharp/rpiv-ask-user-question",
     "npm:pi-lens",
     "npm:@juicesharp/rpiv-todo",
     "npm:pi-simplify",
     "npm:pi-markdown-preview",
     "npm:@juicesharp/rpiv-btw",
-    "npm:@samfp/pi-memory",
-    "npm:whatsapp-pi",
-    "npm:@the-forge-flow/lumen",
-    "../../../Software/DevBox/tools/ai/util/pi/pi-theme/index.ts"
+    "npm:whatsapp-pi"
   ],
   "quietStartup": true,
   "hideThinkingBlock": true,
   "doubleEscapeAction": "tree",
   "theme": "catppuccin-mocha",
   "editorPaddingX": 2,
-  "terminal": {
-    "clearOnShrink": false
-  },
   "collapseChangelog": true,
   "treeFilterMode": "default",
   "warnings": {
