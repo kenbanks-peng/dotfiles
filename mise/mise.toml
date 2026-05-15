@@ -44,6 +44,7 @@ python = "latest"
 "npm:codeburn" = "latest"
 "pipx:graphifyy" = "latest"
 "npm:hunkdiff" = "latest"
+"pipx:xonsh" = "latest"
 
 [settings]
 experimental = true

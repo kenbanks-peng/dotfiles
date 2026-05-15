@@ -10,7 +10,7 @@
   ],
   "allowedGroups": [],
   "ignoredNumbers": [],
-  "status": "connected",
+  "status": "disconnected",
   "hasAuthState": true,
   "openaiKey": "",
   "visionModel": "gpt-4o"
