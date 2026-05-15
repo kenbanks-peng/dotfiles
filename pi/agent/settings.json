@@ -1,48 +1,54 @@
 {
-	"defaultModel": "gpt-5-codex",
-	"defaultProvider": "keychain-codex",
-	"defaultThinkingLevel": "medium",
-	"enabledModels": [
-		"keychain-anthropic/claude-opus-4-7",
-		"keychain-anthropic/claude-sonnet-4-6",
-		"keychain-anthropic/claude-haiku-4-5",
-		"keychain-codex/gpt-5-codex",
-		"keychain-codex/gpt-5"
-	],
-	"lastChangelogVersion": "0.74.0",
-	"npmCommand": ["mise", "exec", "node@24", "--", "npm"],
-	"packages": [
-		"../../../Software/DevBox/tools/ai/util/pi/pi-theme/pi-theme.ts",
-		"../../../Software/DevBox/tools/ai/util/pi/pi-keychain-provider/pi-keychain-provider.ts",
-		"npm:pi-resource-center",
-		"npm:@tintinweb/pi-subagents",
-		"npm:context-mode",
-		"npm:pi-mcp-adapter",
-		"npm:pi-web-access",
-		"npm:@plannotator/pi-extension",
-		"npm:@juicesharp/rpiv-ask-user-question",
-		"npm:pi-lens",
-		"npm:@juicesharp/rpiv-todo",
-		"npm:pi-simplify",
-		"npm:pi-markdown-preview",
-		"npm:@juicesharp/rpiv-btw",
-		"npm:@samfp/pi-memory",
-		"npm:whatsapp-pi",
-		"npm:@the-forge-flow/lumen",
-		"../../../Software/DevBox/tools/ai/util/pi/pi-theme/index.ts"
-	],
-	"quietStartup": true,
-	"hideThinkingBlock": true,
-	"doubleEscapeAction": "tree",
-	"theme": "catppuccin-mocha",
-	"editorPaddingX": 2,
-	"terminal": {
-		"clearOnShrink": true
-	},
-	"collapseChangelog": true,
-	"treeFilterMode": "default",
-	"warnings": {
-		"anthropicExtraUsage": true
-	},
-	"enableInstallTelemetry": true
+  "defaultModel": "gpt-5.5",
+  "defaultProvider": "keychain-codex",
+  "defaultThinkingLevel": "medium",
+  "enabledModels": [
+    "keychain-anthropic/claude-opus-4-7",
+    "keychain-anthropic/claude-sonnet-4-6",
+    "keychain-anthropic/claude-haiku-4-5",
+    "keychain-codex/gpt-5.5",
+    "keychain-codex/gpt-5.4",
+    "keychain-codex/gpt-5.4-mini"
+  ],
+  "lastChangelogVersion": "0.74.0",
+  "npmCommand": [
+    "mise",
+    "exec",
+    "node@24",
+    "--",
+    "npm"
+  ],
+  "packages": [
+    "../../../Software/DevBox/tools/ai/util/pi/pi-keychain-provider/pi-keychain-provider.ts",
+    "npm:pi-resource-center",
+    "npm:@tintinweb/pi-subagents",
+    "npm:context-mode",
+    "npm:pi-mcp-adapter",
+    "npm:pi-web-access",
+    "npm:@plannotator/pi-extension",
+    "npm:@juicesharp/rpiv-ask-user-question",
+    "npm:pi-lens",
+    "npm:@juicesharp/rpiv-todo",
+    "npm:pi-simplify",
+    "npm:pi-markdown-preview",
+    "npm:@juicesharp/rpiv-btw",
+    "npm:@samfp/pi-memory",
+    "npm:whatsapp-pi",
+    "npm:@the-forge-flow/lumen",
+    "../../../Software/DevBox/tools/ai/util/pi/pi-theme/index.ts"
+  ],
+  "quietStartup": true,
+  "hideThinkingBlock": true,
+  "doubleEscapeAction": "tree",
+  "theme": "catppuccin-mocha",
+  "editorPaddingX": 2,
+  "terminal": {
+    "clearOnShrink": false
+  },
+  "collapseChangelog": true,
+  "treeFilterMode": "default",
+  "warnings": {
+    "anthropicExtraUsage": true
+  },
+  "enableInstallTelemetry": true
 }
