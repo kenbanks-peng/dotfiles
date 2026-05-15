@@ -23,7 +23,6 @@
     "../../../Software/DevBox/tools/ai/util/pi/pi-keychain-provider/pi-keychain-provider.ts",
     "npm:pi-resource-center",
     "npm:@tintinweb/pi-subagents",
-    "npm:context-mode",
     "npm:pi-mcp-adapter",
     "npm:pi-web-access",
     "npm:@juicesharp/rpiv-ask-user-question",
@@ -32,13 +31,13 @@
     "npm:pi-simplify",
     "npm:pi-markdown-preview",
     "npm:@juicesharp/rpiv-btw",
-    "npm:whatsapp-pi"
+    "npm:whatsapp-pi",
+    "npm:context-mode"
   ],
   "quietStartup": true,
   "hideThinkingBlock": true,
   "doubleEscapeAction": "tree",
   "theme": "catppuccin-mocha",
-  "editorPaddingX": 2,
   "collapseChangelog": true,
   "treeFilterMode": "default",
   "warnings": {

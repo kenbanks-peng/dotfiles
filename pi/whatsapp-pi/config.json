@@ -1,9 +1,17 @@
 {
-  "allowList": [],
+  "allowList": [
+    {
+      "number": "+15196196897"
+    },
+    {
+      "number": "+89623317475543",
+      "name": "Ken Banks"
+    }
+  ],
   "allowedGroups": [],
   "ignoredNumbers": [],
   "status": "disconnected",
-  "hasAuthState": false,
+  "hasAuthState": true,
   "openaiKey": "",
   "visionModel": "gpt-4o"
 }

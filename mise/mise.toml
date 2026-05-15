@@ -98,6 +98,11 @@ description = "Composio CLI"
 dir = "{{cwd}}"
 run = "~/.composio/composio"
 
+[tasks."ai:pi"]
+description = "Pi WhatsApp online mode"
+dir = "{{cwd}}"
+run = "pi --whatsapp-pi-online"
+
 ##################   DB   ##################
 
 [tasks."database:db"]
