@@ -9,9 +9,15 @@
     }
   ],
   "allowedGroups": [],
-  "ignoredNumbers": [],
+  "ignoredNumbers": [
+    {
+      "number": "120363149473706131@g.us",
+      "name": "Abby Ding"
+    }
+  ],
   "status": "disconnected",
   "hasAuthState": true,
   "openaiKey": "",
-  "visionModel": "gpt-4o"
+  "visionModel": "gpt-4o",
+  "operatorJid": ""
 }

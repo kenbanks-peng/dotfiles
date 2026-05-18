@@ -10,7 +10,7 @@
     "keychain-codex/gpt-5.4",
     "keychain-codex/gpt-5.4-mini"
   ],
-  "lastChangelogVersion": "0.74.0",
+  "lastChangelogVersion": "0.75.3",
   "npmCommand": [
     "mise",
     "exec",
@@ -32,7 +32,8 @@
     "npm:whatsapp-pi",
     "npm:context-mode",
     "../../../Software/DevBox/tools/ai/util/pi/pi-keychain-provider/pi-keychain-provider.ts",
-    "../../../Software/DevBox/tools/ai/util/pi/pi-catppuccin/index.ts"
+    "../../../Software/DevBox/tools/ai/util/pi/pi-catppuccin/index.ts",
+    "../../../Software/DevBox/tools/ai/util/pi/pi-bar/index.ts"
   ],
   "quietStartup": true,
   "hideThinkingBlock": true,
