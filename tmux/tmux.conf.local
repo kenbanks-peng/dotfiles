@@ -395,9 +395,9 @@ bind m run "cut -c3- '#{TMUX_CONF}' | sh -s _toggle_mouse" \; display 'mouse #{?
 # move status line to bottom
 set -g status-position bottom
 
-# pass through extended keys (CSI u) so apps like Claude Code can see shift+enter
+# pass through extended keys (CSI u) so apps like Pi can see shifted key combos
 set -s extended-keys on
-set -g extended-keys-format csi-u
+set -s extended-keys-format csi-u
 set -as terminal-features ',xterm-ghostty:extkeys'
 
 
