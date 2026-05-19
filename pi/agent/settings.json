@@ -10,7 +10,7 @@
     "keychain-codex/gpt-5.4",
     "keychain-codex/gpt-5.4-mini"
   ],
-  "lastChangelogVersion": "0.74.0",
+  "lastChangelogVersion": "0.75.3",
   "npmCommand": [
     "mise",
     "exec",
