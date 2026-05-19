@@ -436,13 +436,10 @@ bind C-w kill-session
 # skip "kill-pane 1? (y/n)" prompt
 bind-key x kill-pane
 
-# don't exit from tmux when closing a session
-set -g detach-on-destroy off
-
-# but: if a large (non-quick) client gets switched to the "quick" session
-# (because its prior session was destroyed and quick is the only one left),
-# move it to another real session or detach.
-set-hook -g session-closed 'run-shell -b "$HOME/Software/Public/dotfiles/tmux/avoid-quick.sh"'
+# detach the client when its current session is destroyed (e.g. typing exit in
+# the last pane of the main session) instead of switching to another session
+# such as Ghostty's quick-terminal session.
+set -g detach-on-destroy on
 
 # C-y: new session prompt (C-t reserved for pi)
 bind -n C-y command-prompt -p "new session name:" "if-shell -F '%1' 'new-session -s \"%%\"'"
