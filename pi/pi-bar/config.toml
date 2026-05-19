@@ -2,100 +2,100 @@
 # Color values may be hex colors (#rrggbb) or references to other colors in this file.
 
 [colors]
+text_fg = "#cdd6f4"
 model_bg = "#005b95"
 thinking_bg = "#005b95"
-context_ok_bg = "#006b1d"
-context_warn_bg = "#a17a00"
-context_alert_bg = "#972e2d"
-work_bg = "#313244"
-work_fg = "#2dd4bf"
-status_ok = "#006b1d"
-status_warn = "#a17a00"
-status_alert = "#972e2d"
-tool_card_pending = "#252535"
-tool_card_success = "#1f2e26"
-tool_card_error = "#3a212a"
-text = "#cdd6f4"
+lsp_bg = "#313244"
+activity_bg = "#313244"
+activity_fg = "#2dd4bf"
+ok = "#006b1d"
+warn = "#a17a00"
+alert = "#972e2d"
 
-[footer]
-reserved_rows = 7
 
-# Footer layout is fully dynamic. Add, remove, reorder, or duplicate segments.
-# Supported segment types: "model", "thinking", "context", "statuses", "activity", "text", "command".
-# command segments evaluate a JavaScript expression with segment, ctx, pi, state,
-# model, and formatContextWindow in scope.
-[[footer.segments]]
-type = "command"
-command = "model?.id ?? segment.empty_text ?? ''"
-fg = "text"
-bg = "model_bg"
+# Status bar layout is fully dynamic. Add, remove, reorder, or duplicate segments.
+# Supported segment types:
+#   "value"    - renders eval (or empty_text) as a colored text segment.
+#   "meter"    - evaluates to a number, renders text from eval/value, and colors via states.
+#   "status"   - renders a keyed pi status only when that status is present.
+#                Use key = "*" to render all statuses not handled by another status segment.
+#   "activity" - renders tool/streaming activity using eval (or templates) and spinner settings.
+# Common segment keys: fg, bg, eval, empty_text, show_if, min_width.
+# Missing colors use fallback bg/fg colors instead of breaking the bar.
+# Status segments also use key plus states with name, match, eval, fg, bg.
+# Status segment eval receives state.status.text and state.status.key.
+# Meter segments may use value_eval for numeric state matching and eval for display text.
+# Meter states support gt, gte, lt, lte, fg, bg and are matched in order.
+# Activity segments support sources, eval/template, values, spinner, and min_duration_ms.
+# eval/show_if JavaScript scope: segment, ctx, pi, state, model,
+# humanReadable, lspTotalErrors, lspTotalWarnings, value (meter display text),
+# and activity (activity segments only: source, spinner, tools, streaming, value).
+[statusbar]
+
+[[statusbar.segments]]
+type = "value"
+eval = "model?.id ?? segment.empty_text ?? ''"
 empty_text = "no model"
+fg = "text_fg"
+bg = "model_bg"
 
-[[footer.segments]]
-type = "command"
-command = "model?.reasoning ? pi.getThinkingLevel() : ''"
-fg = "text"
+[[statusbar.segments]]
+type = "value"
+eval = "pi.getThinkingLevel()"
+show_if = "model?.reasoning"
+fg = "text_fg"
 bg = "thinking_bg"
-show_only_for_reasoning_models = true
 
-[[footer.segments]]
-type = "context"
-fg = "text"
-include_window = true
-window_prefix = " of "
-warn_percent = 50
-alert_percent = 75
+[[statusbar.segments]]
+type = "meter"
+value_eval = "ctx.getContextUsage()?.percent ?? 0"
+eval = "`${Math.round(value)}% of ${humanReadable(model?.contextWindow)}`"
+fg = "text_fg"
+states = [
+  { gte = 75, bg = "alert" },
+  { gte = 50, bg = "warn" },
+  { gte = 0, bg = "ok" },
+]
 
-[[footer.segments]]
-type = "statuses"
+[[statusbar.segments]]
+type = "status"
+key = "whatsapp"
+eval = "'  '"
+fg = "text_fg"
+states = [
+  { name = "connected", match = "WhatsApp: Connected$", bg = "ok" },
+  { name = "disconnected", match = "WhatsApp: Disconnected$", bg = "alert" },
+  { name = "default", bg = "warn" },
+]
 
-[[footer.segments]]
+[[statusbar.segments]]
+type = "status"
+key = "pi-lens-lsp"
+eval = "' LSP '"
+fg = "text_fg"
+states = [
+  { name = "errors", match = "^LSP [0-9]+ errors?$", eval = "`  ${lspTotalErrors()} `", bg = "alert" },
+  { name = "warnings", match = "^LSP [0-9]+ warnings?$", eval = "`  ${lspTotalWarnings()} `", bg = "warn" },
+  { name = "active", match = "^LSP Active", bg = "ok" },
+  { name = "inactive", match = "^LSP Inactive$", bg = "lsp_bg" },
+  { name = "default", bg = "warn" },
+]
+
+# catch all for unspecified status keys
+[[statusbar.segments]]
+type = "status"
+key = "*"
+eval = "` ${state.status?.text ?? ''} `"
+fg = "text_fg"
+states = [{ name = "default", bg = "warn" }]
+
+[[statusbar.segments]]
 type = "activity"
-fg = "work_fg"
-bg = "work_bg"
-working_text = "working"
-spinner_frames = ["⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏"]
-spinner_interval_ms = 100
-min_display_ms = 1000
+fg = "activity_fg"
+bg = "activity_bg"
 min_width = 11
-
-[footer.status_fallback]
-fg = "work_fg"
-bg = "work_bg"
-separator = "  "
-
-[[statuses]]
-id = "whatsapp"
-order = 10
-match = "\\bwhatsapp\\b"
-text = "  "
-fg = "text"
-default_bg = "status_warn"
-
-[[statuses.states]]
-name = "connected"
-match = "\\bconnected\\b"
-bg = "status_ok"
-
-[[statuses.states]]
-name = "disconnected"
-match = "\\bdisconnected\\b"
-bg = "status_alert"
-
-[[statuses]]
-id = "lsp"
-order = 20
-match = "\\blsp\\b"
-text = " LSP "
-fg = "text"
-default_bg = "status_warn"
-
-[[statuses.states]]
-name = "active"
-match = "\\bactive\\b"
-bg = "status_ok"
-
-[[statuses.states]]
-name = "inactive"
-match = "\\binactive\\b"
-bg = "status_alert"
+min_duration_ms = 1000
+sources = ["tools", "streaming"]
+eval = "`${activity.spinner} ${activity.value}`"
+values = { tools = "{tools}", streaming = "working" }
+spinner = { frames = ["⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏"], interval_ms = 100 }

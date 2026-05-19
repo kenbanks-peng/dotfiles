@@ -32,7 +32,8 @@
     "npm:whatsapp-pi",
     "npm:context-mode",
     "../../../Software/DevBox/tools/ai/util/pi/pi-keychain-provider/pi-keychain-provider.ts",
-    "../../../Software/DevBox/tools/ai/util/pi/pi-catppuccin/index.ts"
+    "../../../Software/DevBox/tools/ai/util/pi/pi-catppuccin/index.ts",
+    "../../../Software/DevBox/tools/ai/util/pi/pi-bar/index.ts"
   ],
   "quietStartup": true,
   "hideThinkingBlock": true,
